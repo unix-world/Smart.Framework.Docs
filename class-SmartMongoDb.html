@@ -1,0 +1,1019 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Class SmartMongoDb | Smart.Framework Documentation :: 2015-12-07 13:47</title>
+	<link rel="stylesheet" href="resources/style.css?2361662816">
+	<script src="resources/combined.js?3413450810"></script>
+	<script src="elementlist.js?2354500668"></script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-Application.html">Application</a>
+						</li>
+				<li><a href="package-Archivers.html">Archivers</a>
+						</li>
+				<li><a href="package-Caching.html">Caching</a>
+						</li>
+				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
+						</li>
+				<li><a href="package-Components.Calendar.html">Components:Calendar</a>
+						</li>
+				<li><a href="package-Components.Captcha.html">Components:Captcha</a>
+						</li>
+				<li><a href="package-Components.Charts.html">Components:Charts</a>
+						</li>
+				<li><a href="package-Components.Framework.html">Components:Framework</a>
+						</li>
+				<li><a href="package-Core.html">Core</a>
+						</li>
+				<li><a href="package-Crypto.html">Crypto</a>
+						</li>
+				<li><a href="package-DATA.HTML.html">DATA:HTML</a>
+						</li>
+				<li><a href="package-DATA.XML.html">DATA:XML</a>
+						</li>
+				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li class="active"><a href="package-Database.MongoDB.html">Database:MongoDB</a>
+						</li>
+				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
+						</li>
+				<li><a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a>
+						</li>
+				<li><a href="package-Database.Redis.html">Database:Redis</a>
+						</li>
+				<li><a href="package-Database.Solr.html">Database:Solr</a>
+						</li>
+				<li><a href="package-Database.SQLite.html">Database:SQLite</a>
+						</li>
+				<li><a href="package-Exporters.html">Exporters</a>
+						</li>
+				<li><a href="package-Filesystem.html">Filesystem</a>
+						</li>
+				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
+						</li>
+				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
+						</li>
+				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
+						</li>
+				<li><a href="package-MediaGallery.html">MediaGallery</a>
+						</li>
+				<li><a href="package-Network.FTP.html">Network:FTP</a>
+						</li>
+				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
+						</li>
+				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-SmartMongoDb.html">SmartMongoDb</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Database.MongoDB.html" title="Summary of Database:MongoDB"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class SmartMongoDb</h1>
+
+
+	<div class="description">
+	
+<p>Class Smart MongoDB Client (for PHP-MongoDB v.1.5.0 or later)</p>
+
+<pre>
+
+<span class="php-comment">// Usage examples:</span>
+<span
+class="php-comment">//--</span>
+<span class="php-var">$myMongo</span> = <span
+class="php-keyword1">new</span> SmartMongoDb(<span
+class="php-quote">'my_collection'</span>);
+<span
+class="php-comment">//-- read many</span>
+<span
+class="php-var">$data</span> = (<span class="php-keyword1">array</span>) <span
+class="php-var">$myMongo</span>-&gt;find(
+        <span
+class="php-keyword1">array</span>(<span
+class="php-quote">'active'</span> =&gt; <span
+class="php-keyword1">true</span>),        <span
+class="php-comment">// query</span>
+        <span
+class="php-keyword1">array</span>(),                                        <span
+class="php-comment">// fields</span>
+        <span
+class="php-keyword1">array</span>(                                          <span
+class="php-comment">// options</span>
+                <span
+class="php-quote">'sort'</span> =&gt; <span
+class="php-keyword1">array</span>(<span
+class="php-quote">'name.fname'</span> =&gt; -<span
+class="php-num">1</span>), <span
+class="php-comment">// sort</span>
+                <span
+class="php-quote">'limit'</span> =&gt; <span class="php-num">10</span>,  <span
+class="php-comment">// limit</span>
+                <span
+class="php-quote">'skip'</span> =&gt; <span class="php-num">0</span>     <span
+class="php-comment">// offset</span>
+        )
+);
+<span
+class="php-comment">//-- read one by ID</span>
+<span
+class="php-var">$doc</span> = <span
+class="php-var">$myMongo</span>-&gt;findOne(
+                <span
+class="php-keyword1">array</span>(
+                        <span
+class="php-quote">'_id'</span> =&gt; <span
+class="php-quote">'SomeID'</span>
+                )
+);
+<span
+class="php-comment">//-- insert</span>
+<span class="php-var">$doc</span>[<span
+class="php-quote">'_id'</span>] = <span class="php-quote">'NewID'</span>;
+<span
+class="php-var">$myMongo</span>-&gt;insert((<span
+class="php-keyword1">array</span>)<span class="php-var">$doc</span>);
+<span
+class="php-comment">//-- update</span>
+<span class="php-var">$doc</span>[<span
+class="php-quote">'name.fname'</span>] = <span
+class="php-quote">'Modified fName'</span>;
+<span
+class="php-var">$myMongo</span>-&gt;update(<span
+class="php-keyword1">array</span>(<span
+class="php-quote">'_id'</span> =&gt; <span
+class="php-quote">'SomeID'</span>), <span
+class="php-keyword1">array</span>(<span
+class="php-quote">'$set'</span> =&gt; (<span
+class="php-keyword1">array</span>)<span class="php-var">$doc</span>));
+<span
+class="php-comment">//--</span>
+
+</pre>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Final</b><br>
+		
+		
+		<b>Package:</b> <a href="package-Database.MongoDB.html">Database:MongoDB</a><br>
+
+				<b>Version:</b>
+				v.151205<br>
+				<b>Depends:</b>
+				extensions: PHP MongoClient (v.1.5.0 or later) ; classes: Smart<br>
+				<b>Usage:</b>
+				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
+methods<br>
+		<b>Located at</b> modules/extra-libs/lib_db_mongodb.php<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span>STRING <var>$col</var></span>, <span>STRING <var>$db</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$host</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$port</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$timeout</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$username</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$password</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Class constructor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Class constructor</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$col</var></dt>
+					<dd>:: MongoDB Collection</dd>
+					<dt><var>$db</var></dt>
+					<dd>:: MongoDB Database &lt;em&gt;Optional&lt;/em&gt;</dd>
+					<dt><var>$host</var></dt>
+					<dd>:: MongoDB Host &lt;em&gt;Optional&lt;/em&gt;</dd>
+					<dt><var>$port</var></dt>
+					<dd>:: MongoDB Port &lt;em&gt;Optional&lt;/em&gt;</dd>
+					<dt><var>$timeout</var></dt>
+					<dd>:: MongoDB Connection Timeout &lt;em&gt;Optional&lt;/em&gt;</dd>
+					<dt><var>$username</var></dt>
+					<dd>:: MongoDB DB Username &lt;em&gt;Optional&lt;/em&gt;</dd>
+					<dt><var>$password</var></dt>
+					<dd>:: MongoDB DB Password &lt;em&gt;Optional&lt;/em&gt;</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+	<table class="summary methods" id="magicMethods">
+	<caption>Magic methods summary</caption>
+	<tr data-order="find" id="m_find">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_find">#</a>
+		<code>find( )</code>
+
+		<div class="description short">
+			
+<p># find multi data in a collection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># find multi data in a collection</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findOne" id="m_findOne">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findOne">#</a>
+		<code>findOne( )</code>
+
+		<div class="description short">
+			
+<p># find single data in a collection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># find single data in a collection</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="findAndModify" id="m_findAndModify">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_findAndModify">#</a>
+		<code>findAndModify( )</code>
+
+		<div class="description short">
+			
+<p># find and modify data in a collection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># find and modify data in a collection</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count" id="m_count">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_count">#</a>
+		<code>count( )</code>
+
+		<div class="description short">
+			
+<p># count data in a collection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># count data in a collection</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insert" id="m_insert">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_insert">#</a>
+		<code>insert( )</code>
+
+		<div class="description short">
+			
+<p># add data in a collection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># add data in a collection</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="update" id="m_update">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_update">#</a>
+		<code>update( )</code>
+
+		<div class="description short">
+			
+<p># modify data in a collection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># modify data in a collection</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="remove" id="m_remove">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_remove">#</a>
+		<code>remove( )</code>
+
+		<div class="description short">
+			
+<p># delete data from a collection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># delete data from a collection</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="save" id="m_save">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_save">#</a>
+		<code>save( )</code>
+
+		<div class="description short">
+			
+<p># save modifications to a collection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># save modifications to a collection</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="distinct" id="m_distinct">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_distinct">#</a>
+		<code>distinct( )</code>
+
+		<div class="description short">
+			
+<p># select DISTINCT</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># select DISTINCT</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="group" id="m_group">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_group">#</a>
+		<code>group( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getIndexInfo" id="m_getIndexInfo">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_getIndexInfo">#</a>
+		<code>getIndexInfo( )</code>
+
+		<div class="description short">
+			
+<p># get info about index</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># get info about index</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="createIndex" id="m_createIndex">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_createIndex">#</a>
+		<code>createIndex( )</code>
+
+		<div class="description short">
+			
+<p># create an index for the collection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># create an index for the collection</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deleteIndex" id="m_deleteIndex">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_deleteIndex">#</a>
+		<code>deleteIndex( )</code>
+
+		<div class="description short">
+			
+<p># delete an index from the collection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># delete an index from the collection</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate" id="m_validate">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_validate">#</a>
+		<code>validate( )</code>
+
+		<div class="description short">
+			
+<p># validate data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># validate data</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="drop" id="m_drop">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_drop">#</a>
+		<code>drop( )</code>
+
+		<div class="description short">
+			
+<p># drops a collection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># drops a collection</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="dropDB" id="m_dropDB">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_dropDB">#</a>
+		<code>dropDB( )</code>
+
+		<div class="description short">
+			
+<p># drops a database</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># drops a database</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="listDBs" id="m_listDBs">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_listDBs">#</a>
+		<code>listDBs( )</code>
+
+		<div class="description short">
+			
+<p># lists the databases</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># lists the databases</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getHosts" id="m_getHosts">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_getHosts">#</a>
+		<code>getHosts( )</code>
+
+		<div class="description short">
+			
+<p># get a list of hosts</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># get a list of hosts</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="killCursor" id="m_killCursor">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_killCursor">#</a>
+		<code>killCursor( )</code>
+
+		<div class="description short">
+			
+<p># kill the current cursor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># kill the current cursor</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-07 13:47</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

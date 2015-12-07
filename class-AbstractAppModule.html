@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Class AbstractAppModule | Smart.Framework Documentation :: 2015-12-07 13:47</title>
+	<link rel="stylesheet" href="resources/style.css?2361662816">
+	<script src="resources/combined.js?3413450810"></script>
+	<script src="elementlist.js?2354500668"></script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Application.html">Application</a>
+						</li>
+				<li><a href="package-Archivers.html">Archivers</a>
+						</li>
+				<li><a href="package-Caching.html">Caching</a>
+						</li>
+				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
+						</li>
+				<li><a href="package-Components.Calendar.html">Components:Calendar</a>
+						</li>
+				<li><a href="package-Components.Captcha.html">Components:Captcha</a>
+						</li>
+				<li><a href="package-Components.Charts.html">Components:Charts</a>
+						</li>
+				<li><a href="package-Components.Framework.html">Components:Framework</a>
+						</li>
+				<li><a href="package-Core.html">Core</a>
+						</li>
+				<li><a href="package-Crypto.html">Crypto</a>
+						</li>
+				<li><a href="package-DATA.HTML.html">DATA:HTML</a>
+						</li>
+				<li><a href="package-DATA.XML.html">DATA:XML</a>
+						</li>
+				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
+						</li>
+				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
+						</li>
+				<li><a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a>
+						</li>
+				<li><a href="package-Database.Redis.html">Database:Redis</a>
+						</li>
+				<li><a href="package-Database.Solr.html">Database:Solr</a>
+						</li>
+				<li><a href="package-Database.SQLite.html">Database:SQLite</a>
+						</li>
+				<li><a href="package-Exporters.html">Exporters</a>
+						</li>
+				<li><a href="package-Filesystem.html">Filesystem</a>
+						</li>
+				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
+						</li>
+				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
+						</li>
+				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
+						</li>
+				<li><a href="package-MediaGallery.html">MediaGallery</a>
+						</li>
+				<li><a href="package-Network.FTP.html">Network:FTP</a>
+						</li>
+				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
+						</li>
+				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-AbstractAppModule.html">AbstractAppModule</a></li>
+				<li><a href="class-SmartApp.html">SmartApp</a></li>
+				<li><a href="class-SmartAuth.html">SmartAuth</a></li>
+				<li><a href="class-SmartSession.html">SmartSession</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Application.html" title="Summary of Application"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class AbstractAppModule</h1>
+
+
+	<div class="description">
+	
+<p>Class: AbstractAppModule - Abstract Application Module (Controller), provides
+the Abstract Definitions to create controllers in modules.</p>
+
+<pre>
+
+<span
+class="php-comment">// Usage example: Create a new Index Controller (modules/my-module/my-controller.php)</span>
+<span
+class="php-comment">// Will be accessible via: index.php?/page/my-module.my-controller (index.php?page=my-module.my-controller)</span>
+<span
+class="php-comment">// or you can use short type as just: ?/page/my-module.my-controller (?page=my-module.my-controller)</span>
+
+<span
+class="php-keyword2">define</span>(<span
+class="php-quote">'SMART_APP_EXEC_AREA'</span>, <span
+class="php-quote">'INDEX'</span>); <span
+class="php-comment">// this controller will run ONLY in index.php</span>
+
+<span
+class="php-keyword1">class</span> IndexAppModule <span
+class="php-keyword1">extends</span> AbstractAppModule {
+
+    <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> Run() {
+
+        <span
+class="php-var">$op</span> = <span
+class="php-var">$this</span>-&gt;RequestVarGet(<span
+class="php-quote">'op'</span>, <span class="php-quote">''</span>, <span
+class="php-quote">'string'</span>); <span
+class="php-comment">// get variable `op` from Request GET/POST</span>
+
+        <span
+class="php-var">$this</span>-&gt;PageViewSetCfg(<span
+class="php-quote">'template-path'</span>, <span
+class="php-quote">'my-template'</span>);          <span
+class="php-comment">// will be using the template in the folder: etc/templates/my-template/</span>
+        <span
+class="php-var">$this</span>-&gt;PageViewSetCfg(<span
+class="php-quote">'template-file'</span>, <span
+class="php-quote">'template-one.htm'</span>);     <span
+class="php-comment">// will be using the template file: template-one.htm (located in: etc/templates/my-template/)</span>
+
+        <span
+class="php-comment">// the template `template-one.htm` contains several markers as): `page-title`, `left-column`, `main`, `right-column`, so we set them as:</span>
+        <span
+class="php-var">$this</span>-&gt;PageViewSetVars([
+            <span
+class="php-quote">'title'</span> =&gt; <span
+class="php-quote">'Hello World'</span>, <span
+class="php-comment">// this marker is like &lt;title&gt;[####PAGE-TITLE####]&lt;/title&gt;</span>
+            <span
+class="php-quote">'left-column'</span> =&gt; <span
+class="php-quote">'Some content in the left column'</span>, <span
+class="php-comment">// the marker will be put anywhere in the template html as: [####LEFT-COLUMN####]</span>
+            <span
+class="php-quote">'main'</span> =&gt; <span
+class="php-quote">'&lt;h1&gt;Some content in the main area&lt;/h1&gt;'</span>, <span
+class="php-comment">// the `main` area must always be defined in a template as: [####MAIN####] ; when no template this variable will be redirected to the main output in the case of RAW pages (see the below example).</span>
+            <span
+class="php-quote">'right-column'</span> =&gt; <span
+class="php-quote">'Some content in the &lt;b&gt;right area&lt;/b&gt;. Current Operation is: '</span>.Smart::escape_html(<span
+class="php-var">$op</span>) <span
+class="php-comment">// the marker will be put anywhere in the template html as: [####RIGHT-AREA####]</span>
+        ]);
+
+        <span
+class="php-comment">// HINT - Escaping HTML:</span>
+        <span
+class="php-comment">// is better to use: Smart::escape_html($var);</span>
+        <span
+class="php-comment">// than htmlspecialchars($var, ENT_HTML401 | ENT_COMPAT | ENT_SUBSTITUTE, 'UTF-8');</span>
+        <span
+class="php-comment">// if using htmlspecialchars($var); with no extra parameters is not safe for unicode environments</span>
+
+        <span
+class="php-comment">// HINT - Escaping JS (Safe exchanging variables between PHP and Javascript in HTML templates):</span>
+        <span
+class="php-comment">// when you have to pass a javascript variable, in a marker like &lt;script&gt;my_js_var = '[####JS-VAR####]';&lt;/script&gt;</span>
+        <span
+class="php-comment">// use: Smart::escape_js('a value exchanged between PHP and Javascript in a safe mode');</span>
+
+    } <span
+class="php-comment">//END FUNCTION</span>
+
+} <span
+class="php-comment">//END CLASS</span>
+
+<span
+class="php-comment">//========================================================================================================</span>
+
+<span
+class="php-comment">// Another usage example: Create a new Admin Controller (modules/my-module/my-other-controller.php)</span>
+<span
+class="php-comment">// Will be accessible via: admin.php?/page/my-module.my-other-controller (admin.php?page=my-module.my-other-controller)</span>
+
+<span
+class="php-keyword2">define</span>(<span
+class="php-quote">'SMART_APP_EXEC_AREA'</span>, <span
+class="php-quote">'ADMIN'</span>); <span
+class="php-comment">// this controller will run ONLY in admin.php</span>
+
+<span
+class="php-keyword1">class</span> AdminAppModule <span
+class="php-keyword1">extends</span> AbstractAppModule {
+
+    <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> Run() {
+
+        <span
+class="php-keyword2">header</span>(<span
+class="php-quote">'Content-Type: text/javascript'</span>); <span
+class="php-comment">// or can be: application/json</span>
+
+        <span
+class="php-var">$this</span>-&gt;PageViewSetCfg(<span
+class="php-quote">'rawpage'</span>, <span class="php-quote">'raw'</span>); <span
+class="php-comment">// do a raw output, no templates are loaded (this example does a json output ; can be used also for output of an image: jpg/gif/jpeg with the appropriate content headers)</span>
+
+        <span
+class="php-var">$this</span>-&gt;PageViewSetVar(
+            <span
+class="php-quote">'main'</span> =&gt; Smart::<span
+class="php-keyword2">json_encode</span>(<span
+class="php-quote">'Hello World, this is my json string'</span>) <span
+class="php-comment">// this case have no marker template, but there is always a `main` output variable even when no template is used</span>
+        );
+
+    } <span
+class="php-comment">//END FUNCTION</span>
+
+    <span
+class="php-keyword1">public</span> <span
+class="php-keyword1">function</span> ShutDown() {
+
+        <span
+class="php-comment">// This function is OPTIONAL in controllers and must be used only when needed as a destructor for both: AdminAppModule or IndexAppModule.</span>
+        <span
+class="php-comment">// NOTICE: The PHP class destructor __destruct() have some bugs, is not always 100% safe.</span>
+        <span
+class="php-comment">// See the PHP Bug #31570 for example (which is very old and not yet fixed ...).</span>
+        <span
+class="php-comment">// thus, use always ShutDown() instead of __destruct() in all controllers when you need a destructor</span>
+
+    } <span
+class="php-comment">//END FUNCTION</span>
+
+} <span
+class="php-comment">//END CLASS</span>
+
+</pre>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Abstract</b><br>
+		
+		
+		<b>Package:</b> <a href="package-Application.html">Application</a><br>
+
+				<b>Version:</b>
+				v.151205<br>
+				<b>Depends:</b>
+				-<br>
+				<b>Hints:</b>
+				needs to be extended as: IndexAppModule (as a controller of index.php) or
+AdminAppModule (as a controller of admin.php)<br>
+				<b>Usage:</b>
+				static object: Class::method() - This class provides only STATIC methods<br>
+		<b>Located at</b> lib/framework/lib__smart_framework.php<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span>mixed <var>$y_module_path</var></span>, <span>mixed <var>$y_url_script</var></span>, <span>mixed <var>$y_url_path</var></span>, <span>mixed <var>$y_url_addr</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__destruct" id="___destruct">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___destruct">#</a>
+		<code>__destruct( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="SetDebugData" id="_SetDebugData">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_SetDebugData">#</a>
+		<code>SetDebugData( <span>mixed <var>$title</var></span>, <span>mixed <var>$debug_msg</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ControllerGetParam" id="_ControllerGetParam">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ControllerGetParam">#</a>
+		<code>ControllerGetParam( <span>mixed <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ConfigParamGet" id="_ConfigParamGet">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ConfigParamGet">#</a>
+		<code>ConfigParamGet( <span>mixed <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="RequestVarGet" id="_RequestVarGet">
+
+		<td class="attributes"><code>
+			final public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_RequestVarGet">#</a>
+		<code>RequestVarGet( <span>STRING <var>$param</var></span>, <span>MIXED <var>$defval</var> = <span class="php-keyword1">null</span></span>, <span>ENUM <var>$type</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Get a Request Variable (GET/POST) in a controller</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get a Request Variable (GET/POST) in a controller</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>:: The name of the GET or POST variable (if the variable is set in both GET and
+POST, the GPC as set in PHP.INI sequence will overwrite the GET with POST, thus
+the POST value will be get).</dd>
+					<dt><var>$defval</var></dt>
+					<dd>:: The default value of that variable in the case was not set in the Request
+(GET/POST). By default it is set to null.</dd>
+					<dt><var>$type</var></dt>
+					<dd>:: The type of the variable ; Default is '' (no enforcing). This can be used to
+enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
+'integer+', 'decimal1', 'decimal2', 'decimal3', 'decimal4', 'numeric'.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>:: The value of the choosen Request (GET/POST) variable<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewGetCfgs" id="_PageViewGetCfgs">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewGetCfgs">#</a>
+		<code>PageViewGetCfgs( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewSetCfgs" id="_PageViewSetCfgs">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewSetCfgs">#</a>
+		<code>PageViewSetCfgs( <span>mixed <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewSetCfg" id="_PageViewSetCfg">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewSetCfg">#</a>
+		<code>PageViewSetCfg( <span>mixed <var>$param</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewGetVars" id="_PageViewGetVars">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewGetVars">#</a>
+		<code>PageViewGetVars( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewSetVars" id="_PageViewSetVars">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewSetVars">#</a>
+		<code>PageViewSetVars( <span>mixed <var>$params</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewSetVar" id="_PageViewSetVar">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewSetVar">#</a>
+		<code>PageViewSetVar( <span>mixed <var>$param</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewAppendVar" id="_PageViewAppendVar">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewAppendVar">#</a>
+		<code>PageViewAppendVar( <span>mixed <var>$param</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewResetVar" id="_PageViewResetVar">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewResetVar">#</a>
+		<code>PageViewResetVar( <span>mixed <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageCacheisActive" id="_PageCacheisActive">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageCacheisActive">#</a>
+		<code>PageCacheisActive( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageGetFromCache" id="_PageGetFromCache">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageGetFromCache">#</a>
+		<code>PageGetFromCache( <span>mixed <var>$storage_namespace</var></span>, <span>mixed <var>$unique_key</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageSetInCache" id="_PageSetInCache">
+
+		<td class="attributes"><code>
+			final public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageSetInCache">#</a>
+		<code>PageSetInCache( <span>mixed <var>$storage_namespace</var></span>, <span>mixed <var>$unique_key</var></span>, <span>mixed <var>$content</var></span>, <span>mixed <var>$expiration</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="Run" id="_Run">
+
+		<td class="attributes"><code>
+			abstract public 
+			INTEGER
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_Run">#</a>
+		<code>Run( )</code>
+
+		<div class="description short">
+			
+<p>The Controller Runtime - This function must be re-defined in all
+controllers</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The Controller Runtime - This function must be re-defined in all
+controllers</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>INTEGER</code><br>:: The HTML Status Code: by default it does not return or it must returns 200
+which is optional ; other supported HTML Status Codes are: 500, 404, 403, 401,
+400 (in this case can be set the also: $this-&gt;PageViewSetCfg('error', 'Access
+to this page is restricted'); return 403; to have also a detailed error message
+to be shown near the HTTP status code)<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="ShutDown" id="_ShutDown">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_ShutDown">#</a>
+		<code>ShutDown( )</code>
+
+		<div class="description short">
+			
+<p>The Controller Destructor - This function is optional and must be re-defined
+only in controllers where a destructor. Always use this instead of __destruct()
+(see php bug #31570)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>The Controller Destructor - This function is optional and must be re-defined
+only in controllers where a destructor. Always use this instead of __destruct()
+(see php bug #31570)</p>
+
+<p>NOTICE: sometimes __destruct() for classes is not 100% safe ; example: the
+PHP Bug #31570 (not fixed since a very long time) instead of __destruct() use
+ShutDown() method for controllers in framework modules (which is always executed
+after Run() and is 100% safe)</p>
+
+<p>WARNING: do not modify page settings or configs in this function or
+__destruct() because they are called after Run() if controller variables are
+modified after Run() it can produce unexpected results ...</p>
+
+<p>EXAMPLE / SCENARIO: this function have to be used instead of __destruct() if
+you have to cleanup a temporary folder (tmp/) after Run() because of the PHP Bug
+#31570, the __destruct() can't operate on relative paths and will produce
+unexpected results !!! Thus is safe to use always ShutDown() method instead of
+the __destruct() method in all controllers ...</p>
+
+<p>this function does not return anything</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-07 13:47</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

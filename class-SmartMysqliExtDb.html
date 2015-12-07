@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Class SmartMysqliExtDb | Smart.Framework Documentation :: 2015-12-07 13:47</title>
+	<link rel="stylesheet" href="resources/style.css?2361662816">
+	<script src="resources/combined.js?3413450810"></script>
+	<script src="elementlist.js?2354500668"></script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-Application.html">Application</a>
+						</li>
+				<li><a href="package-Archivers.html">Archivers</a>
+						</li>
+				<li><a href="package-Caching.html">Caching</a>
+						</li>
+				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
+						</li>
+				<li><a href="package-Components.Calendar.html">Components:Calendar</a>
+						</li>
+				<li><a href="package-Components.Captcha.html">Components:Captcha</a>
+						</li>
+				<li><a href="package-Components.Charts.html">Components:Charts</a>
+						</li>
+				<li><a href="package-Components.Framework.html">Components:Framework</a>
+						</li>
+				<li><a href="package-Core.html">Core</a>
+						</li>
+				<li><a href="package-Crypto.html">Crypto</a>
+						</li>
+				<li><a href="package-DATA.HTML.html">DATA:HTML</a>
+						</li>
+				<li><a href="package-DATA.XML.html">DATA:XML</a>
+						</li>
+				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
+						</li>
+				<li class="active"><a href="package-Database.MySQL.html">Database:MySQL</a>
+						</li>
+				<li><a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a>
+						</li>
+				<li><a href="package-Database.Redis.html">Database:Redis</a>
+						</li>
+				<li><a href="package-Database.Solr.html">Database:Solr</a>
+						</li>
+				<li><a href="package-Database.SQLite.html">Database:SQLite</a>
+						</li>
+				<li><a href="package-Exporters.html">Exporters</a>
+						</li>
+				<li><a href="package-Filesystem.html">Filesystem</a>
+						</li>
+				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
+						</li>
+				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
+						</li>
+				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
+						</li>
+				<li><a href="package-MediaGallery.html">MediaGallery</a>
+						</li>
+				<li><a href="package-Network.FTP.html">Network:FTP</a>
+						</li>
+				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
+						</li>
+				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-SmartMysqliDb.html">SmartMysqliDb</a></li>
+				<li class="active"><a href="class-SmartMysqliExtDb.html">SmartMysqliExtDb</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Database.MySQL.html" title="Summary of Database:MySQL"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class SmartMysqliExtDb</h1>
+
+
+	<div class="description">
+	
+<p>Class: SmartMysqliExtDb - provides a Dynamic (Extended) MySQL DB Server
+Client that can be used with custom made connections.</p>
+
+<p>This class is made to be used with custom made MySQL connections (other
+servers than default).</p>
+
+<pre>
+<span
+class="php-comment">// Sample config array for this class constructor:</span>
+<span
+class="php-var">$custom_mysql</span> = <span
+class="php-keyword1">array</span>();
+<span
+class="php-var">$custom_mysql</span>[<span
+class="php-quote">'type'</span>]         = <span
+class="php-quote">'mysql'</span>;                 <span
+class="php-comment">// mysql / mariadb / percona</span>
+<span
+class="php-var">$custom_mysql</span>[<span
+class="php-quote">'server-host'</span>]  = <span
+class="php-quote">'127.0.0.1'</span>;             <span
+class="php-comment">// database host (default is 127.0.0.1)</span>
+<span
+class="php-var">$custom_mysql</span>[<span
+class="php-quote">'server-port'</span>]  = <span
+class="php-quote">'3306'</span>;                  <span
+class="php-comment">// database port (default is 3306)</span>
+<span
+class="php-var">$custom_mysql</span>[<span
+class="php-quote">'dbname'</span>]       = <span
+class="php-quote">'smart_framework'</span>;       <span
+class="php-comment">// database name</span>
+<span
+class="php-var">$custom_mysql</span>[<span
+class="php-quote">'username'</span>]     = <span
+class="php-quote">'root'</span>;                  <span
+class="php-comment">// sql server user name</span>
+<span
+class="php-var">$custom_mysql</span>[<span
+class="php-quote">'password'</span>]     = <span
+class="php-keyword2">base64_encode</span>(<span
+class="php-quote">'root'</span>);   <span
+class="php-comment">// sql server Base64-Encoded password for that user name B64</span>
+<span
+class="php-var">$custom_mysql</span>[<span
+class="php-quote">'timeout'</span>]      = <span
+class="php-num">30</span>;                      <span
+class="php-comment">// connection timeout (how many seconds to wait for a valid MySQL Connection)</span>
+<span
+class="php-var">$custom_mysql</span>[<span
+class="php-quote">'slowtime'</span>]     = <span
+class="php-num">0.0050</span>;                  <span
+class="php-comment">// 0.0025 .. 0.0090 slow query time (for debugging)</span>
+<span
+class="php-var">$custom_mysql</span>[<span
+class="php-quote">'transact'</span>]     = <span
+class="php-quote">'REPEATABLE READ'</span>;       <span
+class="php-comment">// Default Transaction Level: 'REPEATABLE READ' | 'READ COMMITTED' | '' to leave it as default</span>
+<span
+class="php-comment">// sample usage:</span>
+<span
+class="php-var">$mysql</span> = <span
+class="php-keyword1">new</span> SmartMysqliExtDb(<span
+class="php-var">$custom_mysql</span>);
+<span
+class="php-var">$mysql</span>-&gt;read_asdata(<span
+class="php-quote">'SELECT * FROM `my_table` LIMIT 100 OFFSET 0'</span>);
+<span
+class="php-comment">//... for other hints look to the samples of the class: SmartMysqliDb::*</span>
+</pre>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Final</b><br>
+		
+		
+		<b>Package:</b> <a href="package-Database.MySQL.html">Database:MySQL</a><br>
+
+				<b>Version:</b>
+				v.151205<br>
+				<b>Depends:</b>
+				extensions: PHP MySQLi ; classes: Smart, SmartUnicode, SmartUtils,
+SmartComponents<br>
+				<b>Hints:</b>
+				This class have no catcheable Exception because the ONLY errors will raise are
+when the server returns an ERROR regarding a malformed SQL Statement, which is
+not acceptable to be just Exception, so will raise a fatal error !<br>
+				<b>Usage:</b>
+				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
+methods<br>
+		<b>Located at</b> modules/extra-libs/lib_db_mysqli.php<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span>ARRAY <var>$y_configs_arr</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Class Constructor - will initiate also the custom connection for a MySQL
+Server specified as parameters of this function.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Class Constructor - will initiate also the custom connection for a MySQL
+Server specified as parameters of this function.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_configs_arr</var></dt>
+					<dd>:: The Array of Configuration parameters - the ARRAY STRUCTURE should be
+identical with the default config.php: $configs['mysqli'].</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="__destruct" id="___destruct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___destruct">#</a>
+		<code>__destruct( )</code>
+
+		<div class="description short">
+			
+<p>Class Destructor This will automatically disconnect the current connected
+server of this class.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Class Destructor This will automatically disconnect the current connected
+server of this class.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="getConnection" id="_getConnection">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_getConnection">#</a>
+		<code>getConnection( )</code>
+
+		<div class="description short">
+			
+<p>Returns the connection resource of the current MySQL Server.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the connection resource of the current MySQL Server.</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="escape_str" id="_escape_str">
+
+		<td class="attributes"><code>
+			 public 
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_escape_str">#</a>
+		<code>escape_str( <span>STRING <var>$y_string</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Escape a string to be compliant and Safe (against SQL Injection) with MySQL
+standards. This function WILL NOT ADD the SINGLE QUOTES (') arround the string,
+but just will just escape it to be safe.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Escape a string to be compliant and Safe (against SQL Injection) with MySQL
+standards. This function WILL NOT ADD the SINGLE QUOTES (') arround the string,
+but just will just escape it to be safe.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_string</var></dt>
+					<dd>:: A String or a Number to be Escaped</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The Escaped String / Number<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="check_if_table_exists" id="_check_if_table_exists">
+
+		<td class="attributes"><code>
+			 public 
+			0/1
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_check_if_table_exists">#</a>
+		<code>check_if_table_exists( <span>STRING <var>$y_table</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Check if a Table Exists in the current Database.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if a Table Exists in the current Database.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_table</var></dt>
+					<dd>:: The Table Name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>0/1</code><br>:: 1 if exists ; 0 if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="count_data" id="_count_data">
+
+		<td class="attributes"><code>
+			 public 
+			INTEGER
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_count_data">#</a>
+		<code>count_data( <span>STRING <var>$queryval</var></span>, <span>STRING <var>$params_or_title</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>MySQL Query :: Count This function is intended to be used for count type
+queries: SELECT COUNT().</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>MySQL Query :: Count This function is intended to be used for count type
+queries: SELECT COUNT().</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$queryval</var></dt>
+					<dd>:: the query</dd>
+					<dt><var>$params_or_title</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters or query title for easy debugging</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>INTEGER</code><br>:: the result of COUNT()<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_data" id="_read_data">
+
+		<td class="attributes"><code>
+			 public 
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_data">#</a>
+		<code>read_data( <span>STRING <var>$queryval</var></span>, <span>STRING <var>$params_or_title</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>MySQL Query :: Read (Non-Associative) one or multiple rows. This function is
+intended to be used for read type queries: SELECT.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>MySQL Query :: Read (Non-Associative) one or multiple rows. This function is
+intended to be used for read type queries: SELECT.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$queryval</var></dt>
+					<dd>:: the query</dd>
+					<dt><var>$params_or_title</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters or query title for easy debugging</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>(non-asociative) of results :: array('column-0-0', 'column-0-1', ...,
+'column-0-n', 'column-1-0', 'column-1-1', ... 'column-1-n', ..., 'column-m-0',
+'column-m-1', ..., 'column-m-n')<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_adata" id="_read_adata">
+
+		<td class="attributes"><code>
+			 public 
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_adata">#</a>
+		<code>read_adata( <span>STRING <var>$queryval</var></span>, <span>STRING <var>$params_or_title</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>MySQL Query :: Read (Associative) - just for one row (to easy use data from
+queries that return just 1 row). !!! This will raise an error if more than one
+row(s) are returned !!! This function does not support multiple rows because the
+associative data is structured without row iterator. For queries that return
+more than one row use: read_asdata() or read_data(). This function is intended
+to be used for read type queries: SELECT.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>MySQL Query :: Read (Associative) - just for one row (to easy use data from
+queries that return just 1 row). !!! This will raise an error if more than one
+row(s) are returned !!! This function does not support multiple rows because the
+associative data is structured without row iterator. For queries that return
+more than one row use: read_asdata() or read_data(). This function is intended
+to be used for read type queries: SELECT.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$queryval</var></dt>
+					<dd>:: the query</dd>
+					<dt><var>$params_or_title</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters or query title for easy debugging</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>(asociative) of results :: array('column1', 'column2', ... 'column-n')<br>
+				</div>
+
+
+				<h4>Hints</h4>
+				<div class="list">
+						ALWAYS use a LIMIT 1 OFFSET 0 with all queries using this function to avoid
+situations that will return more than 1 rows and will raise ERROR with this
+function.<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_asdata" id="_read_asdata">
+
+		<td class="attributes"><code>
+			 public 
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_asdata">#</a>
+		<code>read_asdata( <span>STRING <var>$queryval</var></span>, <span>STRING <var>$params_or_title</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>MySQL Query :: Read (Associative) one or multiple rows. This function is
+intended to be used for read type queries: SELECT.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>MySQL Query :: Read (Associative) one or multiple rows. This function is
+intended to be used for read type queries: SELECT.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$queryval</var></dt>
+					<dd>:: the query</dd>
+					<dt><var>$params_or_title</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters or query title for easy debugging</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>(asociative) of results :: array(0 =&gt; array('column1', 'column2', ...
+'column-n'), 1 =&gt; array('column1', 'column2', ... 'column-n'), ..., m =&gt;
+array('column1', 'column2', ... 'column-n'))<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="write_data" id="_write_data">
+
+		<td class="attributes"><code>
+			 public 
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_write_data">#</a>
+		<code>write_data( <span>STRING <var>$queryval</var></span>, <span>STRING <var>$params_or_title</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>MySQL Query :: Write. This function is intended to be used for write type
+queries: BEGIN (TRANSACTION) ; COMMIT ; ROLLBACK ; INSERT ; INSERT IGNORE ;
+REPLACE ; UPDATE ; CREATE SCHEMAS ; CALLING STORED PROCEDURES ...</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>MySQL Query :: Write. This function is intended to be used for write type
+queries: BEGIN (TRANSACTION) ; COMMIT ; ROLLBACK ; INSERT ; INSERT IGNORE ;
+REPLACE ; UPDATE ; CREATE SCHEMAS ; CALLING STORED PROCEDURES ...</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$queryval</var></dt>
+					<dd>:: the query</dd>
+					<dt><var>$params_or_title</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters or query title for easy debugging</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>:: [0 =&gt; 'control-message', 1 =&gt; #affected-rows]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="prepare_write_statement" id="_prepare_write_statement">
+
+		<td class="attributes"><code>
+			 public 
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_prepare_write_statement">#</a>
+		<code>prepare_write_statement( <span>ARRAY-associative <var>$arrdata</var></span>, <span>ENUM <var>$mode</var></span>, <span>TRUE/FALSE <var>$escape_data</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Create Escaped Write SQL Statements from Data - to be used with MySQL for:
+INSERT ; UPDATE ; IN-SELECT To be used with: write_data() to build an INSERT /
+UPDATE / SELECT IN query from an associative array</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create Escaped Write SQL Statements from Data - to be used with MySQL for:
+INSERT ; UPDATE ; IN-SELECT To be used with: write_data() to build an INSERT /
+UPDATE / SELECT IN query from an associative array</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$arrdata</var></dt>
+					<dd>:: array of form data as $arr=array(); $arr['field1'] = 'a string';
+$arr['field2'] = 100;</dd>
+					<dt><var>$mode</var></dt>
+					<dd>:: mode: 'insert' | 'update' | 'in-select'</dd>
+					<dt><var>$escape_data</var></dt>
+					<dd>:: escape data or not (default is TRUE, will escape the data)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The SQL partial Statement<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="table_new_safeid" id="_table_new_safeid">
+
+		<td class="attributes"><code>
+			 public 
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_table_new_safeid">#</a>
+		<code>table_new_safeid( <span>STRING <var>$y_table_name</var></span>, <span>ENUM <var>$y_mode</var> = <span class="php-quote">'serial'</span></span>, <span>STRING <var>$y_field_name</var> = <span class="php-quote">'id'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Get A UNIQUE (10-chars:numeric|string-B36) UNIQUE ID for DB Tables [SAFE if
+used with Table Check]</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get A UNIQUE (10-chars:numeric|string-B36) UNIQUE ID for DB Tables [SAFE if
+used with Table Check]</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_table_name</var></dt>
+					<dd>:: the table name</dd>
+					<dt><var>$y_mode</var></dt>
+					<dd>:: mode: serial (string), default | random (string) | numeric (random)</dd>
+					<dt><var>$y_field_name</var></dt>
+					<dd>:: the field name (default: id)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: the ID<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="table_new_uuid" id="_table_new_uuid">
+
+		<td class="attributes"><code>
+			 public 
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_table_new_uuid">#</a>
+		<code>table_new_uuid( <span>STRING <var>$y_table_name</var></span>, <span>STRING <var>$y_field_name</var> = <span class="php-quote">'id'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Get A UNIVERSAL (128-bit) UNIQUE ID for DB Tables [SUPPOSE TO BE ALWAYS SAFE
+in Time and Space]</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get A UNIVERSAL (128-bit) UNIQUE ID for DB Tables [SUPPOSE TO BE ALWAYS SAFE
+in Time and Space]</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_table_name</var></dt>
+					<dd>:: the table name</dd>
+					<dt><var>$y_field_name</var></dt>
+					<dd>:: the field name (default: id)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: the ID<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-07 13:47</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Class SmartAuth | Smart.Framework Documentation :: 2015-12-07 13:47</title>
+	<link rel="stylesheet" href="resources/style.css?2361662816">
+	<script src="resources/combined.js?3413450810"></script>
+	<script src="elementlist.js?2354500668"></script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li class="active"><a href="package-Application.html">Application</a>
+						</li>
+				<li><a href="package-Archivers.html">Archivers</a>
+						</li>
+				<li><a href="package-Caching.html">Caching</a>
+						</li>
+				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
+						</li>
+				<li><a href="package-Components.Calendar.html">Components:Calendar</a>
+						</li>
+				<li><a href="package-Components.Captcha.html">Components:Captcha</a>
+						</li>
+				<li><a href="package-Components.Charts.html">Components:Charts</a>
+						</li>
+				<li><a href="package-Components.Framework.html">Components:Framework</a>
+						</li>
+				<li><a href="package-Core.html">Core</a>
+						</li>
+				<li><a href="package-Crypto.html">Crypto</a>
+						</li>
+				<li><a href="package-DATA.HTML.html">DATA:HTML</a>
+						</li>
+				<li><a href="package-DATA.XML.html">DATA:XML</a>
+						</li>
+				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
+						</li>
+				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
+						</li>
+				<li><a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a>
+						</li>
+				<li><a href="package-Database.Redis.html">Database:Redis</a>
+						</li>
+				<li><a href="package-Database.Solr.html">Database:Solr</a>
+						</li>
+				<li><a href="package-Database.SQLite.html">Database:SQLite</a>
+						</li>
+				<li><a href="package-Exporters.html">Exporters</a>
+						</li>
+				<li><a href="package-Filesystem.html">Filesystem</a>
+						</li>
+				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
+						</li>
+				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
+						</li>
+				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
+						</li>
+				<li><a href="package-MediaGallery.html">MediaGallery</a>
+						</li>
+				<li><a href="package-Network.FTP.html">Network:FTP</a>
+						</li>
+				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
+						</li>
+				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-AbstractAppModule.html">AbstractAppModule</a></li>
+				<li><a href="class-SmartApp.html">SmartApp</a></li>
+				<li class="active"><a href="class-SmartAuth.html">SmartAuth</a></li>
+				<li><a href="class-SmartSession.html">SmartSession</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Application.html" title="Summary of Application"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class SmartAuth</h1>
+
+
+	<div class="description">
+	
+<p>Class: Smart Authentication - provides a safe, in-memory object, to store the
+authentication data and to provide a standard way to work with authentication
+inside the smartframework / modules.</p>
+
+<p>It must be re-populated on each execution. This ensure using a good practice
+for Auth mechanisms. It provides the core and only STATIC methods to integrate
+authentication with Smart.Framework</p>
+
+<p>The very important security concerns regarding the authentication protection
+against forgery, the mechanism implemented in this class will offer a very good
+protection by using CONSTANTS, so after a successful or failed authentication,
+the page needs to refresh or load another page in order to change authentication
+data. This comes as a result of more than 15 years research over web and
+client/server technologies ...</p>
+
+<p>The best practices are to never store Authentication objects in session
+because session can be forged. To avoid such bad practices this object provide
+just STATIC methods !! The best way is to store just the login ID and a safe
+password HASH (irreversible) in session and re-check authentication each time
+when the page is loaded or to use the HTTP AUTH mechanism to avoid store in
+session the username / password hash. Or this can be combined with cookies, but
+requires much more atention to pay by avoiding session forgery or cookie
+leakage. Session must be protected against forgery by implementing advanced
+detection mechanisms based on IP address and the browser signature of the
+client. The SmartSession provides a good layer for this purpose.</p>
+
+<pre>
+<span
+class="php-comment">// Usage example:</span>
+SmartAuth::some_method_of_this_class(...);
+</pre>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Final</b><br>
+		
+		
+		<b>Package:</b> <a href="package-Application.html">Application</a><br>
+
+				<b>Version:</b>
+				v.151123<br>
+				<b>Depends:</b>
+				-<br>
+				<b>Usage:</b>
+				static object: Class::method() - This class provides only STATIC methods<br>
+		<b>Located at</b> lib/framework/lib_auth.php<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="set_login_data" id="_set_login_data">
+
+		<td class="attributes"><code>
+			 public static
+			BOOLEAN
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_set_login_data">#</a>
+		<code>set_login_data( <span>STRING <var>$y_user_id</var></span>, <span>STRING <var>$y_user_alias</var></span>, <span>STRING <var>$y_user_email</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$y_user_fullname</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$y_user_privileges_list</var> = <span class="php-keyword1">array</span>(<span class="php-quote">'none'</span>,<span class="php-quote">'no-privilege'</span>)</span>, <span>STRING <var>$y_user_quota</var> = -<span class="php-num">1</span></span>, <span>STRING <var>$y_realm</var> = <span class="php-quote">'DEFAULT'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set the (in-memory) Auth Login Data It can be used just once per execution
+(session) as it stores the data using constants, and the data cannot be changed
+after a successful or failed authentication has set.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set the (in-memory) Auth Login Data It can be used just once per execution
+(session) as it stores the data using constants, and the data cannot be changed
+after a successful or failed authentication has set.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_user_id</var></dt>
+					<dd>:: The user (login) ID ; Mandatory ; it can be the UserID from DB or if not
+using a DB must supply a unique ID to identify the user like username</dd>
+					<dt><var>$y_user_alias</var></dt>
+					<dd>:: The user Alias (Username) ; Optional</dd>
+					<dt><var>$y_user_email</var></dt>
+					<dd>:: The user Email ; Optional</dd>
+					<dt><var>$y_user_fullname</var></dt>
+					<dd>:: The user Full Name (First Name + Last Name) ; Optional</dd>
+					<dt><var>$y_user_privileges_list</var></dt>
+					<dd>:: The user Privileges List (An array with all privileges) ; Optional</dd>
+					<dt><var>$y_user_quota</var></dt>
+					<dd>:: The user (storage) Quota ; Optional</dd>
+					<dt><var>$y_realm</var></dt>
+					<dd>:: The user Authentication Realm(s) ; Optional</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOLEAN</code><br>:: TRUE if all data is OK, FALSE if not or try to reauthenticate under the same
+execution (which is not allowed ; must be just once per execution)<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="check_login" id="_check_login">
+
+		<td class="attributes"><code>
+			 public static
+			BOOLEAN
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_check_login">#</a>
+		<code>check_login( )</code>
+
+		<div class="description short">
+			
+<p>Check the (in-memory) Auth Login Data if the current user is logged-in</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check the (in-memory) Auth Login Data if the current user is logged-in</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOLEAN</code><br>:: TRUE if current user is Logged-in, FALSE if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_login_data" id="_get_login_data">
+
+		<td class="attributes"><code>
+			 public static
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_login_data">#</a>
+		<code>get_login_data( )</code>
+
+		<div class="description short">
+			
+<p>Get the (in-memory) Auth Login Data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the (in-memory) Auth Login Data</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>:: a complete array containing all the meta-data of the current auth user<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_login_id" id="_get_login_id">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_login_id">#</a>
+		<code>get_login_id( )</code>
+
+		<div class="description short">
+			
+<p>Get the current user (login) ID from the (in-memory) Auth Login Data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the current user (login) ID from the (in-memory) Auth Login Data</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: if current user is Logged-in will get the user (login) ID which is mandatory,
+else an empty string<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_login_email" id="_get_login_email">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_login_email">#</a>
+		<code>get_login_email( )</code>
+
+		<div class="description short">
+			
+<p>Get the current user email from the (in-memory) Auth Login Data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the current user email from the (in-memory) Auth Login Data</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: returns the user login email or an empty string if not set<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_login_alias" id="_get_login_alias">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_login_alias">#</a>
+		<code>get_login_alias( )</code>
+
+		<div class="description short">
+			
+<p>Get the current user login alias (username) from the (in-memory) Auth Login
+Data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the current user login alias (username) from the (in-memory) Auth Login
+Data</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: returns the user login alias (username) or an empty string if not set<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_login_fullname" id="_get_login_fullname">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_login_fullname">#</a>
+		<code>get_login_fullname( )</code>
+
+		<div class="description short">
+			
+<p>Get the current user Full Name (First + Last Name) from the (in-memory) Auth
+Login Data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the current user Full Name (First + Last Name) from the (in-memory) Auth
+Login Data</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: returns the user login full name or an empty string if not set<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_login_privileges" id="_get_login_privileges">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_login_privileges">#</a>
+		<code>get_login_privileges( )</code>
+
+		<div class="description short">
+			
+<p>Get the list of the current user privileges stored in the (in-memory) Auth
+Login Data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the list of the current user privileges stored in the (in-memory) Auth
+Login Data</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: returns user login privileges as a list-string like:
+'&lt;privilege_one&gt;,&lt;privilege_two&gt;,...' or an empty string if not set<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="test_login_privilege" id="_test_login_privilege">
+
+		<td class="attributes"><code>
+			 public static
+			BOOLEAN
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_test_login_privilege">#</a>
+		<code>test_login_privilege( <span>mixed <var>$y_privilege_to_test</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Test if the current user privileges contain the tested one using the
+(in-memory) Auth Login Data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Test if the current user privileges contain the tested one using the
+(in-memory) Auth Login Data</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOLEAN</code><br>:: TRUE if the current user have that privilege or FALSE if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_login_quota" id="_get_login_quota">
+
+		<td class="attributes"><code>
+			 public static
+			INTEGER
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_login_quota">#</a>
+		<code>get_login_quota( )</code>
+
+		<div class="description short">
+			
+<p>Get the current user quota stored in the (in-memory) Auth Login Data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the current user quota stored in the (in-memory) Auth Login Data</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>INTEGER</code><br>:: returns the user (storage) quota<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_login_realm" id="_get_login_realm">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_login_realm">#</a>
+		<code>get_login_realm( )</code>
+
+		<div class="description short">
+			
+<p>Get the auth realm of the current user stored in the (in-memory) Auth Login
+Data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the auth realm of the current user stored in the (in-memory) Auth Login
+Data</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: returns an auth realm or an empty string if not set<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-07 13:47</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

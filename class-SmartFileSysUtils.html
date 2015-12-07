@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Class SmartFileSysUtils | Smart.Framework Documentation :: 2015-12-07 13:47</title>
+	<link rel="stylesheet" href="resources/style.css?2361662816">
+	<script src="resources/combined.js?3413450810"></script>
+	<script src="elementlist.js?2354500668"></script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-Application.html">Application</a>
+						</li>
+				<li><a href="package-Archivers.html">Archivers</a>
+						</li>
+				<li><a href="package-Caching.html">Caching</a>
+						</li>
+				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
+						</li>
+				<li><a href="package-Components.Calendar.html">Components:Calendar</a>
+						</li>
+				<li><a href="package-Components.Captcha.html">Components:Captcha</a>
+						</li>
+				<li><a href="package-Components.Charts.html">Components:Charts</a>
+						</li>
+				<li><a href="package-Components.Framework.html">Components:Framework</a>
+						</li>
+				<li><a href="package-Core.html">Core</a>
+						</li>
+				<li><a href="package-Crypto.html">Crypto</a>
+						</li>
+				<li><a href="package-DATA.HTML.html">DATA:HTML</a>
+						</li>
+				<li><a href="package-DATA.XML.html">DATA:XML</a>
+						</li>
+				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
+						</li>
+				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
+						</li>
+				<li><a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a>
+						</li>
+				<li><a href="package-Database.Redis.html">Database:Redis</a>
+						</li>
+				<li><a href="package-Database.Solr.html">Database:Solr</a>
+						</li>
+				<li><a href="package-Database.SQLite.html">Database:SQLite</a>
+						</li>
+				<li><a href="package-Exporters.html">Exporters</a>
+						</li>
+				<li class="active"><a href="package-Filesystem.html">Filesystem</a>
+						</li>
+				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
+						</li>
+				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
+						</li>
+				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
+						</li>
+				<li><a href="package-MediaGallery.html">MediaGallery</a>
+						</li>
+				<li><a href="package-Network.FTP.html">Network:FTP</a>
+						</li>
+				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
+						</li>
+				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-SmartFileSystem.html">SmartFileSystem</a></li>
+				<li class="active"><a href="class-SmartFileSysUtils.html">SmartFileSysUtils</a></li>
+				<li><a href="class-SmartGetFileSystem.html">SmartGetFileSystem</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Filesystem.html" title="Summary of Filesystem"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class SmartFileSysUtils</h1>
+
+
+	<div class="description">
+	
+<p>Class: SmartFileSysUtils - provides the File System Util functions.</p>
+
+<pre>
+
+<span
+class="php-comment">// Usage example:</span>
+SmartFileSysUtils::some_method_of_this_class(...);
+
+ <span
+class="php-comment">//-----------------------------------------------------------------------------------------------------</span>
+ <span
+class="php-comment">//-----------------------------------------------------------------------------------------------------</span>
+ <span
+class="php-comment">// SAFE REPLACEMENTS:</span>
+ <span
+class="php-comment">// In order to supply a common framework for Unix / Linux but also on Windows,</span>
+ <span
+class="php-comment">// because on Windows dir separator is \ instead of / the following functions must be used as replacements:</span>
+ <span
+class="php-comment">//-----------------------------------------------------------------------------------------------------</span>
+ <span
+class="php-comment">// Smart::real_path()        instead of:        realpath()</span>
+ <span
+class="php-comment">// Smart::dir_name()         instead of:        dirname()</span>
+ <span
+class="php-comment">// Smart::path_info()        instead of:        pathinfo()</span>
+ <span
+class="php-comment">//-----------------------------------------------------------------------------------------------------</span>
+ <span
+class="php-comment">// Also, when folders are get from external environments and are not certified if they have</span>
+ <span
+class="php-comment">// been converted from \ to / on Windows, those paths have to be fixed using: Smart::fix_path_separator()</span>
+ <span
+class="php-comment">//-----------------------------------------------------------------------------------------------------</span>
+
+</pre>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Final</b><br>
+		
+		
+		<b>Package:</b> <a href="package-Filesystem.html">Filesystem</a><br>
+
+				<b>Version:</b>
+				v.150728<br>
+				<b>Depends:</b>
+				classes: Smart<br>
+				<b>Hints:</b>
+				To use paths in a safe manner, never add manually a / at the end of a path
+variable, because if it is empty will result in accessing the root of the file
+system (/). To handle this in an easy and safe manner, use the function
+SmartFileSysUtils::add_dir_last_slash($my_dir) so it will add the trailing slash
+ONLY if misses but NOT if the $my_dir is empty to avoid root access !<br>
+				<b>Usage:</b>
+				static object: Class::method() - This class provides only STATIC methods<br>
+		<b>Located at</b> lib/framework/lib_filesys.php<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="max_upload_size" id="_max_upload_size">
+
+		<td class="attributes"><code>
+			 public static
+			NUMBER
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_max_upload_size">#</a>
+		<code>max_upload_size( )</code>
+
+		<div class="description short">
+			
+<p>Return the MAXIMUM allowed Upload Size</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the MAXIMUM allowed Upload Size</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>NUMBER</code><br>[Max Upload Size in Bytes]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="check_file_or_dir_name" id="_check_file_or_dir_name">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_check_file_or_dir_name">#</a>
+		<code>check_file_or_dir_name( <span>mixed <var>$y_path</var></span>, <span>mixed <var>$y_deny_absolute_path</var> = <span class="php-quote">'yes'</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="add_dir_last_slash" id="_add_dir_last_slash">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_add_dir_last_slash">#</a>
+		<code>add_dir_last_slash( <span>mixed <var>$y_path</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="version_remove" id="_version_remove">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_version_remove">#</a>
+		<code>version_remove( <span>mixed <var>$file</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="version_add" id="_version_add">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_version_add">#</a>
+		<code>version_add( <span>mixed <var>$file</var></span>, <span>mixed <var>$version</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="version_check" id="_version_check">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_version_check">#</a>
+		<code>version_check( <span>mixed <var>$file</var></span>, <span>mixed <var>$version</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_dir_from_path" id="_get_dir_from_path">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_dir_from_path">#</a>
+		<code>get_dir_from_path( <span>STRING <var>$y_path</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the folder name from path (except last /)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the folder name from path (except last /)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_path</var></dt>
+					<dd>$ypath path or file</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[FOLDER NAME]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_file_name_from_path" id="_get_file_name_from_path">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_file_name_from_path">#</a>
+		<code>get_file_name_from_path( <span>STRING <var>$y_path</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the file name (includding extension) from path WARNING:
+path_info('c:\\file.php') will not work correct on unix, but on windows will
+work correct both: path_info('c:\\file.php') and path_info('path/file.php'</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the file name (includding extension) from path WARNING:
+path_info('c:\\file.php') will not work correct on unix, but on windows will
+work correct both: path_info('c:\\file.php') and path_info('path/file.php'</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_path</var></dt>
+					<dd>$ypath path or file</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[FILE NAME]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_noext_file_name_from_path" id="_get_noext_file_name_from_path">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_noext_file_name_from_path">#</a>
+		<code>get_noext_file_name_from_path( <span>STRING <var>$y_path</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the file name (WITHOUT extension) from path</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the file name (WITHOUT extension) from path</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_path</var></dt>
+					<dd>$ypath path or file</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[FILE NAME]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_file_extension_from_path" id="_get_file_extension_from_path">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_file_extension_from_path">#</a>
+		<code>get_file_extension_from_path( <span>STRING <var>$y_path</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the file extension (without .) from path</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the file extension (without .) from path</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_path</var></dt>
+					<dd>$ypath path or file</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[FILE EXTENSION]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="mime_eval" id="_mime_eval">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_mime_eval">#</a>
+		<code>mime_eval( <span>mixed <var>$yfile</var></span>, <span>mixed <var>$yforce</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-07 13:47</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

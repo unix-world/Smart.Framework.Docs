@@ -1,0 +1,2104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Class SmartUtils | Smart.Framework Documentation :: 2015-12-07 13:47</title>
+	<link rel="stylesheet" href="resources/style.css?2361662816">
+	<script src="resources/combined.js?3413450810"></script>
+	<script src="elementlist.js?2354500668"></script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-Application.html">Application</a>
+						</li>
+				<li><a href="package-Archivers.html">Archivers</a>
+						</li>
+				<li><a href="package-Caching.html">Caching</a>
+						</li>
+				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
+						</li>
+				<li><a href="package-Components.Calendar.html">Components:Calendar</a>
+						</li>
+				<li><a href="package-Components.Captcha.html">Components:Captcha</a>
+						</li>
+				<li><a href="package-Components.Charts.html">Components:Charts</a>
+						</li>
+				<li><a href="package-Components.Framework.html">Components:Framework</a>
+						</li>
+				<li class="active"><a href="package-Core.html">Core</a>
+						</li>
+				<li><a href="package-Crypto.html">Crypto</a>
+						</li>
+				<li><a href="package-DATA.HTML.html">DATA:HTML</a>
+						</li>
+				<li><a href="package-DATA.XML.html">DATA:XML</a>
+						</li>
+				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
+						</li>
+				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
+						</li>
+				<li><a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a>
+						</li>
+				<li><a href="package-Database.Redis.html">Database:Redis</a>
+						</li>
+				<li><a href="package-Database.Solr.html">Database:Solr</a>
+						</li>
+				<li><a href="package-Database.SQLite.html">Database:SQLite</a>
+						</li>
+				<li><a href="package-Exporters.html">Exporters</a>
+						</li>
+				<li><a href="package-Filesystem.html">Filesystem</a>
+						</li>
+				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
+						</li>
+				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
+						</li>
+				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
+						</li>
+				<li><a href="package-MediaGallery.html">MediaGallery</a>
+						</li>
+				<li><a href="package-Network.FTP.html">Network:FTP</a>
+						</li>
+				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
+						</li>
+				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Smart.html">Smart</a></li>
+				<li><a href="class-SmartParser.html">SmartParser</a></li>
+				<li><a href="class-SmartUnicode.html">SmartUnicode</a></li>
+				<li class="active"><a href="class-SmartUtils.html">SmartUtils</a></li>
+				<li><a href="class-SmartValidator.html">SmartValidator</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Core.html" title="Summary of Core"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class SmartUtils</h1>
+
+
+	<div class="description">
+	
+<p>Class: SmartUtils - provides various utility functions for
+SmartFramework.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Final</b><br>
+		
+		
+		<b>Package:</b> <a href="package-Core.html">Core</a><br>
+
+				<b>Version:</b>
+				v.151207<br>
+				<b>Depends:</b>
+				classes: Smart, SmartValidator, SmartHashCrypto, SmartAuth, SmartFileSysUtils,
+SmartFileSystem, SmartHttpClient<br>
+				<b>Usage:</b>
+				static object: Class::method() - This class provides only STATIC methods<br>
+		<b>Located at</b> lib/framework/lib_smart_utils.php<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="local_display_number" id="_local_display_number">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_local_display_number">#</a>
+		<code>local_display_number( <span>mixed <var>$y_number</var></span>, <span>mixed <var>$y_decimals</var> = -<span class="php-num">1</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="local_number_sign_reverse" id="_local_number_sign_reverse">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_local_number_sign_reverse">#</a>
+		<code>local_number_sign_reverse( <span>mixed <var>$y_number</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="export_var_to_form_hidden_var" id="_export_var_to_form_hidden_var">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_export_var_to_form_hidden_var">#</a>
+		<code>export_var_to_form_hidden_var( <span>mixed <var>$y_var</var></span>, <span>mixed <var>$y_html_var</var> = <span class="php-quote">'frx'</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="date_interval_days" id="_date_interval_days">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_date_interval_days">#</a>
+		<code>date_interval_days( <span>mixed <var>$y_date_now</var></span>, <span>mixed <var>$y_date_past</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="datetime_fixed_offset" id="_datetime_fixed_offset">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_datetime_fixed_offset">#</a>
+		<code>datetime_fixed_offset( <span>mixed <var>$y_timezone_offset</var></span>, <span>mixed <var>$ydate</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="data_max_size" id="_data_max_size">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_data_max_size">#</a>
+		<code>data_max_size( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="data_unarchive" id="_data_unarchive">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_data_unarchive">#</a>
+		<code>data_unarchive( <span>mixed <var>$y_enc_data</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="data_archive" id="_data_archive">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_data_archive">#</a>
+		<code>data_archive( <span>mixed <var>$y_str</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cache_variable_unarchive" id="_cache_variable_unarchive">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cache_variable_unarchive">#</a>
+		<code>cache_variable_unarchive( <span>mixed <var>$y_cache_arch_var</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cache_variable_archive" id="_cache_variable_archive">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cache_variable_archive">#</a>
+		<code>cache_variable_archive( <span>mixed <var>$y_var</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="add_to_log" id="_add_to_log">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_add_to_log">#</a>
+		<code>add_to_log( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_log</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="comment_php_code" id="_comment_php_code">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_comment_php_code">#</a>
+		<code>comment_php_code( <span>mixed <var>$y_code</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="print_array_to_html" id="_print_array_to_html">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_print_array_to_html">#</a>
+		<code>print_array_to_html( <span>mixed <var>$y_aray</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="pretty_print_bytes" id="_pretty_print_bytes">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_pretty_print_bytes">#</a>
+		<code>pretty_print_bytes( <span>mixed <var>$y_bytes</var></span>, <span>mixed <var>$y_decimals</var> = <span class="php-num">1</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="pretty_print_numbers" id="_pretty_print_numbers">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_pretty_print_numbers">#</a>
+		<code>pretty_print_numbers( <span>mixed <var>$y_number</var></span>, <span>mixed <var>$y_decimals</var> = <span class="php-num">1</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="number_to_roman" id="_number_to_roman">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_number_to_roman">#</a>
+		<code>number_to_roman( <span>mixed <var>$num</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="roman_to_number" id="_roman_to_number">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_roman_to_number">#</a>
+		<code>roman_to_number( <span>mixed <var>$roman</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="calc_percent" id="_calc_percent">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_calc_percent">#</a>
+		<code>calc_percent( <span>mixed <var>$number</var></span>, <span>mixed <var>$maxnumber</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="extract_title" id="_extract_title">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_extract_title">#</a>
+		<code>extract_title( <span>mixed <var>$ytxt</var></span>, <span>mixed <var>$y_limit</var> = <span class="php-num">65</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="extract_description" id="_extract_description">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_extract_description">#</a>
+		<code>extract_description( <span>mixed <var>$ytxt</var></span>, <span>mixed <var>$y_limit</var> = <span class="php-num">155</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="extract_keywords" id="_extract_keywords">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_extract_keywords">#</a>
+		<code>extract_keywords( <span>mixed <var>$ytxt</var></span>, <span>mixed <var>$y_count</var> = <span class="php-num">97</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="extract_words_from_text_html" id="_extract_words_from_text_html">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_extract_words_from_text_html">#</a>
+		<code>extract_words_from_text_html( <span>mixed <var>$ytxt</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cleanup_numbers_from_text" id="_cleanup_numbers_from_text">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cleanup_numbers_from_text">#</a>
+		<code>cleanup_numbers_from_text( <span>mixed <var>$ytxt</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="cleanup_html" id="_cleanup_html">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_cleanup_html">#</a>
+		<code>cleanup_html( <span>mixed <var>$y_html</var></span>, <span>mixed <var>$y_empty</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="format_list_extensions" id="_format_list_extensions">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_format_list_extensions">#</a>
+		<code>format_list_extensions( <span>mixed <var>$ycfgext</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="arr_log_last_entries" id="_arr_log_last_entries">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_arr_log_last_entries">#</a>
+		<code>arr_log_last_entries( <span>mixed <var>$y_arr</var></span>, <span>mixed <var>$y_count</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="words_break" id="_words_break">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_words_break">#</a>
+		<code>words_break( <span>mixed <var>$y_text</var></span>, <span>mixed <var>$y_limit</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="left_pad_str" id="_left_pad_str">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_left_pad_str">#</a>
+		<code>left_pad_str( <span>mixed <var>$y_string</var></span>, <span>mixed <var>$y_padnum</var></span>, <span>mixed <var>$y_padchar</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="encrypt_key" id="_encrypt_key">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_encrypt_key">#</a>
+		<code>encrypt_key( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="crypto_blowfish_encrypt" id="_crypto_blowfish_encrypt">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_crypto_blowfish_encrypt">#</a>
+		<code>crypto_blowfish_encrypt( <span>mixed <var>$y_data</var></span>, <span>mixed <var>$y_key</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="crypto_blowfish_decrypt" id="_crypto_blowfish_decrypt">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_crypto_blowfish_decrypt">#</a>
+		<code>crypto_blowfish_decrypt( <span>mixed <var>$y_data</var></span>, <span>mixed <var>$y_key</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="datapacket_checksum" id="_datapacket_checksum">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_datapacket_checksum">#</a>
+		<code>datapacket_checksum( <span>mixed <var>$y_data_pack</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unique_auth_client_file_key" id="_unique_auth_client_file_key">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unique_auth_client_file_key">#</a>
+		<code>unique_auth_client_file_key( <span>mixed <var>$y_file</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unique_client_file_key" id="_unique_client_file_key">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unique_client_file_key">#</a>
+		<code>unique_client_file_key( <span>mixed <var>$y_file</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="create_download_link" id="_create_download_link">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_create_download_link">#</a>
+		<code>create_download_link( <span>mixed <var>$y_file</var></span>, <span>mixed <var>$y_skiplog</var> = <span class="php-quote">'no'</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="prefixed_dir" id="_prefixed_dir">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_prefixed_dir">#</a>
+		<code>prefixed_dir( <span>mixed <var>$y_id</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="prefixed_long_dir" id="_prefixed_long_dir">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_prefixed_long_dir">#</a>
+		<code>prefixed_long_dir( <span>mixed <var>$y_id</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="guess_image_extension_by_first_bytes" id="_guess_image_extension_by_first_bytes">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_guess_image_extension_by_first_bytes">#</a>
+		<code>guess_image_extension_by_first_bytes( <span>mixed <var>$pict</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="guess_image_extension_by_url_head" id="_guess_image_extension_by_url_head">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_guess_image_extension_by_url_head">#</a>
+		<code>guess_image_extension_by_url_head( <span>mixed <var>$y_headers</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_visitor_unique_track_id" id="_get_visitor_unique_track_id">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_visitor_unique_track_id">#</a>
+		<code>get_visitor_unique_track_id( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_selfrobot_useragent_name" id="_get_selfrobot_useragent_name">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_selfrobot_useragent_name">#</a>
+		<code>get_selfrobot_useragent_name( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_selfrobot_session_name" id="_get_selfrobot_session_name">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_selfrobot_session_name">#</a>
+		<code>get_selfrobot_session_name( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="load_url_or_file" id="_load_url_or_file">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_load_url_or_file">#</a>
+		<code>load_url_or_file( <span>STRING <var>$y_url_or_path</var></span>, <span>NUMBER <var>$y_timeout</var> = <span class="php-num">30</span></span>, <span>ENUM <var>$y_method</var> = <span class="php-quote">'GET'</span></span>, <span>ENUM <var>$y_ssl_method</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$y_auth_name</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$y_auth_pass</var> = <span class="php-quote">''</span></span>, <span>YES/NO <var>$y_allow_set_credentials</var> = <span class="php-quote">'no'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Load a File or an URL it may use 3 methods: FileRead, CURL or HTTP-Browser
+class</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Load a File or an URL it may use 3 methods: FileRead, CURL or HTTP-Browser
+class</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_url_or_path</var></dt>
+					<dd>:: /path/to/file | http(s)://some.url:port/path (port is optional)</dd>
+					<dt><var>$y_timeout</var></dt>
+					<dd>:: timeout in seconds</dd>
+					<dt><var>$y_method</var></dt>
+					<dd>:: used only for URLs, the browsing method: GET | POST</dd>
+					<dt><var>$y_ssl_method</var></dt>
+					<dd>:: SSL Mode: tls | sslv3 | sslv2 | ssl</dd>
+					<dt><var>$y_auth_name</var></dt>
+					<dd>:: used only for URLs, the auth user name</dd>
+					<dt><var>$y_auth_pass</var></dt>
+					<dd>:: used only for URLs, the auth password</dd>
+					<dt><var>$y_allow_set_credentials</var></dt>
+					<dd>:: DEFAULT MUST BE set to NO ; if YES must be set just for internal files and
+current URL ; if the $y_url_or_path to get is detected to be under current URL
+will send also the sessionID ; more if detected that is from admin.php and if
+this is set to YES will send credentials $_SERVER['PHP_AUTH_USER'] and
+$_SERVER['PHP_AUTH_PW'] authentication (using YES with other URLs than
+SmartFramework's current URL can be a serious SECURITY ISSUE)</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="load_cached_content" id="_load_cached_content">
+
+		<td class="attributes"><code>
+			 public static
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_load_cached_content">#</a>
+		<code>load_cached_content( <span>STRING <var>$y_cache_file_extension</var></span>, <span>STRING <var>$y_cache_prefix</var></span>, <span>STRING <var>$y_load_url</var></span>, <span>STRING <var>$y_content</var> = <span class="php-quote">''</span></span>, <span>INT <var>$y_cache_expire</var> = <span class="php-num">0</span></span>, <span>ENUM <var>$y_encrypted</var> = <span class="php-quote">'no'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Load/Save a file from URL to cache</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Load/Save a file from URL to cache</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_cache_file_extension</var></dt>
+					<dd>:: File Extension (example: '.ext')</dd>
+					<dt><var>$y_cache_prefix</var></dt>
+					<dd>:: prefix dir (at least 3 chars) ended by slash (Example: 'prefix/')</dd>
+					<dt><var>$y_load_url</var></dt>
+					<dd>:: URL to Load (Ex: http(s)://some/test.txt ; memory://some.unique.key)</dd>
+					<dt><var>$y_content</var></dt>
+					<dd>:: contents of the file to be saved by [set] mode</dd>
+					<dt><var>$y_cache_expire</var></dt>
+					<dd>:: 0=never ; (&amp;gt;0)=seconds</dd>
+					<dt><var>$y_encrypted</var></dt>
+					<dd>:: yes/no to encrypt the file content</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>:: cached contents<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="table_draw_ncolumns" id="_table_draw_ncolumns">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_table_draw_ncolumns">#</a>
+		<code>table_draw_ncolumns( <span>mixed <var>$arr_data</var></span>, <span>mixed <var>$ycols</var></span>, <span>mixed <var>$ytitle</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_counter</var> = <span class="php-quote">'no'</span></span>, <span>mixed <var>$y_width</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_cellspacing</var> = <span class="php-quote">'8'</span></span>, <span>mixed <var>$y_align</var> = <span class="php-quote">'center'</span></span>, <span>mixed <var>$y_firstisheader</var> = <span class="php-quote">'no'</span></span>, <span>mixed <var>$y_bgcolors</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_encoding_charset" id="_get_encoding_charset">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_encoding_charset">#</a>
+		<code>get_encoding_charset( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_server_current_protocol" id="_get_server_current_protocol">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_server_current_protocol">#</a>
+		<code>get_server_current_protocol( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_server_current_port" id="_get_server_current_port">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_server_current_port">#</a>
+		<code>get_server_current_port( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_server_current_ip" id="_get_server_current_ip">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_server_current_ip">#</a>
+		<code>get_server_current_ip( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_server_current_domain_name" id="_get_server_current_domain_name">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_server_current_domain_name">#</a>
+		<code>get_server_current_domain_name( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_server_current_basedomain_name" id="_get_server_current_basedomain_name">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_server_current_basedomain_name">#</a>
+		<code>get_server_current_basedomain_name( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_server_current_request_uri" id="_get_server_current_request_uri">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_server_current_request_uri">#</a>
+		<code>get_server_current_request_uri( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_server_current_full_script" id="_get_server_current_full_script">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_server_current_full_script">#</a>
+		<code>get_server_current_full_script( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_server_current_path" id="_get_server_current_path">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_server_current_path">#</a>
+		<code>get_server_current_path( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_server_current_url" id="_get_server_current_url">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_server_current_url">#</a>
+		<code>get_server_current_url( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_server_current_script" id="_get_server_current_script">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_server_current_script">#</a>
+		<code>get_server_current_script( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_server_current_queryurl" id="_get_server_current_queryurl">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_server_current_queryurl">#</a>
+		<code>get_server_current_queryurl( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="add_anchor_to_url_query" id="_add_anchor_to_url_query">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_add_anchor_to_url_query">#</a>
+		<code>add_anchor_to_url_query( <span>mixed <var>$y_anchor</var></span>, <span>mixed <var>$y_url_query</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_webserver_version" id="_get_webserver_version">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_webserver_version">#</a>
+		<code>get_webserver_version( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_server_os" id="_get_server_os">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_server_os">#</a>
+		<code>get_server_os( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="check_ip_in_range" id="_check_ip_in_range">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_check_ip_in_range">#</a>
+		<code>check_ip_in_range( <span>mixed <var>$lower_range_ip_address</var></span>, <span>mixed <var>$upper_range_ip_address</var></span>, <span>mixed <var>$needle_ip_address</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_ip_client" id="_get_ip_client">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_ip_client">#</a>
+		<code>get_ip_client( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_ip_client_proxy" id="_get_ip_client_proxy">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_ip_client_proxy">#</a>
+		<code>get_ip_client_proxy( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_os_browser_ip" id="_get_os_browser_ip">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_os_browser_ip">#</a>
+		<code>get_os_browser_ip( <span>mixed <var>$y_mode</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-07 13:47</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

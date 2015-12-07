@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Class SmartMailerUtils | Smart.Framework Documentation :: 2015-12-07 13:47</title>
+	<link rel="stylesheet" href="resources/style.css?2361662816">
+	<script src="resources/combined.js?3413450810"></script>
+	<script src="elementlist.js?2354500668"></script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-Application.html">Application</a>
+						</li>
+				<li><a href="package-Archivers.html">Archivers</a>
+						</li>
+				<li><a href="package-Caching.html">Caching</a>
+						</li>
+				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
+						</li>
+				<li><a href="package-Components.Calendar.html">Components:Calendar</a>
+						</li>
+				<li><a href="package-Components.Captcha.html">Components:Captcha</a>
+						</li>
+				<li><a href="package-Components.Charts.html">Components:Charts</a>
+						</li>
+				<li><a href="package-Components.Framework.html">Components:Framework</a>
+						</li>
+				<li><a href="package-Core.html">Core</a>
+						</li>
+				<li><a href="package-Crypto.html">Crypto</a>
+						</li>
+				<li><a href="package-DATA.HTML.html">DATA:HTML</a>
+						</li>
+				<li><a href="package-DATA.XML.html">DATA:XML</a>
+						</li>
+				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
+						</li>
+				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
+						</li>
+				<li><a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a>
+						</li>
+				<li><a href="package-Database.Redis.html">Database:Redis</a>
+						</li>
+				<li><a href="package-Database.Solr.html">Database:Solr</a>
+						</li>
+				<li><a href="package-Database.SQLite.html">Database:SQLite</a>
+						</li>
+				<li><a href="package-Exporters.html">Exporters</a>
+						</li>
+				<li><a href="package-Filesystem.html">Filesystem</a>
+						</li>
+				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
+						</li>
+				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
+						</li>
+				<li class="active"><a href="package-Mailer.Utility.html">Mailer:Utility</a>
+						</li>
+				<li><a href="package-MediaGallery.html">MediaGallery</a>
+						</li>
+				<li><a href="package-Network.FTP.html">Network:FTP</a>
+						</li>
+				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
+						</li>
+				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-SmartMailerMimeDecode.html">SmartMailerMimeDecode</a></li>
+				<li><a href="class-SmartMailerMimeParser.html">SmartMailerMimeParser</a></li>
+				<li class="active"><a href="class-SmartMailerUtils.html">SmartMailerUtils</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Mailer.Utility.html" title="Summary of Mailer:Utility"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class SmartMailerUtils</h1>
+
+
+	<div class="description">
+	
+<p>Class: SmartMailerUtils - provides various util functions for eMail like:
+Check/Validate, Send.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Final</b><br>
+		
+		
+		<b>Package:</b> <a href="package-Mailer.Utility.html">Mailer:Utility</a><br>
+
+				<b>Version:</b>
+				v.150617<br>
+				<b>Depends:</b>
+				classes: Smart, SmartUtils, SmartFileSysUtils, SmartFileSystem, SmartMailerSend,
+SmartMailerMimeDecode,<br>
+				<b>Usage:</b>
+				static object: Class::method() - This class provides only STATIC methods<br>
+		<b>Located at</b> lib/core/plugins/lib_mail_utils.php<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="check_email_address" id="_check_email_address">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_check_email_address">#</a>
+		<code>check_email_address( <span>STRING <var>$email</var></span>, <span>ENUM <var>$ycheckdomain</var> = <span class="php-quote">'no'</span></span>, <span>STRING <var>$helo</var> = <span class="php-quote">''</span></span>, <span>NUMBER <var>$y_smtp_port</var> = <span class="php-quote">'25'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Check eMail Address [PUBLIC]</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check eMail Address [PUBLIC]</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$email</var></dt>
+					<dd>:: eMail Address</dd>
+					<dt><var>$ycheckdomain</var></dt>
+					<dd>:: 'no' = only validate if email address is in the form of &lt;a
+href="mailto:text&amp;#64;texte.xt"&gt;text&amp;#64;&lt;!-- --&gt;texte.xt&lt;/a&gt; | 'yes' = check
+email with MX + SMTP validation</dd>
+					<dt><var>$helo</var></dt>
+					<dd>:: SMTP HELO (if check MX + Domain will be used, cannot be empty)</dd>
+					<dt><var>$y_smtp_port</var></dt>
+					<dd>:: SMTP Port (normal is '25')</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>STRING<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_mx_email_address" id="_validate_mx_email_address">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_mx_email_address">#</a>
+		<code>validate_mx_email_address( <span>STRING <var>$helo</var></span>, <span>STRING <var>$email</var></span>, <span>NUMBER <var>$y_smtp_port</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Does the MX Check of eMail / Domain [PRIVATE]</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Does the MX Check of eMail / Domain [PRIVATE]</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$helo</var></dt>
+					<dd>:: SMTP HELO</dd>
+					<dt><var>$email</var></dt>
+					<dd>:: eMail Address</dd>
+					<dt><var>$y_smtp_port</var></dt>
+					<dd>:: SMTP Port (normal is '25')</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>STRING<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="send_email" id="_send_email">
+
+		<td class="attributes"><code>
+			 public static
+			TRUE/FALSE
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_send_email">#</a>
+		<code>send_email( <span>STRING <var>$to</var></span>, <span>STRING <var>$bcc</var></span>, <span>STRING <var>$subj</var></span>, <span>STRING <var>$message</var></span>, <span>TRUE/FALSE <var>$is_html</var></span>, <span>ARRAY <var>$attachments</var> = <span class="php-keyword1">array</span>()</span>, <span>ENUM <var>$charset</var> = <span class="php-quote">'UTF-8'</span></span>, <span>ENUM <var>$priority</var> = <span class="php-quote">'3'</span></span>, <span>STRING <var>$logsend_dir</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$cc</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$inreplyto</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$replytoaddr</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Send Email Mime Message from SmartFramework to a destination</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Send Email Mime Message from SmartFramework to a destination</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$to</var></dt>
+					<dd>To:</dd>
+					<dt><var>$bcc</var></dt>
+					<dd>'' | BCc:</dd>
+					<dt><var>$subj</var></dt>
+					<dd>Subject:</dd>
+					<dt><var>$message</var></dt>
+					<dd>Body/Message:</dd>
+					<dt><var>$is_html</var></dt>
+					<dd>* Format: Html or Text/Plain</dd>
+					<dt><var>$attachments</var></dt>
+					<dd>* $attachments = array('file1.txt'=&amp;gt;'This is the file 1 content', ...);</dd>
+					<dt><var>$charset</var></dt>
+					<dd>* charset</dd>
+					<dt><var>$priority</var></dt>
+					<dd>* 1=Low ; 3=Normal ; 5=High</dd>
+					<dt><var>$logsend_dir</var></dt>
+					<dd>'' | path/to/log/messages</dd>
+					<dt><var>$cc</var></dt>
+					<dd>'' | Cc:</dd>
+					<dt><var>$inreplyto</var></dt>
+					<dd>'' | In-Reply-To:</dd>
+					<dt><var>$replytoaddr</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>TRUE/FALSE</code><br>OPERATION RESULT [0 / 1]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="send_extended_email" id="_send_extended_email">
+
+		<td class="attributes"><code>
+			 public static
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_send_extended_email">#</a>
+		<code>send_extended_email( <span>ARRAY <var>$y_server_settings</var></span>, <span>ENUM <var>$y_mode</var></span>, <span>STRING <var>$to</var></span>, <span>STRING <var>$cc</var></span>, <span>STRING <var>$subj</var></span>, <span>STRING <var>$message</var></span>, <span>TRUE/FALSE <var>$is_html</var></span>, <span>ARRAY <var>$attachments</var></span>, <span>ENUM <var>$charset</var></span>, <span>ENUM <var>$priority</var></span>, <span>STRING <var>$inreplyto</var></span>, <span>mixed <var>$bcc</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$replytoaddr</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Send Email Mime Message from custom MailBox to a destination</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Send Email Mime Message from custom MailBox to a destination</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_server_settings</var></dt>
+					<dd>arr = [ server_name, server_port, server_sslmode, server_auth_user,
+server_auth_pass, send_from_addr, send_from_name, smtp_mxdomain ]</dd>
+					<dt><var>$y_mode</var></dt>
+					<dd>'send' = do send | 'send-return' = do send + return | 'return' = return mime
+formated mail</dd>
+					<dt><var>$to</var></dt>
+					<dd>To:</dd>
+					<dt><var>$cc</var></dt>
+					<dd>Cc: | empty</dd>
+					<dt><var>$subj</var></dt>
+					<dd>Subject:</dd>
+					<dt><var>$message</var></dt>
+					<dd>Body/Message:</dd>
+					<dt><var>$is_html</var></dt>
+					<dd>* Format: Html or Text/Plain</dd>
+					<dt><var>$attachments</var></dt>
+					<dd>* $attachments = array('file1.txt'=&amp;gt;'This is the file 1 content', ...);</dd>
+					<dt><var>$charset</var></dt>
+					<dd>* charset</dd>
+					<dt><var>$priority</var></dt>
+					<dd>* 1=High ; 3=Normal ; 5=Low</dd>
+					<dt><var>$inreplyto</var></dt>
+					<dd>'' | the ID of message that is replying to</dd>
+					<dt><var>$bcc</var></dt>
+					<dd></dd>
+					<dt><var>$replytoaddr</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>OPERATION RESULT, ERROR, MIME MESSAGE<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-07 13:47</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

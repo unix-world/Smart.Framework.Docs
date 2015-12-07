@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Class SmartSolrDb | Smart.Framework Documentation :: 2015-12-07 13:47</title>
+	<link rel="stylesheet" href="resources/style.css?2361662816">
+	<script src="resources/combined.js?3413450810"></script>
+	<script src="elementlist.js?2354500668"></script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-Application.html">Application</a>
+						</li>
+				<li><a href="package-Archivers.html">Archivers</a>
+						</li>
+				<li><a href="package-Caching.html">Caching</a>
+						</li>
+				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
+						</li>
+				<li><a href="package-Components.Calendar.html">Components:Calendar</a>
+						</li>
+				<li><a href="package-Components.Captcha.html">Components:Captcha</a>
+						</li>
+				<li><a href="package-Components.Charts.html">Components:Charts</a>
+						</li>
+				<li><a href="package-Components.Framework.html">Components:Framework</a>
+						</li>
+				<li><a href="package-Core.html">Core</a>
+						</li>
+				<li><a href="package-Crypto.html">Crypto</a>
+						</li>
+				<li><a href="package-DATA.HTML.html">DATA:HTML</a>
+						</li>
+				<li><a href="package-DATA.XML.html">DATA:XML</a>
+						</li>
+				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
+						</li>
+				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
+						</li>
+				<li><a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a>
+						</li>
+				<li><a href="package-Database.Redis.html">Database:Redis</a>
+						</li>
+				<li class="active"><a href="package-Database.Solr.html">Database:Solr</a>
+						</li>
+				<li><a href="package-Database.SQLite.html">Database:SQLite</a>
+						</li>
+				<li><a href="package-Exporters.html">Exporters</a>
+						</li>
+				<li><a href="package-Filesystem.html">Filesystem</a>
+						</li>
+				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
+						</li>
+				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
+						</li>
+				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
+						</li>
+				<li><a href="package-MediaGallery.html">MediaGallery</a>
+						</li>
+				<li><a href="package-Network.FTP.html">Network:FTP</a>
+						</li>
+				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
+						</li>
+				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li class="active"><a href="class-SmartSolrDb.html">SmartSolrDb</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Database.Solr.html" title="Summary of Database:Solr"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class SmartSolrDb</h1>
+
+
+	<div class="description">
+	
+<p>Class Smart Solr (DB) Client</p>
+
+<pre>
+
+<span class="php-comment">// Usage example:</span>
+<span
+class="php-comment">//--</span>
+<span class="php-var">$mySolr</span> = <span
+class="php-keyword1">new</span> SmartSolrDb();
+<span
+class="php-comment">//--</span>
+<span class="php-var">$data</span> = <span
+class="php-var">$mySolr</span>-&gt;findQuery(
+        <span
+class="php-quote">'word1 word2'</span>, <span
+class="php-comment">// this is a real Solr Query and must be escaped in a proper way using SolrUtils::escapeQueryChars()</span>
+        [
+                <span
+class="php-quote">'settings'</span> =&gt; [
+                        <span
+class="php-quote">'start'</span>                         =&gt; <span
+class="php-num">0</span>, <span
+class="php-comment">// offset</span>
+                        <span
+class="php-quote">'rows'</span>                          =&gt; <span
+class="php-num">10</span>, <span
+class="php-comment">// limit</span>
+                ],
+                <span
+class="php-quote">'sort'</span> =&gt; [
+                        <span
+class="php-quote">'score'</span> =&gt; -<span
+class="php-num">1</span>
+                ],
+                <span
+class="php-quote">'filters'</span> =&gt; [
+                        <span
+class="php-quote">'!id'</span> =&gt; <span class="php-quote">'ID1'</span>, <span
+class="php-comment">// not ID1</span>
+                        <span
+class="php-quote">'category'</span> =&gt; <span
+class="php-quote">'Some Categ'</span>,
+                        <span
+class="php-quote">'subcategory'</span> =&gt; <span
+class="php-quote">'Some Sub-Categ'</span>
+                ],
+                <span
+class="php-quote">'fields'</span> =&gt; [] <span
+class="php-comment">// all</span>
+        ]
+);
+<span
+class="php-comment">//--</span>
+
+</pre>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Final</b><br>
+		
+		
+		<b>Package:</b> <a href="package-Database.Solr.html">Database:Solr</a><br>
+
+				<b>Version:</b>
+				v.151205<br>
+				<b>Depends:</b>
+				extensions: PHP SOLR Client (v.2.0 or later) ; classes: Smart, SmartComponents<br>
+				<b>Usage:</b>
+				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
+methods<br>
+		<b>Located at</b> modules/extra-libs/lib_db_solr.php<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="findQuery" id="_findQuery">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_findQuery">#</a>
+		<code>findQuery( <span>mixed <var>$y_query</var></span>, <span>mixed <var>$y_options</var> = <span class="php-keyword1">array</span>(<span class="php-quote">'settings'</span> =&gt; <span class="php-keyword1">array</span>(), <span class="php-quote">'sort'</span> =&gt; <span class="php-keyword1">array</span>(), <span class="php-quote">'filters'</span> =&gt; <span class="php-keyword1">array</span>(), <span class="php-quote">'facets'</span> =&gt; <span class="php-keyword1">array</span>(), <span class="php-quote">'fields'</span> =&gt; <span class="php-keyword1">array</span>())</span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="addDocument" id="_addDocument">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_addDocument">#</a>
+		<code>addDocument( <span>mixed <var>$arrdoc</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="deleteDocument" id="_deleteDocument">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_deleteDocument">#</a>
+		<code>deleteDocument( <span>mixed <var>$id</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-07 13:47</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
