@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartPgsqlDb | Smart.Framework Documentation :: 2015-12-07 13:47</title>
+	<title>Class SmartPgsqlDb | Smart.Framework Documentation :: 2015-12-16 12:10</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?2354500668"></script>
@@ -160,13 +160,13 @@ class="php-quote">'SELECT * FROM &quot;table&quot; WHERE &quot;id&quot; = '</spa
 class="php-num">3</span>));
 <span
 class="php-var">$associative_read_multi_records</span> = (<span
-class="php-keyword1">array</span>) SmartPgsqlDb::read_asdata(<span
+class="php-keyword1">array</span>) SmartPgsqlDb::read_adata(<span
 class="php-quote">'SELECT * FROM &quot;table&quot; WHERE &quot;id&quot; = $1'</span>, <span
 class="php-keyword1">array</span>(<span
 class="php-quote">'other-id'</span>));
 <span
 class="php-var">$associative_read_for_just_one_record</span> = (<span
-class="php-keyword1">array</span>) SmartPgsqlDb::read_adata(<span
+class="php-keyword1">array</span>) SmartPgsqlDb::read_asdata(<span
 class="php-quote">'SELECT * FROM &quot;table&quot; WHERE &quot;id&quot; = $1 LIMIT 1 OFFSET 0'</span>, <span
 class="php-keyword1">array</span>(<span class="php-num">99</span>)); <span
 class="php-comment">// NOTICE: this function will return just one record, so always use LIMIT 1 OFFSET 0 (or LIMIT 0,1) ; if the query will return more records will raise an error</span>
@@ -215,7 +215,7 @@ class="php-quote">'insert'</span>));
 		<b>Package:</b> <a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a><br>
 
 				<b>Version:</b>
-				v.151205<br>
+				v.151215<br>
 				<b>Depends:</b>
 				extensions: PHP PostgreSQL ; classes: Smart, SmartUnicode, SmartUtils<br>
 				<b>Hints:</b>
@@ -673,69 +673,6 @@ easy debugging</dd>
 
 		<div class="description short">
 			
-<p>PgSQL Query :: Read (Associative) - just for one row (to easy use data from
-queries that return just 1 row). !!! This will raise an error if more than one
-row(s) are returned !!! This function does not support multiple rows because the
-associative data is structured without row iterator. For queries that return
-more than one row use: read_asdata() or read_data(). This function is intended
-to be used for read type queries: SELECT.</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p>PgSQL Query :: Read (Associative) - just for one row (to easy use data from
-queries that return just 1 row). !!! This will raise an error if more than one
-row(s) are returned !!! This function does not support multiple rows because the
-associative data is structured without row iterator. For queries that return
-more than one row use: read_asdata() or read_data(). This function is intended
-to be used for read type queries: SELECT.</p>
-
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$queryval</var></dt>
-					<dd>:: the query</dd>
-					<dt><var>$params_or_title</var></dt>
-					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters ($1, $2, ... $n) or query title for
-easy debugging</dd>
-					<dt><var>$y_connection</var></dt>
-					<dd>:: the connection</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>ARRAY</code><br>(asociative) of results :: array('column1', 'column2', ... 'column-n')<br>
-				</div>
-
-
-				<h4>Hints</h4>
-				<div class="list">
-						ALWAYS use a LIMIT 1 OFFSET 0 with all queries using this function to avoid
-situations that will return more than 1 rows and will raise ERROR with this
-function.<br>
-				</div>
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="read_asdata" id="_read_asdata">
-
-		<td class="attributes"><code>
-			 public static
-			ARRAY
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_read_asdata">#</a>
-		<code>read_asdata( <span>STRING <var>$queryval</var></span>, <span>STRING <var>$params_or_title</var> = <span class="php-quote">''</span></span>, <span>RESOURCE <var>$y_connection</var> = <span class="php-quote">'DEFAULT'</span></span> )</code>
-
-		<div class="description short">
-			
 <p>PgSQL Query :: Read (Associative) one or multiple rows. This function is
 intended to be used for read type queries: SELECT.</p>
 
@@ -767,6 +704,70 @@ array('column1', 'column2', ... 'column-n'))<br>
 				</div>
 
 
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_asdata" id="_read_asdata">
+
+		<td class="attributes"><code>
+			 public static
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_asdata">#</a>
+		<code>read_asdata( <span>STRING <var>$queryval</var></span>, <span>STRING <var>$params_or_title</var> = <span class="php-quote">''</span></span>, <span>RESOURCE <var>$y_connection</var> = <span class="php-quote">'DEFAULT'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>PgSQL Query :: Read (Associative) - Single Row (just for 1 row, to easy the
+use of data from queries). !!! This will raise an error if more than one row(s)
+are returned !!! This function does not support multiple rows because the
+associative data is structured without row iterator. For queries that return
+more than one row use: read_adata() or read_data(). This function is intended to
+be used for read type queries: SELECT.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>PgSQL Query :: Read (Associative) - Single Row (just for 1 row, to easy the
+use of data from queries). !!! This will raise an error if more than one row(s)
+are returned !!! This function does not support multiple rows because the
+associative data is structured without row iterator. For queries that return
+more than one row use: read_adata() or read_data(). This function is intended to
+be used for read type queries: SELECT.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$queryval</var></dt>
+					<dd>:: the query</dd>
+					<dt><var>$params_or_title</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters ($1, $2, ... $n) or query title for
+easy debugging</dd>
+					<dt><var>$y_connection</var></dt>
+					<dd>:: the connection</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>(asociative) of results :: Returns just a SINGLE ROW as: array('column1',
+'column2', ... 'column-n')<br>
+				</div>
+
+
+				<h4>Hints</h4>
+				<div class="list">
+						ALWAYS use a LIMIT 1 OFFSET 0 with all queries using this function to avoid
+situations that will return more than 1 rows and will raise ERROR with this
+function.<br>
+				</div>
 
 
 		</div>
@@ -1066,7 +1067,7 @@ in Time and Space]</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-07 13:47</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-16 12:10</a>
 	</div>
 </div>
 </div>

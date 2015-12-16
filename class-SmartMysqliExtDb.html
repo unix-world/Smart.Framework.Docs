@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartMysqliExtDb | Smart.Framework Documentation :: 2015-12-07 13:47</title>
+	<title>Class SmartMysqliExtDb | Smart.Framework Documentation :: 2015-12-16 12:10</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?2354500668"></script>
@@ -196,7 +196,7 @@ class="php-var">$mysql</span> = <span
 class="php-keyword1">new</span> SmartMysqliExtDb(<span
 class="php-var">$custom_mysql</span>);
 <span
-class="php-var">$mysql</span>-&gt;read_asdata(<span
+class="php-var">$mysql</span>-&gt;read_adata(<span
 class="php-quote">'SELECT * FROM `my_table` LIMIT 100 OFFSET 0'</span>);
 <span
 class="php-comment">//... for other hints look to the samples of the class: SmartMysqliDb::*</span>
@@ -219,7 +219,7 @@ class="php-comment">//... for other hints look to the samples of the class: Smar
 		<b>Package:</b> <a href="package-Database.MySQL.html">Database:MySQL</a><br>
 
 				<b>Version:</b>
-				v.151205<br>
+				v.151215<br>
 				<b>Depends:</b>
 				extensions: PHP MySQLi ; classes: Smart, SmartUnicode, SmartUtils,
 SmartComponents<br>
@@ -270,41 +270,6 @@ Server specified as parameters of this function.</p>
 					<dd>:: The Array of Configuration parameters - the ARRAY STRUCTURE should be
 identical with the default config.php: $configs['mysqli'].</dd>
 				</dl></div>
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="__destruct" id="___destruct">
-
-		<td class="attributes"><code>
-			 public 
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#___destruct">#</a>
-		<code>__destruct( )</code>
-
-		<div class="description short">
-			
-<p>Class Destructor This will automatically disconnect the current connected
-server of this class.</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p>Class Destructor This will automatically disconnect the current connected
-server of this class.</p>
-
-
-
 
 
 
@@ -543,66 +508,6 @@ intended to be used for read type queries: SELECT.</p>
 
 		<div class="description short">
 			
-<p>MySQL Query :: Read (Associative) - just for one row (to easy use data from
-queries that return just 1 row). !!! This will raise an error if more than one
-row(s) are returned !!! This function does not support multiple rows because the
-associative data is structured without row iterator. For queries that return
-more than one row use: read_asdata() or read_data(). This function is intended
-to be used for read type queries: SELECT.</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p>MySQL Query :: Read (Associative) - just for one row (to easy use data from
-queries that return just 1 row). !!! This will raise an error if more than one
-row(s) are returned !!! This function does not support multiple rows because the
-associative data is structured without row iterator. For queries that return
-more than one row use: read_asdata() or read_data(). This function is intended
-to be used for read type queries: SELECT.</p>
-
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$queryval</var></dt>
-					<dd>:: the query</dd>
-					<dt><var>$params_or_title</var></dt>
-					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters or query title for easy debugging</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>ARRAY</code><br>(asociative) of results :: array('column1', 'column2', ... 'column-n')<br>
-				</div>
-
-
-				<h4>Hints</h4>
-				<div class="list">
-						ALWAYS use a LIMIT 1 OFFSET 0 with all queries using this function to avoid
-situations that will return more than 1 rows and will raise ERROR with this
-function.<br>
-				</div>
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="read_asdata" id="_read_asdata">
-
-		<td class="attributes"><code>
-			 public 
-			ARRAY
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_read_asdata">#</a>
-		<code>read_asdata( <span>STRING <var>$queryval</var></span>, <span>STRING <var>$params_or_title</var> = <span class="php-quote">''</span></span> )</code>
-
-		<div class="description short">
-			
 <p>MySQL Query :: Read (Associative) one or multiple rows. This function is
 intended to be used for read type queries: SELECT.</p>
 
@@ -631,6 +536,67 @@ array('column1', 'column2', ... 'column-n'))<br>
 				</div>
 
 
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="read_asdata" id="_read_asdata">
+
+		<td class="attributes"><code>
+			 public 
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_read_asdata">#</a>
+		<code>read_asdata( <span>STRING <var>$queryval</var></span>, <span>STRING <var>$params_or_title</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>MySQL Query :: Read (Associative) - Single Row (just for 1 row, to easy the
+use of data from queries). !!! This will raise an error if more than one row(s)
+are returned !!! This function does not support multiple rows because the
+associative data is structured without row iterator. For queries that return
+more than one row use: read_adata() or read_data(). This function is intended to
+be used for read type queries: SELECT.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>MySQL Query :: Read (Associative) - Single Row (just for 1 row, to easy the
+use of data from queries). !!! This will raise an error if more than one row(s)
+are returned !!! This function does not support multiple rows because the
+associative data is structured without row iterator. For queries that return
+more than one row use: read_adata() or read_data(). This function is intended to
+be used for read type queries: SELECT.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$queryval</var></dt>
+					<dd>:: the query</dd>
+					<dt><var>$params_or_title</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters or query title for easy debugging</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>(asociative) of results :: Returns just a SINGLE ROW as: array('column1',
+'column2', ... 'column-n')<br>
+				</div>
+
+
+				<h4>Hints</h4>
+				<div class="list">
+						ALWAYS use a LIMIT 1 OFFSET 0 with all queries using this function to avoid
+situations that will return more than 1 rows and will raise ERROR with this
+function.<br>
+				</div>
 
 
 		</div>
@@ -851,7 +817,7 @@ in Time and Space]</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-07 13:47</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-16 12:10</a>
 	</div>
 </div>
 </div>

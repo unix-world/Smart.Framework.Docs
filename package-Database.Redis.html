@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Package Database:Redis | Smart.Framework Documentation :: 2015-12-07 13:47</title>
+	<title>Package Database:Redis | Smart.Framework Documentation :: 2015-12-16 12:10</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?2354500668"></script>
@@ -133,7 +133,9 @@
 <tr>
 	<td class="name"><a href="class-SmartRedisDb.html">SmartRedisDb</a></td>
 	<td>Class: SmartRedisDb - provides a Client for Redis (Data Structure / Caching)
-Server.</td>
+Server. By default this class will just log the errors. In order to make the
+Redis errors to be Fatal Errors, just add this line to init.php:
+define('SMART_FRAMEWORK_REDIS_FATAL_ERR', true);</td>
 </tr>
 </table>
 
@@ -144,7 +146,7 @@ Server.</td>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-07 13:47</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-16 12:10</a>
 	</div>
 </div>
 </div>

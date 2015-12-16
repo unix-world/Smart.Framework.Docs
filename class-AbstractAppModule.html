@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class AbstractAppModule | Smart.Framework Documentation :: 2015-12-07 13:47</title>
+	<title>Class AbstractAppModule | Smart.Framework Documentation :: 2015-12-16 12:10</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?2354500668"></script>
@@ -178,13 +178,13 @@ class="php-quote">'template-one.htm'</span>);     <span
 class="php-comment">// will be using the template file: template-one.htm (located in: etc/templates/my-template/)</span>
 
         <span
-class="php-comment">// the template `template-one.htm` contains several markers as): `page-title`, `left-column`, `main`, `right-column`, so we set them as:</span>
+class="php-comment">// the template `template-one.htm` contains several markers as): `title`, `left-column`, `main`, `right-column`, so we set them as:</span>
         <span
 class="php-var">$this</span>-&gt;PageViewSetVars([
             <span
 class="php-quote">'title'</span> =&gt; <span
 class="php-quote">'Hello World'</span>, <span
-class="php-comment">// this marker is like &lt;title&gt;[####PAGE-TITLE####]&lt;/title&gt;</span>
+class="php-comment">// this marker is like &lt;title&gt;[####TITLE####]&lt;/title&gt;</span>
             <span
 class="php-quote">'left-column'</span> =&gt; <span
 class="php-quote">'Some content in the left column'</span>, <span
@@ -197,7 +197,7 @@ class="php-comment">// the `main` area must always be defined in a template as: 
 class="php-quote">'right-column'</span> =&gt; <span
 class="php-quote">'Some content in the &lt;b&gt;right area&lt;/b&gt;. Current Operation is: '</span>.Smart::escape_html(<span
 class="php-var">$op</span>) <span
-class="php-comment">// the marker will be put anywhere in the template html as: [####RIGHT-AREA####]</span>
+class="php-comment">// the marker will be put anywhere in the template html as: [####RIGHT-COLUMN####]</span>
         ]);
 
         <span
@@ -245,9 +245,12 @@ class="php-keyword1">public</span> <span
 class="php-keyword1">function</span> Run() {
 
         <span
-class="php-keyword2">header</span>(<span
-class="php-quote">'Content-Type: text/javascript'</span>); <span
-class="php-comment">// or can be: application/json</span>
+class="php-var">$this</span>-&gt;PageViewSetCfg(<span
+class="php-quote">'rawmime'</span>, <span
+class="php-quote">'text/javascript'</span>); <span
+class="php-comment">// set the content (mime) type ; this can also be for this example: 'application/json'</span>
+        <span
+class="php-comment">//$this-&gt;PageViewSetCfg('rawdisp', 'inline'); // (optional, set the content disposition ; for pdf mime type you maybe would set this to 'attachment' instead on 'inline'</span>
 
         <span
 class="php-var">$this</span>-&gt;PageViewSetCfg(<span
@@ -304,7 +307,7 @@ class="php-comment">//END CLASS</span>
 		<b>Package:</b> <a href="package-Application.html">Application</a><br>
 
 				<b>Version:</b>
-				v.151205<br>
+				v.151216<br>
 				<b>Depends:</b>
 				-<br>
 				<b>Hints:</b>
@@ -953,7 +956,7 @@ the __destruct() method in all controllers ...</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-07 13:47</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-16 12:10</a>
 	</div>
 </div>
 </div>

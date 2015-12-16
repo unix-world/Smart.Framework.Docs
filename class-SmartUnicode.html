@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartUnicode | Smart.Framework Documentation :: 2015-12-07 13:47</title>
+	<title>Class SmartUnicode | Smart.Framework Documentation :: 2015-12-16 12:10</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?2354500668"></script>
@@ -186,7 +186,7 @@ class="php-comment">//join()                        implode()                   
  <span
 class="php-comment">//substr_replace()              str_replace()                           [ok]        It is not certified to be safe 100% with unicode strings ; try to use the the replacement function</span>
  <span
-class="php-comment">//str_ireplace()                * str_ireplace()                        [ok!]       Wil fail if try to replace unicode accented characters if case differs (lower vs. upper)</span>
+class="php-comment">//str_ireplace()                * str_ireplace()                        [ok!]       Will fail if try to replace unicode accented characters if case differs (lower vs. upper)</span>
  <span
 class="php-comment">//--</span>
  <span
@@ -291,7 +291,7 @@ class="php-comment">//----------------------------------------------------------
 		<b>Package:</b> <a href="package-Core.html">Core</a><br>
 
 				<b>Version:</b>
-				v.150429<br>
+				v.151216<br>
 				<b>Depends:</b>
 				extensions: PHP MBString, PHP XML<br>
 				<b>Hints:</b>
@@ -1057,6 +1057,48 @@ ISO-8859-1</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="html_entities" id="_html_entities">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_entities">#</a>
+		<code>html_entities( <span>STRING <var>$str</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Convert the Unicode Accented Characters to Safe HTML Entities</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Convert the Unicode Accented Characters to Safe HTML Entities</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd>:: The string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The processed string<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="word_wrap" id="_word_wrap">
 
 		<td class="attributes"><code>
@@ -1109,48 +1151,6 @@ FALSE.</dd>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="html_entities" id="_html_entities">
-
-		<td class="attributes"><code>
-			 public static
-			STRING
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_html_entities">#</a>
-		<code>html_entities( <span>STRING <var>$str</var></span> )</code>
-
-		<div class="description short">
-			
-<p>Convert the Unicode Accented Characters to Safe HTML Entities</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p>Convert the Unicode Accented Characters to Safe HTML Entities</p>
-
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$str</var></dt>
-					<dd>:: The string</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>STRING</code><br>:: The processed string<br>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
 	</table>
 
 
@@ -1173,7 +1173,7 @@ FALSE.</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-07 13:47</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-16 12:10</a>
 	</div>
 </div>
 </div>

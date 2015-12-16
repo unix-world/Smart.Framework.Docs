@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartYamlToArray | Smart.Framework Documentation :: 2015-12-07 13:47</title>
+	<title>Class SmartYamlToArray | Smart.Framework Documentation :: 2015-12-16 12:10</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?2354500668"></script>
@@ -150,7 +150,7 @@ PHP array.</p>
 		<b>Package:</b> <a href="package-DATA.YAML.html">DATA:YAML</a><br>
 
 				<b>Version:</b>
-				v.150326<br>
+				v.151216<br>
 				<b>Depends:</b>
 				classes: Smart, SmartUnicode<br>
 				<b>Usage:</b>
@@ -207,13 +207,13 @@ methods<br>
 
 		<div class="description short">
 			
-<p>Load a valid YAML string</p>
+<p>Create a PHP array from YAML string</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Load a valid YAML string</p>
+<p>Create a PHP array from YAML string</p>
 
 
 
@@ -234,7 +234,7 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="dump_yaml" id="_dump_yaml">
+	<tr data-order="create_yaml" id="_create_yaml">
 
 		<td class="attributes"><code>
 			 public 
@@ -244,18 +244,18 @@ methods<br>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_dump_yaml">#</a>
-		<code>dump_yaml( <span>array <var>$array</var></span>, <span>integer <var>$indent</var> = <span class="php-keyword1">false</span></span>, <span>integer <var>$wordwrap</var> = <span class="php-keyword1">false</span></span> )</code>
+		<a class="anchor" href="#_create_yaml">#</a>
+		<code>create_yaml( <span>array <var>$array</var></span>, <span>integer <var>$wordwrap</var> = <span class="php-num">0</span></span>, <span>integer <var>$indent</var> = <span class="php-num">2</span></span> )</code>
 
 		<div class="description short">
 			
-<p>Dump PHP array to YAML</p>
+<p>Create YAML from PHP array</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Dump PHP array to YAML</p>
+<p>Create YAML from PHP array</p>
 
 <p>The dump method, when supplied with an array, will do its best to convert the
 array into friendly YAML. Pretty simple. Feel free to save the returned string
@@ -274,15 +274,16 @@ can turn off wordwrap by passing in 0.</p>
 				<div class="list"><dl>
 					<dt><var>$array</var></dt>
 					<dd>PHP array</dd>
-					<dt><var>$indent</var></dt>
-					<dd>Pass in false to use the default, which is 2</dd>
 					<dt><var>$wordwrap</var></dt>
-					<dd>Pass in 0 for no wordwrap, false for default (40)</dd>
+					<dd>$indent Pass in false to use the default, which is 2</dd>
+					<dt><var>$indent</var></dt>
+					<dd>$wordwrap Pass in 0 for no wordwrap, basic a good value is (80) if wordwrap is
+what you want</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>string</code><br>string<br>
+					<code>string</code><br>YAML<br>
 				</div>
 
 
@@ -364,7 +365,7 @@ can turn off wordwrap by passing in 0.</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-07 13:47</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-16 12:10</a>
 	</div>
 </div>
 </div>

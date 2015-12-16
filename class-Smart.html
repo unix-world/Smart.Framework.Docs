@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class Smart | Smart.Framework Documentation :: 2015-12-07 13:47</title>
+	<title>Class Smart | Smart.Framework Documentation :: 2015-12-16 12:10</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?2354500668"></script>
@@ -160,7 +160,7 @@ Smart::some_method_of_this_class(...);
 		<b>Package:</b> <a href="package-Core.html">Core</a><br>
 
 				<b>Version:</b>
-				v.151207<br>
+				v.151216<br>
 				<b>Depends:</b>
 				extensions: PHP XML, PHP JSON ; classes: SmartUnicode<br>
 				<b>Hints:</b>
@@ -1034,14 +1034,14 @@ instead of XHTML<br />
 
 		<div class="description short">
 			
-<p>Enhanced strip_tags() :: will revert also special entities like   and
+<p>Enhanced strip_tags() :: will revert also special entities like nbsp; and
 more</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Enhanced strip_tags() :: will revert also special entities like   and
+<p>Enhanced strip_tags() :: will revert also special entities like nbsp; and
 more</p>
 
 
@@ -1055,7 +1055,7 @@ more</p>
 to new lines \n, otherwise (if no) will convert&lt;br /&gt;
 to spaces</dd>
 					<dt><var>$allowable_tags</var></dt>
-					<dd>:: List of tags to keep ; Ex: '&amp;lt;a&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;'</dd>
+					<dd>:: List of tags to keep ; Ex: &amp;lt;a&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -1692,15 +1692,15 @@ future)</p>
 
 		<div class="description short">
 			
-<p>The Info logger (will log into 'tmp/logs/adm/' or 'tmp/logs/idx/') This will
-add messages to the info log.</p>
+<p>The Info logger. This will add messages to the App Info Log. (depending if on
+admin or index, will output into 'tmp/logs/adm/' or 'tmp/logs/idx/')</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>The Info logger (will log into 'tmp/logs/adm/' or 'tmp/logs/idx/') This will
-add messages to the info log.</p>
+<p>The Info logger. This will add messages to the App Info Log. (depending if on
+admin or index, will output into 'tmp/logs/adm/' or 'tmp/logs/idx/')</p>
 
 
 
@@ -1723,7 +1723,7 @@ add messages to the info log.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="log_error" id="_log_error">
+	<tr data-order="log_notice" id="_log_notice">
 
 		<td class="attributes"><code>
 			 public static
@@ -1733,20 +1733,22 @@ add messages to the info log.</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_log_error">#</a>
-		<code>log_error( <span>STRING <var>$message</var></span> )</code>
+		<a class="anchor" href="#_log_notice">#</a>
+		<code>log_notice( <span>STRING <var>$message</var></span> )</code>
 
 		<div class="description short">
 			
-<p>A quick replacement for trigger_error() with E_USER_NOTICE. This will just
-log the error into the error log.</p>
+<p>A quick replacement for trigger_error() / E_USER_NOTICE. This is intended to
+log APP Level Notices. This will log the message as NOTICE into the App Error
+Log.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>A quick replacement for trigger_error() with E_USER_NOTICE. This will just
-log the error into the error log.</p>
+<p>A quick replacement for trigger_error() / E_USER_NOTICE. This is intended to
+log APP Level Notices. This will log the message as NOTICE into the App Error
+Log.</p>
 
 
 
@@ -1767,7 +1769,7 @@ log the error into the error log.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="warn_error" id="_warn_error">
+	<tr data-order="log_warning" id="_log_warning">
 
 		<td class="attributes"><code>
 			 public static
@@ -1777,20 +1779,22 @@ log the error into the error log.</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_warn_error">#</a>
-		<code>warn_error( <span>STRING <var>$message</var></span> )</code>
+		<a class="anchor" href="#_log_warning">#</a>
+		<code>log_warning( <span>STRING <var>$message</var></span> )</code>
 
 		<div class="description short">
 			
-<p>A quick replacement for trigger_error() with E_USER_WARNING. This will raise
-a HTTP 500 Code via the error handler.</p>
+<p>A quick replacement for trigger_error() / E_USER_WARNING. This is intended to
+log APP Level Warnings. This will log the message as WARNING into the App Error
+Log.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>A quick replacement for trigger_error() with E_USER_WARNING. This will raise
-a HTTP 500 Code via the error handler.</p>
+<p>A quick replacement for trigger_error() / E_USER_WARNING. This is intended to
+log APP Level Warnings. This will log the message as WARNING into the App Error
+Log.</p>
 
 
 
@@ -1798,6 +1802,56 @@ a HTTP 500 Code via the error handler.</p>
 				<div class="list"><dl>
 					<dt><var>$message</var></dt>
 					<dd>:: The message to be triggered</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>-</code><br>:: This function does not return anything<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="raise_error" id="_raise_error">
+
+		<td class="attributes"><code>
+			 public static
+			-
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_raise_error">#</a>
+		<code>raise_error( <span>STRING <var>$message_to_log</var></span>, <span>mixed <var>$message_to_display</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>A quick replacement for trigger_error() / E_USER_ERROR. This is intended to
+log APP Level Errors. This will log the message as ERROR into the App Error Log
+and stop the execution (also in the Smart Error Handler will raise a HTTP 500
+Code).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>A quick replacement for trigger_error() / E_USER_ERROR. This is intended to
+log APP Level Errors. This will log the message as ERROR into the App Error Log
+and stop the execution (also in the Smart Error Handler will raise a HTTP 500
+Code).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$message_to_log</var></dt>
+					<dd>$message :: The message to be triggered</dd>
+					<dt><var>$message_to_display</var></dt>
+					<dd></dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -1833,7 +1887,7 @@ a HTTP 500 Code via the error handler.</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-07 13:47</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-16 12:10</a>
 	</div>
 </div>
 </div>
