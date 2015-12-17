@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartMongoDb | Smart.Framework Documentation :: 2015-12-16 12:10</title>
+	<title>Class SmartMongoDb | Smart.Framework Documentation :: 2015-12-17 15:23</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?2354500668"></script>
@@ -224,7 +224,7 @@ class="php-comment">//--</span>
 		<b>Package:</b> <a href="package-Database.MongoDB.html">Database:MongoDB</a><br>
 
 				<b>Version:</b>
-				v.151216<br>
+				v.151217<br>
 				<b>Depends:</b>
 				extensions: PHP MongoClient (v.1.5.0 or later) ; classes: Smart<br>
 				<b>Usage:</b>
@@ -248,7 +248,7 @@ methods<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code>__construct( <span>STRING <var>$col</var></span>, <span>STRING <var>$db</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$host</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$port</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$timeout</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$username</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$password</var> = <span class="php-quote">''</span></span> )</code>
+		<code>__construct( <span>STRING <var>$col</var></span>, <span>ARRAY <var>$y_configs_arr</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 		<div class="description short">
 			
@@ -266,18 +266,9 @@ methods<br>
 				<div class="list"><dl>
 					<dt><var>$col</var></dt>
 					<dd>:: MongoDB Collection</dd>
-					<dt><var>$db</var></dt>
-					<dd>:: MongoDB Database &lt;em&gt;Optional&lt;/em&gt;</dd>
-					<dt><var>$host</var></dt>
-					<dd>:: MongoDB Host &lt;em&gt;Optional&lt;/em&gt;</dd>
-					<dt><var>$port</var></dt>
-					<dd>:: MongoDB Port &lt;em&gt;Optional&lt;/em&gt;</dd>
-					<dt><var>$timeout</var></dt>
-					<dd>:: MongoDB Connection Timeout &lt;em&gt;Optional&lt;/em&gt;</dd>
-					<dt><var>$username</var></dt>
-					<dd>:: MongoDB DB Username &lt;em&gt;Optional&lt;/em&gt;</dd>
-					<dt><var>$password</var></dt>
-					<dd>:: MongoDB DB Password &lt;em&gt;Optional&lt;/em&gt;</dd>
+					<dt><var>$y_configs_arr</var></dt>
+					<dd>:: The Array of Configuration parameters - the ARRAY STRUCTURE should be
+identical with the default config.php: $configs['mongodb'].</dd>
 				</dl></div>
 
 
@@ -1011,7 +1002,7 @@ methods<br>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-16 12:10</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-17 15:23</a>
 	</div>
 </div>
 </div>
