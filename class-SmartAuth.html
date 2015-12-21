@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartAuth | Smart.Framework Documentation :: 2015-12-17 15:23</title>
+	<title>Class SmartAuth | Smart.Framework Documentation :: 2015-12-21 10:47</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?2354500668"></script>
@@ -182,7 +182,7 @@ SmartAuth::some_method_of_this_class(...);
 		<b>Package:</b> <a href="package-Application.html">Application</a><br>
 
 				<b>Version:</b>
-				v.151123<br>
+				v.151221<br>
 				<b>Depends:</b>
 				-<br>
 				<b>Usage:</b>
@@ -205,7 +205,7 @@ SmartAuth::some_method_of_this_class(...);
 
 		<td class="name"><div>
 		<a class="anchor" href="#_set_login_data">#</a>
-		<code>set_login_data( <span>STRING <var>$y_user_id</var></span>, <span>STRING <var>$y_user_alias</var></span>, <span>STRING <var>$y_user_email</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$y_user_fullname</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$y_user_privileges_list</var> = <span class="php-keyword1">array</span>(<span class="php-quote">'none'</span>,<span class="php-quote">'no-privilege'</span>)</span>, <span>STRING <var>$y_user_quota</var> = -<span class="php-num">1</span></span>, <span>STRING <var>$y_realm</var> = <span class="php-quote">'DEFAULT'</span></span> )</code>
+		<code>set_login_data( <span>STRING <var>$y_user_id</var></span>, <span>STRING <var>$y_user_alias</var></span>, <span>STRING <var>$y_user_email</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$y_user_fullname</var> = <span class="php-quote">''</span></span>, <span>ARRAY <var>$y_user_privileges_list</var> = <span class="php-keyword1">array</span>(<span class="php-quote">'none'</span>,<span class="php-quote">'no-privilege'</span>)</span>, <span>STRING <var>$y_user_quota</var> = -<span class="php-num">1</span></span>, <span>ARRAY <var>$y_user_metadata</var> = <span class="php-keyword1">array</span>()</span>, <span>STRING <var>$y_realm</var> = <span class="php-quote">'DEFAULT'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -235,9 +235,12 @@ using a DB must supply a unique ID to identify the user like username</dd>
 					<dt><var>$y_user_fullname</var></dt>
 					<dd>:: The user Full Name (First Name + Last Name) ; Optional</dd>
 					<dt><var>$y_user_privileges_list</var></dt>
-					<dd>:: The user Privileges List (An array with all privileges) ; Optional</dd>
+					<dd>:: The user Privileges List as array that list all the current user privileges ;
+Optional</dd>
 					<dt><var>$y_user_quota</var></dt>
 					<dd>:: The user (storage) Quota ; Optional</dd>
+					<dt><var>$y_user_metadata</var></dt>
+					<dd>:: The user metainfo, associative array key =&amp;gt; value ; Optional</dd>
 					<dt><var>$y_realm</var></dt>
 					<dd>:: The user Authentication Realm(s) ; Optional</dd>
 				</dl></div>
@@ -551,7 +554,7 @@ Login Data</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>BOOLEAN</code><br>:: TRUE if the current user have that privilege or FALSE if not<br>
+					<code>BOOLEAN</code><br>:: TRUE if the current user have the tested privilege or FALSE if does not<br>
 				</div>
 
 
@@ -597,6 +600,43 @@ Login Data</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="get_login_metadata" id="_get_login_metadata">
+
+		<td class="attributes"><code>
+			 public static
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_login_metadata">#</a>
+		<code>get_login_metadata( )</code>
+
+		<div class="description short">
+			
+<p>Get the current user metadaya stored in the (in-memory) Auth Login Data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the current user metadaya stored in the (in-memory) Auth Login Data</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>:: returns an array with all current user metadata<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="get_login_realm" id="_get_login_realm">
 
 		<td class="attributes"><code>
@@ -627,7 +667,7 @@ Data</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>:: returns an auth realm or an empty string if not set<br>
+					<code>STRING</code><br>:: returns the current user auth realm or an empty string if not set<br>
 				</div>
 
 
@@ -658,7 +698,7 @@ Data</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-17 15:23</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-21 10:47</a>
 	</div>
 </div>
 </div>
