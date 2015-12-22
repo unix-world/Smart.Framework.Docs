@@ -2,9 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class Smart | Smart.Framework Documentation :: 2015-12-21 10:47</title>
+	<title>Class Smart | Smart.Framework Documentation :: 2015-12-22 15:09</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?3413450810"></script>
+	<script src="resources/combined.js?2353416568"></script>
 	<script src="elementlist.js?2354500668"></script>
 </head>
 
@@ -857,24 +857,48 @@ can be negative or positive</dd>
 
 		<td class="attributes"><code>
 			 public static
-			
+			DECIMAL
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_format_number_dec">#</a>
-		<code>format_number_dec( <span>mixed <var>$y_number</var></span>, <span>mixed <var>$y_decimals</var> = <span class="php-num">0</span></span>, <span>mixed <var>$y_sep_decimals</var> = <span class="php-quote">'.'</span></span>, <span>mixed <var>$y_sep_thousands</var> = <span class="php-quote">''</span></span> )</code>
+		<code>format_number_dec( <span>NUMERIC <var>$y_number</var></span>, <span>INTEGER+ <var>$y_decimals</var> = <span class="php-num">0</span></span>, <span>STRING <var>$y_sep_decimals</var> = <span class="php-quote">'.'</span></span>, <span>STRING <var>$y_sep_thousands</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
+<p>Format a number as DECIMAL (NOTICE: The maximum PHP.INI precision is 14,
+includding decimals). This is a better replacement for the PHP's number_format()
+which throws a warning if first argument passed is a string since PHP 5.3</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Format a number as DECIMAL (NOTICE: The maximum PHP.INI precision is 14,
+includding decimals). This is a better replacement for the PHP's number_format()
+which throws a warning if first argument passed is a string since PHP 5.3</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_number</var></dt>
+					<dd>:: A numeric value</dd>
+					<dt><var>$y_decimals</var></dt>
+					<dd>:: The number of decimal to use (safe value is between 0..8, keeping in mind the
+14 max precision)</dd>
+					<dt><var>$y_sep_decimals</var></dt>
+					<dd>:: The decimal separator symbol as: . or , (default is .)</dd>
+					<dt><var>$y_sep_thousands</var></dt>
+					<dd>:: The thousand separator symbol as: , or . (default is [none])</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>DECIMAL</code><br>:: A decimal number<br>
+				</div>
 
 
 
@@ -1031,16 +1055,16 @@ provided<br>
 
 		<div class="description short">
 			
-<p>Easy HTML5 compliant nl2br() ; Will replace new lines (\n) with HTML5<br />
-instead of XHTML<br />
+<p>Easy HTML5 compliant nl2br() ; Will replace new lines (\n) with HTML5<br>
+instead of XHTML<br>
 </p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Easy HTML5 compliant nl2br() ; Will replace new lines (\n) with HTML5<br />
-instead of XHTML<br />
+<p>Easy HTML5 compliant nl2br() ; Will replace new lines (\n) with HTML5<br>
+instead of XHTML<br>
 </p>
 
 
@@ -1094,11 +1118,11 @@ more</p>
 					<dt><var>$yhtmlcode</var></dt>
 					<dd>:: HTML Code to be stripped of tags</dd>
 					<dt><var>$ynewline</var></dt>
-					<dd>$y_mode :: yes to convert&lt;br /&gt;
-to new lines \n, otherwise (if no) will convert&lt;br /&gt;
+					<dd>$y_mode :: yes to convert&lt;br&gt;
+to new lines \n, otherwise (if no) will convert&lt;br&gt;
 to spaces</dd>
 					<dt><var>$allowable_tags</var></dt>
-					<dd>:: List of tags to keep ; Ex: &amp;lt;a&amp;gt;&amp;lt;span&amp;gt;&amp;lt;/span&amp;gt;</dd>
+					<dd>:: List of tags to keep ; Ex: &lt;b&gt;&lt;/b&gt;&lt;span&gt;&lt;/span&gt;</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -1647,27 +1671,31 @@ scriptname<br>
 
 		<div class="description short">
 			
-<p>Convert an Array(elem1, elem2, ..., elemN) to a List String '&lt;elem1&gt;,
-&lt;elem2&gt;, ..., &lt;elemN&gt;'</p>
+<p>Convert an array to a list - string to a List String</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Convert an Array(elem1, elem2, ..., elemN) to a List String '&lt;elem1&gt;,
-&lt;elem2&gt;, ..., &lt;elemN&gt;'</p>
+<p>Convert an array to a list - string to a List String</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$y_arr</var></dt>
-					<dd>:: The Array to be converted</dd>
+					<dd>:: The Array to be converted: Array(elem1, elem2, ..., elemN)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>:: The List String<br>
+					<code>STRING</code><br>:: The List String: '
+<elem1>,
+	<elem2>, ...,
+		<elemN>'</elemN>
+	</elem2>
+</elem1>
+<br>
 				</div>
 
 
@@ -1930,7 +1958,7 @@ Code).</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-21 10:47</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-22 15:09</a>
 	</div>
 </div>
 </div>

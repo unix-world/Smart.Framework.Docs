@@ -2,9 +2,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class AbstractAppModule | Smart.Framework Documentation :: 2015-12-21 10:47</title>
+	<title>Class AbstractAppModule | Smart.Framework Documentation :: 2015-12-22 15:09</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?3413450810"></script>
+	<script src="resources/combined.js?2353416568"></script>
 	<script src="elementlist.js?2354500668"></script>
 </head>
 
@@ -307,7 +307,7 @@ class="php-comment">//END CLASS</span>
 		<b>Package:</b> <a href="package-Application.html">Application</a><br>
 
 				<b>Version:</b>
-				v.151216<br>
+				v.151222<br>
 				<b>Depends:</b>
 				-<br>
 				<b>Hints:</b>
@@ -337,10 +337,14 @@ AdminAppModule (as a controller of admin.php)<br>
 
 		<div class="description short">
 			
+<p>Class constructor. This is marked as FINAL and cannot be customized.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Class constructor. This is marked as FINAL and cannot be customized.</p>
+
 
 
 
@@ -366,10 +370,21 @@ AdminAppModule (as a controller of admin.php)<br>
 
 		<div class="description short">
 			
+<p>Class Destructor. This is marked as FINAL and cannot be customized. Use the
+ShutDown() function as destructor, it will be called after Run() safely prior to
+destruct this class.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Class Destructor. This is marked as FINAL and cannot be customized. Use the
+ShutDown() function as destructor, it will be called after Run() safely prior to
+destruct this class.</p>
+
+<p>The class destructors are not safe in controller instances. See the comments
+from ShutDown() function in this class !</p>
+
 
 
 
@@ -384,24 +399,42 @@ AdminAppModule (as a controller of admin.php)<br>
 
 		<td class="attributes"><code>
 			final public 
-			
+			BOOLEAN
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_SetDebugData">#</a>
-		<code>SetDebugData( <span>mixed <var>$title</var></span>, <span>mixed <var>$debug_msg</var></span> )</code>
+		<code>SetDebugData( <span>STRING <var>$title</var></span>, <span>MIXED <var>$debug_msg</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Set Custom Debug Data.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Set Custom Debug Data.</p>
+
+<p>If Debug is turned on, this area of Debug messages will be displayed in
+Modules section.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$title</var></dt>
+					<dd>:: A title for the debug message.</dd>
+					<dt><var>$debug_msg</var></dt>
+					<dd>:: The data for the debug message. Ex: STRING / ARRAY</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOLEAN</code><br>:: TRUE if successful, FALSE if not<br>
+				</div>
 
 
 
@@ -413,24 +446,40 @@ AdminAppModule (as a controller of admin.php)<br>
 
 		<td class="attributes"><code>
 			final public 
-			
+			STRING
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_ControllerGetParam">#</a>
-		<code>ControllerGetParam( <span>mixed <var>$param</var></span> )</code>
+		<code>ControllerGetParam( <span>ENUM <var>$param</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Get the value for a Controller parameter.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Get the value for a Controller parameter.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>:: The selected parameter. The valid param values are: module-area :: ex: index
+/ admin module-path :: ex: modules/mod-samples/ module-name :: ex: mod-samples
+url-script :: ex: index.php / admin.php url-path :: ex: /sites/smart-framework/
+url-addr :: ex: http(s)://127.0.0.1/sites/smart-framework/</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The value for the selected parameter.<br>
+				</div>
 
 
 
@@ -442,24 +491,41 @@ AdminAppModule (as a controller of admin.php)<br>
 
 		<td class="attributes"><code>
 			final public 
-			
+			MIXED
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_ConfigParamGet">#</a>
-		<code>ConfigParamGet( <span>mixed <var>$param</var></span> )</code>
+		<code>ConfigParamGet( <span>ENUM <var>$param</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Get the value for a Config parameter from the app $configs array.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Get the value for a Config parameter from the app $configs array.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>:: The selected configuration parameter. Examples: app.info-url will get value
+from $configs['app']['info-url'] regional.decimal-separator will get the value
+(string) from $configs['regional']['decimal-separator'] regional will get the
+value (array) from $configs['regional']</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>:: The value for the selected parameter. If the Config parameter does not
+exists, will return an empty string.<br>
+				</div>
 
 
 
@@ -522,7 +588,7 @@ enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
 
 		<td class="attributes"><code>
 			final public 
-			
+			ARRAY
 			
 			</code>
 		</td>
@@ -533,13 +599,21 @@ enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
 
 		<div class="description short">
 			
+<p>Get all the current controller PageView Settings (Cfgs)</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Get all the current controller PageView Settings (Cfgs)</p>
 
 
 
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>:: an array with all controller Page View Cfgs. (Settings) currently set<br>
+				</div>
 
 
 
@@ -551,24 +625,40 @@ enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
 
 		<td class="attributes"><code>
 			final public 
-			
+			BOOL
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_PageViewSetCfgs">#</a>
-		<code>PageViewSetCfgs( <span>mixed <var>$params</var></span> )</code>
+		<code>PageViewSetCfgs( <span>ARRAY <var>$params</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Set a list with multiple values for settings into the current controller as
+PageView Settings (Cfgs)</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Set a list with multiple values for settings into the current controller as
+PageView Settings (Cfgs)</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd>:: an associative array to be set as [ 'param1' =&amp;gt; 'value1', ..., 'param-n'
+=&amp;gt; 'val-n']</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if OK, FALSE if not<br>
+				</div>
 
 
 
@@ -580,24 +670,41 @@ enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
 
 		<td class="attributes"><code>
 			final public 
-			
+			BOOL
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_PageViewSetCfg">#</a>
-		<code>PageViewSetCfg( <span>mixed <var>$param</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<code>PageViewSetCfg( <span>STRING <var>$param</var></span>, <span>STRING <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Set a single value for settings into the current controller as PageView
+Settings (Cfgs)</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Set a single value for settings into the current controller as PageView
+Settings (Cfgs)</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>:: the parameter to be set</dd>
+					<dt><var>$value</var></dt>
+					<dd>:: the value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if OK, FALSE if not<br>
+				</div>
 
 
 
@@ -609,7 +716,7 @@ enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
 
 		<td class="attributes"><code>
 			final public 
-			
+			ARRAY
 			
 			</code>
 		</td>
@@ -620,13 +727,21 @@ enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
 
 		<div class="description short">
 			
+<p>Get all the current controller PageView Vars.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Get all the current controller PageView Vars.</p>
 
 
 
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>:: an array with all the controller Page View variables currently set.<br>
+				</div>
 
 
 
@@ -638,24 +753,40 @@ enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
 
 		<td class="attributes"><code>
 			final public 
-			
+			BOOL
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_PageViewSetVars">#</a>
-		<code>PageViewSetVars( <span>mixed <var>$params</var></span> )</code>
+		<code>PageViewSetVars( <span>ARRAY <var>$params</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Set a list with multiple values for variables into the current controller
+into PageView Vars.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Set a list with multiple values for variables into the current controller
+into PageView Vars.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$params</var></dt>
+					<dd>:: an associative array to be set as [ 'variable1' =&amp;gt; 'value1', ...,
+'variable-n' =&amp;gt; 'val-n']</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if OK, FALSE if not<br>
+				</div>
 
 
 
@@ -667,24 +798,39 @@ enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
 
 		<td class="attributes"><code>
 			final public 
-			
+			BOOL
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_PageViewSetVar">#</a>
-		<code>PageViewSetVar( <span>mixed <var>$param</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<code>PageViewSetVar( <span>STRING <var>$param</var></span>, <span>STRING <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Set a single value for the current controller into PageView Vars.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Set a single value for the current controller into PageView Vars.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>:: the variable to be set</dd>
+					<dt><var>$value</var></dt>
+					<dd>:: the value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if OK, FALSE if not<br>
+				</div>
 
 
 
@@ -696,24 +842,41 @@ enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
 
 		<td class="attributes"><code>
 			final public 
-			
+			BOOL
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_PageViewAppendVar">#</a>
-		<code>PageViewAppendVar( <span>mixed <var>$param</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<code>PageViewAppendVar( <span>STRING <var>$param</var></span>, <span>STRING <var>$value</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Append a single value to a variable for the current controller into PageView
+Vars.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Append a single value to a variable for the current controller into PageView
+Vars.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>:: the variable to append value to</dd>
+					<dt><var>$value</var></dt>
+					<dd>:: the value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if OK, FALSE if not<br>
+				</div>
 
 
 
@@ -725,24 +888,39 @@ enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
 
 		<td class="attributes"><code>
 			final public 
-			
+			BOOL
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_PageViewResetVar">#</a>
-		<code>PageViewResetVar( <span>mixed <var>$param</var></span> )</code>
+		<code>PageViewResetVar( <span>STRING <var>$param</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Reset a single variable value for the current controller into PageView
+Vars.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Reset a single variable value for the current controller into PageView
+Vars.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>:: the variable to be reset (unset)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if OK, FALSE if not<br>
+				</div>
 
 
 
@@ -754,7 +932,7 @@ enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
 
 		<td class="attributes"><code>
 			final public 
-			
+			BOOL
 			
 			</code>
 		</td>
@@ -765,13 +943,23 @@ enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
 
 		<div class="description short">
 			
+<p>Test if the Page Cache (system) is active or not. This is based on
+PersistentCache.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Test if the Page Cache (system) is active or not. This is based on
+PersistentCache.</p>
 
 
 
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if Active, FALSE if not<br>
+				</div>
 
 
 
@@ -783,24 +971,41 @@ enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
 
 		<td class="attributes"><code>
 			final public 
-			
+			MIXED
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_PageGetFromCache">#</a>
-		<code>PageGetFromCache( <span>mixed <var>$storage_namespace</var></span>, <span>mixed <var>$unique_key</var></span> )</code>
+		<code>PageGetFromCache( <span>STRING <var>$storage_namespace</var></span>, <span>STRING <var>$unique_key</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Get a Page from the (Persistent) Cache.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Get a Page from the (Persistent) Cache.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$storage_namespace</var></dt>
+					<dd>:: the cache storage namespace, used to group keys</dd>
+					<dt><var>$unique_key</var></dt>
+					<dd>:: the unique cache key</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>:: If the PersistentCache is active and value was set will return a single
+(STRING) or multiple (ARRAY) Page Settings / Page Values ; otherwise will return
+a NULL value.<br>
+				</div>
 
 
 
@@ -812,24 +1017,45 @@ enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
 
 		<td class="attributes"><code>
 			final public 
-			
+			BOOL
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_PageSetInCache">#</a>
-		<code>PageSetInCache( <span>mixed <var>$storage_namespace</var></span>, <span>mixed <var>$unique_key</var></span>, <span>mixed <var>$content</var></span>, <span>mixed <var>$expiration</var></span> )</code>
+		<code>PageSetInCache( <span>STRING <var>$storage_namespace</var></span>, <span>STRING <var>$unique_key</var></span>, <span>MIXED <var>$content</var></span>, <span>INTEGER <var>$expiration</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Set a Page into the (Persistent) Cache.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Set a Page into the (Persistent) Cache.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$storage_namespace</var></dt>
+					<dd>:: the cache storage namespace, used to group keys</dd>
+					<dt><var>$unique_key</var></dt>
+					<dd>:: the unique cache key</dd>
+					<dt><var>$content</var></dt>
+					<dd>:: the cache content as a STRING or an ARRAY with Page Value(s) / Page
+Setting(s)</dd>
+					<dt><var>$expiration</var></dt>
+					<dd>:: The page cache expiration in seconds ; 0 will not expire</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if the PersistentCache is active and value was set ; FALSE in the rest
+of the cases<br>
+				</div>
 
 
 
@@ -852,26 +1078,29 @@ enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
 
 		<div class="description short">
 			
-<p>The Controller Runtime - This function must be re-defined in all
-controllers</p>
+<p>The Controller Runtime - This function is required to be re-defined in all
+controllers.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>The Controller Runtime - This function must be re-defined in all
-controllers</p>
+<p>The Controller Runtime - This function is required to be re-defined in all
+controllers.</p>
 
 
 
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>INTEGER</code><br>:: The HTML Status Code: by default it does not return or it must returns 200
-which is optional ; other supported HTML Status Codes are: 500, 404, 403, 401,
-400 (in this case can be set the also: $this-&gt;PageViewSetCfg('error', 'Access
-to this page is restricted'); return 403; to have also a detailed error message
-to be shown near the HTTP status code)<br>
+					<code>INTEGER</code><br>:: <em>OPTIONAL</em> The HTTP Status Code: by default it does not return or it
+must returns 200 which is optional ; other supported HTTP Status Codes are: 202
+(OK with notification message - used only for APIs), 500 (Error), 404 (Not
+Found), 403 (Forbidden), 401 (Authentication Required), 400 (Bad Request) ; if
+the HTTP status code is not 200, an extra notification message can be set as:
+##EXAMPLE: $this-&gt;PageViewSetCfg('error', 'Access to this page is
+restricted'); return 403; ## - to have also a detailed error message to be shown
+near the HTTP status code)<br>
 				</div>
 
 
@@ -895,34 +1124,33 @@ to be shown near the HTTP status code)<br>
 
 		<div class="description short">
 			
-<p>The Controller Destructor - This function is optional and must be re-defined
-only in controllers where a destructor. Always use this instead of __destruct()
-(see php bug #31570)</p>
+<p>The (real) Controller Destructor - This function is optional and can be
+re-defined in controllers where a destructor is required. This will replace the
+class destructor __destruct() which is NOT SAFE in all cases (see php bug
+#31570).</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>The Controller Destructor - This function is optional and must be re-defined
-only in controllers where a destructor. Always use this instead of __destruct()
-(see php bug #31570)</p>
+<p>The (real) Controller Destructor - This function is optional and can be
+re-defined in controllers where a destructor is required. This will replace the
+class destructor __destruct() which is NOT SAFE in all cases (see php bug
+#31570).</p>
 
-<p>NOTICE: sometimes __destruct() for classes is not 100% safe ; example: the
-PHP Bug #31570 (not fixed since a very long time) instead of __destruct() use
+<p>NOTICE: Sometimes __destruct() for classes is not 100% safe ; example: the
+PHP Bug #31570 (not fixed since a very long time). Instead of __destruct() use
 ShutDown() method for controllers in framework modules (which is always executed
-after Run() and is 100% safe)</p>
+after Run() and is 100% safe).</p>
 
-<p>WARNING: do not modify page settings or configs in this function or
-__destruct() because they are called after Run() if controller variables are
-modified after Run() it can produce unexpected results ...</p>
+<p>WARNING: Modifications for Page Settings or Page Variables are not allowed in
+this function, after Run() has been completed ! If controller variables are
+modified after Run() has completed it can produce unexpected results ...</p>
 
-<p>EXAMPLE / SCENARIO: this function have to be used instead of __destruct() if
-you have to cleanup a temporary folder (tmp/) after Run() because of the PHP Bug
-#31570, the __destruct() can't operate on relative paths and will produce
-unexpected results !!! Thus is safe to use always ShutDown() method instead of
-the __destruct() method in all controllers ...</p>
-
-<p>this function does not return anything</p>
+<p>EXAMPLE / SCENARIO: This function (by replacing __destruct()) can be used if
+you have to cleanup a temporary folder (tmp/) after Run(). Because of the PHP
+Bug #31570, the __destruct() can't operate on relative paths and will produce
+wrong and unexpected results !!!</p>
 
 
 
@@ -956,7 +1184,7 @@ the __destruct() method in all controllers ...</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-21 10:47</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-22 15:09</a>
 	</div>
 </div>
 </div>
