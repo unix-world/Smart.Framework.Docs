@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartCaptchaFormCheck | Smart.Framework Documentation :: 2015-12-22 15:09</title>
+	<title>Class SmartCaptchaFormCheck | Smart.Framework Documentation :: 2016-01-19 18:05</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?2353416568"></script>
-	<script src="elementlist.js?2354500668"></script>
+	<script src="resources/combined.js?3413450810"></script>
+	<script src="elementlist.js?1149585097"></script>
 </head>
 
 <body>
@@ -137,6 +137,10 @@
 <span
 class="php-comment">//-- captcha image (generate)</span>
 <span
+class="php-keyword2">header</span>(<span
+class="php-quote">&quot;Content-type: image/png&quot;</span>); <span
+class="php-comment">// by default outputs PNG ; this can be changed to GIF or JPG</span>
+<span
 class="php-keyword1">echo</span> SmartCaptchaFormCheck::captcha_image(<span
 class="php-quote">'form_name'</span>, <span
 class="php-quote">'session'</span>, <span
@@ -191,7 +195,7 @@ class="php-comment">//--</span>
 		<b>Package:</b> <a href="package-Components.Captcha.html">Components:Captcha</a><br>
 
 				<b>Version:</b>
-				v.151216<br>
+				v.160115<br>
 				<b>Depends:</b>
 				extensions: PHP XML ; classes: Smart<br>
 				<b>Hints:</b>
@@ -346,7 +350,7 @@ depending how SmartCaptchaFormCheck::verify() is called<br>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-22 15:09</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-01-19 18:05</a>
 	</div>
 </div>
 </div>

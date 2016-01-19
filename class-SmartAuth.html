@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartAuth | Smart.Framework Documentation :: 2015-12-22 15:09</title>
+	<title>Class SmartAuth | Smart.Framework Documentation :: 2016-01-19 18:05</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?2353416568"></script>
-	<script src="elementlist.js?2354500668"></script>
+	<script src="resources/combined.js?3413450810"></script>
+	<script src="elementlist.js?1149585097"></script>
 </head>
 
 <body>
@@ -83,8 +83,9 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-AbstractAppModule.html">AbstractAppModule</a></li>
-				<li><a href="class-SmartApp.html">SmartApp</a></li>
+				<li><a href="class-SmartAppInfo.html">SmartAppInfo</a></li>
 				<li class="active"><a href="class-SmartAuth.html">SmartAuth</a></li>
+				<li><a href="class-SmartFrameworkSecurity.html">SmartFrameworkSecurity</a></li>
 				<li><a href="class-SmartSession.html">SmartSession</a></li>
 			</ul>
 
@@ -157,7 +158,7 @@ session the username / password hash. Or this can be combined with cookies, but
 requires much more atention to pay by avoiding session forgery or cookie
 leakage. Session must be protected against forgery by implementing advanced
 detection mechanisms based on IP address and the browser signature of the
-client. The SmartSession provides a good layer for this purpose.</p>
+client. The Smart Session provides a good layer for this purpose.</p>
 
 <pre>
 <span
@@ -182,7 +183,7 @@ SmartAuth::some_method_of_this_class(...);
 		<b>Package:</b> <a href="package-Application.html">Application</a><br>
 
 				<b>Version:</b>
-				v.151221<br>
+				v.160117<br>
 				<b>Depends:</b>
 				-<br>
 				<b>Usage:</b>
@@ -205,7 +206,7 @@ SmartAuth::some_method_of_this_class(...);
 
 		<td class="name"><div>
 		<a class="anchor" href="#_set_login_data">#</a>
-		<code>set_login_data( <span>STRING <var>$y_user_id</var></span>, <span>STRING <var>$y_user_alias</var></span>, <span>STRING <var>$y_user_email</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$y_user_fullname</var> = <span class="php-quote">''</span></span>, <span>ARRAY <var>$y_user_privileges_list</var> = <span class="php-keyword1">array</span>(<span class="php-quote">'none'</span>,<span class="php-quote">'no-privilege'</span>)</span>, <span>STRING <var>$y_user_quota</var> = -<span class="php-num">1</span></span>, <span>ARRAY <var>$y_user_metadata</var> = <span class="php-keyword1">array</span>()</span>, <span>STRING <var>$y_realm</var> = <span class="php-quote">'DEFAULT'</span></span> )</code>
+		<code>set_login_data( <span>STRING <var>$y_user_id</var></span>, <span>STRING <var>$y_user_alias</var></span>, <span>STRING <var>$y_user_email</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$y_user_fullname</var> = <span class="php-quote">''</span></span>, <span>ARRAY <var>$y_user_privileges_list</var> = <span class="php-keyword1">array</span>(<span class="php-quote">'none'</span>,<span class="php-quote">'no-privilege'</span>)</span>, <span>STRING <var>$y_user_quota</var> = -<span class="php-num">1</span></span>, <span>ARRAY <var>$y_user_metadata</var> = <span class="php-keyword1">array</span>()</span>, <span>STRING <var>$y_realm</var> = <span class="php-quote">'DEFAULT'</span></span>, <span>ENUM <var>$y_method</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$y_pass</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -226,23 +227,33 @@ after a successful or failed authentication has set.</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$y_user_id</var></dt>
-					<dd>:: The user (login) ID ; Mandatory ; it can be the UserID from DB or if not
-using a DB must supply a unique ID to identify the user like username</dd>
+					<dd>:: The user (login) ID used to authenticate the user ; Mandatory ; it can be the
+UserID from DB or if not using a DB must supply a unique ID to identify the user
+like username</dd>
 					<dt><var>$y_user_alias</var></dt>
-					<dd>:: The user Alias (Username) ; Optional</dd>
+					<dd>:: The user (login) Alias, used to display the logged in user ; Mandatory ; can
+be the same as the login ID or different (Ex: login ID can be 'myUserName' and
+this 'myUserName' ; or: login ID can be 5017 and this 'myUserName')</dd>
 					<dt><var>$y_user_email</var></dt>
-					<dd>:: The user Email ; Optional</dd>
+					<dd>:: &lt;em&gt;OPTIONAL&lt;/em&gt; The user Email ; if email is used as login ID this may be
+redundant !</dd>
 					<dt><var>$y_user_fullname</var></dt>
-					<dd>:: The user Full Name (First Name + Last Name) ; Optional</dd>
+					<dd>:: &lt;em&gt;OPTIONAL&lt;/em&gt; The user Full Name (First Name + Last Name)</dd>
 					<dt><var>$y_user_privileges_list</var></dt>
-					<dd>:: The user Privileges List as array that list all the current user privileges ;
-Optional</dd>
+					<dd>:: &lt;em&gt;OPTIONAL&lt;/em&gt; The user Privileges List as array that list all the current
+user privileges</dd>
 					<dt><var>$y_user_quota</var></dt>
-					<dd>:: The user (storage) Quota ; Optional</dd>
+					<dd>:: &lt;em&gt;OPTIONAL&lt;/em&gt; The user (storage) Quota</dd>
 					<dt><var>$y_user_metadata</var></dt>
-					<dd>:: The user metainfo, associative array key =&amp;gt; value ; Optional</dd>
+					<dd>:: &lt;em&gt;OPTIONAL&lt;/em&gt; The user metainfo, associative array key =&amp;gt; value</dd>
 					<dt><var>$y_realm</var></dt>
-					<dd>:: The user Authentication Realm(s) ; Optional</dd>
+					<dd>:: &lt;em&gt;OPTIONAL&lt;/em&gt; The user Authentication Realm(s)</dd>
+					<dt><var>$y_method</var></dt>
+					<dd>:: &lt;em&gt;OPTIONAL&lt;/em&gt; The authentication method used: HTTP-BASIC / HTTP-DIGEST /
+OTHER</dd>
+					<dt><var>$y_pass</var></dt>
+					<dd>:: &lt;em&gt;OPTIONAL&lt;/em&gt; The user login password (will be stored in memory as
+Blowfish encrypted to avoid exposure)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -286,6 +297,80 @@ execution (which is not allowed ; must be just once per execution)<br>
 				<h4>Returns</h4>
 				<div class="list">
 					<code>BOOLEAN</code><br>:: TRUE if current user is Logged-in, FALSE if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_login_method" id="_get_login_method">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_login_method">#</a>
+		<code>get_login_method( )</code>
+
+		<div class="description short">
+			
+<p>Get the auth user login method from (in-memory) Auth Login Data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the auth user login method from (in-memory) Auth Login Data</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The user login method<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_login_password" id="_get_login_password">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_login_password">#</a>
+		<code>get_login_password( )</code>
+
+		<div class="description short">
+			
+<p>Get the auth (safe) stored password from (in-memory)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the auth (safe) stored password from (in-memory)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The plain password if was set or empty string<br>
 				</div>
 
 
@@ -701,7 +786,7 @@ Data</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-22 15:09</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-01-19 18:05</a>
 	</div>
 </div>
 </div>

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartCryptoMCrypt | Smart.Framework Documentation :: 2016-01-19 18:05</title>
+	<title>Class SmartTwigTemplating | Smart.Framework Documentation :: 2016-01-19 18:05</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?1149585097"></script>
@@ -35,7 +35,7 @@
 						</li>
 				<li><a href="package-Core.html">Core</a>
 						</li>
-				<li class="active"><a href="package-Crypto.html">Crypto</a>
+				<li><a href="package-Crypto.html">Crypto</a>
 						</li>
 				<li><a href="package-DATA.HTML.html">DATA:HTML</a>
 						</li>
@@ -71,7 +71,7 @@
 						</li>
 				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
 						</li>
-				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
+				<li class="active"><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
 			</ul>
 		</div>
@@ -82,9 +82,8 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-SmartCryptoBlowfishCBC.html">SmartCryptoBlowfishCBC</a></li>
-				<li class="active"><a href="class-SmartCryptoMCrypt.html">SmartCryptoMCrypt</a></li>
-				<li><a href="class-SmartHashCrypto.html">SmartHashCrypto</a></li>
+				<li><a href="class-SmartMarkersTemplating.html">SmartMarkersTemplating</a></li>
+				<li class="active"><a href="class-SmartTwigTemplating.html">SmartTwigTemplating</a></li>
 			</ul>
 
 
@@ -112,7 +111,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="package-Crypto.html" title="Summary of Crypto"><span>Package</span></a>
+				<a href="package-Templating.Engines.html" title="Summary of Templating:Engines"><span>Package</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -127,21 +126,17 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class SmartCryptoMCrypt</h1>
+	<h1>Class SmartTwigTemplating</h1>
 
 
 	<div class="description">
 	
-<p>Class: SmartCryptoMCrypt Provides a MCrypt based feature to handle the
-Blowfish (CBC / ECB) encryption / decryption.</p>
+<p>Provides connector for Twig Templating inside the Smart.Framework.</p>
 
-<p>This provides an advanced crypto handler for Blowfish CBC / ECB algorithm(s).
-WARNING: The ECB encryption is weak, have no Initialization Vector. You should
-not use it if you don't know what you really do ! It is recommended to use
-instead the SmartUtils::crypto_blowfish_encrypt() and
-SmartUtils::crypto_blowfish_decrypt() which are detecting if to use the MCrypt
-or built-in Blowfish classes and use always a compatible layer of Blowfish
-CBC.</p>
+<pre>
+
+
+</pre>
 
 	</div>
 
@@ -154,147 +149,46 @@ CBC.</p>
 
 
 	<div class="info">
-		<b>Final</b><br>
 		
 		
-		<b>Package:</b> <a href="package-Crypto.html">Crypto</a><br>
+		
+		<b>Package:</b> <a href="package-Templating.Engines.html">Templating:Engines</a><br>
 
 				<b>Version:</b>
-				v.151216<br>
+				v.160119<br>
 				<b>Depends:</b>
-				extensions: PHP MCrypt ; classes: Smart<br>
-				<b>Hints:</b>
-				Blowfish is a 64-bit (8 bytes) block cipher. Max Key is up to 56 chars length
-(56 bytes = 448 bits). The CBC mode requires a initialization vector (iv).<br>
+				extensions: classes: Twig, \SmartModExtLib\TplTwig\Templating<br>
 				<b>Usage:</b>
-				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
-methods<br>
-		<b>Located at</b> lib/framework/lib_crypto.php<br>
+				static object: Class::method() - This class provides only STATIC methods<br>
+		<b>Located at</b> modules/smart-extra-libs/lib_templating_twig.php<br>
 	</div>
 
 
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
-	<tr data-order="__construct" id="___construct">
+	<tr data-order="render_file_template" id="_render_file_template">
 
 		<td class="attributes"><code>
-			 public 
+			 public static
 			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#___construct">#</a>
-		<code>__construct( <span>string <var>$key</var></span>, <span>enum <var>$runmode</var></span> )</code>
+		<a class="anchor" href="#_render_file_template">#</a>
+		<code>render_file_template( <span>mixed <var>$file</var></span>, <span>mixed <var>$arr_vars</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 		<div class="description short">
 			
-<p>Constructor Initializes the blowfish cipher object, and gives a sets the
-secret key</p>
-
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Constructor Initializes the blowfish cipher object, and gives a sets the
-secret key</p>
 
 
 
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$key</var></dt>
-					<dd></dd>
-					<dt><var>$runmode</var></dt>
-					<dd>ex: mcrypt/blowfish/CBC</dd>
-				</dl></div>
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="encrypt" id="_encrypt">
-
-		<td class="attributes"><code>
-			 public 
-			string
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_encrypt">#</a>
-		<code>encrypt( <span>string <var>$plainText</var></span> )</code>
-
-		<div class="description short">
-			
-<p>Encrypts a string in CBC Mode or ECB Mode</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p>Encrypts a string in CBC Mode or ECB Mode</p>
-
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$plainText</var></dt>
-					<dd></dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>string</code><br>Returns cipher text<br>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="decrypt" id="_decrypt">
-
-		<td class="attributes"><code>
-			 public 
-			string
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_decrypt">#</a>
-		<code>decrypt( <span>string <var>$cipherText</var></span> )</code>
-
-		<div class="description short">
-			
-<p>Decrypts an encrypted string in CBC Mode or ECB Mode</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p>Decrypts an encrypted string in CBC Mode or ECB Mode</p>
-
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$cipherText</var></dt>
-					<dd></dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>string</code><br>Returns plain text<br>
-				</div>
 
 
 
@@ -315,6 +209,28 @@ secret key</p>
 
 
 
+	<table class="summary properties" id="properties">
+	<caption>Properties summary</caption>
+	<tr data-order="twig" id="$twig">
+		<td class="attributes"><code>
+			public static 
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$twig</var>
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#$twig" class="anchor">#</a><code><span class="php-keyword1">null</span></code></div></td>
+	</tr>
+	</table>
 
 
 

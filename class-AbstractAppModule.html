@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class AbstractAppModule | Smart.Framework Documentation :: 2015-12-22 15:09</title>
+	<title>Class AbstractAppModule | Smart.Framework Documentation :: 2016-01-19 18:05</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?2353416568"></script>
-	<script src="elementlist.js?2354500668"></script>
+	<script src="resources/combined.js?3413450810"></script>
+	<script src="elementlist.js?1149585097"></script>
 </head>
 
 <body>
@@ -83,8 +83,9 @@
 			<h3>Classes</h3>
 			<ul>
 				<li class="active"><a href="class-AbstractAppModule.html">AbstractAppModule</a></li>
-				<li><a href="class-SmartApp.html">SmartApp</a></li>
+				<li><a href="class-SmartAppInfo.html">SmartAppInfo</a></li>
 				<li><a href="class-SmartAuth.html">SmartAuth</a></li>
+				<li><a href="class-SmartFrameworkSecurity.html">SmartFrameworkSecurity</a></li>
 				<li><a href="class-SmartSession.html">SmartSession</a></li>
 			</ul>
 
@@ -307,7 +308,7 @@ class="php-comment">//END CLASS</span>
 		<b>Package:</b> <a href="package-Application.html">Application</a><br>
 
 				<b>Version:</b>
-				v.151222<br>
+				v.160119<br>
 				<b>Depends:</b>
 				-<br>
 				<b>Hints:</b>
@@ -565,12 +566,13 @@ exists, will return an empty string.<br>
 POST, the GPC as set in PHP.INI sequence will overwrite the GET with POST, thus
 the POST value will be get).</dd>
 					<dt><var>$defval</var></dt>
-					<dd>:: The default value of that variable in the case was not set in the Request
-(GET/POST). By default it is set to null.</dd>
+					<dd>:: The default value (if a type is set must be the same type) of that variable
+in the case was not set in the Request (GET/POST). By default it is set to null.</dd>
 					<dt><var>$type</var></dt>
 					<dd>:: The type of the variable ; Default is '' (no enforcing). This can be used to
-enforce a type for the variable as: 'array', 'string', 'boolean', 'integer',
-'integer+', 'decimal1', 'decimal2', 'decimal3', 'decimal4', 'numeric'.</dd>
+enforce a type for the variable as: ['enum', 'list', 'of', 'allowed', 'values'],
+'array', 'string', 'boolean', 'integer', 'integer+', 'decimal1', 'decimal2',
+'decimal3', 'decimal4', 'numeric'.</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -1184,7 +1186,7 @@ wrong and unexpected results !!!</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-22 15:09</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-01-19 18:05</a>
 	</div>
 </div>
 </div>

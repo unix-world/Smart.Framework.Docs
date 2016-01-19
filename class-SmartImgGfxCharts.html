@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartImgGfxCharts | Smart.Framework Documentation :: 2015-12-22 15:09</title>
+	<title>Class SmartImgGfxCharts | Smart.Framework Documentation :: 2016-01-19 18:05</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?2353416568"></script>
-	<script src="elementlist.js?2354500668"></script>
+	<script src="resources/combined.js?3413450810"></script>
+	<script src="elementlist.js?1149585097"></script>
 </head>
 
 <body>
@@ -82,7 +82,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-SmartImgBusinessCharts.html">SmartImgBusinessCharts</a></li>
+				<li><a href="class-SmartImgBizCharts.html">SmartImgBizCharts</a></li>
 				<li class="active"><a href="class-SmartImgGfxCharts.html">SmartImgGfxCharts</a></li>
 			</ul>
 
@@ -131,7 +131,167 @@
 
 	<div class="description">
 	
-<p>Class: SmartImgGfxCharts - Generates IMG Graphix Charts.</p>
+<p>Class: SmartImgGfxCharts - Generates IMG Gfx Charts.</p>
+
+<pre>
+
+<span class="php-comment">// Sample Usage:</span>
+<span
+class="php-comment">//--</span>
+<span class="php-var">$chart</span> = <span
+class="php-keyword1">new</span> SmartImgGfxCharts(
+        <span
+class="php-quote">'vbars'</span>, <span
+class="php-comment">// vbars, hbars, dots, lines, pie, donut</span>
+        <span
+class="php-quote">&quot;Title goes here&quot;</span>,
+        <span
+class="php-keyword1">array</span>(
+                <span
+class="php-keyword1">array</span>(
+                        <span
+class="php-quote">'x'</span> =&gt; <span
+class="php-quote">&quot;white&quot;</span>,
+                        <span
+class="php-quote">'y'</span> =&gt; Smart::random_number(<span
+class="php-num">10</span>,<span
+class="php-num">90</span>),
+                        <span
+class="php-quote">'z'</span> =&gt; Smart::random_number(<span
+class="php-num">10</span>,<span
+class="php-num">90</span>),
+                        <span
+class="php-quote">'w'</span> =&gt; <span
+class="php-num">10</span>,
+                        <span
+class="php-quote">'v'</span> =&gt; <span
+class="php-quote">'#ECECEC'</span>
+                ),
+                <span
+class="php-keyword1">array</span>(
+                        <span
+class="php-quote">'x'</span> =&gt; <span
+class="php-quote">&quot;red&quot;</span>,
+                        <span
+class="php-quote">'y'</span> =&gt; <span
+class="php-num">22.45</span>,
+                        <span
+class="php-quote">'z'</span> =&gt; Smart::random_number(<span
+class="php-num">10</span>,<span
+class="php-num">90</span>),
+                        <span
+class="php-quote">'w'</span> =&gt; <span
+class="php-num">25</span>,
+                        <span
+class="php-quote">'v'</span> =&gt; <span
+class="php-quote">'#FF3300'</span>
+                ),
+                <span
+class="php-keyword1">array</span>(
+                        <span
+class="php-quote">'x'</span> =&gt; <span
+class="php-quote">&quot;blue&quot;</span>,
+                        <span
+class="php-quote">'y'</span> =&gt; Smart::random_number(<span
+class="php-num">10</span>,<span
+class="php-num">90</span>),
+                        <span
+class="php-quote">'z'</span> =&gt; Smart::random_number(<span
+class="php-num">10</span>,<span
+class="php-num">90</span>),
+                        <span
+class="php-quote">'w'</span> =&gt; <span
+class="php-num">7</span>,
+                        <span
+class="php-quote">'v'</span> =&gt; <span
+class="php-quote">'#003399'</span>
+                ),
+                <span
+class="php-keyword1">array</span>(
+                        <span
+class="php-quote">'x'</span> =&gt; <span
+class="php-quote">&quot;yellow&quot;</span>,
+                        <span
+class="php-quote">'y'</span> =&gt; Smart::random_number(<span
+class="php-num">10</span>,<span
+class="php-num">90</span>),
+                        <span
+class="php-quote">'z'</span> =&gt; Smart::random_number(<span
+class="php-num">10</span>,<span
+class="php-num">90</span>),
+                        <span
+class="php-quote">'w'</span> =&gt; <span
+class="php-num">17</span>,
+                        <span
+class="php-quote">'v'</span> =&gt; <span
+class="php-quote">'#FFCC00'</span>
+                ),
+                <span
+class="php-keyword1">array</span>(
+                        <span
+class="php-quote">'x'</span> =&gt; <span
+class="php-quote">&quot;green&quot;</span>,
+                        <span
+class="php-quote">'y'</span> =&gt; Smart::random_number(<span
+class="php-num">10</span>,<span
+class="php-num">90</span>),
+                        <span
+class="php-quote">'z'</span> =&gt; Smart::random_number(<span
+class="php-num">10</span>,<span
+class="php-num">90</span>),
+                        <span
+class="php-quote">'w'</span> =&gt; <span
+class="php-num">31</span>,
+                        <span
+class="php-quote">'v'</span> =&gt; <span
+class="php-quote">'#33CC33'</span>
+                ),
+                <span
+class="php-keyword1">array</span>(
+                        <span
+class="php-quote">'x'</span> =&gt; <span
+class="php-quote">&quot;black&quot;</span>,
+                        <span
+class="php-quote">'y'</span> =&gt; Smart::random_number(<span
+class="php-num">10</span>,<span
+class="php-num">90</span>),
+                        <span
+class="php-quote">'z'</span> =&gt; Smart::random_number(<span
+class="php-num">10</span>,<span
+class="php-num">90</span>),
+                        <span
+class="php-quote">'w'</span> =&gt; <span
+class="php-num">17</span>,
+                        <span
+class="php-quote">'v'</span> =&gt; <span
+class="php-quote">'#333333'</span>
+                )
+        ),
+        <span
+class="php-quote">'png'</span>
+);
+<span
+class="php-var">$chart</span>-&gt;axis_x = <span
+class="php-quote">'X-Axis'</span>;
+<span
+class="php-var">$chart</span>-&gt;axis_y = <span
+class="php-quote">'Y-Axis'</span>;
+<span class="php-comment">//--</span>
+<span
+class="php-keyword2">header</span>(<span
+class="php-quote">'Content-Type: '</span>.<span
+class="php-var">$chart</span>-&gt;mime_header());
+<span
+class="php-keyword2">header</span>(<span
+class="php-quote">'Content-Disposition: '</span>.<span
+class="php-var">$chart</span>-&gt;disposition_header());
+<span
+class="php-keyword1">echo</span> <span
+class="php-var">$chart</span>-&gt;generate();
+<span
+class="php-comment">//--</span>
+
+</pre>
 
 	</div>
 
@@ -150,7 +310,7 @@
 		<b>Package:</b> <a href="package-Components.Charts.html">Components:Charts</a><br>
 
 				<b>Version:</b>
-				v.150107<br>
+				v.160115<br>
 				<b>Depends:</b>
 				classes: Smart<br>
 				<b>Usage:</b>
@@ -174,7 +334,7 @@ methods<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code>__construct( )</code>
+		<code>__construct( <span>mixed <var>$y_type</var></span>, <span>mixed <var>$y_title</var></span>, <span>mixed <var>$y_arr_data</var></span>, <span>mixed <var>$y_format</var> = <span class="php-quote">'png'</span></span>, <span>mixed <var>$y_display_graph2</var> = <span class="php-keyword1">true</span></span>, <span>mixed <var>$y_display_graph_depths</var> = <span class="php-keyword1">true</span></span> )</code>
 
 		<div class="description short">
 			
@@ -192,7 +352,7 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="display" id="_display">
+	<tr data-order="mime_header" id="_mime_header">
 
 		<td class="attributes"><code>
 			 public 
@@ -202,8 +362,66 @@ methods<br>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_display">#</a>
-		<code>display( <span>mixed <var>$save</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$border</var> = <span class="php-keyword1">false</span></span> )</code>
+		<a class="anchor" href="#_mime_header">#</a>
+		<code>mime_header( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="disposition_header" id="_disposition_header">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_disposition_header">#</a>
+		<code>disposition_header( <span>mixed <var>$y_filename</var> = <span class="php-quote">'gfx-chart'</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="generate" id="_generate">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_generate">#</a>
+		<code>generate( <span>mixed <var>$y_mode</var> = <span class="php-quote">'raw'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -236,124 +454,10 @@ methods<br>
 
 	<table class="summary properties" id="properties">
 	<caption>Properties summary</caption>
-	<tr data-order="w" id="$w">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$w</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$w" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="v" id="$v">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$v</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$v" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="x" id="$x">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$x</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$x" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="y" id="$y">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$y</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$y" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="z" id="$z">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$z</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$z" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="title" id="$title">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$title</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$title" class="anchor">#</a><code></code></div></td>
-	</tr>
 	<tr data-order="axis_x" id="$axis_x">
 		<td class="attributes"><code>
 			public  
-			mixed
+			string
 		</code></td>
 
 		<td class="name">
@@ -367,12 +471,12 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$axis_x" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$axis_x" class="anchor">#</a><code><span class="php-quote">''</span></code></div></td>
 	</tr>
 	<tr data-order="axis_y" id="$axis_y">
 		<td class="attributes"><code>
 			public  
-			mixed
+			string
 		</code></td>
 
 		<td class="name">
@@ -386,54 +490,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$axis_y" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$axis_y" class="anchor">#</a><code><span class="php-quote">''</span></code></div></td>
 	</tr>
-	<tr data-order="graphic_1" id="$graphic_1">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$graphic_1</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$graphic_1" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="graphic_2" id="$graphic_2">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$graphic_2</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$graphic_2" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="type" id="$type">
+	<tr data-order="axis_dec" id="$axis_dec">
 		<td class="attributes"><code>
 			public  
 			integer
 		</code></td>
 
 		<td class="name">
-<var>$type</var>
+<var>$axis_dec</var>
 			<div class="description short">
 				
 			</div>
@@ -443,159 +509,7 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$type" class="anchor">#</a><code><span class="php-num">1</span></code></div></td>
-	</tr>
-	<tr data-order="skin" id="$skin">
-		<td class="attributes"><code>
-			public  
-			integer
-		</code></td>
-
-		<td class="name">
-<var>$skin</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$skin" class="anchor">#</a><code><span class="php-num">1</span></code></div></td>
-	</tr>
-	<tr data-order="credits" id="$credits">
-		<td class="attributes"><code>
-			public  
-			integer
-		</code></td>
-
-		<td class="name">
-<var>$credits</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$credits" class="anchor">#</a><code><span class="php-num">0</span></code></div></td>
-	</tr>
-	<tr data-order="border" id="$border">
-		<td class="attributes"><code>
-			public  
-			integer
-		</code></td>
-
-		<td class="name">
-<var>$border</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$border" class="anchor">#</a><code><span class="php-num">1</span></code></div></td>
-	</tr>
-	<tr data-order="width" id="$width">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$width</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$width" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="height" id="$height">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$height</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$height" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="height_title" id="$height_title">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$height_title</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$height_title" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="alternate_x" id="$alternate_x">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$alternate_x</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$alternate_x" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="size" id="$size">
-		<td class="attributes"><code>
-			public  
-			integer
-		</code></td>
-
-		<td class="name">
-<var>$size</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$size" class="anchor">#</a><code><span class="php-num">2</span></code></div></td>
+		<td class="value"><div><a href="#$axis_dec" class="anchor">#</a><code><span class="php-num">0</span></code></div></td>
 	</tr>
 	<tr data-order="tsize" id="$tsize">
 		<td class="attributes"><code>
@@ -616,109 +530,14 @@ methods<br>
 		</td>
 		<td class="value"><div><a href="#$tsize" class="anchor">#</a><code><span class="php-num">5</span></code></div></td>
 	</tr>
-	<tr data-order="total_parameters" id="$total_parameters">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$total_parameters</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$total_parameters" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="sum_total" id="$sum_total">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$sum_total</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$sum_total" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="biggest_value" id="$biggest_value">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$biggest_value</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$biggest_value" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="biggest_parameter" id="$biggest_parameter">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$biggest_parameter</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$biggest_parameter" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="available_types" id="$available_types">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$available_types</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$available_types" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="dec1" id="$dec1">
+	<tr data-order="size" id="$size">
 		<td class="attributes"><code>
 			public  
 			integer
 		</code></td>
 
 		<td class="name">
-<var>$dec1</var>
+<var>$size</var>
 			<div class="description short">
 				
 			</div>
@@ -728,26 +547,7 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$dec1" class="anchor">#</a><code><span class="php-num">0</span></code></div></td>
-	</tr>
-	<tr data-order="dec2" id="$dec2">
-		<td class="attributes"><code>
-			public  
-			integer
-		</code></td>
-
-		<td class="name">
-<var>$dec2</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$dec2" class="anchor">#</a><code><span class="php-num">0</span></code></div></td>
+		<td class="value"><div><a href="#$size" class="anchor">#</a><code><span class="php-num">2</span></code></div></td>
 	</tr>
 	<tr data-order="h3d" id="$h3d">
 		<td class="attributes"><code>
@@ -768,44 +568,6 @@ methods<br>
 		</td>
 		<td class="value"><div><a href="#$h3d" class="anchor">#</a><code><span class="php-num">15</span></code></div></td>
 	</tr>
-	<tr data-order="format" id="$format">
-		<td class="attributes"><code>
-			public  
-			string
-		</code></td>
-
-		<td class="name">
-<var>$format</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$format" class="anchor">#</a><code><span class="php-quote">'png '</span></code></div></td>
-	</tr>
-	<tr data-order="color" id="$color">
-		<td class="attributes"><code>
-			public  
-			array
-		</code></td>
-
-		<td class="name">
-<var>$color</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$color" class="anchor">#</a><code><span class="php-keyword1">array</span>()</code></div></td>
-	</tr>
 	</table>
 
 
@@ -816,7 +578,7 @@ methods<br>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-22 15:09</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-01-19 18:05</a>
 	</div>
 </div>
 </div>

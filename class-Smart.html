@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class Smart | Smart.Framework Documentation :: 2015-12-22 15:09</title>
+	<title>Class Smart | Smart.Framework Documentation :: 2016-01-19 18:05</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?2353416568"></script>
-	<script src="elementlist.js?2354500668"></script>
+	<script src="resources/combined.js?3413450810"></script>
+	<script src="elementlist.js?1149585097"></script>
 </head>
 
 <body>
@@ -160,7 +160,7 @@ Smart::some_method_of_this_class(...);
 		<b>Package:</b> <a href="package-Core.html">Core</a><br>
 
 				<b>Version:</b>
-				v.151216.r2<br>
+				v.160115<br>
 				<b>Depends:</b>
 				extensions: PHP XML, PHP JSON ; classes: SmartUnicode<br>
 				<b>Hints:</b>
@@ -170,7 +170,7 @@ methods will be supported even if the behind PHP methods can change over time,
 so the code would be easier to maintain.<br>
 				<b>Usage:</b>
 				static object: Class::method() - This class provides only STATIC methods<br>
-		<b>Located at</b> lib/framework/lib_smart_core.php<br>
+		<b>Located at</b> lib/framework/lib_core.php<br>
 	</div>
 
 
@@ -1425,35 +1425,82 @@ maximum)<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="uuid_10_num" id="_uuid_10_num">
+	<tr data-order="random_number" id="_random_number">
 
 		<td class="attributes"><code>
 			 public static
-			ID
+			INTEGER
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_uuid_10_num">#</a>
-		<code>uuid_10_num( )</code>
+		<a class="anchor" href="#_random_number">#</a>
+		<code>random_number( <span>mixed <var>$y_min</var> = <span class="php-num">0</span></span>, <span>mixed <var>$y_max</var> = -<span class="php-num">1</span></span> )</code>
 
 		<div class="description short">
 			
-<p>Generates a unique numeric ID</p>
+<p>Generates an integer random number between min and max using mt_rand() which
+is4x times faster than rand(). The min is zero. The max is limited to 2147483647
+on most of the platforms.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Generates a unique numeric ID</p>
+<p>Generates an integer random number between min and max using mt_rand() which
+is4x times faster than rand(). The min is zero. The max is limited to 2147483647
+on most of the platforms.</p>
 
 
 
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>ID</code><br>:: 10 characters [0..9] ; Example: 8107532687<br>
+					<code>INTEGER</code><br>:: An integer random number<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="unique_entropy" id="_unique_entropy">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_unique_entropy">#</a>
+		<code>unique_entropy( <span>mixed <var>$y_suffix</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Generates a better unique entropy (ID) as replacement for uniqid() to ensure
+is unique in time and space, based on: time(), microtime(),
+SMART_FRAMEWORK_NETSERVER_ID, SMART_FRAMEWORK_SECURITY_KEY</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generates a better unique entropy (ID) as replacement for uniqid() to ensure
+is unique in time and space, based on: time(), microtime(),
+SMART_FRAMEWORK_NETSERVER_ID, SMART_FRAMEWORK_SECURITY_KEY</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: variable length Unique Entropy string ; Example:
+NetServer#79;SecKey=my-secret-7328637;Date=2016-01-15 14:33:00;Time=1452855768
+0.86266600 1452855768;Rand=3238;{$y_suffix}<br>
 				</div>
 
 
@@ -1466,7 +1513,7 @@ maximum)<br>
 
 		<td class="attributes"><code>
 			 public static
-			ID
+			STRING
 			
 			</code>
 		</td>
@@ -1490,7 +1537,7 @@ maximum)<br>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>ID</code><br>:: 10 characters [0..9A..Z] ; Example: T7980HG7Y0<br>
+					<code>STRING</code><br>:: a random ID of 10 characters [0..9A..Z] ; Example: T7980HG7Y0<br>
 				</div>
 
 
@@ -1503,7 +1550,7 @@ maximum)<br>
 
 		<td class="attributes"><code>
 			 public static
-			ID
+			STRING
 			
 			</code>
 		</td>
@@ -1529,7 +1576,44 @@ and ensure a unique ID in a period of 33 years</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>ID</code><br>:: 10 characters [0..9A..Z] ; Example: A1ZJ4B98TY<br>
+					<code>STRING</code><br>:: a serial ID of 10 characters [0..9A..Z] ; Example: A1ZJ4B98TY<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="uuid_10_num" id="_uuid_10_num">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_uuid_10_num">#</a>
+		<code>uuid_10_num( )</code>
+
+		<div class="description short">
+			
+<p>Generates a unique numeric ID</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generates a unique numeric ID</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: a numeric ID of 10 characters [0..9] ; Example: 5425708855<br>
 				</div>
 
 
@@ -1542,7 +1626,7 @@ and ensure a unique ID in a period of 33 years</p>
 
 		<td class="attributes"><code>
 			 public static
-			ID
+			STRING
 			
 			</code>
 		</td>
@@ -1566,7 +1650,8 @@ and ensure a unique ID in a period of 33 years</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>ID</code><br>:: 36 characters [0..9a..f] ; Example: cfcb6c2a-a6e0-f539-141d-083abee19a4e<br>
+					<code>STRING</code><br>:: an UUID of 36 characters [0..9a..f] ; Example:
+cfcb6c2a-a6e0-f539-141d-083abee19a4e<br>
 				</div>
 
 
@@ -1579,7 +1664,7 @@ and ensure a unique ID in a period of 33 years</p>
 
 		<td class="attributes"><code>
 			 public static
-			ID
+			STRING
 			
 			</code>
 		</td>
@@ -1603,7 +1688,7 @@ and ensure a unique ID in a period of 33 years</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>ID</code><br>:: 45 characters [0..9a..f] ; Example:
+					<code>STRING</code><br>:: an UUID of 45 characters [0..9a..f] ; Example:
 c02acc84-97f4-0807-b12c-ed6f28dd2078-400c1baf<br>
 				</div>
 
@@ -1958,7 +2043,7 @@ Code).</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-22 15:09</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-01-19 18:05</a>
 	</div>
 </div>
 </div>

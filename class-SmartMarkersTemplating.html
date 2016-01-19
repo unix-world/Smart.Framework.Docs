@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartApp | Smart.Framework Documentation :: 2015-12-22 15:09</title>
+	<title>Class SmartMarkersTemplating | Smart.Framework Documentation :: 2016-01-19 18:05</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?2353416568"></script>
-	<script src="elementlist.js?2354500668"></script>
+	<script src="resources/combined.js?3413450810"></script>
+	<script src="elementlist.js?1149585097"></script>
 </head>
 
 <body>
@@ -17,7 +17,7 @@
 		<div id="groups">
 			<h3>Packages</h3>
 			<ul>
-				<li class="active"><a href="package-Application.html">Application</a>
+				<li><a href="package-Application.html">Application</a>
 						</li>
 				<li><a href="package-Archivers.html">Archivers</a>
 						</li>
@@ -71,7 +71,7 @@
 						</li>
 				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
 						</li>
-				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
+				<li class="active"><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
 			</ul>
 		</div>
@@ -82,10 +82,8 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-AbstractAppModule.html">AbstractAppModule</a></li>
-				<li class="active"><a href="class-SmartApp.html">SmartApp</a></li>
-				<li><a href="class-SmartAuth.html">SmartAuth</a></li>
-				<li><a href="class-SmartSession.html">SmartSession</a></li>
+				<li class="active"><a href="class-SmartMarkersTemplating.html">SmartMarkersTemplating</a></li>
+				<li><a href="class-SmartTwigTemplating.html">SmartTwigTemplating</a></li>
 			</ul>
 
 
@@ -113,7 +111,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="package-Application.html" title="Summary of Application"><span>Package</span></a>
+				<a href="package-Templating.Engines.html" title="Summary of Templating:Engines"><span>Package</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -128,19 +126,13 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class SmartApp</h1>
+	<h1>Class SmartMarkersTemplating</h1>
 
 
 	<div class="description">
 	
-<p>Class: SmartApp - provides some methods for integration between the
-Smart.Framework App/Modules.</p>
-
-<pre>
-<span
-class="php-comment">// Usage example:</span>
-SmartApp::some_method_of_this_class(...);
-</pre>
+<p>Class: SmartMarkersTemplating - provides a very fast and low footprint
+templating system.</p>
 
 	</div>
 
@@ -156,57 +148,43 @@ SmartApp::some_method_of_this_class(...);
 		<b>Final</b><br>
 		
 		
-		<b>Package:</b> <a href="package-Application.html">Application</a><br>
+		<b>Package:</b> <a href="package-Templating.Engines.html">Templating:Engines</a><br>
 
 				<b>Version:</b>
-				v.151222<br>
+				v.160119<br>
 				<b>Depends:</b>
-				-<br>
+				classes: Smart, SmartCache, SmartFileSystem, SmartFileSysUtils<br>
 				<b>Usage:</b>
 				static object: Class::method() - This class provides only STATIC methods<br>
-		<b>Located at</b> lib/framework/lib__smart_framework.php<br>
+		<b>Located at</b> lib/framework/lib_templating.php<br>
 	</div>
 
 
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
-	<tr data-order="TestIfModuleExists" id="_TestIfModuleExists">
+	<tr data-order="render_template" id="_render_template">
 
 		<td class="attributes"><code>
 			 public static
-			BOOLEAN
+			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_TestIfModuleExists">#</a>
-		<code>TestIfModuleExists( <span>STRING <var>$y_module_name</var></span> )</code>
+		<a class="anchor" href="#_render_template">#</a>
+		<code>render_template( <span>mixed <var>$mtemplate</var></span>, <span>mixed <var>$y_arr_vars</var></span>, <span>mixed <var>$y_ignore_if_empty</var> = <span class="php-quote">'no'</span></span>, <span>mixed <var>$y_sub_templates_base_path</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
-<p>Test if Application Module Exists in modules/</p>
-
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Test if Application Module Exists in modules/</p>
 
 
 
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$y_module_name</var></dt>
-					<dd>:: The short module name (Ex: for 'modules/mod-something', this parameter would
-be: 'something'</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>BOOLEAN</code><br>:: TRUE if module exists, FALSE if not detected<br>
-				</div>
 
 
 
@@ -214,42 +192,28 @@ be: 'something'</dd>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="TestIfTemplateExists" id="_TestIfTemplateExists">
+	<tr data-order="render_file_template" id="_render_file_template">
 
 		<td class="attributes"><code>
 			 public static
-			BOOLEAN
+			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_TestIfTemplateExists">#</a>
-		<code>TestIfTemplateExists( <span>STRING <var>$y_template_name</var></span> )</code>
+		<a class="anchor" href="#_render_file_template">#</a>
+		<code>render_file_template( <span>mixed <var>$y_file_path</var></span>, <span>mixed <var>$y_arr_vars</var></span>, <span>mixed <var>$y_use_caching</var> = <span class="php-quote">'no'</span></span> )</code>
 
 		<div class="description short">
 			
-<p>Test if Application Template Exists in etc/templates/</p>
-
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Test if Application Template Exists in etc/templates/</p>
 
 
 
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$y_template_name</var></dt>
-					<dd>:: The template dir name (Ex: for 'etc/templates/something', this parameter
-would be: 'something'</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>BOOLEAN</code><br>:: TRUE if template exists, FALSE if not detected<br>
-				</div>
 
 
 
@@ -279,7 +243,7 @@ would be: 'something'</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-22 15:09</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-01-19 18:05</a>
 	</div>
 </div>
 </div>

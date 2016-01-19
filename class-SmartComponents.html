@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartComponents | Smart.Framework Documentation :: 2015-12-22 15:09</title>
+	<title>Class SmartComponents | Smart.Framework Documentation :: 2016-01-19 18:05</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?2353416568"></script>
-	<script src="elementlist.js?2354500668"></script>
+	<script src="resources/combined.js?3413450810"></script>
+	<script src="elementlist.js?1149585097"></script>
 </head>
 
 <body>
@@ -149,9 +149,10 @@
 		<b>Package:</b> <a href="package-Components.Framework.html">Components:Framework</a><br>
 
 				<b>Version:</b>
-				v.151216<br>
+				v.160117<br>
 				<b>Depends:</b>
-				classes: Smart, SmartUtils, SmartFileSystem, SmartHTMLCalendar<br>
+				classes: Smart, SmartUtils, SmartFileSystem, SmartHTMLCalendar,
+SmartRegionalText<br>
 				<b>Usage:</b>
 				static object: Class::method() - This class provides only STATIC methods<br>
 		<b>Located at</b> lib/core/lib_smart_components.php<br>
@@ -335,64 +336,6 @@
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="make_marker_template" id="_make_marker_template">
-
-		<td class="attributes"><code>
-			 public static
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_make_marker_template">#</a>
-		<code>make_marker_template( <span>mixed <var>$mtemplate</var></span>, <span>mixed <var>$y_arr_vars</var></span>, <span>mixed <var>$y_ignore_if_empty</var> = <span class="php-quote">'no'</span></span>, <span>mixed <var>$y_sub_templates_base_path</var> = <span class="php-quote">''</span></span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="make_marker_filetemplate" id="_make_marker_filetemplate">
-
-		<td class="attributes"><code>
-			 public static
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_make_marker_filetemplate">#</a>
-		<code>make_marker_filetemplate( <span>mixed <var>$y_file_path</var></span>, <span>mixed <var>$y_arr_vars</var></span>, <span>mixed <var>$y_use_caching</var> = <span class="php-quote">'no'</span></span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
 	<tr data-order="html_single_select_list" id="_html_single_select_list">
 
 		<td class="attributes"><code>
@@ -429,7 +372,8 @@ v.20141212</p>
 					<dt><var>$y_mode</var></dt>
 					<dd>'form' = display form | 'list' = display list</dd>
 					<dt><var>$yarr_data</var></dt>
-					<dd>DATASET ROWS OF ['id', 'name', 'id2', 'name2']</dd>
+					<dd>DATASET ROWS AS: ['id' =&amp;gt; 'name', 'id2' =&amp;gt; 'name2'] OR ['id', 'name',
+'id2', 'name2']</dd>
 					<dt><var>$y_varname</var></dt>
 					<dd>as 'frm[test]'</dd>
 					<dt><var>$y_dimensions</var></dt>
@@ -466,7 +410,7 @@ v.20141212</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_html_multi_select_list">#</a>
-		<code>html_multi_select_list( <span>STRING <var>$y_id</var></span>, <span>STRING <var>$y_selected_value</var></span>, <span>ENUM <var>$y_mode</var></span>, <span>ARRAY <var>$yarr_data</var></span>, <span>STRING <var>$y_varname</var> = <span class="php-quote">''</span></span>, <span>ENUM <var>$y_draw</var> = <span class="php-quote">'list'</span></span>, <span>YES/NO <var>$y_use_connectors</var> = <span class="php-quote">'no'</span></span>, <span>INTEGER <var>$y_dimensions</var> = <span class="php-quote">'300/0'</span></span>, <span>CODE <var>$y_custom_js</var> = <span class="php-quote">''</span></span>, <span>SPECIAL <var>$y_extrastyle</var> = <span class="php-quote">'#JQUERY-FILTER#'</span></span> )</code>
+		<code>html_multi_select_list( <span>STRING <var>$y_id</var></span>, <span>STRING <var>$y_selected_value</var></span>, <span>ENUM <var>$y_mode</var></span>, <span>ARRAY <var>$yarr_data</var></span>, <span>STRING <var>$y_varname</var> = <span class="php-quote">''</span></span>, <span>ENUM <var>$y_draw</var> = <span class="php-quote">'list'</span></span>, <span>YES/NO <var>$y_sync_values</var> = <span class="php-quote">'no'</span></span>, <span>INTEGER <var>$y_dimensions</var> = <span class="php-quote">'300/0'</span></span>, <span>CODE <var>$y_custom_js</var> = <span class="php-quote">''</span></span>, <span>SPECIAL <var>$y_extrastyle</var> = <span class="php-quote">'#JQUERY-FILTER#'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -487,7 +431,7 @@ Selections</p>
 					<dt><var>$y_id</var></dt>
 					<dd>the HTML element ID</dd>
 					<dt><var>$y_selected_value</var></dt>
-					<dd>selected value(s) data as array or string list as: '
+					<dd>selected value(s) data as ARRAY or STRING list as: '
 &lt;id1&gt;,
 	&lt;id2&gt;'&lt;/id2&gt;
 &lt;/id1&gt;
@@ -495,13 +439,14 @@ Selections</p>
 					<dt><var>$y_mode</var></dt>
 					<dd>'form' = display form | checkboxes | 'list' = display list</dd>
 					<dt><var>$yarr_data</var></dt>
-					<dd>DATASET ROWS AS [0]='id', [1]='name' ...</dd>
+					<dd>DATASET ROWS AS: ['id' =&amp;gt; 'name', 'id2' =&amp;gt; 'name2'] OR ['id', 'name',
+'id2', 'name2']</dd>
 					<dt><var>$y_varname</var></dt>
 					<dd>as 'frm[test][]'</dd>
 					<dt><var>$y_draw</var></dt>
 					<dd>list | checkboxes</dd>
-					<dt><var>$y_use_connectors</var></dt>
-					<dd>If Yes, sync select connectors are used (Only for CheckBoxes)</dd>
+					<dt><var>$y_sync_values</var></dt>
+					<dd>If Yes, sync select similar values used (curently works only for checkboxes)</dd>
 					<dt><var>$y_dimensions</var></dt>
 					<dd>$y_width width in pixels (Only for jQuery Style)</dd>
 					<dt><var>$y_custom_js</var></dt>
@@ -1189,6 +1134,35 @@ $configs['nav']['pager'], and can be: arrows or numeric</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="html_form_vars" id="_html_form_vars">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_form_vars">#</a>
+		<code>html_form_vars( <span>mixed <var>$y_var</var></span>, <span>mixed <var>$y_html_var</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="get_date_format_for_js" id="_get_date_format_for_js">
 
 		<td class="attributes"><code>
@@ -1269,7 +1243,7 @@ $configs['nav']['pager'], and can be: arrows or numeric</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2015-12-22 15:09</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-01-19 18:05</a>
 	</div>
 </div>
 </div>
