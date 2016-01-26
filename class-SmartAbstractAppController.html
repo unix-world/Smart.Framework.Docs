@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartAbstractAppController | Smart.Framework Documentation :: 2016-01-20 12:45</title>
+	<title>Class SmartAbstractAppController | Smart.Framework Documentation :: 2016-01-26 13:10</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?35456807"></script>
@@ -308,7 +308,7 @@ class="php-comment">//END CLASS</span>
 		<b>Package:</b> <a href="package-Application.html">Application</a><br>
 
 				<b>Version:</b>
-				v.160120<br>
+				v.160126<br>
 				<b>Depends:</b>
 				-<br>
 				<b>Hints:</b>
@@ -334,7 +334,7 @@ or SmartAppAdminController (as a controller of admin.php)<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code>__construct( <span>mixed <var>$y_module_path</var></span>, <span>mixed <var>$y_url_script</var></span>, <span>mixed <var>$y_url_path</var></span>, <span>mixed <var>$y_url_addr</var></span> )</code>
+		<code>__construct( <span>mixed <var>$y_module_path</var></span>, <span>mixed <var>$y_url_script</var></span>, <span>mixed <var>$y_url_path</var></span>, <span>mixed <var>$y_url_addr</var></span>, <span>mixed <var>$y_url_page</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1065,6 +1065,51 @@ of the cases<br>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="PageUnsetFromCache" id="_PageUnsetFromCache">
+
+		<td class="attributes"><code>
+			final public 
+			BOOL
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageUnsetFromCache">#</a>
+		<code>PageUnsetFromCache( <span>STRING <var>$storage_namespace</var></span>, <span>STRING <var>$unique_key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Unset a Page from the (Persistent) Cache.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unset a Page from the (Persistent) Cache.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$storage_namespace</var></dt>
+					<dd>:: the cache storage namespace, used to group keys</dd>
+					<dt><var>$unique_key</var></dt>
+					<dd>:: the unique cache key</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if the PersistentCache is active and value was unset ; FALSE in the rest
+of the cases<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="Run" id="_Run">
 
 		<td class="attributes"><code>
@@ -1186,7 +1231,7 @@ wrong and unexpected results !!!</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-01-20 12:45</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-01-26 13:10</a>
 	</div>
 </div>
 </div>
