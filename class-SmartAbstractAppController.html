@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartAbstractAppController | Smart.Framework Documentation :: 2016-01-26 13:10</title>
+	<title>Class SmartAbstractAppController | Smart.Framework Documentation :: 2016-02-01 10:59</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
-	<script src="elementlist.js?35456807"></script>
+	<script src="elementlist.js?305220093"></script>
 </head>
 
 <body>
@@ -177,6 +177,8 @@ class="php-var">$this</span>-&gt;PageViewSetCfg(<span
 class="php-quote">'template-file'</span>, <span
 class="php-quote">'template-one.htm'</span>);     <span
 class="php-comment">// will be using the template file: template-one.htm (located in: etc/templates/my-template/)</span>
+        <span
+class="php-comment">//$this-&gt;PageViewSetCfg('template-file', 'template-modal.htm'); // or using the modal template</span>
 
         <span
 class="php-comment">// the template `template-one.htm` contains several markers as): `title`, `left-column`, `main`, `right-column`, so we set them as:</span>
@@ -247,16 +249,17 @@ class="php-keyword1">function</span> Run() {
 
         <span
 class="php-var">$this</span>-&gt;PageViewSetCfg(<span
+class="php-quote">'rawpage'</span>, <span
+class="php-keyword1">true</span>); <span
+class="php-comment">// do a raw output, no templates are loaded (this example does a json output / an image or other non-html content ; can be used also for output of an image: jpg/gif/jpeg with the appropriate content headers)</span>
+
+        <span
+class="php-var">$this</span>-&gt;PageViewSetCfg(<span
 class="php-quote">'rawmime'</span>, <span
 class="php-quote">'text/javascript'</span>); <span
 class="php-comment">// set the content (mime) type ; this can also be for this example: 'application/json'</span>
         <span
 class="php-comment">//$this-&gt;PageViewSetCfg('rawdisp', 'inline'); // (optional, set the content disposition ; for pdf mime type you maybe would set this to 'attachment' instead on 'inline'</span>
-
-        <span
-class="php-var">$this</span>-&gt;PageViewSetCfg(<span
-class="php-quote">'rawpage'</span>, <span class="php-quote">'raw'</span>); <span
-class="php-comment">// do a raw output, no templates are loaded (this example does a json output ; can be used also for output of an image: jpg/gif/jpeg with the appropriate content headers)</span>
 
         <span
 class="php-var">$this</span>-&gt;PageViewSetVar(
@@ -308,7 +311,7 @@ class="php-comment">//END CLASS</span>
 		<b>Package:</b> <a href="package-Application.html">Application</a><br>
 
 				<b>Version:</b>
-				v.160126<br>
+				v.160127<br>
 				<b>Depends:</b>
 				-<br>
 				<b>Hints:</b>
@@ -334,7 +337,7 @@ or SmartAppAdminController (as a controller of admin.php)<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code>__construct( <span>mixed <var>$y_module_path</var></span>, <span>mixed <var>$y_url_script</var></span>, <span>mixed <var>$y_url_path</var></span>, <span>mixed <var>$y_url_addr</var></span>, <span>mixed <var>$y_url_page</var></span> )</code>
+		<code>__construct( <span>mixed <var>$y_module_path</var></span>, <span>mixed <var>$y_url_script</var></span>, <span>mixed <var>$y_url_path</var></span>, <span>mixed <var>$y_url_addr</var></span>, <span>mixed <var>$y_url_page</var></span>, <span>mixed <var>$y_controller</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1231,7 +1234,7 @@ wrong and unexpected results !!!</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-01-26 13:10</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-01 10:59</a>
 	</div>
 </div>
 </div>

@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartPgsqlExtDb | Smart.Framework Documentation :: 2016-01-26 13:10</title>
+	<title>Class SmartPgsqlExtDb | Smart.Framework Documentation :: 2016-02-01 10:59</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
-	<script src="elementlist.js?35456807"></script>
+	<script src="elementlist.js?305220093"></script>
 </head>
 
 <body>
@@ -219,7 +219,7 @@ class="php-comment">//... for other hints look to the samples of the class: Smar
 		<b>Package:</b> <a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a><br>
 
 				<b>Version:</b>
-				v.160121<br>
+				v.160201<br>
 				<b>Depends:</b>
 				extensions: PHP PostgreSQL ; classes: Smart, SmartUnicode, SmartUtils<br>
 				<b>Hints:</b>
@@ -959,7 +959,7 @@ $arr['field2'] = 100;</dd>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="table_new_safeid" id="_table_new_safeid">
+	<tr data-order="new_safe_id" id="_new_safe_id">
 
 		<td class="attributes"><code>
 			 public 
@@ -969,86 +969,36 @@ $arr['field2'] = 100;</dd>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_table_new_safeid">#</a>
-		<code>table_new_safeid( <span>STRING <var>$y_table_name</var></span>, <span>ENUM <var>$y_mode</var> = <span class="php-quote">'serial'</span></span>, <span>STRING <var>$y_field_name</var> = <span class="php-quote">'id'</span></span>, <span>STRING <var>$y_schema</var> = <span class="php-quote">'public'</span></span> )</code>
+		<a class="anchor" href="#_new_safe_id">#</a>
+		<code>new_safe_id( <span>ENUM <var>$y_mode</var></span>, <span>STRING <var>$y_id_field</var></span>, <span>STRING <var>$y_table_name</var></span>, <span>STRING <var>$y_schema</var> = <span class="php-quote">'public'</span></span> )</code>
 
 		<div class="description short">
 			
-<p>Get A UNIQUE (10-chars:numeric|string-B36) UNIQUE ID for DB Tables [SAFE if
-used with Table Check]</p>
+<p>Get A UNIQUE (SAFE) ID for DB Tables / Schema</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Get A UNIQUE (10-chars:numeric|string-B36) UNIQUE ID for DB Tables [SAFE if
-used with Table Check]</p>
+<p>Get A UNIQUE (SAFE) ID for DB Tables / Schema</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$y_table_name</var></dt>
-					<dd>:: the table name</dd>
 					<dt><var>$y_mode</var></dt>
-					<dd>:: mode: serial (string), default | random (string) | numeric (random)</dd>
-					<dt><var>$y_field_name</var></dt>
-					<dd>:: the field name (default: id)</dd>
-					<dt><var>$y_schema</var></dt>
-					<dd>:: the schema (default: public)</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>STRING</code><br>:: the ID<br>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="table_new_uuid" id="_table_new_uuid">
-
-		<td class="attributes"><code>
-			 public 
-			STRING
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_table_new_uuid">#</a>
-		<code>table_new_uuid( <span>STRING <var>$y_table_name</var></span>, <span>STRING <var>$y_field_name</var> = <span class="php-quote">'id'</span></span>, <span>STRING <var>$y_schema</var> = <span class="php-quote">'public'</span></span> )</code>
-
-		<div class="description short">
-			
-<p>Get A UNIVERSAL (128-bit) UNIQUE ID for DB Tables [SUPPOSE TO BE ALWAYS SAFE
-in Time and Space]</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p>Get A UNIVERSAL (128-bit) UNIQUE ID for DB Tables [SUPPOSE TO BE ALWAYS SAFE
-in Time and Space]</p>
-
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
+					<dd>:: mode: uid10str | uid10num | uid10seq | uid36 | uid45</dd>
+					<dt><var>$y_id_field</var></dt>
+					<dd>$y_field_name :: the field name</dd>
 					<dt><var>$y_table_name</var></dt>
 					<dd>:: the table name</dd>
-					<dt><var>$y_field_name</var></dt>
-					<dd>:: the field name (default: id)</dd>
 					<dt><var>$y_schema</var></dt>
-					<dd>:: the schema (default: public)</dd>
+					<dd>:: the schema (default is: public)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>:: the ID<br>
+					<code>STRING</code><br>:: the generated Unique ID<br>
 				</div>
 
 
@@ -1079,7 +1029,7 @@ in Time and Space]</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-01-26 13:10</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-01 10:59</a>
 	</div>
 </div>
 </div>

@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class Smart | Smart.Framework Documentation :: 2016-01-26 13:10</title>
+	<title>Class Smart | Smart.Framework Documentation :: 2016-02-01 10:59</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
-	<script src="elementlist.js?35456807"></script>
+	<script src="elementlist.js?305220093"></script>
 </head>
 
 <body>
@@ -160,7 +160,7 @@ Smart::some_method_of_this_class(...);
 		<b>Package:</b> <a href="package-Core.html">Core</a><br>
 
 				<b>Version:</b>
-				v.160125<br>
+				v.160201<br>
 				<b>Depends:</b>
 				extensions: PHP XML, PHP JSON ; classes: SmartUnicode<br>
 				<b>Hints:</b>
@@ -1313,7 +1313,7 @@ CHARS: [a-z0-9] _ - . @</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$y_name</var></dt>
-					<dd>:: Username or eMail address to validate</dd>
+					<dd>:: Variable to validate</dd>
 					<dt><var>$ysupresschar</var></dt>
 					<dd>:: The suppression character to replace weird characters ; optional ; default is
 ''</dd>
@@ -1321,7 +1321,49 @@ CHARS: [a-z0-9] _ - . @</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>:: The safe user name or validated email address<br>
+					<code>STRING</code><br>:: The safe validated variable<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="safe_username" id="_safe_username">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_safe_username">#</a>
+		<code>safe_username( <span>STRING <var>$y_name</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Safe Valid User Names ALLOWED CHARS: [a-z0-9] .</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Safe Valid User Names ALLOWED CHARS: [a-z0-9] .</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_name</var></dt>
+					<dd>:: Variable to validate</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The safe validated variable<br>
 				</div>
 
 
@@ -1358,12 +1400,12 @@ CHARS: [a-z0-9] _ - . @</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$y_name</var></dt>
-					<dd>:: The name of the variable or special string</dd>
+					<dd>:: Variable to validate</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>:: The safe variable name or string<br>
+					<code>STRING</code><br>:: The safe validated variable<br>
 				</div>
 
 
@@ -1528,26 +1570,28 @@ on most of the platforms.</p>
 
 		<div class="description short">
 			
-<p>Generates a better unique entropy (ID) as replacement for uniqid() to ensure
-is unique in time and space, based on: time(), microtime(),
-SMART_FRAMEWORK_NETSERVER_ID, SMART_FRAMEWORK_SECURITY_KEY</p>
+<p>Generates a time based entropy as replacement for uniqid() to ensure is
+unique in time and space. It is based on a full unique signature in space and
+time: server name, server unique id, a unique time sequence that repeats once in
+1000 years and 2 extremely large (fixed length) random values . If a suffix is
+provided will append it.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Generates a better unique entropy (ID) as replacement for uniqid() to ensure
-is unique in time and space, based on: time(), microtime(),
-SMART_FRAMEWORK_NETSERVER_ID, SMART_FRAMEWORK_SECURITY_KEY</p>
+<p>Generates a time based entropy as replacement for uniqid() to ensure is
+unique in time and space. It is based on a full unique signature in space and
+time: server name, server unique id, a unique time sequence that repeats once in
+1000 years and 2 extremely large (fixed length) random values . If a suffix is
+provided will append it.</p>
 
 
 
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>:: variable length Unique Entropy string ; Example:
-NetServer#79;SecKey=my-secret-7328637;Date=2016-01-15 14:33:00;Time=1452855768
-0.86266600 1452855768;Rand=3238;{$y_suffix}<br>
+					<code>STRING</code><br>:: variable length Unique Entropy string<br>
 				</div>
 
 
@@ -1556,7 +1600,7 @@ NetServer#79;SecKey=my-secret-7328637;Date=2016-01-15 14:33:00;Time=1452855768
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="uuid_10_str" id="_uuid_10_str">
+	<tr data-order="uuid_10_seq" id="_uuid_10_seq">
 
 		<td class="attributes"><code>
 			 public static
@@ -1566,64 +1610,58 @@ NetServer#79;SecKey=my-secret-7328637;Date=2016-01-15 14:33:00;Time=1452855768
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_uuid_10_str">#</a>
-		<code>uuid_10_str( )</code>
+		<a class="anchor" href="#_uuid_10_seq">#</a>
+		<code>uuid_10_seq( )</code>
 
 		<div class="description short">
 			
-<p>Generates a unique random numeric base36 ID</p>
+<p>Generates a random string (base36) UUID of 10 characters [0..9A..Z] ;
+Example: 0G1G74W362 . Intended usage: Medium scale / Sequential / Non-Repeating
+(never repeats in a period cycle of 1000 years). This is sequential, date and
+time with miliseconds and a randomizer factor to ensure an ~ unique ID.
+Duplicate values can occur just in the same milisecond (1000 miliseconds = 1
+second) with a chance of ~ 3% Values: 34k / sec ; 200k / min ; 120 mil / hour
+.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Generates a unique random numeric base36 ID</p>
+<p>Generates a random string (base36) UUID of 10 characters [0..9A..Z] ;
+Example: 0G1G74W362 . Intended usage: Medium scale / Sequential / Non-Repeating
+(never repeats in a period cycle of 1000 years). This is sequential, date and
+time with miliseconds and a randomizer factor to ensure an ~ unique ID.
+Duplicate values can occur just in the same milisecond (1000 miliseconds = 1
+second) with a chance of ~ 3% Values: 34k / sec ; 200k / min ; 120 mil / hour
+.</p>
+
+<p>Advantages: This is one of the most powerful UUID systems as the ID will
+never repeat in a huge period of time. Compared with the classic autoincremental
+IDs this is much better as on the next cycle will try to fill up available
+values but also because the next cycle occur after so many time there is no risk
+to re-use some IDs which were deactivated prior and generating confusions with
+previous records. The classic autoincremental systems can NOT do this and more,
+once the max ID is reached the DB table is blocked as autoincremental records
+reach the max ID !!!</p>
+
+<p>Disadvantages: The database libraries before alocating such ID must be able
+to retry within a cycle with double check, and using a pre-alocation table since
+the IDs are time based and if in the same milisecond more than 1 inserts are
+allocated they can conflict each other when more than one will generate the same
+ID !</p>
+
+<p>Smart.Framework implements the retry + cycle + pre-alocating table as a
+standard feature in the PostgreSQL library (plugin) bundled as PostgreSQL can do
+DDLs in transactions. Using such ID with MySQL would be tricky as DDLs will
+break the transactions ;-). And for SQLite it does not make sense since SQLite
+is designed for small DBs not need such high scalability ...</p>
 
 
 
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>:: a random ID of 10 characters [0..9A..Z] ; Example: T7980HG7Y0<br>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="uuid_serial_10_str" id="_uuid_serial_10_str">
-
-		<td class="attributes"><code>
-			 public static
-			STRING
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_uuid_serial_10_str">#</a>
-		<code>uuid_serial_10_str( )</code>
-
-		<div class="description short">
-			
-<p>Generates a unique serial numeric base36 ID This is time based with microtime
-and ensure a unique ID in a period of 33 years</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p>Generates a unique serial numeric base36 ID This is time based with microtime
-and ensure a unique ID in a period of 33 years</p>
-
-
-
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>STRING</code><br>:: a serial ID of 10 characters [0..9A..Z] ; Example: A1ZJ4B98TY<br>
+					<code>STRING</code><br>:: the UUID<br>
 				</div>
 
 
@@ -1647,20 +1685,71 @@ and ensure a unique ID in a period of 33 years</p>
 
 		<div class="description short">
 			
-<p>Generates a unique numeric ID</p>
+<p>Generates a random, almost unique numeric UUID of 10 characters [0..9] ;
+Example: 5457229400 . Intended usage: Small scale. For the same time moment,
+duplicate values can happen with a chance of 1 in a 9 million. Min is:
+0000000001 ; Max id: 9999999999 . Values: 9999999998 .</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Generates a unique numeric ID</p>
+<p>Generates a random, almost unique numeric UUID of 10 characters [0..9] ;
+Example: 5457229400 . Intended usage: Small scale. For the same time moment,
+duplicate values can happen with a chance of 1 in a 9 million. Min is:
+0000000001 ; Max id: 9999999999 . Values: 9999999998 .</p>
 
 
 
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>:: a numeric ID of 10 characters [0..9] ; Example: 5425708855<br>
+					<code>STRING</code><br>:: the UUID<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="uuid_10_str" id="_uuid_10_str">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_uuid_10_str">#</a>
+		<code>uuid_10_str( )</code>
+
+		<div class="description short">
+			
+<p>Generates a random, almost unique string (base36) UUID of 10 characters
+[0..9A..Z] ; Example: Z4C9S6F1H1 . Intended usage: Large scale. For the same
+time moment, duplicate values can occur with a chance of ~ 1 in a 3000 trillion.
+Min is: 0A0A0A0A0A (28232883707050) ; Max id: Z9Z9Z9Z9Z9 (3582752942424645) .
+Values YZYZYZYZYZ (3554520058717595) .</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generates a random, almost unique string (base36) UUID of 10 characters
+[0..9A..Z] ; Example: Z4C9S6F1H1 . Intended usage: Large scale. For the same
+time moment, duplicate values can occur with a chance of ~ 1 in a 3000 trillion.
+Min is: 0A0A0A0A0A (28232883707050) ; Max id: Z9Z9Z9Z9Z9 (3582752942424645) .
+Values YZYZYZYZYZ (3554520058717595) .</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: the UUID<br>
 				</div>
 
 
@@ -1684,21 +1773,32 @@ and ensure a unique ID in a period of 33 years</p>
 
 		<div class="description short">
 			
-<p>Generates a unique MD5 based UUID</p>
+<p>Generates an almost unique MD5 based UUID of 36 characters [0..9a..f] ;
+Example: cfcb6c2a-a6e0-f539-141d-083abee19a4e . The uniqueness of this is based
+on a full unique signature in space and time: 2 random UUIDS, server name,
+server unique id, year/day/month hour:minute:seconds, time, microseconds, a
+random value 0...9999 . For the same time moment, duplicates values can occur
+with a chance of 1 in ~ a 340282366920938586008062602462446642046 . Intended
+usage: Very Large scale.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Generates a unique MD5 based UUID</p>
+<p>Generates an almost unique MD5 based UUID of 36 characters [0..9a..f] ;
+Example: cfcb6c2a-a6e0-f539-141d-083abee19a4e . The uniqueness of this is based
+on a full unique signature in space and time: 2 random UUIDS, server name,
+server unique id, year/day/month hour:minute:seconds, time, microseconds, a
+random value 0...9999 . For the same time moment, duplicates values can occur
+with a chance of 1 in ~ a 340282366920938586008062602462446642046 . Intended
+usage: Very Large scale.</p>
 
 
 
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>:: an UUID of 36 characters [0..9a..f] ; Example:
-cfcb6c2a-a6e0-f539-141d-083abee19a4e<br>
+					<code>STRING</code><br>:: the UUID<br>
 				</div>
 
 
@@ -1722,21 +1822,32 @@ cfcb6c2a-a6e0-f539-141d-083abee19a4e<br>
 
 		<div class="description short">
 			
-<p>Generates a unique SHA1 based UUID</p>
+<p>Generates an almost unique SHA1 based UUID of 45 characters [0..9a..f] ;
+Example: c02acc84-97f4-0807-b12c-ed6f28dd2078-400c1baf . The uniqueness of this
+is based on a full unique signature in space and time: 2 random UUIDS, server
+name, server unique id, year/day/month hour:minute:seconds, time, microseconds,
+a random value 0...9999 . For the same time moment, duplicates values can occur
+with a chance of 1 in ~ a 1461501637330903466848266086008062602462446642046 .
+Intended usage: Huge scale.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Generates a unique SHA1 based UUID</p>
+<p>Generates an almost unique SHA1 based UUID of 45 characters [0..9a..f] ;
+Example: c02acc84-97f4-0807-b12c-ed6f28dd2078-400c1baf . The uniqueness of this
+is based on a full unique signature in space and time: 2 random UUIDS, server
+name, server unique id, year/day/month hour:minute:seconds, time, microseconds,
+a random value 0...9999 . For the same time moment, duplicates values can occur
+with a chance of 1 in ~ a 1461501637330903466848266086008062602462446642046 .
+Intended usage: Huge scale.</p>
 
 
 
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>:: an UUID of 45 characters [0..9a..f] ; Example:
-c02acc84-97f4-0807-b12c-ed6f28dd2078-400c1baf<br>
+					<code>STRING</code><br>:: the UUID<br>
 				</div>
 
 
@@ -2090,7 +2201,7 @@ Code).</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-01-26 13:10</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-01 10:59</a>
 	</div>
 </div>
 </div>
