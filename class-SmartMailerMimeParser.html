@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartMailerMimeParser | Smart.Framework Documentation :: 2016-02-01 10:59</title>
+	<title>Class SmartMailerMimeParser | Smart.Framework Documentation :: 2016-02-05 15:10</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?305220093"></script>
@@ -151,10 +151,10 @@
 		<b>Package:</b> <a href="package-Mailer.Utility.html">Mailer:Utility</a><br>
 
 				<b>Version:</b>
-				v.160129<br>
+				v.160205<br>
 				<b>Depends:</b>
 				classes: Smart, SmartUtils, SmartFileSysUtils, SmartFileSystem,
-SmartMailerMimeDecode,<br>
+SmartMailerMimeDecode<br>
 				<b>Usage:</b>
 				static object: Class::method() - This class provides only STATIC methods<br>
 		<b>Located at</b> lib/core/plugins/lib_mail_utils.php<br>
@@ -164,35 +164,6 @@ SmartMailerMimeDecode,<br>
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
-	<tr data-order="read_message" id="_read_message">
-
-		<td class="attributes"><code>
-			 public static
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_read_message">#</a>
-		<code>read_message( <span>mixed <var>$y_display_as_print</var></span>, <span>mixed <var>$y_link</var></span>, <span>mixed <var>$y_enc_msg_file</var></span>, <span>mixed <var>$y_target</var> = <span class="php-quote">'_blank'</span></span>, <span>mixed <var>$y_title</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_show_headers</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_process_mode</var> = <span class="php-quote">'default'</span></span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
 	<tr data-order="encode_mime_fileurl" id="_encode_mime_fileurl">
 
 		<td class="attributes"><code>
@@ -204,7 +175,7 @@ SmartMailerMimeDecode,<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_encode_mime_fileurl">#</a>
-		<code>encode_mime_fileurl( <span>mixed <var>$y_msg_file</var></span> )</code>
+		<code>encode_mime_fileurl( <span>mixed <var>$y_msg_file</var></span>, <span>mixed <var>$y_ctrl_key</var></span> )</code>
 
 		<div class="description short">
 			
@@ -233,7 +204,65 @@ SmartMailerMimeDecode,<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_decode_mime_fileurl">#</a>
-		<code>decode_mime_fileurl( <span>mixed <var>$y_enc_msg_file</var></span> )</code>
+		<code>decode_mime_fileurl( <span>mixed <var>$y_enc_msg_file</var></span>, <span>mixed <var>$y_ctrl_key</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="display_message" id="_display_message">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_display_message">#</a>
+		<code>display_message( <span>mixed <var>$y_enc_msg_file</var></span>, <span>mixed <var>$y_ctrl_key</var></span>, <span>mixed <var>$y_link</var></span>, <span>mixed <var>$y_target</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_title</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_process_mode</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_show_headers</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_message_data_structure" id="_get_message_data_structure">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_message_data_structure">#</a>
+		<code>get_message_data_structure( <span>mixed <var>$y_enc_msg_file</var></span>, <span>mixed <var>$y_ctrl_key</var></span>, <span>mixed <var>$y_process_mode</var></span>, <span>mixed <var>$y_link</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_target</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -273,7 +302,7 @@ SmartMailerMimeDecode,<br>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-01 10:59</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-05 15:10</a>
 	</div>
 </div>
 </div>

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartXmlToArray | Smart.Framework Documentation :: 2016-02-01 10:59</title>
+	<title>Class SmartXmlToArray | Smart.Framework Documentation :: 2016-02-05 15:10</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?305220093"></script>
@@ -134,28 +134,16 @@
 <p>Class: SmartXmlToArray - Create a PHP Array from XML.</p>
 
 <pre>
-<span class="php-comment">//-- Sample use:</span>
+<span class="php-comment">//-- Sample usage:</span>
 <span
-class="php-var">$xmldata</span> = <span
-class="php-quote">'&lt;xml&gt;&lt;data&gt;1&lt;/data&gt;&lt;/xml&gt;'</span>;
-<span
-class="php-keyword1">if</span>(Smart::test_if_xml(<span
-class="php-var">$xmldata</span>)) { <span
-class="php-comment">// fix parser bug</span>
-      <span
-class="php-var">$obj</span> = <span
-class="php-keyword1">new</span> SmartXmlToArray();
-      <span
-class="php-var">$obj</span>-&gt;content = <span
-class="php-var">$xmldata</span>;
-      <span class="php-var">$arr</span> = <span
-class="php-var">$obj</span>-&gt;transform(); <span
+class="php-var">$arr</span> = (<span
+class="php-keyword1">new</span> SmartXmlToArray())-&gt;transform(<span
+class="php-quote">'&lt;xml&gt;&lt;data&gt;1&lt;/data&gt;&lt;/xml&gt;'</span>); <span
 class="php-comment">// [OK]</span>
-      <span
+<span
 class="php-keyword2">print_r</span>(<span class="php-var">$arr</span>);
-} <span
-class="php-comment">//end if</span>
-<span class="php-comment">//--</span>
+<span
+class="php-comment">//--</span>
 </pre>
 
 	</div>
@@ -175,7 +163,7 @@ class="php-comment">//end if</span>
 		<b>Package:</b> <a href="package-DATA.XML.html">DATA:XML</a><br>
 
 				<b>Version:</b>
-				v.151216<br>
+				v.160204<br>
 				<b>Depends:</b>
 				extensions: PHP XML ; classes: Smart<br>
 				<b>Hints:</b>
@@ -201,7 +189,7 @@ methods<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code>__construct( <span>mixed <var>$contents</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$encoding</var> = SMART_FRAMEWORK_CHARSET</span> )</code>
+		<code>__construct( <span>mixed <var>$encoding</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -230,7 +218,7 @@ methods<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_transform">#</a>
-		<code>transform( )</code>
+		<code>transform( <span>mixed <var>$xml_str</var></span> )</code>
 
 		<div class="description short">
 			
@@ -261,47 +249,6 @@ methods<br>
 
 
 
-	<table class="summary properties" id="properties">
-	<caption>Properties summary</caption>
-	<tr data-order="content" id="$content">
-		<td class="attributes"><code>
-			public  
-			string
-		</code></td>
-
-		<td class="name">
-<var>$content</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$content" class="anchor">#</a><code><span class="php-quote">''</span></code></div></td>
-	</tr>
-	<tr data-order="encoding" id="$encoding">
-		<td class="attributes"><code>
-			public  
-			string
-		</code></td>
-
-		<td class="name">
-<var>$encoding</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$encoding" class="anchor">#</a><code><span class="php-quote">'ISO-8859-1'</span></code></div></td>
-	</tr>
-	</table>
 
 
 
@@ -311,7 +258,7 @@ methods<br>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-01 10:59</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-05 15:10</a>
 	</div>
 </div>
 </div>

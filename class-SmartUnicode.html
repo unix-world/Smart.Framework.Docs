@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartUnicode | Smart.Framework Documentation :: 2016-02-01 10:59</title>
+	<title>Class SmartUnicode | Smart.Framework Documentation :: 2016-02-05 15:10</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?305220093"></script>
@@ -220,6 +220,10 @@ class="php-comment">//strtoupper()                  SmartUnicode::str_toupper() 
  <span
 class="php-comment">//--</span>
  <span
+class="php-comment">//utf8_decode()                 SmartUnicode::utf8_to_iso()             [ok]        the PHP utf8_decode() breaks strings that are used in unicode environments thus the strings need to be re-encoded ; if not re-encoded back to unicode the regex \u will fail in strange modes ...</span>
+ <span
+class="php-comment">//utf8_encode()                 -                                       [!!]        there is a risk to double encode the string and break it !!</span>
+ <span
 class="php-comment">//wordwrap()                    SmartUnicode::word_wrap()               [ok]        the PHP wordwrap() is not unicode safe</span>
  <span
 class="php-comment">//strip_tags()                  Smart::striptags()                      [ok+]       the PHP strip_tags() will not replace some extra things like &amp;nbsp; and much other html entities</span>
@@ -291,7 +295,7 @@ class="php-comment">//----------------------------------------------------------
 		<b>Package:</b> <a href="package-Core.html">Core</a><br>
 
 				<b>Version:</b>
-				v.160122<br>
+				v.160205<br>
 				<b>Depends:</b>
 				extensions: PHP MBString, PHP XML<br>
 				<b>Hints:</b>
@@ -965,6 +969,161 @@ of these encodings: UTF-8, ISO-8859-1, ISO-8859-2</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="convert_charset" id="_convert_charset">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_convert_charset">#</a>
+		<code>convert_charset( <span>STRING <var>$ystr</var></span>, <span>ENUM <var>$y_charset_from</var></span>, <span>ENUM <var>$y_charset_to</var> = <span class="php-quote">''</span></span>, <span>BOOLEAN <var>$normalize</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Convert the CharSet Encoding of a String NOTICE: If the charset to is
+different than UTF-8 (unicode) if using the string in this framework it must be
+re-converted</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Convert the CharSet Encoding of a String NOTICE: If the charset to is
+different than UTF-8 (unicode) if using the string in this framework it must be
+re-converted</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ystr</var></dt>
+					<dd>:: The string</dd>
+					<dt><var>$y_charset_from</var></dt>
+					<dd>$ychar_from :: One of the: UTF-8, ISO-8859-1, ISO-8859-15, ISO-8859-2,
+ISO-8859-9, ISO-8859-3, ISO-8859-4, ISO-8859-5, ISO-8859-6, ISO-8859-7,
+ISO-8859-8, ISO-8859-10, ISO-8859-11, ISO-8859-13, ISO-8859-14, ISO-8859-16,
+UTF-7, ASCII, SJIS, EUC-JP, JIS, ISO-2022-JP, EUC-CN, ISO-2022-KR, KOI8-R,
+KOI8-U</dd>
+					<dt><var>$y_charset_to</var></dt>
+					<dd>$ychar_to :: One of the: UTF-8 or another valid charset</dd>
+					<dt><var>$normalize</var></dt>
+					<dd>:: Normalize (Default is TRUE) - will normalize the string into the default
+framework charset else the string will be incompatible with the current encoding
+... ; Using this to false must be use with very much attention !!!</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The processed string<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="utf8_fix_charset" id="_utf8_fix_charset">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_utf8_fix_charset">#</a>
+		<code>utf8_fix_charset( <span>STRING <var>$str</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Safe Fix the string to contain only UTF-8 charset. All the unsafe characters
+will be replaced by: ?</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Safe Fix the string to contain only UTF-8 charset. All the unsafe characters
+will be replaced by: ?</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd>:: The string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The fixed string<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="utf8_to_iso" id="_utf8_to_iso">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_utf8_to_iso">#</a>
+		<code>utf8_to_iso( <span>STRING <var>$str</var></span>, <span>BOOLEAN <var>$normalize</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Safe Convert UTF-8 to Unicode ISO. It will remove all invalid characters
+except latin1.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Safe Convert UTF-8 to Unicode ISO. It will remove all invalid characters
+except latin1.</p>
+
+<p>NOTICE: It converts the string back to unicode since all the strings in the
+framework are unicode (UTF-8) to avoid breaking the regex with \u over those
+strings !!! Never use just single utf8_decode() when the framework is in UTF-8
+mode, else the regex \u will fail over those strings ...</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd>:: The string</dd>
+					<dt><var>$normalize</var></dt>
+					<dd>:: Normalize (Default is TRUE) - will normalize the string into the default
+framework charset else the string will be incompatible with the current encoding
+... ; Using this to false must be use with very much attention !!!</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The processed string<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="deaccent_str" id="_deaccent_str">
 
 		<td class="attributes"><code>
@@ -998,52 +1157,6 @@ ISO-8859-1</p>
 				<div class="list"><dl>
 					<dt><var>$str</var></dt>
 					<dd>:: The string</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>STRING</code><br>:: The processed string<br>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="convert_charset" id="_convert_charset">
-
-		<td class="attributes"><code>
-			 public static
-			STRING
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_convert_charset">#</a>
-		<code>convert_charset( <span>STRING <var>$ystr</var></span>, <span>ENUM <var>$y_charset_from</var></span>, <span>ENUM <var>$y_charset_to</var></span> )</code>
-
-		<div class="description short">
-			
-<p>Convert the CharSet Encoding of a String</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p>Convert the CharSet Encoding of a String</p>
-
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$ystr</var></dt>
-					<dd>:: The string</dd>
-					<dt><var>$y_charset_from</var></dt>
-					<dd>$ychar_from :: One of the: UTF-8, ISO-8859-2, ISO-8859-1</dd>
-					<dt><var>$y_charset_to</var></dt>
-					<dd>$ychar_to :: One of the: ISO-8859-1, ISO-8859-2, UTF-8</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -1173,7 +1286,7 @@ FALSE.</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-01 10:59</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-05 15:10</a>
 	</div>
 </div>
 </div>

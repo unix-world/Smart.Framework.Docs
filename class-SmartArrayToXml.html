@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartArrayToXml | Smart.Framework Documentation :: 2016-02-01 10:59</title>
+	<title>Class SmartArrayToXml | Smart.Framework Documentation :: 2016-02-05 15:10</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?305220093"></script>
@@ -143,35 +143,34 @@ class="php-quote">'xml'</span> =&gt; <span
 class="php-keyword1">array</span>(
               <span
 class="php-quote">'id'</span> =&gt; <span
-class="php-quote">'101'</span>,
+class="php-quote">'15'</span>,
               <span
 class="php-quote">'name'</span> =&gt; <span
 class="php-quote">'Test'</span>,
               <span
-class="php-quote">'files'</span> =&gt; <span
+class="php-quote">'data'</span> =&gt; <span
 class="php-keyword1">array</span>(
                       <span
-class="php-quote">'file1'</span> =&gt; <span
-class="php-quote">'01.txt'</span>,
+class="php-quote">'key1'</span> =&gt; <span
+class="php-quote">'12345'</span>,
                       <span
-class="php-quote">'file2'</span> =&gt; <span
-class="php-quote">'02.txt'</span>,
+class="php-quote">'key2'</span> =&gt; <span
+class="php-quote">'67890'</span>,
                       <span
-class="php-quote">'file3'</span> =&gt; <span
-class="php-quote">'03.txt'</span>
+class="php-quote">'key3'</span> =&gt; <span
+class="php-quote">'ABCDEF'</span>
               ),
               <span
 class="php-quote">'date'</span> =&gt; <span
-class="php-quote">'2014-12-15 09:30:00'</span>
+class="php-quote">'2016-02-05 09:30:05'</span>
       )
 );
 <span
-class="php-var">$obj</span> = <span
-class="php-keyword1">new</span> SmartArrayToXml();
-<span
-class="php-var">$xml</span> = <span
-class="php-var">$obj</span>-&gt;compose_xml(<span
+class="php-var">$xml</span> = (<span
+class="php-keyword1">new</span> SmartArrayToXml())-&gt;transform(<span
 class="php-var">$array</span>);
+<span class="php-keyword1">echo</span> <span
+class="php-var">$xml</span>;
 <span class="php-comment">//--</span>
 </pre>
 
@@ -192,7 +191,7 @@ class="php-var">$array</span>);
 		<b>Package:</b> <a href="package-DATA.XML.html">DATA:XML</a><br>
 
 				<b>Version:</b>
-				v.151216<br>
+				v.160204<br>
 				<b>Depends:</b>
 				classes: Smart<br>
 				<b>Hints:</b>
@@ -218,7 +217,7 @@ methods<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code>__construct( )</code>
+		<code>__construct( <span>mixed <var>$encoding</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -236,7 +235,7 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="compose_xml" id="_compose_xml">
+	<tr data-order="transform" id="_transform">
 
 		<td class="attributes"><code>
 			 public 
@@ -246,8 +245,8 @@ methods<br>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_compose_xml">#</a>
-		<code>compose_xml( <span>mixed <var>$y_array</var></span>, <span>mixed <var>$y_encoding</var> = SMART_FRAMEWORK_CHARSET</span> )</code>
+		<a class="anchor" href="#_transform">#</a>
+		<code>transform( <span>mixed <var>$y_array</var></span> )</code>
 
 		<div class="description short">
 			
@@ -287,7 +286,7 @@ methods<br>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-01 10:59</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-05 15:10</a>
 	</div>
 </div>
 </div>
