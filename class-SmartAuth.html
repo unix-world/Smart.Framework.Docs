@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartAuth | Smart.Framework Documentation :: 2016-02-12 09:33</title>
+	<title>Class SmartAuth | Smart.Framework Documentation :: 2016-02-15 12:06</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
-	<script src="elementlist.js?305220093"></script>
+	<script src="elementlist.js?2008328792"></script>
 </head>
 
 <body>
@@ -87,6 +87,7 @@
 				<li class="active"><a href="class-SmartAuth.html">SmartAuth</a></li>
 				<li><a href="class-SmartFrameworkSecurity.html">SmartFrameworkSecurity</a></li>
 				<li><a href="class-SmartSession.html">SmartSession</a></li>
+				<li><a href="class-SmartTextTranslations.html">SmartTextTranslations</a></li>
 			</ul>
 
 
@@ -183,7 +184,7 @@ SmartAuth::some_method_of_this_class(...);
 		<b>Package:</b> <a href="package-Application.html">Application</a><br>
 
 				<b>Version:</b>
-				v.160117<br>
+				v.160213<br>
 				<b>Depends:</b>
 				-<br>
 				<b>Usage:</b>
@@ -612,6 +613,46 @@ Login Data</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="get_login_arr_privileges" id="_get_login_arr_privileges">
+
+		<td class="attributes"><code>
+			 public static
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_login_arr_privileges">#</a>
+		<code>get_login_arr_privileges( )</code>
+
+		<div class="description short">
+			
+<p>Get the array of the current user privileges stored in the (in-memory) Auth
+Login Data</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the array of the current user privileges stored in the (in-memory) Auth
+Login Data</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>:: returns user login privileges as an array[privilege_one, privilege_two, ...]
+or an empty array if not set<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="test_login_privilege" id="_test_login_privilege">
 
 		<td class="attributes"><code>
@@ -764,6 +805,57 @@ Data</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="build_arr_privileges" id="_build_arr_privileges">
+
+		<td class="attributes"><code>
+			 public static
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_build_arr_privileges">#</a>
+		<code>build_arr_privileges( <span>MIXED <var>$y_priv_list</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Build the associative Array of Auth Privileges</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Build the associative Array of Auth Privileges</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_priv_list</var></dt>
+					<dd>:: List of Privileges as ARRAY Array('priv&lt;sub&gt;1&lt;/sub&gt;', 'priv&lt;sub&gt;2&lt;/sub&gt;',
+..., 'priv&lt;sub&gt;n&lt;/sub&gt;') or STRING '
+&lt;priv_1&gt;,
+	&lt;priv_2&gt;, ...,
+		&lt;priv_n&gt;'&lt;/priv_n&gt;
+	&lt;/priv_2&gt;
+&lt;/priv_1&gt;
+</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>:: returns the associative array of auth privileges as Array('priv<sub>1</sub>'
+=&gt; 'Priv 1', 'priv<sub>2</sub>' =&gt; 'Priv 2', ..., 'priv<sub>n</sub>' =&gt;
+'Priv n')<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	</table>
 
 
@@ -786,7 +878,7 @@ Data</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-12 09:33</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-15 12:06</a>
 	</div>
 </div>
 </div>

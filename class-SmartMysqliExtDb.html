@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartMysqliExtDb | Smart.Framework Documentation :: 2016-02-12 09:33</title>
+	<title>Class SmartMysqliExtDb | Smart.Framework Documentation :: 2016-02-15 12:06</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
-	<script src="elementlist.js?305220093"></script>
+	<script src="elementlist.js?2008328792"></script>
 </head>
 
 <body>
@@ -219,7 +219,7 @@ class="php-comment">//... for other hints look to the samples of the class: Smar
 		<b>Package:</b> <a href="package-Database.MySQL.html">Database:MySQL</a><br>
 
 				<b>Version:</b>
-				v.160205<br>
+				v.160215<br>
 				<b>Depends:</b>
 				extensions: PHP MySQLi ; classes: Smart, SmartUnicode, SmartUtils,
 SmartComponents<br>
@@ -701,6 +701,54 @@ $arr['field2'] = 100;</dd>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="prepare_param_query" id="_prepare_param_query">
+
+		<td class="attributes"><code>
+			 public 
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_prepare_param_query">#</a>
+		<code>prepare_param_query( <span>STRING <var>$query</var></span>, <span>ARRAY <var>$arrdata</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Create Escaped SQL Statements from Parameters and Array of Data This can be
+used for a full SQL statement or just for a part. The statement must not contain
+any Single Quotes !</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Create Escaped SQL Statements from Parameters and Array of Data This can be
+used for a full SQL statement or just for a part. The statement must not contain
+any Single Quotes !</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$query</var></dt>
+					<dd>:: SQL Statement to process like ' WHERE ("id" = ?)'</dd>
+					<dt><var>$arrdata</var></dt>
+					<dd>:: The non-associative array as of: $arr=array('a');</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The SQL processed (partial/full) Statement<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="new_safe_id" id="_new_safe_id">
 
 		<td class="attributes"><code>
@@ -769,7 +817,7 @@ $arr['field2'] = 100;</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-12 09:33</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-15 12:06</a>
 	</div>
 </div>
 </div>
