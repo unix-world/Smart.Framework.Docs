@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartCryptoBlowfishCBC | Smart.Framework Documentation :: 2016-02-19 13:19</title>
+	<title>Class SmartCipherCrypto | Smart.Framework Documentation :: 2016-02-22 17:37</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
-	<script src="elementlist.js?2008328792"></script>
+	<script src="elementlist.js?3874263052"></script>
 </head>
 
 <body>
@@ -82,8 +82,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li class="active"><a href="class-SmartCryptoBlowfishCBC.html">SmartCryptoBlowfishCBC</a></li>
-				<li><a href="class-SmartCryptoMCrypt.html">SmartCryptoMCrypt</a></li>
+				<li class="active"><a href="class-SmartCipherCrypto.html">SmartCipherCrypto</a></li>
 				<li><a href="class-SmartHashCrypto.html">SmartHashCrypto</a></li>
 			</ul>
 
@@ -127,19 +126,20 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class SmartCryptoBlowfishCBC</h1>
+	<h1>Class SmartCipherCrypto</h1>
 
 
 	<div class="description">
 	
-<p>Class: SmartCryptoBlowfishCBC Provides a built-in based feature to handle the
-Blowfish (CBC) encryption / decryption.</p>
+<p>Class: SmartCipherCrypto Provides a built-in based feature to handle the
+Blowfish (CBC) encryption / decryption. This provides an advanced crypto handler
+for Blowfish CBC algorithm.</p>
 
-<p>This provides an advanced crypto handler for Blowfish CBC algorithm. It is
-recommended to use instead the SmartUtils::crypto_blowfish_encrypt() and
-SmartUtils::crypto_blowfish_decrypt() which are detecting if to use the MCrypt
-or built-in Blowfish classes and use always a compatible layer of Blowfish
-CBC.</p>
+<pre>
+<span
+class="php-comment">// Usage example:</span>
+SmartCipherCrypto::some_method_of_this_class(...);
+</pre>
 
 	</div>
 
@@ -158,15 +158,14 @@ CBC.</p>
 		<b>Package:</b> <a href="package-Crypto.html">Crypto</a><br>
 
 				<b>Version:</b>
-				v.151216<br>
+				v.160220<br>
 				<b>Depends:</b>
 				classes: Smart<br>
 				<b>Hints:</b>
 				Blowfish is a 64-bit (8 bytes) block cipher. Max Key is up to 56 chars length
 (56 bytes = 448 bits). The CBC mode requires a initialization vector (iv).<br>
 				<b>Usage:</b>
-				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
-methods<br>
+				static object: Class::method() - This class provides only STATIC methods<br>
 		<b>Located at</b> lib/framework/lib_crypto.php<br>
 	</div>
 
@@ -174,80 +173,44 @@ methods<br>
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
-	<tr data-order="__construct" id="___construct">
-
-		<td class="attributes"><code>
-			 public 
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#___construct">#</a>
-		<code>__construct( <span>string <var>$key</var></span> )</code>
-
-		<div class="description short">
-			
-<p>Constructor Initializes the blowfish cipher object, and gives a sets the
-secret key</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p>Constructor Initializes the blowfish cipher object, and gives a sets the
-secret key</p>
-
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$key</var></dt>
-					<dd></dd>
-				</dl></div>
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
 	<tr data-order="encrypt" id="_encrypt">
 
 		<td class="attributes"><code>
-			 public 
-			string
+			 public static
+			STRING
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_encrypt">#</a>
-		<code>encrypt( <span>string <var>$plainText</var></span> )</code>
+		<code>encrypt( <span>ENUM <var>$cipher</var></span>, <span>STRING <var>$key</var></span>, <span>STRING <var>$data</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Encrypts a string in CBC Mode</p>
+<p>Encrypts a string using the selected Cipher Algo.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Encrypts a string in CBC Mode</p>
+<p>Encrypts a string using the selected Cipher Algo.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$plainText</var></dt>
-					<dd></dd>
+					<dt><var>$cipher</var></dt>
+					<dd>Selected cipher: hash/{mode}, blowfish.cbc, mcrypt/cipher/mode</dd>
+					<dt><var>$key</var></dt>
+					<dd>The encryption key</dd>
+					<dt><var>$data</var></dt>
+					<dd>The plain data to be encrypted</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>string</code><br>Returns cipher text<br>
+					<code>STRING</code><br>The encrypted data<br>
 				</div>
 
 
@@ -259,37 +222,41 @@ secret key</p>
 	<tr data-order="decrypt" id="_decrypt">
 
 		<td class="attributes"><code>
-			 public 
-			string
+			 public static
+			STRING
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_decrypt">#</a>
-		<code>decrypt( <span>string <var>$cipherText</var></span> )</code>
+		<code>decrypt( <span>ENUM <var>$cipher</var></span>, <span>STRING <var>$key</var></span>, <span>STRING <var>$data</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Decrypts an encrypted string in CBC Mode</p>
+<p>Decrypts a string using the selected Cipher Algo.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Decrypts an encrypted string in CBC Mode</p>
+<p>Decrypts a string using the selected Cipher Algo.</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$cipherText</var></dt>
-					<dd></dd>
+					<dt><var>$cipher</var></dt>
+					<dd>Selected cipher: hash/{mode}, blowfish.cbc, mcrypt/cipher/mode</dd>
+					<dt><var>$key</var></dt>
+					<dd>The encryption key</dd>
+					<dt><var>$data</var></dt>
+					<dd>The encrypted data</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>string</code><br>Returns plain text<br>
+					<code>STRING</code><br>The plain / decrypted data<br>
 				</div>
 
 
@@ -320,7 +287,7 @@ secret key</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-19 13:19</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-22 17:37</a>
 	</div>
 </div>
 </div>
