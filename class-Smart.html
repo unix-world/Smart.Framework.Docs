@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class Smart | Smart.Framework Documentation :: 2016-02-22 17:37</title>
+	<title>Class Smart | Smart.Framework Documentation :: 2016-03-09 14:32</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3874263052"></script>
@@ -160,7 +160,7 @@ Smart::some_method_of_this_class(...);
 		<b>Package:</b> <a href="package-Core.html">Core</a><br>
 
 				<b>Version:</b>
-				v.160221<br>
+				v.160224<br>
 				<b>Depends:</b>
 				extensions: PHP XML, PHP JSON ; classes: SmartUnicode<br>
 				<b>Hints:</b>
@@ -642,13 +642,13 @@ control<br>
 
 		<div class="description short">
 			
-<p>Safe escape strings to be injected in Javascript code</p>
+<p>Safe escape strings to be injected in Javascript code as strings</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Safe escape strings to be injected in Javascript code</p>
+<p>Safe escape strings to be injected in Javascript code as strings</p>
 
 
 
@@ -681,7 +681,7 @@ single quotes '' or double quotes ""<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_json_encode">#</a>
-		<code>json_encode( <span>MIXED <var>$data</var></span>, <span>BOOLEAN <var>$prettyprint</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code>json_encode( <span>MIXED <var>$data</var></span>, <span>BOOLEAN <var>$prettyprint</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$unescaped_unicode</var> = <span class="php-keyword1">true</span></span> )</code>
 
 		<div class="description short">
 			
@@ -698,10 +698,12 @@ single quotes '' or double quotes ""<br>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$data</var></dt>
-					<dd>:: The variable to be encoded: numeric, string, array</dd>
+					<dd>:: The variable to be encoded (mixed): numeric, string, array</dd>
 					<dt><var>$prettyprint</var></dt>
 					<dd>:: If true will format the json as pretty-print (takes much more space, but
 sometimes make sense ...)</dd>
+					<dt><var>$unescaped_unicode</var></dt>
+					<dd></dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -2251,7 +2253,7 @@ Code).</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-22 17:37</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-03-09 14:32</a>
 	</div>
 </div>
 </div>

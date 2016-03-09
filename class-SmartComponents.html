@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartComponents | Smart.Framework Documentation :: 2016-02-22 17:37</title>
+	<title>Class SmartComponents | Smart.Framework Documentation :: 2016-03-09 14:32</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3874263052"></script>
@@ -149,7 +149,7 @@
 		<b>Package:</b> <a href="package-Components.Framework.html">Components:Framework</a><br>
 
 				<b>Version:</b>
-				v.160221<br>
+				v.160307<br>
 				<b>Depends:</b>
 				classes: Smart, SmartUtils, SmartFileSystem, SmartHTMLCalendar,
 SmartTextTranslations<br>
@@ -805,25 +805,25 @@ $configs['nav']['pager'], and can be: arrows or numeric</p>
 
 		<div class="description short">
 			
-<p>Outputs the JS Code to init the HTML Editor</p>
+<p>Outputs the HTML Code to init the HTML (wysiwyg) Editor</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Outputs the JS Code to init the HTML Editor</p>
+<p>Outputs the HTML Code to init the HTML (wysiwyg) Editor</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$y_filebrowser_link</var></dt>
-					<dd>:: Example: script.php?op=fileman&amp;amp;modal=yes&amp;amp;typ=</dd>
+					<dd>URL to Image Browser (Example: script.php?op=image-gallery&amp;amp;type=images)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>[JS HTML Code]<br>
+					<code>STRING</code><br>[HTML Code]<br>
 				</div>
 
 
@@ -843,36 +843,43 @@ $configs['nav']['pager'], and can be: arrows or numeric</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_js_draw_html_area">#</a>
-		<code>js_draw_html_area( <span>STRING <var>$yid</var></span>, <span>STRING <var>$yvarname</var></span>, <span>STRING <var>$ywidth</var> = <span class="php-quote">'96'</span></span>, <span>INTEGER+ <var>$yheight</var> = <span class="php-quote">'28'</span></span>, <span>INTEGER+ <var>$yvalue</var> = <span class="php-quote">''</span></span>, <span>ENUM <var>$y_toggle_text</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_toolbars</var> = <span class="php-quote">''</span></span> )</code>
+		<code>js_draw_html_area( <span>STRING <var>$yid</var></span>, <span>STRING <var>$yvarname</var></span>, <span>STRING <var>$yvalue</var> = <span class="php-quote">''</span></span>, <span>INTEGER+ <var>$ywidth</var> = <span class="php-quote">'720px'</span></span>, <span>INTEGER+ <var>$yheight</var> = <span class="php-quote">'480px'</span></span>, <span>BOOLEAN <var>$y_allow_scripts</var> = <span class="php-keyword1">false</span></span>, <span>BOOLEAN <var>$y_allow_script_src</var> = <span class="php-keyword1">false</span></span>, <span>MIXED <var>$y_cleaner_deftags</var> = <span class="php-quote">''</span></span>, <span>ENUM <var>$y_cleaner_mode</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$y_toolbar_ctrls</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
-<p>Draw a TextArea with a built-in javascript html editor</p>
+<p>Draw a TextArea with a built-in javascript HTML (wysiwyg) Editor</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Draw a TextArea with a built-in javascript html editor</p>
+<p>Draw a TextArea with a built-in javascript HTML (wysiwyg) Editor</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$yid</var></dt>
-					<dd>$y_text [Text for Toggle Area]</dd>
+					<dd>[Unique HTML Page Element ID]</dd>
 					<dt><var>$yvarname</var></dt>
 					<dd>[HTML Form Variable Name]</dd>
-					<dt><var>$ywidth</var></dt>
-					<dd>$yid [Unique HTML Page Element ID]</dd>
-					<dt><var>$yheight</var></dt>
-					<dd>$ywidth [Area Width: (Example) 96]</dd>
 					<dt><var>$yvalue</var></dt>
-					<dd>$yheight [Area Height (Example) 28]</dd>
-					<dt><var>$y_toggle_text</var></dt>
-					<dd>$y_toolbars [Toolbar Mode: normal, complete, maxi]</dd>
-					<dt><var>$y_toolbars</var></dt>
-					<dd></dd>
+					<dd>[HTML Data]</dd>
+					<dt><var>$ywidth</var></dt>
+					<dd>[Area Width: (Example) 720px or 75%]</dd>
+					<dt><var>$yheight</var></dt>
+					<dd>[Area Height (Example) 480px or 50%]</dd>
+					<dt><var>$y_allow_scripts</var></dt>
+					<dd>[Allow JavaScripts]</dd>
+					<dt><var>$y_allow_script_src</var></dt>
+					<dd>[Allow JavaScript SRC attribute]</dd>
+					<dt><var>$y_cleaner_deftags</var></dt>
+					<dd>['' or array of HTML Tags to be allowed / dissalowed by the cleaner ... see HTML
+Cleaner Documentation]</dd>
+					<dt><var>$y_cleaner_mode</var></dt>
+					<dd>[HTML Cleaner mode for defined tags: ALLOW / DISALLOW]</dd>
+					<dt><var>$y_toolbar_ctrls</var></dt>
+					<dd>[Toolbar Controls: ... see CLEditor Documentation]</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -890,24 +897,39 @@ $configs['nav']['pager'], and can be: arrows or numeric</p>
 
 		<td class="attributes"><code>
 			 public static
-			
+			STRING
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_js_callback_html_area">#</a>
-		<code>js_callback_html_area( <span>mixed <var>$yurl</var></span>, <span>mixed <var>$is_popup</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code>js_callback_html_area( <span>STRING <var>$yurl</var></span>, <span>BOOLEAN <var>$is_popup</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			
+<p>CallBack Mapping for HTML (wysiwyg) Editor - FileBrowser Integration</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>CallBack Mapping for HTML (wysiwyg) Editor - FileBrowser Integration</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$yurl</var></dt>
+					<dd>The Callback URL</dd>
+					<dt><var>$is_popup</var></dt>
+					<dd>Set to True if Popup (incl. Modal)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[JS Code]<br>
+				</div>
 
 
 
@@ -919,7 +941,7 @@ $configs['nav']['pager'], and can be: arrows or numeric</p>
 
 		<td class="attributes"><code>
 			 public static
-			
+			STRING
 			
 			</code>
 		</td>
@@ -930,17 +952,21 @@ $configs['nav']['pager'], and can be: arrows or numeric</p>
 
 		<div class="description short">
 			
-<p>Function: JS Init The Edit Area</p>
+<p>Init the Code Editor (Edit Area)</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Function: JS Init The Edit Area</p>
+<p>Init the Code Editor (Edit Area)</p>
 
 
 
 
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[HTML Code]<br>
+				</div>
 
 
 
@@ -952,25 +978,81 @@ $configs['nav']['pager'], and can be: arrows or numeric</p>
 
 		<td class="attributes"><code>
 			 public static
-			
+			STRING
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_js_draw_editarea">#</a>
-		<code>js_draw_editarea( <span>mixed <var>$y_textarea_id</var></span>, <span>mixed <var>$y_editable</var> = <span class="php-quote">'true'</span></span>, <span>mixed <var>$y_mode</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_width</var> = <span class="php-quote">'720'</span></span>, <span>mixed <var>$y_height</var> = <span class="php-quote">'300'</span></span> )</code>
+		<code>js_draw_editarea( <span>STRING <var>$yid</var></span>, <span>STRING <var>$yvarname</var></span>, <span>STRING <var>$yvalue</var> = <span class="php-quote">''</span></span>, <span>ENUM <var>$y_mode</var> = <span class="php-quote">'text'</span></span>, <span>BOOLEAN <var>$y_editable</var> = <span class="php-keyword1">true</span></span>, <span>INTEGER+ <var>$y_width</var> = <span class="php-quote">'720px'</span></span>, <span>INTEGER+ <var>$y_height</var> = <span class="php-quote">'300px'</span></span>, <span>BOOLEAN <var>$y_line_numbers</var> = <span class="php-keyword1">true</span></span> )</code>
 
 		<div class="description short">
 			
-<p>Function: JS Draw The Edit Area</p>
+<p>Draw a TextArea with a built-in javascript Code Editor (Edit Area). Supported
+syntax parsers: CSS, Javascript, Json, HTML, XML, YAML, Markdown, SQL, PHP, Text
+(default).</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Function: JS Draw The Edit Area</p>
+<p>Draw a TextArea with a built-in javascript Code Editor (Edit Area). Supported
+syntax parsers: CSS, Javascript, Json, HTML, XML, YAML, Markdown, SQL, PHP, Text
+(default).</p>
 
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$yid</var></dt>
+					<dd>[Unique HTML Page Element ID]</dd>
+					<dt><var>$yvarname</var></dt>
+					<dd>[HTML Form Variable Name]</dd>
+					<dt><var>$yvalue</var></dt>
+					<dd>[HTML Data]</dd>
+					<dt><var>$y_mode</var></dt>
+					<dd>[Parser mode: css, javascript, json, html, xml, yaml, markdown, sql, php, text]</dd>
+					<dt><var>$y_editable</var></dt>
+					<dd>[Editable: true / Not Editable: false]</dd>
+					<dt><var>$y_width</var></dt>
+					<dd>$ywidth [Area Width: (Example) 720px or 75%]</dd>
+					<dt><var>$y_height</var></dt>
+					<dd>$yheight [Area Height (Example) 480px or 50%]</dd>
+					<dt><var>$y_line_numbers</var></dt>
+					<dd>[Display line numbers: true ; Hide line numbersL false]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[HTML Code]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="js_draw_preview_iframe" id="_js_draw_preview_iframe">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_js_draw_preview_iframe">#</a>
+		<code>js_draw_preview_iframe( <span>mixed <var>$yid</var></span>, <span>mixed <var>$y_contents</var></span>, <span>mixed <var>$y_width</var> = <span class="php-quote">'720px'</span></span>, <span>mixed <var>$y_height</var> = <span class="php-quote">'300px'</span></span>, <span>mixed <var>$y_maximized</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$y_sandbox</var> = <span class="php-quote">'allow-popups'</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
 
 
 
@@ -985,14 +1067,14 @@ $configs['nav']['pager'], and can be: arrows or numeric</p>
 
 		<td class="attributes"><code>
 			 public static
-			HTMLCode
+			STRING
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_js_draw_date_field">#</a>
-		<code>js_draw_date_field( <span>STRING <var>$y_id</var></span>, <span>STRING <var>$y_var</var></span>, <span>DATE <var>$yvalue</var></span>, <span>STRING <var>$y_text_select</var> = <span class="php-quote">''</span></span>, <span>JS-Date <var>$yjs_mindate</var> = <span class="php-quote">'new Date(1937, 1 - 1, 1)'</span></span>, <span>JS-Date <var>$yjs_maxdate</var> = <span class="php-quote">'new Date(2037, 12 - 1, 31)'</span></span>, <span>ARRAY <var>$y_extra_options</var> = <span class="php-keyword1">array</span>()</span>, <span>JS-Code <var>$yjs_custom</var> = <span class="php-quote">''</span></span> )</code>
+		<code>js_draw_date_field( <span>STRING <var>$y_id</var></span>, <span>STRING <var>$y_var</var></span>, <span>DATE <var>$yvalue</var></span>, <span>STRING <var>$y_text_select</var> = <span class="php-quote">''</span></span>, <span>JS-Date <var>$yjs_mindate</var> = <span class="php-quote">''</span></span>, <span>JS-Date <var>$yjs_maxdate</var> = <span class="php-quote">''</span></span>, <span>ARRAY <var>$y_extra_options</var> = <span class="php-keyword1">array</span>()</span>, <span>JS-Code <var>$yjs_custom</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1017,9 +1099,9 @@ $configs['nav']['pager'], and can be: arrows or numeric</p>
 					<dt><var>$y_text_select</var></dt>
 					<dd>[The text as title: 'Select Date']</dd>
 					<dt><var>$yjs_mindate</var></dt>
-					<dd>[JS Expression, Min Date]</dd>
+					<dd>[JS Expression, Min Date] :: new Date(1937, 1 - 1, 1) or '-1y -1m -1d'</dd>
 					<dt><var>$yjs_maxdate</var></dt>
-					<dd>[JS Expression, Max Date]</dd>
+					<dd>[JS Expression, Max Date] :: new Date(2037, 12 - 1, 31) or '1y 1m 1d'</dd>
 					<dt><var>$y_extra_options</var></dt>
 					<dd>[Options Array[width, ...] for for datePicker]</dd>
 					<dt><var>$yjs_custom</var></dt>
@@ -1028,7 +1110,7 @@ $configs['nav']['pager'], and can be: arrows or numeric</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>HTMLCode</code><br>HTMLCode<br>
+					<code>STRING</code><br>[HTML Code]<br>
 				</div>
 
 
@@ -1041,7 +1123,7 @@ $configs['nav']['pager'], and can be: arrows or numeric</p>
 
 		<td class="attributes"><code>
 			 public static
-			HTMLCode
+			STRING
 			
 			</code>
 		</td>
@@ -1092,7 +1174,7 @@ $configs['nav']['pager'], and can be: arrows or numeric</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>HTMLCode</code><br>HTMLCode<br>
+					<code>STRING</code><br>[HTML Code]<br>
 				</div>
 
 
@@ -1112,7 +1194,7 @@ $configs['nav']['pager'], and can be: arrows or numeric</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_js_draw_limited_text_area">#</a>
-		<code>js_draw_limited_text_area( <span>mixed <var>$y_var_name</var></span>, <span>mixed <var>$y_var_value</var></span>, <span>mixed <var>$y_limit</var></span>, <span>mixed <var>$y_cols</var> = <span class="php-quote">'40'</span></span>, <span>mixed <var>$y_rows</var> = <span class="php-quote">'7'</span></span>, <span>mixed <var>$y_field_id</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_wrap</var> = <span class="php-quote">'physical'</span></span>, <span>mixed <var>$y_rawval</var> = <span class="php-quote">'no'</span></span>, <span>mixed <var>$y_placeholder</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_percent_w</var> = <span class="php-quote">''</span></span> )</code>
+		<code>js_draw_limited_text_area( <span>mixed <var>$y_field_id</var></span>, <span>mixed <var>$y_var_name</var></span>, <span>mixed <var>$y_var_value</var></span>, <span>mixed <var>$y_limit</var></span>, <span>mixed <var>$y_css_w</var> = <span class="php-quote">'125px'</span></span>, <span>mixed <var>$y_css_h</var> = <span class="php-quote">'50px'</span></span>, <span>mixed <var>$y_placeholder</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_wrap</var> = <span class="php-quote">'physical'</span></span>, <span>mixed <var>$y_rawval</var> = <span class="php-quote">'no'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1309,7 +1391,7 @@ $configs['nav']['pager'], and can be: arrows or numeric</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-22 17:37</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-03-09 14:32</a>
 	</div>
 </div>
 </div>

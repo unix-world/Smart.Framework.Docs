@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartPersistentCache | Smart.Framework Documentation :: 2016-02-22 17:37</title>
+	<title>Class SmartPersistentCache | Smart.Framework Documentation :: 2016-03-09 14:32</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3874263052"></script>
@@ -176,7 +176,7 @@ SmartAbstractPersistentCache
 		<b>Package:</b> <a href="package-Caching.html">Caching</a><br>
 
 				<b>Version:</b>
-				v.160215<br>
+				v.160224<br>
 				<b>Depends:</b>
 				-<br>
 				<b>Usage:</b>
@@ -223,6 +223,50 @@ SmartAbstractPersistentCache
 
 				<h4>Overrides</h4>
 				<div class="list"><code>SmartAbstractPersistentCache::isActive()</code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="isMemoryBased" id="_isMemoryBased">
+
+		<td class="attributes"><code>
+			 public static
+			BOOLEAN
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_isMemoryBased">#</a>
+		<code>isMemoryBased( )</code>
+
+		<div class="description short">
+			
+<p>Check if the persistent Cache is Memory Based This function must ALWAYS be
+used in conjunction with isActive() as it will return TRUE just if the backend
+is a Memory Based one and will not check if Backed is Active or not ...</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check if the persistent Cache is Memory Based This function must ALWAYS be
+used in conjunction with isActive() as it will return TRUE just if the backend
+is a Memory Based one and will not check if Backed is Active or not ...</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOLEAN</code><br>TRUE if is Memory Based (Ex: Redis / Memcache / ...) or FALSE if not (Ex: File
+Cache)<br>
+				</div>
+
+
+
+				<h4>Overrides</h4>
+				<div class="list"><code>SmartAbstractPersistentCache::isMemoryBased()</code></div>
 
 		</div>
 		</div></td>
@@ -437,7 +481,7 @@ SmartAbstractPersistentCache
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-02-22 17:37</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-03-09 14:32</a>
 	</div>
 </div>
 </div>
