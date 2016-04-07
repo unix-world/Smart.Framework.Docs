@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartComponents | Smart.Framework Documentation :: 2016-03-11 16:05</title>
+	<title>Class SmartComponents | Smart.Framework Documentation :: 2016-04-07 14:44</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3874263052"></script>
@@ -149,7 +149,7 @@
 		<b>Package:</b> <a href="package-Components.Framework.html">Components:Framework</a><br>
 
 				<b>Version:</b>
-				v.160307<br>
+				v.160407<br>
 				<b>Depends:</b>
 				classes: Smart, SmartUtils, SmartFileSystem, SmartHTMLCalendar,
 SmartTextTranslations<br>
@@ -377,7 +377,7 @@ v.20141212</p>
 					<dt><var>$y_varname</var></dt>
 					<dd>as 'frm[test]'</dd>
 					<dt><var>$y_dimensions</var></dt>
-					<dd>$y_width width in pixels</dd>
+					<dd>dimensions in pixels (width or width / (list) height for #JQUERY%#)</dd>
 					<dt><var>$y_custom_js</var></dt>
 					<dd>custom js code (Ex: submit on change)</dd>
 					<dt><var>$y_raw</var></dt>
@@ -448,7 +448,7 @@ Selections</p>
 					<dt><var>$y_sync_values</var></dt>
 					<dd>If Yes, sync select similar values used (curently works only for checkboxes)</dd>
 					<dt><var>$y_dimensions</var></dt>
-					<dd>$y_width width in pixels (Only for jQuery Style)</dd>
+					<dd>dimensions in pixels (width or width / (list) height for #JQUERY%#)</dd>
 					<dt><var>$y_custom_js</var></dt>
 					<dd>custom js code (Ex: submit on change)</dd>
 					<dt><var>$y_extrastyle</var></dt>
@@ -459,6 +459,41 @@ Selections</p>
 				<div class="list">
 					<code>HTMLCode</code><br>HTMLCode<br>
 				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="format_css_dimension" id="_format_css_dimension">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_format_css_dimension">#</a>
+		<code>format_css_dimension( <span>mixed <var>$y_w_or_h</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Function: Format CSS Width or Height Format the CSS Width: Passed number
+(550) or percent (100%) and return the correct CSS3 format as 550px or 100%</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Function: Format CSS Width or Height Format the CSS Width: Passed number
+(550) or percent (100%) and return the correct CSS3 format as 550px or 100%</p>
+
+
+
+
 
 
 
@@ -477,7 +512,7 @@ Selections</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_operation_question">#</a>
-		<code>operation_question( <span>mixed <var>$y_html</var></span>, <span>mixed <var>$y_width</var> = <span class="php-quote">'550'</span></span> )</code>
+		<code>operation_question( <span>mixed <var>$y_html</var></span>, <span>mixed <var>$y_width</var> = <span class="php-quote">'500'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -506,7 +541,7 @@ Selections</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_operation_notice">#</a>
-		<code>operation_notice( <span>mixed <var>$y_html</var></span>, <span>mixed <var>$y_width</var> = <span class="php-quote">'550'</span></span> )</code>
+		<code>operation_notice( <span>mixed <var>$y_html</var></span>, <span>mixed <var>$y_width</var> = <span class="php-quote">'500'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -535,7 +570,7 @@ Selections</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_operation_ok">#</a>
-		<code>operation_ok( <span>mixed <var>$y_html</var></span>, <span>mixed <var>$y_width</var> = <span class="php-quote">'550'</span></span> )</code>
+		<code>operation_ok( <span>mixed <var>$y_html</var></span>, <span>mixed <var>$y_width</var> = <span class="php-quote">'500'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -564,7 +599,7 @@ Selections</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_operation_warn">#</a>
-		<code>operation_warn( <span>mixed <var>$y_html</var></span>, <span>mixed <var>$y_width</var> = <span class="php-quote">'550'</span></span> )</code>
+		<code>operation_warn( <span>mixed <var>$y_html</var></span>, <span>mixed <var>$y_width</var> = <span class="php-quote">'500'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -593,7 +628,7 @@ Selections</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_operation_error">#</a>
-		<code>operation_error( <span>mixed <var>$y_html</var></span>, <span>mixed <var>$y_width</var> = <span class="php-quote">'550'</span></span> )</code>
+		<code>operation_error( <span>mixed <var>$y_html</var></span>, <span>mixed <var>$y_width</var> = <span class="php-quote">'500'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1391,7 +1426,7 @@ syntax parsers: CSS, Javascript, Json, HTML, XML, YAML, Markdown, SQL, PHP, Text
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-03-11 16:05</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-04-07 14:44</a>
 	</div>
 </div>
 </div>
