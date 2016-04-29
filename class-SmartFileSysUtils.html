@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartFileSysUtils | Smart.Framework Documentation :: 2016-04-22 10:59</title>
+	<title>Class SmartFileSysUtils | Smart.Framework Documentation :: 2016-04-29 09:31</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3874263052"></script>
@@ -186,7 +186,7 @@ class="php-comment">//----------------------------------------------------------
 		<b>Package:</b> <a href="package-Filesystem.html">Filesystem</a><br>
 
 				<b>Version:</b>
-				v.160131<br>
+				v.160429<br>
 				<b>Depends:</b>
 				classes: Smart<br>
 				<b>Hints:</b>
@@ -208,7 +208,7 @@ ONLY if misses but NOT if the $my_dir is empty to avoid root access !<br>
 
 		<td class="attributes"><code>
 			 public static
-			NUMBER
+			INTEGER
 			
 			</code>
 		</td>
@@ -232,7 +232,7 @@ ONLY if misses but NOT if the $my_dir is empty to avoid root access !<br>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>NUMBER</code><br>[Max Upload Size in Bytes]<br>
+					<code>INTEGER</code><br>:: the Max Upload Size in Bytes<br>
 				</div>
 
 
@@ -245,24 +245,41 @@ ONLY if misses but NOT if the $my_dir is empty to avoid root access !<br>
 
 		<td class="attributes"><code>
 			 public static
-			
+			0/1
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_check_file_or_dir_name">#</a>
-		<code>check_file_or_dir_name( <span>mixed <var>$y_path</var></span>, <span>mixed <var>$y_deny_absolute_path</var> = <span class="php-quote">'yes'</span></span> )</code>
+		<code>check_file_or_dir_name( <span>STRING <var>$y_path</var></span>, <span>YES/NO <var>$y_deny_absolute_path</var> = <span class="php-quote">'yes'</span></span> )</code>
 
 		<div class="description short">
 			
+<p>Check a Filename or a Dirname if contain valid characters (to avoid security
+injections)</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Check a Filename or a Dirname if contain valid characters (to avoid security
+injections)</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_path</var></dt>
+					<dd>:: The path (dir or file) to validate</dd>
+					<dt><var>$y_deny_absolute_path</var></dt>
+					<dd>:: &lt;em&gt;Optional&lt;/em&gt; If YES will dissalow absolute paths</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>0/1</code><br>:: returns 1 if VALID ; 0 if INVALID<br>
+				</div>
 
 
 
@@ -274,24 +291,44 @@ ONLY if misses but NOT if the $my_dir is empty to avoid root access !<br>
 
 		<td class="attributes"><code>
 			 public static
-			
+			STRING
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_add_dir_last_slash">#</a>
-		<code>add_dir_last_slash( <span>mixed <var>$y_path</var></span> )</code>
+		<code>add_dir_last_slash( <span>STRING <var>$y_path</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Safe add a trailing slash to a path if not already have it, with safe
+detection and avoid root access.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Safe add a trailing slash to a path if not already have it, with safe
+detection and avoid root access.</p>
+
+<p>Adding a trailing slash to a path is not a simple task as if path is empty,
+adding the trailing slash will result in accessing the root file system as will
+be: /. Otherwise it have to detect if the trailing slash exists already to avoid
+double slash.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_path</var></dt>
+					<dd>:: The path to add the trailing slash to</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The fixed path with a trailing<br>
+				</div>
 
 
 
@@ -303,24 +340,37 @@ ONLY if misses but NOT if the $my_dir is empty to avoid root access !<br>
 
 		<td class="attributes"><code>
 			 public static
-			
+			STRING
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_version_remove">#</a>
-		<code>version_remove( <span>mixed <var>$file</var></span> )</code>
+		<code>version_remove( <span>STRING <var>$file</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Remove the version from a file name.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Remove the version from a file name.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd>:: The file name to be processed</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The fixed file name without the version<br>
+				</div>
 
 
 
@@ -332,24 +382,39 @@ ONLY if misses but NOT if the $my_dir is empty to avoid root access !<br>
 
 		<td class="attributes"><code>
 			 public static
-			
+			STRING
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_version_add">#</a>
-		<code>version_add( <span>mixed <var>$file</var></span>, <span>mixed <var>$version</var></span> )</code>
+		<code>version_add( <span>STRING <var>$file</var></span>, <span>STRING <var>$version</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Add the version to a file name.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Add the version to a file name.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd>:: The file name to be processed</dd>
+					<dt><var>$version</var></dt>
+					<dd>:: The version to be added</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The fixed file name with a version<br>
+				</div>
 
 
 
@@ -361,24 +426,40 @@ ONLY if misses but NOT if the $my_dir is empty to avoid root access !<br>
 
 		<td class="attributes"><code>
 			 public static
-			
+			0/1
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_version_check">#</a>
-		<code>version_check( <span>mixed <var>$file</var></span>, <span>mixed <var>$version</var></span> )</code>
+		<code>version_check( <span>STRING <var>$file</var></span>, <span>STRING <var>$version</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Check the version from a file name.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Check the version from a file name.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$file</var></dt>
+					<dd>:: The file name to be checked</dd>
+					<dt><var>$version</var></dt>
+					<dd>:: The version to be checked</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>0/1</code><br>:: returns 1 if the version is detected ; otherwise returns 0 if version not
+detected<br>
+				</div>
 
 
 
@@ -401,25 +482,25 @@ ONLY if misses but NOT if the $my_dir is empty to avoid root access !<br>
 
 		<div class="description short">
 			
-<p>Return the folder name from path (except last /)</p>
+<p>Return the folder name from a path (except last trailing slash: /)</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Return the folder name from path (except last /)</p>
+<p>Return the folder name from a path (except last trailing slash: /)</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$y_path</var></dt>
-					<dd>$ypath path or file</dd>
+					<dd>$ypath :: the path (dir or file)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>[FOLDER NAME]<br>
+					<code>STRING</code><br>:: a directory path [FOLDER NAME]<br>
 				</div>
 
 
@@ -562,24 +643,51 @@ work correct both: path_info('c:\\file.php') and path_info('path/file.php'</p>
 
 		<td class="attributes"><code>
 			 public static
-			
+			STRING
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_prefixed_uuid10_dir">#</a>
-		<code>prefixed_uuid10_dir( <span>mixed <var>$y_id</var></span> )</code>
+		<code>prefixed_uuid10_dir( <span>STRING <var>$y_id</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Generate a prefixed dir from a base36 ID: [0-9A-Z] length: 10 chars. It does
+include also the ID as final folder. Example: for ID ABCDEFGHIJ09 will return:
+9T/5B/0B/9M/9T5B0B9M8M/ as the generated prefixed path. This have to be used for
+large folder storage structure to avoid limitations on some filesystems (ext3 /
+ntfs) where max sub-dirs per dir is 32k.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Generate a prefixed dir from a base36 ID: [0-9A-Z] length: 10 chars. It does
+include also the ID as final folder. Example: for ID ABCDEFGHIJ09 will return:
+9T/5B/0B/9M/9T5B0B9M8M/ as the generated prefixed path. This have to be used for
+large folder storage structure to avoid limitations on some filesystems (ext3 /
+ntfs) where max sub-dirs per dir is 32k.</p>
+
+<p>The prefixed path will be grouped by each 2 characters (max sub-folders per
+folder: 36 x 36 = 1296). If a lower length than 10 chars is provided will pad
+with 0 on the left. If a higher length or an invalid ID is provided will reset
+the ID to 000000..00 (10 chars) for the given length, but also drop a
+warning.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_id</var></dt>
+					<dd>10 chars id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>Prefixed Path<br>
+				</div>
 
 
 
@@ -591,24 +699,55 @@ work correct both: path_info('c:\\file.php') and path_info('path/file.php'</p>
 
 		<td class="attributes"><code>
 			 public static
-			
+			STRING
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_prefixed_sha1_path">#</a>
-		<code>prefixed_sha1_path( <span>mixed <var>$y_id</var></span> )</code>
+		<code>prefixed_sha1_path( <span>STRING <var>$y_id</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Generate a prefixed parent dir from a base16 sha1: [0-9a-f] length: 40 chars.
+It does NOT include the ID final folder. Example: for ID
+df3a808b2bf20aaab4419c43d9f3a6143bd6b4bb will return:
+d/f3a/808/b2b/f20/aaa/b44/19c/43d/9f3/a61/43b/d6b/ as the generated prefixed
+path. This have to be used for large folder storage structure to avoid
+limitations on some filesystems (ext3 / ntfs) where max sub-dirs per dir is
+32k.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Generate a prefixed parent dir from a base16 sha1: [0-9a-f] length: 40 chars.
+It does NOT include the ID final folder. Example: for ID
+df3a808b2bf20aaab4419c43d9f3a6143bd6b4bb will return:
+d/f3a/808/b2b/f20/aaa/b44/19c/43d/9f3/a61/43b/d6b/ as the generated prefixed
+path. This have to be used for large folder storage structure to avoid
+limitations on some filesystems (ext3 / ntfs) where max sub-dirs per dir is
+32k.</p>
+
+<p>The prefixed folder will be grouped by each 3 characters (max sub-folders per
+folder: 16 x 16 x 16 = 4096). If a lower length than 40 chars is provided will
+pad with 0 on the left. If a higher length than 40 chars or an invalid ID is
+provided will reset the ID to 000000..00 (40 chars) for the given length, but
+also drop a warning.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_id</var></dt>
+					<dd>10 chars id</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>Prefixed Path<br>
+				</div>
 
 
 
@@ -620,24 +759,39 @@ work correct both: path_info('c:\\file.php') and path_info('path/file.php'</p>
 
 		<td class="attributes"><code>
 			 public static
-			
+			ARRAY
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_mime_eval">#</a>
-		<code>mime_eval( <span>mixed <var>$yfile</var></span>, <span>mixed <var>$yforce</var> = <span class="php-quote">''</span></span> )</code>
+		<code>mime_eval( <span>STRING <var>$yfile</var></span>, <span>mixed <var>$ydisposition</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
+<p>Evaluate and return the File MimeType by File Extension.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Evaluate and return the File MimeType by File Extension.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$yfile</var></dt>
+					<dd>the file name (includding file extension) ; Ex: file.ext</dd>
+					<dt><var>$ydisposition</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>0 =&gt; mime type ; 1 =&gt; inline/attachment; filename="file.ext"<br>
+				</div>
 
 
 
@@ -667,7 +821,7 @@ work correct both: path_info('c:\\file.php') and path_info('path/file.php'</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-04-22 10:59</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-04-29 09:31</a>
 	</div>
 </div>
 </div>
