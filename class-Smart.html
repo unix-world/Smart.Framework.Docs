@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class Smart | Smart.Framework Documentation :: 2016-05-13 07:59</title>
+	<title>Class Smart | Smart.Framework Documentation :: 2016-06-15 07:43</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3874263052"></script>
@@ -160,7 +160,7 @@ Smart::some_method_of_this_class(...);
 		<b>Package:</b> <a href="package-Core.html">Core</a><br>
 
 				<b>Version:</b>
-				v.160506<br>
+				v.160614<br>
 				<b>Depends:</b>
 				extensions: PHP XML, PHP JSON ; classes: SmartUnicode<br>
 				<b>Hints:</b>
@@ -955,49 +955,6 @@ which throws a warning if first argument passed is a string since PHP 5.3</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="array_type_test" id="_array_type_test">
-
-		<td class="attributes"><code>
-			 public static
-			ENUM
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_array_type_test">#</a>
-		<code>array_type_test( <span>ARRAY <var>$y_arr</var></span> )</code>
-
-		<div class="description short">
-			
-<p>Test if the Array Type</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p>Test if the Array Type</p>
-
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$y_arr</var></dt>
-					<dd>:: The array to test</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>ENUM</code><br>:: The array type as: 0 = not an array ; 1 = non-associative (sequential) array
-; 2 = associative array<br>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
 	<tr data-order="array_size" id="_array_size">
 
 		<td class="attributes"><code>
@@ -1081,6 +1038,139 @@ provided<br>
 				<h4>Returns</h4>
 				<div class="list">
 					<code>ARRAY</code><br>:: The sorted array<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="array_get_by_key_path" id="_array_get_by_key_path">
+
+		<td class="attributes"><code>
+			 public static
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_array_get_by_key_path">#</a>
+		<code>array_get_by_key_path( <span>ARRAY <var>$y_arr</var></span>, <span>STRING <var>$y_key_path</var></span>, <span>STRING <var>$y_path_separator</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Array Get By Key Path</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Array Get By Key Path</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_arr</var></dt>
+					<dd>:: The input array</dd>
+					<dt><var>$y_key_path</var></dt>
+					<dd>:: The composed key path by levels (Ex: key1.key2)</dd>
+					<dt><var>$y_path_separator</var></dt>
+					<dd>:: The key path separator (Example: .)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>[ NUMERIC / STRING / ARRAY ] :: The array value of the specified key path<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="array_change_key_case_recursive" id="_array_change_key_case_recursive">
+
+		<td class="attributes"><code>
+			 public static
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_array_change_key_case_recursive">#</a>
+		<code>array_change_key_case_recursive( <span>ARRAY <var>$y_arr</var></span>, <span>ENUM <var>$y_mode</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Array Recursive Change Key Case</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Array Recursive Change Key Case</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_arr</var></dt>
+					<dd>:: The input array</dd>
+					<dt><var>$y_mode</var></dt>
+					<dd>:: Change Mode: LOWER | UPPER</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>:: The modified array<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="array_type_test" id="_array_type_test">
+
+		<td class="attributes"><code>
+			 public static
+			ENUM
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_array_type_test">#</a>
+		<code>array_type_test( <span>ARRAY <var>$y_arr</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Test if the Array Type</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Test if the Array Type</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_arr</var></dt>
+					<dd>:: The array to test</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ENUM</code><br>:: The array type as: 0 = not an array ; 1 = non-associative (sequential) array
+; 2 = associative array<br>
 				</div>
 
 
@@ -2253,7 +2343,7 @@ Code).</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-05-13 07:59</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-06-15 07:43</a>
 	</div>
 </div>
 </div>
