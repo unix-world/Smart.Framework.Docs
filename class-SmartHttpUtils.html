@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Package Exporters | Smart.Framework Documentation :: 2016-07-08 08:28</title>
+	<title>Class SmartHttpUtils | Smart.Framework Documentation :: 2016-07-08 08:28</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3459129952"></script>
@@ -33,7 +33,7 @@
 						</li>
 				<li><a href="package-Components.Framework.html">Components:Framework</a>
 						</li>
-				<li><a href="package-Core.html">Core</a>
+				<li class="active"><a href="package-Core.html">Core</a>
 						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
 						</li>
@@ -55,7 +55,7 @@
 						</li>
 				<li><a href="package-Database.SQLite.html">Database:SQLite</a>
 						</li>
-				<li class="active"><a href="package-Exporters.html">Exporters</a>
+				<li><a href="package-Exporters.html">Exporters</a>
 						</li>
 				<li><a href="package-Filesystem.html">Filesystem</a>
 						</li>
@@ -84,9 +84,12 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-SmartExportToOpenOffice.html">SmartExportToOpenOffice</a></li>
-				<li><a href="class-SmartMarkdownToHTML.html">SmartMarkdownToHTML</a></li>
-				<li><a href="class-SmartPdfExport.html">SmartPdfExport</a></li>
+				<li><a href="class-Smart.html">Smart</a></li>
+				<li class="active"><a href="class-SmartHttpUtils.html">SmartHttpUtils</a></li>
+				<li><a href="class-SmartParser.html">SmartParser</a></li>
+				<li><a href="class-SmartUnicode.html">SmartUnicode</a></li>
+				<li><a href="class-SmartUtils.html">SmartUtils</a></li>
+				<li><a href="class-SmartValidator.html">SmartValidator</a></li>
 			</ul>
 
 
@@ -113,9 +116,10 @@
 			<li>
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
-			<li class="active">
-<span>Package</span>			</li>
 			<li>
+				<a href="package-Core.html" title="Summary of Core"><span>Package</span></a>
+			</li>
+			<li class="active">
 <span>Class</span>			</li>
 		</ul>
 		<ul>
@@ -127,27 +131,127 @@
 		</ul>
 	</div>
 
-<div id="content" class="package">
-	<h1>Package Exporters</h1>
+<div id="content" class="class">
+	<h1>Class SmartHttpUtils</h1>
+
+
+	<div class="description">
+	
+<p>Class: Smart HTTP Utils) - provides utils function to work with HTTP
+protocol.</p>
+
+<pre>
+<span
+class="php-comment">// Usage example:</span>
+Smart::some_method_of_this_class(...);
+</pre>
+
+	</div>
 
 
 
-<table class="summary" id="classes">
-<caption>Classes summary</caption>
-<tr>
-	<td class="name"><a href="class-SmartExportToOpenOffice.html">SmartExportToOpenOffice</a></td>
-	<td>Class: SmartExportToOpenOffice - Exports (structured) Data to OpenOffice ODS
-Spreadsheet.</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-SmartMarkdownToHTML.html">SmartMarkdownToHTML</a></td>
-	<td>Class: SmartMarkdownToHTML - Exports Markdown Code to HTML Code.</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-SmartPdfExport.html">SmartPdfExport</a></td>
-	<td>Class: SmartPdfExport - Exports HTML Code to PDF Document.</td>
-</tr>
-</table>
+
+
+
+
+
+
+	<div class="info">
+		<b>Final</b><br>
+		
+		
+		<b>Package:</b> <a href="package-Core.html">Core</a><br>
+
+				<b>Version:</b>
+				v.160607<br>
+				<b>Depends:</b>
+				classes: Smart<br>
+				<b>Hints:</b>
+				It is recommended to use the methods in this class instead of PHP native methods
+whenever is possible because this class will offer Long Term Support and the
+methods will be supported even if the behind PHP methods can change over time,
+so the code would be easier to maintain.<br>
+				<b>Usage:</b>
+				static object: Class::method() - This class provides only STATIC methods<br>
+		<b>Located at</b> lib/framework/lib_http_cli.php<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="encode_var_cookie" id="_encode_var_cookie">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_encode_var_cookie">#</a>
+		<code>encode_var_cookie( <span>mixed <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="encode_var_post" id="_encode_var_post">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_encode_var_post">#</a>
+		<code>encode_var_post( <span>mixed <var>$varname</var></span>, <span>mixed <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

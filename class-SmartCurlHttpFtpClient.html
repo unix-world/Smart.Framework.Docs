@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartHttpClient | Smart.Framework Documentation :: 2016-07-08 08:28</title>
+	<title>Class SmartCurlHttpFtpClient | Smart.Framework Documentation :: 2016-07-08 08:28</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3459129952"></script>
@@ -67,11 +67,11 @@
 						</li>
 				<li><a href="package-MediaGallery.html">MediaGallery</a>
 						</li>
-				<li><a href="package-Network.CURL.html">Network:CURL</a>
+				<li class="active"><a href="package-Network.CURL.html">Network:CURL</a>
 						</li>
 				<li><a href="package-Network.FTP.html">Network:FTP</a>
 						</li>
-				<li class="active"><a href="package-Network.HTTP.html">Network:HTTP</a>
+				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
 						</li>
 				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
@@ -84,7 +84,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li class="active"><a href="class-SmartHttpClient.html">SmartHttpClient</a></li>
+				<li class="active"><a href="class-SmartCurlHttpFtpClient.html">SmartCurlHttpFtpClient</a></li>
 			</ul>
 
 
@@ -112,7 +112,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="package-Network.HTTP.html" title="Summary of Network:HTTP"><span>Package</span></a>
+				<a href="package-Network.CURL.html" title="Summary of Network:CURL"><span>Package</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -127,14 +127,13 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class SmartHttpClient</h1>
+	<h1>Class SmartCurlHttpFtpClient</h1>
 
 
 	<div class="description">
 	
-<p>Class: SmartHttpClient - provides a HTTP / HTTPS Client (browser).</p>
-
-<p>To work with TLS / SSL (requires the PHP OpenSSL Module).</p>
+<p>Class: SmartCurlHttpFtpClient - provides a CURL based HTTP / HTTPS / FTP
+Client (browser) with Proxy Support.</p>
 
 	</div>
 
@@ -150,16 +149,16 @@
 		<b>Final</b><br>
 		
 		
-		<b>Package:</b> <a href="package-Network.HTTP.html">Network:HTTP</a><br>
+		<b>Package:</b> <a href="package-Network.CURL.html">Network:CURL</a><br>
 
 				<b>Version:</b>
 				v.160707.r3<br>
 				<b>Depends:</b>
-				extensions: PHP OpenSSL (optional, just for HTTPS) ; classes: Smart<br>
+				extensions: PHP CURL, PHP OpenSSL (optional, just for HTTPS) ; classes: Smart<br>
 				<b>Usage:</b>
 				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
 methods<br>
-		<b>Located at</b> lib/framework/lib_http_cli.php<br>
+		<b>Located at</b> modules/smart-extra-libs/lib_curl_http_ftp_cli.php<br>
 	</div>
 
 
@@ -206,7 +205,7 @@ methods<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_browse_url">#</a>
-		<code>browse_url( <span>mixed <var>$url</var></span>, <span>mixed <var>$method</var> = <span class="php-quote">'GET'</span></span>, <span>mixed <var>$ssl_version</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$user</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$pwd</var> = <span class="php-quote">''</span></span> )</code>
+		<code>browse_url( <span>mixed <var>$url</var></span>, <span>mixed <var>$method</var> = <span class="php-quote">'GET'</span></span>, <span>mixed <var>$ssl_version</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$user</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$pwd</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$proxy</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 		<div class="description short">
 			
@@ -256,7 +255,7 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$useragent" class="anchor">#</a><code><span class="php-quote">'SmartFramework :: PHP/Robot'</span></code></div></td>
+		<td class="value"><div><a href="#$useragent" class="anchor">#</a><code><span class="php-quote">'SFM :: PHP.CURL/Robot'</span></code></div></td>
 	</tr>
 	<tr data-order="connect_timeout" id="$connect_timeout">
 		<td class="attributes"><code>
@@ -276,6 +275,25 @@ methods<br>
 			</div>
 		</td>
 		<td class="value"><div><a href="#$connect_timeout" class="anchor">#</a><code><span class="php-num">30</span></code></div></td>
+	</tr>
+	<tr data-order="exec_timeout" id="$exec_timeout">
+		<td class="attributes"><code>
+			public  
+			integer
+		</code></td>
+
+		<td class="name">
+<var>$exec_timeout</var>
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#$exec_timeout" class="anchor">#</a><code><span class="php-num">0</span></code></div></td>
 	</tr>
 	<tr data-order="debug" id="$debug">
 		<td class="attributes"><code>
