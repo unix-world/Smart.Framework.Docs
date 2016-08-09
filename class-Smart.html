@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class Smart | Smart.Framework Documentation :: 2016-07-28 13:35</title>
+	<title>Class Smart | Smart.Framework Documentation :: 2016-08-09 14:13</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3459129952"></script>
@@ -163,7 +163,7 @@ Smart::some_method_of_this_class(...);
 		<b>Package:</b> <a href="package-Core.html">Core</a><br>
 
 				<b>Version:</b>
-				v.160614<br>
+				v.160804<br>
 				<b>Depends:</b>
 				extensions: PHP XML, PHP JSON ; classes: SmartUnicode<br>
 				<b>Hints:</b>
@@ -180,6 +180,51 @@ so the code would be easier to maintain.<br>
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
+	<tr data-order="get_from_config" id="_get_from_config">
+
+		<td class="attributes"><code>
+			 public static
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_from_config">#</a>
+		<code>get_from_config( <span>ENUM <var>$param</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get the value for a Config parameter from the app $configs array.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the value for a Config parameter from the app $configs array.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>:: The selected configuration parameter. Example: 'app.info-url' will get value
+(STRING) from $configs['app']['info-url'] ; 'app' will get the value (ARRAY)
+from $configs['app']</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>:: The value for the selected parameter. If the Config parameter does not
+exists, will return an empty string.<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="fix_path_separator" id="_fix_path_separator">
 
 		<td class="attributes"><code>
@@ -471,9 +516,9 @@ script.php?a=b&amp;c=d&amp;e=%20d</p>
 					<dd>:: The base URL to use as prefix like: script.php or script.php?a=b&amp;amp;c=d or
 empty</dd>
 					<dt><var>$y_suffix</var></dt>
-					<dd>:: A RFC3986 URL segment like: a=b or e=%20d (without ? or &amp;amp; as they will be
-detected if need append ? or &amp;amp;; variable values must be encoded using
-rawurlencode() RFC3986)</dd>
+					<dd>:: A RFC3986 URL segment like: a=b or e=%20d (without ? or not starting with
+&amp;amp; as they will be detected if need append ? or &amp;amp;; variable values must
+be encoded using rawurlencode() RFC3986)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -1049,6 +1094,48 @@ provided<br>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="array_shuffle" id="_array_shuffle">
+
+		<td class="attributes"><code>
+			 public static
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_array_shuffle">#</a>
+		<code>array_shuffle( <span>ARRAY <var>$y_arr</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Shuffle for NON-Associative arrays ...</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Shuffle for NON-Associative arrays ...</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_arr</var></dt>
+					<dd>:: The array to be sorted by a criteria (type, see below)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>:: The sorted array<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="array_get_by_key_path" id="_array_get_by_key_path">
 
 		<td class="attributes"><code>
@@ -1174,6 +1261,96 @@ provided<br>
 				<div class="list">
 					<code>ENUM</code><br>:: The array type as: 0 = not an array ; 1 = non-associative (sequential) array
 ; 2 = associative array<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="array_diff_assoc_recursive" id="_array_diff_assoc_recursive">
+
+		<td class="attributes"><code>
+			 public static
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_array_diff_assoc_recursive">#</a>
+		<code>array_diff_assoc_recursive( <span>ARRAY <var>$array1</var></span>, <span>ARRAY <var>$array2</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Array recursive Diff (Dual-Way, from Left to Right and from Right to
+Left)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Array recursive Diff (Dual-Way, from Left to Right and from Right to
+Left)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$array1</var></dt>
+					<dd></dd>
+					<dt><var>$array2</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>ARRAY<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="array_diff_assoc_oneway_recursive" id="_array_diff_assoc_oneway_recursive">
+
+		<td class="attributes"><code>
+			 public static
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_array_diff_assoc_oneway_recursive">#</a>
+		<code>array_diff_assoc_oneway_recursive( <span>ARRAY <var>$array1</var></span>, <span>ARRAY <var>$array2</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Array recursive Diff (One Way Only, from Left to Right)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Array recursive Diff (One Way Only, from Left to Right)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$array1</var></dt>
+					<dd></dd>
+					<dt><var>$array2</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>ARRAY<br>
 				</div>
 
 
@@ -2346,7 +2523,7 @@ Code).</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-07-28 13:35</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-08-09 14:13</a>
 	</div>
 </div>
 </div>
