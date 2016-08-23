@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartUnicode | Smart.Framework Documentation :: 2016-08-09 14:13</title>
+	<title>Class SmartUnicode | Smart.Framework Documentation :: 2016-08-23 14:49</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3459129952"></script>
@@ -85,7 +85,6 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Smart.html">Smart</a></li>
-				<li><a href="class-SmartHttpUtils.html">SmartHttpUtils</a></li>
 				<li><a href="class-SmartParser.html">SmartParser</a></li>
 				<li class="active"><a href="class-SmartUnicode.html">SmartUnicode</a></li>
 				<li><a href="class-SmartUtils.html">SmartUtils</a></li>
@@ -298,7 +297,7 @@ class="php-comment">//----------------------------------------------------------
 		<b>Package:</b> <a href="package-Core.html">Core</a><br>
 
 				<b>Version:</b>
-				v.160205<br>
+				v.160817<br>
 				<b>Depends:</b>
 				extensions: PHP MBString, PHP XML<br>
 				<b>Hints:</b>
@@ -1030,7 +1029,7 @@ framework charset else the string will be incompatible with the current encoding
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="utf8_fix_charset" id="_utf8_fix_charset">
+	<tr data-order="fix_charset" id="_fix_charset">
 
 		<td class="attributes"><code>
 			 public static
@@ -1040,20 +1039,22 @@ framework charset else the string will be incompatible with the current encoding
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_utf8_fix_charset">#</a>
-		<code>utf8_fix_charset( <span>STRING <var>$str</var></span> )</code>
+		<a class="anchor" href="#_fix_charset">#</a>
+		<code>fix_charset( <span>STRING <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Safe Fix the string to contain only UTF-8 charset. All the unsafe characters
-will be replaced by: ?</p>
+<p>Safe Fix the string to contain only current charset. All the unsafe
+characters will be replaced by: ? This is not necessary after
+SmartUnicode::convert_charset() as it will already fix it</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Safe Fix the string to contain only UTF-8 charset. All the unsafe characters
-will be replaced by: ?</p>
+<p>Safe Fix the string to contain only current charset. All the unsafe
+characters will be replaced by: ? This is not necessary after
+SmartUnicode::convert_charset() as it will already fix it</p>
 
 
 
@@ -1289,7 +1290,7 @@ FALSE.</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-08-09 14:13</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-08-23 14:49</a>
 	</div>
 </div>
 </div>

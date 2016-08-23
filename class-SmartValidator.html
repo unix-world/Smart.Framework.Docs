@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartValidator | Smart.Framework Documentation :: 2016-08-09 14:13</title>
+	<title>Class SmartValidator | Smart.Framework Documentation :: 2016-08-23 14:49</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3459129952"></script>
@@ -85,7 +85,6 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Smart.html">Smart</a></li>
-				<li><a href="class-SmartHttpUtils.html">SmartHttpUtils</a></li>
 				<li><a href="class-SmartParser.html">SmartParser</a></li>
 				<li><a href="class-SmartUnicode.html">SmartUnicode</a></li>
 				<li><a href="class-SmartUtils.html">SmartUtils</a></li>
@@ -162,7 +161,7 @@ SmartValidator::some_method_of_this_class(...);
 		<b>Package:</b> <a href="package-Core.html">Core</a><br>
 
 				<b>Version:</b>
-				v.160526<br>
+				v.160817<br>
 				<b>Depends:</b>
 				classes: Smart, SmartUnicode<br>
 				<b>Usage:</b>
@@ -281,7 +280,7 @@ phone numbers utf8-text :: Unicode (UTF-8) Text</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_validate_string">#</a>
-		<code>validate_string( <span>STRING <var>$y_string</var></span>, <span>ENUM <var>$y_mode</var></span>, <span>BOOL <var>$y_default</var> = <span class="php-keyword1">false</span></span> )</code>
+		<code>validate_string( <span>STRING <var>$y_string</var></span>, <span>ENUM <var>$y_mode</var></span> )</code>
 
 		<div class="description short">
 			
@@ -304,14 +303,99 @@ SmartValidator::regex_stringvalidation_expression()</p>
 					<dt><var>$y_mode</var></dt>
 					<dd>:: The Regex mode to use for validation ; see reference for
 SmartValidator::regex_stringvalidation_expression()</dd>
-					<dt><var>$y_default</var></dt>
-					<dd>:: TRUE to validate by default or FALSE to invalidate by default (in the case
-the mode is not valid)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>BOOLEAN</code><br>:: TRUE if validated ; FALSE if not validated<br>
+					<code>BOOLEAN</code><br>:: TRUE if validated by regex ; FALSE if not validated<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_numeric_integer_or_decimal_values" id="_validate_numeric_integer_or_decimal_values">
+
+		<td class="attributes"><code>
+			 public static
+			BOOL
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_numeric_integer_or_decimal_values">#</a>
+		<code>validate_numeric_integer_or_decimal_values( <span>STRING <var>$val</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validate if a string or number is Integer or Decimal (positive /
+negative)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validate if a string or number is Integer or Decimal (positive /
+negative)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$val</var></dt>
+					<dd>:: The string or number to be validated</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if Integer or Decimal (positive / negative) ; FALSE if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_html_or_xml_code" id="_validate_html_or_xml_code">
+
+		<td class="attributes"><code>
+			 public static
+			BOOLEAN
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_html_or_xml_code">#</a>
+		<code>validate_html_or_xml_code( <span>STRING <var>$y_html_or_xml_code</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Detect HTML or XML code contain tags (if does not contain tags is not html or
+xml code ...)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Detect HTML or XML code contain tags (if does not contain tags is not html or
+xml code ...)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_html_or_xml_code</var></dt>
+					<dd>:: The String to be tested</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOLEAN</code><br>:: TRUE (if XML or HTML tags are detected) or FALSE if not<br>
 				</div>
 
 
@@ -469,7 +553,7 @@ filename="somefile.pdf"</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-08-09 14:13</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-08-23 14:49</a>
 	</div>
 </div>
 </div>
