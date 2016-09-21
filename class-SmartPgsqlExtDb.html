@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartPgsqlExtDb | Smart.Framework Documentation :: 2016-08-23 14:49</title>
+	<title>Class SmartPgsqlExtDb | Smart.Framework Documentation :: 2016-09-21 14:53</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3459129952"></script>
@@ -21,6 +21,8 @@
 						</li>
 				<li><a href="package-Archivers.html">Archivers</a>
 						</li>
+				<li><a href="package-Base.html">Base</a>
+						</li>
 				<li><a href="package-Caching.html">Caching</a>
 						</li>
 				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
@@ -32,8 +34,6 @@
 				<li><a href="package-Components.Charts.html">Components:Charts</a>
 						</li>
 				<li><a href="package-Components.Framework.html">Components:Framework</a>
-						</li>
-				<li><a href="package-Core.html">Core</a>
 						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
 						</li>
@@ -221,13 +221,13 @@ class="php-comment">//... for other hints look to the samples of the class: Smar
 		<b>Package:</b> <a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a><br>
 
 				<b>Version:</b>
-				v.160817.r2<br>
+				v.160915<br>
 				<b>Depends:</b>
 				extensions: PHP PostgreSQL ; classes: Smart, SmartUnicode, SmartUtils<br>
 				<b>Hints:</b>
-				This class have no catcheable Exception because the ONLY errors will raise are
+				This class have no catcheable exception because the ONLY errors will raise are
 when the server returns an ERROR regarding a malformed SQL Statement, which is
-not acceptable to be just Exception, so will raise a fatal error !<br>
+not acceptable to be just exception, so will raise a fatal error !<br>
 				<b>Usage:</b>
 				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
 methods<br>
@@ -862,34 +862,47 @@ easy debugging</dd>
 		<div class="description short">
 			
 <p>PgSQL Query :: Write Ignore - Catch Duplicate Key Violation or Foreign Key
-Violation Errors (This is the equivalent of MySQL's INSERT IGNORE or PostgreSQL
-9.5/later ON CONFLICT DO NOTHING statements, but it can catch UNIQUE violations
-on both: INSERT / UPDATE statements and also can catch FOREIGN KEY violations).
-This function is intended to be used for write type queries: INSERT ; UPDATE in
-a safe way as a write ignore (returning the # of affected rows or zero if an
-exception raised). The catch of PostgreSQL exceptions are handled completely by
-this function so there is no need for a try/catch in PHP.</p>
+Violation Errors (This is the equivalent of MySQL's INSERT IGNORE / UPDATE
+IGNORE / DELETE IGNORE, but it can catch UNIQUE violations on both: INSERT /
+UPDATE / DELETE statements and also can catch FOREIGN KEY violations). This
+function is intended to be used only for write type queries like: INSERT /
+UPDATE / DELETE which can be ignored if unique violations or foreign key
+violations and will return the # of affected rows or zero if an exception
+raised. The catch of PostgreSQL exceptions is handled completely by this
+function so there is no need for a catch errors outside.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
 <p>PgSQL Query :: Write Ignore - Catch Duplicate Key Violation or Foreign Key
-Violation Errors (This is the equivalent of MySQL's INSERT IGNORE or PostgreSQL
-9.5/later ON CONFLICT DO NOTHING statements, but it can catch UNIQUE violations
-on both: INSERT / UPDATE statements and also can catch FOREIGN KEY violations).
-This function is intended to be used for write type queries: INSERT ; UPDATE in
-a safe way as a write ignore (returning the # of affected rows or zero if an
-exception raised). The catch of PostgreSQL exceptions are handled completely by
-this function so there is no need for a try/catch in PHP.</p>
+Violation Errors (This is the equivalent of MySQL's INSERT IGNORE / UPDATE
+IGNORE / DELETE IGNORE, but it can catch UNIQUE violations on both: INSERT /
+UPDATE / DELETE statements and also can catch FOREIGN KEY violations). This
+function is intended to be used only for write type queries like: INSERT /
+UPDATE / DELETE which can be ignored if unique violations or foreign key
+violations and will return the # of affected rows or zero if an exception
+raised. The catch of PostgreSQL exceptions is handled completely by this
+function so there is no need for a catch errors outside.</p>
 
 <p>IMPORTANT: This function needs the pgsql notice message tracking enabled in
-PHP (NOT IGNORED); This must be set in php.ini (pgsql.ignore_notice = 0). It is
-generally intended for safe writes (mostly INSERT or UPDATE) where values can
-raise UNIQUE or FOREIGN KEYS violations, thus control can be done with catch
-EXCEPTION in a DO block. This is the best approach to handle safe UPSERT queries
-in high load envionments with PostgreSQL. It cannot handle special statements
-such as: BEGIN, START TRANSACTION, COMMIT, ROLLBACK or SET.</p>
+PHP (not ignored); This must be set in php.ini (pgsql.ignore_notice = 0). The
+internal mechanism of this function to catch UNIQUE or FOREIGN KEYS violations
+is that the EXCEPTIONS are catch at the PostgreSQL level in a DO block. This is
+the best approach to handle safe UPSERT or INSERT IGNORE / UPDATE IGNORE /
+DELETE IGNORE like queries in high load envionments or to avoid fatal errors
+when a INSERT / UPDATE / DELETE violates a unique key or a foreign key with
+PostgreSQL. This function can be used inside transactions blocks but never use
+this function to execute statements as: BEGIN, START TRANSACTION, COMMIT,
+ROLLBACK or SET statements, as the context is incompatible. HINTS: On PostgreSQL
+9.5/later there is an alternative which can be used directly with write_data()
+without the need of this function as the following statement: INSERT ... ON
+CONFLICT DO NOTHING/UPDATE ... (as the equivalent of INSERT IGNORE / UPSERT),
+but the following statements are still missing (not implemented): UPDATE ... ON
+CONFLICT DO NOTHING / DELETE ... ON CONFLICT DO NOTHING . This function will
+remain in the future to offer backward compatibility with PostgreSQL 8.4 ... 9.5
+even if PostgreSQL at some moment will have ON CONFLICT DO implemented for all 3
+INSERT / UPDATE / DELETE.</p>
 
 
 
@@ -980,23 +993,25 @@ $arr['field2'] = 100;</dd>
 		<div class="description short">
 			
 <p>Create Escaped SQL Statements from Parameters and Array of Data by replacing
-? (question marks) This can be used for a full SQL statement or just for a part.
-The statement must not contain any Single Quotes !</p>
+$# params This can be used for a full SQL statement or just for a part. The
+statement must not contain any Single Quotes to prevent SQL injections which are
+unpredictable if mixing several statements at once !</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
 <p>Create Escaped SQL Statements from Parameters and Array of Data by replacing
-? (question marks) This can be used for a full SQL statement or just for a part.
-The statement must not contain any Single Quotes !</p>
+$# params This can be used for a full SQL statement or just for a part. The
+statement must not contain any Single Quotes to prevent SQL injections which are
+unpredictable if mixing several statements at once !</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$query</var></dt>
-					<dd>:: SQL Statement to process like ' WHERE ("id" = ?)'</dd>
+					<dd>:: SQL Statement to process like ' WHERE ("id" = $1)'</dd>
 					<dt><var>$arrdata</var></dt>
 					<dd>:: The non-associative array as of: $arr=array('a');</dd>
 				</dl></div>
@@ -1082,7 +1097,7 @@ The statement must not contain any Single Quotes !</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-08-23 14:49</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-09-21 14:53</a>
 	</div>
 </div>
 </div>

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartSQliteDb | Smart.Framework Documentation :: 2016-08-23 14:49</title>
+	<title>Class SmartSQliteDb | Smart.Framework Documentation :: 2016-09-21 14:53</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3459129952"></script>
@@ -21,6 +21,8 @@
 						</li>
 				<li><a href="package-Archivers.html">Archivers</a>
 						</li>
+				<li><a href="package-Base.html">Base</a>
+						</li>
 				<li><a href="package-Caching.html">Caching</a>
 						</li>
 				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
@@ -32,8 +34,6 @@
 				<li><a href="package-Components.Charts.html">Components:Charts</a>
 						</li>
 				<li><a href="package-Components.Framework.html">Components:Framework</a>
-						</li>
-				<li><a href="package-Core.html">Core</a>
 						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
 						</li>
@@ -181,7 +181,12 @@ class="php-var">$db</span>-&gt;write_data(<span
 class="php-quote">'UPDATE &quot;other_table&quot; SET &quot;active&quot; = 0 WHERE (&quot;id&quot; = ?)'</span>, <span
 class="php-keyword1">array</span>(<span class="php-num">100</span>));
 <span
-class="php-var">$db</span>-&gt;close();
+class="php-var">$prepared_sql</span> = <span
+class="php-var">$db</span>-&gt;prepare_param_query(<span
+class="php-quote">'SELECT * FROM &quot;table&quot; WHERE &quot;id&quot; = ?'</span>, [<span
+class="php-num">99</span>]);
+<span class="php-var">$db</span>-&gt;close(); <span
+class="php-comment">// optional, but safe</span>
 
 </pre>
 
@@ -202,7 +207,7 @@ class="php-var">$db</span>-&gt;close();
 		<b>Package:</b> <a href="package-Database.SQLite.html">Database:SQLite</a><br>
 
 				<b>Version:</b>
-				v.160817<br>
+				v.160827<br>
 				<b>Depends:</b>
 				extensions: PHP SQLite (3) ; classes: Smart, SmartUnicode, SmartUtils,
 SmartFileSystem<br>
@@ -776,7 +781,8 @@ $arr['field2'] = 100;</dd>
 			
 <p>Create Escaped SQL Statements from Parameters and Array of Data by replacing
 ? (question marks) This can be used for a full SQL statement or just for a part.
-The statement must not contain any Single Quotes !</p>
+The statement must not contain any Single Quotes to prevent SQL injections which
+are unpredictable if mixing several statements at once !</p>
 
 		</div>
 
@@ -784,7 +790,8 @@ The statement must not contain any Single Quotes !</p>
 			
 <p>Create Escaped SQL Statements from Parameters and Array of Data by replacing
 ? (question marks) This can be used for a full SQL statement or just for a part.
-The statement must not contain any Single Quotes !</p>
+The statement must not contain any Single Quotes to prevent SQL injections which
+are unpredictable if mixing several statements at once !</p>
 
 
 
@@ -875,7 +882,7 @@ The statement must not contain any Single Quotes !</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-08-23 14:49</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-09-21 14:53</a>
 	</div>
 </div>
 </div>

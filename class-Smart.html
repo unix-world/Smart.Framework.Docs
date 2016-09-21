@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class Smart | Smart.Framework Documentation :: 2016-08-23 14:49</title>
+	<title>Class Smart | Smart.Framework Documentation :: 2016-09-21 14:53</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3459129952"></script>
@@ -21,6 +21,8 @@
 						</li>
 				<li><a href="package-Archivers.html">Archivers</a>
 						</li>
+				<li class="active"><a href="package-Base.html">Base</a>
+						</li>
 				<li><a href="package-Caching.html">Caching</a>
 						</li>
 				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
@@ -32,8 +34,6 @@
 				<li><a href="package-Components.Charts.html">Components:Charts</a>
 						</li>
 				<li><a href="package-Components.Framework.html">Components:Framework</a>
-						</li>
-				<li class="active"><a href="package-Core.html">Core</a>
 						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
 						</li>
@@ -116,7 +116,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="package-Core.html" title="Summary of Core"><span>Package</span></a>
+				<a href="package-Base.html" title="Summary of Base"><span>Package</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -136,7 +136,7 @@
 
 	<div class="description">
 	
-<p>Class: Smart (Core Functions) - provides the core methods for an easy and
+<p>Class: Smart (Base Functions) - provides the base methods for an easy and
 secure development with SmartFramework and PHP.</p>
 
 <pre>
@@ -159,10 +159,10 @@ Smart::some_method_of_this_class(...);
 		<b>Final</b><br>
 		
 		
-		<b>Package:</b> <a href="package-Core.html">Core</a><br>
+		<b>Package:</b> <a href="package-Base.html">Base</a><br>
 
 				<b>Version:</b>
-				v.160817<br>
+				v.160921<br>
 				<b>Depends:</b>
 				extensions: PHP XML, PHP JSON ; classes: SmartUnicode<br>
 				<b>Hints:</b>
@@ -172,7 +172,7 @@ methods will be supported even if the behind PHP methods can change over time,
 so the code would be easier to maintain.<br>
 				<b>Usage:</b>
 				static object: Class::method() - This class provides only STATIC methods<br>
-		<b>Located at</b> lib/framework/lib_core.php<br>
+		<b>Located at</b> lib/framework/lib_smart.php<br>
 	</div>
 
 
@@ -342,6 +342,48 @@ exists, will return an empty string.<br>
 				<h4>Returns</h4>
 				<div class="list">
 					<code>STRING</code><br>:: The dirname<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="base_name" id="_base_name">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_base_name">#</a>
+		<code>base_name( <span>STRING <var>$y_path</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the FIXED basename(), in a safe way</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the FIXED basename(), in a safe way</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_path</var></dt>
+					<dd>:: The path name from to extract basename()</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The basename<br>
 				</div>
 
 
@@ -2478,7 +2520,7 @@ Code).</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-08-23 14:49</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-09-21 14:53</a>
 	</div>
 </div>
 </div>

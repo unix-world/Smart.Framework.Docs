@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartAbstractAppController | Smart.Framework Documentation :: 2016-08-23 14:49</title>
+	<title>Class SmartAbstractAppController | Smart.Framework Documentation :: 2016-09-21 14:53</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3459129952"></script>
@@ -21,6 +21,8 @@
 						</li>
 				<li><a href="package-Archivers.html">Archivers</a>
 						</li>
+				<li><a href="package-Base.html">Base</a>
+						</li>
 				<li><a href="package-Caching.html">Caching</a>
 						</li>
 				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
@@ -32,8 +34,6 @@
 				<li><a href="package-Components.Charts.html">Components:Charts</a>
 						</li>
 				<li><a href="package-Components.Framework.html">Components:Framework</a>
-						</li>
-				<li><a href="package-Core.html">Core</a>
 						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
 						</li>
@@ -314,7 +314,7 @@ class="php-comment">//END CLASS</span>
 		<b>Package:</b> <a href="package-Application.html">Application</a><br>
 
 				<b>Version:</b>
-				v.160812<br>
+				v.160831<br>
 				<b>Depends:</b>
 				-<br>
 				<b>Hints:</b>
@@ -481,6 +481,84 @@ Modules section.</p>
 				<h4>Returns</h4>
 				<div class="list">
 					<code>BOOLEAN</code><br>:: TRUE if successful, FALSE if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="IfRequestModalPopup" id="_IfRequestModalPopup">
+
+		<td class="attributes"><code>
+			final public 
+			BOOLEAN
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_IfRequestModalPopup">#</a>
+		<code>IfRequestModalPopup( )</code>
+
+		<div class="description short">
+			
+<p>Test if Modal/PopUp is set via (URL) Request.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Test if Modal/PopUp is set via (URL) Request.</p>
+
+<p>If is set, will return TRUE, else will return FALSE</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOLEAN</code><br>:: TRUE / FALSE<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="IfRequestPrintable" id="_IfRequestPrintable">
+
+		<td class="attributes"><code>
+			final public 
+			BOOLEAN
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_IfRequestPrintable">#</a>
+		<code>IfRequestPrintable( )</code>
+
+		<div class="description short">
+			
+<p>Test if Printable is set via (URL) Request.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Test if Printable is set via (URL) Request.</p>
+
+<p>If is set, will return TRUE, else will return FALSE</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOLEAN</code><br>:: TRUE / FALSE<br>
 				</div>
 
 
@@ -1193,13 +1271,13 @@ controllers.</p>
 				<h4>Returns</h4>
 				<div class="list">
 					<code>INTEGER</code><br>:: <em>OPTIONAL</em> The HTTP Status Code: by default it does not return or it
-must returns 200 which is optional ; other supported HTTP Status Codes are: 202
-(OK with notification message - used only for APIs), 500 (Error), 404 (Not
-Found), 403 (Forbidden), 401 (Authentication Required), 400 (Bad Request) ; if
-the HTTP status code is not 200, an extra notification message can be set as:
-##EXAMPLE: $this-&gt;PageViewSetCfg('error', 'Access to this page is
-restricted'); return 403; ## - to have also a detailed error message to be shown
-near the HTTP status code)<br>
+must returns 200 which is optional ; other supported HTTP Status Codes are:
+202/203/208 (OK with notice/warning/error messages - used only for REST/APIs),
+500 (Internal Error), 404 (Not Found), 403 (Forbidden), 401 (Authentication
+Required), 400 (Error) ; if the HTTP status code is not 200, an extra
+notification message can be set as: ##EXAMPLE: $this-&gt;PageViewSetCfg('error',
+'Access to this page is restricted'); return 403; ## - to have also a detailed
+error message to be shown near the HTTP status code)<br>
 				</div>
 
 
@@ -1283,7 +1361,7 @@ wrong and unexpected results !!!</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-08-23 14:49</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-09-21 14:53</a>
 	</div>
 </div>
 </div>

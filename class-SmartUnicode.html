@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartUnicode | Smart.Framework Documentation :: 2016-08-23 14:49</title>
+	<title>Class SmartUnicode | Smart.Framework Documentation :: 2016-09-21 14:53</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3459129952"></script>
@@ -21,6 +21,8 @@
 						</li>
 				<li><a href="package-Archivers.html">Archivers</a>
 						</li>
+				<li class="active"><a href="package-Base.html">Base</a>
+						</li>
 				<li><a href="package-Caching.html">Caching</a>
 						</li>
 				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
@@ -32,8 +34,6 @@
 				<li><a href="package-Components.Charts.html">Components:Charts</a>
 						</li>
 				<li><a href="package-Components.Framework.html">Components:Framework</a>
-						</li>
-				<li class="active"><a href="package-Core.html">Core</a>
 						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
 						</li>
@@ -116,7 +116,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="package-Core.html" title="Summary of Core"><span>Package</span></a>
+				<a href="package-Base.html" title="Summary of Base"><span>Package</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -224,7 +224,7 @@ class="php-comment">//--</span>
  <span
 class="php-comment">//utf8_decode()                 SmartUnicode::utf8_to_iso()             [ok]        the PHP utf8_decode() breaks strings that are used in unicode environments thus the strings need to be re-encoded ; if not re-encoded back to unicode the regex \u will fail in strange modes ...</span>
  <span
-class="php-comment">//utf8_encode()                 -                                       [!!]        there is a risk to double encode the string and break it !!</span>
+class="php-comment">//utf8_encode()                 -                                       [!!]        there is a risk to double encode the string and break it !! ; Fix: avoid do utf8 encode on an empty string (some PHP versions have a bug with exhaust memory)</span>
  <span
 class="php-comment">//wordwrap()                    SmartUnicode::word_wrap()               [ok]        the PHP wordwrap() is not unicode safe</span>
  <span
@@ -294,10 +294,10 @@ class="php-comment">//----------------------------------------------------------
 		<b>Final</b><br>
 		
 		
-		<b>Package:</b> <a href="package-Core.html">Core</a><br>
+		<b>Package:</b> <a href="package-Base.html">Base</a><br>
 
 				<b>Version:</b>
-				v.160817<br>
+				v.160921<br>
 				<b>Depends:</b>
 				extensions: PHP MBString, PHP XML<br>
 				<b>Hints:</b>
@@ -1290,7 +1290,7 @@ FALSE.</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-08-23 14:49</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-09-21 14:53</a>
 	</div>
 </div>
 </div>
