@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartUnicode | Smart.Framework Documentation :: 2016-09-21 14:53</title>
+	<title>Class SmartUnicode | Smart.Framework Documentation :: 2016-09-27 08:11</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3413450810"></script>
 	<script src="elementlist.js?3459129952"></script>
@@ -297,7 +297,7 @@ class="php-comment">//----------------------------------------------------------
 		<b>Package:</b> <a href="package-Base.html">Base</a><br>
 
 				<b>Version:</b>
-				v.160921<br>
+				v.160926<br>
 				<b>Depends:</b>
 				extensions: PHP MBString, PHP XML<br>
 				<b>Hints:</b>
@@ -982,13 +982,15 @@ of these encodings: UTF-8, ISO-8859-1, ISO-8859-2</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_convert_charset">#</a>
-		<code>convert_charset( <span>STRING <var>$ystr</var></span>, <span>ENUM <var>$y_charset_from</var></span>, <span>ENUM <var>$y_charset_to</var> = <span class="php-quote">''</span></span>, <span>BOOLEAN <var>$normalize</var> = <span class="php-keyword1">true</span></span> )</code>
+		<code>convert_charset( <span>STRING <var>$ystr</var></span>, <span>ENUM <var>$y_charset_from</var> = <span class="php-quote">''</span></span>, <span>ENUM <var>$y_charset_to</var> = <span class="php-quote">''</span></span>, <span>BOOLEAN <var>$normalize</var> = <span class="php-keyword1">true</span></span> )</code>
 
 		<div class="description short">
 			
 <p>Convert the CharSet Encoding of a String NOTICE: If the charset to is
 different than UTF-8 (unicode) if using the string in this framework it must be
-re-converted</p>
+re-converted NOTICE: If used to convert to HTML-ENTITIES charset this function
+will consume a lot of memory and may run out of memory for large strings &gt;
+10% of memory_limit set in init.php</p>
 
 		</div>
 
@@ -996,7 +998,9 @@ re-converted</p>
 			
 <p>Convert the CharSet Encoding of a String NOTICE: If the charset to is
 different than UTF-8 (unicode) if using the string in this framework it must be
-re-converted</p>
+re-converted NOTICE: If used to convert to HTML-ENTITIES charset this function
+will consume a lot of memory and may run out of memory for large strings &gt;
+10% of memory_limit set in init.php</p>
 
 
 
@@ -1005,13 +1009,15 @@ re-converted</p>
 					<dt><var>$ystr</var></dt>
 					<dd>:: The string</dd>
 					<dt><var>$y_charset_from</var></dt>
-					<dd>$ychar_from :: One of the: UTF-8, ISO-8859-1, ISO-8859-15, ISO-8859-2,
-ISO-8859-9, ISO-8859-3, ISO-8859-4, ISO-8859-5, ISO-8859-6, ISO-8859-7,
-ISO-8859-8, ISO-8859-10, ISO-8859-11, ISO-8859-13, ISO-8859-14, ISO-8859-16,
-UTF-7, ASCII, SJIS, EUC-JP, JIS, ISO-2022-JP, EUC-CN, ISO-2022-KR, KOI8-R,
-KOI8-U</dd>
+					<dd>$ychar_from :: Empty to detect / Select one of the: UTF-8, ISO-8859-1,
+ISO-8859-15, ISO-8859-2, ISO-8859-9, ISO-8859-3, ISO-8859-4, ISO-8859-5,
+ISO-8859-6, ISO-8859-7, ISO-8859-8, ISO-8859-10, ISO-8859-11, ISO-8859-13,
+ISO-8859-14, ISO-8859-16, UTF-7, ASCII, SJIS, EUC-JP, JIS, ISO-2022-JP, EUC-CN,
+ISO-2022-KR, KOI8-R, KOI8-U</dd>
 					<dt><var>$y_charset_to</var></dt>
-					<dd>$ychar_to :: One of the: UTF-8 or another valid charset</dd>
+					<dd>$ychar_to :: Empty to use the framework internal charset defined in
+SMART_FRAMEWORK_CHARSET / Select one of the: UTF-8, HTML-ENTITIES or another
+valid charset</dd>
 					<dt><var>$normalize</var></dt>
 					<dd>:: Normalize (Default is TRUE) - will normalize the string into the default
 framework charset else the string will be incompatible with the current encoding
@@ -1290,7 +1296,7 @@ FALSE.</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-09-21 14:53</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-09-27 08:11</a>
 	</div>
 </div>
 </div>
