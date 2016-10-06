@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartHttpUtils | Smart.Framework Documentation :: 2016-10-05 19:27</title>
+	<title>Class SmartPunycode | Smart.Framework Documentation :: 2016-10-05 19:27</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?381538277"></script>
 	<script src="elementlist.js?2894130186"></script>
@@ -71,9 +71,9 @@
 						</li>
 				<li><a href="package-Network.FTP.html">Network:FTP</a>
 						</li>
-				<li class="active"><a href="package-Network.HTTP.html">Network:HTTP</a>
+				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
 						</li>
-				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
+				<li class="active"><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
 						</li>
 				<li><a href="package-Services.LangId.Py.html">Services:LangId-Py</a>
 						</li>
@@ -88,8 +88,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-SmartHttpClient.html">SmartHttpClient</a></li>
-				<li class="active"><a href="class-SmartHttpUtils.html">SmartHttpUtils</a></li>
+				<li class="active"><a href="class-SmartPunycode.html">SmartPunycode</a></li>
 			</ul>
 
 
@@ -117,7 +116,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="package-Network.HTTP.html" title="Summary of Network:HTTP"><span>Package</span></a>
+				<a href="package-Network.IDN.Punycode.html" title="Summary of Network:IDN-Punycode"><span>Package</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -132,18 +131,38 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class SmartHttpUtils</h1>
+	<h1>Class SmartPunycode</h1>
 
 
 	<div class="description">
 	
-<p>Class: Smart HTTP Utils) - provides utils function to work with HTTP
-protocol.</p>
+<p>Class: SmartPunycode - provides a IDN Converter using the Punycode
+implementation as described in RFC 3492 (<a
+href="http://tools.ietf.org/html/rfc3492">http://tools.ietf.org/html/rfc3492</a>).</p>
 
 <pre>
+
+<span class="php-var">$domain_iso</span>             = (string) (<span
+class="php-keyword1">new</span> SmartPunycode())-&gt;encode(<span
+class="php-quote">'jösefsson.tßst123.org'</span>); <span
+class="php-comment">// outputs: xn--jsefsson-n4a.xn--tst123-bta.org</span>
 <span
-class="php-comment">// Usage example:</span>
-Smart::some_method_of_this_class(...);
+class="php-var">$domain_unicode</span>         = (string) (<span
+class="php-keyword1">new</span> SmartPunycode())-&gt;decode(<span
+class="php-quote">'xn--jsefsson-n4a.xn--tst123-bta.org'</span>); <span
+class="php-comment">// outputs: jösefsson.tßst123.org</span>
+
+<span
+class="php-var">$email_iso</span>              = (string) (<span
+class="php-keyword1">new</span> SmartPunycode())-&gt;encode(<span
+class="php-quote">'räksmörgås@jösefsson.tßst123.org'</span>); <span
+class="php-comment">// outputs: xn--rksmrgs@jsefsson-vnbx43ag.xn--tst123-bta.org</span>
+<span
+class="php-var">$email_unicode</span>  = (string) (<span
+class="php-keyword1">new</span> SmartPunycode())-&gt;decode(<span
+class="php-quote">'xn--rksmrgs@jsefsson-vnbx43ag.xn--tst123-bta.org'</span>); <span
+class="php-comment">// outputs: räksmörgås@jösefsson.tßst123.org</span>
+
 </pre>
 
 	</div>
@@ -160,45 +179,45 @@ Smart::some_method_of_this_class(...);
 		<b>Final</b><br>
 		
 		
-		<b>Package:</b> <a href="package-Network.HTTP.html">Network:HTTP</a><br>
+		<b>Package:</b> <a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a><br>
 
 				<b>Version:</b>
-				v.160921<br>
+				v.160930<br>
 				<b>Depends:</b>
-				classes: Smart<br>
-				<b>Hints:</b>
-				It is recommended to use the methods in this class instead of PHP native methods
-whenever is possible because this class will offer Long Term Support and the
-methods will be supported even if the behind PHP methods can change over time,
-so the code would be easier to maintain.<br>
+				classes: SmartUnicode<br>
 				<b>Usage:</b>
-				static object: Class::method() - This class provides only STATIC methods<br>
-		<b>Located at</b> lib/framework/lib_http_cli.php<br>
+				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
+methods<br>
+		<b>Located at</b> lib/core/plugins/lib_idn_punycode.php<br>
 	</div>
 
 
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
-	<tr data-order="encode_var_cookie" id="_encode_var_cookie">
+	<tr data-order="__construct" id="___construct">
 
 		<td class="attributes"><code>
-			 public static
+			 public 
 			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_encode_var_cookie">#</a>
-		<code>encode_var_cookie( <span>mixed <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( )</code>
 
 		<div class="description short">
 			
+<p>Constructor</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Constructor</p>
+
 
 
 
@@ -209,28 +228,83 @@ so the code would be easier to maintain.<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="encode_var_post" id="_encode_var_post">
+	<tr data-order="encode" id="_encode">
 
 		<td class="attributes"><code>
-			 public static
-			
+			 public 
+			string
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_encode_var_post">#</a>
-		<code>encode_var_post( <span>mixed <var>$varname</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<a class="anchor" href="#_encode">#</a>
+		<code>encode( <span>string <var>$input</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Encode a domain name or email address to its Punycode version</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Encode a domain name or email address to its Punycode version</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd>Domain name in Unicode to be encoded</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>Punycode representation in ASCII<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="decode" id="_decode">
+
+		<td class="attributes"><code>
+			 public 
+			string
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_decode">#</a>
+		<code>decode( <span>string <var>$input</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Decode a Punycode domain name or email address to its Unicode counterpart</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Decode a Punycode domain name or email address to its Unicode counterpart</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$input</var></dt>
+					<dd>Domain name in Punycode</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>string</code><br>Unicode domain name<br>
+				</div>
 
 
 

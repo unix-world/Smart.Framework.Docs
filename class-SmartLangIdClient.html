@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartHttpUtils | Smart.Framework Documentation :: 2016-10-05 19:27</title>
+	<title>Class SmartLangIdClient | Smart.Framework Documentation :: 2016-10-05 19:27</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?381538277"></script>
 	<script src="elementlist.js?2894130186"></script>
@@ -71,11 +71,11 @@
 						</li>
 				<li><a href="package-Network.FTP.html">Network:FTP</a>
 						</li>
-				<li class="active"><a href="package-Network.HTTP.html">Network:HTTP</a>
+				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
 						</li>
 				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
 						</li>
-				<li><a href="package-Services.LangId.Py.html">Services:LangId-Py</a>
+				<li class="active"><a href="package-Services.LangId.Py.html">Services:LangId-Py</a>
 						</li>
 				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
@@ -88,8 +88,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-SmartHttpClient.html">SmartHttpClient</a></li>
-				<li class="active"><a href="class-SmartHttpUtils.html">SmartHttpUtils</a></li>
+				<li class="active"><a href="class-SmartLangIdClient.html">SmartLangIdClient</a></li>
 			</ul>
 
 
@@ -117,7 +116,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="package-Network.HTTP.html" title="Summary of Network:HTTP"><span>Package</span></a>
+				<a href="package-Services.LangId.Py.html" title="Summary of Services:LangId-Py"><span>Package</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -132,18 +131,36 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class SmartHttpUtils</h1>
+	<h1>Class SmartLangIdClient</h1>
 
 
 	<div class="description">
 	
-<p>Class: Smart HTTP Utils) - provides utils function to work with HTTP
-protocol.</p>
+<p>Class: SmartLangIdClient - provides a LangId.Py Service Client that can be
+used to validate Language / GetLanguage Confidence for a text.</p>
+
+<p>This class can be used just with the DEFAULT settings which must be set in
+etc/config.php: $configs['langid'] or can be used with CUSTOM settings.</p>
 
 <pre>
+
+<span class="php-var">$check_with_default_service</span> = (<span
+class="php-keyword1">array</span>) (<span
+class="php-keyword1">new</span> SmartLangIdClient())-&gt;getLanguageConfidence(<span
+class="php-quote">'Your text to check goes here ...'</span>);
 <span
-class="php-comment">// Usage example:</span>
-Smart::some_method_of_this_class(...);
+class="php-var">$check_with_custom_service</span> = (<span
+class="php-keyword1">array</span>) (<span
+class="php-keyword1">new</span> SmartLangIdClient([ <span
+class="php-quote">'url'</span> =&gt; <span
+class="php-quote">'http://langid.host:9008/detect'</span>, <span
+class="php-quote">'ssl'</span> =&gt; <span class="php-quote">''</span>, <span
+class="php-quote">'auth-user'</span> =&gt; <span
+class="php-quote">''</span>, <span
+class="php-quote">'auth-pass'</span> =&gt; <span
+class="php-quote">''</span> ]))-&gt;getLanguageConfidence(<span
+class="php-quote">'Your text to check goes here ...'</span>);
+
 </pre>
 
 	</div>
@@ -160,47 +177,58 @@ Smart::some_method_of_this_class(...);
 		<b>Final</b><br>
 		
 		
-		<b>Package:</b> <a href="package-Network.HTTP.html">Network:HTTP</a><br>
+		<b>Package:</b> <a href="package-Services.LangId.Py.html">Services:LangId-Py</a><br>
 
 				<b>Version:</b>
-				v.160921<br>
+				v.161005<br>
 				<b>Depends:</b>
-				classes: Smart<br>
+				classes: Smart, SmartHttpClient<br>
 				<b>Hints:</b>
-				It is recommended to use the methods in this class instead of PHP native methods
-whenever is possible because this class will offer Long Term Support and the
-methods will be supported even if the behind PHP methods can change over time,
-so the code would be easier to maintain.<br>
+				If the DEFAULT settings are not available will simply fallback for not using any
+service.<br>
 				<b>Usage:</b>
-				static object: Class::method() - This class provides only STATIC methods<br>
-		<b>Located at</b> lib/framework/lib_http_cli.php<br>
+				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
+methods<br>
+		<b>Located at</b> modules/smart-extra-libs/lib_langid_cli.php<br>
 	</div>
 
 
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
-	<tr data-order="encode_var_cookie" id="_encode_var_cookie">
+	<tr data-order="__construct" id="___construct">
 
 		<td class="attributes"><code>
-			 public static
+			 public 
 			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_encode_var_cookie">#</a>
-		<code>encode_var_cookie( <span>mixed <var>$name</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span>ARRAY <var>$cfg</var> = <span class="php-keyword1">array</span>()</span> )</code>
 
 		<div class="description short">
 			
+<p>Class Constructor - will initiate also the LangId.Py Client with the DEFAULT
+or CUSTOM connection.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Class Constructor - will initiate also the LangId.Py Client with the DEFAULT
+or CUSTOM connection.</p>
 
 
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$cfg</var></dt>
+					<dd>:: &lt;em&gt;OPTIONAL&lt;/em&gt; The Array of Configuration parameters - if not provided
+will use the DEFAULT config from config.php: $configs['langid'].</dd>
+				</dl></div>
 
 
 
@@ -209,28 +237,48 @@ so the code would be easier to maintain.<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="encode_var_post" id="_encode_var_post">
+	<tr data-order="getLanguageConfidence" id="_getLanguageConfidence">
 
 		<td class="attributes"><code>
-			 public static
-			
+			 public 
+			ARRAY
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_encode_var_post">#</a>
-		<code>encode_var_post( <span>mixed <var>$varname</var></span>, <span>mixed <var>$value</var></span> )</code>
+		<a class="anchor" href="#_getLanguageConfidence">#</a>
+		<code>getLanguageConfidence( <span>STRING <var>$the_text</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Checks the Language Confidence by trying to detect the correct language for a
+text using the LangId.Py Service. If LangId.Py is not set in configuration as it
+may not be available will return a negative confidence score and the default
+language: en.</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Checks the Language Confidence by trying to detect the correct language for a
+text using the LangId.Py Service. If LangId.Py is not set in configuration as it
+may not be available will return a negative confidence score and the default
+language: en.</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$the_text</var></dt>
+					<dd>:: The text to be checked</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>:: The LangId.Py detection result: [ service-available, lang-id,
+confidence-score, error-message ]<br>
+				</div>
 
 
 

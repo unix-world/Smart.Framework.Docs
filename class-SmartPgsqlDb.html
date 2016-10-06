@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartPgsqlDb | Smart.Framework Documentation :: 2016-09-27 08:11</title>
+	<title>Class SmartPgsqlDb | Smart.Framework Documentation :: 2016-10-05 19:27</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?3413450810"></script>
-	<script src="elementlist.js?3459129952"></script>
+	<script src="resources/combined.js?381538277"></script>
+	<script src="elementlist.js?2894130186"></script>
 </head>
 
 <body>
@@ -72,6 +72,10 @@
 				<li><a href="package-Network.FTP.html">Network:FTP</a>
 						</li>
 				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
+						</li>
+				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
+						</li>
+				<li><a href="package-Services.LangId.Py.html">Services:LangId-Py</a>
 						</li>
 				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
@@ -221,7 +225,7 @@ class="php-num">99</span>]);
 		<b>Package:</b> <a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a><br>
 
 				<b>Version:</b>
-				v.160915<br>
+				v.161003<br>
 				<b>Depends:</b>
 				extensions: PHP PostgreSQL ; classes: Smart, SmartUnicode, SmartUtils<br>
 				<b>Hints:</b>
@@ -928,18 +932,18 @@ easy debugging</dd>
 		<div class="description short">
 			
 <p>Create Escaped Write SQL Statements from Data - to be used with PgSQL for:
-INSERT ; INSERT-SUBSELECT ; UPDATE ; IN-SELECT To be used with: write_data() or
-write_igdata() to build an INSERT / INSERT (SELECT) / UPDATE / SELECT IN query
-from an associative array</p>
+INSERT ; INSERT-SUBSELECT ; UPDATE ; IN-SELECT ; DATA-ARRAY To be used with:
+write_data() or write_igdata() to build an INSERT / INSERT (SELECT) / UPDATE /
+SELECT IN query from an associative array</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
 <p>Create Escaped Write SQL Statements from Data - to be used with PgSQL for:
-INSERT ; INSERT-SUBSELECT ; UPDATE ; IN-SELECT To be used with: write_data() or
-write_igdata() to build an INSERT / INSERT (SELECT) / UPDATE / SELECT IN query
-from an associative array</p>
+INSERT ; INSERT-SUBSELECT ; UPDATE ; IN-SELECT ; DATA-ARRAY To be used with:
+write_data() or write_igdata() to build an INSERT / INSERT (SELECT) / UPDATE /
+SELECT IN query from an associative array</p>
 
 
 
@@ -949,7 +953,7 @@ from an associative array</p>
 					<dd>:: array of form data as $arr=array(); $arr['field1'] = 'a string';
 $arr['field2'] = 100;</dd>
 					<dt><var>$mode</var></dt>
-					<dd>:: mode: 'insert' | 'insert-subselect' | 'update' | 'in-select'</dd>
+					<dd>:: mode: 'insert' | 'insert-subselect' | 'update' | 'in-select', 'data-array'</dd>
 					<dt><var>$y_connection</var></dt>
 					<dd>:: the connection to pgsql server</dd>
 				</dl></div>
@@ -1089,7 +1093,7 @@ unpredictable if mixing several statements at once !</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-09-27 08:11</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2016-10-05 19:27</a>
 	</div>
 </div>
 </div>
