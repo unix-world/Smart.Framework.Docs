@@ -24,7 +24,7 @@ YUI.add("yuidoc-meta", function(Y) {
         {
             "displayName": "Smart.Framework/JS/Browser",
             "name": "Smart.Framework_JS_Browser",
-            "description": "CLASS :: Browser Test Compliance"
+            "description": "CLASS :: Browser Utils"
         },
         {
             "displayName": "Smart.Framework/JS/Core",

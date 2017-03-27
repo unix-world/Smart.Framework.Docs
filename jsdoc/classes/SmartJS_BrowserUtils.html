@@ -231,7 +231,7 @@
                                     <span class="flag static">static</span>
                             </li>
                             <li class="index-item method">
-                                <a href="#method_textArea_Limit">textArea_Limit</a>
+                                <a href="#method_textArea_addLimit">textArea_addLimit</a>
 
                                     <span class="flag static">static</span>
                             </li>
@@ -2334,8 +2334,8 @@ This function can be called by a button, a link or other HTML elements at onClic
 
 
 </div>
-<div id="method_textArea_Limit" class="method item">
-    <span class="method-name">textArea_Limit</span>
+<div id="method_textArea_addLimit" class="method item">
+    <span class="method-name">textArea_addLimit</span>
 
 
 
@@ -2348,9 +2348,6 @@ This function can be called by a button, a link or other HTML elements at onClic
             <span class="paren">(</span><ul class="args-list inline commas">
                 <li class="arg">
                         <code>y_field</code>
-                </li>
-                <li class="arg">
-                        <code>y_countfield</code>
                 </li>
                 <li class="arg">
                         <code>y_maxlimit</code>
@@ -2368,7 +2365,7 @@ This function can be called by a button, a link or other HTML elements at onClic
     </div>
 
     <div class="description">
-        <p>Force text limit on TextArea with attached CounterField</p>
+        <p>Force a text limit on a TextArea (will also attach a CounterField)</p>
 
     </div>
 
@@ -2383,17 +2380,6 @@ This function can be called by a button, a link or other HTML elements at onClic
 
                     <div class="param-description">
                         <p>The TextArea field name</p>
-
-                    </div>
-
-                </li>
-                <li class="param">
-                        <code class="param-name">y_countfield</code>
-                        <span class="type">String</span>
-
-
-                    <div class="param-description">
-                        <p>The text counter field name</p>
 
                     </div>
 
@@ -2669,6 +2655,9 @@ Example: onKeyDown = SmartJS_BrowserUtils.catch_TABKey(event);</p>
                 <li class="arg">
                         <code>evcode</code>
                 </li>
+                <li class="arg">
+                        <code>everrcode</code>
+                </li>
             </ul><span class="paren">)</span>
         </div>
 
@@ -2743,6 +2732,17 @@ This function expects a json answer with the following structure: see more in fr
 
                     <div class="param-description">
                         <p><em>Optional</em> the JS Code to execute on SUCCESS answer (before anything else)</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">everrcode</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p><em>Optional</em> the JS Code to execute on ERROR answer (before anything else)</p>
 
                     </div>
 

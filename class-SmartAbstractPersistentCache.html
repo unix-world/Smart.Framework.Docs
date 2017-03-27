@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartPersistentCache | Smart.Framework Documentation :: 2017-03-27 14:17</title>
+	<title>Class SmartAbstractPersistentCache | Smart.Framework Documentation :: 2017-03-27 14:17</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3879458977"></script>
 	<script src="elementlist.js?181461627"></script>
@@ -88,9 +88,9 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-SmartAbstractPersistentCache.html">SmartAbstractPersistentCache</a></li>
+				<li class="active"><a href="class-SmartAbstractPersistentCache.html">SmartAbstractPersistentCache</a></li>
 				<li><a href="class-SmartCache.html">SmartCache</a></li>
-				<li class="active"><a href="class-SmartPersistentCache.html">SmartPersistentCache</a></li>
+				<li><a href="class-SmartPersistentCache.html">SmartPersistentCache</a></li>
 			</ul>
 
 
@@ -133,44 +133,27 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class SmartPersistentCache</h1>
+	<h1>Class SmartAbstractPersistentCache</h1>
 
 
 	<div class="description">
 	
-<p>Class: SmartPersistentCache (Redis based Persistent Cache adapter) - provides
-a persistent Cache (in-Redis-Memory), that can be shared and/or reused between
-multiple PHP executions. If Redis is not available it will be replaced by the
-Blackhole Persistent Cache adapter that will provide the compatibility adapter
-for the case there is no real Persistent Cache available.</p>
+<p>Class: Smart.Framework Abstract Persistent Cache. The backends used for
+Persistent Cache must be very fast, must support large keys and must supply key
+expiration by time. If the key expiration is not supported natively, then a
+custom function must be created to delete expired keys.</p>
 
-<p>Requires Redis to be set-up in config properly. This cache type is persistent
-will keep the cached values in Redis between multiple PHP executions. The key
-names must be carefully choosen to avoid unwanted conflicts with another client
-instances, as this kind of cache can be shared between multiple execution but
-also between multiple client instances. This cache will not reset on each
-request except if the key values are programatically unset, or the key values
-are already expired in Redis. It is intended for advanced optimizations to
-provide a persistent cache layer to the App.</p>
+<p>It must contain ONLY public functions to avoid late state binding (self:: vs
+static::)</p>
 
 	</div>
 
-	<dl class="tree">
-		<dd style="padding-left:0px">
-			<a href="class-SmartAbstractPersistentCache.html"><span>SmartAbstractPersistentCache</span></a>
-			
-			
-			
-		</dd>
-		<dd style="padding-left:30px">
-			<img src="resources/inherit.png" alt="Extended by">
-<b><span>SmartPersistentCache</span></b>			
-			
-			
-		</dd>
-	</dl>
 
 
+	<div>
+		<h4>Direct known subclasses</h4>
+			<a href="class-SmartPersistentCache.html">SmartPersistentCache</a>
+	</div>
 
 
 
@@ -178,18 +161,16 @@ provide a persistent cache layer to the App.</p>
 
 
 	<div class="info">
-		<b>Final</b><br>
+		<b>Abstract</b><br>
 		
 		
 		<b>Package:</b> <a href="package-Caching.html">Caching</a><br>
 
 				<b>Version:</b>
-				v.170307<br>
+				v.170223<br>
 				<b>Depends:</b>
 				-<br>
-				<b>Usage:</b>
-				static object: Class::method() - This class provides only STATIC methods<br>
-		<b>Located at</b> lib/app/persistent-cache-redis.php<br>
+		<b>Located at</b> lib/framework/lib_caching.php<br>
 	</div>
 
 
@@ -229,8 +210,6 @@ provide a persistent cache layer to the App.</p>
 
 
 
-				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-SmartAbstractPersistentCache.html#_isActive">SmartAbstractPersistentCache::isActive()</a></code></div>
 
 		</div>
 		</div></td>
@@ -250,7 +229,7 @@ provide a persistent cache layer to the App.</p>
 
 		<div class="description short">
 			
-<p>Check if the persistent Cache is Memory Based This function must ALWAYS be
+<p>Check if the persistent Cache is Memory Based. This function must ALWAYS be
 used in conjunction with isActive() as it will return TRUE just if the backend
 is a Memory Based one and will not check if Backed is Active or not ...</p>
 
@@ -258,7 +237,7 @@ is a Memory Based one and will not check if Backed is Active or not ...</p>
 
 		<div class="description detailed hidden">
 			
-<p>Check if the persistent Cache is Memory Based This function must ALWAYS be
+<p>Check if the persistent Cache is Memory Based. This function must ALWAYS be
 used in conjunction with isActive() as it will return TRUE just if the backend
 is a Memory Based one and will not check if Backed is Active or not ...</p>
 
@@ -273,8 +252,6 @@ Cache)<br>
 
 
 
-				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-SmartAbstractPersistentCache.html#_isMemoryBased">SmartAbstractPersistentCache::isMemoryBased()</a></code></div>
 
 		</div>
 		</div></td>
@@ -319,8 +296,6 @@ Cache)<br>
 
 
 
-				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-SmartAbstractPersistentCache.html#_keyExists">SmartAbstractPersistentCache::keyExists()</a></code></div>
 
 		</div>
 		</div></td>
@@ -348,10 +323,6 @@ Cache)<br>
 			
 <p>Get a Key from the persistent Cache</p>
 
-<p>By default only numbers and strings can be stored as flat values in Redis. To
-retrieve complex variables like Arrays, use
-SmartPersistentCache::varUncompress() after using this function.</p>
-
 
 
 				<h4>Parameters</h4>
@@ -369,8 +340,6 @@ SmartPersistentCache::varUncompress() after using this function.</p>
 
 
 
-				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-SmartAbstractPersistentCache.html#_getKey">SmartAbstractPersistentCache::getKey()</a></code></div>
 
 		</div>
 		</div></td>
@@ -398,10 +367,6 @@ SmartPersistentCache::varUncompress() after using this function.</p>
 			
 <p>Set a Key into the persistent Cache</p>
 
-<p>By default only numbers and strings can be stored as flat values in Redis. To
-store complex variables like Arrays, use SmartPersistentCache::varCompress()
-before using this function.</p>
-
 
 
 				<h4>Parameters</h4>
@@ -423,8 +388,6 @@ before using this function.</p>
 
 
 
-				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-SmartAbstractPersistentCache.html#_setKey">SmartAbstractPersistentCache::setKey()</a></code></div>
 
 		</div>
 		</div></td>
@@ -469,28 +432,338 @@ before using this function.</p>
 
 
 
-				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-SmartAbstractPersistentCache.html#_unsetKey">SmartAbstractPersistentCache::unsetKey()</a></code></div>
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validateRealm" id="_validateRealm">
+
+		<td class="attributes"><code>
+			 public static
+			BOOLEAN
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validateRealm">#</a>
+		<code>validateRealm( <span>STRING <var>$y_realm</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validate persistent Cache Realm (can be empty or must comply with
+self::safeKey() charset)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validate persistent Cache Realm (can be empty or must comply with
+self::safeKey() charset)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_realm</var></dt>
+					<dd>The Cache Realm</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOLEAN</code><br>Returns True if the realm is valid or False if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validateKey" id="_validateKey">
+
+		<td class="attributes"><code>
+			 public static
+			BOOLEAN
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validateKey">#</a>
+		<code>validateKey( <span>STRING <var>$y_key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validate persistent Cache Realm (cannot be empty and must comply with
+self::safeKey() charset)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validate persistent Cache Realm (cannot be empty and must comply with
+self::safeKey() charset)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_key</var></dt>
+					<dd>The Cache Key</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOLEAN</code><br>Returns True if the key is valid or False if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="safeKey" id="_safeKey">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_safeKey">#</a>
+		<code>safeKey( <span>STRING <var>$y_key_or_realm</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Prepare a persistent Cache SAFE Key or Realm</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Prepare a persistent Cache SAFE Key or Realm</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_key_or_realm</var></dt>
+					<dd>The Cache Key or Realm</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>Returns the safe prepared Key or Realm<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="varEncode" id="_varEncode">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_varEncode">#</a>
+		<code>varEncode( <span>MIXED <var>$y_var</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Encode a MIXED variable (array / string / number) to be stored in Persistent
+Cache To reverse encoding use varDecode()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Encode a MIXED variable (array / string / number) to be stored in Persistent
+Cache To reverse encoding use varDecode()</p>
+
+<p>By default only numbers and strings can be stored as flat values. To store
+complex variables like Arrays, use this function before setKey() which will
+serialize the var as Json standard.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_var</var></dt>
+					<dd>The Variable to be encoded</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>Returns the safe serialized variable content<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="varDecode" id="_varDecode">
+
+		<td class="attributes"><code>
+			 public static
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_varDecode">#</a>
+		<code>varDecode( <span>STRING <var>$y_encoded_var</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Decode a previous encoded MIXED variable (array / string / number) that was
+stored in Persistent Cache To be used for variables previous encoded using
+varEncode()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Decode a previous encoded MIXED variable (array / string / number) that was
+stored in Persistent Cache To be used for variables previous encoded using
+varEncode()</p>
+
+<p>By default only numbers and strings can be stored as flat values. To retrieve
+complex variables like Arrays, use this function after getKey() which will
+unserialize the var from Json standard.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_encoded_var</var></dt>
+					<dd>The encoded variable</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>Returns the original restored type and value of that variable<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="varCompress" id="_varCompress">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_varCompress">#</a>
+		<code>varCompress( <span>MIXED <var>$y_var</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Compress + Encode a MIXED variable (array / string / number) to be stored in
+Persistent Cache To reverse the compressing + encoding use varUncompress()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Compress + Encode a MIXED variable (array / string / number) to be stored in
+Persistent Cache To reverse the compressing + encoding use varUncompress()</p>
+
+<p>Use this function to store any type of variables: numbers, strings or arrays
+in a safe encoded + compressed format. By default the variable will be: encoded
+(serialized as Json), compressed (gzcompress/6/deflate) and finally
+B64-Encoded.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_var</var></dt>
+					<dd>The Variable to be encoded + compressed</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>Returns the safe serialized + compressed variable content<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="varUncompress" id="_varUncompress">
+
+		<td class="attributes"><code>
+			 public static
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_varUncompress">#</a>
+		<code>varUncompress( <span>STRING <var>$y_cache_arch_var</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Uncompress + Decode a MIXED variable (array / string / number) to be stored
+in Persistent Cache</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Uncompress + Decode a MIXED variable (array / string / number) to be stored
+in Persistent Cache</p>
+
+<p>Use this function to retrieve any type of variables: numbers, strings or
+arrays that were previous safe encoded + compressed. By default the variable
+will be: B64-Decoded, uncompressed (gzcompress/inflate) and finally decoded
+(unserialized from Json).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_cache_arch_var</var></dt>
+					<dd>The compressed + encoded variable</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>Returns the original restored type and value of that variable<br>
+				</div>
+
+
+
 
 		</div>
 		</div></td>
 	</tr>
 	</table>
 
-	<table class="summary inherited">
-	<caption>Methods inherited from <a href="class-SmartAbstractPersistentCache.html#methods">SmartAbstractPersistentCache</a></caption>
-	<tr>
-		<td><code>
-			<a href="class-SmartAbstractPersistentCache.html#_safeKey">safeKey()</a>, 
-			<a href="class-SmartAbstractPersistentCache.html#_validateKey">validateKey()</a>, 
-			<a href="class-SmartAbstractPersistentCache.html#_validateRealm">validateRealm()</a>, 
-			<a href="class-SmartAbstractPersistentCache.html#_varCompress">varCompress()</a>, 
-			<a href="class-SmartAbstractPersistentCache.html#_varDecode">varDecode()</a>, 
-			<a href="class-SmartAbstractPersistentCache.html#_varEncode">varEncode()</a>, 
-			<a href="class-SmartAbstractPersistentCache.html#_varUncompress">varUncompress()</a>
-		</code></td>
-	</tr>
-	</table>
 
 
 

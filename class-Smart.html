@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class Smart | Smart.Framework Documentation :: 2017-02-22 08:37</title>
+	<title>Class Smart | Smart.Framework Documentation :: 2017-03-27 14:17</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?2894130186"></script>
+	<script src="elementlist.js?181461627"></script>
 </head>
 
 <body>
@@ -166,7 +166,7 @@ Smart::some_method_of_this_class(...);
 		<b>Package:</b> <a href="package-Base.html">Base</a><br>
 
 				<b>Version:</b>
-				v.161005<br>
+				v.170327<br>
 				<b>Depends:</b>
 				extensions: PHP XML, PHP JSON ; classes: SmartUnicode<br>
 				<b>Hints:</b>
@@ -848,7 +848,7 @@ sometimes make sense ...)</dd>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>MIXED</code><br>:: The PHP native Variable<br>
+					<code>MIXED</code><br>:: The PHP native Variable: NULL ; INT ; NUMERIC ; STRING ; ARRAY<br>
 				</div>
 
 
@@ -1196,13 +1196,13 @@ provided<br>
 
 		<div class="description short">
 			
-<p>Array Get By Key Path</p>
+<p>Array Get (value) By Key Path (case sensitive)</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Array Get By Key Path</p>
+<p>Array Get (value) By Key Path (case sensitive)</p>
 
 
 
@@ -1211,7 +1211,7 @@ provided<br>
 					<dt><var>$y_arr</var></dt>
 					<dd>:: The input array</dd>
 					<dt><var>$y_key_path</var></dt>
-					<dd>:: The composed key path by levels (Ex: key1.key2)</dd>
+					<dd>:: The composed key path by levels (Ex: key1.key2) :: case-sensitive</dd>
 					<dt><var>$y_path_separator</var></dt>
 					<dd>:: The key path separator (Example: .)</dd>
 				</dl></div>
@@ -1219,6 +1219,52 @@ provided<br>
 				<h4>Returns</h4>
 				<div class="list">
 					<code>MIXED</code><br>[ NUMERIC / STRING / ARRAY ] :: The array value of the specified key path<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="array_test_key_by_path_exists" id="_array_test_key_by_path_exists">
+
+		<td class="attributes"><code>
+			 public static
+			BOOL
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_array_test_key_by_path_exists">#</a>
+		<code>array_test_key_by_path_exists( <span>ARRAY <var>$y_arr</var></span>, <span>STRING <var>$y_key_path</var></span>, <span>STRING <var>$y_path_separator</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Array Test if Key Exist By (Key) Path (case sensitive)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Array Test if Key Exist By (Key) Path (case sensitive)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_arr</var></dt>
+					<dd>:: The input array</dd>
+					<dt><var>$y_key_path</var></dt>
+					<dd>:: The composed key path by levels (Ex: key1.key2) :: case-sensitive</dd>
+					<dt><var>$y_path_separator</var></dt>
+					<dd>:: The key path separator (Example: .)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if Key Exist / FALSE if NOT<br>
 				</div>
 
 
@@ -1733,6 +1779,50 @@ variables ... ALLOWED CHARS: [a-z0-9] _</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="normalize_spaces" id="_normalize_spaces">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_normalize_spaces">#</a>
+		<code>normalize_spaces( <span>STRING <var>$y_txt</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Normalize Spaces This will replace: "\r", "\n", "\t", "\x0B", "\0", "\f" with
+normal space ' '</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Normalize Spaces This will replace: "\r", "\n", "\t", "\x0B", "\0", "\f" with
+normal space ' '</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_txt</var></dt>
+					<dd>:: Text to be normalized</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The normalized text<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="check_int_number_overflow_max" id="_check_int_number_overflow_max">
 
 		<td class="attributes"><code>
@@ -1937,7 +2027,7 @@ provided will append it.</p>
 <p>Generates a random string (base36) UUID of 10 characters [0..9A..Z] ;
 Example: 0G1G74W362 . Intended usage: Medium scale / Sequential / Non-Repeating
 (never repeats in a period cycle of 1000 years). This is sequential, date and
-time with miliseconds and a randomizer factor to ensure an ~ unique ID.
+time based with miliseconds and a randomizer factor to ensure an ~ unique ID.
 Duplicate values can occur just in the same milisecond (1000 miliseconds = 1
 second) with a chance of ~ 3% Values: 34k / sec ; 200k / min ; 120 mil / hour
 .</p>
@@ -1949,31 +2039,32 @@ second) with a chance of ~ 3% Values: 34k / sec ; 200k / min ; 120 mil / hour
 <p>Generates a random string (base36) UUID of 10 characters [0..9A..Z] ;
 Example: 0G1G74W362 . Intended usage: Medium scale / Sequential / Non-Repeating
 (never repeats in a period cycle of 1000 years). This is sequential, date and
-time with miliseconds and a randomizer factor to ensure an ~ unique ID.
+time based with miliseconds and a randomizer factor to ensure an ~ unique ID.
 Duplicate values can occur just in the same milisecond (1000 miliseconds = 1
 second) with a chance of ~ 3% Values: 34k / sec ; 200k / min ; 120 mil / hour
 .</p>
 
-<p>Advantages: This is one of the most powerful UUID systems as the ID will
-never repeat in a huge period of time. Compared with the classic autoincremental
-IDs this is much better as on the next cycle will try to fill up available
-values but also because the next cycle occur after so many time there is no risk
-to re-use some IDs which were deactivated prior and generating confusions with
-previous records. The classic autoincremental systems can NOT do this and more,
-once the max ID is reached the DB table is blocked as autoincremental records
-reach the max ID !!!</p>
+<p>Advantages: This is one of the most powerful UUID system as the ID will never
+repeat in a huge period of time. Compared with the classic autoincremental IDs
+this UUID is much better as on the next cycle can fill up unallocated values and
+more, because the next cycle occur after so many time there is no risk to re-use
+some IDs if they were previous deleted or deactivated in terms of generating
+confusions with previous records. The classic autoincremental systems can NOT do
+this and also, once the max ID is reached the DB table is blocked as
+autoincremental records reach the max ID !!!</p>
 
-<p>Disadvantages: The database libraries before alocating such ID must be able
-to retry within a cycle with double check, and using a pre-alocation table since
-the IDs are time based and if in the same milisecond more than 1 inserts are
-allocated they can conflict each other when more than one will generate the same
-ID !</p>
+<p>Disadvantages: The database connectors require more complexity and must be
+able to retry within a cycle with double check before alocating, such UUIDs and
+must use a pre-alocation table since the UUIDs are time based and if in the same
+milisecond more than 1 inserts is allocated they can conflict each other without
+such pre-alocation !</p>
 
 <p>Smart.Framework implements the retry + cycle + pre-alocating table as a
-standard feature in the PostgreSQL library (plugin) bundled as PostgreSQL can do
-DDLs in transactions. Using such ID with MySQL would be tricky as DDLs will
-break the transactions ;-). And for SQLite it does not make sense since SQLite
-is designed for small DBs not need such high scalability ...</p>
+standard feature in the bundled PostgreSQL library (connector/plugin) as
+PostgreSQL can do DDLs in transactions. Using such functionality with MySQL
+would be tricky as DDLs will break the transactions ;-). And for SQLite it does
+not make sense since SQLite is designed for small DBs thus no need for such high
+scalability ...</p>
 
 
 
@@ -2524,7 +2615,7 @@ Code).</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-02-22 08:37</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-03-27 14:17</a>
 	</div>
 </div>
 </div>

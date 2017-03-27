@@ -1,91 +1,44 @@
 {
     "project": {},
     "files": {
-        "smart-framework.js-docs/src/arch_utils.js": {
-            "name": "smart-framework.js-docs/src/arch_utils.js",
+        "smart-framework.js-docs/src/smart-framework.js": {
+            "name": "smart-framework.js-docs/src/smart-framework.js",
             "modules": {
-                "Smart.Framework/JS/Archivers": 1
-            },
-            "classes": {
-                "SmartJS_Archiver_LZS": 1
-            },
-            "fors": {},
-            "namespaces": {}
-        },
-        "smart-framework.js-docs/src/browser_check.js": {
-            "name": "smart-framework.js-docs/src/browser_check.js",
-            "modules": {
-                "Smart.Framework/JS/Browser": 1
-            },
-            "classes": {
-                "Test_Browser_Compliance": 1
-            },
-            "fors": {},
-            "namespaces": {}
-        },
-        "smart-framework.js-docs/src/browser_utils.js": {
-            "name": "smart-framework.js-docs/src/browser_utils.js",
-            "modules": {},
-            "classes": {
-                "SmartJS_BrowserUtils": 1
-            },
-            "fors": {},
-            "namespaces": {}
-        },
-        "smart-framework.js-docs/src/core_utils.js": {
-            "name": "smart-framework.js-docs/src/core_utils.js",
-            "modules": {
-                "Smart.Framework/JS/Core": 1
-            },
-            "classes": {
-                "SmartJS_CoreUtils": 1
-            },
-            "fors": {},
-            "namespaces": {}
-        },
-        "smart-framework.js-docs/src/crypt_utils.js": {
-            "name": "smart-framework.js-docs/src/crypt_utils.js",
-            "modules": {
+                "Smart.Framework/JS/Browser": 1,
+                "Smart.Framework/JS/Core": 1,
+                "Smart.Framework/JS/Archivers": 1,
                 "Smart.Framework/JS/Crypto": 1
             },
             "classes": {
+                "Test_Browser_Compliance": 1,
+                "SmartJS_CoreUtils": 1,
+                "SmartJS_Archiver_LZS": 1,
                 "SmartJS_Base64": 1,
                 "SmartJS_CryptoHash": 1,
-                "SmartJS_CryptoBlowfish": 1
+                "SmartJS_CryptoBlowfish": 1,
+                "SmartJS_BrowserUtils": 1
             },
             "fors": {},
             "namespaces": {}
         }
     },
     "modules": {
-        "Smart.Framework/JS/Archivers": {
-            "name": "Smart.Framework/JS/Archivers",
-            "submodules": {},
-            "elements": {},
-            "classes": {
-                "SmartJS_Archiver_LZS": 1
-            },
-            "fors": {},
-            "namespaces": {},
-            "tag": "module",
-            "file": "smart-framework.js-docs/src/arch_utils.js",
-            "line": 18,
-            "description": "CLASS :: LZS Archiver / Unarchiver"
-        },
         "Smart.Framework/JS/Browser": {
             "name": "Smart.Framework/JS/Browser",
-            "submodules": {},
+            "submodules": {
+                "undefined": 1
+            },
             "elements": {},
             "classes": {
-                "Test_Browser_Compliance": 1,
-                "SmartJS_BrowserUtils": 1
+                "SmartJS_BrowserUtils": 1,
+                "Test_Browser_Compliance": 1
             },
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 32,
-            "description": "CLASS :: Browser Test Compliance"
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 3792,
+            "description": "CLASS :: Browser Utils"
         },
         "Smart.Framework/JS/Core": {
             "name": "Smart.Framework/JS/Core",
@@ -97,9 +50,23 @@
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 11,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 113,
             "description": "CLASS :: Core Utils"
+        },
+        "Smart.Framework/JS/Archivers": {
+            "name": "Smart.Framework/JS/Archivers",
+            "submodules": {},
+            "elements": {},
+            "classes": {
+                "SmartJS_Archiver_LZS": 1
+            },
+            "fors": {},
+            "namespaces": {},
+            "tag": "module",
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 1160,
+            "description": "CLASS :: LZS Archiver / Unarchiver"
         },
         "Smart.Framework/JS/Crypto": {
             "name": "Smart.Framework/JS/Crypto",
@@ -113,26 +80,12 @@
             "fors": {},
             "namespaces": {},
             "tag": "module",
-            "file": "smart-framework.js-docs/src/crypt_utils.js",
-            "line": 887,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 2746,
             "description": "CLASS :: Base64 Encode / Decode"
         }
     },
     "classes": {
-        "SmartJS_Archiver_LZS": {
-            "name": "SmartJS_Archiver_LZS",
-            "shortname": "SmartJS_Archiver_LZS",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Smart.Framework/JS/Archivers",
-            "file": "smart-framework.js-docs/src/arch_utils.js",
-            "line": 18,
-            "description": "CLASS :: LZS Archiver / Unarchiver",
-            "static": 1
-        },
         "Test_Browser_Compliance": {
             "name": "Test_Browser_Compliance",
             "shortname": "Test_Browser_Compliance",
@@ -142,25 +95,9 @@
             "plugin_for": [],
             "extension_for": [],
             "module": "Smart.Framework/JS/Browser",
-            "namespace": "",
-            "file": "smart-framework.js-docs/src/browser_check.js",
-            "line": 11,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 18,
             "description": "CLASS :: Browser Test Compliance",
-            "static": 1
-        },
-        "SmartJS_BrowserUtils": {
-            "name": "SmartJS_BrowserUtils",
-            "shortname": "SmartJS_BrowserUtils",
-            "classitems": [],
-            "plugins": [],
-            "extensions": [],
-            "plugin_for": [],
-            "extension_for": [],
-            "module": "Smart.Framework/JS/Browser",
-            "namespace": "",
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 32,
-            "description": "CLASS :: Browser Utils",
             "static": 1
         },
         "SmartJS_CoreUtils": {
@@ -173,9 +110,24 @@
             "extension_for": [],
             "module": "Smart.Framework/JS/Core",
             "namespace": "",
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 11,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 113,
             "description": "CLASS :: Core Utils",
+            "static": 1
+        },
+        "SmartJS_Archiver_LZS": {
+            "name": "SmartJS_Archiver_LZS",
+            "shortname": "SmartJS_Archiver_LZS",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Smart.Framework/JS/Archivers",
+            "namespace": "",
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 1160,
+            "description": "CLASS :: LZS Archiver / Unarchiver",
             "static": 1
         },
         "SmartJS_Base64": {
@@ -188,8 +140,8 @@
             "extension_for": [],
             "module": "Smart.Framework/JS/Crypto",
             "namespace": "",
-            "file": "smart-framework.js-docs/src/crypt_utils.js",
-            "line": 52,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 1911,
             "description": "CLASS :: Base64 Encode / Decode",
             "static": 1
         },
@@ -203,8 +155,8 @@
             "extension_for": [],
             "module": "Smart.Framework/JS/Crypto",
             "namespace": "",
-            "file": "smart-framework.js-docs/src/crypt_utils.js",
-            "line": 197,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 2056,
             "description": "CLASS :: Hash Crypto: MD5 / SHA1 / SHA512",
             "static": 1
         },
@@ -218,17 +170,611 @@
             "extension_for": [],
             "module": "Smart.Framework/JS/Crypto",
             "namespace": "",
-            "file": "smart-framework.js-docs/src/crypt_utils.js",
-            "line": 887,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 2746,
             "description": "CLASS :: Blowfish (CBC) :: encrypt / decrypt",
+            "static": 1
+        },
+        "SmartJS_BrowserUtils": {
+            "name": "SmartJS_BrowserUtils",
+            "shortname": "SmartJS_BrowserUtils",
+            "classitems": [],
+            "plugins": [],
+            "extensions": [],
+            "plugin_for": [],
+            "extension_for": [],
+            "module": "Smart.Framework/JS/Browser",
+            "namespace": "",
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 3792,
+            "description": "CLASS :: Browser Utils",
             "static": 1
         }
     },
     "elements": {},
     "classitems": [
         {
-            "file": "smart-framework.js-docs/src/arch_utils.js",
-            "line": 38,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 31,
+            "description": "Detect if a Browser support Cookies or have the Cookies enabled.\nIf fail, an alert will be shown.",
+            "itemtype": "method",
+            "name": "checkCookies",
+            "static": 1,
+            "class": "Test_Browser_Compliance",
+            "module": "Smart.Framework/JS/Browser"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 63,
+            "description": "Detect if the Internet Explorer matches minimum required version: at least IE9.\nIf fail, an alert will be shown.",
+            "itemtype": "method",
+            "name": "checkIEVersion",
+            "static": 1,
+            "class": "Test_Browser_Compliance",
+            "module": "Smart.Framework/JS/Browser"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 128,
+            "description": "Trim a string (at begining or end by any whitespace: space \\ n \\ r \\ t)",
+            "itemtype": "method",
+            "name": "stringTrim",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "The string to be trimmed",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The trimmed string",
+                "type": "String"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 150,
+            "description": "Split string by comma with trimming pre/post",
+            "itemtype": "method",
+            "name": "stringSplitbyComma",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "The string to be splitted by , (comma)",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The array with string parts splitted",
+                "type": "Array"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 173,
+            "description": "Split string by semicolon with trimming pre/post",
+            "itemtype": "method",
+            "name": "stringSplitbySemicolon",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "The string to be splitted by ; (semicolon)",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The array with string parts splitted",
+                "type": "Array"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 196,
+            "description": "Replace all occurences in a string - Case Sensitive",
+            "itemtype": "method",
+            "name": "stringReplaceAll",
+            "static": 1,
+            "params": [
+                {
+                    "name": "token",
+                    "description": "The string part to be replaced",
+                    "type": "String"
+                },
+                {
+                    "name": "newToken",
+                    "description": "The string part replacement",
+                    "type": "String"
+                },
+                {
+                    "name": "str",
+                    "description": "The string where to do the replacements",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The processed string",
+                "type": "String"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 220,
+            "description": "Replace all occurences in a string - Case Insensitive",
+            "itemtype": "method",
+            "name": "stringIReplaceAll",
+            "static": 1,
+            "params": [
+                {
+                    "name": "token",
+                    "description": "The string part to be replaced",
+                    "type": "String"
+                },
+                {
+                    "name": "newToken",
+                    "description": "The string part replacement",
+                    "type": "String"
+                },
+                {
+                    "name": "str",
+                    "description": "The string where to do the replacements",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The processed string",
+                "type": "String"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 256,
+            "description": "Get the first element from an Array",
+            "itemtype": "method",
+            "name": "arrayGetFirst",
+            "static": 1,
+            "params": [
+                {
+                    "name": "arr",
+                    "description": "The array to be used",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "The first element from the array",
+                "type": "Mixed"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 275,
+            "description": "Get the last element from an Array",
+            "itemtype": "method",
+            "name": "arrayGetLast",
+            "static": 1,
+            "params": [
+                {
+                    "name": "arr",
+                    "description": "The array to be used",
+                    "type": "Array"
+                }
+            ],
+            "return": {
+                "description": "The last element from the array",
+                "type": "Mixed"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 294,
+            "description": "Format a number as INTEGER",
+            "itemtype": "method",
+            "name": "format_number_int",
+            "static": 1,
+            "params": [
+                {
+                    "name": "y_number",
+                    "description": "A numeric value",
+                    "type": "Numeric"
+                },
+                {
+                    "name": "y_allow_negatives",
+                    "description": "If TRUE will allow negative values else will return just positive (unsigned) values",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "An integer number",
+                "type": "Integer"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 335,
+            "description": "Format a number as DECIMAL",
+            "itemtype": "method",
+            "name": "format_number_dec",
+            "static": 1,
+            "params": [
+                {
+                    "name": "y_number",
+                    "description": "A numeric value",
+                    "type": "Numeric"
+                },
+                {
+                    "name": "y_decimals",
+                    "description": "The number of decimal to use (between 1 and 4)",
+                    "type": "Integer"
+                },
+                {
+                    "name": "y_allow_negatives",
+                    "description": "*Optional* If TRUE will allow negative values else will return just positive (unsigned) values",
+                    "type": "Boolean"
+                },
+                {
+                    "name": "y_keep_trailing_zeroes",
+                    "description": "*Optional* If set to TRUE will keep trailing zeroes, otherwise will discard them",
+                    "type": "Boolean"
+                }
+            ],
+            "return": {
+                "description": "A decimal number",
+                "type": "Integer"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 393,
+            "description": "Add the Thousands Separator (comma ,) to a number",
+            "itemtype": "method",
+            "name": "add_number_ThousandsSeparator",
+            "static": 1,
+            "params": [
+                {
+                    "name": "num",
+                    "description": "The number to be formatted",
+                    "type": "Numeric"
+                }
+            ],
+            "return": {
+                "description": "The formatted number as string with comma as thousands separator if apply (will keep the . dot as decimal separator if apply)",
+                "type": "String"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 409,
+            "description": "Safe escape URL Variable (using RFC3986 standards to be full Unicode compliant).\nThis is a shortcut to the encodeURIComponent() to provide a standard into Smart.Framework/JS.",
+            "itemtype": "method",
+            "name": "escape_url",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "The URL variable value to be escaped",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The escaped URL variable",
+                "type": "String"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 479,
+            "description": "Convert special characters to HTML entities.\nThis is like the Smart::escape_html() from the PHP Smart.Framework.\nThese values will be converted to safe HTML entities: < > & \"",
+            "itemtype": "method",
+            "name": "escape_html",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "The string to be escaped",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The safe escaped string to be injected in HTML code",
+                "type": "String"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 496,
+            "description": "Convert special characters to escaped entities for safe use with Javascript Strings.\nThis is like the Smart::escape_js() from the PHP Smart.Framework.",
+            "itemtype": "method",
+            "name": "escape_js",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "The string to be escaped",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The escaped string using the json encode standard to be injected between single quotes '' or double quotes \"\"",
+                "type": "String"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 543,
+            "description": "Replace new lines \\ r \\ n ; \\ n with the <br> html tag.\nThis is compatible with the PHP nl2br() function.",
+            "itemtype": "method",
+            "name": "nl2br",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "The string to be processed",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The processed string with <br> html tags if new lines were detected",
+                "type": "String"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 566,
+            "description": "Un-quotes a quoted string.\nThis is compatible with PHP stripslashes() function.",
+            "itemtype": "method",
+            "name": "stripslashes",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "The string to be processed",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The processed string",
+                "type": "String"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 593,
+            "description": "Encodes an ISO-8859-1 string to UTF-8",
+            "itemtype": "method",
+            "name": "utf8_encode",
+            "static": 1,
+            "params": [
+                {
+                    "name": "string",
+                    "description": "The string to be processed",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The processed string",
+                "type": "String"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 625,
+            "description": "Decodes an UTF-8 string to ISO-8859-1",
+            "itemtype": "method",
+            "name": "utf8_decode",
+            "static": 1,
+            "params": [
+                {
+                    "name": "string",
+                    "description": "The string to be processed",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The processed string",
+                "type": "String"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 661,
+            "description": "Convert binary data into hexadecimal representation.\nThis is compatible with PHP bin2hex() function.",
+            "itemtype": "method",
+            "name": "bin2hex",
+            "static": 1,
+            "params": [
+                {
+                    "name": "s",
+                    "description": "The string to be processed",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The processed string",
+                "type": "String"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 686,
+            "description": "Decodes a hexadecimally encoded binary string.\nThis is compatible with PHP hex2bin() function.",
+            "itemtype": "method",
+            "name": "hex2bin",
+            "static": 1,
+            "params": [
+                {
+                    "name": "hex",
+                    "description": "The string to be processed",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The processed string",
+                "type": "String"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 710,
+            "description": "Quote regular expression characters in a string.\nThis is compatible with PHP preg_quote() function.",
+            "itemtype": "method",
+            "name": "preg_quote",
+            "static": 1,
+            "params": [
+                {
+                    "name": "str",
+                    "description": "The string to be processed",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The processed string",
+                "type": "String"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 842,
+            "description": "Sort a stack (array / object / property) using String Sort algorithm",
+            "itemtype": "method",
+            "name": "textSort",
+            "static": 1,
+            "params": [
+                {
+                    "name": "property",
+                    "description": "The stack to be sorted",
+                    "type": "Mixed"
+                }
+            ],
+            "return": {
+                "description": "The sorted stack",
+                "type": "Mixed"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 876,
+            "description": "Sort a stack (array / object / property) using Numeric Sort algorithm",
+            "itemtype": "method",
+            "name": "numericSort",
+            "static": 1,
+            "params": [
+                {
+                    "name": "property",
+                    "description": "The stack to be sorted",
+                    "type": "Mixed"
+                }
+            ],
+            "return": {
+                "description": "The sorted stack",
+                "type": "Mixed"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 907,
+            "description": "Format a date object into a string value.\n\nHint: The format can be combinations of the following:\nd  - day of month (no leading zero) ;\ndd - day of month (two digit) ;\no  - day of year (no leading zeros) ;\noo - day of year (three digit) ;\nD  - day name short ;\nDD - day name long ;\nm  - month of year (no leading zero) ;\nmm - month of year (two digit) ;\nM  - month name short ;\nMM - month name long ;\ny  - year (two digit) ;\nyy - year (four digit) ;",
+            "itemtype": "method",
+            "name": "formatDate",
+            "static": 1,
+            "params": [
+                {
+                    "name": "format",
+                    "description": "The desired format of the date",
+                    "type": "String"
+                },
+                {
+                    "name": "date",
+                    "description": "The date value to format, from Date() object",
+                    "type": "Date"
+                },
+                {
+                    "name": "settings",
+                    "description": "Attributes include: dayNamesShort string[7] - abbreviated names of the days from Sunday (optional) ; dayNames string[7] - names of the days from Sunday (optional) ; monthNamesShort string[12] - abbreviated names of the months (optional) ; monthNames string[12] - names of the months (optional)",
+                    "type": "Object"
+                }
+            ],
+            "return": {
+                "description": "The date in the above format",
+                "type": "String"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 1044,
+            "description": "Determine a date by a Date object or Expression\n\nHint: Valid date objects or expressions:\nnew Date(1937, 1 - 1, 1) \t:: a date in the past, as object ;\n'-1y -1m -1d' \t\t\t\t:: a date in the past as relative expression to the defaultDate ;\nnew Date(2037, 12 - 1, 31) \t:: a date in the future as object ;\n'1y 1m 1d' \t\t\t\t\t:: a date in the future as relative expression to the defaultDate ;",
+            "itemtype": "method",
+            "name": "determineDate",
+            "static": 1,
+            "params": [
+                {
+                    "name": "date",
+                    "description": "The Date object or date relative expression to the defaultDate",
+                    "type": "Mixed"
+                },
+                {
+                    "name": "defaultDate",
+                    "description": "*Optional* null (for today) or a Date object / timestamp as default (selected) date to be used for relative expressions",
+                    "type": "Mixed"
+                }
+            ],
+            "return": {
+                "description": "A Date object or null if fails to validate expression",
+                "type": "Mixed"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 1180,
             "description": "Compress a string to LZS + Base64",
             "itemtype": "method",
             "name": "compressToBase64",
@@ -248,8 +794,8 @@
             "module": "Smart.Framework/JS/Archivers"
         },
         {
-            "file": "smart-framework.js-docs/src/arch_utils.js",
-            "line": 105,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 1247,
             "description": "Decompress from LZS + Base64",
             "itemtype": "method",
             "name": "decompressFromBase64",
@@ -269,28 +815,165 @@
             "module": "Smart.Framework/JS/Archivers"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_check.js",
-            "line": 24,
-            "description": "Detect if a Browser support Cookies or have the Cookies enabled.\nIf fail, an alert will be shown.",
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 2007,
+            "description": "Encode a string to Base64",
             "itemtype": "method",
-            "name": "checkCookies",
+            "name": "encode",
             "static": 1,
-            "class": "Test_Browser_Compliance",
-            "module": "Smart.Framework/JS/Browser"
+            "params": [
+                {
+                    "name": "s",
+                    "description": "The plain string (to be encoded)",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "the Base64 encoded string",
+                "type": "String"
+            },
+            "class": "SmartJS_Base64",
+            "module": "Smart.Framework/JS/Crypto"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_check.js",
-            "line": 56,
-            "description": "Detect if the Internet Explorer matches minimum required version: at least IE9.\nIf fail, an alert will be shown.",
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 2027,
+            "description": "Decode a string from Base64",
             "itemtype": "method",
-            "name": "checkIEVersion",
+            "name": "decode",
             "static": 1,
-            "class": "Test_Browser_Compliance",
-            "module": "Smart.Framework/JS/Browser"
+            "params": [
+                {
+                    "name": "s",
+                    "description": "The B64 encoded string",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "the plain (B64 decoded) string",
+                "type": "String"
+            },
+            "class": "SmartJS_Base64",
+            "module": "Smart.Framework/JS/Crypto"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 47,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 2289,
+            "description": "Returns the MD5 hash of a string",
+            "itemtype": "method",
+            "name": "md5",
+            "static": 1,
+            "params": [
+                {
+                    "name": "s",
+                    "description": "The string",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The MD5 hash of the string",
+                "type": "String"
+            },
+            "class": "SmartJS_CryptoHash",
+            "module": "Smart.Framework/JS/Crypto"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 2390,
+            "description": "Returns the SHA1 hash of a string",
+            "itemtype": "method",
+            "name": "sha1",
+            "static": 1,
+            "params": [
+                {
+                    "name": "s",
+                    "description": "The string",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The SHA1 hash of the string",
+                "type": "String"
+            },
+            "class": "SmartJS_CryptoHash",
+            "module": "Smart.Framework/JS/Crypto"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 2710,
+            "description": "Returns the SHA512 hash of a string",
+            "itemtype": "method",
+            "name": "sha512",
+            "static": 1,
+            "params": [
+                {
+                    "name": "s",
+                    "description": "The string",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The SHA512 hash of the string",
+                "type": "String"
+            },
+            "class": "SmartJS_CryptoHash",
+            "module": "Smart.Framework/JS/Crypto"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 3124,
+            "description": "Blowfish encrypts plaintext using an encryption key",
+            "itemtype": "method",
+            "name": "encrypt",
+            "static": 1,
+            "params": [
+                {
+                    "name": "plaintext",
+                    "description": "The plain string",
+                    "type": "String"
+                },
+                {
+                    "name": "key",
+                    "description": "The encryption key",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The Blowfish encrypted string",
+                "type": "String"
+            },
+            "class": "SmartJS_CryptoBlowfish",
+            "module": "Smart.Framework/JS/Crypto"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 3207,
+            "description": "Blowfish decrypts ciphertext using the encryption key",
+            "itemtype": "method",
+            "name": "decrypt",
+            "static": 1,
+            "params": [
+                {
+                    "name": "ciphertext",
+                    "description": "The Blowfish encrypted string",
+                    "type": "String"
+                },
+                {
+                    "name": "key",
+                    "description": "The encryption key",
+                    "type": "String"
+                }
+            ],
+            "return": {
+                "description": "The decrypted string",
+                "type": "String"
+            },
+            "class": "SmartJS_CryptoBlowfish",
+            "module": "Smart.Framework/JS/Crypto"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 3807,
             "description": "Detect if a Browser Window is iFrame",
             "itemtype": "method",
             "name": "WindowIsiFrame",
@@ -303,8 +986,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 65,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 3825,
             "description": "Detect if a Browser Window is PopUp",
             "itemtype": "method",
             "name": "WindowIsPopup",
@@ -317,8 +1000,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 83,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 3843,
             "description": "Print current Browser Page",
             "itemtype": "method",
             "name": "PrintPage",
@@ -327,8 +1010,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 100,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 3860,
             "description": "Count Down handler that bind to a HTML Element",
             "itemtype": "method",
             "name": "CountDown",
@@ -354,8 +1037,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 149,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 3909,
             "description": "Page Away control handler",
             "itemtype": "method",
             "name": "PageAwayControl",
@@ -371,8 +1054,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 197,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 3957,
             "description": "Redirect to URL current browser window",
             "itemtype": "method",
             "name": "RedirectToURL",
@@ -388,8 +1071,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 215,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 3975,
             "description": "Delayed Redirect to URL current browser window",
             "itemtype": "method",
             "name": "RedirectDelayedToURL",
@@ -410,8 +1093,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 230,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 3990,
             "description": "Redirect to URL parent browser window",
             "itemtype": "method",
             "name": "RedirectParent",
@@ -427,8 +1110,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 261,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4021,
             "description": "Lazy Refresh parent browser window or Lazy redirect parent window to another URL.\nThis method is different than RedirectParent() because will be executed just after the child (modal iFrame / PopUp) is closed.\nIt will just trigger a lazy refresh on parent that will be executed later, after closing current child window.",
             "itemtype": "method",
             "name": "RefreshParent",
@@ -444,8 +1127,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 292,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4052,
             "description": "Close a Modal / PopUp child browser window.\nIf a parent refresh is pending will execute it after.\nThis is the prefered way to close a child window (modal iFrame / PopUp) using a button or just executing this code in a child page.",
             "itemtype": "method",
             "name": "CloseModalPopUp",
@@ -454,8 +1137,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 331,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4091,
             "description": "Delayed Close a Modal / PopUp child browser window.\nIf a parent refresh is pending will execute it after.\nThis is the prefered way to close a child window (modal iFrame / PopUp) using a button or just executing this code in a child page.",
             "itemtype": "method",
             "name": "CloseDelayedModalPopUp",
@@ -471,8 +1154,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 397,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4157,
             "description": "Focus a browser window by reference",
             "itemtype": "method",
             "name": "windowFocus",
@@ -488,8 +1171,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 413,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4173,
             "description": "Scroll down a browser window by reference.\nIt will focus the referenced browser window first.",
             "itemtype": "method",
             "name": "windwScrollDown",
@@ -510,8 +1193,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 431,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4191,
             "description": "Get the highest available Z-Index from a browser page taking in account all visible layers (div).\nIt will ignore non-visible layers for speed-up, as they have anyway no Z-Index assigned.",
             "itemtype": "method",
             "name": "getHighestZIndex",
@@ -524,8 +1207,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 469,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4229,
             "description": "Display a page overlay in the current browser window\nThe ZIndex of the overlay is: 2147400000\nAll page elements that must be visible over this overlay must have zIndex in range: 2147401000 - 214740999",
             "itemtype": "method",
             "name": "Overlay_Show",
@@ -555,8 +1238,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 531,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4291,
             "description": "Clear all notifications from the page overlay in the current browser window",
             "itemtype": "method",
             "name": "Overlay_Clear",
@@ -565,8 +1248,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 544,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4304,
             "description": "Hide (destroy) the page overlay in the current browser window",
             "itemtype": "method",
             "name": "Overlay_Hide",
@@ -575,8 +1258,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 566,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4326,
             "description": "Add a Growl notification in the current browser window (page)",
             "itemtype": "method",
             "name": "GrowlNotificationAdd",
@@ -626,8 +1309,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 591,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4351,
             "description": "Remove a Growl Notification by ID from the current browser window (page)",
             "itemtype": "method",
             "name": "GrowlNotificationRemove",
@@ -643,8 +1326,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 605,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4365,
             "description": "Create a Maximize HTML Element wrapper arround a layer (div, iframe, ...).\nThis will add a maximize / un-maximize button and the handler to be able to maximize the element.\nWhen the selected element will be maximized the page will be protected by an overlay.",
             "itemtype": "method",
             "name": "MaximizeElement",
@@ -665,8 +1348,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 660,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4420,
             "description": "Create a Browser Alert Dialog that will have just the OK button.\nThis will detect if the UIDialog is available and will prefer to use it if set.\nOtherwise will try to detect if SimpleDislog is available and will use it if UIDialog is not available - fallback.\nIf none of the above are available (not available) will display a simple alert() - fallback.",
             "itemtype": "method",
             "name": "alert_Dialog",
@@ -702,8 +1385,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 703,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4463,
             "description": "Create a Browser Confirm Dialog that will have 2 buttons: OK / Cancel.\nThis will detect if the UIDialog is available and will prefer to use it if set.\nOtherwise will try to detect if SimpleDislog is available and will use it if UIDialog is not available - fallback.\nIf none of the above are available (not available) will display a simple confirm() - fallback.",
             "itemtype": "method",
             "name": "confirm_Dialog",
@@ -739,8 +1422,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 748,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4508,
             "description": "Confirm a Form Submit by a confirm / Dialog, with OK and Cancel buttons.\nThe form will be submitted just if OK button is clicked.\nThis function is using confirm_Dialog() and will detect and prefer in this order if UIDialog / SimpleDialog or just confirm() are available in Browser.",
             "itemtype": "method",
             "name": "confirmSubmitForm",
@@ -786,8 +1469,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 801,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4561,
             "description": "Raise a Modal/iFrame or PopUp child window with a new target to post a form within.\nIt will get the form URL and form method GET/POST directly from the objForm.\nThis function must be called by a form button onClick followed by 'return false;' not by classic submit to avoid fire the form send twice 1st before (in a _blank window) and 2nd after opening the child popup/modal.\nThis function if used in a button with 'return false;' will catch the form send behaviour and will trigger it just after the child modal/iFrame or PopUp child window (new) target is opened and available.",
             "itemtype": "method",
             "name": "PopUpSendForm",
@@ -833,8 +1516,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 849,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4609,
             "description": "Raise a Modal/iFrame or PopUp child window with a new target to open a URL link within.\nThis function can be called by a button, a link or other HTML elements at onClick (if 'a' element onClick is used must be followed by 'return false;' to avoid fire page refresh.",
             "itemtype": "method",
             "name": "PopUpLink",
@@ -875,8 +1558,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 881,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4641,
             "description": "Get a Cookie from Browser by Name and return it's Value",
             "itemtype": "method",
             "name": "getCookie",
@@ -896,8 +1579,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 907,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4667,
             "description": "Set a Cookie in Browser by Name and Value",
             "itemtype": "method",
             "name": "setCookie",
@@ -938,8 +1621,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 940,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4700,
             "description": "Delete a Cookie from Browser by Name",
             "itemtype": "method",
             "name": "deleteCookie",
@@ -965,21 +1648,16 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 978,
-            "description": "Force text limit on TextArea with attached CounterField",
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4767,
+            "description": "Force a text limit on a TextArea (will also attach a CounterField)",
             "itemtype": "method",
-            "name": "textArea_Limit",
+            "name": "textArea_addLimit",
             "static": 1,
             "params": [
                 {
                     "name": "y_field",
                     "description": "The TextArea field name",
-                    "type": "String"
-                },
-                {
-                    "name": "y_countfield",
-                    "description": "The text counter field name",
                     "type": "String"
                 },
                 {
@@ -992,8 +1670,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 1007,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4810,
             "description": "Catch TAB Key in a TextArea or other compatible field\nExample: onKeyDown = SmartJS_BrowserUtils.catch_TABKey(event);",
             "itemtype": "method",
             "name": "catch_TABKey",
@@ -1009,8 +1687,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 1056,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4859,
             "description": "Check or Uncheck all checkboxes in a form element",
             "itemtype": "method",
             "name": "checkAll_CkBoxes",
@@ -1036,8 +1714,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 1100,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 4903,
             "description": "Clone a HTML Element",
             "itemtype": "method",
             "name": "CloneElement",
@@ -1068,8 +1746,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 1202,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 5005,
             "description": "Submit a Form by Ajax via POST and Handle the Answer\nIt supports simple forms or complex forms with multipart/form-data and file attachments.\nThis function expects a json answer with the following structure: see more in framework PHP lib SmartComponents::post_answer_by_ajax()\n\t\t{ // Json Structure for Answer\n\t\t\t'completed': \t'DONE',\n\t\t\t'status': \t\t'OK|ERROR',\n\t\t\t'action': \t\t'Notification Button Text: Ok/Cancel',\n\t\t\t'title': \t\t'Notification Title',\n\t\t\t'message': \t\t'Notification Message HTML Content',\n\t\t\t'js_evcode': \t'If non-empty, the JS Code to execute on either SUCCESS or ERROR (before redirect or Div Replace)'\n\t\t\t'redirect': \t'If non-empty, a redirect URL on either SUCCESS or ERROR ; on SUCCESS if message is Empty will redirect without confirmation: Growl / Dialog',\n\t\t\t'replace_div': \t'If non-empty, an ID for a div to be replaced with content from [replace_html] on Success',\n\t\t\t'replace_html': 'If non-empty, a HTML code to populate / replace the current Content for the [replace_div] on Success'\n\t\t} // #END Json Structure",
             "itemtype": "method",
             "name": "Submit_Form_By_Ajax",
@@ -1094,14 +1772,19 @@
                     "name": "evcode",
                     "description": "*Optional* the JS Code to execute on SUCCESS answer (before anything else)",
                     "type": "String"
+                },
+                {
+                    "name": "everrcode",
+                    "description": "*Optional* the JS Code to execute on ERROR answer (before anything else)",
+                    "type": "String"
                 }
             ],
             "class": "SmartJS_BrowserUtils",
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 1331,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 5151,
             "description": "Create an Ajax XHR Request (POST) by Form\nIt supports simple forms or complex forms with multipart/form-data and file attachments.",
             "itemtype": "method",
             "name": "Ajax_XHR_GetByForm",
@@ -1131,8 +1814,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 1484,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 5304,
             "description": "Create a general purpose Ajax XHR Request (GET/POST) with Optional support for Authentication and Extra Headers\nIt is NOT intended to be used with HTML forms that may contain multipart/form-data and file attachments or not.\nFor creating an Ajax XHR Request to be used with HTML Forms use:\n\t\tSmartJS_BrowserUtils.Ajax_XHR_GetByForm(); \t\t// basic, will detect the form type if must use multipart/form-data + attachments (if any)\nor even much better use this:\n\t\tSmartJS_BrowserUtils.Submit_Form_By_Ajax(); \t// advanced, will handle the XHR form request and the answer",
             "itemtype": "method",
             "name": "Ajax_XHR_Request_From_URL",
@@ -1182,8 +1865,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 1584,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 5404,
             "description": "Loads the contents for a Div (or other compatible) HTML Element(s) by Ajax using a GET / POST Ajax Request\nThis is intended to simplify populating a Div (or other compatible) HTML Element(s) with content(s) by Ajax Requests.",
             "itemtype": "method",
             "name": "Load_Div_Content_By_Ajax",
@@ -1224,8 +1907,8 @@
             "module": "Smart.Framework/JS/Browser"
         },
         {
-            "file": "smart-framework.js-docs/src/browser_utils.js",
-            "line": 1626,
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 5446,
             "description": "Add (Create) a Bookmark to Favorites in Browser\nThis may not be supported by all browsers thus it have a TRY/CATCH fallback to avoid errors.",
             "itemtype": "method",
             "name": "bookmark_url",
@@ -1244,722 +1927,6 @@
             ],
             "class": "SmartJS_BrowserUtils",
             "module": "Smart.Framework/JS/Browser"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 26,
-            "description": "Trim a string (at begining or end by any whitespace: space \\ n \\ r \\ t)",
-            "itemtype": "method",
-            "name": "stringTrim",
-            "static": 1,
-            "params": [
-                {
-                    "name": "str",
-                    "description": "The string to be trimmed",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The trimmed string",
-                "type": "String"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 48,
-            "description": "Split string by comma with trimming pre/post",
-            "itemtype": "method",
-            "name": "stringSplitbyComma",
-            "static": 1,
-            "params": [
-                {
-                    "name": "str",
-                    "description": "The string to be splitted by , (comma)",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The array with string parts splitted",
-                "type": "Array"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 71,
-            "description": "Split string by semicolon with trimming pre/post",
-            "itemtype": "method",
-            "name": "stringSplitbySemicolon",
-            "static": 1,
-            "params": [
-                {
-                    "name": "str",
-                    "description": "The string to be splitted by ; (semicolon)",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The array with string parts splitted",
-                "type": "Array"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 94,
-            "description": "Replace all occurences in a string - Case Sensitive",
-            "itemtype": "method",
-            "name": "stringReplaceAll",
-            "static": 1,
-            "params": [
-                {
-                    "name": "token",
-                    "description": "The string part to be replaced",
-                    "type": "String"
-                },
-                {
-                    "name": "newToken",
-                    "description": "The string part replacement",
-                    "type": "String"
-                },
-                {
-                    "name": "str",
-                    "description": "The string where to do the replacements",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The processed string",
-                "type": "String"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 118,
-            "description": "Replace all occurences in a string - Case Insensitive",
-            "itemtype": "method",
-            "name": "stringIReplaceAll",
-            "static": 1,
-            "params": [
-                {
-                    "name": "token",
-                    "description": "The string part to be replaced",
-                    "type": "String"
-                },
-                {
-                    "name": "newToken",
-                    "description": "The string part replacement",
-                    "type": "String"
-                },
-                {
-                    "name": "str",
-                    "description": "The string where to do the replacements",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The processed string",
-                "type": "String"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 154,
-            "description": "Get the first element from an Array",
-            "itemtype": "method",
-            "name": "arrayGetFirst",
-            "static": 1,
-            "params": [
-                {
-                    "name": "arr",
-                    "description": "The array to be used",
-                    "type": "Array"
-                }
-            ],
-            "return": {
-                "description": "The first element from the array",
-                "type": "Mixed"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 173,
-            "description": "Get the last element from an Array",
-            "itemtype": "method",
-            "name": "arrayGetLast",
-            "static": 1,
-            "params": [
-                {
-                    "name": "arr",
-                    "description": "The array to be used",
-                    "type": "Array"
-                }
-            ],
-            "return": {
-                "description": "The last element from the array",
-                "type": "Mixed"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 192,
-            "description": "Format a number as INTEGER",
-            "itemtype": "method",
-            "name": "format_number_int",
-            "static": 1,
-            "params": [
-                {
-                    "name": "y_number",
-                    "description": "A numeric value",
-                    "type": "Numeric"
-                },
-                {
-                    "name": "y_allow_negatives",
-                    "description": "If TRUE will allow negative values else will return just positive (unsigned) values",
-                    "type": "Boolean"
-                }
-            ],
-            "return": {
-                "description": "An integer number",
-                "type": "Integer"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 233,
-            "description": "Format a number as DECIMAL",
-            "itemtype": "method",
-            "name": "format_number_dec",
-            "static": 1,
-            "params": [
-                {
-                    "name": "y_number",
-                    "description": "A numeric value",
-                    "type": "Numeric"
-                },
-                {
-                    "name": "y_decimals",
-                    "description": "The number of decimal to use (between 1 and 4)",
-                    "type": "Integer"
-                },
-                {
-                    "name": "y_allow_negatives",
-                    "description": "*Optional* If TRUE will allow negative values else will return just positive (unsigned) values",
-                    "type": "Boolean"
-                },
-                {
-                    "name": "y_keep_trailing_zeroes",
-                    "description": "*Optional* If set to TRUE will keep trailing zeroes, otherwise will discard them",
-                    "type": "Boolean"
-                }
-            ],
-            "return": {
-                "description": "A decimal number",
-                "type": "Integer"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 291,
-            "description": "Add the Thousands Separator (comma ,) to a number",
-            "itemtype": "method",
-            "name": "add_number_ThousandsSeparator",
-            "static": 1,
-            "params": [
-                {
-                    "name": "num",
-                    "description": "The number to be formatted",
-                    "type": "Numeric"
-                }
-            ],
-            "return": {
-                "description": "The formatted number as string with comma as thousands separator if apply (will keep the . dot as decimal separator if apply)",
-                "type": "String"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 307,
-            "description": "Safe escape URL Variable (using RFC3986 standards to be full Unicode compliant).\nThis is a shortcut to the encodeURIComponent() to provide a standard into Smart.Framework/JS.",
-            "itemtype": "method",
-            "name": "escape_url",
-            "static": 1,
-            "params": [
-                {
-                    "name": "str",
-                    "description": "The URL variable value to be escaped",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The escaped URL variable",
-                "type": "String"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 330,
-            "description": "Convert special characters to HTML entities.\nThis is like the Smart::escape_html() from the PHP Smart.Framework.\nThese values will be converted by default to safe HTML entities: [ < > & \" ].",
-            "itemtype": "method",
-            "name": "escape_html",
-            "static": 1,
-            "params": [
-                {
-                    "name": "str",
-                    "description": "The string to be escaped",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The safe escaped string to be injected in HTML code",
-                "type": "String"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 369,
-            "description": "Convert special characters to escaped entities for safe use with Javascript Strings.\nThis is like the Smart::escape_js() from the PHP Smart.Framework.",
-            "itemtype": "method",
-            "name": "escape_js",
-            "static": 1,
-            "params": [
-                {
-                    "name": "str",
-                    "description": "The string to be escaped",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The escaped string using the json encode standard to be injected between single quotes '' or double quotes \"\"",
-                "type": "String"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 416,
-            "description": "Replace new lines \\ r \\ n ; \\ n with the <br> html tag.\nThis is compatible with the PHP nl2br() function.",
-            "itemtype": "method",
-            "name": "nl2br",
-            "static": 1,
-            "params": [
-                {
-                    "name": "str",
-                    "description": "The string to be processed",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The processed string with <br> html tags if new lines were detected",
-                "type": "String"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 439,
-            "description": "Un-quotes a quoted string.\nThis is compatible with PHP stripslashes() function.",
-            "itemtype": "method",
-            "name": "stripslashes",
-            "static": 1,
-            "params": [
-                {
-                    "name": "str",
-                    "description": "The string to be processed",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The processed string",
-                "type": "String"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 466,
-            "description": "Encodes an ISO-8859-1 string to UTF-8",
-            "itemtype": "method",
-            "name": "utf8_encode",
-            "static": 1,
-            "params": [
-                {
-                    "name": "string",
-                    "description": "The string to be processed",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The processed string",
-                "type": "String"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 498,
-            "description": "Decodes an UTF-8 string to ISO-8859-1",
-            "itemtype": "method",
-            "name": "utf8_decode",
-            "static": 1,
-            "params": [
-                {
-                    "name": "string",
-                    "description": "The string to be processed",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The processed string",
-                "type": "String"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 534,
-            "description": "Convert binary data into hexadecimal representation.\nThis is compatible with PHP bin2hex() function.",
-            "itemtype": "method",
-            "name": "bin2hex",
-            "static": 1,
-            "params": [
-                {
-                    "name": "s",
-                    "description": "The string to be processed",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The processed string",
-                "type": "String"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 559,
-            "description": "Decodes a hexadecimally encoded binary string.\nThis is compatible with PHP hex2bin() function.",
-            "itemtype": "method",
-            "name": "hex2bin",
-            "static": 1,
-            "params": [
-                {
-                    "name": "hex",
-                    "description": "The string to be processed",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The processed string",
-                "type": "String"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 583,
-            "description": "Quote regular expression characters in a string.\nThis is compatible with PHP preg_quote() function.",
-            "itemtype": "method",
-            "name": "preg_quote",
-            "static": 1,
-            "params": [
-                {
-                    "name": "str",
-                    "description": "The string to be processed",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The processed string",
-                "type": "String"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 713,
-            "description": "Sort a stack (array / object / property) using String Sort algorithm",
-            "itemtype": "method",
-            "name": "textSort",
-            "static": 1,
-            "params": [
-                {
-                    "name": "property",
-                    "description": "The stack to be sorted",
-                    "type": "Mixed"
-                }
-            ],
-            "return": {
-                "description": "The sorted stack",
-                "type": "Mixed"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 747,
-            "description": "Sort a stack (array / object / property) using Numeric Sort algorithm",
-            "itemtype": "method",
-            "name": "numericSort",
-            "static": 1,
-            "params": [
-                {
-                    "name": "property",
-                    "description": "The stack to be sorted",
-                    "type": "Mixed"
-                }
-            ],
-            "return": {
-                "description": "The sorted stack",
-                "type": "Mixed"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 778,
-            "description": "Format a date object into a string value.\n\nHint: The format can be combinations of the following:\nd  - day of month (no leading zero) ;\ndd - day of month (two digit) ;\no  - day of year (no leading zeros) ;\noo - day of year (three digit) ;\nD  - day name short ;\nDD - day name long ;\nm  - month of year (no leading zero) ;\nmm - month of year (two digit) ;\nM  - month name short ;\nMM - month name long ;\ny  - year (two digit) ;\nyy - year (four digit) ;",
-            "itemtype": "method",
-            "name": "formatDate",
-            "static": 1,
-            "params": [
-                {
-                    "name": "format",
-                    "description": "The desired format of the date",
-                    "type": "String"
-                },
-                {
-                    "name": "date",
-                    "description": "The date value to format, from Date() object",
-                    "type": "Date"
-                },
-                {
-                    "name": "settings",
-                    "description": "Attributes include: dayNamesShort string[7] - abbreviated names of the days from Sunday (optional) ; dayNames string[7] - names of the days from Sunday (optional) ; monthNamesShort string[12] - abbreviated names of the months (optional) ; monthNames string[12] - names of the months (optional)",
-                    "type": "Object"
-                }
-            ],
-            "return": {
-                "description": "The date in the above format",
-                "type": "String"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/core_utils.js",
-            "line": 915,
-            "description": "Determine a date by a Date object or Expression\n\nHint: Valid date objects or expressions:\nnew Date(1937, 1 - 1, 1) \t:: a date in the past, as object ;\n'-1y -1m -1d' \t\t\t\t:: a date in the past as relative expression to the defaultDate ;\nnew Date(2037, 12 - 1, 31) \t:: a date in the future as object ;\n'1y 1m 1d' \t\t\t\t\t:: a date in the future as relative expression to the defaultDate ;",
-            "itemtype": "method",
-            "name": "determineDate",
-            "static": 1,
-            "params": [
-                {
-                    "name": "date",
-                    "description": "The Date object or date relative expression to the defaultDate",
-                    "type": "Mixed"
-                },
-                {
-                    "name": "defaultDate",
-                    "description": "*Optional* null (for today) or a Date object / timestamp as default (selected) date to be used for relative expressions",
-                    "type": "Mixed"
-                }
-            ],
-            "return": {
-                "description": "A Date object or null if fails to validate expression",
-                "type": "Mixed"
-            },
-            "class": "SmartJS_CoreUtils",
-            "module": "Smart.Framework/JS/Core"
-        },
-        {
-            "file": "smart-framework.js-docs/src/crypt_utils.js",
-            "line": 148,
-            "description": "Encode a string to Base64",
-            "itemtype": "method",
-            "name": "encode",
-            "static": 1,
-            "params": [
-                {
-                    "name": "s",
-                    "description": "The plain string (to be encoded)",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "the Base64 encoded string",
-                "type": "String"
-            },
-            "class": "SmartJS_Base64",
-            "module": "Smart.Framework/JS/Crypto"
-        },
-        {
-            "file": "smart-framework.js-docs/src/crypt_utils.js",
-            "line": 168,
-            "description": "Decode a string from Base64",
-            "itemtype": "method",
-            "name": "decode",
-            "static": 1,
-            "params": [
-                {
-                    "name": "s",
-                    "description": "The B64 encoded string",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "the plain (B64 decoded) string",
-                "type": "String"
-            },
-            "class": "SmartJS_Base64",
-            "module": "Smart.Framework/JS/Crypto"
-        },
-        {
-            "file": "smart-framework.js-docs/src/crypt_utils.js",
-            "line": 430,
-            "description": "Returns the MD5 hash of a string",
-            "itemtype": "method",
-            "name": "md5",
-            "static": 1,
-            "params": [
-                {
-                    "name": "s",
-                    "description": "The string",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The MD5 hash of the string",
-                "type": "String"
-            },
-            "class": "SmartJS_CryptoHash",
-            "module": "Smart.Framework/JS/Crypto"
-        },
-        {
-            "file": "smart-framework.js-docs/src/crypt_utils.js",
-            "line": 531,
-            "description": "Returns the SHA1 hash of a string",
-            "itemtype": "method",
-            "name": "sha1",
-            "static": 1,
-            "params": [
-                {
-                    "name": "s",
-                    "description": "The string",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The SHA1 hash of the string",
-                "type": "String"
-            },
-            "class": "SmartJS_CryptoHash",
-            "module": "Smart.Framework/JS/Crypto"
-        },
-        {
-            "file": "smart-framework.js-docs/src/crypt_utils.js",
-            "line": 851,
-            "description": "Returns the SHA512 hash of a string",
-            "itemtype": "method",
-            "name": "sha512",
-            "static": 1,
-            "params": [
-                {
-                    "name": "s",
-                    "description": "The string",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The SHA512 hash of the string",
-                "type": "String"
-            },
-            "class": "SmartJS_CryptoHash",
-            "module": "Smart.Framework/JS/Crypto"
-        },
-        {
-            "file": "smart-framework.js-docs/src/crypt_utils.js",
-            "line": 1265,
-            "description": "Blowfish encrypts plaintext using an encryption key",
-            "itemtype": "method",
-            "name": "encrypt",
-            "static": 1,
-            "params": [
-                {
-                    "name": "plaintext",
-                    "description": "The plain string",
-                    "type": "String"
-                },
-                {
-                    "name": "key",
-                    "description": "The encryption key",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The Blowfish encrypted string",
-                "type": "String"
-            },
-            "class": "SmartJS_CryptoBlowfish",
-            "module": "Smart.Framework/JS/Crypto"
-        },
-        {
-            "file": "smart-framework.js-docs/src/crypt_utils.js",
-            "line": 1348,
-            "description": "Blowfish decrypts ciphertext using the encryption key",
-            "itemtype": "method",
-            "name": "decrypt",
-            "static": 1,
-            "params": [
-                {
-                    "name": "ciphertext",
-                    "description": "The Blowfish encrypted string",
-                    "type": "String"
-                },
-                {
-                    "name": "key",
-                    "description": "The encryption key",
-                    "type": "String"
-                }
-            ],
-            "return": {
-                "description": "The decrypted string",
-                "type": "String"
-            },
-            "class": "SmartJS_CryptoBlowfish",
-            "module": "Smart.Framework/JS/Crypto"
         }
     ],
     "warnings": []

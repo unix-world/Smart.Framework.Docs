@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartMailerPop3Client | Smart.Framework Documentation :: 2017-03-27 14:17</title>
+	<title>Class SmartAbstractPgsqlOrmDb | Smart.Framework Documentation :: 2017-03-27 14:17</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3879458977"></script>
 	<script src="elementlist.js?181461627"></script>
@@ -47,7 +47,7 @@
 						</li>
 				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
 						</li>
-				<li><a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a>
+				<li class="active"><a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a>
 						</li>
 				<li><a href="package-Database.Redis.html">Database:Redis</a>
 						</li>
@@ -59,7 +59,7 @@
 						</li>
 				<li><a href="package-Filesystem.html">Filesystem</a>
 						</li>
-				<li class="active"><a href="package-Mailer.Get.html">Mailer:Get</a>
+				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
 						</li>
 				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
 						</li>
@@ -88,8 +88,9 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-SmartMailerImap4Client.html">SmartMailerImap4Client</a></li>
-				<li class="active"><a href="class-SmartMailerPop3Client.html">SmartMailerPop3Client</a></li>
+				<li class="active"><a href="class-SmartAbstractPgsqlOrmDb.html">SmartAbstractPgsqlOrmDb</a></li>
+				<li><a href="class-SmartPgsqlDb.html">SmartPgsqlDb</a></li>
+				<li><a href="class-SmartPgsqlExtDb.html">SmartPgsqlExtDb</a></li>
 			</ul>
 
 
@@ -117,7 +118,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="package-Mailer.Get.html" title="Summary of Mailer:Get"><span>Package</span></a>
+				<a href="package-Database.PostgreSQL.html" title="Summary of Database:PostgreSQL"><span>Package</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -132,13 +133,16 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class SmartMailerPop3Client</h1>
+	<h1>Class SmartAbstractPgsqlOrmDb</h1>
 
 
 	<div class="description">
 	
-<p>Class: SmartMailerPop3Client - provides a POP3 Mail Client with SSL/TLS
-support.</p>
+<p>Abstract Class: SmartAbstractPgsqlOrmDb - provides a basic ORM PostgreSQL DB
+Server Client that can be used with custom made connections.</p>
+
+<p>This class is based and extended from SmartPgsqlExtDb. It should be extended
+further ...</p>
 
 	</div>
 
@@ -151,19 +155,23 @@ support.</p>
 
 
 	<div class="info">
-		<b>Final</b><br>
+		<b>Abstract</b><br>
 		
 		
-		<b>Package:</b> <a href="package-Mailer.Get.html">Mailer:Get</a><br>
+		<b>Package:</b> <a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a><br>
 
 				<b>Version:</b>
-				v.160205<br>
+				v.170327<br>
 				<b>Depends:</b>
-				classes: Smart<br>
+				extensions: PHP PostgreSQL ; classes: Smart, SmartUnicode, SmartUtils,
+SmartPgsqlExtDb<br>
+				<b>Hints:</b>
+				needs to be extended and a constructor to be defined to init this ORM as:
+$this-&gt;initORM('pgsql-orm');<br>
 				<b>Usage:</b>
 				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
 methods<br>
-		<b>Located at</b> lib/core/plugins/lib_mail_get.php<br>
+		<b>Located at</b> modules/smart-extra-libs/lib_db_orm_pgsql.php<br>
 	</div>
 
 
@@ -173,7 +181,7 @@ methods<br>
 	<tr data-order="__construct" id="___construct">
 
 		<td class="attributes"><code>
-			 public 
+			abstract public 
 			
 			
 			</code>
@@ -181,7 +189,7 @@ methods<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code>__construct( <span>mixed <var>$buffer</var> = <span class="php-num">0</span></span> )</code>
+		<code>__construct( )</code>
 
 		<div class="description short">
 			
@@ -199,18 +207,18 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="connect" id="_connect">
+	<tr data-order="__destruct" id="___destruct">
 
 		<td class="attributes"><code>
-			 public 
+			final public 
 			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_connect">#</a>
-		<code>connect( <span>mixed <var>$server</var></span>, <span>mixed <var>$port</var> = <span class="php-num">110</span></span>, <span>mixed <var>$sslversion</var> = <span class="php-quote">''</span></span> )</code>
+		<a class="anchor" href="#___destruct">#</a>
+		<code>__destruct( )</code>
 
 		<div class="description short">
 			
@@ -228,18 +236,18 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="noop" id="_noop">
+	<tr data-order="initORM" id="_initORM">
 
 		<td class="attributes"><code>
-			 public 
+			final protected 
 			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_noop">#</a>
-		<code>noop( )</code>
+		<a class="anchor" href="#_initORM">#</a>
+		<code>initORM( <span>mixed <var>$cfg_pgsql_area</var></span> )</code>
 
 		<div class="description short">
 			
@@ -257,18 +265,18 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="reset" id="_reset">
+	<tr data-order="getConfig" id="_getConfig">
 
 		<td class="attributes"><code>
-			 public 
+			final public 
 			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_reset">#</a>
-		<code>reset( )</code>
+		<a class="anchor" href="#_getConfig">#</a>
+		<code>getConfig( )</code>
 
 		<div class="description short">
 			
@@ -286,18 +294,18 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="quit" id="_quit">
+	<tr data-order="getConnection" id="_getConnection">
 
 		<td class="attributes"><code>
-			 public 
+			final public 
 			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_quit">#</a>
-		<code>quit( )</code>
+		<a class="anchor" href="#_getConnection">#</a>
+		<code>getConnection( )</code>
 
 		<div class="description short">
 			
@@ -315,18 +323,18 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="login" id="_login">
+	<tr data-order="startTransaction" id="_startTransaction">
 
 		<td class="attributes"><code>
-			 public 
+			final public 
 			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_login">#</a>
-		<code>login( <span>mixed <var>$username</var></span>, <span>mixed <var>$pass</var></span>, <span>mixed <var>$apop</var> = <span class="php-keyword1">false</span></span> )</code>
+		<a class="anchor" href="#_startTransaction">#</a>
+		<code>startTransaction( )</code>
 
 		<div class="description short">
 			
@@ -344,18 +352,18 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="count" id="_count">
+	<tr data-order="commitTransaction" id="_commitTransaction">
 
 		<td class="attributes"><code>
-			 public 
+			final public 
 			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_count">#</a>
-		<code>count( )</code>
+		<a class="anchor" href="#_commitTransaction">#</a>
+		<code>commitTransaction( )</code>
 
 		<div class="description short">
 			
@@ -373,18 +381,18 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="uid" id="_uid">
+	<tr data-order="rollbackTransaction" id="_rollbackTransaction">
 
 		<td class="attributes"><code>
-			 public 
+			final public 
 			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_uid">#</a>
-		<code>uid( <span>mixed <var>$msg_num</var> = <span class="php-quote">''</span></span> )</code>
+		<a class="anchor" href="#_rollbackTransaction">#</a>
+		<code>rollbackTransaction( )</code>
 
 		<div class="description short">
 			
@@ -402,18 +410,18 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="size" id="_size">
+	<tr data-order="parseArrFieldsToSqlSelectStatement" id="_parseArrFieldsToSqlSelectStatement">
 
 		<td class="attributes"><code>
-			 public 
+			final protected 
 			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_size">#</a>
-		<code>size( <span>mixed <var>$msg_num</var></span> )</code>
+		<a class="anchor" href="#_parseArrFieldsToSqlSelectStatement">#</a>
+		<code>parseArrFieldsToSqlSelectStatement( <span>mixed <var>$fields</var></span> )</code>
 
 		<div class="description short">
 			
@@ -431,18 +439,18 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="delete" id="_delete">
+	<tr data-order="getOneByKeyTableSchema" id="_getOneByKeyTableSchema">
 
 		<td class="attributes"><code>
-			 public 
+			final protected 
 			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_delete">#</a>
-		<code>delete( <span>mixed <var>$msg_num</var></span> )</code>
+		<a class="anchor" href="#_getOneByKeyTableSchema">#</a>
+		<code>getOneByKeyTableSchema( <span>mixed <var>$schema</var></span>, <span>mixed <var>$table</var></span>, <span>mixed <var>$field</var></span>, <span>mixed <var>$value</var></span>, <span>mixed <var>$fields</var> = []</span> )</code>
 
 		<div class="description short">
 			
@@ -460,18 +468,18 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="header" id="_header">
+	<tr data-order="getManyByConditionTableSchema" id="_getManyByConditionTableSchema">
 
 		<td class="attributes"><code>
-			 public 
+			final protected 
 			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_header">#</a>
-		<code>header( <span>mixed <var>$msg_num</var></span>, <span>mixed <var>$read_lines</var> = <span class="php-num">5</span></span> )</code>
+		<a class="anchor" href="#_getManyByConditionTableSchema">#</a>
+		<code>getManyByConditionTableSchema( <span>mixed <var>$schema</var></span>, <span>mixed <var>$table</var></span>, <span>mixed <var>$where</var></span>, <span>mixed <var>$limit</var></span>, <span>mixed <var>$offset</var></span>, <span>mixed <var>$fields</var> = []</span>, <span>mixed <var>$orderby</var> = []</span> )</code>
 
 		<div class="description short">
 			
@@ -489,18 +497,18 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="read" id="_read">
+	<tr data-order="getCountByConditionTableSchema" id="_getCountByConditionTableSchema">
 
 		<td class="attributes"><code>
-			 public 
+			final protected 
 			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_read">#</a>
-		<code>read( <span>mixed <var>$msg_num</var></span> )</code>
+		<a class="anchor" href="#_getCountByConditionTableSchema">#</a>
+		<code>getCountByConditionTableSchema( <span>mixed <var>$schema</var></span>, <span>mixed <var>$table</var></span>, <span>mixed <var>$where</var></span> )</code>
 
 		<div class="description short">
 			
@@ -531,104 +539,6 @@ methods<br>
 
 
 
-	<table class="summary properties" id="properties">
-	<caption>Properties summary</caption>
-	<tr data-order="buffer" id="$buffer">
-		<td class="attributes"><code>
-			public  
-			integer
-		</code></td>
-
-		<td class="name">
-<var>$buffer</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$buffer" class="anchor">#</a><code><span class="php-num">512</span></code></div></td>
-	</tr>
-	<tr data-order="timeout" id="$timeout">
-		<td class="attributes"><code>
-			public  
-			integer
-		</code></td>
-
-		<td class="name">
-<var>$timeout</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$timeout" class="anchor">#</a><code><span class="php-num">30</span></code></div></td>
-	</tr>
-	<tr data-order="debug" id="$debug">
-		<td class="attributes"><code>
-			public  
-			boolean
-		</code></td>
-
-		<td class="name">
-<var>$debug</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$debug" class="anchor">#</a><code><span class="php-keyword1">false</span></code></div></td>
-	</tr>
-	<tr data-order="error" id="$error">
-		<td class="attributes"><code>
-			public  
-			string
-		</code></td>
-
-		<td class="name">
-<var>$error</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$error" class="anchor">#</a><code><span class="php-quote">''</span></code></div></td>
-	</tr>
-	<tr data-order="log" id="$log">
-		<td class="attributes"><code>
-			public  
-			string
-		</code></td>
-
-		<td class="name">
-<var>$log</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$log" class="anchor">#</a><code><span class="php-quote">''</span></code></div></td>
-	</tr>
-	</table>
 
 
 

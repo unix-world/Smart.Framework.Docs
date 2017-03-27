@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartPgsqlDb | Smart.Framework Documentation :: 2017-02-22 08:37</title>
+	<title>Class SmartPgsqlDb | Smart.Framework Documentation :: 2017-03-27 14:17</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?2894130186"></script>
+	<script src="elementlist.js?181461627"></script>
 </head>
 
 <body>
@@ -88,6 +88,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
+				<li><a href="class-SmartAbstractPgsqlOrmDb.html">SmartAbstractPgsqlOrmDb</a></li>
 				<li class="active"><a href="class-SmartPgsqlDb.html">SmartPgsqlDb</a></li>
 				<li><a href="class-SmartPgsqlExtDb.html">SmartPgsqlExtDb</a></li>
 			</ul>
@@ -225,7 +226,7 @@ class="php-num">99</span>]);
 		<b>Package:</b> <a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a><br>
 
 				<b>Version:</b>
-				v.170120<br>
+				v.170228<br>
 				<b>Depends:</b>
 				extensions: PHP PostgreSQL ; classes: Smart, SmartUnicode, SmartUtils<br>
 				<b>Hints:</b>
@@ -282,6 +283,98 @@ by example in App Bootstrap.</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="quote_likes" id="_quote_likes">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_quote_likes">#</a>
+		<code>quote_likes( <span>STRING <var>$y_string</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fix a string to be compliant with PgSQL LIKE / ILIKE / SIMILAR syntax. It
+will use special quotes for the LIKE / ILIKE / SIMILAR special characters: % _
+This function IS NOT INTENDED TO ESCAPE AGAINST SQL INJECTIONS ; USE IT ONLY
+WITH PREPARED PARAMS OR USE escape_str() with mode 'likes' / escape_literal()
+with mode 'likes'</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fix a string to be compliant with PgSQL LIKE / ILIKE / SIMILAR syntax. It
+will use special quotes for the LIKE / ILIKE / SIMILAR special characters: % _
+This function IS NOT INTENDED TO ESCAPE AGAINST SQL INJECTIONS ; USE IT ONLY
+WITH PREPARED PARAMS OR USE escape_str() with mode 'likes' / escape_literal()
+with mode 'likes'</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_string</var></dt>
+					<dd>:: A String or a Number to be Quoted for LIKES</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="quote_regex" id="_quote_regex">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_quote_regex">#</a>
+		<code>quote_regex( <span>STRING <var>$y_string</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fix a string to be compliant with PgSQL REGEX syntax. It will use special
+quotes for the REGEX special characters: . \ + * ? [ ^ ] $ ( ) { } = ! &lt; &gt;
+| : - This function IS NOT INTENDED TO ESCAPE AGAINST SQL INJECTIONS ; USE IT
+ONLY WITH PREPARED PARAMS OR USE escape_str() with mode 'regex' /
+escape_literal() with mode 'regex'</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fix a string to be compliant with PgSQL REGEX syntax. It will use special
+quotes for the REGEX special characters: . \ + * ? [ ^ ] $ ( ) { } = ! &lt; &gt;
+| : - This function IS NOT INTENDED TO ESCAPE AGAINST SQL INJECTIONS ; USE IT
+ONLY WITH PREPARED PARAMS OR USE escape_str() with mode 'regex' /
+escape_literal() with mode 'regex'</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_string</var></dt>
+					<dd>:: A String or a Number to be Quoted for REGEX</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="escape_str" id="_escape_str">
 
 		<td class="attributes"><code>
@@ -293,7 +386,7 @@ by example in App Bootstrap.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_escape_str">#</a>
-		<code>escape_str( <span>STRING <var>$y_string</var></span>, <span>YES/NO <var>$y_escape_likes</var> = <span class="php-quote">'no'</span></span>, <span>RESOURCE <var>$y_connection</var> = <span class="php-quote">'DEFAULT'</span></span> )</code>
+		<code>escape_str( <span>STRING <var>$y_string</var></span>, <span>ENUM <var>$y_mode</var> = <span class="php-quote">''</span></span>, <span>RESOURCE <var>$y_connection</var> = <span class="php-quote">'DEFAULT'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -315,8 +408,9 @@ but just will just escape it to be safe.</p>
 				<div class="list"><dl>
 					<dt><var>$y_string</var></dt>
 					<dd>:: A String or a Number to be Escaped</dd>
-					<dt><var>$y_escape_likes</var></dt>
-					<dd>:: Escape LIKE / ILIKE Syntax (% _) ; Default is NO</dd>
+					<dt><var>$y_mode</var></dt>
+					<dd>:: '' = default ; 'likes' = Escape LIKE / ILIKE / SIMILAR Syntax (% _) ; :: '' =
+default ; 'regex' = Escape ~ ~* !~ !~* Syntax</dd>
 					<dt><var>$y_connection</var></dt>
 					<dd>:: the connection</dd>
 				</dl></div>
@@ -343,7 +437,7 @@ but just will just escape it to be safe.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_escape_literal">#</a>
-		<code>escape_literal( <span>STRING <var>$y_string</var></span>, <span>YES/NO <var>$y_escape_likes</var> = <span class="php-quote">'no'</span></span>, <span>RESOURCE <var>$y_connection</var> = <span class="php-quote">'DEFAULT'</span></span> )</code>
+		<code>escape_literal( <span>STRING <var>$y_string</var></span>, <span>ENUM <var>$y_mode</var> = <span class="php-quote">''</span></span>, <span>RESOURCE <var>$y_connection</var> = <span class="php-quote">'DEFAULT'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -369,8 +463,9 @@ variables inside PostgreSQL SQL Statements, and is better than escape_str().</p>
 				<div class="list"><dl>
 					<dt><var>$y_string</var></dt>
 					<dd>:: A String or a Number to be Escaped</dd>
-					<dt><var>$y_escape_likes</var></dt>
-					<dd>:: Escape LIKE / ILIKE Syntax (% _) ; Default is NO</dd>
+					<dt><var>$y_mode</var></dt>
+					<dd>:: '' = default ; 'likes' = Escape LIKE / ILIKE / SIMILAR Syntax (% _) ; :: '' =
+default ; 'regex' = Escape ~ ~* !~ !~* Syntax</dd>
 					<dt><var>$y_connection</var></dt>
 					<dd>:: the connection</dd>
 				</dl></div>
@@ -1093,7 +1188,7 @@ unpredictable if mixing several statements at once !</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-02-22 08:37</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-03-27 14:17</a>
 	</div>
 </div>
 </div>
