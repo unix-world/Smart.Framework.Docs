@@ -575,7 +575,7 @@
 
 
                     <div class="param-description">
-                        <p>The URL (relative or absolute) to redirect to</p>
+                        <p>The URL (relative or absolute) to redirect to ; if = @ (will just autorefresh the page)</p>
 
                     </div>
 
@@ -837,7 +837,7 @@ This is the prefered way to close a child window (modal iFrame / PopUp) using a 
 
 
                     <div class="param-description">
-                        <p>The time delay in milliseconds</p>
+                        <p>The time delay in milliseconds ; If is NULL or 0 (zero) will use the default timeout</p>
 
                     </div>
 
@@ -2673,7 +2673,7 @@ Example: onKeyDown = SmartJS_BrowserUtils.catch_TABKey(event);</p>
     <div class="description">
         <p>Submit a Form by Ajax via POST and Handle the Answer
 It supports simple forms or complex forms with multipart/form-data and file attachments.
-This function expects a json answer with the following structure: see more in framework PHP lib SmartComponents::post_answer_by_ajax()
+This function expects a json answer with the following structure: see more in framework PHP lib SmartComponents::js_ajax_replyto_html_form()
 { // Json Structure for Answer
 'completed':    'DONE',
 'status':       'OK|ERROR',

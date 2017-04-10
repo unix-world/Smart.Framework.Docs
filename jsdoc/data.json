@@ -37,7 +37,7 @@
             "namespaces": {},
             "tag": "module",
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 3792,
+            "line": 3835,
             "description": "CLASS :: Browser Utils"
         },
         "Smart.Framework/JS/Core": {
@@ -51,7 +51,7 @@
             "namespaces": {},
             "tag": "module",
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 113,
+            "line": 143,
             "description": "CLASS :: Core Utils"
         },
         "Smart.Framework/JS/Archivers": {
@@ -65,7 +65,7 @@
             "namespaces": {},
             "tag": "module",
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 1160,
+            "line": 1196,
             "description": "CLASS :: LZS Archiver / Unarchiver"
         },
         "Smart.Framework/JS/Crypto": {
@@ -81,7 +81,7 @@
             "namespaces": {},
             "tag": "module",
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 2746,
+            "line": 2784,
             "description": "CLASS :: Base64 Encode / Decode"
         }
     },
@@ -96,7 +96,7 @@
             "extension_for": [],
             "module": "Smart.Framework/JS/Browser",
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 18,
+            "line": 20,
             "description": "CLASS :: Browser Test Compliance",
             "static": 1
         },
@@ -111,7 +111,7 @@
             "module": "Smart.Framework/JS/Core",
             "namespace": "",
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 113,
+            "line": 143,
             "description": "CLASS :: Core Utils",
             "static": 1
         },
@@ -126,7 +126,7 @@
             "module": "Smart.Framework/JS/Archivers",
             "namespace": "",
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 1160,
+            "line": 1196,
             "description": "CLASS :: LZS Archiver / Unarchiver",
             "static": 1
         },
@@ -141,7 +141,7 @@
             "module": "Smart.Framework/JS/Crypto",
             "namespace": "",
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 1911,
+            "line": 1949,
             "description": "CLASS :: Base64 Encode / Decode",
             "static": 1
         },
@@ -156,7 +156,7 @@
             "module": "Smart.Framework/JS/Crypto",
             "namespace": "",
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 2056,
+            "line": 2094,
             "description": "CLASS :: Hash Crypto: MD5 / SHA1 / SHA512",
             "static": 1
         },
@@ -171,7 +171,7 @@
             "module": "Smart.Framework/JS/Crypto",
             "namespace": "",
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 2746,
+            "line": 2784,
             "description": "CLASS :: Blowfish (CBC) :: encrypt / decrypt",
             "static": 1
         },
@@ -186,7 +186,7 @@
             "module": "Smart.Framework/JS/Browser",
             "namespace": "",
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 3792,
+            "line": 3835,
             "description": "CLASS :: Browser Utils",
             "static": 1
         }
@@ -195,7 +195,7 @@
     "classitems": [
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 31,
+            "line": 33,
             "description": "Detect if a Browser support Cookies or have the Cookies enabled.\nIf fail, an alert will be shown.",
             "itemtype": "method",
             "name": "checkCookies",
@@ -205,7 +205,17 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 63,
+            "line": 65,
+            "description": "Detect if the Browser is on a mobile device.\nThis is a very basic but effective and quick detection",
+            "itemtype": "method",
+            "name": "checkCookies",
+            "static": 1,
+            "class": "Test_Browser_Compliance",
+            "module": "Smart.Framework/JS/Browser"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 91,
             "description": "Detect if the Internet Explorer matches minimum required version: at least IE9.\nIf fail, an alert will be shown.",
             "itemtype": "method",
             "name": "checkIEVersion",
@@ -215,7 +225,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 128,
+            "line": 158,
             "description": "Trim a string (at begining or end by any whitespace: space \\ n \\ r \\ t)",
             "itemtype": "method",
             "name": "stringTrim",
@@ -236,7 +246,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 150,
+            "line": 180,
             "description": "Split string by comma with trimming pre/post",
             "itemtype": "method",
             "name": "stringSplitbyComma",
@@ -257,7 +267,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 173,
+            "line": 203,
             "description": "Split string by semicolon with trimming pre/post",
             "itemtype": "method",
             "name": "stringSplitbySemicolon",
@@ -278,7 +288,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 196,
+            "line": 226,
             "description": "Replace all occurences in a string - Case Sensitive",
             "itemtype": "method",
             "name": "stringReplaceAll",
@@ -309,7 +319,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 220,
+            "line": 250,
             "description": "Replace all occurences in a string - Case Insensitive",
             "itemtype": "method",
             "name": "stringIReplaceAll",
@@ -340,7 +350,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 256,
+            "line": 286,
             "description": "Get the first element from an Array",
             "itemtype": "method",
             "name": "arrayGetFirst",
@@ -361,7 +371,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 275,
+            "line": 305,
             "description": "Get the last element from an Array",
             "itemtype": "method",
             "name": "arrayGetLast",
@@ -382,7 +392,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 294,
+            "line": 324,
             "description": "Format a number as INTEGER",
             "itemtype": "method",
             "name": "format_number_int",
@@ -408,7 +418,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 335,
+            "line": 365,
             "description": "Format a number as DECIMAL",
             "itemtype": "method",
             "name": "format_number_dec",
@@ -444,7 +454,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 393,
+            "line": 423,
             "description": "Add the Thousands Separator (comma ,) to a number",
             "itemtype": "method",
             "name": "add_number_ThousandsSeparator",
@@ -465,7 +475,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 409,
+            "line": 439,
             "description": "Safe escape URL Variable (using RFC3986 standards to be full Unicode compliant).\nThis is a shortcut to the encodeURIComponent() to provide a standard into Smart.Framework/JS.",
             "itemtype": "method",
             "name": "escape_url",
@@ -486,7 +496,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 479,
+            "line": 509,
             "description": "Convert special characters to HTML entities.\nThis is like the Smart::escape_html() from the PHP Smart.Framework.\nThese values will be converted to safe HTML entities: < > & \"",
             "itemtype": "method",
             "name": "escape_html",
@@ -507,7 +517,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 496,
+            "line": 526,
             "description": "Convert special characters to escaped entities for safe use with Javascript Strings.\nThis is like the Smart::escape_js() from the PHP Smart.Framework.",
             "itemtype": "method",
             "name": "escape_js",
@@ -528,7 +538,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 543,
+            "line": 573,
             "description": "Replace new lines \\ r \\ n ; \\ n with the <br> html tag.\nThis is compatible with the PHP nl2br() function.",
             "itemtype": "method",
             "name": "nl2br",
@@ -549,7 +559,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 566,
+            "line": 596,
             "description": "Un-quotes a quoted string.\nThis is compatible with PHP stripslashes() function.",
             "itemtype": "method",
             "name": "stripslashes",
@@ -570,7 +580,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 593,
+            "line": 623,
             "description": "Encodes an ISO-8859-1 string to UTF-8",
             "itemtype": "method",
             "name": "utf8_encode",
@@ -591,7 +601,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 625,
+            "line": 655,
             "description": "Decodes an UTF-8 string to ISO-8859-1",
             "itemtype": "method",
             "name": "utf8_decode",
@@ -612,7 +622,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 661,
+            "line": 691,
             "description": "Convert binary data into hexadecimal representation.\nThis is compatible with PHP bin2hex() function.",
             "itemtype": "method",
             "name": "bin2hex",
@@ -633,7 +643,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 686,
+            "line": 716,
             "description": "Decodes a hexadecimally encoded binary string.\nThis is compatible with PHP hex2bin() function.",
             "itemtype": "method",
             "name": "hex2bin",
@@ -654,7 +664,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 710,
+            "line": 740,
             "description": "Quote regular expression characters in a string.\nThis is compatible with PHP preg_quote() function.",
             "itemtype": "method",
             "name": "preg_quote",
@@ -675,7 +685,33 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 842,
+            "line": 815,
+            "description": "Render Simple Marker Template (only marker replacements, no IF or LOOP syntax, not even marker escaping syntax)\nThis is compatible just with the SIMPLE REPLACEMENT of Smart.Framework PHP server-side Markers Templating for substitutions on client-side, except it can only process marker substitutions without extended syntax as IF/LOOP/INCLUDE.\nNotice: It ONLY supports the marker syntax like [####MARKER####]\nTo be used together with the server-side marker templating to avoid the server-side markers to be replaced as (####+/-MARKER+/-####) need the: template to be escape_url+escape_js and 3rd param: urlescaped = TRUE",
+            "itemtype": "method",
+            "name": "render_markers_template",
+            "static": 1,
+            "params": [
+                {
+                    "name": "template",
+                    "description": "The string template with markers",
+                    "type": "String"
+                },
+                {
+                    "name": "arrobj",
+                    "description": "The Object-Array with marker replacements as { 'MAR.KER_1' => 'Value 1', 'MARKER-2' => 'Value 2', ... }",
+                    "type": "ArrayObj"
+                }
+            ],
+            "return": {
+                "description": "The processed string",
+                "type": "String"
+            },
+            "class": "SmartJS_CoreUtils",
+            "module": "Smart.Framework/JS/Core"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 876,
             "description": "Sort a stack (array / object / property) using String Sort algorithm",
             "itemtype": "method",
             "name": "textSort",
@@ -696,7 +732,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 876,
+            "line": 910,
             "description": "Sort a stack (array / object / property) using Numeric Sort algorithm",
             "itemtype": "method",
             "name": "numericSort",
@@ -717,7 +753,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 907,
+            "line": 941,
             "description": "Format a date object into a string value.\n\nHint: The format can be combinations of the following:\nd  - day of month (no leading zero) ;\ndd - day of month (two digit) ;\no  - day of year (no leading zeros) ;\noo - day of year (three digit) ;\nD  - day name short ;\nDD - day name long ;\nm  - month of year (no leading zero) ;\nmm - month of year (two digit) ;\nM  - month name short ;\nMM - month name long ;\ny  - year (two digit) ;\nyy - year (four digit) ;",
             "itemtype": "method",
             "name": "formatDate",
@@ -748,7 +784,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 1044,
+            "line": 1078,
             "description": "Determine a date by a Date object or Expression\n\nHint: Valid date objects or expressions:\nnew Date(1937, 1 - 1, 1) \t:: a date in the past, as object ;\n'-1y -1m -1d' \t\t\t\t:: a date in the past as relative expression to the defaultDate ;\nnew Date(2037, 12 - 1, 31) \t:: a date in the future as object ;\n'1y 1m 1d' \t\t\t\t\t:: a date in the future as relative expression to the defaultDate ;",
             "itemtype": "method",
             "name": "determineDate",
@@ -774,7 +810,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 1180,
+            "line": 1216,
             "description": "Compress a string to LZS + Base64",
             "itemtype": "method",
             "name": "compressToBase64",
@@ -795,7 +831,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 1247,
+            "line": 1283,
             "description": "Decompress from LZS + Base64",
             "itemtype": "method",
             "name": "decompressFromBase64",
@@ -816,7 +852,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 2007,
+            "line": 2045,
             "description": "Encode a string to Base64",
             "itemtype": "method",
             "name": "encode",
@@ -837,7 +873,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 2027,
+            "line": 2065,
             "description": "Decode a string from Base64",
             "itemtype": "method",
             "name": "decode",
@@ -858,7 +894,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 2289,
+            "line": 2327,
             "description": "Returns the MD5 hash of a string",
             "itemtype": "method",
             "name": "md5",
@@ -879,7 +915,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 2390,
+            "line": 2428,
             "description": "Returns the SHA1 hash of a string",
             "itemtype": "method",
             "name": "sha1",
@@ -900,7 +936,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 2710,
+            "line": 2748,
             "description": "Returns the SHA512 hash of a string",
             "itemtype": "method",
             "name": "sha512",
@@ -921,7 +957,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 3124,
+            "line": 3162,
             "description": "Blowfish encrypts plaintext using an encryption key",
             "itemtype": "method",
             "name": "encrypt",
@@ -947,7 +983,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 3207,
+            "line": 3245,
             "description": "Blowfish decrypts ciphertext using the encryption key",
             "itemtype": "method",
             "name": "decrypt",
@@ -973,7 +1009,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 3807,
+            "line": 3850,
             "description": "Detect if a Browser Window is iFrame",
             "itemtype": "method",
             "name": "WindowIsiFrame",
@@ -987,7 +1023,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 3825,
+            "line": 3868,
             "description": "Detect if a Browser Window is PopUp",
             "itemtype": "method",
             "name": "WindowIsPopup",
@@ -1001,7 +1037,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 3843,
+            "line": 3886,
             "description": "Print current Browser Page",
             "itemtype": "method",
             "name": "PrintPage",
@@ -1011,7 +1047,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 3860,
+            "line": 3903,
             "description": "Count Down handler that bind to a HTML Element",
             "itemtype": "method",
             "name": "CountDown",
@@ -1038,7 +1074,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 3909,
+            "line": 3956,
             "description": "Page Away control handler",
             "itemtype": "method",
             "name": "PageAwayControl",
@@ -1055,7 +1091,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 3957,
+            "line": 4004,
             "description": "Redirect to URL current browser window",
             "itemtype": "method",
             "name": "RedirectToURL",
@@ -1063,7 +1099,7 @@
             "params": [
                 {
                     "name": "yURL",
-                    "description": "The URL (relative or absolute) to redirect to",
+                    "description": "The URL (relative or absolute) to redirect to ; if = @ (will just autorefresh the page)",
                     "type": "String"
                 }
             ],
@@ -1072,7 +1108,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 3975,
+            "line": 4026,
             "description": "Delayed Redirect to URL current browser window",
             "itemtype": "method",
             "name": "RedirectDelayedToURL",
@@ -1094,7 +1130,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 3990,
+            "line": 4041,
             "description": "Redirect to URL parent browser window",
             "itemtype": "method",
             "name": "RedirectParent",
@@ -1111,7 +1147,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4021,
+            "line": 4072,
             "description": "Lazy Refresh parent browser window or Lazy redirect parent window to another URL.\nThis method is different than RedirectParent() because will be executed just after the child (modal iFrame / PopUp) is closed.\nIt will just trigger a lazy refresh on parent that will be executed later, after closing current child window.",
             "itemtype": "method",
             "name": "RefreshParent",
@@ -1128,7 +1164,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4052,
+            "line": 4103,
             "description": "Close a Modal / PopUp child browser window.\nIf a parent refresh is pending will execute it after.\nThis is the prefered way to close a child window (modal iFrame / PopUp) using a button or just executing this code in a child page.",
             "itemtype": "method",
             "name": "CloseModalPopUp",
@@ -1138,7 +1174,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4091,
+            "line": 4142,
             "description": "Delayed Close a Modal / PopUp child browser window.\nIf a parent refresh is pending will execute it after.\nThis is the prefered way to close a child window (modal iFrame / PopUp) using a button or just executing this code in a child page.",
             "itemtype": "method",
             "name": "CloseDelayedModalPopUp",
@@ -1146,7 +1182,7 @@
             "params": [
                 {
                     "name": "timeout",
-                    "description": "The time delay in milliseconds",
+                    "description": "The time delay in milliseconds ; If is NULL or 0 (zero) will use the default timeout",
                     "type": "Integer"
                 }
             ],
@@ -1155,7 +1191,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4157,
+            "line": 4215,
             "description": "Focus a browser window by reference",
             "itemtype": "method",
             "name": "windowFocus",
@@ -1172,7 +1208,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4173,
+            "line": 4231,
             "description": "Scroll down a browser window by reference.\nIt will focus the referenced browser window first.",
             "itemtype": "method",
             "name": "windwScrollDown",
@@ -1194,7 +1230,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4191,
+            "line": 4249,
             "description": "Get the highest available Z-Index from a browser page taking in account all visible layers (div).\nIt will ignore non-visible layers for speed-up, as they have anyway no Z-Index assigned.",
             "itemtype": "method",
             "name": "getHighestZIndex",
@@ -1208,7 +1244,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4229,
+            "line": 4287,
             "description": "Display a page overlay in the current browser window\nThe ZIndex of the overlay is: 2147400000\nAll page elements that must be visible over this overlay must have zIndex in range: 2147401000 - 214740999",
             "itemtype": "method",
             "name": "Overlay_Show",
@@ -1239,7 +1275,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4291,
+            "line": 4349,
             "description": "Clear all notifications from the page overlay in the current browser window",
             "itemtype": "method",
             "name": "Overlay_Clear",
@@ -1249,7 +1285,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4304,
+            "line": 4362,
             "description": "Hide (destroy) the page overlay in the current browser window",
             "itemtype": "method",
             "name": "Overlay_Hide",
@@ -1259,7 +1295,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4326,
+            "line": 4384,
             "description": "Add a Growl notification in the current browser window (page)",
             "itemtype": "method",
             "name": "GrowlNotificationAdd",
@@ -1310,7 +1346,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4351,
+            "line": 4409,
             "description": "Remove a Growl Notification by ID from the current browser window (page)",
             "itemtype": "method",
             "name": "GrowlNotificationRemove",
@@ -1327,7 +1363,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4365,
+            "line": 4423,
             "description": "Create a Maximize HTML Element wrapper arround a layer (div, iframe, ...).\nThis will add a maximize / un-maximize button and the handler to be able to maximize the element.\nWhen the selected element will be maximized the page will be protected by an overlay.",
             "itemtype": "method",
             "name": "MaximizeElement",
@@ -1349,7 +1385,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4420,
+            "line": 4478,
             "description": "Create a Browser Alert Dialog that will have just the OK button.\nThis will detect if the UIDialog is available and will prefer to use it if set.\nOtherwise will try to detect if SimpleDislog is available and will use it if UIDialog is not available - fallback.\nIf none of the above are available (not available) will display a simple alert() - fallback.",
             "itemtype": "method",
             "name": "alert_Dialog",
@@ -1386,7 +1422,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4463,
+            "line": 4525,
             "description": "Create a Browser Confirm Dialog that will have 2 buttons: OK / Cancel.\nThis will detect if the UIDialog is available and will prefer to use it if set.\nOtherwise will try to detect if SimpleDislog is available and will use it if UIDialog is not available - fallback.\nIf none of the above are available (not available) will display a simple confirm() - fallback.",
             "itemtype": "method",
             "name": "confirm_Dialog",
@@ -1423,7 +1459,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4508,
+            "line": 4574,
             "description": "Confirm a Form Submit by a confirm / Dialog, with OK and Cancel buttons.\nThe form will be submitted just if OK button is clicked.\nThis function is using confirm_Dialog() and will detect and prefer in this order if UIDialog / SimpleDialog or just confirm() are available in Browser.",
             "itemtype": "method",
             "name": "confirmSubmitForm",
@@ -1470,7 +1506,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4561,
+            "line": 4627,
             "description": "Raise a Modal/iFrame or PopUp child window with a new target to post a form within.\nIt will get the form URL and form method GET/POST directly from the objForm.\nThis function must be called by a form button onClick followed by 'return false;' not by classic submit to avoid fire the form send twice 1st before (in a _blank window) and 2nd after opening the child popup/modal.\nThis function if used in a button with 'return false;' will catch the form send behaviour and will trigger it just after the child modal/iFrame or PopUp child window (new) target is opened and available.",
             "itemtype": "method",
             "name": "PopUpSendForm",
@@ -1517,7 +1553,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4609,
+            "line": 4675,
             "description": "Raise a Modal/iFrame or PopUp child window with a new target to open a URL link within.\nThis function can be called by a button, a link or other HTML elements at onClick (if 'a' element onClick is used must be followed by 'return false;' to avoid fire page refresh.",
             "itemtype": "method",
             "name": "PopUpLink",
@@ -1559,7 +1595,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4641,
+            "line": 4707,
             "description": "Get a Cookie from Browser by Name and return it's Value",
             "itemtype": "method",
             "name": "getCookie",
@@ -1580,7 +1616,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4667,
+            "line": 4733,
             "description": "Set a Cookie in Browser by Name and Value",
             "itemtype": "method",
             "name": "setCookie",
@@ -1622,7 +1658,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4700,
+            "line": 4766,
             "description": "Delete a Cookie from Browser by Name",
             "itemtype": "method",
             "name": "deleteCookie",
@@ -1649,7 +1685,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4767,
+            "line": 4834,
             "description": "Force a text limit on a TextArea (will also attach a CounterField)",
             "itemtype": "method",
             "name": "textArea_addLimit",
@@ -1671,7 +1707,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4810,
+            "line": 4881,
             "description": "Catch TAB Key in a TextArea or other compatible field\nExample: onKeyDown = SmartJS_BrowserUtils.catch_TABKey(event);",
             "itemtype": "method",
             "name": "catch_TABKey",
@@ -1688,7 +1724,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4859,
+            "line": 4930,
             "description": "Check or Uncheck all checkboxes in a form element",
             "itemtype": "method",
             "name": "checkAll_CkBoxes",
@@ -1715,7 +1751,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 4903,
+            "line": 4974,
             "description": "Clone a HTML Element",
             "itemtype": "method",
             "name": "CloneElement",
@@ -1747,8 +1783,8 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 5005,
-            "description": "Submit a Form by Ajax via POST and Handle the Answer\nIt supports simple forms or complex forms with multipart/form-data and file attachments.\nThis function expects a json answer with the following structure: see more in framework PHP lib SmartComponents::post_answer_by_ajax()\n\t\t{ // Json Structure for Answer\n\t\t\t'completed': \t'DONE',\n\t\t\t'status': \t\t'OK|ERROR',\n\t\t\t'action': \t\t'Notification Button Text: Ok/Cancel',\n\t\t\t'title': \t\t'Notification Title',\n\t\t\t'message': \t\t'Notification Message HTML Content',\n\t\t\t'js_evcode': \t'If non-empty, the JS Code to execute on either SUCCESS or ERROR (before redirect or Div Replace)'\n\t\t\t'redirect': \t'If non-empty, a redirect URL on either SUCCESS or ERROR ; on SUCCESS if message is Empty will redirect without confirmation: Growl / Dialog',\n\t\t\t'replace_div': \t'If non-empty, an ID for a div to be replaced with content from [replace_html] on Success',\n\t\t\t'replace_html': 'If non-empty, a HTML code to populate / replace the current Content for the [replace_div] on Success'\n\t\t} // #END Json Structure",
+            "line": 5080,
+            "description": "Submit a Form by Ajax via POST and Handle the Answer\nIt supports simple forms or complex forms with multipart/form-data and file attachments.\nThis function expects a json answer with the following structure: see more in framework PHP lib SmartComponents::js_ajax_replyto_html_form()\n\t\t{ // Json Structure for Answer\n\t\t\t'completed': \t'DONE',\n\t\t\t'status': \t\t'OK|ERROR',\n\t\t\t'action': \t\t'Notification Button Text: Ok/Cancel',\n\t\t\t'title': \t\t'Notification Title',\n\t\t\t'message': \t\t'Notification Message HTML Content',\n\t\t\t'js_evcode': \t'If non-empty, the JS Code to execute on either SUCCESS or ERROR (before redirect or Div Replace)'\n\t\t\t'redirect': \t'If non-empty, a redirect URL on either SUCCESS or ERROR ; on SUCCESS if message is Empty will redirect without confirmation: Growl / Dialog',\n\t\t\t'replace_div': \t'If non-empty, an ID for a div to be replaced with content from [replace_html] on Success',\n\t\t\t'replace_html': 'If non-empty, a HTML code to populate / replace the current Content for the [replace_div] on Success'\n\t\t} // #END Json Structure",
             "itemtype": "method",
             "name": "Submit_Form_By_Ajax",
             "static": 1,
@@ -1784,7 +1820,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 5151,
+            "line": 5230,
             "description": "Create an Ajax XHR Request (POST) by Form\nIt supports simple forms or complex forms with multipart/form-data and file attachments.",
             "itemtype": "method",
             "name": "Ajax_XHR_GetByForm",
@@ -1815,7 +1851,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 5304,
+            "line": 5383,
             "description": "Create a general purpose Ajax XHR Request (GET/POST) with Optional support for Authentication and Extra Headers\nIt is NOT intended to be used with HTML forms that may contain multipart/form-data and file attachments or not.\nFor creating an Ajax XHR Request to be used with HTML Forms use:\n\t\tSmartJS_BrowserUtils.Ajax_XHR_GetByForm(); \t\t// basic, will detect the form type if must use multipart/form-data + attachments (if any)\nor even much better use this:\n\t\tSmartJS_BrowserUtils.Submit_Form_By_Ajax(); \t// advanced, will handle the XHR form request and the answer",
             "itemtype": "method",
             "name": "Ajax_XHR_Request_From_URL",
@@ -1866,7 +1902,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 5404,
+            "line": 5483,
             "description": "Loads the contents for a Div (or other compatible) HTML Element(s) by Ajax using a GET / POST Ajax Request\nThis is intended to simplify populating a Div (or other compatible) HTML Element(s) with content(s) by Ajax Requests.",
             "itemtype": "method",
             "name": "Load_Div_Content_By_Ajax",
@@ -1908,7 +1944,7 @@
         },
         {
             "file": "smart-framework.js-docs/src/smart-framework.js",
-            "line": 5446,
+            "line": 5525,
             "description": "Add (Create) a Bookmark to Favorites in Browser\nThis may not be supported by all browsers thus it have a TRY/CATCH fallback to avoid errors.",
             "itemtype": "method",
             "name": "bookmark_url",

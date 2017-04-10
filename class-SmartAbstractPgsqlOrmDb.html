@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartAbstractPgsqlOrmDb | Smart.Framework Documentation :: 2017-03-27 14:17</title>
+	<title>Class SmartAbstractPgsqlOrmDb | Smart.Framework Documentation :: 2017-04-10 10:45</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?181461627"></script>
+	<script src="elementlist.js?1847996447"></script>
 </head>
 
 <body>
@@ -42,8 +42,6 @@
 				<li><a href="package-DATA.XML.html">DATA:XML</a>
 						</li>
 				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
-						</li>
-				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
 				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
 						</li>
@@ -161,13 +159,13 @@ further ...</p>
 		<b>Package:</b> <a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a><br>
 
 				<b>Version:</b>
-				v.170327<br>
+				v.170329<br>
 				<b>Depends:</b>
 				extensions: PHP PostgreSQL ; classes: Smart, SmartUnicode, SmartUtils,
 SmartPgsqlExtDb<br>
 				<b>Hints:</b>
 				needs to be extended and a constructor to be defined to init this ORM as:
-$this-&gt;initORM('pgsql-orm');<br>
+$this-&gt;initConnection('pgsql-orm');<br>
 				<b>Usage:</b>
 				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
 methods<br>
@@ -236,7 +234,7 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="initORM" id="_initORM">
+	<tr data-order="initConnection" id="_initConnection">
 
 		<td class="attributes"><code>
 			final protected 
@@ -246,8 +244,8 @@ methods<br>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_initORM">#</a>
-		<code>initORM( <span>mixed <var>$cfg_pgsql_area</var></span> )</code>
+		<a class="anchor" href="#_initConnection">#</a>
+		<code>initConnection( <span>mixed <var>$cfg_pgsql_area</var></span> )</code>
 
 		<div class="description short">
 			
@@ -410,39 +408,10 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="parseArrFieldsToSqlSelectStatement" id="_parseArrFieldsToSqlSelectStatement">
-
-		<td class="attributes"><code>
-			final protected 
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_parseArrFieldsToSqlSelectStatement">#</a>
-		<code>parseArrFieldsToSqlSelectStatement( <span>mixed <var>$fields</var></span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
 	<tr data-order="getOneByKeyTableSchema" id="_getOneByKeyTableSchema">
 
 		<td class="attributes"><code>
-			final protected 
+			final public 
 			
 			
 			</code>
@@ -450,7 +419,7 @@ methods<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_getOneByKeyTableSchema">#</a>
-		<code>getOneByKeyTableSchema( <span>mixed <var>$schema</var></span>, <span>mixed <var>$table</var></span>, <span>mixed <var>$field</var></span>, <span>mixed <var>$value</var></span>, <span>mixed <var>$fields</var> = []</span> )</code>
+		<code>getOneByKeyTableSchema( <span>mixed <var>$schema</var></span>, <span>mixed <var>$table</var></span>, <span>mixed <var>$field</var></span>, <span>mixed <var>$value</var></span>, <span>mixed <var>$fields</var> = []</span>, <span>mixed <var>$where</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -471,7 +440,7 @@ methods<br>
 	<tr data-order="getManyByConditionTableSchema" id="_getManyByConditionTableSchema">
 
 		<td class="attributes"><code>
-			final protected 
+			final public 
 			
 			
 			</code>
@@ -500,7 +469,7 @@ methods<br>
 	<tr data-order="getCountByConditionTableSchema" id="_getCountByConditionTableSchema">
 
 		<td class="attributes"><code>
-			final protected 
+			final public 
 			
 			
 			</code>
@@ -509,6 +478,64 @@ methods<br>
 		<td class="name"><div>
 		<a class="anchor" href="#_getCountByConditionTableSchema">#</a>
 		<code>getCountByConditionTableSchema( <span>mixed <var>$schema</var></span>, <span>mixed <var>$table</var></span>, <span>mixed <var>$where</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseArrWhere" id="_parseArrWhere">
+
+		<td class="attributes"><code>
+			final protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseArrWhere">#</a>
+		<code>parseArrWhere( <span>mixed <var>$where</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="parseArrFieldsToSqlSelectStatement" id="_parseArrFieldsToSqlSelectStatement">
+
+		<td class="attributes"><code>
+			final protected 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_parseArrFieldsToSqlSelectStatement">#</a>
+		<code>parseArrFieldsToSqlSelectStatement( <span>mixed <var>$fields</var></span> )</code>
 
 		<div class="description short">
 			
@@ -548,7 +575,7 @@ methods<br>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-03-27 14:17</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-04-10 10:45</a>
 	</div>
 </div>
 </div>

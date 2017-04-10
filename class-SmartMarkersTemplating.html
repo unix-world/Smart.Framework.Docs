@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartMarkersTemplating | Smart.Framework Documentation :: 2017-03-27 14:17</title>
+	<title>Class SmartMarkersTemplating | Smart.Framework Documentation :: 2017-04-10 10:45</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?181461627"></script>
+	<script src="elementlist.js?1847996447"></script>
 </head>
 
 <body>
@@ -42,8 +42,6 @@
 				<li><a href="package-DATA.XML.html">DATA:XML</a>
 						</li>
 				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
-						</li>
-				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
 				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
 						</li>
@@ -157,7 +155,7 @@ templating system.</p>
 		<b>Package:</b> <a href="package-Templating.Engines.html">Templating:Engines</a><br>
 
 				<b>Version:</b>
-				v.170327<br>
+				v.170410<br>
 				<b>Depends:</b>
 				classes: Smart, SmartFileSystem, SmartFileSysUtils<br>
 				<b>Usage:</b>
@@ -169,6 +167,102 @@ templating system.</p>
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
+	<tr data-order="analyze_debug_template" id="_analyze_debug_template">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_analyze_debug_template">#</a>
+		<code>analyze_debug_template( <span>STRING <var>$mtemplate</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Analyze a Marker Template String (NO Sub-Templates are loaded) This is
+intended for DEVELOPMENT / DEBUG ONLY (never use this in production environments
+!)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Analyze a Marker Template String (NO Sub-Templates are loaded) This is
+intended for DEVELOPMENT / DEBUG ONLY (never use this in production environments
+!)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mtemplate</var></dt>
+					<dd>:: The markers template string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The analyze info HTML+JS<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="analyze_debug_file_template" id="_analyze_debug_file_template">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_analyze_debug_file_template">#</a>
+		<code>analyze_debug_file_template( <span>STRING <var>$y_file_path</var></span>, <span>ARRAY <var>$y_arr_sub_templates</var> = []</span> )</code>
+
+		<div class="description short">
+			
+<p>Render Marker File Template (incl. Sub-Templates from Files if any) This is
+intended for DEVELOPMENT / DEBUG ONLY (never use this in production environments
+!)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Render Marker File Template (incl. Sub-Templates from Files if any) This is
+intended for DEVELOPMENT / DEBUG ONLY (never use this in production environments
+!)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_file_path</var></dt>
+					<dd>:: The relative path to the file markers template (partial text/html + markers +
+&lt;em&gt;sub-templates&lt;/em&gt;)</dd>
+					<dt><var>$y_arr_sub_templates</var></dt>
+					<dd>:: &lt;em&gt;Optional&lt;/em&gt; The associative array with the sub-template variables (
+@SUB-TEMPLATES@ ) if any</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The analyze info HTML+JS<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="render_template" id="_render_template">
 
 		<td class="attributes"><code>
@@ -184,14 +278,14 @@ templating system.</p>
 
 		<div class="description short">
 			
-<p>Parse Marker Template (String Template ; no sub-templates are allowed as
+<p>Render Marker Template (String Template ; no sub-templates are allowed as
 there is no possibility to set a relative path from where to get them)</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Parse Marker Template (String Template ; no sub-templates are allowed as
+<p>Render Marker Template (String Template ; no sub-templates are allowed as
 there is no possibility to set a relative path from where to get them)</p>
 
 
@@ -199,7 +293,7 @@ there is no possibility to set a relative path from where to get them)</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$mtemplate</var></dt>
-					<dd>:: The markers template (partial text/html + markers) ; Ex:
+					<dd>:: The markers template string (partial text/html + markers) ; Ex:
 '&lt;span&gt;[####MARKER1####]&lt;br&gt;
 [####MARKER2####], ...&lt;/span&gt;'</dd>
 					<dt><var>$y_arr_vars</var></dt>
@@ -298,7 +392,7 @@ once per execution) ; 'no' means no caching is used (default)</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-03-27 14:17</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-04-10 10:45</a>
 	</div>
 </div>
 </div>

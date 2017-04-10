@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartFileSysUtils | Smart.Framework Documentation :: 2017-03-27 14:17</title>
+	<title>Class SmartFileSysUtils | Smart.Framework Documentation :: 2017-04-10 10:45</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?181461627"></script>
+	<script src="elementlist.js?1847996447"></script>
 </head>
 
 <body>
@@ -42,8 +42,6 @@
 				<li><a href="package-DATA.XML.html">DATA:XML</a>
 						</li>
 				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
-						</li>
-				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
 				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
 						</li>
@@ -192,7 +190,7 @@ class="php-comment">//----------------------------------------------------------
 		<b>Package:</b> <a href="package-Filesystem.html">Filesystem</a><br>
 
 				<b>Version:</b>
-				v.161001<br>
+				v.170403<br>
 				<b>Depends:</b>
 				classes: Smart<br>
 				<b>Hints:</b>
@@ -258,7 +256,7 @@ ONLY if misses but NOT if the $my_dir is empty to avoid root access !<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_check_file_or_dir_name">#</a>
-		<code>check_file_or_dir_name( <span>STRING <var>$y_path</var></span>, <span>YES/NO <var>$y_deny_absolute_path</var> = <span class="php-quote">'yes'</span></span> )</code>
+		<code>check_file_or_dir_name( <span>STRING <var>$y_path</var></span>, <span>YES/NO <var>$y_deny_absolute_path</var> = <span class="php-quote">'yes'</span></span>, <span>YES/NO <var>$y_allow_protected_relative_paths</var> = <span class="php-quote">'no'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -280,6 +278,12 @@ injections)</p>
 					<dd>:: The path (dir or file) to validate</dd>
 					<dt><var>$y_deny_absolute_path</var></dt>
 					<dd>:: &lt;em&gt;Optional&lt;/em&gt; If YES will dissalow absolute paths</dd>
+					<dt><var>$y_allow_protected_relative_paths</var></dt>
+					<dd>:: &lt;em&gt;Optional&lt;/em&gt; ! This is for very special case usage only so don't set it
+to YES except if you know what you are really doing ! If set to YES will allow
+access to special protected paths of this framework which may have impact on
+security ... ; this parameter is intended just for relative paths only (not
+absolute paths) as: #dir/.../file.ext ; #file.ext</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -827,7 +831,7 @@ also drop a warning.</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-03-27 14:17</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-04-10 10:45</a>
 	</div>
 </div>
 </div>
