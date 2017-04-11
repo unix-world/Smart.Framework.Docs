@@ -1963,6 +1963,28 @@
             ],
             "class": "SmartJS_BrowserUtils",
             "module": "Smart.Framework/JS/Browser"
+        },
+        {
+            "file": "smart-framework.js-docs/src/smart-framework.js",
+            "line": 5569,
+            "description": "Trigger a function when you scroll to an element",
+            "itemtype": "method",
+            "name": "WayPoint",
+            "static": 1,
+            "params": [
+                {
+                    "name": "targetElem",
+                    "description": "The Element ; sample: #elem-id .elem-class (interpretable by jQuery)",
+                    "type": "String"
+                },
+                {
+                    "name": "evcode",
+                    "description": "the JS Code to execute on complete",
+                    "type": "JS-Code"
+                }
+            ],
+            "class": "SmartJS_BrowserUtils",
+            "module": "Smart.Framework/JS/Browser"
         }
     ],
     "warnings": []
