@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartComponents | Smart.Framework Documentation :: 2017-04-11 17:15</title>
+	<title>Class SmartComponents | Smart.Framework Documentation :: 2017-09-05 11:42</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1847996447"></script>
+	<script src="elementlist.js?1618497803"></script>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
 						</li>
 				<li><a href="package-Components.Charts.html">Components:Charts</a>
 						</li>
-				<li class="active"><a href="package-Components.Framework.html">Components:Framework</a>
+				<li class="active"><a href="package-Components.Core.html">Components:Core</a>
 						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
 						</li>
@@ -57,13 +57,17 @@
 						</li>
 				<li><a href="package-Filesystem.html">Filesystem</a>
 						</li>
+				<li><a href="package-LanguageDetection.html">LanguageDetection</a>
+						</li>
 				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
 						</li>
 				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
 						</li>
 				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
 						</li>
-				<li><a href="package-MediaGallery.html">MediaGallery</a>
+				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
+						</li>
+				<li><a href="package-Media.ImageProcessing.html">Media:ImageProcessing</a>
 						</li>
 				<li><a href="package-Network.CURL.html">Network:CURL</a>
 						</li>
@@ -72,8 +76,6 @@
 				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
 						</li>
 				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
-						</li>
-				<li><a href="package-Services.LangId.Py.html">Services:LangId-Py</a>
 						</li>
 				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
@@ -114,7 +116,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="package-Components.Framework.html" title="Summary of Components:Framework"><span>Package</span></a>
+				<a href="package-Components.Core.html" title="Summary of Components:Core"><span>Package</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -150,10 +152,10 @@
 		<b>Final</b><br>
 		
 		
-		<b>Package:</b> <a href="package-Components.Framework.html">Components:Framework</a><br>
+		<b>Package:</b> <a href="package-Components.Core.html">Components:Core</a><br>
 
 				<b>Version:</b>
-				v.170408<br>
+				v.170901<br>
 				<b>Depends:</b>
 				classes: Smart, SmartUtils, SmartFileSystem, SmartHTMLCalendar,
 SmartTextTranslations<br>
@@ -235,7 +237,7 @@ SmartTextTranslations<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_http_message_400_badrequest">#</a>
-		<code>http_message_400_badrequest( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_extra_message</var> = <span class="php-quote">''</span></span> )</code>
+		<code>http_message_400_badrequest( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_html_message</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -264,7 +266,7 @@ SmartTextTranslations<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_http_message_401_unauthorized">#</a>
-		<code>http_message_401_unauthorized( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_extra_message</var> = <span class="php-quote">''</span></span> )</code>
+		<code>http_message_401_unauthorized( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_html_message</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -293,7 +295,7 @@ SmartTextTranslations<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_http_message_403_forbidden">#</a>
-		<code>http_message_403_forbidden( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_extra_message</var> = <span class="php-quote">''</span></span> )</code>
+		<code>http_message_403_forbidden( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_html_message</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -322,7 +324,7 @@ SmartTextTranslations<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_http_message_404_notfound">#</a>
-		<code>http_message_404_notfound( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_extra_message</var> = <span class="php-quote">''</span></span> )</code>
+		<code>http_message_404_notfound( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_html_message</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -351,7 +353,7 @@ SmartTextTranslations<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_http_message_429_toomanyrequests">#</a>
-		<code>http_message_429_toomanyrequests( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_extra_message</var> = <span class="php-quote">''</span></span> )</code>
+		<code>http_message_429_toomanyrequests( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_html_message</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -380,7 +382,7 @@ SmartTextTranslations<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_http_message_500_internalerror">#</a>
-		<code>http_message_500_internalerror( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_extra_message</var> = <span class="php-quote">''</span></span> )</code>
+		<code>http_message_500_internalerror( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_html_message</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -409,7 +411,7 @@ SmartTextTranslations<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_http_message_502_badgateway">#</a>
-		<code>http_message_502_badgateway( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_extra_message</var> = <span class="php-quote">''</span></span> )</code>
+		<code>http_message_502_badgateway( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_html_message</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -438,7 +440,7 @@ SmartTextTranslations<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_http_message_503_serviceunavailable">#</a>
-		<code>http_message_503_serviceunavailable( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_extra_message</var> = <span class="php-quote">''</span></span> )</code>
+		<code>http_message_503_serviceunavailable( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_html_message</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -467,7 +469,7 @@ SmartTextTranslations<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_http_message_504_gatewaytimeout">#</a>
-		<code>http_message_504_gatewaytimeout( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_extra_message</var> = <span class="php-quote">''</span></span> )</code>
+		<code>http_message_504_gatewaytimeout( <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_html_message</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -773,7 +775,7 @@ Selections</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_html_navpager">#</a>
-		<code>html_navpager( <span>mixed <var>$link</var></span>, <span>mixed <var>$total</var></span>, <span>mixed <var>$limit</var></span>, <span>mixed <var>$current</var></span>, <span>mixed <var>$display_if_empty</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$adjacents</var> = <span class="php-num">3</span></span>, <span>mixed <var>$options</var> = <span class="php-keyword1">array</span>()</span> )</code>
+		<code>html_navpager( <span>mixed <var>$link</var></span>, <span>mixed <var>$total</var></span>, <span>mixed <var>$limit</var></span>, <span>mixed <var>$current</var></span>, <span>mixed <var>$display_if_empty</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$adjacents</var> = <span class="php-num">3</span></span>, <span>mixed <var>$options</var> = []</span> )</code>
 
 		<div class="description short">
 			
@@ -983,7 +985,7 @@ used for a JS action (ex: onClick="...")</p>
 
 		<td class="attributes"><code>
 			 public static
-			STRING
+			MIXED
 			
 			</code>
 		</td>
@@ -1038,7 +1040,7 @@ Replace)</dd>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>[javascript code]<br>
+					<code>MIXED</code><br>[JSON data]<br>
 				</div>
 
 
@@ -1337,7 +1339,7 @@ FileBrowser Integration</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_render_app_template">#</a>
-		<code>render_app_template( <span>mixed <var>$template_path</var></span>, <span>mixed <var>$template_file</var></span>, <span>mixed <var>$arr_data</var></span>, <span>mixed <var>$use_caching</var> = <span class="php-quote">'no'</span></span> )</code>
+		<code>render_app_template( <span>mixed <var>$template_path</var></span>, <span>mixed <var>$template_file</var></span>, <span>mixed <var>$arr_data</var></span> )</code>
 
 		<div class="description short">
 			
@@ -1377,7 +1379,7 @@ FileBrowser Integration</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-04-11 17:15</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
 	</div>
 </div>
 </div>

@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartCaptchaFormCheck | Smart.Framework Documentation :: 2017-04-11 17:15</title>
+	<title>Class SmartCaptchaFormCheck | Smart.Framework Documentation :: 2017-09-05 11:42</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1847996447"></script>
+	<script src="elementlist.js?1618497803"></script>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
 						</li>
 				<li><a href="package-Components.Charts.html">Components:Charts</a>
 						</li>
-				<li><a href="package-Components.Framework.html">Components:Framework</a>
+				<li><a href="package-Components.Core.html">Components:Core</a>
 						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
 						</li>
@@ -57,13 +57,17 @@
 						</li>
 				<li><a href="package-Filesystem.html">Filesystem</a>
 						</li>
+				<li><a href="package-LanguageDetection.html">LanguageDetection</a>
+						</li>
 				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
 						</li>
 				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
 						</li>
 				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
 						</li>
-				<li><a href="package-MediaGallery.html">MediaGallery</a>
+				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
+						</li>
+				<li><a href="package-Media.ImageProcessing.html">Media:ImageProcessing</a>
 						</li>
 				<li><a href="package-Network.CURL.html">Network:CURL</a>
 						</li>
@@ -72,8 +76,6 @@
 				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
 						</li>
 				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
-						</li>
-				<li><a href="package-Services.LangId.Py.html">Services:LangId-Py</a>
 						</li>
 				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
@@ -199,7 +201,7 @@ class="php-comment">//--</span>
 		<b>Package:</b> <a href="package-Components.Captcha.html">Components:Captcha</a><br>
 
 				<b>Version:</b>
-				v.170316<br>
+				v.170417<br>
 				<b>Depends:</b>
 				extensions: PHP XML ; classes: Smart<br>
 				<b>Hints:</b>
@@ -227,7 +229,7 @@ depending how SmartCaptchaFormCheck::verify() is called<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_captcha_image">#</a>
-		<code>captcha_image( <span>mixed <var>$y_form_name</var></span>, <span>mixed <var>$y_store</var></span>, <span>mixed <var>$y_mode</var> = <span class="php-quote">'hashed'</span></span>, <span>mixed <var>$y_pool</var> = <span class="php-quote">'0123456789'</span></span>, <span>mixed <var>$y_noise</var> = <span class="php-quote">'200'</span></span>, <span>mixed <var>$y_chars</var> = <span class="php-quote">'5'</span></span>, <span>mixed <var>$y_width</var> = <span class="php-quote">'170'</span></span>, <span>mixed <var>$y_height</var> = <span class="php-quote">'50'</span></span>, <span>mixed <var>$y_format</var> = <span class="php-quote">'png'</span></span>, <span>mixed <var>$y_font_file</var> = <span class="php-quote">'lib/core/plugins/fonts/liberation-mono-italic.ttf'</span></span>, <span>mixed <var>$y_font_size</var> = <span class="php-quote">'24'</span></span>, <span>mixed <var>$y_char_space</var> = <span class="php-quote">'20'</span></span>, <span>mixed <var>$y_char_xvary</var> = <span class="php-quote">'20'</span></span>, <span>mixed <var>$y_char_yvary</var> = <span class="php-quote">'10'</span></span>, <span>mixed <var>$y_char_colors</var> = <span class="php-keyword1">array</span>(<span class="php-num">0x111111</span>, <span class="php-num">0x333333</span>, <span class="php-num">0x778899</span>, <span class="php-num">0x666699</span>, <span class="php-num">0x003366</span>, <span class="php-num">0x669966</span>, <span class="php-num">0x006600</span>, <span class="php-num">0xFF3300</span>)</span>, <span>mixed <var>$y_noise_colors</var> = <span class="php-keyword1">array</span>(<span class="php-num">0x888888</span>, <span class="php-num">0x999999</span>, <span class="php-num">0xAAAAAA</span>, <span class="php-num">0xBBBBBB</span>, <span class="php-num">0xCCCCCC</span>, <span class="php-num">0xDDDDDD</span>, <span class="php-num">0xEEEEEE</span>, <span class="php-num">0x8080C0</span>)</span> )</code>
+		<code>captcha_image( <span>mixed <var>$y_form_name</var></span>, <span>mixed <var>$y_store</var></span>, <span>mixed <var>$y_mode</var> = <span class="php-quote">'hashed'</span></span>, <span>mixed <var>$y_pool</var> = <span class="php-quote">'0123456789'</span></span>, <span>mixed <var>$y_noise</var> = <span class="php-num">300</span></span>, <span>mixed <var>$y_chars</var> = <span class="php-num">5</span></span>, <span>mixed <var>$y_width</var> = <span class="php-num">175</span></span>, <span>mixed <var>$y_height</var> = <span class="php-num">50</span></span>, <span>mixed <var>$y_format</var> = <span class="php-quote">'png'</span></span>, <span>mixed <var>$y_font_file</var> = <span class="php-quote">'lib/core/plugins/fonts/captcha/barrio.ttf'</span></span>, <span>mixed <var>$y_font_size</var> = <span class="php-num">24</span></span>, <span>mixed <var>$y_char_space</var> = <span class="php-num">20</span></span>, <span>mixed <var>$y_char_xvar</var> = <span class="php-num">15</span></span>, <span>mixed <var>$y_char_yvar</var> = <span class="php-num">7</span></span>, <span>mixed <var>$y_char_colors</var> = [<span class="php-num">0x111111</span>, <span class="php-num">0x333333</span>, <span class="php-num">0x778899</span>, <span class="php-num">0x666699</span>, <span class="php-num">0x003366</span>, <span class="php-num">0x669966</span>, <span class="php-num">0x006600</span>, <span class="php-num">0xFF3300</span>]</span>, <span>mixed <var>$y_noise_colors</var> = [<span class="php-num">0x888888</span>, <span class="php-num">0x999999</span>, <span class="php-num">0xAAAAAA</span>, <span class="php-num">0xBBBBBB</span>, <span class="php-num">0xCCCCCC</span>, <span class="php-num">0xDDDDDD</span>, <span class="php-num">0xEEEEEE</span>, <span class="php-num">0x8080C0</span>]</span> )</code>
 
 		<div class="description short">
 			
@@ -354,7 +356,7 @@ depending how SmartCaptchaFormCheck::verify() is called<br>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-04-11 17:15</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
 	</div>
 </div>
 </div>

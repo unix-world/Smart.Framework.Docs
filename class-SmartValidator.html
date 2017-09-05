@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartValidator | Smart.Framework Documentation :: 2017-04-11 17:15</title>
+	<title>Class SmartValidator | Smart.Framework Documentation :: 2017-09-05 11:42</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1847996447"></script>
+	<script src="elementlist.js?1618497803"></script>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
 						</li>
 				<li><a href="package-Components.Charts.html">Components:Charts</a>
 						</li>
-				<li><a href="package-Components.Framework.html">Components:Framework</a>
+				<li><a href="package-Components.Core.html">Components:Core</a>
 						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
 						</li>
@@ -57,13 +57,17 @@
 						</li>
 				<li><a href="package-Filesystem.html">Filesystem</a>
 						</li>
+				<li><a href="package-LanguageDetection.html">LanguageDetection</a>
+						</li>
 				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
 						</li>
 				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
 						</li>
 				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
 						</li>
-				<li><a href="package-MediaGallery.html">MediaGallery</a>
+				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
+						</li>
+				<li><a href="package-Media.ImageProcessing.html">Media:ImageProcessing</a>
 						</li>
 				<li><a href="package-Network.CURL.html">Network:CURL</a>
 						</li>
@@ -72,8 +76,6 @@
 				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
 						</li>
 				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
-						</li>
-				<li><a href="package-Services.LangId.Py.html">Services:LangId-Py</a>
 						</li>
 				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
@@ -163,7 +165,7 @@ SmartValidator::some_method_of_this_class(...);
 		<b>Package:</b> <a href="package-Base.html">Base</a><br>
 
 				<b>Version:</b>
-				v.160921<br>
+				v.170629<br>
 				<b>Depends:</b>
 				classes: Smart, SmartUnicode<br>
 				<b>Usage:</b>
@@ -291,15 +293,15 @@ SmartValidator::regex_stringvalidation_expression()</dd>
 
 		<div class="description short">
 			
-<p>Validate if a string or number is Integer or Decimal (positive /
-negative)</p>
+<p>Validate if a string or number is Integer or Decimal (positive / negative)
+This will not check if the number is finite or overflowing !!</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Validate if a string or number is Integer or Decimal (positive /
-negative)</p>
+<p>Validate if a string or number is Integer or Decimal (positive / negative)
+This will not check if the number is finite or overflowing !!</p>
 
 
 
@@ -312,6 +314,96 @@ negative)</p>
 				<h4>Returns</h4>
 				<div class="list">
 					<code>BOOL</code><br>:: TRUE if Integer or Decimal (positive / negative) ; FALSE if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_numeric_pure_valid_values" id="_validate_numeric_pure_valid_values">
+
+		<td class="attributes"><code>
+			 public static
+			BOOL
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_numeric_pure_valid_values">#</a>
+		<code>validate_numeric_pure_valid_values( <span>STRING <var>$val</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validate if a string or number is VALID numeric (finite, not overflowing,
+match precision, not Expressions like 1.3e3 ; may contain only -0123456789.)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validate if a string or number is VALID numeric (finite, not overflowing,
+match precision, not Expressions like 1.3e3 ; may contain only -0123456789.)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$val</var></dt>
+					<dd>:: The string or number to be validated</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if match condition ; FALSE if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="validate_integer_pure_valid_values" id="_validate_integer_pure_valid_values">
+
+		<td class="attributes"><code>
+			 public static
+			BOOL
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_validate_integer_pure_valid_values">#</a>
+		<code>validate_integer_pure_valid_values( <span>STRING <var>$val</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Validate if a string or number is VALID integer (finite, not overflowing,
+match precision and max/min integer, not Expressions like 1.3e3 ; may contain
+only -0123456789)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Validate if a string or number is VALID integer (finite, not overflowing,
+match precision and max/min integer, not Expressions like 1.3e3 ; may contain
+only -0123456789)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$val</var></dt>
+					<dd>:: The string or number to be validated</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if match condition ; FALSE if not<br>
 				</div>
 
 
@@ -513,7 +605,7 @@ filename="somefile.pdf"</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-04-11 17:15</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
 	</div>
 </div>
 </div>

@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class Smart | Smart.Framework Documentation :: 2017-04-11 17:15</title>
+	<title>Class Smart | Smart.Framework Documentation :: 2017-09-05 11:42</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1847996447"></script>
+	<script src="elementlist.js?1618497803"></script>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
 						</li>
 				<li><a href="package-Components.Charts.html">Components:Charts</a>
 						</li>
-				<li><a href="package-Components.Framework.html">Components:Framework</a>
+				<li><a href="package-Components.Core.html">Components:Core</a>
 						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
 						</li>
@@ -57,13 +57,17 @@
 						</li>
 				<li><a href="package-Filesystem.html">Filesystem</a>
 						</li>
+				<li><a href="package-LanguageDetection.html">LanguageDetection</a>
+						</li>
 				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
 						</li>
 				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
 						</li>
 				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
 						</li>
-				<li><a href="package-MediaGallery.html">MediaGallery</a>
+				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
+						</li>
+				<li><a href="package-Media.ImageProcessing.html">Media:ImageProcessing</a>
 						</li>
 				<li><a href="package-Network.CURL.html">Network:CURL</a>
 						</li>
@@ -72,8 +76,6 @@
 				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
 						</li>
 				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
-						</li>
-				<li><a href="package-Services.LangId.Py.html">Services:LangId-Py</a>
 						</li>
 				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
@@ -164,7 +166,7 @@ Smart::some_method_of_this_class(...);
 		<b>Package:</b> <a href="package-Base.html">Base</a><br>
 
 				<b>Version:</b>
-				v.170411<br>
+				v.170703<br>
 				<b>Depends:</b>
 				extensions: PHP XML, PHP JSON ; classes: SmartUnicode<br>
 				<b>Hints:</b>
@@ -772,7 +774,7 @@ single quotes '' or double quotes ""<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_json_encode">#</a>
-		<code>json_encode( <span>MIXED <var>$data</var></span>, <span>BOOLEAN <var>$prettyprint</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$unescaped_unicode</var> = <span class="php-keyword1">true</span></span> )</code>
+		<code>json_encode( <span>MIXED <var>$data</var></span>, <span>BOOLEAN <var>$prettyprint</var> = <span class="php-keyword1">false</span></span>, <span>BOOLEAN <var>$unescaped_unicode</var> = <span class="php-keyword1">true</span></span>, <span>BOOLEAN <var>$htmlsafe</var> = <span class="php-keyword1">true</span></span> )</code>
 
 		<div class="description short">
 			
@@ -791,10 +793,13 @@ single quotes '' or double quotes ""<br>
 					<dt><var>$data</var></dt>
 					<dd>:: The variable to be encoded (mixed): numeric, string, array</dd>
 					<dt><var>$prettyprint</var></dt>
-					<dd>:: If true will format the json as pretty-print (takes much more space, but
-sometimes make sense ...)</dd>
+					<dd>:: &lt;em&gt;Optional&lt;/em&gt; Default to FALSE ; If TRUE will format the json as
+pretty-print (takes much more space, but sometimes make sense ...)</dd>
 					<dt><var>$unescaped_unicode</var></dt>
-					<dd></dd>
+					<dd>:: &lt;em&gt;Optional&lt;/em&gt; Default to TRUE ; If FALSE will escape unicode characters</dd>
+					<dt><var>$htmlsafe</var></dt>
+					<dd>:: &lt;em&gt;Optional&lt;/em&gt; Default to TRUE ; If FALSE the JSON will not be HTML-Safe
+as it will not escape: &amp;lt; &amp;gt; ' " &amp;amp;</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -819,7 +824,7 @@ sometimes make sense ...)</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_json_decode">#</a>
-		<code>json_decode( <span>STRING <var>$y_json</var></span>, <span>BOOLEAN <var>$y_ret_array</var> = <span class="php-keyword1">true</span></span>, <span>INTEGER <var>$y_depth</var> = <span class="php-num">1024</span></span> )</code>
+		<code>json_decode( <span>STRING <var>$json</var></span>, <span>BOOLEAN <var>$return_array</var> = <span class="php-keyword1">true</span></span> )</code>
 
 		<div class="description short">
 			
@@ -835,13 +840,11 @@ sometimes make sense ...)</dd>
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$y_json</var></dt>
+					<dt><var>$json</var></dt>
 					<dd>:: The JSON string</dd>
-					<dt><var>$y_ret_array</var></dt>
-					<dd>:: When TRUE, returned objects will be converted into associative arrays
-(default to TRUE)</dd>
-					<dt><var>$y_depth</var></dt>
-					<dd>:: Recursion depth (default to 1024)</dd>
+					<dt><var>$return_array</var></dt>
+					<dd>:: &lt;em&gt;Optional&lt;/em&gt; Default to FALSE ; When TRUE, returned objects will be
+converted into associative arrays (default to TRUE)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -2469,7 +2472,7 @@ admin or index, will output into 'tmp/logs/adm/' or 'tmp/logs/idx/')</p>
 			
 <p>A quick replacement for trigger_error() / E_USER_NOTICE. This is intended to
 log APP Level Notices. This will log the message as NOTICE into the App Error
-Log.</p>
+Log. Notices are logged ONLY if SMART_ERROR_HANDLER is set to 'dev' mode.</p>
 
 		</div>
 
@@ -2477,7 +2480,7 @@ Log.</p>
 			
 <p>A quick replacement for trigger_error() / E_USER_NOTICE. This is intended to
 log APP Level Notices. This will log the message as NOTICE into the App Error
-Log.</p>
+Log. Notices are logged ONLY if SMART_ERROR_HANDLER is set to 'dev' mode.</p>
 
 
 
@@ -2555,7 +2558,7 @@ Log.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_raise_error">#</a>
-		<code>raise_error( <span>STRING <var>$message_to_log</var></span>, <span>mixed <var>$message_to_display</var> = <span class="php-quote">''</span></span> )</code>
+		<code>raise_error( <span>STRING <var>$message_to_log</var></span>, <span>mixed <var>$message_to_display</var> = <span class="php-quote">'See Error Log for More Details'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -2616,7 +2619,7 @@ Code).</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-04-11 17:15</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
 	</div>
 </div>
 </div>

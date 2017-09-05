@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartMediaGalleryManager | Smart.Framework Documentation :: 2017-04-11 17:15</title>
+	<title>Class SmartModExtLib\MediaGallery\Manager | Smart.Framework Documentation :: 2017-09-05 11:42</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1847996447"></script>
+	<script src="elementlist.js?1618497803"></script>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
 						</li>
 				<li><a href="package-Components.Charts.html">Components:Charts</a>
 						</li>
-				<li><a href="package-Components.Framework.html">Components:Framework</a>
+				<li><a href="package-Components.Core.html">Components:Core</a>
 						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
 						</li>
@@ -57,13 +57,17 @@
 						</li>
 				<li><a href="package-Filesystem.html">Filesystem</a>
 						</li>
+				<li><a href="package-LanguageDetection.html">LanguageDetection</a>
+						</li>
 				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
 						</li>
 				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
 						</li>
 				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
 						</li>
-				<li class="active"><a href="package-MediaGallery.html">MediaGallery</a>
+				<li class="active"><a href="package-Media.Gallery.html">Media:Gallery</a>
+						</li>
+				<li><a href="package-Media.ImageProcessing.html">Media:ImageProcessing</a>
 						</li>
 				<li><a href="package-Network.CURL.html">Network:CURL</a>
 						</li>
@@ -72,8 +76,6 @@
 				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
 						</li>
 				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
-						</li>
-				<li><a href="package-Services.LangId.Py.html">Services:LangId-Py</a>
 						</li>
 				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
@@ -86,8 +88,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-SmartMediaGalleryConverter.html">SmartMediaGalleryConverter</a></li>
-				<li class="active"><a href="class-SmartMediaGalleryManager.html">SmartMediaGalleryManager</a></li>
+				<li class="active"><a href="class-SmartModExtLib.MediaGallery.Manager.html">SmartModExtLib\MediaGallery\Manager</a></li>
 			</ul>
 
 
@@ -115,7 +116,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="package-MediaGallery.html" title="Summary of MediaGallery"><span>Package</span></a>
+				<a href="package-Media.Gallery.html" title="Summary of Media:Gallery"><span>Package</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -130,7 +131,7 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class SmartMediaGalleryManager</h1>
+	<h1>Class Manager</h1>
 
 
 	<div class="description">
@@ -150,11 +151,11 @@
 	<div class="info">
 		<b>Final</b><br>
 		
-		
-		<b>Package:</b> <a href="package-MediaGallery.html">MediaGallery</a><br>
+		<b>Namespace:</b> SmartModExtLib\MediaGallery<br>
+		<b>Package:</b> <a href="package-Media.Gallery.html">Media:Gallery</a><br>
 
 				<b>Version:</b>
-				v.160927<br>
+				v.170518<br>
 				<b>Depends:</b>
 				extensions: PHP GD Extension (w. TrueColor support) ; executables: imageMagick
 Utility (can replace PHP GD), FFMpeg (for movies) ; classes: Smart, SmartUtils,
@@ -162,7 +163,7 @@ SmartFileSystem<br>
 				<b>Usage:</b>
 				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
 methods<br>
-		<b>Located at</b> lib/core/plugins/lib_mediagallery.php<br>
+		<b>Located at</b> modules/mod-media-gallery/libs/Manager.php<br>
 	</div>
 
 
@@ -736,6 +737,44 @@ create conformed images</dd>
 		</td>
 		<td class="value"><div><a href="#$gallery_items" class="anchor">#</a><code></code></div></td>
 	</tr>
+	<tr data-order="gallery_img_link_attr" id="$gallery_img_link_attr">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+<var>$gallery_img_link_attr</var>
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#$gallery_img_link_attr" class="anchor">#</a><code><span class="php-quote">'data-slimbox=&quot;slimbox&quot; rel=&quot;nofollow&quot;'</span></code></div></td>
+	</tr>
+	<tr data-order="gallery_mov_link_attr" id="$gallery_mov_link_attr">
+		<td class="attributes"><code>
+			public  
+			string
+		</code></td>
+
+		<td class="name">
+<var>$gallery_mov_link_attr</var>
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#$gallery_mov_link_attr" class="anchor">#</a><code><span class="php-quote">'data-smart=&quot;open.modal 780 475 1&quot; rel=&quot;nofollow&quot;'</span></code></div></td>
+	</tr>
 	</table>
 
 
@@ -746,7 +785,7 @@ create conformed images</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-04-11 17:15</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
 	</div>
 </div>
 </div>

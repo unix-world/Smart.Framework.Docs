@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Smart.Framework Documentation v.3.1.2 :: 2017-04-11 17:15</title>
+	<title>Smart.Framework Documentation :: 2017-09-05 11:42</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js"></script>
 	<script src="elementlist.js"></script>
@@ -14,7 +14,19 @@
 <span>Overview</span>
 
 		<div id="groups">
-			<h3>Packages</h3>
+			<h3>Javascript Packages</h3>
+			<ul>
+				<li><a href="jsdoc/modules/Smart.Framework_JS_Archivers.html">Archivers</a></li>
+				<li><a href="jsdoc/modules/Smart.Framework_JS_Browser.html">Browser</a></li>
+				<li><a href="jsdoc/modules/Smart.Framework_JS_Core.html">Core</a></li>
+				<li><a href="jsdoc/modules/Smart.Framework_JS_Crypto.html">Crypto</a></li>
+			</ul>
+		</div>
+
+		<hr>
+
+		<div id="groups">
+			<h3>PHP Packages</h3>
 			<ul>
 				<li><a href="package-Application.html">Application</a>
 						</li>
@@ -32,7 +44,7 @@
 						</li>
 				<li><a href="package-Components.Charts.html">Components:Charts</a>
 						</li>
-				<li><a href="package-Components.Framework.html">Components:Framework</a>
+				<li><a href="package-Components.Core.html">Components:Core</a>
 						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
 						</li>
@@ -56,13 +68,17 @@
 						</li>
 				<li><a href="package-Filesystem.html">Filesystem</a>
 						</li>
+				<li><a href="package-LanguageDetection.html">LanguageDetection</a>
+						</li>
 				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
 						</li>
 				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
 						</li>
 				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
 						</li>
-				<li><a href="package-MediaGallery.html">MediaGallery</a>
+				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
+						</li>
+				<li><a href="package-Media.ImageProcessing.html">Media:ImageProcessing</a>
 						</li>
 				<li><a href="package-Network.CURL.html">Network:CURL</a>
 						</li>
@@ -72,8 +88,6 @@
 						</li>
 				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
 						</li>
-				<li><a href="package-Services.LangId.Py.html">Services:LangId-Py</a>
-						</li>
 				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
 			</ul>
@@ -82,7 +96,7 @@
 		<hr>
 
 		<div id="elements">
-			<h3>Classes</h3>
+			<h3>PHP Classes</h3>
 			<ul>
 				<li><a href="class-Smart.html">Smart</a></li>
 				<li><a href="class-SmartAbstractAppController.html">SmartAbstractAppController</a></li>
@@ -110,6 +124,7 @@
 				<li><a href="class-SmartHtmlParser.html">SmartHtmlParser</a></li>
 				<li><a href="class-SmartHttpClient.html">SmartHttpClient</a></li>
 				<li><a href="class-SmartHttpUtils.html">SmartHttpUtils</a></li>
+				<li><a href="class-SmartImageGdProcess.html">SmartImageGdProcess</a></li>
 				<li><a href="class-SmartImgBizCharts.html">SmartImgBizCharts</a></li>
 				<li><a href="class-SmartImgGfxCharts.html">SmartImgGfxCharts</a></li>
 				<li><a href="class-SmartLangIdClient.html">SmartLangIdClient</a></li>
@@ -122,8 +137,8 @@
 				<li><a href="class-SmartMailerUtils.html">SmartMailerUtils</a></li>
 				<li><a href="class-SmartMarkdownToHTML.html">SmartMarkdownToHTML</a></li>
 				<li><a href="class-SmartMarkersTemplating.html">SmartMarkersTemplating</a></li>
-				<li><a href="class-SmartMediaGalleryConverter.html">SmartMediaGalleryConverter</a></li>
-				<li><a href="class-SmartMediaGalleryManager.html">SmartMediaGalleryManager</a></li>
+				<li><a href="class-SmartModExtLib.LangDetect.LanguageNgrams.html">SmartModExtLib\LangDetect\LanguageNgrams</a></li>
+				<li><a href="class-SmartModExtLib.MediaGallery.Manager.html">SmartModExtLib\MediaGallery\Manager</a></li>
 				<li><a href="class-SmartMysqliDb.html">SmartMysqliDb</a></li>
 				<li><a href="class-SmartMysqliExtDb.html">SmartMysqliExtDb</a></li>
 				<li><a href="class-SmartParser.html">SmartParser</a></li>
@@ -181,108 +196,25 @@
 	</div>
 
 <div id="content">
-	<h1>Smart.Framework Documentation v.3.1.2 :: 2017-04-11 17:15</h1>
+	<h1>Smart.Framework Documentation :: 2017-09-05 11:42</h1>
 
 	<table class="summary" id="packages">
-	<caption>Packages summary</caption>
+	<caption>Smart.Framework: PHP / Javascript</caption>
 	<tr>
-		<td class="name"><a href="package-Application.html">Application</a></td>
+		<td class="name">Version: v.3.5.7</td>
 	</tr>
 	<tr>
-		<td class="name"><a href="package-Archivers.html">Archivers</a></td>
+		<td class="name">Release: r.2017.09.05</td>
 	</tr>
 	<tr>
-		<td class="name"><a href="package-Base.html">Base</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Caching.html">Caching</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Components.BarCodes.html">Components:BarCodes</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Components.Calendar.html">Components:Calendar</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Components.Captcha.html">Components:Captcha</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Components.Charts.html">Components:Charts</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Components.Framework.html">Components:Framework</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Crypto.html">Crypto</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-DATA.HTML.html">DATA:HTML</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-DATA.XML.html">DATA:XML</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-DATA.YAML.html">DATA:YAML</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Database.MySQL.html">Database:MySQL</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Database.Redis.html">Database:Redis</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Database.Solr.html">Database:Solr</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Database.SQLite.html">Database:SQLite</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Exporters.html">Exporters</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Filesystem.html">Filesystem</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Mailer.Get.html">Mailer:Get</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Mailer.Send.html">Mailer:Send</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Mailer.Utility.html">Mailer:Utility</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-MediaGallery.html">MediaGallery</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Network.CURL.html">Network:CURL</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Network.FTP.html">Network:FTP</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Network.HTTP.html">Network:HTTP</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Services.LangId.Py.html">Services:LangId-Py</a></td>
-	</tr>
-	<tr>
-		<td class="name"><a href="package-Templating.Engines.html">Templating:Engines</a></td>
+		<td class="name">(c) 2006-2017 unix-world.org - all rights reserved</td>
 	</tr>
 	</table>
-
-	<!-- Smart.Framework.JS Api --><a href="jsdoc/" target="_blank">Smart.Framework/JS ApiDocs</a>
 
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation v.3.1.2 :: 2017-04-11 17:15</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
 	</div>
 </div>
 </div>

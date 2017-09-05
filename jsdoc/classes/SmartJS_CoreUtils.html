@@ -91,6 +91,11 @@
 
                     <ul class="index-list methods">
                             <li class="index-item method">
+                                <a href="#method_isFiniteNumber">isFiniteNumber</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item method">
                                 <a href="#method_stringTrim">stringTrim</a>
 
                                     <span class="flag static">static</span>
@@ -161,6 +166,11 @@
                                     <span class="flag static">static</span>
                             </li>
                             <li class="index-item method">
+                                <a href="#method_ucfirst">ucfirst</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item method">
                                 <a href="#method_stripslashes">stripslashes</a>
 
                                     <span class="flag static">static</span>
@@ -187,6 +197,11 @@
                             </li>
                             <li class="index-item method">
                                 <a href="#method_preg_quote">preg_quote</a>
+
+                                    <span class="flag static">static</span>
+                            </li>
+                            <li class="index-item method">
+                                <a href="#method_stringRegexMatchAll">stringRegexMatchAll</a>
 
                                     <span class="flag static">static</span>
                             </li>
@@ -225,6 +240,71 @@
             <div id="methods" class="api-class-tabpanel">
                 <h2 class="off-left">Methods Reference</h2>
 
+<div id="method_isFiniteNumber" class="method item">
+    <span class="method-name">isFiniteNumber</span>
+
+
+
+
+        <span class="flag static">static</span>
+
+
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>num</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Boolean</span>
+        </span>
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Check if a number is valid: Finite and !NaN</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">num</code>
+                        <span class="type">Number</span>
+
+
+                    <div class="param-description">
+                        <p>The number to be tested</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Boolean</span>:
+                    <p>TRUE is number is Finite and !NaN ; FALSE otherwise</p>
+
+            </div>
+        </div>
+
+
+</div>
 <div id="method_stringTrim" class="method item">
     <span class="method-name">stringTrim</span>
 
@@ -1252,6 +1332,72 @@ This is compatible with the PHP nl2br() function.</p>
 
 
 </div>
+<div id="method_ucfirst" class="method item">
+    <span class="method-name">ucfirst</span>
+
+
+
+
+        <span class="flag static">static</span>
+
+
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>str</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">String</span>
+        </span>
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Capitalize the first letter of a string.
+This is compatible with the PHP ucfirst() function.</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">str</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>The string to be processed</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">String</span>:
+                    <p>The processed string with 1st letter capitalized</p>
+
+            </div>
+        </div>
+
+
+</div>
 <div id="method_stripslashes" class="method item">
     <span class="method-name">stripslashes</span>
 
@@ -1646,6 +1792,86 @@ This is compatible with PHP preg_quote() function.</p>
 
 
 </div>
+<div id="method_stringRegexMatchAll" class="method item">
+    <span class="method-name">stringRegexMatchAll</span>
+
+
+
+
+        <span class="flag static">static</span>
+
+
+
+        <div class="args">
+            <span class="paren">(</span><ul class="args-list inline commas">
+                <li class="arg">
+                        <code>str</code>
+                </li>
+                <li class="arg">
+                        <code>regexp</code>
+                </li>
+            </ul><span class="paren">)</span>
+        </div>
+
+        <span class="returns-inline">
+            <span class="type">Array</span>
+        </span>
+
+    <div class="meta">
+                <p>
+        </p>
+
+
+
+    </div>
+
+    <div class="description">
+        <p>Regexp Match All occurences.
+This is compatible just with the PHP preg_match_all()</p>
+
+    </div>
+
+        <div class="params">
+            <h4>Parameters:</h4>
+
+            <ul class="params-list">
+                <li class="param">
+                        <code class="param-name">str</code>
+                        <span class="type">String</span>
+
+
+                    <div class="param-description">
+                        <p>The string to be searched</p>
+
+                    </div>
+
+                </li>
+                <li class="param">
+                        <code class="param-name">regexp</code>
+                        <span class="type">Regex</span>
+
+
+                    <div class="param-description">
+                        <p>A valid regular expression</p>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+
+        <div class="returns">
+            <h4>Returns:</h4>
+
+            <div class="returns-description">
+                        <span class="type">Array</span>:
+                    <p>The array with matches</p>
+
+            </div>
+        </div>
+
+
+</div>
 <div id="method_render_markers_template" class="method item">
     <span class="method-name">render_markers_template</span>
 
@@ -1680,10 +1906,9 @@ This is compatible with PHP preg_quote() function.</p>
     </div>
 
     <div class="description">
-        <p>Render Simple Marker Template (only marker replacements, no IF or LOOP syntax, not even marker escaping syntax)
-This is compatible just with the SIMPLE REPLACEMENT of Smart.Framework PHP server-side Markers Templating for substitutions on client-side, except it can only process marker substitutions without extended syntax as IF/LOOP/INCLUDE.
-Notice: It ONLY supports the marker syntax like [####MARKER####]
-To be used together with the server-side marker templating to avoid the server-side markers to be replaced as (####+/-MARKER+/-####) need the: template to be escape_url+escape_js and 3rd param: urlescaped = TRUE</p>
+        <p>Render Simple Marker Template + Comments (only marker replacements with escaping or processing syntax ; have support for comments and special replacements: SPACE, TAB, R, N ; no support for IF / LOOP / INCLUDE syntax since it can be implemented at the js level)
+This is compatible just with the REPLACE MARKER of Smart.Framework PHP server-side Markers Templating for substitutions on client-side, except the extended syntax as IF/LOOP/INCLUDE.
+To be used together with the server-side marker templating, to avoid the server-side markers to be replaced as (####+/-MARKER+/-####) will need the template to be escape_url+escape_js and 3rd param: urlescaped = TRUE</p>
 
     </div>
 

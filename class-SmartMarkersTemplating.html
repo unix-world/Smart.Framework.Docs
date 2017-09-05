@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartMarkersTemplating | Smart.Framework Documentation :: 2017-04-11 17:15</title>
+	<title>Class SmartMarkersTemplating | Smart.Framework Documentation :: 2017-09-05 11:42</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1847996447"></script>
+	<script src="elementlist.js?1618497803"></script>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
 						</li>
 				<li><a href="package-Components.Charts.html">Components:Charts</a>
 						</li>
-				<li><a href="package-Components.Framework.html">Components:Framework</a>
+				<li><a href="package-Components.Core.html">Components:Core</a>
 						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
 						</li>
@@ -57,13 +57,17 @@
 						</li>
 				<li><a href="package-Filesystem.html">Filesystem</a>
 						</li>
+				<li><a href="package-LanguageDetection.html">LanguageDetection</a>
+						</li>
 				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
 						</li>
 				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
 						</li>
 				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
 						</li>
-				<li><a href="package-MediaGallery.html">MediaGallery</a>
+				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
+						</li>
+				<li><a href="package-Media.ImageProcessing.html">Media:ImageProcessing</a>
 						</li>
 				<li><a href="package-Network.CURL.html">Network:CURL</a>
 						</li>
@@ -72,8 +76,6 @@
 				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
 						</li>
 				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
-						</li>
-				<li><a href="package-Services.LangId.Py.html">Services:LangId-Py</a>
 						</li>
 				<li class="active"><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
@@ -136,7 +138,7 @@
 	<div class="description">
 	
 <p>Class: SmartMarkersTemplating - provides a very fast and low footprint
-templating system.</p>
+templating system: Marker-TPL</p>
 
 	</div>
 
@@ -155,7 +157,7 @@ templating system.</p>
 		<b>Package:</b> <a href="package-Templating.Engines.html">Templating:Engines</a><br>
 
 				<b>Version:</b>
-				v.170410<br>
+				v.170905<br>
 				<b>Depends:</b>
 				classes: Smart, SmartFileSystem, SmartFileSysUtils<br>
 				<b>Usage:</b>
@@ -199,57 +201,7 @@ intended for DEVELOPMENT / DEBUG ONLY (never use this in production environments
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$mtemplate</var></dt>
-					<dd>:: The markers template string</dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>STRING</code><br>:: The analyze info HTML+JS<br>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="analyze_debug_file_template" id="_analyze_debug_file_template">
-
-		<td class="attributes"><code>
-			 public static
-			STRING
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_analyze_debug_file_template">#</a>
-		<code>analyze_debug_file_template( <span>STRING <var>$y_file_path</var></span>, <span>ARRAY <var>$y_arr_sub_templates</var> = []</span> )</code>
-
-		<div class="description short">
-			
-<p>Render Marker File Template (incl. Sub-Templates from Files if any) This is
-intended for DEVELOPMENT / DEBUG ONLY (never use this in production environments
-!)</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p>Render Marker File Template (incl. Sub-Templates from Files if any) This is
-intended for DEVELOPMENT / DEBUG ONLY (never use this in production environments
-!)</p>
-
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$y_file_path</var></dt>
-					<dd>:: The relative path to the file markers template (partial text/html + markers +
-&lt;em&gt;sub-templates&lt;/em&gt;)</dd>
-					<dt><var>$y_arr_sub_templates</var></dt>
-					<dd>:: &lt;em&gt;Optional&lt;/em&gt; The associative array with the sub-template variables (
-@SUB-TEMPLATES@ ) if any</dd>
+					<dd>:: The Marker-TPL string</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -293,7 +245,7 @@ there is no possibility to set a relative path from where to get them)</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$mtemplate</var></dt>
-					<dd>:: The markers template string (partial text/html + markers) ; Ex:
+					<dd>:: The Marker-TPL string (partial text/html + markers) ; Ex:
 '&lt;span&gt;[####MARKER1####]&lt;br&gt;
 [####MARKER2####], ...&lt;/span&gt;'</dd>
 					<dt><var>$y_arr_vars</var></dt>
@@ -301,8 +253,7 @@ there is no possibility to set a relative path from where to get them)</p>
 template markers is case insensitive ; Ex: [ 'MARKER1' =&amp;gt; 'Value1', 'marker2'
 =&amp;gt; 'Value2', ..., 'MarkerN' =&amp;gt; 100 ]</dd>
 					<dt><var>$y_ignore_if_empty</var></dt>
-					<dd>:: 'yes' will ignore if markers template is empty ; 'no' will add a warning
-(default)</dd>
+					<dd>:: 'yes' will ignore if Marker-TPL is empty ; 'no' will add a warning (default)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -344,7 +295,7 @@ template markers is case insensitive ; Ex: [ 'MARKER1' =&amp;gt; 'Value1', 'mark
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$y_file_path</var></dt>
-					<dd>:: The relative path to the file markers template (partial text/html + markers +
+					<dd>:: The relative path to the file Marker-TPL (partial text/html + markers +
 &lt;em&gt;sub-templates&lt;/em&gt;) ; if sub-templates are used, they will use the base path
 from this (main template) file ; Ex: views/my-template.inc.htm ; (partial
 text/html + markers) ; Ex (file content): '&lt;span&gt;[####MARKER1####]&lt;br&gt;
@@ -392,7 +343,7 @@ once per execution) ; 'no' means no caching is used (default)</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-04-11 17:15</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
 	</div>
 </div>
 </div>

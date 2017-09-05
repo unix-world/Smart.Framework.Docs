@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartMailerMimeDecode | Smart.Framework Documentation :: 2017-09-05 11:42</title>
+	<title>Class SmartModExtLib\LangDetect\LanguageNgrams | Smart.Framework Documentation :: 2017-09-05 11:42</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3879458977"></script>
 	<script src="elementlist.js?1618497803"></script>
@@ -57,13 +57,13 @@
 						</li>
 				<li><a href="package-Filesystem.html">Filesystem</a>
 						</li>
-				<li><a href="package-LanguageDetection.html">LanguageDetection</a>
+				<li class="active"><a href="package-LanguageDetection.html">LanguageDetection</a>
 						</li>
 				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
 						</li>
 				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
 						</li>
-				<li class="active"><a href="package-Mailer.Utility.html">Mailer:Utility</a>
+				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
 						</li>
 				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
 						</li>
@@ -88,9 +88,8 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li class="active"><a href="class-SmartMailerMimeDecode.html">SmartMailerMimeDecode</a></li>
-				<li><a href="class-SmartMailerMimeParser.html">SmartMailerMimeParser</a></li>
-				<li><a href="class-SmartMailerUtils.html">SmartMailerUtils</a></li>
+				<li><a href="class-SmartLangIdClient.html">SmartLangIdClient</a></li>
+				<li class="active"><a href="class-SmartModExtLib.LangDetect.LanguageNgrams.html">SmartModExtLib\LangDetect\LanguageNgrams</a></li>
 			</ul>
 
 
@@ -118,7 +117,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="package-Mailer.Utility.html" title="Summary of Mailer:Utility"><span>Package</span></a>
+				<a href="package-LanguageDetection.html" title="Summary of LanguageDetection"><span>Package</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -133,17 +132,22 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class SmartMailerMimeDecode</h1>
+	<h1>Class LanguageNgrams</h1>
 
 
 	<div class="description">
 	
-<p>Class: SmartMailerMimeDecode - provides an eMail MIME decoder. This class is
-for very advanced use.</p>
+<p>Class: LanguageNgrams - provides a Language Detection utility based on Text
+N-Grams that can be used to validate Language / GetLanguage Confidence for a
+text.</p>
 
-<p>It just implements the mime decoding to a PHP array by decoding Mime Email
-Messages. To easy parse mime messages and display them on-the-fly use the class:
-SmartMailerMimeParser.</p>
+<pre>
+
+<span class="php-var">$langtest</span> = (<span
+class="php-keyword1">new</span> \SmartModExtLib\LangDetect\LanguageNgrams())-&gt;getLanguageConfidence(<span
+class="php-quote">'Your Text to Check Goes Here ...'</span>);
+
+</pre>
 
 	</div>
 
@@ -158,17 +162,20 @@ SmartMailerMimeParser.</p>
 	<div class="info">
 		<b>Final</b><br>
 		
-		
-		<b>Package:</b> <a href="package-Mailer.Utility.html">Mailer:Utility</a><br>
+		<b>Namespace:</b> SmartModExtLib\LangDetect<br>
+		<b>Package:</b> <a href="package-LanguageDetection.html">LanguageDetection</a><br>
 
 				<b>Version:</b>
-				v.170609<br>
+				v.170622<br>
 				<b>Depends:</b>
-				classes: Smart<br>
+				classes: Smart, SmartUnicode, SmartFileSysUtils<br>
+				<b>Hints:</b>
+				By default will use the 1-3-930 NGrams. To use extended NGrams (Ex: 1-4-15k) see
+the local code examples.<br>
 				<b>Usage:</b>
 				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
 methods<br>
-		<b>Located at</b> lib/core/plugins/lib_mail_decode.php<br>
+		<b>Located at</b> modules/mod-lang-detect/libs/LanguageNgrams.php<br>
 	</div>
 
 
@@ -186,16 +193,28 @@ methods<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code>__construct( <span>mixed <var>$encoding</var> = <span class="php-quote">''</span></span> )</code>
+		<code>__construct( <span>STRING <var>$ngrams_path</var> = <span class="php-quote">'modules/mod-lang-detect/libs/data-1-3-930'</span></span>, <span>ARRAY <var>$lang</var> = []</span> )</code>
 
 		<div class="description short">
 			
+<p>Class Constructor</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Class Constructor</p>
 
 
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ngrams_path</var></dt>
+					<dd>The path to the resources or NULL if only need to train</dd>
+					<dt><var>$lang</var></dt>
+					<dd>The Array of languages to detect for OR an empty array to try detect all
+available languages</dd>
+				</dl></div>
 
 
 
@@ -204,28 +223,44 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="get_working_charset" id="_get_working_charset">
+	<tr data-order="getLanguageConfidence" id="_getLanguageConfidence">
 
 		<td class="attributes"><code>
 			 public 
-			
+			ARRAY
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_get_working_charset">#</a>
-		<code>get_working_charset( )</code>
+		<a class="anchor" href="#_getLanguageConfidence">#</a>
+		<code>getLanguageConfidence( <span>STRING <var>$str</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Detects and Get the Language Confidence information for the best detected
+Language (from the available list) for a given text</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Detects and Get the Language Confidence information for the best detected
+Language (from the available list) for a given text</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$str</var></dt>
+					<dd>The text to be checked</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>The detection result: [ service-available, lang-id, confidence-score,
+error-message ]<br>
+				</div>
 
 
 
@@ -233,28 +268,41 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="reset" id="_reset">
+	<tr data-order="setMinLength" id="_setMinLength">
 
 		<td class="attributes"><code>
 			 public 
-			
+			VOID
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_reset">#</a>
-		<code>reset( )</code>
+		<a class="anchor" href="#_setMinLength">#</a>
+		<code>setMinLength( <span>INTEGER+ <var>$minLength</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Set the Ngrams Minimum Length</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Set the Ngrams Minimum Length</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$minLength</var></dt>
+					<dd>Min Ngrams Length: Default is 1</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>VOID</code><br>VOID<br>
+				</div>
 
 
 
@@ -262,28 +310,41 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="get_bodies" id="_get_bodies">
+	<tr data-order="setMaxLength" id="_setMaxLength">
 
 		<td class="attributes"><code>
 			 public 
-			
+			VOID
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_get_bodies">#</a>
-		<code>get_bodies( <span>mixed <var>$message</var></span>, <span>mixed <var>$part_id</var></span> )</code>
+		<a class="anchor" href="#_setMaxLength">#</a>
+		<code>setMaxLength( <span>INTEGER+ <var>$maxLength</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Set the Ngrams Maximum Length</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Set the Ngrams Maximum Length</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$maxLength</var></dt>
+					<dd>Max Ngrams Length: Default is 3</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>VOID</code><br>VOID<br>
+				</div>
 
 
 
@@ -291,57 +352,41 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="separe_email_from_name" id="_separe_email_from_name">
+	<tr data-order="setMaxNgrams" id="_setMaxNgrams">
 
 		<td class="attributes"><code>
 			 public 
-			
+			VOID
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_separe_email_from_name">#</a>
-		<code>separe_email_from_name( <span>mixed <var>$y_address</var></span> )</code>
+		<a class="anchor" href="#_setMaxNgrams">#</a>
+		<code>setMaxNgrams( <span>INTEGER+ <var>$maxNgrams</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Set the Maximum (significant) Ngrams</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Set the Maximum (significant) Ngrams</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$maxNgrams</var></dt>
+					<dd>Max Ngrams: Default is 310</dd>
+				</dl></div>
 
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="get_header" id="_get_header">
-
-		<td class="attributes"><code>
-			 public 
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_get_header">#</a>
-		<code>get_header( <span>mixed <var>$message</var></span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-
+				<h4>Returns</h4>
+				<div class="list">
+					<code>VOID</code><br>VOID<br>
+				</div>
 
 
 
@@ -362,66 +407,6 @@ methods<br>
 
 
 
-	<table class="summary properties" id="properties">
-	<caption>Properties summary</caption>
-	<tr data-order="arr_heads" id="$arr_heads">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$arr_heads</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$arr_heads" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="arr_parts" id="$arr_parts">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$arr_parts</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$arr_parts" class="anchor">#</a><code></code></div></td>
-	</tr>
-	<tr data-order="arr_atts" id="$arr_atts">
-		<td class="attributes"><code>
-			public  
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$arr_atts</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$arr_atts" class="anchor">#</a><code></code></div></td>
-	</tr>
-	</table>
 
 
 

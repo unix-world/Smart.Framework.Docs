@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartAbstractAppController | Smart.Framework Documentation :: 2017-04-11 17:15</title>
+	<title>Class SmartAbstractAppController | Smart.Framework Documentation :: 2017-09-05 11:42</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1847996447"></script>
+	<script src="elementlist.js?1618497803"></script>
 </head>
 
 <body>
@@ -33,7 +33,7 @@
 						</li>
 				<li><a href="package-Components.Charts.html">Components:Charts</a>
 						</li>
-				<li><a href="package-Components.Framework.html">Components:Framework</a>
+				<li><a href="package-Components.Core.html">Components:Core</a>
 						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
 						</li>
@@ -57,13 +57,17 @@
 						</li>
 				<li><a href="package-Filesystem.html">Filesystem</a>
 						</li>
+				<li><a href="package-LanguageDetection.html">LanguageDetection</a>
+						</li>
 				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
 						</li>
 				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
 						</li>
 				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
 						</li>
-				<li><a href="package-MediaGallery.html">MediaGallery</a>
+				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
+						</li>
+				<li><a href="package-Media.ImageProcessing.html">Media:ImageProcessing</a>
 						</li>
 				<li><a href="package-Network.CURL.html">Network:CURL</a>
 						</li>
@@ -72,8 +76,6 @@
 				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
 						</li>
 				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
-						</li>
-				<li><a href="package-Services.LangId.Py.html">Services:LangId-Py</a>
 						</li>
 				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
@@ -316,7 +318,7 @@ class="php-comment">//END CLASS</span>
 		<b>Package:</b> <a href="package-Application.html">Application</a><br>
 
 				<b>Version:</b>
-				v.170405<br>
+				v.170905<br>
 				<b>Depends:</b>
 				-<br>
 				<b>Hints:</b>
@@ -420,16 +422,16 @@ from ShutDown() function in this class !</p>
 
 		<div class="description short">
 			
-<p>Test if Debug is On.</p>
+<p>Test if Debug is On</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Test if Debug is On.</p>
+<p>Test if Debug is On</p>
 
 <p>If Debug is turned on, this area of Debug messages will be displayed in
-Modules section.</p>
+Modules section</p>
 
 
 
@@ -460,16 +462,16 @@ Modules section.</p>
 
 		<div class="description short">
 			
-<p>Set Custom Debug Data.</p>
+<p>Set Custom Debug Data</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Set Custom Debug Data.</p>
+<p>Set Custom Debug Data</p>
 
 <p>If Debug is turned on, this area of Debug messages will be displayed in
-Modules section.</p>
+Modules section</p>
 
 
 
@@ -507,13 +509,13 @@ Modules section.</p>
 
 		<div class="description short">
 			
-<p>Test if Modal/PopUp is set via (URL) Request.</p>
+<p>Test if Modal/PopUp is set via (URL) Request</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Test if Modal/PopUp is set via (URL) Request.</p>
+<p>Test if Modal/PopUp is set via (URL) Request</p>
 
 <p>If is set, will return TRUE, else will return FALSE</p>
 
@@ -546,13 +548,13 @@ Modules section.</p>
 
 		<div class="description short">
 			
-<p>Test if Printable is set via (URL) Request.</p>
+<p>Test if Printable is set via (URL) Request</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Test if Printable is set via (URL) Request.</p>
+<p>Test if Printable is set via (URL) Request</p>
 
 <p>If is set, will return TRUE, else will return FALSE</p>
 
@@ -585,25 +587,27 @@ Modules section.</p>
 
 		<div class="description short">
 			
-<p>Get the value for a Controller parameter.</p>
+<p>Get the value for a Controller parameter</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Get the value for a Controller parameter.</p>
+<p>Get the value for a Controller parameter</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$param</var></dt>
-					<dd>:: The selected parameter. The valid param values are: module-area :: ex: index
-/ admin module-name :: ex: mod-samples module-path :: ex: modules/mod-samples/
-module-view-path :: ex: modules/mod-samples/views/ module-model-path :: ex:
-modules/mod-samples/models/ module-lib-path :: ex: modules/mod-samples/libs/
-controller :: ex: samples.test url-script :: ex: index.php / admin.php url-path
-:: ex: /sites/smart-framework/ url-addr :: ex:
+					<dd>:: The selected parameter The valid param values are: release-hash :: ex:
+255cdb71953108baacb856591b9bf5ee9e4a39e6 (the release hash based on app
+framework version, framework release and modules version) module-area :: ex:
+index / admin module-name :: ex: mod-samples module-path :: ex:
+modules/mod-samples/ module-view-path :: ex: modules/mod-samples/views/
+module-model-path :: ex: modules/mod-samples/models/ module-lib-path :: ex:
+modules/mod-samples/libs/ controller :: ex: samples.test url-script :: ex:
+index.php / admin.php url-path :: ex: /sites/smart-framework/ url-addr :: ex:
 http(s)://127.0.0.1/sites/smart-framework/ url-page :: ex: samples.test | test
 (if samples is the default module) ; this is returning the URL page variable as
 is in the URL (it can be the same as 'controller' or if rewrite is used inside
@@ -612,7 +616,7 @@ framework can vary</dd>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>:: The value for the selected parameter.<br>
+					<code>STRING</code><br>:: The value for the selected parameter<br>
 				</div>
 
 
@@ -636,29 +640,66 @@ framework can vary</dd>
 
 		<div class="description short">
 			
-<p>Get the value for a Config parameter from the app $configs array.</p>
+<p>Get the value for a Config parameter from the app $configs array</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Get the value for a Config parameter from the app $configs array.</p>
+<p>Get the value for a Config parameter from the app $configs array</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$param</var></dt>
-					<dd>:: The selected configuration parameter. Examples: 'app.info-url' will get value
-from $configs['app']['info-url'] ; 'regional.decimal-separator' will get the
-value (string) from $configs['regional']['decimal-separator'] ; 'regional' will
-get the value (array) from $configs['regional']</dd>
+					<dd>:: The selected configuration parameter ; Examples: 'app.info-url' will get
+value from $configs['app']['info-url'] ; 'regional.decimal-separator' will get
+the value (string) from $configs['regional']['decimal-separator'] ; 'regional'
+will get the value (array) from $configs['regional']</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
 					<code>MIXED</code><br>:: The value for the selected parameter. If the Config parameter does not
-exists, will return an empty string.<br>
+exists, will return an empty string<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="RequestPathGet" id="_RequestPathGet">
+
+		<td class="attributes"><code>
+			final public 
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_RequestPathGet">#</a>
+		<code>RequestPathGet( )</code>
+
+		<div class="description short">
+			
+<p>Get the Path Request Variable (PATH_INFO) in a controller</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the Path Request Variable (PATH_INFO) in a controller</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The value of the PATH_INFO Request if Set or Empty String<br>
 				</div>
 
 
@@ -719,6 +760,177 @@ enforce a type for the variable as: ['enum', 'list', 'of', 'allowed', 'values'],
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="PageViewGetRawHeaders" id="_PageViewGetRawHeaders">
+
+		<td class="attributes"><code>
+			final public 
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewGetRawHeaders">#</a>
+		<code>PageViewGetRawHeaders( )</code>
+
+		<div class="description short">
+			
+<p>Get all the current controller PageView Headers (Raw) that will be mapped to
+Raw HTTP Header(s)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get all the current controller PageView Headers (Raw) that will be mapped to
+Raw HTTP Header(s)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>:: an associative array with all controller Page View (Raw) Headers currently
+set<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewSetRawHeaders" id="_PageViewSetRawHeaders">
+
+		<td class="attributes"><code>
+			final public 
+			BOOL
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewSetRawHeaders">#</a>
+		<code>PageViewSetRawHeaders( <span>ARRAY <var>$entries</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set a list with multiple values for RawHeaders into the current controller as
+PageView Headers (Raw) that will be mapped to Raw HTTP Header(s)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set a list with multiple values for RawHeaders into the current controller as
+PageView Headers (Raw) that will be mapped to Raw HTTP Header(s)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$entries</var></dt>
+					<dd>:: an associative array to be set with elements for each raw header entry [
+'Header Key 1' =&amp;gt; 'Header Entry One', 'Header Key 2' =&amp;gt; 'Header Entry
+Two', ..., 'Header Key n' =&amp;gt; 'Header Entry N' ]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if OK, FALSE if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewSetRawHeader" id="_PageViewSetRawHeader">
+
+		<td class="attributes"><code>
+			final public 
+			BOOL
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewSetRawHeader">#</a>
+		<code>PageViewSetRawHeader( <span>STRING <var>$param</var></span>, <span>STRING <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set a single value for settings into the current controller as PageView
+Headers (Raw) that will be mapped to Raw HTTP Header(s)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set a single value for settings into the current controller as PageView
+Headers (Raw) that will be mapped to Raw HTTP Header(s)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>:: the header key (Ex: 'X-XSS-Protection')</dd>
+					<dt><var>$value</var></dt>
+					<dd>:: the header value (Ex: '1; mode=block')</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if OK, FALSE if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewResetRawHeaders" id="_PageViewResetRawHeaders">
+
+		<td class="attributes"><code>
+			final public 
+			BOOL
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewResetRawHeaders">#</a>
+		<code>PageViewResetRawHeaders( )</code>
+
+		<div class="description short">
+			
+<p>Reset all variables for the current controller into PageView Headers (Raw)
+that will be mapped to Raw HTTP Header(s)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Reset all variables for the current controller into PageView Headers (Raw)
+that will be mapped to Raw HTTP Header(s)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if OK, FALSE if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="PageViewGetCfgs" id="_PageViewGetCfgs">
 
 		<td class="attributes"><code>
@@ -747,7 +959,8 @@ enforce a type for the variable as: ['enum', 'list', 'of', 'allowed', 'values'],
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>ARRAY</code><br>:: an array with all controller Page View Cfgs. (Settings) currently set<br>
+					<code>ARRAY</code><br>:: an associative array with all controller Page View Cfgs. (Settings) currently
+set<br>
 				</div>
 
 
@@ -787,7 +1000,7 @@ PageView Settings (Cfgs)</p>
 				<div class="list"><dl>
 					<dt><var>$params</var></dt>
 					<dd>:: an associative array to be set as [ 'param1' =&amp;gt; 'value1', ..., 'param-n'
-=&amp;gt; 'val-n']</dd>
+=&amp;gt; 'val-n' ]</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -847,6 +1060,192 @@ Settings (Cfgs)</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="PageViewResetCfgs" id="_PageViewResetCfgs">
+
+		<td class="attributes"><code>
+			final public 
+			BOOL
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewResetCfgs">#</a>
+		<code>PageViewResetCfgs( )</code>
+
+		<div class="description short">
+			
+<p>Reset all variables for the current controller into PageView Settings
+(Cfgs)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Reset all variables for the current controller into PageView Settings
+(Cfgs)</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if OK, FALSE if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewSetOkStatus" id="_PageViewSetOkStatus">
+
+		<td class="attributes"><code>
+			final public 
+			BOOL
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewSetOkStatus">#</a>
+		<code>PageViewSetOkStatus( <span>ENUM <var>$code</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set OK (2xx) STATUS Code for a controller page</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set OK (2xx) STATUS Code for a controller page</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$code</var></dt>
+					<dd>:: the HTTP Error Status Code: 301, 302, ... (consult middleware documentation
+to see what is supported) ; if an invalid error status code is used then 200
+will be used instead</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if OK, FALSE if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewSetErrorStatus" id="_PageViewSetErrorStatus">
+
+		<td class="attributes"><code>
+			final public 
+			BOOL
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewSetErrorStatus">#</a>
+		<code>PageViewSetErrorStatus( <span>ENUM <var>$code</var></span>, <span>STRING <var>$message</var> = <span class="php-quote">''</span></span>, <span>BOOLEAN <var>$logtype</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Error Status and Optional Message for a controller page The Controller
+should stop the execution after calling this function using 'return;' or ending
+the 'Run()' main function</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Error Status and Optional Message for a controller page The Controller
+should stop the execution after calling this function using 'return;' or ending
+the 'Run()' main function</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$code</var></dt>
+					<dd>:: the HTTP Error Status Code: 400, 403, 404, 500, 503, ... (consult middleware
+documentation to see what is supported) ; if an invalid error status code is
+used then 500 will be used instead</dd>
+					<dt><var>$message</var></dt>
+					<dd>:: The detailed message that will be displayed public near the status code</dd>
+					<dt><var>$logtype</var></dt>
+					<dd>:: &lt;em&gt;Optional&lt;/em&gt; ; Default is '' ; available values: '' | 'WARN' | 'NOTICE'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if OK, FALSE if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewSetRedirectUrl" id="_PageViewSetRedirectUrl">
+
+		<td class="attributes"><code>
+			final public 
+			BOOL
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewSetRedirectUrl">#</a>
+		<code>PageViewSetRedirectUrl( <span>STRING <var>$url</var></span>, <span>ENUM <var>$code</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set Redirect URL for a controller page The Controller should stop the
+execution after calling this function using 'return;' or ending the 'Run()' main
+function</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set Redirect URL for a controller page The Controller should stop the
+execution after calling this function using 'return;' or ending the 'Run()' main
+function</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$url</var></dt>
+					<dd>:: The absolute URL to redirect the page to (Ex: &lt;a
+href="http://some-domain.ext/some-page.html"&gt;http://some-domain.ext/some-page.html&lt;/a&gt;)</dd>
+					<dt><var>$code</var></dt>
+					<dd>:: the HTTP Error Status Code: 301, 302, ... (consult middleware documentation
+to see what is supported) ; if an invalid error status code is used then 302
+will be used instead</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if OK, FALSE if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="PageViewGetVars" id="_PageViewGetVars">
 
 		<td class="attributes"><code>
@@ -862,20 +1261,21 @@ Settings (Cfgs)</p>
 
 		<div class="description short">
 			
-<p>Get all the current controller PageView Vars.</p>
+<p>Get all the current controller PageView Vars</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Get all the current controller PageView Vars.</p>
+<p>Get all the current controller PageView Vars</p>
 
 
 
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>ARRAY</code><br>:: an array with all the controller Page View variables currently set.<br>
+					<code>ARRAY</code><br>:: an associative array with all the controller Page View variables currently
+set<br>
 				</div>
 
 
@@ -900,14 +1300,14 @@ Settings (Cfgs)</p>
 		<div class="description short">
 			
 <p>Set a list with multiple values for variables into the current controller
-into PageView Vars.</p>
+into PageView Vars</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
 <p>Set a list with multiple values for variables into the current controller
-into PageView Vars.</p>
+into PageView Vars</p>
 
 
 
@@ -915,7 +1315,7 @@ into PageView Vars.</p>
 				<div class="list"><dl>
 					<dt><var>$params</var></dt>
 					<dd>:: an associative array to be set as [ 'variable1' =&amp;gt; 'value1', ...,
-'variable-n' =&amp;gt; 'val-n']</dd>
+'variable-n' =&amp;gt; 'val-n' ]</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -944,13 +1344,13 @@ into PageView Vars.</p>
 
 		<div class="description short">
 			
-<p>Set a single value for the current controller into PageView Vars.</p>
+<p>Set a single value for the current controller into PageView Vars</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Set a single value for the current controller into PageView Vars.</p>
+<p>Set a single value for the current controller into PageView Vars</p>
 
 
 
@@ -989,14 +1389,14 @@ into PageView Vars.</p>
 		<div class="description short">
 			
 <p>Append a single value to a variable for the current controller into PageView
-Vars.</p>
+Vars</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
 <p>Append a single value to a variable for the current controller into PageView
-Vars.</p>
+Vars</p>
 
 
 
@@ -1034,13 +1434,13 @@ Vars.</p>
 
 		<div class="description short">
 			
-<p>Reset all variables for the current controller into PageView Vars.</p>
+<p>Reset all variables for the current controller into PageView Vars</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Reset all variables for the current controller into PageView Vars.</p>
+<p>Reset all variables for the current controller into PageView Vars</p>
 
 
 
@@ -1072,14 +1472,14 @@ Vars.</p>
 		<div class="description short">
 			
 <p>Reset a single variable value for the current controller into PageView
-Vars.</p>
+Vars</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
 <p>Reset a single variable value for the current controller into PageView
-Vars.</p>
+Vars</p>
 
 
 
@@ -1115,15 +1515,15 @@ Vars.</p>
 
 		<div class="description short">
 			
-<p>Test if the Page Cache (system) is active or not. This is based on
-PersistentCache.</p>
+<p>Test if the Page Cache (system) is active or not This is based on
+PersistentCache</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Test if the Page Cache (system) is active or not. This is based on
-PersistentCache.</p>
+<p>Test if the Page Cache (system) is active or not This is based on
+PersistentCache</p>
 
 
 
@@ -1154,13 +1554,13 @@ PersistentCache.</p>
 
 		<div class="description short">
 			
-<p>Prepare a Page Cache SAFE Key or Realm. This is based on PersistentCache.</p>
+<p>Prepare a Page Cache SAFE Key or Realm This is based on PersistentCache</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Prepare a Page Cache SAFE Key or Realm. This is based on PersistentCache.</p>
+<p>Prepare a Page Cache SAFE Key or Realm This is based on PersistentCache</p>
 
 
 
@@ -1191,13 +1591,13 @@ PersistentCache.</p>
 
 		<div class="description short">
 			
-<p>Get a Page from the (Persistent) Cache.</p>
+<p>Get a Page from the (Persistent) Cache</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Get a Page from the (Persistent) Cache.</p>
+<p>Get a Page from the (Persistent) Cache</p>
 
 
 
@@ -1237,13 +1637,13 @@ a NULL value.<br>
 
 		<div class="description short">
 			
-<p>Set a Page into the (Persistent) Cache.</p>
+<p>Set a Page into the (Persistent) Cache</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Set a Page into the (Persistent) Cache.</p>
+<p>Set a Page into the (Persistent) Cache</p>
 
 
 
@@ -1287,13 +1687,13 @@ of the cases<br>
 
 		<div class="description short">
 			
-<p>Unset a Page from the (Persistent) Cache.</p>
+<p>Unset a Page from the (Persistent) Cache</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Unset a Page from the (Persistent) Cache.</p>
+<p>Unset a Page from the (Persistent) Cache</p>
 
 
 
@@ -1333,14 +1733,14 @@ of the cases<br>
 		<div class="description short">
 			
 <p>The Controller Runtime - This function is required to be re-defined in all
-controllers.</p>
+controllers</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
 <p>The Controller Runtime - This function is required to be re-defined in all
-controllers.</p>
+controllers</p>
 
 
 
@@ -1438,7 +1838,7 @@ wrong and unexpected results !!!</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-04-11 17:15</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
 	</div>
 </div>
 </div>
