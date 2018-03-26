@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class Smart | Smart.Framework Documentation :: 2017-09-05 11:42</title>
+	<title>Class Smart | Smart.Framework Documentation :: 2018-03-26 15:20</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1618497803"></script>
+	<script src="resources/combined.js?1083735894"></script>
+	<script src="elementlist.js?3400854602"></script>
 </head>
 
 <body>
@@ -42,6 +42,8 @@
 				<li><a href="package-DATA.XML.html">DATA:XML</a>
 						</li>
 				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
 				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
 						</li>
@@ -166,9 +168,9 @@ Smart::some_method_of_this_class(...);
 		<b>Package:</b> <a href="package-Base.html">Base</a><br>
 
 				<b>Version:</b>
-				v.170703<br>
+				v.171007<br>
 				<b>Depends:</b>
-				extensions: PHP XML, PHP JSON ; classes: SmartUnicode<br>
+				extensions: PHP JSON ; classes: SmartUnicode<br>
 				<b>Hints:</b>
 				It is recommended to use the methods in this class instead of PHP native methods
 whenever is possible because this class will offer Long Term Support and the
@@ -1451,6 +1453,61 @@ Left)</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="text_cut_by_limit" id="_text_cut_by_limit">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_text_cut_by_limit">#</a>
+		<code>text_cut_by_limit( <span>STRING <var>$ytxt</var></span>, <span>STRING <var>$ylen</var></span>, <span>BOOLEAN <var>$y_cut_words</var> = <span class="php-keyword1">true</span></span>, <span>ENUM <var>$y_suffix</var> = <span class="php-quote">'...'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Cut a text by a fixed length, if longer than allowed length. If cut words
+option is FALSE it may make the string shorted by rolling back until the last
+space and cutting off the last partial word. The default cut suffix is (...) but
+can be disabled using the last parameter.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Cut a text by a fixed length, if longer than allowed length. If cut words
+option is FALSE it may make the string shorted by rolling back until the last
+space and cutting off the last partial word. The default cut suffix is (...) but
+can be disabled using the last parameter.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ytxt</var></dt>
+					<dd>:: The text string to be processed</dd>
+					<dt><var>$ylen</var></dt>
+					<dd>:: The fixed length of the string</dd>
+					<dt><var>$y_cut_words</var></dt>
+					<dd>:: &lt;em&gt;Optional&lt;/em&gt; Default TRUE ; if TRUE, will CUT last word to provide a
+fixed length ; if FALSE will eliminate unterminate last word ; default is TRUE</dd>
+					<dt><var>$y_suffix</var></dt>
+					<dd>:: &lt;em&gt;Optional&lt;/em&gt; Default '...' ; Can be '' or '[...a cutoff-message...]'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The processed string (text)<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="nl_2_br" id="_nl_2_br">
 
 		<td class="attributes"><code>
@@ -1560,17 +1617,25 @@ to spaces</dd>
 
 		<div class="description short">
 			
-<p>Safe Path Name to be used to process dynamic build paths to avoid weird path
-character injections To be used for full path to files or full path to dirs or
-just dir names ALLOWED CHARS: [a-zA-Z0-9] _ - . @ # /</p>
+<p>Create a Safe Path Name to be used to process dynamic build paths to avoid
+weird path character injections This should be used for relative or absolute
+path to files or dirs It should allow also both: absolute and relative paths,
+thus if absolute path should be tested later NOTICE: It may return an empty
+string if all characters in the path are invalid or invalid path sequences
+detected, so if empty path name must be tested later ALLOWED CHARS: [a-zA-Z0-9]
+_ - . @ # /</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Safe Path Name to be used to process dynamic build paths to avoid weird path
-character injections To be used for full path to files or full path to dirs or
-just dir names ALLOWED CHARS: [a-zA-Z0-9] _ - . @ # /</p>
+<p>Create a Safe Path Name to be used to process dynamic build paths to avoid
+weird path character injections This should be used for relative or absolute
+path to files or dirs It should allow also both: absolute and relative paths,
+thus if absolute path should be tested later NOTICE: It may return an empty
+string if all characters in the path are invalid or invalid path sequences
+detected, so if empty path name must be tested later ALLOWED CHARS: [a-zA-Z0-9]
+_ - . @ # /</p>
 
 
 
@@ -1585,7 +1650,7 @@ just dir names ALLOWED CHARS: [a-zA-Z0-9] _ - . @ # /</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>:: The safe path<br>
+					<code>STRING</code><br>:: The safe path ; if invalid will return empty value<br>
 				</div>
 
 
@@ -1609,26 +1674,32 @@ just dir names ALLOWED CHARS: [a-zA-Z0-9] _ - . @ # /</p>
 
 		<div class="description short">
 			
-<p>Safe File Name to be used to process dynamic build file names or single dir
-names to avoid weird path character injections To be used for file or single dir
-names DO NOT USE for full paths or full dir paths because will break them, as
-the / character is supressed ALLOWED CHARS: [a-zA-Z0-9] _ - . @ #</p>
+<p>Create a Safe File Name to be used to process dynamic build file names or dir
+names to avoid weird path character injections To should be used only for file
+or dir names (not paths) NOTICE: DO NOT USE for full paths or full dir paths
+because will break them, as the / character is supressed NOTICE: It may return
+an empty string if all characters in the file/dir name are invalid or invalid
+path sequences detected, so if empty file/dir name must be tested later ALLOWED
+CHARS: [a-zA-Z0-9] _ - . @ #</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Safe File Name to be used to process dynamic build file names or single dir
-names to avoid weird path character injections To be used for file or single dir
-names DO NOT USE for full paths or full dir paths because will break them, as
-the / character is supressed ALLOWED CHARS: [a-zA-Z0-9] _ - . @ #</p>
+<p>Create a Safe File Name to be used to process dynamic build file names or dir
+names to avoid weird path character injections To should be used only for file
+or dir names (not paths) NOTICE: DO NOT USE for full paths or full dir paths
+because will break them, as the / character is supressed NOTICE: It may return
+an empty string if all characters in the file/dir name are invalid or invalid
+path sequences detected, so if empty file/dir name must be tested later ALLOWED
+CHARS: [a-zA-Z0-9] _ - . @ #</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$y_fname</var></dt>
-					<dd>:: File Name or Single Dir Name to be processed</dd>
+					<dd>:: File Name or Dir Name to be processed</dd>
 					<dt><var>$ysupresschar</var></dt>
 					<dd>:: The suppression character to replace weird characters ; optional ; default is
 ''</dd>
@@ -1636,7 +1707,7 @@ the / character is supressed ALLOWED CHARS: [a-zA-Z0-9] _ - . @ #</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>:: The safe file or single-dir name<br>
+					<code>STRING</code><br>:: The safe file or dir name ; if invalid will return empty value<br>
 				</div>
 
 
@@ -1660,22 +1731,26 @@ the / character is supressed ALLOWED CHARS: [a-zA-Z0-9] _ - . @ #</p>
 
 		<div class="description short">
 			
-<p>RFC Safe compliant User Names ; Can be used also for email addresses ALLOWED
-CHARS: [a-z0-9] _ - . @</p>
+<p>Create a (RFC, ISO) Safe compliant User Name, Domain Name or Email Address
+NOTICE: It may return an empty string if all characters in the given name are
+invalid or invalid path sequences detected, so if empty name must be tested
+later ALLOWED CHARS: [a-z0-9] _ - . @</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>RFC Safe compliant User Names ; Can be used also for email addresses ALLOWED
-CHARS: [a-z0-9] _ - . @</p>
+<p>Create a (RFC, ISO) Safe compliant User Name, Domain Name or Email Address
+NOTICE: It may return an empty string if all characters in the given name are
+invalid or invalid path sequences detected, so if empty name must be tested
+later ALLOWED CHARS: [a-z0-9] _ - . @</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$y_name</var></dt>
-					<dd>:: Variable to validate</dd>
+					<dd>:: Name to be processed</dd>
 					<dt><var>$ysupresschar</var></dt>
 					<dd>:: The suppression character to replace weird characters ; optional ; default is
 ''</dd>
@@ -1683,7 +1758,7 @@ CHARS: [a-z0-9] _ - . @</p>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>:: The safe validated variable<br>
+					<code>STRING</code><br>:: The safe name ; if invalid should return empty value<br>
 				</div>
 
 
@@ -1707,25 +1782,29 @@ CHARS: [a-z0-9] _ - . @</p>
 
 		<div class="description short">
 			
-<p>Safe Valid User Names ALLOWED CHARS: [a-z0-9] .</p>
+<p>Create a Safe Valid Strict User Name NOTICE: It may return an empty string if
+all characters in the given name are invalid or invalid path sequences detected,
+so if empty name must be tested later ALLOWED CHARS: [a-z0-9] .</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Safe Valid User Names ALLOWED CHARS: [a-z0-9] .</p>
+<p>Create a Safe Valid Strict User Name NOTICE: It may return an empty string if
+all characters in the given name are invalid or invalid path sequences detected,
+so if empty name must be tested later ALLOWED CHARS: [a-z0-9] .</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$y_name</var></dt>
-					<dd>:: Variable to validate</dd>
+					<dd>:: Name to be processed</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>:: The safe validated variable<br>
+					<code>STRING</code><br>:: The safe name ; if invalid should return empty value<br>
 				</div>
 
 
@@ -1749,29 +1828,37 @@ CHARS: [a-z0-9] _ - . @</p>
 
 		<div class="description short">
 			
-<p>Safe Valid Variable Like Names NOTICE: this have a special usage and must
-allow also 0..9 as prefix because is used for many purposes not just for real
-variables ... ALLOWED CHARS: [a-z0-9] _</p>
+<p>Creates a Safe Valid Variable Name NOTICE: this have a special usage and must
+allow also 0..9 as prefix because is can be used for other purposes not just for
+real safe variable names, thus if real safe valid variable name must be tested
+later (real safe variable names cannot start with numbers ...) NOTICE: It may
+return an empty string if all characters in the given variable name are invalid
+or invalid path sequences detected, so if empty variable name must be tested
+later ALLOWED CHARS: [a-z0-9] _</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Safe Valid Variable Like Names NOTICE: this have a special usage and must
-allow also 0..9 as prefix because is used for many purposes not just for real
-variables ... ALLOWED CHARS: [a-z0-9] _</p>
+<p>Creates a Safe Valid Variable Name NOTICE: this have a special usage and must
+allow also 0..9 as prefix because is can be used for other purposes not just for
+real safe variable names, thus if real safe valid variable name must be tested
+later (real safe variable names cannot start with numbers ...) NOTICE: It may
+return an empty string if all characters in the given variable name are invalid
+or invalid path sequences detected, so if empty variable name must be tested
+later ALLOWED CHARS: [a-z0-9] _</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$y_name</var></dt>
-					<dd>:: Variable to validate</dd>
+					<dd>:: Variable Name to be processed</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>STRING</code><br>:: The safe validated variable<br>
+					<code>STRING</code><br>:: The safe variable name ; if invalid should return empty value<br>
 				</div>
 
 
@@ -2267,7 +2354,7 @@ Intended usage: Huge scale.</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="separe_url_parts" id="_separe_url_parts">
+	<tr data-order="url_parse" id="_url_parse">
 
 		<td class="attributes"><code>
 			 public static
@@ -2277,18 +2364,18 @@ Intended usage: Huge scale.</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_separe_url_parts">#</a>
-		<code>separe_url_parts( <span>STRING <var>$y_url</var></span> )</code>
+		<a class="anchor" href="#_url_parse">#</a>
+		<code>url_parse( <span>STRING <var>$y_url</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Separe the URL parts :: a better replacement for parse_url()</p>
+<p>Safe Parse URL :: a better replacement for parse_url()</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Separe the URL parts :: a better replacement for parse_url()</p>
+<p>Safe Parse URL :: a better replacement for parse_url()</p>
 
 
 
@@ -2558,7 +2645,7 @@ Log.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_raise_error">#</a>
-		<code>raise_error( <span>STRING <var>$message_to_log</var></span>, <span>mixed <var>$message_to_display</var> = <span class="php-quote">'See Error Log for More Details'</span></span> )</code>
+		<code>raise_error( <span>STRING <var>$message_to_log</var></span>, <span>STRING <var>$message_to_display</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -2581,9 +2668,10 @@ Code).</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$message_to_log</var></dt>
-					<dd>$message :: The message to be triggered</dd>
+					<dd>:: The message to be triggered</dd>
 					<dt><var>$message_to_display</var></dt>
-					<dd></dd>
+					<dd>:: &lt;em&gt;Optional&lt;/em&gt; the message to be displayed (must be html special chars
+safe)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -2619,7 +2707,7 @@ Code).</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:20</a>
 	</div>
 </div>
 </div>

@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartRedisDb | Smart.Framework Documentation :: 2018-03-26 15:20</title>
+	<title>Class SmartMongoDb | Smart.Framework Documentation :: 2018-03-26 15:26</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?1083735894"></script>
 	<script src="elementlist.js?3400854602"></script>
@@ -43,13 +43,13 @@
 						</li>
 				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
 						</li>
-				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
+				<li class="active"><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
 				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
 						</li>
 				<li><a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a>
 						</li>
-				<li class="active"><a href="package-Database.Redis.html">Database:Redis</a>
+				<li><a href="package-Database.Redis.html">Database:Redis</a>
 						</li>
 				<li><a href="package-Database.Solr.html">Database:Solr</a>
 						</li>
@@ -90,7 +90,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li class="active"><a href="class-SmartRedisDb.html">SmartRedisDb</a></li>
+				<li class="active"><a href="class-SmartMongoDb.html">SmartMongoDb</a></li>
 			</ul>
 
 
@@ -118,7 +118,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="package-Database.Redis.html" title="Summary of Database:Redis"><span>Package</span></a>
+				<a href="package-Database.MongoDB.html" title="Summary of Database:MongoDB"><span>Package</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -133,44 +133,12 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class SmartRedisDb</h1>
+	<h1>Class SmartMongoDb</h1>
 
 
 	<div class="description">
 	
-<p>Class: SmartRedisDb - provides a Client for Redis (Data Structure / Caching)
-Server. By default this class will just log the errors.</p>
-
-<pre>
-
-<span class="php-comment">// Redis Client usage example:</span>
-<span
-class="php-var">$redis</span> = <span
-class="php-keyword1">new</span> SmartRedisDb(<span
-class="php-quote">'localhost'</span>, <span
-class="php-quote">'6379'</span>, <span class="php-num">3</span>); <span
-class="php-comment">// connects at the database no. 3</span>
-<span
-class="php-var">$redis</span>-&gt;set(<span
-class="php-quote">'key1'</span>, <span class="php-quote">'value1'</span>);
-<span
-class="php-var">$redis</span>-&gt;set(<span
-class="php-quote">'list1:key1'</span>, <span
-class="php-quote">'value2'</span>);
-<span class="php-var">$value1</span> = <span
-class="php-var">$redis</span>-&gt;get(<span
-class="php-quote">'key1'</span>);
-<span class="php-keyword1">if</span>(<span
-class="php-var">$redis</span>-&gt;exists(<span
-class="php-quote">'key1'</span>)) {
-    <span
-class="php-var">$value2</span> = <span
-class="php-var">$redis</span>-&gt;get(<span
-class="php-quote">'list5:key7'</span>);
-} <span
-class="php-comment">//end if</span>
-
-</pre>
+<p>Class Smart MongoDB Client (for PHP-MongoDB v.1.0.1 or later)</p>
 
 	</div>
 
@@ -186,68 +154,154 @@ class="php-comment">//end if</span>
 		<b>Final</b><br>
 		
 		
-		<b>Package:</b> <a href="package-Database.Redis.html">Database:Redis</a><br>
+		<b>Package:</b> <a href="package-Database.MongoDB.html">Database:MongoDB</a><br>
 
 				<b>Version:</b>
-				v.180308<br>
+				v.180326<br>
 				<b>Depends:</b>
-				extensions: PHP Sockets ; classes: Smart<br>
-				<b>Hint:</b>
-				for the rest of supported methods take a look at the SmartRedisDb class magic
-__call method ; Visit: <a
-href="http://redis.io/commands">http://redis.io/commands</a> ; Most of the base
-methods are implemented.<br>
+				extensions: PHP MongoDB (v.1.0.1 or later) ; classes: Smart<br>
 				<b>Usage:</b>
 				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
 methods<br>
-		<b>Located at</b> lib/core/plugins/lib_db_redis.php<br>
+		<b>Located at</b> lib/core/plugins/lib_db_mongo.php<br>
 	</div>
 
 
 
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="__construct" id="___construct">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#___construct">#</a>
+		<code>__construct( <span>STRING <var>$y_configs_arr</var> = <span class="php-keyword1">array</span>()</span> )</code>
+
+		<div class="description short">
+			
+<p>Class constructor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Class constructor</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_configs_arr</var></dt>
+					<dd>$col :: MongoDB Collection</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="assign_uuid" id="_assign_uuid">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_assign_uuid">#</a>
+		<code>assign_uuid( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="get_server_version" id="_get_server_version">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_get_server_version">#</a>
+		<code>get_server_version( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="command_is_ok" id="_command_is_ok">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_command_is_ok">#</a>
+		<code>command_is_ok( <span>mixed <var>$result</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
 
 
 
 	<table class="summary methods" id="magicMethods">
 	<caption>Magic methods summary</caption>
-	<tr data-order="ping" id="m_ping">
-
-		<td class="attributes"><code>
-			 public 
-			STRING
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#m_ping">#</a>
-		<code>ping( )</code>
-
-		<div class="description short">
-			
-<p># Ping the Redis server ; returns: the test answer which is always PONG</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p># Ping the Redis server ; returns: the test answer which is always PONG</p>
-
-
-
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>STRING</code><br>STRING<br>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="get" id="m_get">
+	<tr data-order="count" id="m_count">
 
 		<td class="attributes"><code>
 			 public 
@@ -257,26 +311,26 @@ methods<br>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#m_get">#</a>
-		<code>get( <span>STRING <var>$key</var></span> )</code>
+		<a class="anchor" href="#m_count">#</a>
+		<code>count( <span>mixed <var>$strCollection</var></span>, <span>mixed <var>$arrQuery</var></span> )</code>
 
 		<div class="description short">
 			
-<p># Get a Redis Key ; returns: the value of key as STRING or NULL if not
-exists</p>
+<p># count documents in a collection</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p># Get a Redis Key ; returns: the value of key as STRING or NULL if not
-exists</p>
+<p># count documents in a collection</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$key</var></dt>
+					<dt><var>$strCollection</var></dt>
+					<dd></dd>
+					<dt><var>$arrQuery</var></dt>
 					<dd></dd>
 				</dl></div>
 
@@ -291,7 +345,7 @@ exists</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="set" id="m_set">
+	<tr data-order="find" id="m_find">
 
 		<td class="attributes"><code>
 			 public 
@@ -301,26 +355,28 @@ exists</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#m_set">#</a>
-		<code>set( <span>STRING <var>$key</var></span>, <span>STRING <var>$value</var></span> )</code>
+		<a class="anchor" href="#m_find">#</a>
+		<code>find( <span>mixed <var>$strCollection</var></span>, <span>mixed <var>$arrQuery</var></span>, <span>mixed <var>$arrProjFields</var></span> )</code>
 
 		<div class="description short">
 			
-<p># Set a Redis Key ; returns: OK on success or NULL on failure</p>
+<p>in a collection with optional filter criteria / limit</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p># Set a Redis Key ; returns: OK on success or NULL on failure</p>
+<p>in a collection with optional filter criteria / limit</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$key</var></dt>
+					<dt><var>$strCollection</var></dt>
 					<dd></dd>
-					<dt><var>$value</var></dt>
+					<dt><var>$arrQuery</var></dt>
+					<dd></dd>
+					<dt><var>$arrProjFields</var></dt>
 					<dd></dd>
 				</dl></div>
 
@@ -335,7 +391,7 @@ exists</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="append" id="m_append">
+	<tr data-order="findone" id="m_findone">
 
 		<td class="attributes"><code>
 			 public 
@@ -345,26 +401,32 @@ exists</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#m_append">#</a>
-		<code>append( <span>STRING <var>$key</var></span>, <span>STRING <var>$value</var></span> )</code>
+		<a class="anchor" href="#m_findone">#</a>
+		<code>findone( <span>mixed <var>$strCollection</var></span>, <span>mixed <var>$arrQuery</var></span>, <span>mixed <var>$arrProjFields</var></span>, <span>mixed <var>$arrOptions</var></span> )</code>
 
 		<div class="description short">
 			
-<p># Append a Redis Key ; returns: OK on success or NULL on failure</p>
+<p># find single document in a collection with optional filter criteria /
+limit</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p># Append a Redis Key ; returns: OK on success or NULL on failure</p>
+<p># find single document in a collection with optional filter criteria /
+limit</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$key</var></dt>
+					<dt><var>$strCollection</var></dt>
 					<dd></dd>
-					<dt><var>$value</var></dt>
+					<dt><var>$arrQuery</var></dt>
+					<dd></dd>
+					<dt><var>$arrProjFields</var></dt>
+					<dd></dd>
+					<dt><var>$arrOptions</var></dt>
 					<dd></dd>
 				</dl></div>
 
@@ -379,229 +441,7 @@ exists</p>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="del" id="m_del">
-
-		<td class="attributes"><code>
-			 public 
-			INT
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#m_del">#</a>
-		<code>del( <span>STRING <var>$key</var></span> )</code>
-
-		<div class="description short">
-			
-<p># Delete a Redis Key ; returns: 0 if not successful or 1 if successful</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p># Delete a Redis Key ; returns: 0 if not successful or 1 if successful</p>
-
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$key</var></dt>
-					<dd></dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>INT</code><br>INT<br>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="expire" id="m_expire">
-
-		<td class="attributes"><code>
-			 public 
-			INT
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#m_expire">#</a>
-		<code>expire( <span>STRING <var>$key</var></span>, <span>INT <var>$expireinseconds</var></span> )</code>
-
-		<div class="description short">
-			
-<p># Set the Expiration time for a Redis Key in seconds ; returns: 0 if not
-successful or 1 if successful</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p># Set the Expiration time for a Redis Key in seconds ; returns: 0 if not
-successful or 1 if successful</p>
-
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$key</var></dt>
-					<dd></dd>
-					<dt><var>$expireinseconds</var></dt>
-					<dd></dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>INT</code><br>INT<br>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="expireat" id="m_expireat">
-
-		<td class="attributes"><code>
-			 public 
-			INT
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#m_expireat">#</a>
-		<code>expireat( <span>STRING <var>$key</var></span>, <span>INT <var>$expirationtime</var></span> )</code>
-
-		<div class="description short">
-			
-<p># Set the Expiration time for a Redis Key at unixtimestamp ; returns: 0 if
-not successful or 1 if successful</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p># Set the Expiration time for a Redis Key at unixtimestamp ; returns: 0 if
-not successful or 1 if successful</p>
-
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$key</var></dt>
-					<dd></dd>
-					<dt><var>$expirationtime</var></dt>
-					<dd></dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>INT</code><br>INT<br>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="persist" id="m_persist">
-
-		<td class="attributes"><code>
-			 public 
-			INT
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#m_persist">#</a>
-		<code>persist( <span>STRING <var>$key</var></span> )</code>
-
-		<div class="description short">
-			
-<p># Remove the existing expiration timeout on a key ; returns: 0 if not
-successful or 1 if successful</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p># Remove the existing expiration timeout on a key ; returns: 0 if not
-successful or 1 if successful</p>
-
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$key</var></dt>
-					<dd></dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>INT</code><br>INT<br>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="exists" id="m_exists">
-
-		<td class="attributes"><code>
-			 public 
-			INT
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#m_exists">#</a>
-		<code>exists( <span>STRING <var>$key</var></span> )</code>
-
-		<div class="description short">
-			
-<p># Determine if a key exists ; returns 1 if the key exists or 0 if does not
-exists</p>
-
-		</div>
-
-		<div class="description detailed hidden">
-			
-<p># Determine if a key exists ; returns 1 if the key exists or 0 if does not
-exists</p>
-
-
-
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$key</var></dt>
-					<dd></dd>
-				</dl></div>
-
-				<h4>Returns</h4>
-				<div class="list">
-					<code>INT</code><br>INT<br>
-				</div>
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="keys" id="m_keys">
+	<tr data-order="bulkinsert" id="m_bulkinsert">
 
 		<td class="attributes"><code>
 			 public 
@@ -611,28 +451,237 @@ exists</p>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#m_keys">#</a>
-		<code>keys( <span>STRING <var>$pattern</var></span> )</code>
+		<a class="anchor" href="#m_bulkinsert">#</a>
+		<code>bulkinsert( <span>mixed <var>$strCollection</var></span>, <span>mixed <var>$arrMultiDocs</var></span> )</code>
 
 		<div class="description short">
 			
-<p># Get all keys matching a pattern ; return array of all keys matching a
-pattern or null if no key</p>
+<p># add multiple documents to a collection</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p># Get all keys matching a pattern ; return array of all keys matching a
-pattern or null if no key</p>
+<p># add multiple documents to a collection</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$pattern</var></dt>
+					<dt><var>$strCollection</var></dt>
+					<dd></dd>
+					<dt><var>$arrMultiDocs</var></dt>
 					<dd></dd>
 				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="insert" id="m_insert">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_insert">#</a>
+		<code>insert( <span>mixed <var>$strCollection</var></span>, <span>mixed <var>$arrDoc</var></span> )</code>
+
+		<div class="description short">
+			
+<p># add single document to a collection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># add single document to a collection</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$strCollection</var></dt>
+					<dd></dd>
+					<dt><var>$arrDoc</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="update" id="m_update">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_update">#</a>
+		<code>update( <span>mixed <var>$strCollection</var></span>, <span>mixed <var>$arrFilter</var></span>, <span>mixed <var>$strUpdOp</var></span> )</code>
+
+		<div class="description short">
+			
+<p>in a collection that are matching the filter criteria</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>in a collection that are matching the filter criteria</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$strCollection</var></dt>
+					<dd></dd>
+					<dt><var>$arrFilter</var></dt>
+					<dd></dd>
+					<dt><var>$strUpdOp</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="delete" id="m_delete">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_delete">#</a>
+		<code>delete( <span>mixed <var>$strCollection</var></span> )</code>
+
+		<div class="description short">
+			
+<p>from a collection that are matching the filter criteria</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>from a collection that are matching the filter criteria</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$strCollection</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="command" id="m_command">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_command">#</a>
+		<code>command( <span>mixed <var>$arrCmd</var></span> )</code>
+
+		<div class="description short">
+			
+<p># run a command over database like: distinct, groupBy, mapReduce,
+createCollection, dropCollection</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># run a command over database like: distinct, groupBy, mapReduce,
+createCollection, dropCollection</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$arrCmd</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="igcommand" id="m_igcommand">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_igcommand">#</a>
+		<code>igcommand( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
 
 				<h4>Returns</h4>
 				<div class="list">
@@ -664,7 +713,7 @@ pattern or null if no key</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:20</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:26</a>
 	</div>
 </div>
 </div>

@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartFileSysUtils | Smart.Framework Documentation :: 2017-09-05 11:42</title>
+	<title>Class SmartFileSysUtils | Smart.Framework Documentation :: 2018-03-26 15:20</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1618497803"></script>
+	<script src="resources/combined.js?1083735894"></script>
+	<script src="elementlist.js?3400854602"></script>
 </head>
 
 <body>
@@ -42,6 +42,8 @@
 				<li><a href="package-DATA.XML.html">DATA:XML</a>
 						</li>
 				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
 				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
 						</li>
@@ -140,6 +142,23 @@
 	
 <p>Class: SmartFileSysUtils - provides the File System Util functions.</p>
 
+<p>This class enforces the use of RELATIVE PATHS to force using correct path
+access in a web environment application. Relative paths must be relative to the
+web application folder as folder: <code>some-folder/</code> or file:
+<code>some-folder/my-file.txt</code>. Absolute paths are denied by internal
+checks as they are NOT SAFE in a Web Application from the security point of view
+... Also the backward path access like <code>../some-file-or-folder</code> is
+denied from the above exposed reasons. Files and Folders must contain ONLY safe
+characters as: <code>[a-z] [A-Z] [0-9] _ - . @ #</code> ; folders can also
+contain slashes <code>/</code> (as path separators); no spaces are allowed in
+paths !!</p>
+
+<p>NOTICE: To use paths in a safe manner, never add manually a / at the end of a
+path variable, because if it is empty will result in accessing the root of the
+file system (/). To handle this in an easy and safe manner, use the function
+SmartFileSysUtils::add_dir_last_slash($my_dir) so it will add the trailing slash
+ONLY if misses but NOT if the $my_dir is empty to avoid root access !</p>
+
 <pre>
 
 <span
@@ -192,15 +211,9 @@ class="php-comment">//----------------------------------------------------------
 		<b>Package:</b> <a href="package-Filesystem.html">Filesystem</a><br>
 
 				<b>Version:</b>
-				v.170620<br>
+				v.180305<br>
 				<b>Depends:</b>
 				classes: Smart<br>
-				<b>Hints:</b>
-				To use paths in a safe manner, never add manually a / at the end of a path
-variable, because if it is empty will result in accessing the root of the file
-system (/). To handle this in an easy and safe manner, use the function
-SmartFileSysUtils::add_dir_last_slash($my_dir) so it will add the trailing slash
-ONLY if misses but NOT if the $my_dir is empty to avoid root access !<br>
 				<b>Usage:</b>
 				static object: Class::method() - This class provides only STATIC methods<br>
 		<b>Located at</b> lib/framework/lib_filesys.php<br>
@@ -247,7 +260,7 @@ ONLY if misses but NOT if the $my_dir is empty to avoid root access !<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="check_file_or_dir_name" id="_check_file_or_dir_name">
+	<tr data-order="check_if_safe_file_or_dir_name" id="_check_if_safe_file_or_dir_name">
 
 		<td class="attributes"><code>
 			 public static
@@ -257,20 +270,68 @@ ONLY if misses but NOT if the $my_dir is empty to avoid root access !<br>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_check_file_or_dir_name">#</a>
-		<code>check_file_or_dir_name( <span>STRING <var>$y_path</var></span>, <span>YES/NO <var>$y_deny_absolute_path</var> = <span class="php-quote">'yes'</span></span>, <span>YES/NO <var>$y_allow_protected_relative_paths</var> = <span class="php-quote">'no'</span></span> )</code>
+		<a class="anchor" href="#_check_if_safe_file_or_dir_name">#</a>
+		<code>check_if_safe_file_or_dir_name( <span>STRING <var>$y_fname</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Check a Filename or a Dirname if contain valid characters (to avoid security
-injections)</p>
+<p>Check a Name of a File or Directory (not a path containing /) if contain
+valid characters (to avoid filesystem path security injections) Security:
+provides check if unsafe filenames or dirnames are accessed.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Check a Filename or a Dirname if contain valid characters (to avoid security
-injections)</p>
+<p>Check a Name of a File or Directory (not a path containing /) if contain
+valid characters (to avoid filesystem path security injections) Security:
+provides check if unsafe filenames or dirnames are accessed.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_fname</var></dt>
+					<dd>:: The dirname or filename, (not path containing /) to validate</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>0/1</code><br>:: returns 1 if VALID ; 0 if INVALID<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="check_if_safe_path" id="_check_if_safe_path">
+
+		<td class="attributes"><code>
+			 public static
+			0/1
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_check_if_safe_path">#</a>
+		<code>check_if_safe_path( <span>STRING <var>$y_path</var></span>, <span>YES/NO <var>$y_deny_absolute_path</var> = <span class="php-quote">'yes'</span></span>, <span>YES/NO <var>$y_allow_protected_relative_paths</var> = <span class="php-quote">'no'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Check a Path (to a Directory or to a File) if contain valid characters (to
+avoid filesystem path security injections) Security: provides check if unsafe
+paths are accessed.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Check a Path (to a Directory or to a File) if contain valid characters (to
+avoid filesystem path security injections) Security: provides check if unsafe
+paths are accessed.</p>
 
 
 
@@ -348,6 +409,45 @@ double slash.</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="version_stdmtime" id="_version_stdmtime">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_version_stdmtime">#</a>
+		<code>version_stdmtime( )</code>
+
+		<div class="description short">
+			
+<p>Generates a Standard File Version based on Microtime Float to use with
+version add Ex: 1517576620.6128</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generates a Standard File Version based on Microtime Float to use with
+version add Ex: 1517576620.6128</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The version as string to be used with version add<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="version_remove" id="_version_remove">
 
 		<td class="attributes"><code>
@@ -363,20 +463,22 @@ double slash.</p>
 
 		<div class="description short">
 			
-<p>Remove the version from a file name.</p>
+<p>Remove the version from a file name Ex: myfile.@1505240360@.ext will become:
+myfile.ext</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Remove the version from a file name.</p>
+<p>Remove the version from a file name Ex: myfile.@1505240360@.ext will become:
+myfile.ext</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$file</var></dt>
-					<dd>:: The file name to be processed</dd>
+					<dd>:: The file name (with version or not) to be processed</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -405,20 +507,23 @@ double slash.</p>
 
 		<div class="description short">
 			
-<p>Add the version to a file name.</p>
+<p>Add the version to a file name. Ex: myfile.ext will become:
+myfile.@1505240360@.ext</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Add the version to a file name.</p>
+<p>Add the version to a file name. Ex: myfile.ext will become:
+myfile.@1505240360@.ext</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$file</var></dt>
-					<dd>:: The file name to be processed</dd>
+					<dd>:: The file name (with version or not) to be processed ; if version detected
+will be preserved</dd>
 					<dt><var>$version</var></dt>
 					<dd>:: The version to be added</dd>
 				</dl></div>
@@ -708,21 +813,21 @@ work correct both: path_info('c:\\file.php') and path_info('path/file.php'</p>
 
 		<div class="description short">
 			
-<p>Generate a prefixed dir from a base36 ID: [0-9A-Z] length: 10 chars. It does
-include also the ID as final folder. Example: for ID ABCDEFGHIJ09 will return:
-9T/5B/0B/9M/9T5B0B9M8M/ as the generated prefixed path. This have to be used for
-large folder storage structure to avoid limitations on some filesystems (ext3 /
-ntfs) where max sub-dirs per dir is 32k.</p>
+<p>Generate a prefixed dir from a base36 UUID, 10 chars length : [0-9A-Z]. It
+does include also the UUID as final folder segment. Example: for ID ABCDEFGHIJ09
+will return: 9T/5B/0B/9M/9T5B0B9M8M/ as the generated prefixed path. This have
+to be used for large folder storage structure to avoid limitations on some
+filesystems (ext3 / ntfs) where max sub-dirs per dir is 32k.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Generate a prefixed dir from a base36 ID: [0-9A-Z] length: 10 chars. It does
-include also the ID as final folder. Example: for ID ABCDEFGHIJ09 will return:
-9T/5B/0B/9M/9T5B0B9M8M/ as the generated prefixed path. This have to be used for
-large folder storage structure to avoid limitations on some filesystems (ext3 /
-ntfs) where max sub-dirs per dir is 32k.</p>
+<p>Generate a prefixed dir from a base36 UUID, 10 chars length : [0-9A-Z]. It
+does include also the UUID as final folder segment. Example: for ID ABCDEFGHIJ09
+will return: 9T/5B/0B/9M/9T5B0B9M8M/ as the generated prefixed path. This have
+to be used for large folder storage structure to avoid limitations on some
+filesystems (ext3 / ntfs) where max sub-dirs per dir is 32k.</p>
 
 <p>The prefixed path will be grouped by each 2 characters (max sub-folders per
 folder: 36 x 36 = 1296). If a lower length than 10 chars is provided will pad
@@ -735,7 +840,7 @@ warning.</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$y_id</var></dt>
-					<dd>10 chars id</dd>
+					<dd>10 chars id (uuid10)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -764,8 +869,8 @@ warning.</p>
 
 		<div class="description short">
 			
-<p>Generate a prefixed parent dir from a base16 sha1: [0-9a-f] length: 40 chars.
-It does NOT include the ID final folder. Example: for ID
+<p>Generate a prefixed dir from a base16 UUID (sha1), 40 chars length :
+[0-9a-f]. It does NOT include the ID final folder. Example: for ID
 df3a808b2bf20aaab4419c43d9f3a6143bd6b4bb will return:
 d/f3a/808/b2b/f20/aaa/b44/19c/43d/9f3/a61/43b/d6b/ as the generated prefixed
 path. This have to be used for large folder storage structure to avoid
@@ -776,8 +881,8 @@ limitations on some filesystems (ext3 / ntfs) where max sub-dirs per dir is
 
 		<div class="description detailed hidden">
 			
-<p>Generate a prefixed parent dir from a base16 sha1: [0-9a-f] length: 40 chars.
-It does NOT include the ID final folder. Example: for ID
+<p>Generate a prefixed dir from a base16 UUID (sha1), 40 chars length :
+[0-9a-f]. It does NOT include the ID final folder. Example: for ID
 df3a808b2bf20aaab4419c43d9f3a6143bd6b4bb will return:
 d/f3a/808/b2b/f20/aaa/b44/19c/43d/9f3/a61/43b/d6b/ as the generated prefixed
 path. This have to be used for large folder storage structure to avoid
@@ -795,7 +900,7 @@ also drop a warning.</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$y_id</var></dt>
-					<dd>10 chars id</dd>
+					<dd>40 chars id (sha1)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -813,24 +918,26 @@ also drop a warning.</p>
 
 		<td class="attributes"><code>
 			 public static
-			ARRAY
+			MIXED
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_mime_eval">#</a>
-		<code>mime_eval( <span>STRING <var>$yfile</var></span>, <span>mixed <var>$ydisposition</var> = <span class="php-quote">''</span></span> )</code>
+		<code>mime_eval( <span>STRING <var>$yfile</var></span>, <span>ENUM <var>$ydisposition</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
-<p>Evaluate and return the File MimeType and Disposition by File Extension.</p>
+<p>Evaluate and return the File MimeType (and <em>Optional</em> the Disposition
+by File Extension).</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Evaluate and return the File MimeType and Disposition by File Extension.</p>
+<p>Evaluate and return the File MimeType (and <em>Optional</em> the Disposition
+by File Extension).</p>
 
 
 
@@ -839,13 +946,15 @@ also drop a warning.</p>
 					<dt><var>$yfile</var></dt>
 					<dd>the file name (includding file extension) ; Ex: file.ext</dd>
 					<dt><var>$ydisposition</var></dt>
-					<dd></dd>
+					<dd>STRING: '' to leave as is ; attachment | inline to force a type ; BOOLEAN: FALSE
+to get just Mime Type</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>ARRAY</code><br>0 =&gt; mime type ; 1 =&gt; inline/attachment; filename="file.ext" ; 2 =&gt;
-inline/attachment<br>
+					<code>MIXED</code><br>ARRAY [ 0 =&gt; mime type ; 1 =&gt; inline/attachment; filename="file.ext" ; 2
+=&gt; inline/attachment ] ; IF $ydisposition == FALSE will return STRING: mime
+type<br>
 				</div>
 
 
@@ -876,7 +985,7 @@ inline/attachment<br>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:20</a>
 	</div>
 </div>
 </div>

@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartUtils | Smart.Framework Documentation :: 2017-09-05 11:42</title>
+	<title>Class SmartUtils | Smart.Framework Documentation :: 2018-03-26 15:20</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1618497803"></script>
+	<script src="resources/combined.js?1083735894"></script>
+	<script src="elementlist.js?3400854602"></script>
 </head>
 
 <body>
@@ -42,6 +42,8 @@
 				<li><a href="package-DATA.XML.html">DATA:XML</a>
 						</li>
 				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
 				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
 						</li>
@@ -160,7 +162,7 @@ SmartFramework.</p>
 		<b>Package:</b> <a href="package-Base.html">Base</a><br>
 
 				<b>Version:</b>
-				v.170605<br>
+				v.180222<br>
 				<b>Depends:</b>
 				classes: Smart, SmartValidator, SmartHashCrypto, SmartAuth, SmartFileSysUtils,
 SmartFileSystem, SmartHttpClient<br>
@@ -330,35 +332,6 @@ SmartFileSystem, SmartHttpClient<br>
 		<td class="name"><div>
 		<a class="anchor" href="#_datetime_fixed_offset">#</a>
 		<code>datetime_fixed_offset( <span>mixed <var>$y_timezone_offset</var></span>, <span>mixed <var>$ydate</var></span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="data_max_size" id="_data_max_size">
-
-		<td class="attributes"><code>
-			 public static
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_data_max_size">#</a>
-		<code>data_max_size( )</code>
 
 		<div class="description short">
 			
@@ -677,7 +650,7 @@ SmartFileSystem, SmartHttpClient<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_extract_title">#</a>
-		<code>extract_title( <span>mixed <var>$ytxt</var></span>, <span>mixed <var>$y_limit</var> = <span class="php-num">65</span></span> )</code>
+		<code>extract_title( <span>mixed <var>$ytxt</var></span>, <span>mixed <var>$y_limit</var> = <span class="php-num">65</span></span>, <span>mixed <var>$clear_numbers</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			
@@ -706,7 +679,7 @@ SmartFileSystem, SmartHttpClient<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_extract_description">#</a>
-		<code>extract_description( <span>mixed <var>$ytxt</var></span>, <span>mixed <var>$y_limit</var> = <span class="php-num">155</span></span> )</code>
+		<code>extract_description( <span>mixed <var>$ytxt</var></span>, <span>mixed <var>$y_limit</var> = <span class="php-num">155</span></span>, <span>mixed <var>$clear_numbers</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			
@@ -735,7 +708,7 @@ SmartFileSystem, SmartHttpClient<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_extract_keywords">#</a>
-		<code>extract_keywords( <span>mixed <var>$ytxt</var></span>, <span>mixed <var>$y_count</var> = <span class="php-num">97</span></span> )</code>
+		<code>extract_keywords( <span>mixed <var>$ytxt</var></span>, <span>mixed <var>$y_count</var> = <span class="php-num">97</span></span>, <span>mixed <var>$clear_numbers</var> = <span class="php-keyword1">true</span></span> )</code>
 
 		<div class="description short">
 			
@@ -869,6 +842,35 @@ SmartFileSystem, SmartHttpClient<br>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="crypto_blowfish_algo" id="_crypto_blowfish_algo">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_crypto_blowfish_algo">#</a>
+		<code>crypto_blowfish_algo( )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="crypto_blowfish_encrypt" id="_crypto_blowfish_encrypt">
 
 		<td class="attributes"><code>
@@ -910,6 +912,35 @@ SmartFileSystem, SmartHttpClient<br>
 		<td class="name"><div>
 		<a class="anchor" href="#_crypto_blowfish_decrypt">#</a>
 		<code>crypto_blowfish_decrypt( <span>mixed <var>$y_data</var></span>, <span>mixed <var>$y_key</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="crypto_algo" id="_crypto_algo">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_crypto_algo">#</a>
+		<code>crypto_algo( )</code>
 
 		<div class="description short">
 			
@@ -1204,6 +1235,35 @@ don't !)</dd>
 				<div class="list">
 					<code>MIXED</code><br>:: cached contents<br>
 				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="store_uploaded_file" id="_store_uploaded_file">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_store_uploaded_file">#</a>
+		<code>store_uploaded_file( <span>mixed <var>$dest_dir</var></span>, <span>mixed <var>$var_name</var></span>, <span>mixed <var>$var_index</var> = -<span class="php-num">1</span></span>, <span>mixed <var>$allow_rewrite</var> = <span class="php-keyword1">true</span></span>, <span>mixed <var>$max_size</var> = <span class="php-num">0</span></span>, <span>mixed <var>$allowed_extensions</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$new_name</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$enforce_lowercase</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
 
 
 
@@ -1958,7 +2018,7 @@ don't !)</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:20</a>
 	</div>
 </div>
 </div>

@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartMysqliDb | Smart.Framework Documentation :: 2017-09-05 11:42</title>
+	<title>Class SmartMysqliDb | Smart.Framework Documentation :: 2018-03-26 15:20</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1618497803"></script>
+	<script src="resources/combined.js?1083735894"></script>
+	<script src="elementlist.js?3400854602"></script>
 </head>
 
 <body>
@@ -42,6 +42,8 @@
 				<li><a href="package-DATA.XML.html">DATA:XML</a>
 						</li>
 				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
 				<li class="active"><a href="package-Database.MySQL.html">Database:MySQL</a>
 						</li>
@@ -137,8 +139,8 @@
 
 	<div class="description">
 	
-<p>Class: SmartMysqliDb - provides a Static MySQL DB Server Client that can be
-used just with the DEFAULT connection from configs.</p>
+<p>Class: SmartMysqliDb - provides a Static MariaDB / MySQLDB Server Client that
+can be used just with the DEFAULT connection from configs.</p>
 
 <p>This class can be used just with the DEFAULT connection which must be set in
 etc/config.php: $configs['mysqli']. It connects automatically, when needed (the
@@ -148,7 +150,7 @@ connections to MySQL which slower down the app and takes busy the slots).</p>
 <pre>
 
 <span
-class="php-comment">// The connection to the DEFAULT MySQL Server will be done automatically, when needed, using the config parameters</span>
+class="php-comment">// The connection to the DEFAULT MariaDB / MySQLDB Server will be done automatically, when needed, using the config parameters</span>
 <span
 class="php-var">$count</span> = (int) SmartMysqliDb::count_data(<span
 class="php-quote">'SELECT COUNT(`id`) FROM `table` WHERE (`active` = \''</span>.SmartMysqliDb::escape_str(<span
@@ -220,7 +222,7 @@ class="php-num">99</span>]);
 		<b>Package:</b> <a href="package-Database.MySQL.html">Database:MySQL</a><br>
 
 				<b>Version:</b>
-				v.170411<br>
+				v.180307<br>
 				<b>Depends:</b>
 				extensions: PHP MySQLi ; classes: Smart, SmartUnicode, SmartUtils,
 SmartComponents<br>
@@ -248,21 +250,21 @@ SmartComponents<br>
 
 		<div class="description short">
 			
-<p>Pre-connects manually to the Default MySQL Server. This function is OPTIONAL
-as the connection on the DEFAULT MySQL Server will be done automatically when
-needed. Anyway, if there is a need to create an explicit connection to the
-DEFAULT MySQL server earlier, this function can be used by example in App
-Bootstrap.</p>
+<p>Pre-connects manually to the Default MariaDB / MySQLDB Server. This function
+is OPTIONAL as the connection on the DEFAULT MariaDB / MySQLDB Server will be
+done automatically when needed. Anyway, if there is a need to create an explicit
+connection to the DEFAULT MariaDB / MySQLDB Server earlier, this function can be
+used by example in App Bootstrap.</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Pre-connects manually to the Default MySQL Server. This function is OPTIONAL
-as the connection on the DEFAULT MySQL Server will be done automatically when
-needed. Anyway, if there is a need to create an explicit connection to the
-DEFAULT MySQL server earlier, this function can be used by example in App
-Bootstrap.</p>
+<p>Pre-connects manually to the Default MariaDB / MySQLDB Server. This function
+is OPTIONAL as the connection on the DEFAULT MariaDB / MySQLDB Server will be
+done automatically when needed. Anyway, if there is a need to create an explicit
+connection to the DEFAULT MariaDB / MySQLDB Server earlier, this function can be
+used by example in App Bootstrap.</p>
 
 
 
@@ -352,7 +354,7 @@ but just will just escape it to be safe.</p>
 					<dt><var>$y_table</var></dt>
 					<dd>:: The Table Name</dd>
 					<dt><var>$y_connection</var></dt>
-					<dd>:: The connection to MySQL server</dd>
+					<dd>:: The connection to MariaDB / MySQLDB Server</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -669,7 +671,7 @@ $arr[] = 'other-value', ...</dd>
 					<dt><var>$mode</var></dt>
 					<dd>:: mode: 'insert' | 'update' | 'in-select'</dd>
 					<dt><var>$y_connection</var></dt>
-					<dd>:: the connection to mysql server</dd>
+					<dd>:: the connection to MariaDB / MySQLDB Server</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -721,7 +723,7 @@ are unpredictable if mixing several statements at once !</p>
 					<dt><var>$replacements_arr</var></dt>
 					<dd>$arrdata :: The non-associative array as of: $arr=array('a');</dd>
 					<dt><var>$y_connection</var></dt>
-					<dd>:: the connection to mysql server</dd>
+					<dd>:: the connection to MariaDB / MySQLDB Server</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -769,7 +771,7 @@ are unpredictable if mixing several statements at once !</p>
 					<dt><var>$y_table_name</var></dt>
 					<dd>:: the table name</dd>
 					<dt><var>$y_connection</var></dt>
-					<dd>:: the connection to mysql server</dd>
+					<dd>:: the connection to MariaDB / MySQLDB Server</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -834,7 +836,7 @@ are unpredictable if mixing several statements at once !</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:20</a>
 	</div>
 </div>
 </div>

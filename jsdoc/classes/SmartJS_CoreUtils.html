@@ -1906,7 +1906,7 @@ This is compatible just with the PHP preg_match_all()</p>
     </div>
 
     <div class="description">
-        <p>Render Simple Marker Template + Comments (only marker replacements with escaping or processing syntax ; have support for comments and special replacements: SPACE, TAB, R, N ; no support for IF / LOOP / INCLUDE syntax since it can be implemented at the js level)
+        <p>Render Simple Marker Template + Comments (only marker replacements with escaping or processing syntax and support for comments and special replacements: SPACE, TAB, R, N ; no support for IF / LOOP / INCLUDE syntax since the js regex is too simplistic and this can be implemented using real js code)
 This is compatible just with the REPLACE MARKER of Smart.Framework PHP server-side Markers Templating for substitutions on client-side, except the extended syntax as IF/LOOP/INCLUDE.
 To be used together with the server-side marker templating, to avoid the server-side markers to be replaced as (####+/-MARKER+/-####) will need the template to be escape_url+escape_js and 3rd param: urlescaped = TRUE</p>
 

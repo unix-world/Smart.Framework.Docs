@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartAbstractPersistentCache | Smart.Framework Documentation :: 2017-09-05 11:42</title>
+	<title>Class SmartAbstractPersistentCache | Smart.Framework Documentation :: 2018-03-26 15:20</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1618497803"></script>
+	<script src="resources/combined.js?1083735894"></script>
+	<script src="elementlist.js?3400854602"></script>
 </head>
 
 <body>
@@ -42,6 +42,8 @@
 				<li><a href="package-DATA.XML.html">DATA:XML</a>
 						</li>
 				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
 				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
 						</li>
@@ -167,7 +169,7 @@ static::)</p>
 		<b>Package:</b> <a href="package-Caching.html">Caching</a><br>
 
 				<b>Version:</b>
-				v.170223<br>
+				v.170927<br>
 				<b>Depends:</b>
 				-<br>
 		<b>Located at</b> lib/framework/lib_caching.php<br>
@@ -691,8 +693,7 @@ Persistent Cache To reverse the compressing + encoding use varUncompress()</p>
 
 <p>Use this function to store any type of variables: numbers, strings or arrays
 in a safe encoded + compressed format. By default the variable will be: encoded
-(serialized as Json), compressed (gzcompress/6/deflate) and finally
-B64-Encoded.</p>
+(serialized as Json), compressed (gzencode/6/gzip) and finally B64-Encoded.</p>
 
 
 
@@ -740,8 +741,8 @@ in Persistent Cache</p>
 
 <p>Use this function to retrieve any type of variables: numbers, strings or
 arrays that were previous safe encoded + compressed. By default the variable
-will be: B64-Decoded, uncompressed (gzcompress/inflate) and finally decoded
-(unserialized from Json).</p>
+will be: B64-Decoded, uncompressed (gzdecode) and finally decoded (unserialized
+from Json).</p>
 
 
 
@@ -784,7 +785,7 @@ will be: B64-Decoded, uncompressed (gzcompress/inflate) and finally decoded
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:20</a>
 	</div>
 </div>
 </div>

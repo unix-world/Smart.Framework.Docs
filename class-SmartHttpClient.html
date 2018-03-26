@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartHttpClient | Smart.Framework Documentation :: 2017-09-05 11:42</title>
+	<title>Class SmartHttpClient | Smart.Framework Documentation :: 2018-03-26 15:20</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1618497803"></script>
+	<script src="resources/combined.js?1083735894"></script>
+	<script src="elementlist.js?3400854602"></script>
 </head>
 
 <body>
@@ -42,6 +42,8 @@
 				<li><a href="package-DATA.XML.html">DATA:XML</a>
 						</li>
 				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
 				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
 						</li>
@@ -139,7 +141,11 @@
 	
 <p>Class: SmartHttpClient - provides a HTTP / HTTPS Client (browser).</p>
 
-<p>To work with TLS / SSL (requires the PHP OpenSSL Module).</p>
+<p>To work with TLS / SSL (requires the PHP OpenSSL Module). Implemented
+Methods: Standard (GET / POST / HEAD) ; Extended (PUT / DELETE / MKCOL / OPTIONS
+/ MOVE / COPY / PROPFIND). The Standard Methofs will prefere HTTP 1.0 (which
+provide faster access) The Extended Methods will prefere HTTP 1.1 instead of 1.0
+because of some additional headers that may validate for error checks ...</p>
 
 	</div>
 
@@ -158,7 +164,7 @@
 		<b>Package:</b> <a href="package-Network.HTTP.html">Network:HTTP</a><br>
 
 				<b>Version:</b>
-				v.170613<br>
+				v.180309<br>
 				<b>Depends:</b>
 				extensions: PHP OpenSSL (optional, just for HTTPS) ; classes: Smart<br>
 				<b>Usage:</b>
@@ -182,7 +188,7 @@ methods<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code>__construct( <span>mixed <var>$y_protocol</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_no_content_stop_if_unauth</var> = <span class="php-keyword1">true</span></span> )</code>
+		<code>__construct( <span>mixed <var>$http_protocol</var> = <span class="php-quote">'1.0'</span></span> )</code>
 
 		<div class="description short">
 			
@@ -276,7 +282,7 @@ methods<br>
 	<tr data-order="useragent" id="$useragent">
 		<td class="attributes"><code>
 			public  
-			string
+			mixed
 		</code></td>
 
 		<td class="name">
@@ -290,12 +296,12 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$useragent" class="anchor">#</a><code><span class="php-quote">'SmartFramework :: PHP/Robot'</span></code></div></td>
+		<td class="value"><div><a href="#$useragent" class="anchor">#</a><code></code></div></td>
 	</tr>
 	<tr data-order="connect_timeout" id="$connect_timeout">
 		<td class="attributes"><code>
 			public  
-			integer
+			mixed
 		</code></td>
 
 		<td class="name">
@@ -309,26 +315,7 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$connect_timeout" class="anchor">#</a><code><span class="php-num">30</span></code></div></td>
-	</tr>
-	<tr data-order="debug" id="$debug">
-		<td class="attributes"><code>
-			public  
-			integer
-		</code></td>
-
-		<td class="name">
-<var>$debug</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$debug" class="anchor">#</a><code><span class="php-num">0</span></code></div></td>
+		<td class="value"><div><a href="#$connect_timeout" class="anchor">#</a><code></code></div></td>
 	</tr>
 	<tr data-order="rawheaders" id="$rawheaders">
 		<td class="attributes"><code>
@@ -406,14 +393,14 @@ methods<br>
 		</td>
 		<td class="value"><div><a href="#$poststring" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="jsonrequest" id="$jsonrequest">
+	<tr data-order="putbodymode" id="$putbodymode">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$jsonrequest</var>
+<var>$putbodymode</var>
 			<div class="description short">
 				
 			</div>
@@ -423,16 +410,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$jsonrequest" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$putbodymode" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="xmlrequest" id="$xmlrequest">
+	<tr data-order="putbodyres" id="$putbodyres">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$xmlrequest</var>
+<var>$putbodyres</var>
 			<div class="description short">
 				
 			</div>
@@ -442,7 +429,64 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$xmlrequest" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$putbodyres" class="anchor">#</a><code></code></div></td>
+	</tr>
+	<tr data-order="skipcontentif401" id="$skipcontentif401">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$skipcontentif401</var>
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#$skipcontentif401" class="anchor">#</a><code></code></div></td>
+	</tr>
+	<tr data-order="skip100continue" id="$skip100continue">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$skip100continue</var>
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#$skip100continue" class="anchor">#</a><code></code></div></td>
+	</tr>
+	<tr data-order="debug" id="$debug">
+		<td class="attributes"><code>
+			public  
+			mixed
+		</code></td>
+
+		<td class="name">
+<var>$debug</var>
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+			</div>
+		</td>
+		<td class="value"><div><a href="#$debug" class="anchor">#</a><code></code></div></td>
 	</tr>
 	</table>
 
@@ -454,7 +498,7 @@ methods<br>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:20</a>
 	</div>
 </div>
 </div>

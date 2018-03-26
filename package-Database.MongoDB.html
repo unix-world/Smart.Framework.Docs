@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartTwigTemplating | Smart.Framework Documentation :: 2018-03-26 15:20</title>
+	<title>Package Database:MongoDB | Smart.Framework Documentation :: 2018-03-26 15:20</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?1083735894"></script>
 	<script src="elementlist.js?3400854602"></script>
@@ -43,7 +43,7 @@
 						</li>
 				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
 						</li>
-				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
+				<li class="active"><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
 				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
 						</li>
@@ -79,7 +79,7 @@
 						</li>
 				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
 						</li>
-				<li class="active"><a href="package-Templating.Engines.html">Templating:Engines</a>
+				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
 			</ul>
 		</div>
@@ -90,8 +90,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-SmartMarkersTemplating.html">SmartMarkersTemplating</a></li>
-				<li class="active"><a href="class-SmartTwigTemplating.html">SmartTwigTemplating</a></li>
+				<li><a href="class-SmartMongoDb.html">SmartMongoDb</a></li>
 			</ul>
 
 
@@ -118,10 +117,9 @@
 			<li>
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
-			<li>
-				<a href="package-Templating.Engines.html" title="Summary of Templating:Engines"><span>Package</span></a>
-			</li>
 			<li class="active">
+<span>Package</span>			</li>
+			<li>
 <span>Class</span>			</li>
 		</ul>
 		<ul>
@@ -133,134 +131,18 @@
 		</ul>
 	</div>
 
-<div id="content" class="class">
-	<h1>Class SmartTwigTemplating</h1>
-
-
-	<div class="description">
-	
-<p>Provides an easy to use connector for Twig Templating inside the
-Smart.Framework.</p>
-
-<pre>
-
-<span
-class="php-comment">// Sample: use this code in a controller of Smart.Framework (after you install the Smart.Framework.Modules)</span>
-<span
-class="php-var">$this</span>-&gt;PageViewSetVar(
-    <span
-class="php-quote">'main'</span>,
-    SmartTwigTemplating::render_file_template(
-        <span
-class="php-quote">'modules/my-module-name/views/my-view.twig.htm'</span>,
-        [
-            <span
-class="php-quote">'someVar'</span> =&gt; <span
-class="php-quote">'Hello World'</span>,
-            <span
-class="php-quote">'otherVar'</span> =&gt; <span
-class="php-keyword2">date</span>(<span
-class="php-quote">'Y-m-d H:i:s'</span>)
-        ]
-    )
-);
-
-</pre>
-
-	</div>
+<div id="content" class="package">
+	<h1>Package Database:MongoDB</h1>
 
 
 
-
-
-
-
-
-
-	<div class="info">
-		<b>Final</b><br>
-		
-		
-		<b>Package:</b> <a href="package-Templating.Engines.html">Templating:Engines</a><br>
-
-				<b>Version:</b>
-				v.171005<br>
-				<b>Depends:</b>
-				classes: Twig, \SmartModExtLib\TplTwig\Templating<br>
-				<b>Usage:</b>
-				static object: Class::method() - This class provides only STATIC methods<br>
-		<b>Located at</b> modules/smart-extra-libs/lib_templating_twig.php<br>
-	</div>
-
-
-
-	<table class="summary methods" id="methods">
-	<caption>Methods summary</caption>
-	<tr data-order="render_file_template" id="_render_file_template">
-
-		<td class="attributes"><code>
-			 public static
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_render_file_template">#</a>
-		<code>render_file_template( <span>mixed <var>$file</var></span>, <span>mixed <var>$arr_vars</var> = <span class="php-keyword1">array</span>()</span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	</table>
-
-
-
-
-
-
-
-
-
-
-
-
-	<table class="summary properties" id="properties">
-	<caption>Properties summary</caption>
-	<tr data-order="twig" id="$twig">
-		<td class="attributes"><code>
-			public static 
-			mixed
-		</code></td>
-
-		<td class="name">
-<var>$twig</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$twig" class="anchor">#</a><code><span class="php-keyword1">null</span></code></div></td>
-	</tr>
-	</table>
-
+<table class="summary" id="classes">
+<caption>Classes summary</caption>
+<tr>
+	<td class="name"><a href="class-SmartMongoDb.html">SmartMongoDb</a></td>
+	<td>Class Smart MongoDB Client (for PHP-MongoDB v.1.0.1 or later)</td>
+</tr>
+</table>
 
 
 

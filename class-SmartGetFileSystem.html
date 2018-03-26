@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartGetFileSystem | Smart.Framework Documentation :: 2017-09-05 11:42</title>
+	<title>Class SmartGetFileSystem | Smart.Framework Documentation :: 2018-03-26 15:20</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1618497803"></script>
+	<script src="resources/combined.js?1083735894"></script>
+	<script src="elementlist.js?3400854602"></script>
 </head>
 
 <body>
@@ -42,6 +42,8 @@
 				<li><a href="package-DATA.XML.html">DATA:XML</a>
 						</li>
 				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
 				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
 						</li>
@@ -140,6 +142,17 @@
 	
 <p>Class: SmartGetFileSystem - provides the File System Get functions.</p>
 
+<p>This class enforces the use of RELATIVE PATHS to force using correct path
+access in a web environment application. Relative paths must be relative to the
+web application folder as folder: <code>some-folder/</code> or file:
+<code>some-folder/my-file.txt</code>. Absolute paths are denied by internal
+checks as they are NOT SAFE in a Web Application from the security point of view
+... Also the backward path access like <code>../some-file-or-folder</code> is
+denied from the above exposed reasons. Files and Folders must contain ONLY safe
+characters as: <code>[a-z] [A-Z] [0-9] _ - . @ #</code> ; folders can also
+contain slashes <code>/</code> (as path separators); no spaces are allowed in
+paths !!</p>
+
 <pre>
 <span class="php-comment">// Usage example:</span>
 <span
@@ -170,9 +183,13 @@ class="php-keyword2">print_r</span>(<span class="php-var">$data</span>);
 		<b>Package:</b> <a href="package-Filesystem.html">Filesystem</a><br>
 
 				<b>Version:</b>
-				v.170601<br>
+				v.170921<br>
 				<b>Depends:</b>
 				classes: Smart<br>
+				<b>Hints:</b>
+				This class can handle thread concurency to the filesystem in a safe way by using
+the LOCK_EX (lock exclusive) feature on each file written / appended thus making
+also reads to be safe<br>
 				<b>Usage:</b>
 				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
 methods<br>
@@ -292,7 +309,7 @@ methods<br>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:20</a>
 	</div>
 </div>
 </div>

@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartSQliteDb | Smart.Framework Documentation :: 2017-09-05 11:42</title>
+	<title>Class SmartSQliteDb | Smart.Framework Documentation :: 2018-03-26 15:20</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1618497803"></script>
+	<script src="resources/combined.js?1083735894"></script>
+	<script src="elementlist.js?3400854602"></script>
 </head>
 
 <body>
@@ -42,6 +42,8 @@
 				<li><a href="package-DATA.XML.html">DATA:XML</a>
 						</li>
 				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
 				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
 						</li>
@@ -223,7 +225,7 @@ class="php-comment">// optional, but safe</span>
 		<b>Package:</b> <a href="package-Database.SQLite.html">Database:SQLite</a><br>
 
 				<b>Version:</b>
-				v.170411<br>
+				v.180307<br>
 				<b>Depends:</b>
 				extensions: PHP SQLite (3) ; classes: Smart, SmartUnicode, SmartUtils,
 SmartFileSystem<br>
@@ -527,7 +529,7 @@ may take any number of arguments</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_count_data">#</a>
-		<code>count_data( <span>STRING <var>$query</var></span>, <span>STRING <var>$params_or_title</var> = <span class="php-quote">''</span></span> )</code>
+		<code>count_data( <span>STRING <var>$query</var></span>, <span>STRING <var>$qparams</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$qtitle</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -547,9 +549,10 @@ queries: SELECT COUNT().</p>
 				<div class="list"><dl>
 					<dt><var>$query</var></dt>
 					<dd>:: the SQLite Query</dd>
-					<dt><var>$params_or_title</var></dt>
-					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters (?, ?, ... ?) or query title for easy
-debugging</dd>
+					<dt><var>$qparams</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters (?, ?, ... ?)</dd>
+					<dt><var>$qtitle</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; query title for easy debugging</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -574,7 +577,7 @@ debugging</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_read_data">#</a>
-		<code>read_data( <span>STRING <var>$query</var></span>, <span>STRING <var>$params_or_title</var> = <span class="php-quote">''</span></span> )</code>
+		<code>read_data( <span>STRING <var>$query</var></span>, <span>STRING <var>$qparams</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$qtitle</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -594,9 +597,10 @@ is intended to be used for read type queries: SELECT.</p>
 				<div class="list"><dl>
 					<dt><var>$query</var></dt>
 					<dd>:: the SQLite Query</dd>
-					<dt><var>$params_or_title</var></dt>
-					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters (?, ?, ... ?) or query title for easy
-debugging</dd>
+					<dt><var>$qparams</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters (?, ?, ... ?)</dd>
+					<dt><var>$qtitle</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; query title for easy debugging</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -623,7 +627,7 @@ debugging</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_read_adata">#</a>
-		<code>read_adata( <span>STRING <var>$query</var></span>, <span>STRING <var>$params_or_title</var> = <span class="php-quote">''</span></span> )</code>
+		<code>read_adata( <span>STRING <var>$query</var></span>, <span>STRING <var>$qparams</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$qtitle</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -643,9 +647,10 @@ intended to be used for read type queries: SELECT.</p>
 				<div class="list"><dl>
 					<dt><var>$query</var></dt>
 					<dd>:: the SQLite Query</dd>
-					<dt><var>$params_or_title</var></dt>
-					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters (?, ?, ... ?) or query title for easy
-debugging</dd>
+					<dt><var>$qparams</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters (?, ?, ... ?)</dd>
+					<dt><var>$qtitle</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; query title for easy debugging</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -672,7 +677,7 @@ array('column1', 'column2', ... 'column-n'))<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_read_asdata">#</a>
-		<code>read_asdata( <span>STRING <var>$query</var></span>, <span>STRING <var>$params_or_title</var> = <span class="php-quote">''</span></span> )</code>
+		<code>read_asdata( <span>STRING <var>$query</var></span>, <span>STRING <var>$qparams</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$qtitle</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -700,9 +705,10 @@ be used for read type queries: SELECT.</p>
 				<div class="list"><dl>
 					<dt><var>$query</var></dt>
 					<dd>:: the SQLite Query</dd>
-					<dt><var>$params_or_title</var></dt>
-					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters (?, ?, ... ?) or query title for easy
-debugging</dd>
+					<dt><var>$qparams</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters (?, ?, ... ?)</dd>
+					<dt><var>$qtitle</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; query title for easy debugging</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -734,7 +740,7 @@ function.<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_write_data">#</a>
-		<code>write_data( <span>STRING <var>$query</var></span>, <span>STRING <var>$params_or_title</var> = <span class="php-quote">''</span></span> )</code>
+		<code>write_data( <span>STRING <var>$query</var></span>, <span>STRING <var>$qparams</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$qtitle</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -756,9 +762,10 @@ SCHEMAS ; CALLING STORED PROCEDURES ...</p>
 				<div class="list"><dl>
 					<dt><var>$query</var></dt>
 					<dd>:: the SQLite Query</dd>
-					<dt><var>$params_or_title</var></dt>
-					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters (?, ?, ... ?) or query title for easy
-debugging</dd>
+					<dt><var>$qparams</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; array of parameters (?, ?, ... ?)</dd>
+					<dt><var>$qtitle</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; query title for easy debugging</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -944,7 +951,7 @@ are unpredictable if mixing several statements at once !</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:20</a>
 	</div>
 </div>
 </div>

@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartImageGdProcess | Smart.Framework Documentation :: 2017-09-05 11:42</title>
+	<title>Class SmartImageGdProcess | Smart.Framework Documentation :: 2018-03-26 15:20</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1618497803"></script>
+	<script src="resources/combined.js?1083735894"></script>
+	<script src="elementlist.js?3400854602"></script>
 </head>
 
 <body>
@@ -42,6 +42,8 @@
 				<li><a href="package-DATA.XML.html">DATA:XML</a>
 						</li>
 				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
 				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
 						</li>
@@ -243,7 +245,7 @@ class="php-keyword1">echo</span> <span class="php-var">$png</span>;
 		<b>Package:</b> <a href="package-Media.ImageProcessing.html">Media:ImageProcessing</a><br>
 
 				<b>Version:</b>
-				v.170419<br>
+				v.180301.r3<br>
 				<b>Depends:</b>
 				PHP GD extension with support for: imagecreatetruecolor / imagecreatefromstring
 / getimagesizefromstring<br>
@@ -647,33 +649,34 @@ for PNG (using array of filters depends on what filters are available in LibPNG)
 
 		<td class="name"><div>
 		<a class="anchor" href="#_resizeImage">#</a>
-		<code>resizeImage( <span>INTEGER+ <var>$resize_width</var></span>, <span>INTEGER+ <var>$resize_height</var></span>, <span>BOOLEAN <var>$crop</var> = <span class="php-keyword1">false</span></span>, <span>ENUM <var>$mode</var> = <span class="php-num">0</span></span>, <span>ARRAY <var>$bg_color_rgb</var> = [<span class="php-num">0</span>, <span class="php-num">0</span>, <span class="php-num">0</span>]</span> )</code>
+		<code>resizeImage( <span>INTEGER+ <var>$resize_width</var></span>, <span>INTEGER+ <var>$resize_height</var></span>, <span>BOOLEAN <var>$crop</var> = <span class="php-num">0</span></span>, <span>ENUM <var>$mode</var> = <span class="php-num">0</span></span>, <span>ARRAY <var>$bg_color_rgb</var> = [<span class="php-num">0</span>, <span class="php-num">0</span>, <span class="php-num">0</span>]</span> )</code>
 
 		<div class="description short">
 			
-<p>Resize (Resample) an image: GIF / PNG / JPG</p>
+<p>Resize (Resample) +/- Crop an image: GIF / PNG / JPG</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Resize (Resample) an image: GIF / PNG / JPG</p>
+<p>Resize (Resample) +/- Crop an image: GIF / PNG / JPG</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$resize_width</var></dt>
-					<dd>:: The width of the resized image: 16..1920 ; can be zero just for $mode=1 (but
-only when $resize_height &amp;gt; 0) ; if zero, will become relative and calculated
-by aspect ratio based on resize height</dd>
+					<dd>:: The width of the resized image: 16..1920 ; can be zero only when
+$resize_height &amp;gt; 0 ; if zero, will become relative and calculated by aspect
+ratio based on resize height</dd>
 					<dt><var>$resize_height</var></dt>
-					<dd>:: The height of the resized image: 16..1920 ; can be zero just for $mode=1 (but
-only when $resize_width &amp;gt; 0) ; if zero, will become relative and calculated
-by aspect ratio based on resize width</dd>
+					<dd>:: The height of the resized image: 16..1920 ; can be zero only when
+$resize_width &amp;gt; 0 ; if zero, will become relative and calculated by aspect
+ratio based on resize width</dd>
 					<dt><var>$crop</var></dt>
-					<dd>:: &lt;em&gt;Optional&lt;/em&gt; ; Default is FALSE ; If TRUE will crop the resampling
-(aspect fill) ; If FALSE will do a normal resize (aspect fit)</dd>
+					<dd>:: &lt;em&gt;Optional&lt;/em&gt; ; Default is 0 ; If 0 will do a normal resize (aspect fit)
+; If &amp;gt; 0 will crop the resampled image (aspect fill) as 1=top-left ;
+2=top-center ; 3=center-center</dd>
 					<dt><var>$mode</var></dt>
 					<dd>:: &lt;em&gt;Optional&lt;/em&gt; 0 | 1 | 2 ; Default is 0 = absolute resample ; 1 = absolute
 resample + preserve dimensions if lower ; 2 = preserve if lower + relative
@@ -897,7 +900,7 @@ lib/core/plugins/fonts/source-sans-pro-regular.ttf</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:20</a>
 	</div>
 </div>
 </div>

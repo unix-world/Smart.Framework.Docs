@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartAbstractAppController | Smart.Framework Documentation :: 2017-09-05 11:42</title>
+	<title>Class SmartAbstractAppController | Smart.Framework Documentation :: 2018-03-26 15:20</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?3879458977"></script>
-	<script src="elementlist.js?1618497803"></script>
+	<script src="resources/combined.js?1083735894"></script>
+	<script src="elementlist.js?3400854602"></script>
 </head>
 
 <body>
@@ -42,6 +42,8 @@
 				<li><a href="package-DATA.XML.html">DATA:XML</a>
 						</li>
 				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
 				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
 						</li>
@@ -318,7 +320,7 @@ class="php-comment">//END CLASS</span>
 		<b>Package:</b> <a href="package-Application.html">Application</a><br>
 
 				<b>Version:</b>
-				v.170905<br>
+				v.180309<br>
 				<b>Depends:</b>
 				-<br>
 				<b>Hints:</b>
@@ -606,12 +608,22 @@ framework version, framework release and modules version) module-area :: ex:
 index / admin module-name :: ex: mod-samples module-path :: ex:
 modules/mod-samples/ module-view-path :: ex: modules/mod-samples/views/
 module-model-path :: ex: modules/mod-samples/models/ module-lib-path :: ex:
-modules/mod-samples/libs/ controller :: ex: samples.test url-script :: ex:
-index.php / admin.php url-path :: ex: /sites/smart-framework/ url-addr :: ex:
-http(s)://127.0.0.1/sites/smart-framework/ url-page :: ex: samples.test | test
-(if samples is the default module) ; this is returning the URL page variable as
-is in the URL (it can be the same as 'controller' or if rewrite is used inside
-framework can vary</dd>
+modules/mod-samples/libs/ module :: ex: samples (1st part from controller,
+before .) action :: ex: test (2nd part from controller, after .) controller ::
+ex: samples.test url-proto :: ex: http | https (the current server protocol)
+url-proto-addr :: ex: http:// | https:// (the current server protocol address)
+url-domain :: ex: 127.0.0.1|localhost (the curent server domain, or IP) url-port
+:: ex: 80 | 443 | 8080 ... (the current server port) url-port-addr :: ex: '' |
+'' | ':8080' ... (the current server port address ; empty for port 80 and 443 ;
+for the rest of ports will be :portnumber) url-script :: ex: index.php /
+admin.php url-path :: ex: /sites/smart-framework/ url-addr :: ex:
+http(s)://127.0.0.1|localhost/sites/smart-framework/ url-page :: ex:
+samples.test | test (if samples is the default module) ; this is returning the
+URL page variable as is in the URL (it can be the same as 'controller' or if
+rewrite is used inside framework can vary url-query :: ex: ?page=test&amp;amp;ofs=10
+url-uri :: ex:
+/sites/smart-framework/index|admin.php{/some/path/}?page=test&amp;amp;ofs=10
+uri-path :: ex: {/some/path/}</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -752,6 +764,137 @@ enforce a type for the variable as: ['enum', 'list', 'of', 'allowed', 'values'],
 				<h4>Returns</h4>
 				<div class="list">
 					<code>MIXED</code><br>:: The value of the choosen Request (GET/POST) variable<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="CookieVarGet" id="_CookieVarGet">
+
+		<td class="attributes"><code>
+			final public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_CookieVarGet">#</a>
+		<code>CookieVarGet( <span>STRING <var>$key</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Get a Cookie Variable (COOKIES) in a controller</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get a Cookie Variable (COOKIES) in a controller</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$key</var></dt>
+					<dd>:: The name (key) of the COOKIES variable.</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>:: The value of the choosen Cookie variable<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewGetData" id="_PageViewGetData">
+
+		<td class="attributes"><code>
+			final public 
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewGetData">#</a>
+		<code>PageViewGetData( )</code>
+
+		<div class="description short">
+			
+<p>Get all the current controller PageView Data: (Raw) Headers, Cfgs and Vars
+The general purpose of this function is to get all Page Data at once to export
+into persistent cache.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get all the current controller PageView Data: (Raw) Headers, Cfgs and Vars
+The general purpose of this function is to get all Page Data at once to export
+into persistent cache.</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>:: an associative array as: [ heads =&gt; PageViewGetRawHeaders() ; cfgs =&gt;
+PageViewGetCfgs() ; vars =&gt; PageViewGetVars() ]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewSetData" id="_PageViewSetData">
+
+		<td class="attributes"><code>
+			final public 
+			BOOL
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewSetData">#</a>
+		<code>PageViewSetData( <span>ARRAY <var>$data</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Set all the current controller PageView Data: (Raw) Headers, Cfgs and Vars
+The general purpose of this function is to set all Page Data at once when
+imported from persistent cache.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set all the current controller PageView Data: (Raw) Headers, Cfgs and Vars
+The general purpose of this function is to set all Page Data at once when
+imported from persistent cache.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$data</var></dt>
+					<dd>:: an associative array as: [ heads =&amp;gt; PageViewGetRawHeaders() ; cfgs =&amp;gt;
+PageViewGetCfgs() ; vars =&amp;gt; PageViewGetVars() ]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if OK, FALSE if not<br>
 				</div>
 
 
@@ -1099,6 +1242,45 @@ Settings (Cfgs)</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="PageViewGetStatusCode" id="_PageViewGetStatusCode">
+
+		<td class="attributes"><code>
+			final public 
+			ENUM
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewGetStatusCode">#</a>
+		<code>PageViewGetStatusCode( )</code>
+
+		<div class="description short">
+			
+<p>Get STATUS Code for a controller page</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get STATUS Code for a controller page</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ENUM</code><br>$code :: the HTTP Status Code: 2xx, 3xx, 4xx, 5xx, ... (consult middleware
+documentation to see what is supported) ; if an invalid error status code is
+used then 200 will be used instead<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="PageViewSetOkStatus" id="_PageViewSetOkStatus">
 
 		<td class="attributes"><code>
@@ -1127,9 +1309,9 @@ Settings (Cfgs)</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$code</var></dt>
-					<dd>:: the HTTP Error Status Code: 301, 302, ... (consult middleware documentation
-to see what is supported) ; if an invalid error status code is used then 200
-will be used instead</dd>
+					<dd>:: the HTTP OK Status Code: 200, 202, 203, 208, ... (consult middleware
+documentation to see what is supported) ; if an invalid error status code is
+used then 200 will be used instead</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -1154,7 +1336,7 @@ will be used instead</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_PageViewSetErrorStatus">#</a>
-		<code>PageViewSetErrorStatus( <span>ENUM <var>$code</var></span>, <span>STRING <var>$message</var> = <span class="php-quote">''</span></span>, <span>BOOLEAN <var>$logtype</var> = <span class="php-quote">''</span></span> )</code>
+		<code>PageViewSetErrorStatus( <span>ENUM <var>$code</var></span>, <span>STRING/ARRAY <var>$msg</var> = <span class="php-quote">''</span></span>, <span>BOOLEAN <var>$logtype</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1178,8 +1360,9 @@ the 'Run()' main function</p>
 					<dd>:: the HTTP Error Status Code: 400, 403, 404, 500, 503, ... (consult middleware
 documentation to see what is supported) ; if an invalid error status code is
 used then 500 will be used instead</dd>
-					<dt><var>$message</var></dt>
-					<dd>:: The detailed message that will be displayed public near the status code</dd>
+					<dt><var>$msg</var></dt>
+					<dd>:: The detailed message that will be displayed public near the status code ; can
+be string or array [ 0 =&amp;gt; message ; 1 =&amp;gt; htmlmessage ]</dd>
 					<dt><var>$logtype</var></dt>
 					<dd>:: &lt;em&gt;Optional&lt;/em&gt; ; Default is '' ; available values: '' | 'WARN' | 'NOTICE'</dd>
 				</dl></div>
@@ -1358,6 +1541,52 @@ into PageView Vars</p>
 				<div class="list"><dl>
 					<dt><var>$param</var></dt>
 					<dd>:: the variable to be set</dd>
+					<dt><var>$value</var></dt>
+					<dd>:: the value</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOL</code><br>:: TRUE if OK, FALSE if not<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="PageViewPrependVar" id="_PageViewPrependVar">
+
+		<td class="attributes"><code>
+			final public 
+			BOOL
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_PageViewPrependVar">#</a>
+		<code>PageViewPrependVar( <span>STRING <var>$param</var></span>, <span>STRING <var>$value</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Prepend a single value to a variable for the current controller into PageView
+Vars</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Prepend a single value to a variable for the current controller into PageView
+Vars</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$param</var></dt>
+					<dd>:: the variable to prepend value to</dd>
 					<dt><var>$value</var></dt>
 					<dd>:: the value</dd>
 				</dl></div>
@@ -1838,7 +2067,7 @@ wrong and unexpected results !!!</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2017-09-05 11:42</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:20</a>
 	</div>
 </div>
 </div>
