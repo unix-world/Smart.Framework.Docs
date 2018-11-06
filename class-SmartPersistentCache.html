@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartPersistentCache | Smart.Framework Documentation :: 2018-03-26 15:20</title>
+	<title>Class SmartPersistentCache | Smart.Framework Documentation :: 2018-11-06 14:25</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?1083735894"></script>
-	<script src="elementlist.js?3400854602"></script>
+	<script src="resources/combined.js?4174473549"></script>
+	<script src="elementlist.js?2400639511"></script>
 </head>
 
 <body>
@@ -17,31 +17,19 @@
 		<div id="groups">
 			<h3>Packages</h3>
 			<ul>
-				<li><a href="package-Application.html">Application</a>
+				<li class="active"><a href="package-Application.html">Application</a>
 						</li>
 				<li><a href="package-Archivers.html">Archivers</a>
 						</li>
 				<li><a href="package-Base.html">Base</a>
 						</li>
-				<li class="active"><a href="package-Caching.html">Caching</a>
-						</li>
-				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
-						</li>
-				<li><a href="package-Components.Calendar.html">Components:Calendar</a>
-						</li>
-				<li><a href="package-Components.Captcha.html">Components:Captcha</a>
-						</li>
-				<li><a href="package-Components.Charts.html">Components:Charts</a>
-						</li>
 				<li><a href="package-Components.Core.html">Components:Core</a>
 						</li>
+				<li><a href="package-Components.Misc.html">Components:Misc</a>
+						</li>
+				<li><a href="package-Converters.html">Converters</a>
+						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
-						</li>
-				<li><a href="package-DATA.HTML.html">DATA:HTML</a>
-						</li>
-				<li><a href="package-DATA.XML.html">DATA:XML</a>
-						</li>
-				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
 						</li>
 				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
@@ -55,29 +43,19 @@
 						</li>
 				<li><a href="package-Database.SQLite.html">Database:SQLite</a>
 						</li>
+				<li><a href="package-Database.ZendDb.PDO.html">Database:ZendDb-PDO</a>
+						</li>
 				<li><a href="package-Exporters.html">Exporters</a>
 						</li>
 				<li><a href="package-Filesystem.html">Filesystem</a>
 						</li>
 				<li><a href="package-LanguageDetection.html">LanguageDetection</a>
 						</li>
-				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
+				<li><a href="package-Mailer.html">Mailer</a>
 						</li>
-				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
+				<li><a href="package-Network.html">Network</a>
 						</li>
-				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
-						</li>
-				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
-						</li>
-				<li><a href="package-Media.ImageProcessing.html">Media:ImageProcessing</a>
-						</li>
-				<li><a href="package-Network.CURL.html">Network:CURL</a>
-						</li>
-				<li><a href="package-Network.FTP.html">Network:FTP</a>
-						</li>
-				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
-						</li>
-				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
+				<li><a href="package-Parsers.html">Parsers</a>
 						</li>
 				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
@@ -90,9 +68,16 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-SmartAbstractPersistentCache.html">SmartAbstractPersistentCache</a></li>
+				<li><a href="class-SmartAbstractAppController.html">SmartAbstractAppController</a></li>
+				<li><a href="class-SmartAdapterTextTranslations.html">SmartAdapterTextTranslations</a></li>
+				<li><a href="class-SmartAppInfo.html">SmartAppInfo</a></li>
+				<li><a href="class-SmartAuth.html">SmartAuth</a></li>
 				<li><a href="class-SmartCache.html">SmartCache</a></li>
+				<li><a href="class-SmartCustomSession.html">SmartCustomSession</a></li>
+				<li><a href="class-SmartFrameworkSecurity.html">SmartFrameworkSecurity</a></li>
 				<li class="active"><a href="class-SmartPersistentCache.html">SmartPersistentCache</a></li>
+				<li><a href="class-SmartSession.html">SmartSession</a></li>
+				<li><a href="class-SmartTextTranslations.html">SmartTextTranslations</a></li>
 			</ul>
 
 
@@ -120,7 +105,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="package-Caching.html" title="Summary of Caching"><span>Package</span></a>
+				<a href="package-Application.html" title="Summary of Application"><span>Package</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -140,11 +125,17 @@
 
 	<div class="description">
 	
-<p>Class: SmartPersistentCache (Redis based Persistent Cache adapter) - provides
-a persistent Cache (in-Redis-Memory), that can be shared and/or reused between
-multiple PHP executions. If Redis is not available it will be replaced by the
-Blackhole Persistent Cache adapter that will provide the compatibility adapter
-for the case there is no real Persistent Cache available.</p>
+<p>Class: App.Custom.PersistentCacheAdapter.Redis adapter based on Redis -
+provides a persistent Cache (in-Redis-Memory), that can be shared and/or reused
+between multiple PHP executions. If Redis is not available it will be replaced
+by the Blackhole Persistent Cache adapter that will provide the compatibility
+adapter for the case there is no real Persistent Cache available.</p>
+
+<p>To use your own custom adapter for the persistent cache in Smart.Framework
+you have to build it by extending the SmartAbstractPersistentCache abstract
+class and define it in etc/init.php at the begining such as:
+define('SMART_FRAMEWORK_PERSISTENT_CACHE_CUSTOM',
+'modules/app/persistent-cache-custom-adapter.php');</p>
 
 <p>Requires Redis to be set-up in config properly. This cache type is persistent
 will keep the cached values in Redis between multiple PHP executions. The key
@@ -159,8 +150,7 @@ provide a persistent cache layer to the App.</p>
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
-			<a href="class-SmartAbstractPersistentCache.html"><span>SmartAbstractPersistentCache</span></a>
-			
+SmartAbstractPersistentCache
 			
 			
 		</dd>
@@ -183,10 +173,10 @@ provide a persistent cache layer to the App.</p>
 		<b>Final</b><br>
 		
 		
-		<b>Package:</b> <a href="package-Caching.html">Caching</a><br>
+		<b>Package:</b> <a href="package-Application.html">Application</a><br>
 
 				<b>Version:</b>
-				v.170307<br>
+				v.181105<br>
 				<b>Depends:</b>
 				-<br>
 				<b>Usage:</b>
@@ -232,7 +222,7 @@ provide a persistent cache layer to the App.</p>
 
 
 				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-SmartAbstractPersistentCache.html#_isActive">SmartAbstractPersistentCache::isActive()</a></code></div>
+				<div class="list"><code>SmartAbstractPersistentCache::isActive()</code></div>
 
 		</div>
 		</div></td>
@@ -276,7 +266,7 @@ Cache)<br>
 
 
 				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-SmartAbstractPersistentCache.html#_isMemoryBased">SmartAbstractPersistentCache::isMemoryBased()</a></code></div>
+				<div class="list"><code>SmartAbstractPersistentCache::isMemoryBased()</code></div>
 
 		</div>
 		</div></td>
@@ -322,7 +312,7 @@ Cache)<br>
 
 
 				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-SmartAbstractPersistentCache.html#_keyExists">SmartAbstractPersistentCache::keyExists()</a></code></div>
+				<div class="list"><code>SmartAbstractPersistentCache::keyExists()</code></div>
 
 		</div>
 		</div></td>
@@ -372,7 +362,7 @@ SmartPersistentCache::varUncompress() after using this function.</p>
 
 
 				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-SmartAbstractPersistentCache.html#_getKey">SmartAbstractPersistentCache::getKey()</a></code></div>
+				<div class="list"><code>SmartAbstractPersistentCache::getKey()</code></div>
 
 		</div>
 		</div></td>
@@ -426,7 +416,7 @@ before using this function.</p>
 
 
 				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-SmartAbstractPersistentCache.html#_setKey">SmartAbstractPersistentCache::setKey()</a></code></div>
+				<div class="list"><code>SmartAbstractPersistentCache::setKey()</code></div>
 
 		</div>
 		</div></td>
@@ -472,7 +462,7 @@ before using this function.</p>
 
 
 				<h4>Overrides</h4>
-				<div class="list"><code><a href="class-SmartAbstractPersistentCache.html#_unsetKey">SmartAbstractPersistentCache::unsetKey()</a></code></div>
+				<div class="list"><code>SmartAbstractPersistentCache::unsetKey()</code></div>
 
 		</div>
 		</div></td>
@@ -480,16 +470,16 @@ before using this function.</p>
 	</table>
 
 	<table class="summary inherited">
-	<caption>Methods inherited from <a href="class-SmartAbstractPersistentCache.html#methods">SmartAbstractPersistentCache</a></caption>
+	<caption>Methods inherited from SmartAbstractPersistentCache</caption>
 	<tr>
 		<td><code>
-			<a href="class-SmartAbstractPersistentCache.html#_safeKey">safeKey()</a>, 
-			<a href="class-SmartAbstractPersistentCache.html#_validateKey">validateKey()</a>, 
-			<a href="class-SmartAbstractPersistentCache.html#_validateRealm">validateRealm()</a>, 
-			<a href="class-SmartAbstractPersistentCache.html#_varCompress">varCompress()</a>, 
-			<a href="class-SmartAbstractPersistentCache.html#_varDecode">varDecode()</a>, 
-			<a href="class-SmartAbstractPersistentCache.html#_varEncode">varEncode()</a>, 
-			<a href="class-SmartAbstractPersistentCache.html#_varUncompress">varUncompress()</a>
+safeKey(), 
+validateKey(), 
+validateRealm(), 
+varCompress(), 
+varDecode(), 
+varEncode(), 
+varUncompress()
 		</code></td>
 	</tr>
 	</table>
@@ -513,7 +503,7 @@ before using this function.</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:20</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-11-06 14:25</a>
 	</div>
 </div>
 </div>

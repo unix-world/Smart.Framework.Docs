@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Package Application | Smart.Framework Documentation :: 2018-03-26 15:20</title>
+	<title>Package Application | Smart.Framework Documentation :: 2018-11-06 14:25</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?1083735894"></script>
-	<script src="elementlist.js?3400854602"></script>
+	<script src="resources/combined.js?4174473549"></script>
+	<script src="elementlist.js?2400639511"></script>
 </head>
 
 <body>
@@ -23,25 +23,13 @@
 						</li>
 				<li><a href="package-Base.html">Base</a>
 						</li>
-				<li><a href="package-Caching.html">Caching</a>
-						</li>
-				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
-						</li>
-				<li><a href="package-Components.Calendar.html">Components:Calendar</a>
-						</li>
-				<li><a href="package-Components.Captcha.html">Components:Captcha</a>
-						</li>
-				<li><a href="package-Components.Charts.html">Components:Charts</a>
-						</li>
 				<li><a href="package-Components.Core.html">Components:Core</a>
 						</li>
+				<li><a href="package-Components.Misc.html">Components:Misc</a>
+						</li>
+				<li><a href="package-Converters.html">Converters</a>
+						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
-						</li>
-				<li><a href="package-DATA.HTML.html">DATA:HTML</a>
-						</li>
-				<li><a href="package-DATA.XML.html">DATA:XML</a>
-						</li>
-				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
 						</li>
 				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
@@ -55,29 +43,19 @@
 						</li>
 				<li><a href="package-Database.SQLite.html">Database:SQLite</a>
 						</li>
+				<li><a href="package-Database.ZendDb.PDO.html">Database:ZendDb-PDO</a>
+						</li>
 				<li><a href="package-Exporters.html">Exporters</a>
 						</li>
 				<li><a href="package-Filesystem.html">Filesystem</a>
 						</li>
 				<li><a href="package-LanguageDetection.html">LanguageDetection</a>
 						</li>
-				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
+				<li><a href="package-Mailer.html">Mailer</a>
 						</li>
-				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
+				<li><a href="package-Network.html">Network</a>
 						</li>
-				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
-						</li>
-				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
-						</li>
-				<li><a href="package-Media.ImageProcessing.html">Media:ImageProcessing</a>
-						</li>
-				<li><a href="package-Network.CURL.html">Network:CURL</a>
-						</li>
-				<li><a href="package-Network.FTP.html">Network:FTP</a>
-						</li>
-				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
-						</li>
-				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
+				<li><a href="package-Parsers.html">Parsers</a>
 						</li>
 				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
@@ -91,9 +69,13 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-SmartAbstractAppController.html">SmartAbstractAppController</a></li>
+				<li><a href="class-SmartAdapterTextTranslations.html">SmartAdapterTextTranslations</a></li>
 				<li><a href="class-SmartAppInfo.html">SmartAppInfo</a></li>
 				<li><a href="class-SmartAuth.html">SmartAuth</a></li>
+				<li><a href="class-SmartCache.html">SmartCache</a></li>
+				<li><a href="class-SmartCustomSession.html">SmartCustomSession</a></li>
 				<li><a href="class-SmartFrameworkSecurity.html">SmartFrameworkSecurity</a></li>
+				<li><a href="class-SmartPersistentCache.html">SmartPersistentCache</a></li>
 				<li><a href="class-SmartSession.html">SmartSession</a></li>
 				<li><a href="class-SmartTextTranslations.html">SmartTextTranslations</a></li>
 			</ul>
@@ -150,6 +132,11 @@ the Abstract Definitions to create controllers in modules.
 <!-- by Texy2! --></td>
 </tr>
 <tr>
+	<td class="name"><a href="class-SmartAdapterTextTranslations.html">SmartAdapterTextTranslations</a></td>
+	<td>Class App.Custom.TextTranslationsAdapter.Yaml - YAML files based text
+translations adapter (default).</td>
+</tr>
+<tr>
 	<td class="name"><a href="class-SmartAppInfo.html">SmartAppInfo</a></td>
 	<td>Class: SmartAppInfo</td>
 </tr>
@@ -160,9 +147,29 @@ authentication data and to provide a standard way to work with authentication
 inside the smartframework / modules.</td>
 </tr>
 <tr>
+	<td class="name"><a href="class-SmartCache.html">SmartCache</a></td>
+	<td>Class: SmartCache - Provides per Execution, Volatille Cache (in-PHP-Memory
+volatille cache).</td>
+</tr>
+<tr>
+	<td class="name"><a href="class-SmartCustomSession.html">SmartCustomSession</a></td>
+	<td>Class App.Custom.Session.Redis - Provides a custom session adapter to use Redis
+(an alternative for the default files based session). NOTICE: using this adapter
+if the Session is set to expire as 0 (when browser is closed), in redis the
+session will expire at session.gc_maxlifetime seconds ...</td>
+</tr>
+<tr>
 	<td class="name"><a href="class-SmartFrameworkSecurity.html">SmartFrameworkSecurity</a></td>
 	<td>Class Smart.Framework Security It may be used anywhere inside Smart.Framework or
 by Plugins and Application Modules.</td>
+</tr>
+<tr>
+	<td class="name"><a href="class-SmartPersistentCache.html">SmartPersistentCache</a></td>
+	<td>Class: App.Custom.PersistentCacheAdapter.Redis adapter based on Redis - provides
+a persistent Cache (in-Redis-Memory), that can be shared and/or reused between
+multiple PHP executions. If Redis is not available it will be replaced by the
+Blackhole Persistent Cache adapter that will provide the compatibility adapter
+for the case there is no real Persistent Cache available.</td>
 </tr>
 <tr>
 	<td class="name"><a href="class-SmartSession.html">SmartSession</a></td>
@@ -182,7 +189,7 @@ Layer for the Smart.Framework based Applications.</td>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:20</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-11-06 14:25</a>
 	</div>
 </div>
 </div>

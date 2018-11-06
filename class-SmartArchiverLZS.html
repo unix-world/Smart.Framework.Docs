@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartArchiverLZS | Smart.Framework Documentation :: 2018-03-26 15:20</title>
+	<title>Class SmartArchiverLZS | Smart.Framework Documentation :: 2018-11-06 14:25</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?1083735894"></script>
-	<script src="elementlist.js?3400854602"></script>
+	<script src="resources/combined.js?4174473549"></script>
+	<script src="elementlist.js?2400639511"></script>
 </head>
 
 <body>
@@ -23,25 +23,13 @@
 						</li>
 				<li><a href="package-Base.html">Base</a>
 						</li>
-				<li><a href="package-Caching.html">Caching</a>
-						</li>
-				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
-						</li>
-				<li><a href="package-Components.Calendar.html">Components:Calendar</a>
-						</li>
-				<li><a href="package-Components.Captcha.html">Components:Captcha</a>
-						</li>
-				<li><a href="package-Components.Charts.html">Components:Charts</a>
-						</li>
 				<li><a href="package-Components.Core.html">Components:Core</a>
 						</li>
+				<li><a href="package-Components.Misc.html">Components:Misc</a>
+						</li>
+				<li><a href="package-Converters.html">Converters</a>
+						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
-						</li>
-				<li><a href="package-DATA.HTML.html">DATA:HTML</a>
-						</li>
-				<li><a href="package-DATA.XML.html">DATA:XML</a>
-						</li>
-				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
 						</li>
 				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
@@ -55,29 +43,19 @@
 						</li>
 				<li><a href="package-Database.SQLite.html">Database:SQLite</a>
 						</li>
+				<li><a href="package-Database.ZendDb.PDO.html">Database:ZendDb-PDO</a>
+						</li>
 				<li><a href="package-Exporters.html">Exporters</a>
 						</li>
 				<li><a href="package-Filesystem.html">Filesystem</a>
 						</li>
 				<li><a href="package-LanguageDetection.html">LanguageDetection</a>
 						</li>
-				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
+				<li><a href="package-Mailer.html">Mailer</a>
 						</li>
-				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
+				<li><a href="package-Network.html">Network</a>
 						</li>
-				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
-						</li>
-				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
-						</li>
-				<li><a href="package-Media.ImageProcessing.html">Media:ImageProcessing</a>
-						</li>
-				<li><a href="package-Network.CURL.html">Network:CURL</a>
-						</li>
-				<li><a href="package-Network.FTP.html">Network:FTP</a>
-						</li>
-				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
-						</li>
-				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
+				<li><a href="package-Parsers.html">Parsers</a>
 						</li>
 				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
@@ -141,30 +119,11 @@
 	
 <p>Class: SmartArchiverLZS - Compress or Decompress a LZS archive.</p>
 
-<pre>
-<span class="php-comment">// Usage example:</span>
-<span
-class="php-var">$myString</span> = <span
-class="php-quote">'Some string to archive as LZS'</span>;
-<span
-class="php-var">$archString</span> = SmartArchiverLZS::compressToBase64(<span
-class="php-var">$myString</span>); <span
-class="php-comment">// archive the string</span>
-<span
-class="php-var">$unarchString</span> = SmartArchiverLZS::decompressFromBase64(<span
-class="php-var">$archString</span>); <span
-class="php-comment">// unarchive it back</span>
-<span
-class="php-keyword1">if</span>((string)<span
-class="php-var">$unarchString</span> !== (string)<span
-class="php-var">$myString</span>) { <span
-class="php-comment">// Test: check if unarchive is the same as archive</span>
-    <span
-class="php-keyword1">die</span>(<span
-class="php-quote">'LZS Archive test Failed !'</span>);
-} <span
-class="php-comment">//end if</span>
-</pre>
+<p><code> // Usage example: $myString = 'Some string to archive as LZS';
+$archString = SmartArchiverLZS::compressToBase64($myString); // archive the
+string $unarchString = SmartArchiverLZS::decompressFromBase64($archString); //
+unarchive it back if((string)$unarchString !== (string)$myString) { // Test:
+check if unarchive is the same as archive</code></p>
 
 	</div>
 
@@ -186,6 +145,8 @@ class="php-comment">//end if</span>
 				v.180119.r2<br>
 				<b>Depends:</b>
 				extensions: PHP MBString ; classes: Smart, SmartHashCrypto<br>
+				<b>Http_response_code(500);:</b>
+				die('LZS Archive test Failed !'); } //end if<br>
 				<b>Usage:</b>
 				static object: Class::method() - This class provides only STATIC methods<br>
 		<b>Located at</b> lib/core/plugins/lib_archlzs.php<br>
@@ -301,7 +262,7 @@ class="php-comment">//end if</span>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:20</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-11-06 14:25</a>
 	</div>
 </div>
 </div>

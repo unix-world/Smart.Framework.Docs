@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartAbstractAppController | Smart.Framework Documentation :: 2018-03-26 15:20</title>
+	<title>Class SmartAbstractAppController | Smart.Framework Documentation :: 2018-11-06 14:25</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?1083735894"></script>
-	<script src="elementlist.js?3400854602"></script>
+	<script src="resources/combined.js?4174473549"></script>
+	<script src="elementlist.js?2400639511"></script>
 </head>
 
 <body>
@@ -23,25 +23,13 @@
 						</li>
 				<li><a href="package-Base.html">Base</a>
 						</li>
-				<li><a href="package-Caching.html">Caching</a>
-						</li>
-				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
-						</li>
-				<li><a href="package-Components.Calendar.html">Components:Calendar</a>
-						</li>
-				<li><a href="package-Components.Captcha.html">Components:Captcha</a>
-						</li>
-				<li><a href="package-Components.Charts.html">Components:Charts</a>
-						</li>
 				<li><a href="package-Components.Core.html">Components:Core</a>
 						</li>
+				<li><a href="package-Components.Misc.html">Components:Misc</a>
+						</li>
+				<li><a href="package-Converters.html">Converters</a>
+						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
-						</li>
-				<li><a href="package-DATA.HTML.html">DATA:HTML</a>
-						</li>
-				<li><a href="package-DATA.XML.html">DATA:XML</a>
-						</li>
-				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
 						</li>
 				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
@@ -55,29 +43,19 @@
 						</li>
 				<li><a href="package-Database.SQLite.html">Database:SQLite</a>
 						</li>
+				<li><a href="package-Database.ZendDb.PDO.html">Database:ZendDb-PDO</a>
+						</li>
 				<li><a href="package-Exporters.html">Exporters</a>
 						</li>
 				<li><a href="package-Filesystem.html">Filesystem</a>
 						</li>
 				<li><a href="package-LanguageDetection.html">LanguageDetection</a>
 						</li>
-				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
+				<li><a href="package-Mailer.html">Mailer</a>
 						</li>
-				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
+				<li><a href="package-Network.html">Network</a>
 						</li>
-				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
-						</li>
-				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
-						</li>
-				<li><a href="package-Media.ImageProcessing.html">Media:ImageProcessing</a>
-						</li>
-				<li><a href="package-Network.CURL.html">Network:CURL</a>
-						</li>
-				<li><a href="package-Network.FTP.html">Network:FTP</a>
-						</li>
-				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
-						</li>
-				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
+				<li><a href="package-Parsers.html">Parsers</a>
 						</li>
 				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
@@ -91,9 +69,13 @@
 			<h3>Classes</h3>
 			<ul>
 				<li class="active"><a href="class-SmartAbstractAppController.html">SmartAbstractAppController</a></li>
+				<li><a href="class-SmartAdapterTextTranslations.html">SmartAdapterTextTranslations</a></li>
 				<li><a href="class-SmartAppInfo.html">SmartAppInfo</a></li>
 				<li><a href="class-SmartAuth.html">SmartAuth</a></li>
+				<li><a href="class-SmartCache.html">SmartCache</a></li>
+				<li><a href="class-SmartCustomSession.html">SmartCustomSession</a></li>
 				<li><a href="class-SmartFrameworkSecurity.html">SmartFrameworkSecurity</a></li>
+				<li><a href="class-SmartPersistentCache.html">SmartPersistentCache</a></li>
 				<li><a href="class-SmartSession.html">SmartSession</a></li>
 				<li><a href="class-SmartTextTranslations.html">SmartTextTranslations</a></li>
 			</ul>
@@ -320,7 +302,7 @@ class="php-comment">//END CLASS</span>
 		<b>Package:</b> <a href="package-Application.html">Application</a><br>
 
 				<b>Version:</b>
-				v.180309<br>
+				v.181029<br>
 				<b>Depends:</b>
 				-<br>
 				<b>Hints:</b>
@@ -602,28 +584,36 @@ Modules section</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$param</var></dt>
-					<dd>:: The selected parameter The valid param values are: release-hash :: ex:
-255cdb71953108baacb856591b9bf5ee9e4a39e6 (the release hash based on app
-framework version, framework release and modules version) module-area :: ex:
-index / admin module-name :: ex: mod-samples module-path :: ex:
-modules/mod-samples/ module-view-path :: ex: modules/mod-samples/views/
+					<dd>:: The selected parameter The valid param values are: app-env :: ex: dev | prod
+(based on SMART_ERROR_HANDLER) app-namespace :: ex: smartframework.default (the
+app namespace as defined in etc/init.php) app-domain :: ex:
+127.0.0.1|localhost|sdom.dom.ext|dom.ext (the domain set in configs, that may
+differ by area: $configs['app']['index-domain'] |
+$configs['app']['admin-domain']) release-hash :: ex: 29bp3w (the release hash
+based on app framework version, framework release and modules version)
+module-area :: ex: index / admin module-name :: ex: mod-samples module-path ::
+ex: modules/mod-samples/ module-view-path :: ex: modules/mod-samples/views/
 module-model-path :: ex: modules/mod-samples/models/ module-lib-path :: ex:
-modules/mod-samples/libs/ module :: ex: samples (1st part from controller,
-before .) action :: ex: test (2nd part from controller, after .) controller ::
-ex: samples.test url-proto :: ex: http | https (the current server protocol)
-url-proto-addr :: ex: http:// | https:// (the current server protocol address)
-url-domain :: ex: 127.0.0.1|localhost (the curent server domain, or IP) url-port
-:: ex: 80 | 443 | 8080 ... (the current server port) url-port-addr :: ex: '' |
-'' | ':8080' ... (the current server port address ; empty for port 80 and 443 ;
-for the rest of ports will be :portnumber) url-script :: ex: index.php /
-admin.php url-path :: ex: /sites/smart-framework/ url-addr :: ex:
-http(s)://127.0.0.1|localhost/sites/smart-framework/ url-page :: ex:
-samples.test | test (if samples is the default module) ; this is returning the
-URL page variable as is in the URL (it can be the same as 'controller' or if
+modules/mod-samples/libs/ module-tpl-path :: ex: modules/mod-samples/templates/
+module-plugins-path :: ex: modules/mod-samples/plugins/ module-translations-path
+:: ex: modules/mod-samples/translations/ module :: ex: samples (1st part from
+controller, before .) action :: ex: test (2nd part from controller, after .)
+controller :: ex: samples.test url-proto :: ex: http | https (the current server
+protocol) url-proto-addr :: ex: http:// | https:// (the current server protocol
+address) url-basedomain :: ex: 127.0.0.1|localhost|dom.ext (the curent server
+base domain, or IP) url-domain :: ex: 127.0.0.1|localhost|sdom.dom.ext (the
+curent server domain, or IP) url-port :: ex: 80 | 443 | 8080 ... (the current
+server port) url-port-addr :: ex: '' | '' | ':8080' ... (the current server port
+address ; empty for port 80 and 443 ; for the rest of ports will be :portnumber)
+url-script :: ex: index.php / admin.php url-path :: ex: /sites/smart-framework/
+url-addr :: ex: http(s)://127.0.0.1|localhost/sites/smart-framework/ url-page ::
+ex: samples.test | test (if samples is the default module) ; this is returning
+the URL page variable as is in the URL (it can be the same as 'controller' or if
 rewrite is used inside framework can vary url-query :: ex: ?page=test&amp;amp;ofs=10
 url-uri :: ex:
 /sites/smart-framework/index|admin.php{/some/path/}?page=test&amp;amp;ofs=10
-uri-path :: ex: {/some/path/}</dd>
+uri-path :: ex: {/some/path/} lang :: ex: en charset :: ex: UTF-8 timezone ::
+ex: UTC</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -675,6 +665,43 @@ will get the value (array) from $configs['regional']</dd>
 				<div class="list">
 					<code>MIXED</code><br>:: The value for the selected parameter. If the Config parameter does not
 exists, will return an empty string<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="RequestMethodGet" id="_RequestMethodGet">
+
+		<td class="attributes"><code>
+			final public 
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_RequestMethodGet">#</a>
+		<code>RequestMethodGet( )</code>
+
+		<div class="description short">
+			
+<p>Get the HTTP Request Method (REQUEST_METHOD) in a controller</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Get the HTTP Request Method (REQUEST_METHOD) in a controller</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The value of the REQUEST_METHOD HTTP Variable (from server-side)<br>
 				</div>
 
 
@@ -783,7 +810,7 @@ enforce a type for the variable as: ['enum', 'list', 'of', 'allowed', 'values'],
 
 		<td class="name"><div>
 		<a class="anchor" href="#_CookieVarGet">#</a>
-		<code>CookieVarGet( <span>STRING <var>$key</var></span> )</code>
+		<code>CookieVarGet( <span>STRING <var>$name</var></span> )</code>
 
 		<div class="description short">
 			
@@ -799,13 +826,64 @@ enforce a type for the variable as: ['enum', 'list', 'of', 'allowed', 'values'],
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$key</var></dt>
-					<dd>:: The name (key) of the COOKIES variable.</dd>
+					<dt><var>$name</var></dt>
+					<dd>:: The cookie name from COOKIES variable.</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>MIXED</code><br>:: The value of the choosen Cookie variable<br>
+					<code>MIXED</code><br>:: The value of the choosen Cookie variable or null if not set<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="CookieVarSet" id="_CookieVarSet">
+
+		<td class="attributes"><code>
+			final public 
+			BOOLEAN
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_CookieVarSet">#</a>
+		<code>CookieVarSet( <span>STRING <var>$name</var></span>, <span>STRING <var>$data</var></span>, <span>STRING <var>$expire</var></span>, <span>STRING <var>$path</var> = <span class="php-quote">'/'</span></span>, <span>STRING <var>$domain</var> = <span class="php-quote">'@'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Set a Cookie Variable (COOKIES) in a controller</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Set a Cookie Variable (COOKIES) in a controller</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$name</var></dt>
+					<dd>:: The cookie name</dd>
+					<dt><var>$data</var></dt>
+					<dd>:: The cookie data</dd>
+					<dt><var>$expire</var></dt>
+					<dd>:: The cookie expire time (zero for session cookies)</dd>
+					<dt><var>$path</var></dt>
+					<dd>:: The cookie path ; default is /</dd>
+					<dt><var>$domain</var></dt>
+					<dd>:: The cookie domain ; default is @ (will get as it is set in
+SMART_FRAMEWORK_UNIQUE_ID_COOKIE_DOMAIN)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOLEAN</code><br>:: TRUE if Set, FALSE if Not<br>
 				</div>
 
 
@@ -1992,6 +2070,39 @@ error message to be shown near the HTTP status code)<br>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="Initialize" id="_Initialize">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_Initialize">#</a>
+		<code>Initialize( )</code>
+
+		<div class="description short">
+			
+<p>This is the pre Run() function This function will be called before Run()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>This is the pre Run() function This function will be called before Run()</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="ShutDown" id="_ShutDown">
 
 		<td class="attributes"><code>
@@ -2007,33 +2118,28 @@ error message to be shown near the HTTP status code)<br>
 
 		<div class="description short">
 			
-<p>The (real) Controller Destructor - This function is optional and can be
-re-defined in controllers where a destructor is required. This will replace the
-class destructor __destruct() which is NOT SAFE in all cases (see php bug
-#31570).</p>
+<p>This is the post Run() function This function will be called after Run()</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>The (real) Controller Destructor - This function is optional and can be
-re-defined in controllers where a destructor is required. This will replace the
-class destructor __destruct() which is NOT SAFE in all cases (see php bug
-#31570).</p>
+<p>This is the post Run() function This function will be called after Run()</p>
 
-<p>NOTICE: Sometimes __destruct() for classes is not 100% safe ; example: the
-PHP Bug #31570 (not fixed since a very long time). Instead of __destruct() use
-ShutDown() method for controllers in framework modules (which is always executed
-after Run() and is 100% safe).</p>
-
-<p>WARNING: Modifications for Page Settings or Page Variables are not allowed in
-this function, after Run() has been completed ! If controller variables are
-modified after Run() has completed it can produce unexpected results ...</p>
-
-<p>EXAMPLE / SCENARIO: This function (by replacing __destruct()) can be used if
-you have to cleanup a temporary folder (tmp/) after Run(). Because of the PHP
-Bug #31570, the __destruct() can't operate on relative paths and will produce
-wrong and unexpected results !!!</p>
+<p>This function is the (real) Controller Destructor - This function is optional
+and can be re-defined in controllers where a destructor is required. It will
+replace the class destructor __destruct() which is NOT SAFE in all cases (see
+php bug #31570). NOTICE: Sometimes __destruct() for classes is not 100% safe ;
+example: the PHP Bug #31570 (not fixed since a very long time). Instead of
+__destruct() use ShutDown() method for controllers in framework modules (which
+is always executed after Run() and is 100% safe). WARNING: Modifications for
+Page Settings or Page Variables are not allowed in this function, after Run()
+has been completed ! If controller variables are modified after Run() has
+completed it can produce unexpected results ... EXAMPLE / SCENARIO: This
+function (by replacing __destruct()) can be used if you have to cleanup a
+temporary folder (tmp/) after Run(). Because of the PHP Bug #31570, the
+__destruct() can't operate on relative paths and will produce wrong and
+unexpected results !!!</p>
 
 
 
@@ -2067,7 +2173,7 @@ wrong and unexpected results !!!</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:20</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-11-06 14:25</a>
 	</div>
 </div>
 </div>

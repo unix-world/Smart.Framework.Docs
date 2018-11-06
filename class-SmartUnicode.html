@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartUnicode | Smart.Framework Documentation :: 2018-03-26 15:20</title>
+	<title>Class SmartUnicode | Smart.Framework Documentation :: 2018-11-06 14:25</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
-	<script src="resources/combined.js?1083735894"></script>
-	<script src="elementlist.js?3400854602"></script>
+	<script src="resources/combined.js?4174473549"></script>
+	<script src="elementlist.js?2400639511"></script>
 </head>
 
 <body>
@@ -23,25 +23,13 @@
 						</li>
 				<li class="active"><a href="package-Base.html">Base</a>
 						</li>
-				<li><a href="package-Caching.html">Caching</a>
-						</li>
-				<li><a href="package-Components.BarCodes.html">Components:BarCodes</a>
-						</li>
-				<li><a href="package-Components.Calendar.html">Components:Calendar</a>
-						</li>
-				<li><a href="package-Components.Captcha.html">Components:Captcha</a>
-						</li>
-				<li><a href="package-Components.Charts.html">Components:Charts</a>
-						</li>
 				<li><a href="package-Components.Core.html">Components:Core</a>
 						</li>
+				<li><a href="package-Components.Misc.html">Components:Misc</a>
+						</li>
+				<li><a href="package-Converters.html">Converters</a>
+						</li>
 				<li><a href="package-Crypto.html">Crypto</a>
-						</li>
-				<li><a href="package-DATA.HTML.html">DATA:HTML</a>
-						</li>
-				<li><a href="package-DATA.XML.html">DATA:XML</a>
-						</li>
-				<li><a href="package-DATA.YAML.html">DATA:YAML</a>
 						</li>
 				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
 						</li>
@@ -55,29 +43,19 @@
 						</li>
 				<li><a href="package-Database.SQLite.html">Database:SQLite</a>
 						</li>
+				<li><a href="package-Database.ZendDb.PDO.html">Database:ZendDb-PDO</a>
+						</li>
 				<li><a href="package-Exporters.html">Exporters</a>
 						</li>
 				<li><a href="package-Filesystem.html">Filesystem</a>
 						</li>
 				<li><a href="package-LanguageDetection.html">LanguageDetection</a>
 						</li>
-				<li><a href="package-Mailer.Get.html">Mailer:Get</a>
+				<li><a href="package-Mailer.html">Mailer</a>
 						</li>
-				<li><a href="package-Mailer.Send.html">Mailer:Send</a>
+				<li><a href="package-Network.html">Network</a>
 						</li>
-				<li><a href="package-Mailer.Utility.html">Mailer:Utility</a>
-						</li>
-				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
-						</li>
-				<li><a href="package-Media.ImageProcessing.html">Media:ImageProcessing</a>
-						</li>
-				<li><a href="package-Network.CURL.html">Network:CURL</a>
-						</li>
-				<li><a href="package-Network.FTP.html">Network:FTP</a>
-						</li>
-				<li><a href="package-Network.HTTP.html">Network:HTTP</a>
-						</li>
-				<li><a href="package-Network.IDN.Punycode.html">Network:IDN-Punycode</a>
+				<li><a href="package-Parsers.html">Parsers</a>
 						</li>
 				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
@@ -303,7 +281,7 @@ class="php-comment">//----------------------------------------------------------
 		<b>Package:</b> <a href="package-Base.html">Base</a><br>
 
 				<b>Version:</b>
-				v.180209<br>
+				v.180823<br>
 				<b>Depends:</b>
 				extensions: PHP MBString, PHP XML<br>
 				<b>Hints:</b>
@@ -933,6 +911,94 @@ of these encodings: UTF-8, ISO-8859-1, ISO-8859-2</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="uc_first" id="_uc_first">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_uc_first">#</a>
+		<code>uc_first( <span>STRING <var>$ystr</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Unicode Safe ucfirst() :: Make a Unicode string uppercase on first character
+; works with any of these encodings: UTF-8, ISO-8859-1, ISO-8859-2</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unicode Safe ucfirst() :: Make a Unicode string uppercase on first character
+; works with any of these encodings: UTF-8, ISO-8859-1, ISO-8859-2</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ystr</var></dt>
+					<dd>:: The string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The processed string as uppercase of first character string<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="uc_words" id="_uc_words">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_uc_words">#</a>
+		<code>uc_words( <span>STRING <var>$ystr</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Unicode Safe ucwords() :: Make a Unicode string uppercase on each word ;
+works with any of these encodings: UTF-8, ISO-8859-1, ISO-8859-2</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Unicode Safe ucwords() :: Make a Unicode string uppercase on each word ;
+works with any of these encodings: UTF-8, ISO-8859-1, ISO-8859-2</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$ystr</var></dt>
+					<dd>:: The string</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: The processed string as uppercase on each word<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="str_toupper" id="_str_toupper">
 
 		<td class="attributes"><code>
@@ -1305,7 +1371,7 @@ FALSE.</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-03-26 15:20</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-11-06 14:25</a>
 	</div>
 </div>
 </div>

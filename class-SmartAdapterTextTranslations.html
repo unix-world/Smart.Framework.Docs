@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartAppInfo | Smart.Framework Documentation :: 2018-11-06 14:25</title>
+	<title>Class SmartAdapterTextTranslations | Smart.Framework Documentation :: 2018-11-06 14:25</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?4174473549"></script>
 	<script src="elementlist.js?2400639511"></script>
@@ -69,8 +69,8 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-SmartAbstractAppController.html">SmartAbstractAppController</a></li>
-				<li><a href="class-SmartAdapterTextTranslations.html">SmartAdapterTextTranslations</a></li>
-				<li class="active"><a href="class-SmartAppInfo.html">SmartAppInfo</a></li>
+				<li class="active"><a href="class-SmartAdapterTextTranslations.html">SmartAdapterTextTranslations</a></li>
+				<li><a href="class-SmartAppInfo.html">SmartAppInfo</a></li>
 				<li><a href="class-SmartAuth.html">SmartAuth</a></li>
 				<li><a href="class-SmartCache.html">SmartCache</a></li>
 				<li><a href="class-SmartCustomSession.html">SmartCustomSession</a></li>
@@ -120,29 +120,27 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class SmartAppInfo</h1>
+	<h1>Class SmartAdapterTextTranslations</h1>
 
 
 	<div class="description">
 	
-<p>Class: SmartAppInfo</p>
+<p>Class App.Custom.TextTranslationsAdapter.Yaml - YAML files based text
+translations adapter (default).</p>
 
-<p>Provides some methods for integration between the Smart.Framework
-App/Modules.</p>
-
-<pre>
-<span
-class="php-comment">// Usage example:</span>
-SmartAppInfo::some_method_of_this_class(...);
-</pre>
+<p>To use your own custom adapter for the text translations in Smart.Framework
+you have to build it by implementing the SmartInterfaceAdapterTextTranslations
+interface and define it in etc/init.php at the begining such as:
+define('SMART_FRAMEWORK_TRANSLATIONS_ADAPTER_CUSTOM',
+'modules/app/translations-custom-adapter.php');</p>
 
 	</div>
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
-<b><span>SmartAppInfo</span></b>			
+<b><span>SmartAdapterTextTranslations</span></b>			
 			 implements 
-<span>SmartInterfaceAppInfo</span>
+<span>SmartInterfaceAdapterTextTranslations</span>
 			
 			
 		</dd>
@@ -162,105 +160,105 @@ SmartAppInfo::some_method_of_this_class(...);
 		<b>Package:</b> <a href="package-Application.html">Application</a><br>
 
 				<b>Version:</b>
-				v.170920<br>
+				v.181105<br>
 				<b>Depends:</b>
 				-<br>
 				<b>Usage:</b>
 				static object: Class::method() - This class provides only STATIC methods<br>
-		<b>Located at</b> lib/run/app-bootstrap.php<br>
+		<b>Located at</b> lib/app/translations-adapter-yaml.php<br>
 	</div>
 
 
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
-	<tr data-order="TestIfTemplateExists" id="_TestIfTemplateExists">
+	<tr data-order="getTranslationsFromSource" id="_getTranslationsFromSource">
 
 		<td class="attributes"><code>
 			 public static
-			BOOLEAN
+			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_TestIfTemplateExists">#</a>
-		<code>TestIfTemplateExists( <span>STRING <var>$y_template_name</var></span> )</code>
+		<a class="anchor" href="#_getTranslationsFromSource">#</a>
+		<code>getTranslationsFromSource( <span>mixed <var>$the_lang</var></span>, <span>mixed <var>$y_area</var></span>, <span>mixed <var>$y_subarea</var></span> )</code>
 
 		<div class="description short">
 			
-<p>Test if Application Template Exists in etc/templates/</p>
+<p>Smart Parse Regional Text Parse Translation Source This function must
+implement a Text Translations parser. It can be implemented to read from one of
+the variety of sources: Arrays, INI, YAML, XML, JSON, SQLite, PostgreSQL,
+GetText, ... RETURN: an associative array as [key =&gt; value] for the specific
+translation</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Test if Application Template Exists in etc/templates/</p>
+<p>Smart Parse Regional Text Parse Translation Source This function must
+implement a Text Translations parser. It can be implemented to read from one of
+the variety of sources: Arrays, INI, YAML, XML, JSON, SQLite, PostgreSQL,
+GetText, ... RETURN: an associative array as [key =&gt; value] for the specific
+translation</p>
 
 
 
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$y_template_name</var></dt>
-					<dd>:: The template dir name (Ex: for 'etc/templates/something', this parameter
-would be: 'something'</dd>
-				</dl></div>
 
-				<h4>Returns</h4>
-				<div class="list">
-					<code>BOOLEAN</code><br>:: TRUE if template exists, FALSE if not detected<br>
-				</div>
 
 
 
 
 				<h4>Implementation of</h4>
-				<div class="list"><code>SmartInterfaceAppInfo::TestIfTemplateExists()</code></div>
+				<div class="list"><code>SmartInterfaceAdapterTextTranslations::getTranslationsFromSource()</code></div>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="TestIfModuleExists" id="_TestIfModuleExists">
+	<tr data-order="getTranslationsVersion" id="_getTranslationsVersion">
 
 		<td class="attributes"><code>
 			 public static
-			BOOLEAN
+			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_TestIfModuleExists">#</a>
-		<code>TestIfModuleExists( <span>STRING <var>$y_module_name</var></span> )</code>
+		<a class="anchor" href="#_getTranslationsVersion">#</a>
+		<code>getTranslationsVersion( )</code>
 
 		<div class="description short">
 			
-<p>Test if Application Module Exists in modules/</p>
+<p>Smart Parse Regional Text Get Latest Version This function must implement a
+way to get last version string to validate Text Translations. If a version
+cannot be provided, must return (string) date('Y-m-d') and this way the texts
+persistent cache will be re-validated daily. If a real version can be provided
+it is the best, so persistent cache would be re-validated just upon changes !
+RETURN: a non-empty string the provides the latest version string of the current
+texts translations</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Test if Application Module Exists in modules/</p>
+<p>Smart Parse Regional Text Get Latest Version This function must implement a
+way to get last version string to validate Text Translations. If a version
+cannot be provided, must return (string) date('Y-m-d') and this way the texts
+persistent cache will be re-validated daily. If a real version can be provided
+it is the best, so persistent cache would be re-validated just upon changes !
+RETURN: a non-empty string the provides the latest version string of the current
+texts translations</p>
 
 
 
-				<h4>Parameters</h4>
-				<div class="list"><dl>
-					<dt><var>$y_module_name</var></dt>
-					<dd>:: The short module name (Ex: for 'modules/mod-something', this parameter would
-be: 'mod-something'</dd>
-				</dl></div>
 
-				<h4>Returns</h4>
-				<div class="list">
-					<code>BOOLEAN</code><br>:: TRUE if module exists, FALSE if not detected<br>
-				</div>
 
 
 
 
 				<h4>Implementation of</h4>
-				<div class="list"><code>SmartInterfaceAppInfo::TestIfModuleExists()</code></div>
+				<div class="list"><code>SmartInterfaceAdapterTextTranslations::getTranslationsVersion()</code></div>
 		</div>
 		</div></td>
 	</tr>

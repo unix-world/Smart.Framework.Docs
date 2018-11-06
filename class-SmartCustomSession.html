@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartMailerMimeDecode | Smart.Framework Documentation :: 2018-11-06 14:25</title>
+	<title>Class SmartCustomSession | Smart.Framework Documentation :: 2018-11-06 14:25</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?4174473549"></script>
 	<script src="elementlist.js?2400639511"></script>
@@ -17,7 +17,7 @@
 		<div id="groups">
 			<h3>Packages</h3>
 			<ul>
-				<li><a href="package-Application.html">Application</a>
+				<li class="active"><a href="package-Application.html">Application</a>
 						</li>
 				<li><a href="package-Archivers.html">Archivers</a>
 						</li>
@@ -51,7 +51,7 @@
 						</li>
 				<li><a href="package-LanguageDetection.html">LanguageDetection</a>
 						</li>
-				<li class="active"><a href="package-Mailer.html">Mailer</a>
+				<li><a href="package-Mailer.html">Mailer</a>
 						</li>
 				<li><a href="package-Network.html">Network</a>
 						</li>
@@ -68,13 +68,16 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-SmartMailerImap4Client.html">SmartMailerImap4Client</a></li>
-				<li class="active"><a href="class-SmartMailerMimeDecode.html">SmartMailerMimeDecode</a></li>
-				<li><a href="class-SmartMailerMimeParser.html">SmartMailerMimeParser</a></li>
-				<li><a href="class-SmartMailerPop3Client.html">SmartMailerPop3Client</a></li>
-				<li><a href="class-SmartMailerSend.html">SmartMailerSend</a></li>
-				<li><a href="class-SmartMailerSmtpClient.html">SmartMailerSmtpClient</a></li>
-				<li><a href="class-SmartMailerUtils.html">SmartMailerUtils</a></li>
+				<li><a href="class-SmartAbstractAppController.html">SmartAbstractAppController</a></li>
+				<li><a href="class-SmartAdapterTextTranslations.html">SmartAdapterTextTranslations</a></li>
+				<li><a href="class-SmartAppInfo.html">SmartAppInfo</a></li>
+				<li><a href="class-SmartAuth.html">SmartAuth</a></li>
+				<li><a href="class-SmartCache.html">SmartCache</a></li>
+				<li class="active"><a href="class-SmartCustomSession.html">SmartCustomSession</a></li>
+				<li><a href="class-SmartFrameworkSecurity.html">SmartFrameworkSecurity</a></li>
+				<li><a href="class-SmartPersistentCache.html">SmartPersistentCache</a></li>
+				<li><a href="class-SmartSession.html">SmartSession</a></li>
+				<li><a href="class-SmartTextTranslations.html">SmartTextTranslations</a></li>
 			</ul>
 
 
@@ -102,7 +105,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="package-Mailer.html" title="Summary of Mailer"><span>Package</span></a>
+				<a href="package-Application.html" title="Summary of Application"><span>Package</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -117,20 +120,37 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class SmartMailerMimeDecode</h1>
+	<h1>Class SmartCustomSession</h1>
 
 
 	<div class="description">
 	
-<p>Class: SmartMailerMimeDecode - provides an eMail MIME decoder. This class is
-for very advanced use.</p>
+<p>Class App.Custom.Session.Redis - Provides a custom session adapter to use
+Redis (an alternative for the default files based session). NOTICE: using this
+adapter if the Session is set to expire as 0 (when browser is closed), in redis
+the session will expire at session.gc_maxlifetime seconds ...</p>
 
-<p>It just implements the mime decoding to a PHP array by decoding Mime Email
-Messages. To easy parse mime messages and display them on-the-fly use the class:
-SmartMailerMimeParser.</p>
+<p>To use your own custom adapter for the session in Smart.Framework you have to
+build it by extending the SmartAbstractCustomSession abstract class and define
+it in etc/init.php at the begining such as:
+define('SMART_FRAMEWORK_SESSION_CUSTOM_HANDLER',
+'modules/app/session-custom-adapter.php');</p>
 
 	</div>
 
+	<dl class="tree">
+		<dd style="padding-left:0px">
+SmartAbstractCustomSession
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>SmartCustomSession</span></b>			
+			
+			
+		</dd>
+	</dl>
 
 
 
@@ -143,23 +163,22 @@ SmartMailerMimeParser.</p>
 		<b>Final</b><br>
 		
 		
-		<b>Package:</b> <a href="package-Mailer.html">Mailer</a><br>
+		<b>Package:</b> <a href="package-Application.html">Application</a><br>
 
 				<b>Version:</b>
-				v.170609<br>
+				v.181105<br>
 				<b>Depends:</b>
-				classes: Smart<br>
+				-<br>
 				<b>Usage:</b>
-				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
-methods<br>
-		<b>Located at</b> lib/core/plugins/lib_mail_decode.php<br>
+				static object: Class::method() - This class provides only STATIC methods<br>
+		<b>Located at</b> lib/app/custom-session-redis.php<br>
 	</div>
 
 
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
-	<tr data-order="__construct" id="___construct">
+	<tr data-order="open" id="_open">
 
 		<td class="attributes"><code>
 			 public 
@@ -169,8 +188,8 @@ methods<br>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#___construct">#</a>
-		<code>__construct( <span>mixed <var>$encoding</var> = <span class="php-quote">''</span></span> )</code>
+		<a class="anchor" href="#_open">#</a>
+		<code>open( )</code>
 
 		<div class="description short">
 			
@@ -184,11 +203,13 @@ methods<br>
 
 
 
+				<h4>Overrides</h4>
+				<div class="list"><code>SmartAbstractCustomSession::open()</code></div>
 
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="get_working_charset" id="_get_working_charset">
+	<tr data-order="close" id="_close">
 
 		<td class="attributes"><code>
 			 public 
@@ -198,8 +219,8 @@ methods<br>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_get_working_charset">#</a>
-		<code>get_working_charset( )</code>
+		<a class="anchor" href="#_close">#</a>
+		<code>close( )</code>
 
 		<div class="description short">
 			
@@ -213,11 +234,13 @@ methods<br>
 
 
 
+				<h4>Overrides</h4>
+				<div class="list"><code>SmartAbstractCustomSession::close()</code></div>
 
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="reset" id="_reset">
+	<tr data-order="write" id="_write">
 
 		<td class="attributes"><code>
 			 public 
@@ -227,8 +250,8 @@ methods<br>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_reset">#</a>
-		<code>reset( )</code>
+		<a class="anchor" href="#_write">#</a>
+		<code>write( <span>mixed <var>$id</var></span>, <span>mixed <var>$data</var></span> )</code>
 
 		<div class="description short">
 			
@@ -242,11 +265,13 @@ methods<br>
 
 
 
+				<h4>Overrides</h4>
+				<div class="list"><code>SmartAbstractCustomSession::write()</code></div>
 
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="get_bodies" id="_get_bodies">
+	<tr data-order="read" id="_read">
 
 		<td class="attributes"><code>
 			 public 
@@ -256,8 +281,8 @@ methods<br>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_get_bodies">#</a>
-		<code>get_bodies( <span>mixed <var>$message</var></span>, <span>mixed <var>$part_id</var></span> )</code>
+		<a class="anchor" href="#_read">#</a>
+		<code>read( <span>mixed <var>$id</var></span> )</code>
 
 		<div class="description short">
 			
@@ -271,11 +296,13 @@ methods<br>
 
 
 
+				<h4>Overrides</h4>
+				<div class="list"><code>SmartAbstractCustomSession::read()</code></div>
 
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="separe_email_from_name" id="_separe_email_from_name">
+	<tr data-order="destroy" id="_destroy">
 
 		<td class="attributes"><code>
 			 public 
@@ -285,8 +312,8 @@ methods<br>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_separe_email_from_name">#</a>
-		<code>separe_email_from_name( <span>mixed <var>$y_address</var></span> )</code>
+		<a class="anchor" href="#_destroy">#</a>
+		<code>destroy( <span>mixed <var>$id</var></span> )</code>
 
 		<div class="description short">
 			
@@ -300,11 +327,13 @@ methods<br>
 
 
 
+				<h4>Overrides</h4>
+				<div class="list"><code>SmartAbstractCustomSession::destroy()</code></div>
 
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="get_header" id="_get_header">
+	<tr data-order="gc" id="_gc">
 
 		<td class="attributes"><code>
 			 public 
@@ -314,8 +343,8 @@ methods<br>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_get_header">#</a>
-		<code>get_header( <span>mixed <var>$message</var></span> )</code>
+		<a class="anchor" href="#_gc">#</a>
+		<code>gc( <span>mixed <var>$lifetime</var></span> )</code>
 
 		<div class="description short">
 			
@@ -329,9 +358,20 @@ methods<br>
 
 
 
+				<h4>Overrides</h4>
+				<div class="list"><code>SmartAbstractCustomSession::gc()</code></div>
 
 		</div>
 		</div></td>
+	</tr>
+	</table>
+
+	<table class="summary inherited">
+	<caption>Methods inherited from SmartAbstractCustomSession</caption>
+	<tr>
+		<td><code>
+__construct()
+		</code></td>
 	</tr>
 	</table>
 
@@ -345,17 +385,16 @@ methods<br>
 
 
 
-
 	<table class="summary properties" id="properties">
 	<caption>Properties summary</caption>
-	<tr data-order="arr_heads" id="$arr_heads">
+	<tr data-order="sess_area" id="$sess_area">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$arr_heads</var>
+<var>$sess_area</var>
 			<div class="description short">
 				
 			</div>
@@ -365,16 +404,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$arr_heads" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$sess_area" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="arr_parts" id="$arr_parts">
+	<tr data-order="sess_ns" id="$sess_ns">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$arr_parts</var>
+<var>$sess_ns</var>
 			<div class="description short">
 				
 			</div>
@@ -384,16 +423,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$arr_parts" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$sess_ns" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="arr_atts" id="$arr_atts">
+	<tr data-order="sess_expire" id="$sess_expire">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$arr_atts</var>
+<var>$sess_expire</var>
 			<div class="description short">
 				
 			</div>
@@ -403,7 +442,7 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$arr_atts" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$sess_expire" class="anchor">#</a><code></code></div></td>
 	</tr>
 	</table>
 
