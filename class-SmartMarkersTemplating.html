@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartMarkersTemplating | Smart.Framework Documentation :: 2018-11-06 14:25</title>
+	<title>Class SmartMarkersTemplating | Smart.Framework Documentation :: 2019-01-07 13:21</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?4174473549"></script>
-	<script src="elementlist.js?2400639511"></script>
+	<script src="elementlist.js?1710610607"></script>
 </head>
 
 <body>
@@ -53,7 +53,11 @@
 						</li>
 				<li><a href="package-Mailer.html">Mailer</a>
 						</li>
+				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
+						</li>
 				<li><a href="package-Network.html">Network</a>
+						</li>
+				<li><a href="package-PageBuilder.html">PageBuilder</a>
 						</li>
 				<li><a href="package-Parsers.html">Parsers</a>
 						</li>
@@ -69,8 +73,10 @@
 			<h3>Classes</h3>
 			<ul>
 				<li class="active"><a href="class-SmartMarkersTemplating.html">SmartMarkersTemplating</a></li>
-				<li><a href="class-SmartModExtLib.TplTwig.Templating.html">SmartModExtLib\TplTwig\Templating</a></li>
+				<li><a href="class-SmartNetteLatteTemplating.html">SmartNetteLatteTemplating</a></li>
+				<li><a href="class-SmartTemplating.html">SmartTemplating</a></li>
 				<li><a href="class-SmartTwigTemplating.html">SmartTwigTemplating</a></li>
+				<li><a href="class-SmartTypo3FluidTemplating.html">SmartTypo3FluidTemplating</a></li>
 			</ul>
 
 
@@ -119,7 +125,7 @@
 	<div class="description">
 	
 <p>Class: SmartMarkersTemplating - provides a very fast and low footprint
-templating system: Marker-TPL</p>
+templating system: Markers-TPL</p>
 
 	</div>
 
@@ -138,7 +144,7 @@ templating system: Marker-TPL</p>
 		<b>Package:</b> <a href="package-Templating.Engines.html">Templating:Engines</a><br>
 
 				<b>Version:</b>
-				v.181019<br>
+				v.181217<br>
 				<b>Depends:</b>
 				classes: Smart, SmartFileSystem, SmartFileSysUtils<br>
 				<b>Usage:</b>
@@ -182,7 +188,7 @@ intended for DEVELOPMENT / DEBUG ONLY (never use this in production environments
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$mtemplate</var></dt>
-					<dd>:: The Marker-TPL string</dd>
+					<dd>:: The Markers-TPL string</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -215,7 +221,7 @@ intended for DEVELOPMENT / DEBUG ONLY (never use this in production environments
 this function is intended to pass a template to be rendered via javascript ...)
 NOTICE: This kind of escaped templates can be rendered by client-side javascript
 from a javascript variable in a HTML page using
-SmartJS_CoreUtils.render_markers_template() function (not all features of the
+SmartJS_CoreUtils.renderMarkersTpl() function (not all features of the
 server-side Marker Templating are supported, see the SmartJS_CoreUtils
 documentation ...)</p>
 
@@ -227,7 +233,7 @@ documentation ...)</p>
 this function is intended to pass a template to be rendered via javascript ...)
 NOTICE: This kind of escaped templates can be rendered by client-side javascript
 from a javascript variable in a HTML page using
-SmartJS_CoreUtils.render_markers_template() function (not all features of the
+SmartJS_CoreUtils.renderMarkersTpl() function (not all features of the
 server-side Marker Templating are supported, see the SmartJS_CoreUtils
 documentation ...)</p>
 
@@ -236,11 +242,11 @@ documentation ...)</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$mtemplate</var></dt>
-					<dd>:: The Marker-TPL string (partial text/html + markers) ; Ex:
+					<dd>:: The Markers-TPL string (partial text/html + markers) ; Ex:
 '&lt;span&gt;[####MARKER1####]&lt;br&gt;
 [####MARKER2####], ...&lt;/span&gt;'</dd>
 					<dt><var>$y_ignore_if_empty</var></dt>
-					<dd>:: 'yes' will ignore if Marker-TPL is empty ; 'no' will add a warning (default)</dd>
+					<dd>:: 'yes' will ignore if Markers-TPL is empty ; 'no' will add a warning (default)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -285,7 +291,7 @@ there is no possibility to set a relative path from where to get them)</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$mtemplate</var></dt>
-					<dd>:: The Marker-TPL string (partial text/html + markers) ; Ex:
+					<dd>:: The Markers-TPL string (partial text/html + markers) ; Ex:
 '&lt;span&gt;[####MARKER1####]&lt;br&gt;
 [####MARKER2####], ...&lt;/span&gt;'</dd>
 					<dt><var>$y_arr_vars</var></dt>
@@ -293,7 +299,7 @@ there is no possibility to set a relative path from where to get them)</p>
 template markers is case insensitive ; Ex: [ 'MARKER1' =&amp;gt; 'Value1', 'marker2'
 =&amp;gt; 'Value2', ..., 'MarkerN' =&amp;gt; 100 ]</dd>
 					<dt><var>$y_ignore_if_empty</var></dt>
-					<dd>:: 'yes' will ignore if Marker-TPL is empty ; 'no' will add a warning (default)</dd>
+					<dd>:: 'yes' will ignore if Markers-TPL is empty ; 'no' will add a warning (default)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -335,7 +341,7 @@ template markers is case insensitive ; Ex: [ 'MARKER1' =&amp;gt; 'Value1', 'mark
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$y_file_path</var></dt>
-					<dd>:: The relative path to the file Marker-TPL (partial text/html + markers +
+					<dd>:: The relative path to the file Markers-TPL (partial text/html + markers +
 &lt;em&gt;sub-templates&lt;/em&gt;) ; if sub-templates are used, they will use the base path
 from this (main template) file ; Ex: views/my-template.inc.htm ; (partial
 text/html + markers) ; Ex (file content): '&lt;span&gt;[####MARKER1####]&lt;br&gt;
@@ -383,7 +389,7 @@ once per execution) ; 'no' means no caching is used (default)</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-11-06 14:25</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2019-01-07 13:21</a>
 	</div>
 </div>
 </div>

@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartUtils | Smart.Framework Documentation :: 2018-11-06 14:25</title>
+	<title>Class SmartUtils | Smart.Framework Documentation :: 2019-01-07 13:21</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?4174473549"></script>
-	<script src="elementlist.js?2400639511"></script>
+	<script src="elementlist.js?1710610607"></script>
 </head>
 
 <body>
@@ -53,7 +53,11 @@
 						</li>
 				<li><a href="package-Mailer.html">Mailer</a>
 						</li>
+				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
+						</li>
 				<li><a href="package-Network.html">Network</a>
+						</li>
+				<li><a href="package-PageBuilder.html">PageBuilder</a>
 						</li>
 				<li><a href="package-Parsers.html">Parsers</a>
 						</li>
@@ -121,7 +125,7 @@
 	<div class="description">
 	
 <p>Class: SmartUtils - provides various utility functions for
-SmartFramework.</p>
+Smart.Framework</p>
 
 	</div>
 
@@ -140,7 +144,7 @@ SmartFramework.</p>
 		<b>Package:</b> <a href="package-Base.html">Base</a><br>
 
 				<b>Version:</b>
-				v.181019.r2<br>
+				v.20190103<br>
 				<b>Depends:</b>
 				classes: Smart, SmartValidator, SmartHashCrypto, SmartAuth, SmartFileSysUtils,
 SmartFileSystem, SmartHttpClient<br>
@@ -530,7 +534,7 @@ SmartFileSystem, SmartHttpClient<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="print_array_to_html" id="_print_array_to_html">
+	<tr data-order="pretty_print_var" id="_pretty_print_var">
 
 		<td class="attributes"><code>
 			 public static
@@ -540,8 +544,8 @@ SmartFileSystem, SmartHttpClient<br>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_print_array_to_html">#</a>
-		<code>print_array_to_html( <span>mixed <var>$y_aray</var></span> )</code>
+		<a class="anchor" href="#_pretty_print_var">#</a>
+		<code>pretty_print_var( <span>mixed <var>$y_var</var></span>, <span>mixed <var>$indent</var> = <span class="php-num">0</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1081,6 +1085,35 @@ SmartFileSystem, SmartHttpClient<br>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="decode_download_link" id="_decode_download_link">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_decode_download_link">#</a>
+		<code>decode_download_link( <span>mixed <var>$y_encrypted_link</var></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="create_download_link" id="_create_download_link">
 
 		<td class="attributes"><code>
@@ -1110,7 +1143,7 @@ SmartFileSystem, SmartHttpClient<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="guess_image_extension_by_all_bytes" id="_guess_image_extension_by_all_bytes">
+	<tr data-order="guess_image_extension_by_img_content" id="_guess_image_extension_by_img_content">
 
 		<td class="attributes"><code>
 			 public static
@@ -1120,37 +1153,8 @@ SmartFileSystem, SmartHttpClient<br>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_guess_image_extension_by_all_bytes">#</a>
-		<code>guess_image_extension_by_all_bytes( <span>mixed <var>$pict</var></span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="guess_image_extension_by_first_bytes" id="_guess_image_extension_by_first_bytes">
-
-		<td class="attributes"><code>
-			 public static
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_guess_image_extension_by_first_bytes">#</a>
-		<code>guess_image_extension_by_first_bytes( <span>mixed <var>$pict</var></span> )</code>
+		<a class="anchor" href="#_guess_image_extension_by_img_content">#</a>
+		<code>guess_image_extension_by_img_content( <span>mixed <var>$pict</var></span>, <span>mixed <var>$use_gd</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			
@@ -1243,8 +1247,8 @@ class</p>
 the $y_url_or_path to get is detected to be under current URL will send also the
 Unique / session IDs ; more if detected that is from admin.php and if this is
 set to YES will send the HTTP-BASIC Auth credentials if detected (using YES with
-other URLs than SmartFramework's current URL can be a serious SECURITY ISSUE, so
-don't !)</dd>
+other URLs than Smart.Framework's current URL can be a serious SECURITY ISSUE,
+so don't !)</dd>
 				</dl></div>
 
 
@@ -2112,7 +2116,7 @@ don't !)</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-11-06 14:25</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2019-01-07 13:21</a>
 	</div>
 </div>
 </div>

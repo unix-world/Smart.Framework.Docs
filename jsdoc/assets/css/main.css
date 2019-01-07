@@ -16,6 +16,9 @@ Here's a quick lookup table:
 18px - 138.462%
 19px - 146.154%
 20px - 153.846%
+
+contains fixes by unixman: removed missing PNG background
+
 */
 
 html {
@@ -353,9 +356,6 @@ th {
 
 
 a.external {
-    background-image: url(external-small.png);
-    background-repeat: no-repeat;
-    background-position: 0 0;
     padding-left: 16px;
 }
 

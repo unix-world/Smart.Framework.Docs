@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartModExtLib\TplTwig\Templating | Smart.Framework Documentation :: 2018-11-06 14:25</title>
+	<title>Class SmartTypo3FluidTemplating | Smart.Framework Documentation :: 2019-01-07 13:21</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?4174473549"></script>
-	<script src="elementlist.js?2400639511"></script>
+	<script src="elementlist.js?1710610607"></script>
 </head>
 
 <body>
@@ -53,7 +53,11 @@
 						</li>
 				<li><a href="package-Mailer.html">Mailer</a>
 						</li>
+				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
+						</li>
 				<li><a href="package-Network.html">Network</a>
+						</li>
+				<li><a href="package-PageBuilder.html">PageBuilder</a>
 						</li>
 				<li><a href="package-Parsers.html">Parsers</a>
 						</li>
@@ -69,8 +73,10 @@
 			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-SmartMarkersTemplating.html">SmartMarkersTemplating</a></li>
-				<li class="active"><a href="class-SmartModExtLib.TplTwig.Templating.html">SmartModExtLib\TplTwig\Templating</a></li>
+				<li><a href="class-SmartNetteLatteTemplating.html">SmartNetteLatteTemplating</a></li>
+				<li><a href="class-SmartTemplating.html">SmartTemplating</a></li>
 				<li><a href="class-SmartTwigTemplating.html">SmartTwigTemplating</a></li>
+				<li class="active"><a href="class-SmartTypo3FluidTemplating.html">SmartTypo3FluidTemplating</a></li>
 			</ul>
 
 
@@ -113,12 +119,13 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class Templating</h1>
+	<h1>Class SmartTypo3FluidTemplating</h1>
 
 
 	<div class="description">
 	
-<p>Provides connector for Twig Templating inside the Smart.Framework.</p>
+<p>Provides an easy to use connector for Typo3Fluid Templating Engine inside the
+Smart.Framework.</p>
 
 <pre>
 
@@ -128,10 +135,9 @@ class="php-comment">// Sample: use this code in a controller of Smart.Framework 
 class="php-var">$this</span>-&gt;PageViewSetVar(
     <span
 class="php-quote">'main'</span>,
-    (<span
-class="php-keyword1">new</span> \SmartModExtLib\TplTwig\Templating())-&gt;render(
+    SmartTypo3FluidTemplating::render_file_template(
         <span
-class="php-quote">'modules/my-module-name/views/myView.twig.htm'</span>,
+class="php-quote">'modules/my-module-name/views/my-view.t3fluid.htm'</span>,
         [
             <span
 class="php-quote">'someVar'</span> =&gt; <span
@@ -159,64 +165,34 @@ class="php-quote">'Y-m-d H:i:s'</span>)
 	<div class="info">
 		<b>Final</b><br>
 		
-		<b>Namespace:</b> SmartModExtLib\TplTwig<br>
+		
 		<b>Package:</b> <a href="package-Templating.Engines.html">Templating:Engines</a><br>
 
 				<b>Version:</b>
-				v.181105<br>
+				v.181217<br>
 				<b>Depends:</b>
-				extensions: classes: \SmartModExtLib\TplTwig\SmartTwigEnvironment, Twig<br>
+				classes: Latte, \SmartModExtLib\TplTypo3Fluid\Templating<br>
 				<b>Usage:</b>
-				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
-methods<br>
-		<b>Located at</b> modules/mod-tpl-twig/libs/Templating.php<br>
+				static object: Class::method() - This class provides only STATIC methods<br>
+		<b>Located at</b> modules/smart-extra-libs/lib_templating_ext.php<br>
 	</div>
 
 
 
 	<table class="summary methods" id="methods">
 	<caption>Methods summary</caption>
-	<tr data-order="__construct" id="___construct">
+	<tr data-order="render_file_template" id="_render_file_template">
 
 		<td class="attributes"><code>
-			 public 
+			 public static
 			
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#___construct">#</a>
-		<code>__construct( )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="render" id="_render">
-
-		<td class="attributes"><code>
-			 public 
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_render">#</a>
-		<code>render( <span>mixed <var>$file</var></span>, <span>mixed <var>$arr_vars</var> = <span class="php-keyword1">array</span>()</span>, <span>mixed <var>$onlydebug</var> = <span class="php-keyword1">false</span></span> )</code>
+		<a class="anchor" href="#_render_file_template">#</a>
+		<code>render_file_template( <span>mixed <var>$file</var></span>, <span>mixed <var>$arr_vars</var> = <span class="php-keyword1">array</span>()</span>, <span>mixed <var>$onlydebug</var> = <span class="php-keyword1">false</span></span> )</code>
 
 		<div class="description short">
 			
@@ -256,7 +232,7 @@ methods<br>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-11-06 14:25</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2019-01-07 13:21</a>
 	</div>
 </div>
 </div>

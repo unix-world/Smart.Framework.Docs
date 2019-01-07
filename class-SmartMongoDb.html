@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartMongoDb | Smart.Framework Documentation :: 2018-11-06 14:25</title>
+	<title>Class SmartMongoDb | Smart.Framework Documentation :: 2019-01-07 13:21</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?4174473549"></script>
-	<script src="elementlist.js?2400639511"></script>
+	<script src="elementlist.js?1710610607"></script>
 </head>
 
 <body>
@@ -53,7 +53,11 @@
 						</li>
 				<li><a href="package-Mailer.html">Mailer</a>
 						</li>
+				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
+						</li>
 				<li><a href="package-Network.html">Network</a>
+						</li>
+				<li><a href="package-PageBuilder.html">PageBuilder</a>
 						</li>
 				<li><a href="package-Parsers.html">Parsers</a>
 						</li>
@@ -116,7 +120,115 @@
 
 	<div class="description">
 	
-<p>Class Smart MongoDB Client (for PHP-MongoDB v.1.0.1 or later)</p>
+<p>Class Smart MongoDB Client (for PHP MongoDB extension v.1.0.1 or later)
+Tested and Stable on MongoDB Server versions: 3.2 / 3.3 / 3.4 / 3.5 / 3.6 / 3.7
+/ 3.8 / 3.9 / 4.0 / 4.1</p>
+
+<pre>
+
+<span class="php-comment">// sample mongo config</span>
+<span
+class="php-var">$cfg_mongo</span> = <span
+class="php-keyword1">array</span>();
+<span
+class="php-var">$cfg_mongo</span>[<span
+class="php-quote">'type'</span>]              = <span
+class="php-quote">'mongo-standalone'</span>;                                   <span
+class="php-comment">// mongodb server(s) type: 'mongo-standalone' | 'mongo-cluster' (sharding)</span>
+<span
+class="php-var">$cfg_mongo</span>[<span
+class="php-quote">'server-host'</span>]       = <span
+class="php-quote">'127.0.0.1'</span>;                                          <span
+class="php-comment">// mongodb host</span>
+<span
+class="php-var">$cfg_mongo</span>[<span
+class="php-quote">'server-port'</span>]       = <span
+class="php-quote">'27017'</span>;                                              <span
+class="php-comment">// mongodb port</span>
+<span
+class="php-var">$cfg_mongo</span>[<span
+class="php-quote">'dbname'</span>]            = <span
+class="php-quote">'smart_framework'</span>;                                    <span
+class="php-comment">// mongodb database</span>
+<span
+class="php-var">$cfg_mongo</span>[<span
+class="php-quote">'username'</span>]          = <span
+class="php-quote">''</span>;                                                   <span
+class="php-comment">// mongodb username</span>
+<span
+class="php-var">$cfg_mongo</span>[<span
+class="php-quote">'password'</span>]          = <span
+class="php-quote">''</span>;                                                   <span
+class="php-comment">// mongodb Base64-Encoded password</span>
+<span
+class="php-var">$cfg_mongo</span>[<span
+class="php-quote">'timeout'</span>]           = <span
+class="php-num">5</span>;                                                    <span
+class="php-comment">// mongodb connect timeout in seconds</span>
+<span
+class="php-var">$cfg_mongo</span>[<span
+class="php-quote">'slowtime'</span>]          = <span
+class="php-num">0.0035</span>;                                               <span
+class="php-comment">// 0.0025 .. 0.0090 slow query time (for debugging)</span>
+
+<span
+class="php-var">$mongo</span> = <span
+class="php-keyword1">new</span> \SmartMongoDb(<span
+class="php-var">$cfg_mongo</span>);
+
+<span
+class="php-comment">// sample insert</span>
+<span
+class="php-var">$doc</span> = [];
+<span class="php-var">$doc</span>[<span
+class="php-quote">'_id'</span>]  = <span
+class="php-var">$mongo</span>-&gt;assign_uuid();
+<span
+class="php-var">$doc</span>[<span class="php-quote">'name'</span>] = <span
+class="php-quote">'My Name'</span>;
+<span class="php-var">$doc</span>[<span
+class="php-quote">'description'</span>] = <span
+class="php-quote">'Some description goes here ...'</span>;
+<span
+class="php-var">$insert</span> = <span
+class="php-var">$mongo</span>-&gt;insert(<span
+class="php-quote">'myTestCollection'</span>, <span
+class="php-var">$doc</span>);
+<span class="php-keyword2">var_dump</span>(<span
+class="php-var">$insert</span>);
+
+<span
+class="php-comment">// sample find</span>
+<span
+class="php-var">$query</span> = <span
+class="php-var">$mongo</span>-&gt;find(
+        <span
+class="php-quote">'myTestCollection'</span>,
+        [ <span
+class="php-quote">'name'</span> =&gt; <span
+class="php-quote">'My Name'</span> ], <span
+class="php-comment">// filter (update all except these)</span>
+        [ <span
+class="php-comment">// projection</span>
+                <span
+class="php-quote">'name'</span>,
+                <span
+class="php-quote">'description'</span>
+        ],
+        [
+                <span
+class="php-quote">'limit'</span> =&gt; <span class="php-num">1</span>, <span
+class="php-comment">// limit</span>
+                <span
+class="php-quote">'skip'</span> =&gt; <span class="php-num">0</span> <span
+class="php-comment">// offset</span>
+        ]
+);
+<span
+class="php-keyword2">var_dump</span>(<span
+class="php-var">$query</span>);
+
+</pre>
 
 	</div>
 
@@ -135,9 +247,14 @@
 		<b>Package:</b> <a href="package-Database.MongoDB.html">Database:MongoDB</a><br>
 
 				<b>Version:</b>
-				v.181019<br>
+				v.181222<br>
 				<b>Depends:</b>
 				extensions: PHP MongoDB (v.1.0.1 or later) ; classes: Smart<br>
+				<b>Hint:</b>
+				Important: MongoDB database specifies that max BSON document size is 16
+megabytes, thus this limit cannot be exceeded from PHP side when creating new
+mongodb documents: <a
+href="https://docs.mongodb.com/manual/reference/limits/">https://docs.mongodb.com/manual/reference/limits/</a><br>
 				<b>Usage:</b>
 				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
 methods<br>
@@ -193,7 +310,7 @@ should be identical with the default config.php: $configs['mongodb'].</dd>
 
 		<td class="attributes"><code>
 			 public 
-			
+			STRING
 			
 			</code>
 		</td>
@@ -204,13 +321,23 @@ should be identical with the default config.php: $configs['mongodb'].</dd>
 
 		<div class="description short">
 			
+<p>A replacement for the default MongoDB object ID, will generate a 32
+characters very unique UUID</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>A replacement for the default MongoDB object ID, will generate a 32
+characters very unique UUID</p>
 
 
 
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: UUID (base36)<br>
+				</div>
 
 
 
@@ -222,7 +349,7 @@ should be identical with the default config.php: $configs['mongodb'].</dd>
 
 		<td class="attributes"><code>
 			 public 
-			
+			STRING
 			
 			</code>
 		</td>
@@ -233,13 +360,21 @@ should be identical with the default config.php: $configs['mongodb'].</dd>
 
 		<div class="description short">
 			
+<p>Get the MongoDB server version</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Get the MongoDB server version</p>
 
 
 
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: MongoDB version<br>
+				</div>
 
 
 
@@ -247,28 +382,45 @@ should be identical with the default config.php: $configs['mongodb'].</dd>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="command_is_ok" id="_command_is_ok">
+	<tr data-order="is_command_ok" id="_is_command_ok">
 
 		<td class="attributes"><code>
 			 public 
-			
+			BOOLEAN
 			
 			</code>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_command_is_ok">#</a>
-		<code>command_is_ok( <span>mixed <var>$result</var></span> )</code>
+		<a class="anchor" href="#_is_command_ok">#</a>
+		<code>is_command_ok( <span>MIXED <var>$result</var></span> )</code>
 
 		<div class="description short">
 			
+<p>Test if a command output is OK compliant (will check if result[0][ok] == 1)
+Notice: not all MongoDB commands will return this standard answer, but for most
+will work</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>Test if a command output is OK compliant (will check if result[0][ok] == 1)
+Notice: not all MongoDB commands will return this standard answer, but for most
+will work</p>
 
 
 
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$result</var></dt>
+					<dd>:: result output from a mongodb command</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>BOOLEAN</code><br>:: TRUE / FALSE<br>
+				</div>
 
 
 
@@ -337,17 +489,19 @@ should be identical with the default config.php: $configs['mongodb'].</dd>
 
 		<td class="name"><div>
 		<a class="anchor" href="#m_find">#</a>
-		<code>find( <span>mixed <var>$strCollection</var></span>, <span>mixed <var>$arrQuery</var></span>, <span>mixed <var>$arrProjFields</var></span> )</code>
+		<code>find( <span>mixed <var>$strCollection</var></span>, <span>mixed <var>$arrQuery</var></span>, <span>mixed <var>$arrProjFields</var></span>, <span>mixed <var>$arrOptions</var></span> )</code>
 
 		<div class="description short">
 			
-<p>in a collection with optional filter criteria / limit</p>
+<p># find single or multiple documents in a collection with optional filter
+criteria / limit</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>in a collection with optional filter criteria / limit</p>
+<p># find single or multiple documents in a collection with optional filter
+criteria / limit</p>
 
 
 
@@ -358,6 +512,8 @@ should be identical with the default config.php: $configs['mongodb'].</dd>
 					<dt><var>$arrQuery</var></dt>
 					<dd></dd>
 					<dt><var>$arrProjFields</var></dt>
+					<dd></dd>
+					<dt><var>$arrOptions</var></dt>
 					<dd></dd>
 				</dl></div>
 
@@ -510,6 +666,56 @@ limit</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="upsert" id="m_upsert">
+
+		<td class="attributes"><code>
+			 public 
+			MIXED
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#m_upsert">#</a>
+		<code>upsert( <span>mixed <var>$strCollection</var></span>, <span>mixed <var>$arrFilter</var></span>, <span>mixed <var>$strUpdOp</var></span>, <span>mixed <var>$arrUpd</var></span> )</code>
+
+		<div class="description short">
+			
+<p># insert single or modify single or multi documents in a collection that are
+matching the filter criteria</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p># insert single or modify single or multi documents in a collection that are
+matching the filter criteria</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$strCollection</var></dt>
+					<dd></dd>
+					<dt><var>$arrFilter</var></dt>
+					<dd></dd>
+					<dt><var>$strUpdOp</var></dt>
+					<dd></dd>
+					<dt><var>$arrUpd</var></dt>
+					<dd></dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>MIXED</code><br>MIXED<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="update" id="m_update">
 
 		<td class="attributes"><code>
@@ -521,17 +727,19 @@ limit</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#m_update">#</a>
-		<code>update( <span>mixed <var>$strCollection</var></span>, <span>mixed <var>$arrFilter</var></span>, <span>mixed <var>$strUpdOp</var></span> )</code>
+		<code>update( <span>mixed <var>$strCollection</var></span>, <span>mixed <var>$arrFilter</var></span>, <span>mixed <var>$strUpdOp</var></span>, <span>mixed <var>$arrUpd</var></span> )</code>
 
 		<div class="description short">
 			
-<p>in a collection that are matching the filter criteria</p>
+<p># modify single or many documents in a collection that are matching the
+filter criteria</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>in a collection that are matching the filter criteria</p>
+<p># modify single or many documents in a collection that are matching the
+filter criteria</p>
 
 
 
@@ -542,6 +750,8 @@ limit</p>
 					<dt><var>$arrFilter</var></dt>
 					<dd></dd>
 					<dt><var>$strUpdOp</var></dt>
+					<dd></dd>
+					<dt><var>$arrUpd</var></dt>
 					<dd></dd>
 				</dl></div>
 
@@ -567,23 +777,27 @@ limit</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#m_delete">#</a>
-		<code>delete( <span>mixed <var>$strCollection</var></span> )</code>
+		<code>delete( <span>mixed <var>$strCollection</var></span>, <span>mixed <var>$arrFilter</var></span> )</code>
 
 		<div class="description short">
 			
-<p>from a collection that are matching the filter criteria</p>
+<p># delete single or many documents from a collection that are matching the
+filter criteria</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>from a collection that are matching the filter criteria</p>
+<p># delete single or many documents from a collection that are matching the
+filter criteria</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$strCollection</var></dt>
+					<dd></dd>
+					<dt><var>$arrFilter</var></dt>
 					<dd></dd>
 				</dl></div>
 
@@ -613,15 +827,15 @@ limit</p>
 
 		<div class="description short">
 			
-<p># run a command over database like: distinct, groupBy, mapReduce,
-createCollection, dropCollection</p>
+<p># run a command over database like: aggregate, distinct, mapReduce, create
+Collection, drop Collection, ...</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p># run a command over database like: distinct, groupBy, mapReduce,
-createCollection, dropCollection</p>
+<p># run a command over database like: aggregate, distinct, mapReduce, create
+Collection, drop Collection, ...</p>
 
 
 
@@ -653,16 +867,31 @@ createCollection, dropCollection</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#m_igcommand">#</a>
-		<code>igcommand( )</code>
+		<code>igcommand( <span>mixed <var>$arrCmd</var></span> )</code>
 
 		<div class="description short">
 			
+<p># run a command over database and ignore if error ; in the case of throw
+error will ignore it and will not stop execution ; will return the errors
+instead of result like: create Collection which may throw errors if collection
+already exists, drop Collection, similar if does not exists</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p># run a command over database and ignore if error ; in the case of throw
+error will ignore it and will not stop execution ; will return the errors
+instead of result like: create Collection which may throw errors if collection
+already exists, drop Collection, similar if does not exists</p>
 
 
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$arrCmd</var></dt>
+					<dd></dd>
+				</dl></div>
 
 				<h4>Returns</h4>
 				<div class="list">
@@ -694,7 +923,7 @@ createCollection, dropCollection</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-11-06 14:25</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2019-01-07 13:21</a>
 	</div>
 </div>
 </div>

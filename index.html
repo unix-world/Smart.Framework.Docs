@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Smart.Framework Documentation :: 2018-11-06 14:25</title>
+	<title>Smart.Framework Documentation v.3.7.8 r.2019.01.03 :: 2019-01-07 13:21</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js"></script>
 	<script src="elementlist.js"></script>
@@ -16,15 +16,12 @@
 		<div id="groups">
 			<h3>Javascript Packages</h3>
 			<ul>
-				<li><a href="jsdoc/modules/Smart.Framework_JS_Archivers.html">Archivers</a></li>
-				<li><a href="jsdoc/modules/Smart.Framework_JS_Browser.html">Browser</a></li>
-				<li><a href="jsdoc/modules/Smart.Framework_JS_Core.html">Core</a></li>
-				<li><a href="jsdoc/modules/Smart.Framework_JS_Crypto.html">Crypto</a></li>
+				<li><a href="jsdoc/index.html" target="_blank">Core / Crypto / Browser / Archivers</a></li>
 			</ul>
 		</div>
 
 		<div id="groups">
-			<h3>PHP Packages</h3>
+			<h3>Packages</h3>
 			<ul>
 				<li><a href="package-Application.html">Application</a>
 						</li>
@@ -62,7 +59,11 @@
 						</li>
 				<li><a href="package-Mailer.html">Mailer</a>
 						</li>
+				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
+						</li>
 				<li><a href="package-Network.html">Network</a>
+						</li>
+				<li><a href="package-PageBuilder.html">PageBuilder</a>
 						</li>
 				<li><a href="package-Parsers.html">Parsers</a>
 						</li>
@@ -73,9 +74,8 @@
 
 		<hr>
 
-
 		<div id="elements">
-			<h3>PHP Classes</h3>
+			<h3>Classes</h3>
 			<ul>
 				<li><a href="class-Smart.html">Smart</a></li>
 				<li><a href="class-SmartAbstractAppController.html">SmartAbstractAppController</a></li>
@@ -119,10 +119,13 @@
 				<li><a href="class-SmartMarkersTemplating.html">SmartMarkersTemplating</a></li>
 				<li><a href="class-SmartModExtLib.DbalZend.DbalPdo.html">SmartModExtLib\DbalZend\DbalPdo</a></li>
 				<li><a href="class-SmartModExtLib.LangDetect.LanguageNgrams.html">SmartModExtLib\LangDetect\LanguageNgrams</a></li>
-				<li><a href="class-SmartModExtLib.TplTwig.Templating.html">SmartModExtLib\TplTwig\Templating</a></li>
+				<li><a href="class-SmartModExtLib.MediaGallery.Manager.html">SmartModExtLib\MediaGallery\Manager</a></li>
+				<li><a href="class-SmartModExtLib.PageBuilder.AbstractFrontendController.html">SmartModExtLib\PageBuilder\AbstractFrontendController</a></li>
+				<li><a href="class-SmartModExtLib.PageBuilder.AbstractFrontendPlugin.html">SmartModExtLib\PageBuilder\AbstractFrontendPlugin</a></li>
 				<li><a href="class-SmartMongoDb.html">SmartMongoDb</a></li>
 				<li><a href="class-SmartMysqliDb.html">SmartMysqliDb</a></li>
 				<li><a href="class-SmartMysqliExtDb.html">SmartMysqliExtDb</a></li>
+				<li><a href="class-SmartNetteLatteTemplating.html">SmartNetteLatteTemplating</a></li>
 				<li><a href="class-SmartParser.html">SmartParser</a></li>
 				<li><a href="class-SmartPdfExport.html">SmartPdfExport</a></li>
 				<li><a href="class-SmartPersistentCache.html">SmartPersistentCache</a></li>
@@ -133,8 +136,10 @@
 				<li><a href="class-SmartSession.html">SmartSession</a></li>
 				<li><a href="class-SmartSolrDb.html">SmartSolrDb</a></li>
 				<li><a href="class-SmartSQliteDb.html">SmartSQliteDb</a></li>
+				<li><a href="class-SmartTemplating.html">SmartTemplating</a></li>
 				<li><a href="class-SmartTextTranslations.html">SmartTextTranslations</a></li>
 				<li><a href="class-SmartTwigTemplating.html">SmartTwigTemplating</a></li>
+				<li><a href="class-SmartTypo3FluidTemplating.html">SmartTypo3FluidTemplating</a></li>
 				<li><a href="class-SmartUnicode.html">SmartUnicode</a></li>
 				<li><a href="class-SmartUtils.html">SmartUtils</a></li>
 				<li><a href="class-SmartValidator.html">SmartValidator</a></li>
@@ -143,10 +148,6 @@
 				<li><a href="class-SmartYamlConverter.html">SmartYamlConverter</a></li>
 				<li><a href="class-SmartZipArchive.html">SmartZipArchive</a></li>
 			</ul>
-
-
-
-
 
 		</div>
 	</div>
@@ -182,22 +183,12 @@
 	</div>
 
 <div id="content">
-	<h1>Smart.Framework Documentation :: 2018-11-06 14:25</h1>
-	<h3>@version: v.3.7.7</h3>
-	<br>
-	<br>
-	<div>
-	&raquo; <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework</a>, <a href="https://github.com/unix-world/Smart.Framework" target="_blank">an opensource</a>, <a href="https://github.com/unix-world/Smart.Framework.Modules" target="_blank">extensible</a>, modern, high performance PHP / Javascript Framework for Web featuring MVC + Middlewares<br>
-	&raquo; License: <a href="https://opensource.org/licenses/BSD-3-Clause" target="_blank">BSD</a><br>
-	&raquo; (c) 2009 - 2018 <a href="https://unix-world.org/" target="_blank">unix-world.org</a><br>
-	</div>
-	<br>
-	<br>
-	<br>
+	<h1>Smart.Framework Documentation v.3.7.8 r.2019.01.03 :: 2019-01-07 13:21</h1>
+	<h2>supports: PHP 5.6 / 7.0 / 7.1 / 7.2 / 7.3</h2>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-11-06 14:25</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2019-01-07 13:21</a>
 	</div>
 </div>
 </div>

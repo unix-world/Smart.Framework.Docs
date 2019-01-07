@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartMailerUtils | Smart.Framework Documentation :: 2018-11-06 14:25</title>
+	<title>Class SmartMailerUtils | Smart.Framework Documentation :: 2019-01-07 13:21</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?4174473549"></script>
-	<script src="elementlist.js?2400639511"></script>
+	<script src="elementlist.js?1710610607"></script>
 </head>
 
 <body>
@@ -53,7 +53,11 @@
 						</li>
 				<li class="active"><a href="package-Mailer.html">Mailer</a>
 						</li>
+				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
+						</li>
 				<li><a href="package-Network.html">Network</a>
+						</li>
+				<li><a href="package-PageBuilder.html">PageBuilder</a>
 						</li>
 				<li><a href="package-Parsers.html">Parsers</a>
 						</li>
@@ -142,7 +146,7 @@ Check/Validate, Send.</p>
 		<b>Package:</b> <a href="package-Mailer.html">Mailer</a><br>
 
 				<b>Version:</b>
-				v.181019<br>
+				v.20190105<br>
 				<b>Depends:</b>
 				classes: Smart, SmartUtils, SmartFileSysUtils, SmartFileSystem, SmartMailerSend<br>
 				<b>Usage:</b>
@@ -265,7 +269,7 @@ email with MX + SMTP validation</dd>
 
 		<div class="description short">
 			
-<p>Send Email Mime Message from SmartFramework to a destination with optional
+<p>Send Email Mime Message from Smart.Framework to a destination with optional
 log of sent messages to a specific directory It will use the default server
 settings from configs: $configs['sendmail'][]</p>
 
@@ -273,7 +277,7 @@ settings from configs: $configs['sendmail'][]</p>
 
 		<div class="description detailed hidden">
 			
-<p>Send Email Mime Message from SmartFramework to a destination with optional
+<p>Send Email Mime Message from Smart.Framework to a destination with optional
 log of sent messages to a specific directory It will use the default server
 settings from configs: $configs['sendmail'][]</p>
 
@@ -311,7 +315,7 @@ default is []</dd>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>TRUE/FALSE</code><br>OPERATION RESULT [0 / 1]<br>
+					<code>TRUE/FALSE</code><br>OPERATION RESULT [1 = OK ; 0 = send error ; -1 = error, empty config ]<br>
 				</div>
 
 
@@ -320,7 +324,7 @@ default is []</dd>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="send_extended_email" id="_send_extended_email">
+	<tr data-order="send_custom_email" id="_send_custom_email">
 
 		<td class="attributes"><code>
 			 public static
@@ -330,31 +334,34 @@ default is []</dd>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_send_extended_email">#</a>
-		<code>send_extended_email( <span>ARRAY <var>$y_server_settings</var></span>, <span>ENUM <var>$y_mode</var></span>, <span>STRING/ARRAY <var>$to</var></span>, <span>STRING/ARRAY <var>$cc</var></span>, <span>STRING <var>$bcc</var></span>, <span>STRING <var>$subj</var></span>, <span>STRING <var>$message</var></span>, <span>TRUE/FALSE <var>$is_html</var></span>, <span>ARRAY <var>$attachments</var> = []</span>, <span>STRING <var>$replytoaddr</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$inreplyto</var> = <span class="php-quote">''</span></span>, <span>ENUM <var>$priority</var> = <span class="php-num">3</span></span>, <span>ENUM <var>$charset</var> = <span class="php-quote">'UTF-8'</span></span> )</code>
+		<a class="anchor" href="#_send_custom_email">#</a>
+		<code>send_custom_email( <span>ARRAY <var>$mail_config</var></span>, <span>STRING <var>$logsend_dir</var></span>, <span>STRING/ARRAY <var>$to</var></span>, <span>STRING/ARRAY <var>$cc</var></span>, <span>STRING <var>$bcc</var></span>, <span>STRING <var>$subj</var></span>, <span>STRING <var>$message</var></span>, <span>TRUE/FALSE <var>$is_html</var></span>, <span>ARRAY <var>$attachments</var> = []</span>, <span>STRING <var>$replytoaddr</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$inreplyto</var> = <span class="php-quote">''</span></span>, <span>ENUM <var>$priority</var> = <span class="php-quote">'3'</span></span>, <span>ENUM <var>$charset</var> = <span class="php-quote">'UTF-8'</span></span> )</code>
 
 		<div class="description short">
 			
-<p>Send Email Mime Message from custom MailBox to a destination It can use
-custom server settings</p>
+<p>Send Email Mime Message from Smart.Framework to a destination with optional
+log of sent messages to a specific directory It will use custom server settings
+as 1st parameter: $mail_config</p>
 
 		</div>
 
 		<div class="description detailed hidden">
 			
-<p>Send Email Mime Message from custom MailBox to a destination It can use
-custom server settings</p>
+<p>Send Email Mime Message from Smart.Framework to a destination with optional
+log of sent messages to a specific directory It will use custom server settings
+as 1st parameter: $mail_config</p>
 
 
 
 				<h4>Parameters</h4>
 				<div class="list"><dl>
-					<dt><var>$y_server_settings</var></dt>
-					<dd>config array: [ server_name, server_port, server_sslmode, server_auth_user,
-server_auth_pass, send_from_addr, send_from_name, smtp_mxdomain ]</dd>
-					<dt><var>$y_mode</var></dt>
-					<dd>mode: 'send' = do send | 'send-return' = do send + return | 'return' = return
-mime formated mail</dd>
+					<dt><var>$mail_config</var></dt>
+					<dd>config array: [ server-mx-domain, server-host, server-port, server-ssl,
+server-cafile, auth-user, auth-password, from-address, from-name,
+use-qp-encoding ]</dd>
+					<dt><var>$logsend_dir</var></dt>
+					<dd>A Directory relative path where to store send log messages OR Empty (no store):
+'' | 'tmp/my-email-send-log-dir'</dd>
 					<dt><var>$to</var></dt>
 					<dd>To: to@addr | [ 'to1@addr', 'to2@addr', ... ]</dd>
 					<dt><var>$cc</var></dt>
@@ -382,7 +389,8 @@ default is []</dd>
 
 				<h4>Returns</h4>
 				<div class="list">
-					<code>ARRAY</code><br>OPERATION-RESULT, ERROR, LOG, MIME-MESSAGE<br>
+					<code>ARRAY</code><br>[ 'result' =&gt; 'Operation RESULT', 'error' =&gt; 'ERROR Message if any', 'log'
+=&gt; 'Send LOG', 'message' =&gt; 'The Mime MESSAGE' ]<br>
 				</div>
 
 
@@ -413,7 +421,7 @@ default is []</dd>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-11-06 14:25</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2019-01-07 13:21</a>
 	</div>
 </div>
 </div>

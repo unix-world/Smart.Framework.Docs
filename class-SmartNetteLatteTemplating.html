@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Package Components:Core | Smart.Framework Documentation :: 2019-01-07 13:21</title>
+	<title>Class SmartNetteLatteTemplating | Smart.Framework Documentation :: 2019-01-07 13:21</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?4174473549"></script>
 	<script src="elementlist.js?1710610607"></script>
@@ -23,7 +23,7 @@
 						</li>
 				<li><a href="package-Base.html">Base</a>
 						</li>
-				<li class="active"><a href="package-Components.Core.html">Components:Core</a>
+				<li><a href="package-Components.Core.html">Components:Core</a>
 						</li>
 				<li><a href="package-Components.Misc.html">Components:Misc</a>
 						</li>
@@ -61,7 +61,7 @@
 						</li>
 				<li><a href="package-Parsers.html">Parsers</a>
 						</li>
-				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
+				<li class="active"><a href="package-Templating.Engines.html">Templating:Engines</a>
 						</li>
 			</ul>
 		</div>
@@ -72,10 +72,11 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-SmartCalendarComponent.html">SmartCalendarComponent</a></li>
-				<li><a href="class-SmartCaptchaFormCheck.html">SmartCaptchaFormCheck</a></li>
-				<li><a href="class-SmartComponents.html">SmartComponents</a></li>
-				<li><a href="class-SmartHTMLCalendar.html">SmartHTMLCalendar</a></li>
+				<li><a href="class-SmartMarkersTemplating.html">SmartMarkersTemplating</a></li>
+				<li class="active"><a href="class-SmartNetteLatteTemplating.html">SmartNetteLatteTemplating</a></li>
+				<li><a href="class-SmartTemplating.html">SmartTemplating</a></li>
+				<li><a href="class-SmartTwigTemplating.html">SmartTwigTemplating</a></li>
+				<li><a href="class-SmartTypo3FluidTemplating.html">SmartTypo3FluidTemplating</a></li>
 			</ul>
 
 
@@ -102,9 +103,10 @@
 			<li>
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
-			<li class="active">
-<span>Package</span>			</li>
 			<li>
+				<a href="package-Templating.Engines.html" title="Summary of Templating:Engines"><span>Package</span></a>
+			</li>
+			<li class="active">
 <span>Class</span>			</li>
 		</ul>
 		<ul>
@@ -116,32 +118,112 @@
 		</ul>
 	</div>
 
-<div id="content" class="package">
-	<h1>Package Components:Core</h1>
+<div id="content" class="class">
+	<h1>Class SmartNetteLatteTemplating</h1>
+
+
+	<div class="description">
+	
+<p>Provides an easy to use connector for NetteLatte Templating Engine inside the
+Smart.Framework.</p>
+
+<pre>
+
+<span
+class="php-comment">// Sample: use this code in a controller of Smart.Framework (after you install the Smart.Framework.Modules)</span>
+<span
+class="php-var">$this</span>-&gt;PageViewSetVar(
+    <span
+class="php-quote">'main'</span>,
+    SmartNetteLatteTemplating::render_file_template(
+        <span
+class="php-quote">'modules/my-module-name/views/my-view.latte.htm'</span>,
+        [
+            <span
+class="php-quote">'someVar'</span> =&gt; <span
+class="php-quote">'Hello World'</span>,
+            <span
+class="php-quote">'otherVar'</span> =&gt; <span
+class="php-keyword2">date</span>(<span
+class="php-quote">'Y-m-d H:i:s'</span>)
+        ]
+    )
+);
+
+</pre>
+
+	</div>
 
 
 
-<table class="summary" id="classes">
-<caption>Classes summary</caption>
-<tr>
-	<td class="name"><a href="class-SmartCalendarComponent.html">SmartCalendarComponent</a></td>
-	<td>Class: SmartCalendarComponent - Easy to use HTML Calendar Component (with /
-without Events).</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-SmartCaptchaFormCheck.html">SmartCaptchaFormCheck</a></td>
-	<td>Class: SmartCaptchaFormCheck - Render and Check the Captcha Image/Form.</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-SmartComponents.html">SmartComponents</a></td>
-	<td>Class: SmartComponents - provides various components for Smart.Framework</td>
-</tr>
-<tr>
-	<td class="name"><a href="class-SmartHTMLCalendar.html">SmartHTMLCalendar</a></td>
-	<td>Class: SmartHTMLCalendar - Generates a complex HTML Calendar that can handle
-events.</td>
-</tr>
-</table>
+
+
+
+
+
+
+	<div class="info">
+		<b>Final</b><br>
+		
+		
+		<b>Package:</b> <a href="package-Templating.Engines.html">Templating:Engines</a><br>
+
+				<b>Version:</b>
+				v.181217<br>
+				<b>Depends:</b>
+				classes: Latte, \SmartModExtLib\TplNetteLatte\Templating<br>
+				<b>Usage:</b>
+				static object: Class::method() - This class provides only STATIC methods<br>
+		<b>Located at</b> modules/smart-extra-libs/lib_templating_ext.php<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="render_file_template" id="_render_file_template">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_render_file_template">#</a>
+		<code>render_file_template( <span>mixed <var>$file</var></span>, <span>mixed <var>$arr_vars</var> = <span class="php-keyword1">array</span>()</span>, <span>mixed <var>$onlydebug</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

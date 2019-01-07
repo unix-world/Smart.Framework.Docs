@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartMailerSend | Smart.Framework Documentation :: 2019-01-07 13:21</title>
+	<title>Class SmartModExtLib\MediaGallery\Manager | Smart.Framework Documentation :: 2019-01-07 13:21</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?4174473549"></script>
 	<script src="elementlist.js?1710610607"></script>
@@ -51,9 +51,9 @@
 						</li>
 				<li><a href="package-LanguageDetection.html">LanguageDetection</a>
 						</li>
-				<li class="active"><a href="package-Mailer.html">Mailer</a>
+				<li><a href="package-Mailer.html">Mailer</a>
 						</li>
-				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
+				<li class="active"><a href="package-Media.Gallery.html">Media:Gallery</a>
 						</li>
 				<li><a href="package-Network.html">Network</a>
 						</li>
@@ -72,13 +72,7 @@
 		<div id="elements">
 			<h3>Classes</h3>
 			<ul>
-				<li><a href="class-SmartMailerImap4Client.html">SmartMailerImap4Client</a></li>
-				<li><a href="class-SmartMailerMimeDecode.html">SmartMailerMimeDecode</a></li>
-				<li><a href="class-SmartMailerMimeParser.html">SmartMailerMimeParser</a></li>
-				<li><a href="class-SmartMailerPop3Client.html">SmartMailerPop3Client</a></li>
-				<li class="active"><a href="class-SmartMailerSend.html">SmartMailerSend</a></li>
-				<li><a href="class-SmartMailerSmtpClient.html">SmartMailerSmtpClient</a></li>
-				<li><a href="class-SmartMailerUtils.html">SmartMailerUtils</a></li>
+				<li class="active"><a href="class-SmartModExtLib.MediaGallery.Manager.html">SmartModExtLib\MediaGallery\Manager</a></li>
 			</ul>
 
 
@@ -106,7 +100,7 @@
 				<a href="index.html" title="Overview"><span>Overview</span></a>
 			</li>
 			<li>
-				<a href="package-Mailer.html" title="Summary of Mailer"><span>Package</span></a>
+				<a href="package-Media.Gallery.html" title="Summary of Media:Gallery"><span>Package</span></a>
 			</li>
 			<li class="active">
 <span>Class</span>			</li>
@@ -121,21 +115,12 @@
 	</div>
 
 <div id="content" class="class">
-	<h1>Class SmartMailerSend</h1>
+	<h1>Class Manager</h1>
 
 
 	<div class="description">
 	
-<p>Class: SmartMailerSend - provides a Mail Send Client that supports both: MAIL
-or SMTP with SSL/TLS support. It automatically includes the
-SmartMailerSmtpClient class when sending via SMTP method.</p>
-
-<p>This class is for very advanced use. If defined the
-SMART_SOFTWARE_MAILSEND_SAFE_RULES and set to TRUE will use extra safe rules
-when composing email mime messages to be sent (Ex: adding alternate TEXT body to
-HTML email messages) To easy send email messages use:
-SmartMailerUtils::send_email() / SmartMailerUtils::send_extended_email()
-functions.</p>
+<p>Class: SmartMediaGalleryManager - provides the Media Gallery manager.</p>
 
 	</div>
 
@@ -150,17 +135,19 @@ functions.</p>
 	<div class="info">
 		<b>Final</b><br>
 		
-		
-		<b>Package:</b> <a href="package-Mailer.html">Mailer</a><br>
+		<b>Namespace:</b> SmartModExtLib\MediaGallery<br>
+		<b>Package:</b> <a href="package-Media.Gallery.html">Media:Gallery</a><br>
 
 				<b>Version:</b>
-				v.20190105<br>
+				v.181019<br>
 				<b>Depends:</b>
-				classes: Smart<br>
+				extensions: PHP GD Extension (w. TrueColor support) ; executables: imageMagick
+Utility (can replace PHP GD), FFMpeg (for movies) ; classes: Smart, SmartUtils,
+SmartFileSystem<br>
 				<b>Usage:</b>
 				dynamic object: (new Class())-&gt;method() - This class provides only DYNAMIC
 methods<br>
-		<b>Located at</b> lib/core/plugins/lib_mail_send.php<br>
+		<b>Located at</b> modules/mod-media-gallery/libs/Manager.php<br>
 	</div>
 
 
@@ -178,7 +165,7 @@ methods<br>
 
 		<td class="name"><div>
 		<a class="anchor" href="#___construct">#</a>
-		<code>__construct( )</code>
+		<code>__construct( <span>mixed <var>$y_url_player_mov</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -196,7 +183,7 @@ methods<br>
 		</div>
 		</div></td>
 	</tr>
-	<tr data-order="send" id="_send">
+	<tr data-order="draw" id="_draw">
 
 		<td class="attributes"><code>
 			 public 
@@ -206,75 +193,36 @@ methods<br>
 		</td>
 
 		<td class="name"><div>
-		<a class="anchor" href="#_send">#</a>
-		<code>send( <span>mixed <var>$do_send</var></span>, <span>mixed <var>$raw_message</var> = <span class="php-quote">''</span></span> )</code>
+		<a class="anchor" href="#_draw">#</a>
+		<code>draw( <span>STRING <var>$y_title</var></span>, <span>STRING <var>$y_dir</var></span>, <span>*OPTIONAL[yes/no] <var>$y_process_previews_and_images</var> = <span class="php-quote">'no'</span></span>, <span>*OPTIONAL[yes/no] <var>$y_remove_originals</var> = <span class="php-quote">'no'</span></span>, <span>*OPTIONAL[&gt;=0] <var>$y_display_limit</var> = <span class="php-quote">'0'</span></span> )</code>
 
 		<div class="description short">
 			
+<p>[PUBLIC] Draw an Image Gallery</p>
+
 		</div>
 
 		<div class="description detailed hidden">
 			
+<p>[PUBLIC] Draw an Image Gallery</p>
 
 
 
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="add_attachment" id="_add_attachment">
-
-		<td class="attributes"><code>
-			 public 
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_add_attachment">#</a>
-		<code>add_attachment( <span>mixed <var>$message</var></span>, <span>mixed <var>$name</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$ctype</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$disp</var> = <span class="php-quote">'attachment'</span></span>, <span>mixed <var>$cid</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$embed</var> = <span class="php-quote">'no'</span></span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
-
-
-
-
-
-		</div>
-		</div></td>
-	</tr>
-	<tr data-order="secure_header" id="_secure_header">
-
-		<td class="attributes"><code>
-			 public 
-			
-			
-			</code>
-		</td>
-
-		<td class="name"><div>
-		<a class="anchor" href="#_secure_header">#</a>
-		<code>secure_header( <span>mixed <var>$str</var></span> )</code>
-
-		<div class="description short">
-			
-		</div>
-
-		<div class="description detailed hidden">
-			
-
-
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_title</var></dt>
+					<dd>:: a title for the gallery</dd>
+					<dt><var>$y_dir</var></dt>
+					<dd>:: path to scan</dd>
+					<dt><var>$y_process_previews_and_images</var></dt>
+					<dd>:: If = 'yes', will create previews for images and videos (movies) and will
+create conformed images</dd>
+					<dt><var>$y_remove_originals</var></dt>
+					<dd>:: If = 'yes', will remove original (images) after creating previews
+[$y_process_previews_and_images must be yes]</dd>
+					<dt><var>$y_display_limit</var></dt>
+					<dd>:: Items limit to display</dd>
+				</dl></div>
 
 
 
@@ -298,14 +246,14 @@ methods<br>
 
 	<table class="summary properties" id="properties">
 	<caption>Properties summary</caption>
-	<tr data-order="error" id="$error">
+	<tr data-order="use_secure_links" id="$use_secure_links">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$error</var>
+<var>$use_secure_links</var>
 			<div class="description short">
 				
 			</div>
@@ -315,16 +263,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$error" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$use_secure_links" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="log" id="$log">
+	<tr data-order="secure_download_link" id="$secure_download_link">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$log</var>
+<var>$secure_download_link</var>
 			<div class="description short">
 				
 			</div>
@@ -334,16 +282,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$log" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$secure_download_link" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="mime_message" id="$mime_message">
+	<tr data-order="secure_download_ctrl_key" id="$secure_download_ctrl_key">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$mime_message</var>
+<var>$secure_download_ctrl_key</var>
 			<div class="description short">
 				
 			</div>
@@ -353,16 +301,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$mime_message" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$secure_download_ctrl_key" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="debuglevel" id="$debuglevel">
+	<tr data-order="use_styles" id="$use_styles">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$debuglevel</var>
+<var>$use_styles</var>
 			<div class="description short">
 				
 			</div>
@@ -372,35 +320,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$debuglevel" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$use_styles" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="usealways_b64" id="$usealways_b64">
-		<td class="attributes"><code>
-			public  
-			boolean
-		</code></td>
-
-		<td class="name">
-<var>$usealways_b64</var>
-			<div class="description short">
-				
-			</div>
-
-			<div class="description detailed hidden">
-				
-
-			</div>
-		</td>
-		<td class="value"><div><a href="#$usealways_b64" class="anchor">#</a><code><span class="php-keyword1">true</span></code></div></td>
-	</tr>
-	<tr data-order="method" id="$method">
+	<tr data-order="preview_formvar" id="$preview_formvar">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$method</var>
+<var>$preview_formvar</var>
 			<div class="description short">
 				
 			</div>
@@ -410,16 +339,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$method" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$preview_formvar" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="from_return" id="$from_return">
+	<tr data-order="preview_formpict" id="$preview_formpict">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$from_return</var>
+<var>$preview_formpict</var>
 			<div class="description short">
 				
 			</div>
@@ -429,16 +358,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$from_return" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$preview_formpict" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="namefrom" id="$namefrom">
+	<tr data-order="preview_description" id="$preview_description">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$namefrom</var>
+<var>$preview_description</var>
 			<div class="description short">
 				
 			</div>
@@ -448,16 +377,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$namefrom" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$preview_description" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="from" id="$from">
+	<tr data-order="preview_watermark" id="$preview_watermark">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$from</var>
+<var>$preview_watermark</var>
 			<div class="description short">
 				
 			</div>
@@ -467,16 +396,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$from" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$preview_watermark" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="to" id="$to">
+	<tr data-order="preview_place_watermark" id="$preview_place_watermark">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$to</var>
+<var>$preview_place_watermark</var>
 			<div class="description short">
 				
 			</div>
@@ -486,16 +415,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$to" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$preview_place_watermark" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="cc" id="$cc">
+	<tr data-order="preview_width" id="$preview_width">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$cc</var>
+<var>$preview_width</var>
 			<div class="description short">
 				
 			</div>
@@ -505,16 +434,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$cc" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$preview_width" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="bcc" id="$bcc">
+	<tr data-order="preview_height" id="$preview_height">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$bcc</var>
+<var>$preview_height</var>
 			<div class="description short">
 				
 			</div>
@@ -524,16 +453,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$bcc" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$preview_height" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="priority" id="$priority">
+	<tr data-order="preview_quality" id="$preview_quality">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$priority</var>
+<var>$preview_quality</var>
 			<div class="description short">
 				
 			</div>
@@ -543,16 +472,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$priority" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$preview_quality" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="subject" id="$subject">
+	<tr data-order="force_preview_w" id="$force_preview_w">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$subject</var>
+<var>$force_preview_w</var>
 			<div class="description short">
 				
 			</div>
@@ -562,16 +491,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$subject" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$force_preview_w" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="body" id="$body">
+	<tr data-order="force_preview_h" id="$force_preview_h">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$body</var>
+<var>$force_preview_h</var>
 			<div class="description short">
 				
 			</div>
@@ -581,16 +510,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$body" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$force_preview_h" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="headers" id="$headers">
+	<tr data-order="img_width" id="$img_width">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$headers</var>
+<var>$img_width</var>
 			<div class="description short">
 				
 			</div>
@@ -600,16 +529,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$headers" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$img_width" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="is_html" id="$is_html">
+	<tr data-order="img_quality" id="$img_quality">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$is_html</var>
+<var>$img_quality</var>
 			<div class="description short">
 				
 			</div>
@@ -619,16 +548,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$is_html" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$img_quality" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="is_related" id="$is_related">
+	<tr data-order="img_watermark" id="$img_watermark">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$is_related</var>
+<var>$img_watermark</var>
 			<div class="description short">
 				
 			</div>
@@ -638,16 +567,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$is_related" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$img_watermark" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="charset" id="$charset">
+	<tr data-order="img_place_watermark" id="$img_place_watermark">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$charset</var>
+<var>$img_place_watermark</var>
 			<div class="description short">
 				
 			</div>
@@ -657,16 +586,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$charset" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$img_place_watermark" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="smtp_helo" id="$smtp_helo">
+	<tr data-order="mov_pw_watermark" id="$mov_pw_watermark">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$smtp_helo</var>
+<var>$mov_pw_watermark</var>
 			<div class="description short">
 				
 			</div>
@@ -676,16 +605,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$smtp_helo" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$mov_pw_watermark" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="smtp_server" id="$smtp_server">
+	<tr data-order="mov_pw_blank" id="$mov_pw_blank">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$smtp_server</var>
+<var>$mov_pw_blank</var>
 			<div class="description short">
 				
 			</div>
@@ -695,16 +624,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$smtp_server" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$mov_pw_blank" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="smtp_port" id="$smtp_port">
+	<tr data-order="url_player_mov" id="$url_player_mov">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$smtp_port</var>
+<var>$url_player_mov</var>
 			<div class="description short">
 				
 			</div>
@@ -714,16 +643,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$smtp_port" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$url_player_mov" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="smtp_ssl" id="$smtp_ssl">
+	<tr data-order="pict_reloading" id="$pict_reloading">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$smtp_ssl</var>
+<var>$pict_reloading</var>
 			<div class="description short">
 				
 			</div>
@@ -733,16 +662,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$smtp_ssl" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$pict_reloading" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="smtp_cafile" id="$smtp_cafile">
+	<tr data-order="pict_delete" id="$pict_delete">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$smtp_cafile</var>
+<var>$pict_delete</var>
 			<div class="description short">
 				
 			</div>
@@ -752,16 +681,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$smtp_cafile" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$pict_delete" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="smtp_timeout" id="$smtp_timeout">
+	<tr data-order="gallery_show_counter" id="$gallery_show_counter">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$smtp_timeout</var>
+<var>$gallery_show_counter</var>
 			<div class="description short">
 				
 			</div>
@@ -771,16 +700,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$smtp_timeout" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$gallery_show_counter" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="smtp_login" id="$smtp_login">
+	<tr data-order="gallery_items" id="$gallery_items">
 		<td class="attributes"><code>
 			public  
 			mixed
 		</code></td>
 
 		<td class="name">
-<var>$smtp_login</var>
+<var>$gallery_items</var>
 			<div class="description short">
 				
 			</div>
@@ -790,16 +719,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$smtp_login" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$gallery_items" class="anchor">#</a><code></code></div></td>
 	</tr>
-	<tr data-order="smtp_user" id="$smtp_user">
+	<tr data-order="gallery_img_link_attr" id="$gallery_img_link_attr">
 		<td class="attributes"><code>
 			public  
-			mixed
+			string
 		</code></td>
 
 		<td class="name">
-<var>$smtp_user</var>
+<var>$gallery_img_link_attr</var>
 			<div class="description short">
 				
 			</div>
@@ -809,16 +738,16 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$smtp_user" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$gallery_img_link_attr" class="anchor">#</a><code><span class="php-quote">'data-slimbox=&quot;slimbox&quot; rel=&quot;nofollow&quot;'</span></code></div></td>
 	</tr>
-	<tr data-order="smtp_password" id="$smtp_password">
+	<tr data-order="gallery_mov_link_attr" id="$gallery_mov_link_attr">
 		<td class="attributes"><code>
 			public  
-			mixed
+			string
 		</code></td>
 
 		<td class="name">
-<var>$smtp_password</var>
+<var>$gallery_mov_link_attr</var>
 			<div class="description short">
 				
 			</div>
@@ -828,7 +757,7 @@ methods<br>
 
 			</div>
 		</td>
-		<td class="value"><div><a href="#$smtp_password" class="anchor">#</a><code></code></div></td>
+		<td class="value"><div><a href="#$gallery_mov_link_attr" class="anchor">#</a><code><span class="php-quote">'data-smart=&quot;open.modal 780 475 1&quot; rel=&quot;nofollow&quot;'</span></code></div></td>
 	</tr>
 	</table>
 

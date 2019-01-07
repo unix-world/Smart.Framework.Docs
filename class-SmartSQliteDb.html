@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Class SmartSQliteDb | Smart.Framework Documentation :: 2018-11-06 14:25</title>
+	<title>Class SmartSQliteDb | Smart.Framework Documentation :: 2019-01-07 13:21</title>
 	<link rel="stylesheet" href="resources/style.css?2361662816">
 	<script src="resources/combined.js?4174473549"></script>
-	<script src="elementlist.js?2400639511"></script>
+	<script src="elementlist.js?1710610607"></script>
 </head>
 
 <body>
@@ -53,7 +53,11 @@
 						</li>
 				<li><a href="package-Mailer.html">Mailer</a>
 						</li>
+				<li><a href="package-Media.Gallery.html">Media:Gallery</a>
+						</li>
 				<li><a href="package-Network.html">Network</a>
+						</li>
+				<li><a href="package-PageBuilder.html">PageBuilder</a>
 						</li>
 				<li><a href="package-Parsers.html">Parsers</a>
 						</li>
@@ -117,6 +121,8 @@
 	<div class="description">
 	
 <p>Class: SmartSQliteDb - provides a Dynamic SQLite Database Client.</p>
+
+<p>Tested and Stable on SQLite versions: 3.x</p>
 
 <pre>
 
@@ -203,7 +209,7 @@ class="php-comment">// optional, but safe</span>
 		<b>Package:</b> <a href="package-Database.SQLite.html">Database:SQLite</a><br>
 
 				<b>Version:</b>
-				v.181019<br>
+				v.20190105<br>
 				<b>Depends:</b>
 				extensions: PHP SQLite (3) ; classes: Smart, SmartUnicode, SmartUtils,
 SmartFileSystem<br>
@@ -367,6 +373,50 @@ be closed automatically on object __destruct() ...</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="quote_likes" id="_quote_likes">
+
+		<td class="attributes"><code>
+			 public 
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_quote_likes">#</a>
+		<code>quote_likes( <span>STRING <var>$y_string</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Fix a string to be compliant with SQLite LIKE / SIMILAR syntax. It will use
+special quotes for the LIKE / SIMILAR special characters: % _ This function IS
+NOT INTENDED TO ESCAPE AGAINST SQL INJECTIONS ; USE IT ONLY WITH PREPARED PARAMS
+OR USE escape_str() with mode 'likes'</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Fix a string to be compliant with SQLite LIKE / SIMILAR syntax. It will use
+special quotes for the LIKE / SIMILAR special characters: % _ This function IS
+NOT INTENDED TO ESCAPE AGAINST SQL INJECTIONS ; USE IT ONLY WITH PREPARED PARAMS
+OR USE escape_str() with mode 'likes'</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_string</var></dt>
+					<dd>:: A String or a Number to be Quoted for LIKES</dd>
+				</dl></div>
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="escape_str" id="_escape_str">
 
 		<td class="attributes"><code>
@@ -378,7 +428,7 @@ be closed automatically on object __destruct() ...</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_escape_str">#</a>
-		<code>escape_str( <span>STRING <var>$string</var></span> )</code>
+		<code>escape_str( <span>STRING <var>$string</var></span>, <span>ENUM <var>$y_mode</var> = <span class="php-quote">''</span></span> )</code>
 
 		<div class="description short">
 			
@@ -400,6 +450,8 @@ but just will just escape it to be safe.</p>
 				<div class="list"><dl>
 					<dt><var>$string</var></dt>
 					<dd>:: A String or a Number to be Escaped</dd>
+					<dt><var>$y_mode</var></dt>
+					<dd>:: '' = default ; 'likes' = Escape LIKE Syntax (% _)</dd>
 				</dl></div>
 
 				<h4>Returns</h4>
@@ -413,10 +465,54 @@ but just will just escape it to be safe.</p>
 		</div>
 		</div></td>
 	</tr>
+	<tr data-order="json_encode" id="_json_encode">
+
+		<td class="attributes"><code>
+			 public 
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_json_encode">#</a>
+		<code>json_encode( <span>STRING <var>$mixed_content</var></span> )</code>
+
+		<div class="description short">
+			
+<p>SQlite compliant and Safe Json Encode. This should be used with SQlite json
+fields.</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>SQlite compliant and Safe Json Encode. This should be used with SQlite json
+fields.</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$mixed_content</var></dt>
+					<dd>:: A mixed variable</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: JSON string<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
 	<tr data-order="register_sql_function" id="_register_sql_function">
 
 		<td class="attributes"><code>
-			 public static
+			 public 
 			
 			
 			</code>
@@ -424,7 +520,7 @@ but just will just escape it to be safe.</p>
 
 		<td class="name"><div>
 		<a class="anchor" href="#_register_sql_function">#</a>
-		<code>register_sql_function( <span>STRING <var>$func</var></span>, <span>INTEGER <var>$args</var></span> )</code>
+		<code>register_sql_function( <span>STRING <var>$func</var></span>, <span>INTEGER <var>$argnum</var></span>, <span>mixed <var>$sqlname</var></span> )</code>
 
 		<div class="description short">
 			
@@ -441,10 +537,13 @@ but just will just escape it to be safe.</p>
 				<h4>Parameters</h4>
 				<div class="list"><dl>
 					<dt><var>$func</var></dt>
-					<dd>:: A PHP or custom Function Name</dd>
-					<dt><var>$args</var></dt>
+					<dd>:: A PHP or custom Function Name (will be registered with
+&lt;code&gt;custom_fx_&lt;/code&gt; as prefix</dd>
+					<dt><var>$argnum</var></dt>
 					<dd>:: The number of required args ; If this parameter is -1, then the SQL function
 may take any number of arguments</dd>
+					<dt><var>$sqlname</var></dt>
+					<dd></dd>
 				</dl></div>
 
 
@@ -929,7 +1028,7 @@ are unpredictable if mixing several statements at once !</p>
 </div>
 
 	<div id="footer">
-		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2018-11-06 14:25</a>
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2019-01-07 13:21</a>
 	</div>
 </div>
 </div>
