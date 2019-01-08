@@ -1,6 +1,6 @@
 # Smart.Framework.Docs
 
 ## Documentation for:
-* Smart.Framework
-* Smart.Framework.Modules
+* Smart.Framework (PHP Classes and Javascript API)
+* Smart.Framework.Modules (All)
 
