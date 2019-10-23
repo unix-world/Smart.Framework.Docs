@@ -1,0 +1,1272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Class SmartViewHtmlHelpers | Smart.Framework Documentation :: 2019-10-23 06:42</title>
+	<link rel="stylesheet" href="resources/style.css?2361662816">
+	<script src="resources/combined.js?4174473549"></script>
+	<script src="elementlist.js?830703499"></script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-Application.html">Application</a>
+						</li>
+				<li><a href="package-Archivers.html">Archivers</a>
+						</li>
+				<li><a href="package-Base.html">Base</a>
+						</li>
+				<li class="active"><a href="package-Components.Core.html">Components:Core</a>
+						</li>
+				<li><a href="package-Components.Misc.html">Components:Misc</a>
+						</li>
+				<li><a href="package-Converters.html">Converters</a>
+						</li>
+				<li><a href="package-Crypto.html">Crypto</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
+						</li>
+				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
+						</li>
+				<li><a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a>
+						</li>
+				<li><a href="package-Database.Redis.html">Database:Redis</a>
+						</li>
+				<li><a href="package-Database.SQLite.html">Database:SQLite</a>
+						</li>
+				<li><a href="package-Exporters.html">Exporters</a>
+						</li>
+				<li><a href="package-Filesystem.html">Filesystem</a>
+						</li>
+				<li><a href="package-Mailer.html">Mailer</a>
+						</li>
+				<li><a href="package-Network.html">Network</a>
+						</li>
+				<li><a href="package-Parsers.html">Parsers</a>
+						</li>
+				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-SmartCalendarComponent.html">SmartCalendarComponent</a></li>
+				<li><a href="class-SmartCaptchaFormCheck.html">SmartCaptchaFormCheck</a></li>
+				<li><a href="class-SmartComponents.html">SmartComponents</a></li>
+				<li><a href="class-SmartDetectImages.html">SmartDetectImages</a></li>
+				<li><a href="class-SmartHTMLCalendar.html">SmartHTMLCalendar</a></li>
+				<li><a href="class-SmartRobot.html">SmartRobot</a></li>
+				<li class="active"><a href="class-SmartViewHtmlHelpers.html">SmartViewHtmlHelpers</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Components.Core.html" title="Summary of Components:Core"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class SmartViewHtmlHelpers</h1>
+
+
+	<div class="description">
+	
+<p>Class: SmartViewHelpers - Easy to use HTML ViewHelper Components.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Final</b><br>
+		
+		
+		<b>Package:</b> <a href="package-Components.Core.html">Components:Core</a><br>
+
+				<b>Version:</b>
+				v.20191022<br>
+				<b>Depends:</b>
+				classes: Smart<br>
+				<b>Usage:</b>
+				static object: Class::method() - This class provides only STATIC methods<br>
+		<b>Located at</b> core/plugins/lib_viewhelpers.php<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="html_js_date_field" id="_html_js_date_field">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_js_date_field">#</a>
+		<code>html_js_date_field( <span>STRING <var>$y_id</var></span>, <span>STRING <var>$y_var</var></span>, <span>DATE <var>$yvalue</var></span>, <span>STRING <var>$y_text_select</var> = <span class="php-quote">''</span></span>, <span>JS-Date <var>$yjs_mindate</var> = <span class="php-quote">''</span></span>, <span>JS-Date <var>$yjs_maxdate</var> = <span class="php-quote">''</span></span>, <span>ARRAY <var>$y_extra_options</var> = <span class="php-keyword1">array</span>()</span>, <span>JS-Code <var>$y_js_evcode</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Draws a HTML JS-UI Date Selector Field</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Draws a HTML JS-UI Date Selector Field</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_id</var></dt>
+					<dd>[HTML page ID for field (unique) ; used foor JavaScript]</dd>
+					<dt><var>$y_var</var></dt>
+					<dd>[HTML Variable Name or empty if no necessary]</dd>
+					<dt><var>$yvalue</var></dt>
+					<dd>[DATE, empty or formated as YYYY-MM-DD]</dd>
+					<dt><var>$y_text_select</var></dt>
+					<dd>[The text as title: 'Select Date']</dd>
+					<dt><var>$yjs_mindate</var></dt>
+					<dd>[JS Expression, Min Date] :: new Date(1937, 1 - 1, 1) or '-1y -1m -1d'</dd>
+					<dt><var>$yjs_maxdate</var></dt>
+					<dd>[JS Expression, Max Date] :: new Date(2037, 12 - 1, 31) or '1y 1m 1d'</dd>
+					<dt><var>$y_extra_options</var></dt>
+					<dd>[Options Array[width, ...] for for datePicker]</dd>
+					<dt><var>$y_js_evcode</var></dt>
+					<dd>[JS Code to execute on Select(date)]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[HTML Code]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="html_js_time_field" id="_html_js_time_field">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_js_time_field">#</a>
+		<code>html_js_time_field( <span>STRING <var>$y_id</var></span>, <span>STRING <var>$y_var</var></span>, <span>HH:ii <var>$yvalue</var></span>, <span>STRING <var>$y_text_select</var> = <span class="php-quote">''</span></span>, <span>0..22 <var>$y_h_st</var> = <span class="php-quote">'0'</span></span>, <span>1..23 <var>$y_h_end</var> = <span class="php-quote">'23'</span></span>, <span>0..58 <var>$y_i_st</var> = <span class="php-quote">'0'</span></span>, <span>1..59 <var>$y_i_end</var> = <span class="php-quote">'55'</span></span>, <span>1..30 <var>$y_i_step</var> = <span class="php-quote">'5'</span></span>, <span>INTEGER <var>$y_rows</var> = <span class="php-quote">'2'</span></span>, <span>JS-Code <var>$y_extra_options</var> = <span class="php-keyword1">array</span>()</span>, <span>JS-Code <var>$y_js_evcode</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Draws a HTML JS-UI Time Selector Field</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Draws a HTML JS-UI Time Selector Field</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_id</var></dt>
+					<dd>[HTML page ID for field (unique) ; used foor JavaScript]</dd>
+					<dt><var>$y_var</var></dt>
+					<dd>[HTML Variable Name]</dd>
+					<dt><var>$yvalue</var></dt>
+					<dd>[TIME, pre-definned value, formated as 24h HH:ii]</dd>
+					<dt><var>$y_text_select</var></dt>
+					<dd>[The text for 'Select Time']</dd>
+					<dt><var>$y_h_st</var></dt>
+					<dd>[Starting Time]</dd>
+					<dt><var>$y_h_end</var></dt>
+					<dd>[Ending Time]</dd>
+					<dt><var>$y_i_st</var></dt>
+					<dd>[Starting Minute]</dd>
+					<dt><var>$y_i_end</var></dt>
+					<dd>[Ending Minute]</dd>
+					<dt><var>$y_i_step</var></dt>
+					<dd>[Step of Minutes]</dd>
+					<dt><var>$y_rows</var></dt>
+					<dd>[Default is 2]</dd>
+					<dt><var>$y_extra_options</var></dt>
+					<dd>[Options Array[width, ...] for timePicker]</dd>
+					<dt><var>$y_js_evcode</var></dt>
+					<dd>[JS Code to execute on Select(time)]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[HTML Code]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="html_select_list_single" id="_html_select_list_single">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_select_list_single">#</a>
+		<code>html_select_list_single( <span>STRING <var>$y_id</var></span>, <span>STRING <var>$y_selected_value</var></span>, <span>ENUM <var>$y_mode</var></span>, <span>ARRAY <var>$yarr_data</var></span>, <span>STRING <var>$y_varname</var> = <span class="php-quote">''</span></span>, <span>INTEGER <var>$y_dimensions</var> = <span class="php-quote">'150/0'</span></span>, <span>CODE <var>$y_custom_js</var> = <span class="php-quote">''</span></span>, <span>YES/NO <var>$y_raw</var> = <span class="php-quote">'no'</span></span>, <span>YES/NO <var>$y_allowblank</var> = <span class="php-quote">'yes'</span></span>, <span>CSS/#JS-UI# <var>$y_extrastyle</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Manage a SINGLE Selection HTML List Element for Edit or Display data ::
+v.20141212</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Manage a SINGLE Selection HTML List Element for Edit or Display data ::
+v.20141212</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_id</var></dt>
+					<dd>the HTML element ID</dd>
+					<dt><var>$y_selected_value</var></dt>
+					<dd>selected value of the list</dd>
+					<dt><var>$y_mode</var></dt>
+					<dd>'form' = display form | 'list' = display list</dd>
+					<dt><var>$yarr_data</var></dt>
+					<dd>DATASET ROWS AS: ['id' =&amp;gt; 'name', 'id2' =&amp;gt; 'name2'] OR ['id', 'name',
+'id2', 'name2']</dd>
+					<dt><var>$y_varname</var></dt>
+					<dd>as 'frm[test]'</dd>
+					<dt><var>$y_dimensions</var></dt>
+					<dd>dimensions in pixels (width or width / (list) height for '#JS-UI#' or
+'#JS-UI-FILTER#')</dd>
+					<dt><var>$y_custom_js</var></dt>
+					<dd>custom js code (Ex: submit on change)</dd>
+					<dt><var>$y_raw</var></dt>
+					<dd>If Yes, the description values will not apply html special chars</dd>
+					<dt><var>$y_allowblank</var></dt>
+					<dd>If Yes, a blank value is allowed in list</dd>
+					<dt><var>$y_extrastyle</var></dt>
+					<dd>Extra Style CSS | '#JS-UI#' or '#JS-UI-FILTER#'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[HTML Code]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="html_select_list_multi" id="_html_select_list_multi">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_select_list_multi">#</a>
+		<code>html_select_list_multi( <span>STRING <var>$y_id</var></span>, <span>STRING <var>$y_selected_value</var></span>, <span>ENUM <var>$y_mode</var></span>, <span>ARRAY <var>$yarr_data</var></span>, <span>STRING <var>$y_varname</var> = <span class="php-quote">''</span></span>, <span>ENUM <var>$y_draw</var> = <span class="php-quote">'list'</span></span>, <span>YES/NO <var>$y_sync_values</var> = <span class="php-quote">'no'</span></span>, <span>INTEGER <var>$y_dimensions</var> = <span class="php-quote">'300/0'</span></span>, <span>CODE <var>$y_custom_js</var> = <span class="php-quote">''</span></span>, <span>SPECIAL <var>$y_extrastyle</var> = <span class="php-quote">'#JS-UI-FILTER#'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Generate a MULTIPLE (many selections) View/Edit List to manage ID
+Selections</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Generate a MULTIPLE (many selections) View/Edit List to manage ID
+Selections</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_id</var></dt>
+					<dd>the HTML element ID</dd>
+					<dt><var>$y_selected_value</var></dt>
+					<dd>selected value(s) data as ARRAY or STRING list as: '
+&lt;id1&gt;,
+	&lt;id2&gt;'&lt;/id2&gt;
+&lt;/id1&gt;
+</dd>
+					<dt><var>$y_mode</var></dt>
+					<dd>'form' = display form | checkboxes | 'list' = display list</dd>
+					<dt><var>$yarr_data</var></dt>
+					<dd>DATASET ROWS AS: ['id' =&amp;gt; 'name', 'id2' =&amp;gt; 'name2'] OR ['id', 'name',
+'id2', 'name2']</dd>
+					<dt><var>$y_varname</var></dt>
+					<dd>as 'frm[test][]'</dd>
+					<dt><var>$y_draw</var></dt>
+					<dd>list | checkboxes</dd>
+					<dt><var>$y_sync_values</var></dt>
+					<dd>If Yes, sync select similar values used (curently works only for checkboxes)</dd>
+					<dt><var>$y_dimensions</var></dt>
+					<dd>dimensions in pixels (width or width / (list) height for '#JS-UI#' or
+'#JS-UI-FILTER#')</dd>
+					<dt><var>$y_custom_js</var></dt>
+					<dd>custom js code (Ex: submit on change)</dd>
+					<dt><var>$y_extrastyle</var></dt>
+					<dd>Extra Style CSS | '#JS-UI#' or '#JS-UI-FILTER#'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[HTML Code]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="html_navpager" id="_html_navpager">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_navpager">#</a>
+		<code>html_navpager( <span>mixed <var>$link</var></span>, <span>mixed <var>$total</var></span>, <span>mixed <var>$limit</var></span>, <span>mixed <var>$current</var></span>, <span>mixed <var>$display_if_empty</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$adjacents</var> = <span class="php-num">3</span></span>, <span>mixed <var>$options</var> = []</span> )</code>
+
+		<div class="description short">
+			
+<p>Creates a navigation pager The style of the pager can be set overall in:
+$configs['nav']['pager'], and can be: arrows or numeric</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Creates a navigation pager The style of the pager can be set overall in:
+$configs['nav']['pager'], and can be: arrows or numeric</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[HTML Code]<br>
+				</div>
+
+
+				<h4>Hints</h4>
+				<div class="list">
+						$link = 'some-script.php?ofs={{{offset}}}';<br>
+				</div>
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="html_js_limited_text_area" id="_html_js_limited_text_area">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_js_limited_text_area">#</a>
+		<code>html_js_limited_text_area( <span>mixed <var>$y_field_id</var></span>, <span>mixed <var>$y_var_name</var></span>, <span>mixed <var>$y_var_value</var></span>, <span>mixed <var>$y_limit</var></span>, <span>mixed <var>$y_css_w</var> = <span class="php-quote">'125px'</span></span>, <span>mixed <var>$y_css_h</var> = <span class="php-quote">'50px'</span></span>, <span>mixed <var>$y_placeholder</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_wrap</var> = <span class="php-quote">'physical'</span></span>, <span>mixed <var>$y_rawval</var> = <span class="php-quote">'no'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Function: Draw Limited Text Area</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Function: Draw Limited Text Area</p>
+
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="html_selector_true_false" id="_html_selector_true_false">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_selector_true_false">#</a>
+		<code>html_selector_true_false( <span>STRING <var>$y_var</var></span>, <span>STRING <var>$y_val</var></span> )</code>
+
+		<div class="description short">
+			
+<p>HTML Selector: TRUE / FALSE Display True=1/False=0 Selector</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>HTML Selector: TRUE / FALSE Display True=1/False=0 Selector</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_var</var></dt>
+					<dd>:: HTML Var Name</dd>
+					<dt><var>$y_val</var></dt>
+					<dd>:: '' | '0' | '1'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: HTML Code<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="html_selector_yes_no" id="_html_selector_yes_no">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_selector_yes_no">#</a>
+		<code>html_selector_yes_no( <span>STRING <var>$y_var</var></span>, <span>STRING <var>$y_val</var></span> )</code>
+
+		<div class="description short">
+			
+<p>HTML Selector: YES / NO Display Yes=y/No=n Selector</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>HTML Selector: YES / NO Display Yes=y/No=n Selector</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_var</var></dt>
+					<dd>:: HTML Var Name</dd>
+					<dt><var>$y_val</var></dt>
+					<dd>:: '' | 'y' | 'n'</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: HTML Code<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="html_hidden_formvars" id="_html_hidden_formvars">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_hidden_formvars">#</a>
+		<code>html_hidden_formvars( <span>MIXED <var>$y_var</var></span>, <span>STRING <var>$y_html_var</var></span> )</code>
+
+		<div class="description short">
+			
+<p>Function: HTML Form Vars</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Function: HTML Form Vars</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_var</var></dt>
+					<dd>:: ARRAY or STRING :: PHP variable</dd>
+					<dt><var>$y_html_var</var></dt>
+					<dd>:: HTML Variable Name</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: HTML Code<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="html_js_preview_iframe" id="_html_js_preview_iframe">
+
+		<td class="attributes"><code>
+			 public static
+			
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_js_preview_iframe">#</a>
+		<code>html_js_preview_iframe( <span>mixed <var>$yid</var></span>, <span>mixed <var>$y_contents</var></span>, <span>mixed <var>$y_width</var> = <span class="php-quote">'720px'</span></span>, <span>mixed <var>$y_height</var> = <span class="php-quote">'300px'</span></span>, <span>mixed <var>$y_maximized</var> = <span class="php-keyword1">false</span></span>, <span>mixed <var>$y_sandbox</var> = <span class="php-quote">'allow-popups'</span></span> )</code>
+
+		<div class="description short">
+			
+		</div>
+
+		<div class="description detailed hidden">
+			
+
+
+
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="html_jsload_editarea" id="_html_jsload_editarea">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_jsload_editarea">#</a>
+		<code>html_jsload_editarea( )</code>
+
+		<div class="description short">
+			
+<p>Return the HTML / Javascript code to Load the required Javascripts for the
+Code Editor (Edit Area). Should be called just once, before calling one or many
+::html_js_editarea()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the HTML / Javascript code to Load the required Javascripts for the
+Code Editor (Edit Area). Should be called just once, before calling one or many
+::html_js_editarea()</p>
+
+
+
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[HTML Code]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="html_js_editarea" id="_html_js_editarea">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_js_editarea">#</a>
+		<code>html_js_editarea( <span>STRING <var>$yid</var></span>, <span>STRING <var>$yvarname</var></span>, <span>STRING <var>$yvalue</var> = <span class="php-quote">''</span></span>, <span>ENUM <var>$y_mode</var> = <span class="php-quote">'text'</span></span>, <span>BOOLEAN <var>$y_editable</var> = <span class="php-keyword1">true</span></span>, <span>INTEGER+ <var>$y_width</var> = <span class="php-quote">'720px'</span></span>, <span>INTEGER+ <var>$y_height</var> = <span class="php-quote">'300px'</span></span>, <span>BOOLEAN <var>$y_line_numbers</var> = <span class="php-keyword1">true</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the HTML / Javascript code with a special TextArea with a built-in
+javascript Code Editor (Edit Area). Supported syntax parsers: CSS, Javascript,
+Json, HTML, XML, YAML, Markdown, SQL, PHP, Text (default).</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the HTML / Javascript code with a special TextArea with a built-in
+javascript Code Editor (Edit Area). Supported syntax parsers: CSS, Javascript,
+Json, HTML, XML, YAML, Markdown, SQL, PHP, Text (default).</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$yid</var></dt>
+					<dd>[Unique HTML Page Element ID]</dd>
+					<dt><var>$yvarname</var></dt>
+					<dd>[HTML Form Variable Name]</dd>
+					<dt><var>$yvalue</var></dt>
+					<dd>[HTML Data]</dd>
+					<dt><var>$y_mode</var></dt>
+					<dd>[Parser mode: css, javascript, json, html, xml, yaml, markdown, sql, php, text]</dd>
+					<dt><var>$y_editable</var></dt>
+					<dd>[Editable: true / Not Editable: false]</dd>
+					<dt><var>$y_width</var></dt>
+					<dd>$ywidth [Area Width: (Example) 720px or 75%]</dd>
+					<dt><var>$y_height</var></dt>
+					<dd>$yheight [Area Height (Example) 480px or 50%]</dd>
+					<dt><var>$y_line_numbers</var></dt>
+					<dd>[Display line numbers: true ; Hide line numbersL false]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[HTML Code]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="html_jsload_htmlarea" id="_html_jsload_htmlarea">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_jsload_htmlarea">#</a>
+		<code>html_jsload_htmlarea( <span>mixed <var>$y_filebrowser_link</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Outputs the HTML Code to init the HTML (wysiwyg) Editor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Outputs the HTML Code to init the HTML (wysiwyg) Editor</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_filebrowser_link</var></dt>
+					<dd>URL to Image Browser (Example: script.php?op=image-gallery&amp;amp;type=images)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[HTML Code]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="html_js_htmlarea" id="_html_js_htmlarea">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_js_htmlarea">#</a>
+		<code>html_js_htmlarea( <span>STRING <var>$yid</var></span>, <span>STRING <var>$yvarname</var></span>, <span>STRING <var>$yvalue</var> = <span class="php-quote">''</span></span>, <span>INTEGER+ <var>$ywidth</var> = <span class="php-quote">'720px'</span></span>, <span>INTEGER+ <var>$yheight</var> = <span class="php-quote">'480px'</span></span>, <span>BOOLEAN <var>$y_allow_scripts</var> = <span class="php-keyword1">false</span></span>, <span>BOOLEAN <var>$y_allow_script_src</var> = <span class="php-keyword1">false</span></span>, <span>MIXED <var>$y_cleaner_deftags</var> = <span class="php-quote">''</span></span>, <span>ENUM <var>$y_cleaner_mode</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$y_toolbar_ctrls</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Draw a TextArea with a built-in javascript HTML (wysiwyg) Editor</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Draw a TextArea with a built-in javascript HTML (wysiwyg) Editor</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$yid</var></dt>
+					<dd>[Unique HTML Page Element ID]</dd>
+					<dt><var>$yvarname</var></dt>
+					<dd>[HTML Form Variable Name]</dd>
+					<dt><var>$yvalue</var></dt>
+					<dd>[HTML Data]</dd>
+					<dt><var>$ywidth</var></dt>
+					<dd>[Area Width: (Example) 720px or 75%]</dd>
+					<dt><var>$yheight</var></dt>
+					<dd>[Area Height (Example) 480px or 50%]</dd>
+					<dt><var>$y_allow_scripts</var></dt>
+					<dd>[Allow JavaScripts]</dd>
+					<dt><var>$y_allow_script_src</var></dt>
+					<dd>[Allow JavaScript SRC attribute]</dd>
+					<dt><var>$y_cleaner_deftags</var></dt>
+					<dd>['' or array of HTML Tags to be allowed / dissalowed by the cleaner ... see HTML
+Cleaner Documentation]</dd>
+					<dt><var>$y_cleaner_mode</var></dt>
+					<dd>[HTML Cleaner mode for defined tags: ALLOW / DISALLOW]</dd>
+					<dt><var>$y_toolbar_ctrls</var></dt>
+					<dd>[Toolbar Controls: ... see CLEditor Documentation]</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[HTML Code]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="html_js_htmlarea_fm_callback" id="_html_js_htmlarea_fm_callback">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_html_js_htmlarea_fm_callback">#</a>
+		<code>html_js_htmlarea_fm_callback( <span>STRING <var>$yurl</var></span>, <span>BOOLEAN <var>$is_popup</var> = <span class="php-keyword1">false</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns HTML / JS code for CallBack Mapping for HTML (wysiwyg) Editor -
+FileBrowser Integration</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns HTML / JS code for CallBack Mapping for HTML (wysiwyg) Editor -
+FileBrowser Integration</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$yurl</var></dt>
+					<dd>The Callback URL</dd>
+					<dt><var>$is_popup</var></dt>
+					<dd>Set to True if Popup (incl. Modal)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[JS Code]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="js_code_wnd_redirect" id="_js_code_wnd_redirect">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_js_code_wnd_redirect">#</a>
+		<code>js_code_wnd_redirect( <span>STRING <var>$y_redir_url</var></span>, <span>INTEGER <var>$delay</var> = -<span class="php-num">1</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Redirect to URL</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Redirect to URL</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_redir_url</var></dt>
+					<dd>:: URL to redirect page to</dd>
+					<dt><var>$delay</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; ; if &amp;gt; 0 will use Delayed Redirect, otherwise Instant
+Redirect</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: JS Code<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="js_code_wnd_refresh_parent" id="_js_code_wnd_refresh_parent">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_js_code_wnd_refresh_parent">#</a>
+		<code>js_code_wnd_refresh_parent( <span>STRING <var>$y_redir_url</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Refresh Parent</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Refresh Parent</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_redir_url</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; URL to redirect by refresh page to</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: JS Code<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="js_code_wnd_close_modal_popup" id="_js_code_wnd_close_modal_popup">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_js_code_wnd_close_modal_popup">#</a>
+		<code>js_code_wnd_close_modal_popup( <span>INTEGER <var>$y_delay</var> = -<span class="php-num">1</span></span> )</code>
+
+		<div class="description short">
+			
+<p>(Delayed) close Pop-Up / Modal</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>(Delayed) close Pop-Up / Modal</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_delay</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; ; if &amp;gt; 0 will use Delayed Close, otherwise Instant Close</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: JS Code<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="js_code_notification_add" id="_js_code_notification_add">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_js_code_notification_add">#</a>
+		<code>js_code_notification_add( <span>STRING <var>$y_title</var></span>, <span>STRING <var>$y_text</var></span>, <span>STRING <var>$y_image</var></span>, <span>INTEGER+ <var>$y_time</var> = <span class="php-num">5000</span></span>, <span>ENUM <var>$y_sticky</var> = <span class="php-quote">'false'</span></span>, <span>STRING <var>$y_class</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the JS Code to add (raise) a Growl Notification (sticky or not) Must
+be enclosed in a <script type="text/javascript">...</script> html tag or can be
+used for a JS action (ex: onClick="...")</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the JS Code to add (raise) a Growl Notification (sticky or not) Must
+be enclosed in a <script type="text/javascript">...</script> html tag or can be
+used for a JS action (ex: onClick="...")</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_title</var></dt>
+					<dd>:: The Growl Title</dd>
+					<dt><var>$y_text</var></dt>
+					<dd>:: The Growl Text</dd>
+					<dt><var>$y_image</var></dt>
+					<dd>:: The Growl Image (can be empty)</dd>
+					<dt><var>$y_time</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; ; default is 5000 (5 seconds) ; The Display Time in
+microseconds</dd>
+					<dt><var>$y_sticky</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; ; default is 'false' ; If set to 'false' will be not sticky
+; if set to 'true' will be sticky</dd>
+					<dt><var>$y_class</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; the CSS class</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: JS Code<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="js_code_notification_remove" id="_js_code_notification_remove">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_js_code_notification_remove">#</a>
+		<code>js_code_notification_remove( <span>STRING <var>$y_id</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Returns the JS Code to remove a Growl Notification (sticky or not) Must be
+enclosed in a <script type="text/javascript">...</script> html tag or can be
+used for a JS action (ex: onClick="...")</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Returns the JS Code to remove a Growl Notification (sticky or not) Must be
+enclosed in a <script type="text/javascript">...</script> html tag or can be
+used for a JS action (ex: onClick="...")</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_id</var></dt>
+					<dd>:: &lt;em&gt;optional&lt;/em&gt; the Growl ID ; default is '' ; if non empty will remove
+just the Growl that match the ID ; otherwise will remove ALL Growl instances</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>:: JS Code<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="js_ajax_submit_html_form" id="_js_ajax_submit_html_form">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_js_ajax_submit_html_form">#</a>
+		<code>js_ajax_submit_html_form( <span>mixed <var>$y_form_id</var></span>, <span>mixed <var>$y_script_url</var></span>, <span>mixed <var>$y_confirm_question</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_js_evcode</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Return the JS Code to Submit a HTML Form by Ajax Expects a standardized
+(json) reply created with SmartViewHtmlHelpers::js_ajax_replyto_html_form() Must
+be enclosed in a <script type="text/javascript">...</script> html tag or can be
+used for a JS action (ex: onClick="...")</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Return the JS Code to Submit a HTML Form by Ajax Expects a standardized
+(json) reply created with SmartViewHtmlHelpers::js_ajax_replyto_html_form() Must
+be enclosed in a <script type="text/javascript">...</script> html tag or can be
+used for a JS action (ex: onClick="...")</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_form_id</var></dt>
+					<dd>form ID (Example: myForm)</dd>
+					<dt><var>$y_script_url</var></dt>
+					<dd>php script to post to (Example: admin.php)</dd>
+					<dt><var>$y_confirm_question</var></dt>
+					<dd>not empty will ask a confirmation question</dd>
+					<dt><var>$y_js_evcode</var></dt>
+					<dd>not empty, JS to execute on Success (before anything else)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[javascript code]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="js_ajax_replyto_html_form" id="_js_ajax_replyto_html_form">
+
+		<td class="attributes"><code>
+			 public static
+			STRING
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_js_ajax_replyto_html_form">#</a>
+		<code>js_ajax_replyto_html_form( <span>mixed <var>$y_status</var></span>, <span>mixed <var>$y_title</var></span>, <span>mixed <var>$y_message</var></span>, <span>mixed <var>$y_redirect_url</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_replace_div</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_replace_html</var> = <span class="php-quote">''</span></span>, <span>mixed <var>$y_js_evcode</var> = <span class="php-quote">''</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Reply back to the HTML Form submited by Ajax by returning a Json answer
+Creates a standardized (json) reply for
+SmartViewHtmlHelpers::js_ajax_submit_html_form()</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Reply back to the HTML Form submited by Ajax by returning a Json answer
+Creates a standardized (json) reply for
+SmartViewHtmlHelpers::js_ajax_submit_html_form()</p>
+
+<p>NOTICE:</p>
+
+<ul>
+	<li>if OK: and redirect URL have been provided, the replace div is not
+	handled</li>
+
+	<li>if ERROR: no replace div or redirect is handled</li>
+</ul>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_status</var></dt>
+					<dd>/ ERROR</dd>
+					<dt><var>$y_title</var></dt>
+					<dd>Title</dd>
+					<dt><var>$y_message</var></dt>
+					<dd>Message (Optional in the case of Success)</dd>
+					<dt><var>$y_redirect_url</var></dt>
+					<dd>URL to redirect on either Success or Error</dd>
+					<dt><var>$y_replace_div</var></dt>
+					<dd>The ID of the DIV to Replace on Success</dd>
+					<dt><var>$y_replace_html</var></dt>
+					<dd>the HTML Code to replace in DIV on Success</dd>
+					<dt><var>$y_js_evcode</var></dt>
+					<dd>the JS EvCode to be executed on either Success or Error (before redirect or Div
+Replace)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>STRING</code><br>[JSON data string]<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2019-10-23 06:42</a>
+	</div>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Class SmartRobot | Smart.Framework Documentation :: 2019-10-23 06:42</title>
+	<link rel="stylesheet" href="resources/style.css?2361662816">
+	<script src="resources/combined.js?4174473549"></script>
+	<script src="elementlist.js?830703499"></script>
+</head>
+
+<body>
+<div id="left">
+	<div id="menu">
+		<a href="index.html" title="Overview"><span>Overview</span></a>
+
+
+		<div id="groups">
+			<h3>Packages</h3>
+			<ul>
+				<li><a href="package-Application.html">Application</a>
+						</li>
+				<li><a href="package-Archivers.html">Archivers</a>
+						</li>
+				<li><a href="package-Base.html">Base</a>
+						</li>
+				<li class="active"><a href="package-Components.Core.html">Components:Core</a>
+						</li>
+				<li><a href="package-Components.Misc.html">Components:Misc</a>
+						</li>
+				<li><a href="package-Converters.html">Converters</a>
+						</li>
+				<li><a href="package-Crypto.html">Crypto</a>
+						</li>
+				<li><a href="package-Database.MongoDB.html">Database:MongoDB</a>
+						</li>
+				<li><a href="package-Database.MySQL.html">Database:MySQL</a>
+						</li>
+				<li><a href="package-Database.PostgreSQL.html">Database:PostgreSQL</a>
+						</li>
+				<li><a href="package-Database.Redis.html">Database:Redis</a>
+						</li>
+				<li><a href="package-Database.SQLite.html">Database:SQLite</a>
+						</li>
+				<li><a href="package-Exporters.html">Exporters</a>
+						</li>
+				<li><a href="package-Filesystem.html">Filesystem</a>
+						</li>
+				<li><a href="package-Mailer.html">Mailer</a>
+						</li>
+				<li><a href="package-Network.html">Network</a>
+						</li>
+				<li><a href="package-Parsers.html">Parsers</a>
+						</li>
+				<li><a href="package-Templating.Engines.html">Templating:Engines</a>
+						</li>
+			</ul>
+		</div>
+
+		<hr>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-SmartCalendarComponent.html">SmartCalendarComponent</a></li>
+				<li><a href="class-SmartCaptchaFormCheck.html">SmartCaptchaFormCheck</a></li>
+				<li><a href="class-SmartComponents.html">SmartComponents</a></li>
+				<li><a href="class-SmartDetectImages.html">SmartDetectImages</a></li>
+				<li><a href="class-SmartHTMLCalendar.html">SmartHTMLCalendar</a></li>
+				<li class="active"><a href="class-SmartRobot.html">SmartRobot</a></li>
+				<li><a href="class-SmartViewHtmlHelpers.html">SmartViewHtmlHelpers</a></li>
+			</ul>
+
+
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+<div id="rightInner">
+	<form id="search">
+		<input type="hidden" name="cx" value="">
+		<input type="hidden" name="ie" value="UTF-8">
+		<input type="text" name="q" class="text">
+		<input type="submit" value="Search">
+	</form>
+
+	<div id="navigation">
+		<ul>
+			<li>
+				<a href="index.html" title="Overview"><span>Overview</span></a>
+			</li>
+			<li>
+				<a href="package-Components.Core.html" title="Summary of Components:Core"><span>Package</span></a>
+			</li>
+			<li class="active">
+<span>Class</span>			</li>
+		</ul>
+		<ul>
+			<li>
+				<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+			</li>
+		</ul>
+		<ul>
+		</ul>
+	</div>
+
+<div id="content" class="class">
+	<h1>Class SmartRobot</h1>
+
+
+	<div class="description">
+	
+<p>Class: SmartRobot - Easy to use HTTP Robot.</p>
+
+	</div>
+
+
+
+
+
+
+
+
+
+	<div class="info">
+		<b>Final</b><br>
+		
+		
+		<b>Package:</b> <a href="package-Components.Core.html">Components:Core</a><br>
+
+				<b>Version:</b>
+				v.20191023<br>
+				<b>Depends:</b>
+				classes: Smart<br>
+				<b>Usage:</b>
+				static object: Class::method() - This class provides only STATIC methods<br>
+		<b>Located at</b> core/plugins/lib_robot.php<br>
+	</div>
+
+
+
+	<table class="summary methods" id="methods">
+	<caption>Methods summary</caption>
+	<tr data-order="load_url_img_content" id="_load_url_img_content">
+
+		<td class="attributes"><code>
+			 public static
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_load_url_img_content">#</a>
+		<code>load_url_img_content( <span>STRING <var>$y_img_link</var></span>, <span>YES/NO <var>$y_allow_set_credentials</var> = <span class="php-quote">'no'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Load URL IMG (svg / png / gif / jpg) Content (if relative path to a file will
+be prefixed with current URL for security reasons)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Load URL IMG (svg / png / gif / jpg) Content (if relative path to a file will
+be prefixed with current URL for security reasons)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_img_link</var></dt>
+					<dd>:: relative/path/to/image (assumes current URL as prefix) |
+http(s)://some.url:port/path/to/image (port is optional) ; works also with
+Data-URL (Data-Image only)</dd>
+					<dt><var>$y_allow_set_credentials</var></dt>
+					<dd>:: DEFAULT IS SET to NO ; if YES must be set just for internal URLs ; if set to
+AUTO will try to detect if can trust based on admin.php / index.php local
+framework scripts ; if the $y_url_or_path to get is detected to be under current
+URL will send also the Unique / session IDs ; more if detected that is from
+admin.php and if this is set to YES will send the HTTP-BASIC Auth credentials if
+detected (using YES with other URLs than Smart.Framework's current URL can be a
+serious SECURITY ISSUE, so don't !)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>ARRAY<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	<tr data-order="load_url_content" id="_load_url_content">
+
+		<td class="attributes"><code>
+			 public static
+			ARRAY
+			
+			</code>
+		</td>
+
+		<td class="name"><div>
+		<a class="anchor" href="#_load_url_content">#</a>
+		<code>load_url_content( <span>STRING <var>$y_url_or_path</var></span>, <span>NUMBER <var>$y_timeout</var> = <span class="php-num">30</span></span>, <span>ENUM <var>$y_method</var> = <span class="php-quote">'GET'</span></span>, <span>ENUM <var>$y_ssl_method</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$y_auth_name</var> = <span class="php-quote">''</span></span>, <span>STRING <var>$y_auth_pass</var> = <span class="php-quote">''</span></span>, <span>YES/NO <var>$y_allow_set_credentials</var> = <span class="php-quote">'no'</span></span> )</code>
+
+		<div class="description short">
+			
+<p>Load URL Content (if relative path to a file will be prefixed with current
+URL for security reasons)</p>
+
+		</div>
+
+		<div class="description detailed hidden">
+			
+<p>Load URL Content (if relative path to a file will be prefixed with current
+URL for security reasons)</p>
+
+
+
+				<h4>Parameters</h4>
+				<div class="list"><dl>
+					<dt><var>$y_url_or_path</var></dt>
+					<dd>:: relative/path/to/file (assumes current URL as prefix) |
+http(s)://some.url:port/path (port is optional) ; works also with Data-URL
+(Data-Image only)</dd>
+					<dt><var>$y_timeout</var></dt>
+					<dd>:: timeout in seconds</dd>
+					<dt><var>$y_method</var></dt>
+					<dd>:: used only for URLs, the browsing method: GET | POST</dd>
+					<dt><var>$y_ssl_method</var></dt>
+					<dd>:: SSL Mode: tls | sslv3 | sslv2 | ssl</dd>
+					<dt><var>$y_auth_name</var></dt>
+					<dd>:: used only for URLs, the auth user name</dd>
+					<dt><var>$y_auth_pass</var></dt>
+					<dd>:: used only for URLs, the auth password</dd>
+					<dt><var>$y_allow_set_credentials</var></dt>
+					<dd>:: DEFAULT IS SET to NO ; if YES must be set just for internal URLs ; if set to
+AUTO will try to detect if can trust based on admin.php / index.php local
+framework scripts ; if the $y_url_or_path to get is detected to be under current
+URL will send also the Unique / session IDs ; more if detected that is from
+admin.php and if this is set to YES will send the HTTP-BASIC Auth credentials if
+detected (using YES with other URLs than Smart.Framework's current URL can be a
+serious SECURITY ISSUE, so don't !)</dd>
+				</dl></div>
+
+				<h4>Returns</h4>
+				<div class="list">
+					<code>ARRAY</code><br>ARRAY<br>
+				</div>
+
+
+
+
+		</div>
+		</div></td>
+	</tr>
+	</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+	<div id="footer">
+		Documentation for PHP Classes and Functions // <a href="http://demo.unix-world.org/smart-framework/" target="_blank">Smart.Framework Documentation :: 2019-10-23 06:42</a>
+	</div>
+</div>
+</div>
+</body>
+</html>
