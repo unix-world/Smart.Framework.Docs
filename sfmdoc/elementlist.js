@@ -1,3 +1,0 @@
-
-var SmartDocGen = SmartDocGen || {};
-SmartDocGen.elements = [["c","SmartAbstractPgsqlExtDb"],["c","SmartCurlHttpFtpClient"],["c","SmartExportToOpenOffice"],["c","SmartImgBizCharts"],["c","SmartImgGfxCharts"],["c","SmartImportFromOpenOffice"],["c","SmartLangIdClient"],["c","SmartModExtLib\\DbalZend\\DbalPdo"],["c","SmartModExtLib\\DbOrmRedbean\\ORM"],["c","SmartModExtLib\\LangDetect\\LanguageNgrams"],["c","SmartModExtLib\\MediaGallery\\Manager"],["c","SmartModExtLib\\TplDust\\SmartDustTemplating"],["c","SmartModExtLib\\TplNetteLatte\\SmartNetteLatteTemplating"],["c","SmartModExtLib\\TplTwig\\SmartTwigTemplating"],["c","SmartModExtLib\\TplTypo3Fluid\\SmartTypo3FluidTemplating"],["c","SmartSolrDb"],["c","SmartTemplating"],["c","SmartZipArchive"]];

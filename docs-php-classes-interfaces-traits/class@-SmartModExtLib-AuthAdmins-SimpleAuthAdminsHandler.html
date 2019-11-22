@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<!-- Smart.Framework@Documentor :: Index v.20191122 -->
+<!-- Template: Smart.Framework@Documentor v.20191122 -->
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<meta name="author" content="unix-world.org">
-	<meta name="description" content="Smart.Framework and Smart.Framework.Modules Documentation for PHP and Javascript">
-	<meta name="keywords" content="php, smart, framework, documentation">
-	<meta name="summary" content="Smart.Framework, a PHP / Javascript Framework for Web">
-	<meta name="generator" content="Smart.Framework Documentor">
-	<title>Documentation for Smart.Framework and Smart.Framework.Modules</title>
+	<meta name="description" content="\SmartModExtLib\AuthAdmins\SimpleAuthAdminsHandler        final class \SmartModExtLib\AuthAdmins\ SimpleAuthAdminsHandler    {   } ::    Simple Auth">
+	<meta name="keywords" content="smartmodextlib authadmins simpleauthadminshandler, final, class, smartmodextlib authadmins, simpleauthadminshandler, simple, auth, admins, handler, this, provide, a, very, authentication, for, admin, area, admin.php, using, single, account, with, username password, set, in, config-admin.php, required, constants, app auth admin username, app auth admin password, must, be, config-admin.php, optional, app auth privileges, set, language, php, located, at, modules mod-auth-admins libs simpleauthadminshandler.php">
+	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
+	<title>PHP Documentation for: \SmartModExtLib\AuthAdmins\SimpleAuthAdminsHandler</title>
 	<!-- CSS and Fonts -->
-	<link rel="stylesheet" type="text/css" href="fonts/source-sans-pro.css">
+		<link rel="stylesheet" type="text/css" href="../fonts/source-sans-pro.css">
+	
 	<style type="text/css">
 	* {
 		font-family: 'Source Sans Pro', sans-serif;
@@ -417,88 +417,357 @@
 	/* ----- #end ----- */
 	</style>
 	<style type="text/css">
-	/* -- CSS Start :: Smart.Framework / Debug / TPL Highlight :: r.5.2.7 / smart.framework.v.5.2 -- */
-	/* ----------------------------- */
-	.sf__tpl__highlight__marker {
-		background: #DDEEFF !important;
-		color: #333333 !important;
-	}
-	.sf__tpl__highlight__syntax {
-		background: #B3FF80 !important;
-		color: #222222 !important;
-	}
-	.sf__tpl__highlight__subtpl {
-		background: #FDE223 !important;
-		color: #111111 !important;
-	}
-	.sf__tpl__highlight__marker, .sf__tpl__highlight__syntax, .sf__tpl__highlight__subtpl {
-		cursor: context-menu !important;
-		padding-left: 1px;
-		padding-right: 1px;
-	}
-	/* ----------------------------- */
-	/* -- CSS End -- */
+		
+/* -- CSS Start :: Smart.Framework / Debug / TPL Highlight :: r.5.2.7 / smart.framework.v.5.2 -- */
+
+/* ----------------------------- */
+
+.sf__tpl__highlight__marker {
+	background: #DDEEFF !important;
+	color: #333333 !important;
+}
+.sf__tpl__highlight__syntax {
+	background: #B3FF80 !important;
+	color: #222222 !important;
+}
+.sf__tpl__highlight__subtpl {
+	background: #FDE223 !important;
+	color: #111111 !important;
+}
+
+.sf__tpl__highlight__marker, .sf__tpl__highlight__syntax, .sf__tpl__highlight__subtpl {
+	cursor: context-menu !important;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+/* ----------------------------- */
+
+/* -- CSS End -- */
+
 	</style>
 </head>
 <body>
+<nav class="ux-navbar">
+	<div id="logo"><span>&#9776; </span>Smart.Framework and Smart.Framework.Modules : PHP Documentation</div>
+	<label for="drop-0" class="toggle">&#9776;</label>
+	<input type="checkbox" id="drop-0">
+		<ul class="menu">
+		<li><a href="index.html#Package--developmentmodulesAuthAdmins-" title="return to Index">return to Index</a></li>
+	</ul>
+	
+</nav>
+<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Demo"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
+<!-- class r.20191122 -->
+<!-- Styles -->
+<!-- styles r.20191122 -->
 <style type="text/css">
+.doc-package {
+	color: #3F51B5;
+}
+.doc-located {
+	color: #999999;
+}
+.doc-modifiers {
+	color: #FF5500;
+}
+.doc-keyword {
+	color: #333333;
+}
+.doc-name,
+.doc-param-name {
+	color: #666699;
+}
+.doc-method-name {
+	color: #111111;
+}
+.doc-method-sub-name {
+	color: #555555;
+}
+.doc-method-special-name {
+	color: #003399;
+}
+.doc-method-abstract-name {
+	color: #777777;
+}
+.doc-ns,
+.doc-param-optional {
+	color: #778899;
+}
+.doc-param-value {
+	color: #3F51B5;
+}
+.doc-implements {
+	color: #72C100;
+}
+.doc-language {
+	color: #92981b;
+}
+.doc-extends,
+.doc-type-class {
+	color: #20639E;
+}
+.doc-inherited,
+.doc-type-interface {
+	color: #AAAAAA;
+}
+.doc-use,
+.doc-type-trait {
+	color: #888888;
+}
+.doc-reimplemented,
+.doc-reuses {
+	color: #99AABB;
+}
+.doc-throws {
+	color: #FF0000;
+}
+.doc-header {
+	color: #3F51B5;
+}
 div.doc-container {
 	border: 1px solid #ECECEC;
 	padding: 5px;
 	margin-bottom: 20px;
 }
+ul.doc-list,
+ul.doc-list ul {
+	padding: 10px;
+	margin: 0;
+	list-style-type: none;
+}
+ul.doc-list ul {
+	padding: 0px;
+	padding-left: 20px;
+	margin: 0;
+}
+.doc-comments {
+	background: #343C61;
+	color: #FCFCFC;
+	padding: 10px;
+	line-height: 1.75;
+}
+.doc-method-ret-params {
+	background: #FAFAFA;
+	color: #3F51B5;
+	padding: 2px;
+	font-size: 95%;
+	margin-top: 10px;
+}
+.doc-method-comments {
+	background: #ECECEC;
+	color: #333333;
+	padding: 2px;
+	font-size: 85%;
+	margin-top: 10px;
+}
+.doc-code {
+	background: #232B50;
+	color: #FFFFFF;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.doc-code pre {
+	padding: 5px;
+	overflow-x: auto;
+}
+div.doc-summary {
+	position: fixed;
+	bottom: 25px;
+	right: 25px;
+	padding: 10px;
+	background: #343C61;
+	color: #FFFFFF;
+	border: 1px solid #CCCCCC;
+}
 </style>
-<nav class="ux-navbar">
-	<div id="logo"><span>&#9776; </span>Documentation for Smart.Framework and Smart.Framework.Modules</div>
-	<label for="drop-0" class="toggle">&#9776;</label>
-	<input type="checkbox" id="drop-0">
-</nav>
-<a href="http://demo.unix-world.org/smart-framework/" target="_blank" title="Smart.Framework Demo"><img src="img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<br>
+<style type="text/css">
+/*
+// css/atelier-sulphurpool-dark.css
+// HighlightJs: v.9.13.1
+*/
+
+/* modified by unixman - changed color for comment */
+/* Base16 Atelier Sulphurpool Dark - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/sulphurpool) */
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+
+/* Atelier-Sulphurpool Comment */
+.hljs-comment {
+	color: #777777;
+}
+.hljs-quote {
+	color: #898ea4;
+}
+
+/* Atelier-Sulphurpool Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-name,
+.hljs-regexp,
+.hljs-link,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+	color: #c94922;
+}
+
+/* Atelier-Sulphurpool Orange */
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+	color: #c76b29;
+}
+
+/* Atelier-Sulphurpool Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+	color: #ac9739;
+}
+
+/* Atelier-Sulphurpool Blue */
+.hljs-title,
+.hljs-section {
+	color: #3d8fd1;
+}
+
+/* Atelier-Sulphurpool Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #6679cc;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	background: #202746;
+	color: #979db4;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+
+/* END */
+
+</style>
+<!-- Headings -->
+<h1 title="PHP class: `\SmartModExtLib\AuthAdmins\SimpleAuthAdminsHandler` @ PHP Namespace: `\SmartModExtLib\AuthAdmins\`" id="Class--Summary-">
+	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\SmartModExtLib\AuthAdmins\</span><span class="doc-name">SimpleAuthAdminsHandler</span><br>
+	
+	
+	{
+	
+	}&nbsp;::
+</h1>
+<!-- Description -->
+<div class="doc-comments">Simple Auth Admins Handler<br>
+This class provide a very simple authentication for admin area (admin.php) using a single account with username/password set in config-admin.php<br>
+Required constants: APP_AUTH_ADMIN_USERNAME, APP_AUTH_ADMIN_PASSWORD (must be set in set in config-admin.php)<br>
+Optional constants: APP_AUTH_PRIVILEGES (set in set in config-admin.php)</div><br>
+<!-- Metainfo -->
 <div class="doc-container">
-	<table title="PHP and Javascript documentation">
-		<tr>
-			<td width="64"><img src="img/php-logo.svg" alt="PHP Logo" title="PHP Logo" width="64" height="64"></td>
-			<td width="16">&nbsp;</td>
-			<td><h3><a style="color:#333333;" href="docs-php-classes-interfaces-traits/index.html">Documentation for PHP Classes, Interfaces and Traits</a></h3></td>
-		</tr>
-		<tr>
-			<td width="64"><img src="img/javascript-logo.svg" alt="Javascript Logo" title="Javascript Logo" width="64" height="64"></td>
-			<td width="16">&nbsp;</td>
-			<td><h3><a style="color:#333333;" href="docs-js-classes/index.html">Documentation for Javascript Classes</a></h3></td>
-		</tr>
-	</table>
+	<ul class="doc-list">
+		<li><span class="doc-language"><b>Language:</b> PHP<span></li>
+		<li><span class="doc-located"><b>Located at:</b> modules/mod-auth-admins/libs/SimpleAuthAdminsHandler.php</span></li>
+		<li><span class="doc-package"><b>Package:</b> development:modules:AuthAdmins</span></li>
+		<li><span class="doc-ns"><b>Namespace:</b> \SmartModExtLib\AuthAdmins\</span></li>
+		<li><span class="doc-name"><b>Class Name:</b> SimpleAuthAdminsHandler</span></li>
+		
+		<li><b>Version:</b> v.20191111</li>
+		
+		
+		
+		
+		
+	</ul>
 </div>
+<!-- Methods -->
 <br>
-<br>
-<br>
-<div align="center">
-	<table title="See this project on Github">
-		<tr>
-			<td><h5><a style="color:#111111;" href="https://github.com/unix-world/Smart.Framework" target="_blank">Smart.Framework source code on Github</a></h5></td>
-			<td width="16">&nbsp;</td>
-			<td width="32"><img src="img/github-logo.svg" alt="Github Logo" title="Github Logo" width="32" height="32"></td>
-		</tr>
-		<tr>
-			<td><h5><a style="color:#111111;" href="https://github.com/unix-world/Smart.Framework.Modules" target="_blank">Smart.Framework.Modules source code on Github</a></h5></td>
-			<td width="16">&nbsp;</td>
-			<td width="32"><img src="img/github-logo.svg" alt="Github Logo" title="Github Logo" width="32" height="32"></td>
-		</tr>
-		<tr>
-			<td><h5><a style="color:#111111;" href="https://github.com/unix-world/Smart.Framework.Docs" target="_blank">Smart.Framework.Docs source code on Github</a></h5></td>
-			<td width="16">&nbsp;</td>
-			<td width="32"><img src="img/github-logo.svg" alt="Github Logo" title="Github Logo" width="32" height="32"></td>
-		</tr>
-	</table>
+<div class="doc-container" id="Methods--Summary-">
+	<h2 class="doc-header">Methods summary</h2>
 </div>
+<!-- methods r.20191122 -->
+<div class="doc-container" id="Method--Authenticate">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>Authenticate</b></span>&nbsp;(
+				<span class="doc-param-name"><b><span class="doc-param-optional" title="`$enforce_ssl` Parameter is OPTIONAL, with the Default Value: false">$enforce_ssl</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
+	
+	
+	
+	
+	
+	
+</div>
+<!-- Properties -->
+
+<!-- Constants -->
+
+<!-- Sample Code -->
+
+<!-- Summary List -->
 <br>
+<!-- summary r.20191122 -->
+<script>
+// summary r.20191122
+function smartHandleDocSelector(obj) {
+	if(!obj) {
+		return;
+	}
+	var selection = '';
+	try {
+		selection = obj.options[obj.selectedIndex].value;
+	} catch(err){}
+	if(selection) {
+		self.location.hash = String(selection);
+		obj.selectedIndex = 0; // reset selection to index zero
+	} else {
+		selection = '';
+		//self.location.href = self.location.href.split('#')[0]; // because reset selection to index zero avoid refresh !
+	}
+}
+</script>
+<div class="doc-summary">
+	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
+		<option value="" selected>* PHP Class \SmartModExtLib\AuthAdmins\SimpleAuthAdminsHandler # Documentation Index *</option>
+		<optgroup label="Class \SmartModExtLib\AuthAdmins\SimpleAuthAdminsHandler">
+			<option value="Class--Summary-">***** Class Definition *****</option>
+		</optgroup>
+		<optgroup label="Class Methods">
+			<option value="Methods--Summary-">*** Methods summary ***</option>
+									<option value="Method--Authenticate">Method: Authenticate()</option>
+			
+			
+			
+		</optgroup>
+		
+		
+		
+	</select>
+</div>
+
+<hr>
+<small style="color:#BBBBBB;">documentation generated on: 2019-11-22 19:06:05 +0000</small>
+<hr>
 <br>
+<!-- # -->
 <div align="center">
-	<small style="color:#778899;"><b>This documentation was generated entirely by <a style="color:#778899;" href="https://github.com/unix-world/Smart.Framework.Modules/tree/master/mod-documentor" target="_blank">mod-documentor</a></b></small>
 	<br>
-	<small style="color:#666699;">v.5.2.7</small>
-	<br>
-	<small style="color:#DCDCDC;">Smart.Framework / Smart.Framework.Modules &copy; 2009-2019 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2019 unix-world.org</small>
 </div>
 </body>
 </html>
