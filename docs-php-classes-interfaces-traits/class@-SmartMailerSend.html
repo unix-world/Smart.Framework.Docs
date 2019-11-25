@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20191122 -->
+<!-- Template: Smart.Framework@Documentor v.20191124 -->
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartMailerSend        final class \ SmartMailerSend    {   } -&gt;    Class: SmartMailerSend - provides a Mail Send Client that supports both: MAIL or SMTP">
-	<meta name="keywords" content="smartmailersend, final, class, smartmailersend, -, class, -, provides, a, mail, send, client, that, supports, both, or, smtp, with, ssl tls, support., it, automatically, includes, the, smartmailersmtpclient, when, sending, via, method., this, is, for, very, advanced, use., if, defined, smart software mailsend safe rules, and, set, to, true, will, use, extra, safe, rules, composing, email, mime, messages, be, sent, ex, adding, alternate, text, body, html, messages, easy, use, smartmailerutils  send email, smartmailerutils  send extended email, functions., language, php, located, at, lib core plugins lib mail send.php, package, plugins mailer, namespace, name, version, v, depends, classes, smart, usage, dynamic, object, new, class   - method, only, methods, summary, public, function, construct">
+	<meta name="keywords" content="smartmailersend, final, class, smartmailersend, -, class, -, provides, a, mail, send, client, that, supports, both, or, smtp, with, ssl tls, support., it, automatically, includes, the, smartmailersmtpclient, when, sending, via, method., this, is, low, level, message, composer, and, utility, for, advanced, usage., if, defined, smart software mailsend safe rules, set, to, true, will, use, extra, safe, rules, composing, email, mime, messages, be, sent, ex, adding, alternate, text, body, html, messages, easy, use, smartmailerutils  send email, smartmailerutils  send extended email, functions., language, php, located, at, lib core plugins lib mail send.php, package, plugins mailer, namespace, name, version, v, depends, classes, smart, usage, dynamic, object, new, class   - method, only, methods, public, function, construct, constructor, enum, do send, string">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartMailerSend</title>
 	<!-- CSS and Fonts -->
@@ -206,7 +206,7 @@
 	[hidden] {
 		display: none !important;
 	}
-	button {
+	button, a.ux-button {
 		/* Structure */
 		display: inline-block; /* do not mark as important as it can't hide using jquery hide() */
 		padding: 7px 15px 7px 15px !important;
@@ -236,13 +236,16 @@
 		user-select: none !important;
 		zoom: 1 !important;
 	}
-	button:hover,
-	button:focus {
+	button *, a.ux-button * {
+		font-weight: bold !important;
+	}
+	button:hover, a.ux-button:hover,
+	button:focus, a.ux-button:focus {
 		border: 1px solid #CCCCCC !important;
 		background-color: #F3F3F3 !important;
 		color: #2069A9 !important;
 	}
-	button:focus {
+	button:focus, a.ux-button:focus {
 		outline: 0 !important;
 	}
 	button[disabled],
@@ -263,7 +266,7 @@
 	nav.ux-navbar {
 		margin: 0;
 		padding: 0;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar div#logo {
 		display: block;
@@ -289,7 +292,7 @@
 		margin: 0px;
 		display: inline-block;
 		float: left;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar a {
 		display: block;
@@ -300,11 +303,11 @@
 		text-decoration: none;
 	}
 	nav.ux-navbar ul li ul li:hover {
-		background-color: #2e40a4;
+		background-color: #2b3a57;
 	}
 	nav.ux-navbar a:hover {
 		color: #FFFFFF;
-		background-color: #1d3093;
+		background-color: #1a2946;
 	}
 	nav.ux-navbar ul ul {
 		display: none;
@@ -353,7 +356,7 @@
 		}
 		nav.ux-navbar label.toggle {
 			display: block;
-			background-color: #3f51b5;
+			background-color: #3c4663;
 			padding: 0 20px;
 			color: #FFFFFF;
 			font-size: 20px;
@@ -366,7 +369,7 @@
 		}
 		nav.ux-navbar label.toggle:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar input[id^=drop]:checked + ul {
 			display: block;
@@ -387,15 +390,15 @@
 		}
 		nav.ux-navbar a:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar ul ul ul a {
 			color: #FFFFFF;
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul li ul li .toggle,
 		nav.ux-navbar ul ul a {
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul ul {
 			float: none;
@@ -449,7 +452,13 @@
 </head>
 <body>
 <nav class="ux-navbar">
-	<div id="logo"><span>&#9776; </span>Smart.Framework and Smart.Framework.Modules : PHP Documentation</div>
+	<div id="logo" style="display:flex; align-items:center;">
+		<span style="line-height:50px;">
+						<img src="../img/php-logo.svg" width="36" height="36" align="left">
+			
+		</span>
+		<span style="margin-left:10px;">Smart.Framework and Smart.Framework.Modules : PHP Documentation</span>
+	</div>
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
@@ -457,10 +466,10 @@
 	</ul>
 	
 </nav>
-<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Demo"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20191122 -->
+<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
+<!-- class r.20191124 -->
 <!-- Styles -->
-<!-- styles r.20191122 -->
+<!-- styles r.20191124 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -579,6 +588,11 @@ div.doc-summary {
 	background: #343C61;
 	color: #FFFFFF;
 	border: 1px solid #CCCCCC;
+	width: 45vw;
+	min-width: 320px !important;
+}
+select#select-summary {
+	width: 99% !important;
 }
 </style>
 <style type="text/css">
@@ -675,7 +689,7 @@ div.doc-summary {
 <!-- Description -->
 <div class="doc-comments">Class: SmartMailerSend - provides a Mail Send Client that supports both: MAIL or SMTP with SSL/TLS support.<br>
 It automatically includes the SmartMailerSmtpClient class when sending via SMTP method.<br>
-This class is for very advanced use.<br>
+This class is a low level message composer and send utility for advanced usage.<br>
 If defined the SMART_SOFTWARE_MAILSEND_SAFE_RULES and set to TRUE will use extra safe rules when composing email mime messages to be sent (Ex: adding alternate TEXT body to HTML email messages)<br>
 To easy send email messages use: SmartMailerUtils::send_email() / SmartMailerUtils::send_extended_email() functions.</div><br>
 <!-- Metainfo -->
@@ -687,7 +701,7 @@ To easy send email messages use: SmartMailerUtils::send_email() / SmartMailerUti
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartMailerSend</span></li>
 		
-		<li><b>Version:</b> v.20191120</li>
+		<li><b>Version:</b> v.20191125</li>
 		<li><b>Depends:</b> classes:  Smart</li>
 		
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -698,9 +712,9 @@ To easy send email messages use: SmartMailerUtils::send_email() / SmartMailerUti
 <!-- Methods -->
 <br>
 <div class="doc-container" id="Methods--Summary-">
-	<h2 class="doc-header">Methods summary</h2>
+	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20191122 -->
+<!-- methods r.20191124 -->
 <div class="doc-container" id="Method--__construct">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-special-name"><b>__construct</b></span>&nbsp;(
 		
@@ -709,48 +723,66 @@ To easy send email messages use: SmartMailerUtils::send_email() / SmartMailerUti
 	
 	
 	
+			<div class="doc-method-comments">Class constructor</div>
 	
 	
 	
 </div><div class="doc-container" id="Method--send">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>send</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$do_send` Parameter is REQUIRED">$do_send</span></b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$raw_message` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$raw_message</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+				<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span title="`$do_send` Parameter is REQUIRED">$do_send</span></b></span>, 
+			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$raw_message` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$raw_message</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;STRING
 	
 	
+			<div class="doc-method-ret-params">@return: {STRING} Empty string if SUCCESS or Error Message on FAILURE ; Failure may come as missing some required message compose properties and/or if send = 'yes' will also check the email send success ; NOTICE: if using MAIL method the mail send result may report or not an error ... ; With SMTP sending the message assure it is delivered to the destination SMTP server with or without an error<br>
+@param: {ENUM} $do_send: If set to 'yes' will do send the message using MAIL or SMTP method depend how this class is set ; If set to 'no' will just compose a message from provided parameters ; does not apply if $raw_message is supplied ...<br>
+@param: {STRING} $raw_message: If this is provided will use the message from this string and will not compose the message using this class properties: $subject, $body, $headers, $from, $to, $cc, $bcc, ...</div>
 	
+			<div class="doc-method-comments">Compose and/or Send an Email Message using MAIL or SMTP method, depend how this class properties are set<br>
+If the 2nd parameter is empty as '', the composed message can be retrieved by reading the (string) $class-&gt;mime_message property after calling this function<br>
+Can be a Text or HTML Message</div>
 	
 	
 	
 </div><div class="doc-container" id="Method--add_attachment">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>add_attachment</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$message` Parameter is REQUIRED">$message</span></b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$name` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$name</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$ctype` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$ctype</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$disp` Parameter is OPTIONAL, with the Default Value: &quot;attachment&quot;">$disp</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;attachment&quot;</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$cid` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$cid</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$embed` Parameter is OPTIONAL, with the Default Value: &quot;no&quot;">$embed</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;no&quot;</b></span>
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$att_body` Parameter is REQUIRED">$att_body</span></b></span>, 
+			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$name` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$name</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
+			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$ctype` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$ctype</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
+			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$disp` Parameter is OPTIONAL, with the Default Value: &quot;attachment&quot;">$disp</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;attachment&quot;</b></span>, 
+			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$cid` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$cid</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
+			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$embed` Parameter is OPTIONAL, with the Default Value: &quot;no&quot;">$embed</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;no&quot;</b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;BOOLEAN
 	
 	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} On Success will return TRUE, on Failure will return FALSE<br>
+@param: {STRING} $att_body: The body of the attachment<br>
+@param: {STRING} $name: *Optional* A File Name for this attachment<br>
+@param: {ENUM} $ctype: *Optional* The content type of the attachment: 'text/plain', 'text/html', 'message/rfc822', 'application/octet-stream'<br>
+@param: {ENUM} $disp: *Optional* The content disposition of the attachment: 'inline' or 'attachment' ; if $ctype is 'application/octet-stream' can be only 'attachment'<br>
+@param: {STRING} $cid: *Optional* The content ID if using with linked HTML reference parts of the message HTML body<br>
+@param: {ENUM} $embed: *Optional* If set to 'yes' will embed this part as real attachment ; else will embedd it as message sub-part ; Chossing this depends pretty much on how the message is built, if there are linked sub-parts or not ... too much philosophy to explain all here, but all the documentation for MIME E-mail Encapsulation of Aggregate Parts is here: https://tools.ietf.org/html/rfc2110</div>
 	
+			<div class="doc-method-comments">Add an attachment to the message</div>
 	
 	
 	
 </div><div class="doc-container" id="Method--safe_header_str">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>safe_header_str</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;STRING
 	
 	
+			<div class="doc-method-ret-params">@return: {STRING} The safe escaped Mime Message Header Line<br>
+@param: {STRING} $str: The mime header line (MUST NOT Contain the line ending CRLF as \r\n) ; Line ending must be added after escaping the header line using this function</div>
 	
+			<div class="doc-method-comments">Provide a helper to safe escape Mime (Email) Message Header Lines</div>
 	
 	
 	
@@ -758,103 +790,173 @@ To easy send email messages use: SmartMailerUtils::send_email() / SmartMailerUti
 <!-- Properties -->
 <br>
 <div class="doc-container" id="Properties--Summary-">
-	<h2 class="doc-header">Properties summary</h2>
+	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20191122 -->
-<div class="doc-container" id="Property--error">
-	<span class="doc-modifiers">public</span> <b>$error</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+<!-- properties r.20191124 -->
+<div class="doc-container" id="Property--debuglevel">
+	<span class="doc-modifiers">public</span> <b>$debuglevel</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>0</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>INTEGER+</i>
+			<div class="doc-method-comments">Debug Level<br>
+Valid values: 0 = no debug ; 1 = simple debug (partial) ; 2 = advanced debug (full)</div>
+	
+</div><div class="doc-container" id="Property--error">
+	<span class="doc-modifiers">public</span> <b>$error</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Errors Collector<br>
+If any error occurs will be set here<br>
+default ''</div>
 	
 </div><div class="doc-container" id="Property--log">
-	<span class="doc-modifiers">public</span> <b>$log</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
-	
-</div><div class="doc-container" id="Property--mime_message">
-	<span class="doc-modifiers">public</span> <b>$mime_message</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
-	
-</div><div class="doc-container" id="Property--debuglevel">
-	<span class="doc-modifiers">public</span> <b>$debuglevel</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$log</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Debug Log Collector<br>
+If Debug, this will return the partial or full Log as string, depend on how $debuglevel is set<br>
+default ''</div>
 	
 </div><div class="doc-container" id="Property--usealways_b64">
-	<span class="doc-modifiers">public</span> <b>$usealways_b64</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$usealways_b64</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>TRUE</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>BOOLEAN</i>
+			<div class="doc-method-comments">If set to TRUE will encode using Base64Encode (the most safe)<br>
+Otherwise will use QuotePrintableEncode (the most used)</div>
 	
 </div><div class="doc-container" id="Property--method">
-	<span class="doc-modifiers">public</span> <b>$method</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
-	
-</div><div class="doc-container" id="Property--from_return">
-	<span class="doc-modifiers">public</span> <b>$from_return</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
-	
-</div><div class="doc-container" id="Property--namefrom">
-	<span class="doc-modifiers">public</span> <b>$namefrom</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
-	
-</div><div class="doc-container" id="Property--from">
-	<span class="doc-modifiers">public</span> <b>$from</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
-	
-</div><div class="doc-container" id="Property--to">
-	<span class="doc-modifiers">public</span> <b>$to</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
-	
-</div><div class="doc-container" id="Property--cc">
-	<span class="doc-modifiers">public</span> <b>$cc</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
-	
-</div><div class="doc-container" id="Property--bcc">
-	<span class="doc-modifiers">public</span> <b>$bcc</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
-	
-</div><div class="doc-container" id="Property--priority">
-	<span class="doc-modifiers">public</span> <b>$priority</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
-	
-</div><div class="doc-container" id="Property--subject">
-	<span class="doc-modifiers">public</span> <b>$subject</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
-	
-</div><div class="doc-container" id="Property--body">
-	<span class="doc-modifiers">public</span> <b>$body</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
-	
-</div><div class="doc-container" id="Property--headers">
-	<span class="doc-modifiers">public</span> <b>$headers</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$method</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>'mail'</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>ENUM</i>
+			<div class="doc-method-comments">The Mail Method to be used<br>
+Valid values: 'mail' or 'smtp'<br>
+If 'smtp' is used, additional SMTP settings must be added to this class (see below)</div>
 	
 </div><div class="doc-container" id="Property--is_html">
-	<span class="doc-modifiers">public</span> <b>$is_html</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
-	
-</div><div class="doc-container" id="Property--is_related">
-	<span class="doc-modifiers">public</span> <b>$is_related</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$is_html</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>false</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>BOOLEAN</i>
+			<div class="doc-method-comments">If set to TRUE will send HTML formated message, otherwise Text</div>
 	
 </div><div class="doc-container" id="Property--charset">
-	<span class="doc-modifiers">public</span> <b>$charset</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$charset</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>'ISO-8859-1'</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Message Character Set<br>
+Ussualy should be set to 'UTF-8'</div>
+	
+</div><div class="doc-container" id="Property--from_return">
+	<span class="doc-modifiers">public</span> <b>$from_return</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Message Return Recipient Email Address<br>
+Ex: 'return@my-email.ext'</div>
+	
+</div><div class="doc-container" id="Property--namefrom">
+	<span class="doc-modifiers">public</span> <b>$namefrom</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Message From Recipient Name<br>
+*Optional*<br>
+Ex: 'Me'</div>
+	
+</div><div class="doc-container" id="Property--from">
+	<span class="doc-modifiers">public</span> <b>$from</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Message From Recipient Email Address<br>
+Ex: 'me@my-email.ext'</div>
+	
+</div><div class="doc-container" id="Property--to">
+	<span class="doc-modifiers">public</span> <b>$to</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Message To Recipient Email Address<br>
+Ex: 'to@email.ext'</div>
+	
+</div><div class="doc-container" id="Property--cc">
+	<span class="doc-modifiers">public</span> <b>$cc</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>MIXED</i>
+			<div class="doc-method-comments">Message Cc Recipient(s) Email Address(es) as STRING or ARRAY<br>
+*Optional*<br>
+Ex: 'cc@email.ext' or [ 'cc1@email.ext', 'cc2@email3.ext', ... ]</div>
+	
+</div><div class="doc-container" id="Property--bcc">
+	<span class="doc-modifiers">public</span> <b>$bcc</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Message Bcc Recipient Email Address<br>
+*Optional*<br>
+Ex: 'bcc@email101.ext'</div>
+	
+</div><div class="doc-container" id="Property--priority">
+	<span class="doc-modifiers">public</span> <b>$priority</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>3</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>ENUM</i>
+			<div class="doc-method-comments">Message Priority ; Can be (as standards): 1 = High ; 3 = Normal ; 5 = Low<br>
+*Optional*</div>
+	
+</div><div class="doc-container" id="Property--subject">
+	<span class="doc-modifiers">public</span> <b>$subject</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Message Subject ; Ex: 'This is the subject of the email Message'</div>
+	
+</div><div class="doc-container" id="Property--body">
+	<span class="doc-modifiers">public</span> <b>$body</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Message Body<br>
+Ex(text): 'This is the body of the email Message\nAnd a new Line ...' $is_html should be leave as FALSE as default in this case<br>
+Ex(html): 'This is the body of the email Message&lt;br&gt;And a new Line ...' -&gt; $is_html must be set to TRUE if HTML body is sent<br>
+For the case of sending HTML bodies you must assure mprogramatically that all HTML required resources as images, css, ... are embedded (the will not be embedded automatically)<br>
+As an alternative tho this class which is low level, the functions SmartMailerUtils::send_email() / SmartMailerUtils::send_extended_email() may be used and they will automatically resolve the HTML resources embedding ...</div>
+	
+</div><div class="doc-container" id="Property--headers">
+	<span class="doc-modifiers">public</span> <b>$headers</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Message Headers<br>
+*Optional*<br>
+If non-empty, each header line must be end as CRLF (\r\n)<br>
+Ex: 'X-AntiAbuse: This header was added to track abuse, please include it with any abuse report'.&quot;\r\n&quot;.'X-AntiAbuse: Sender Address Domain - mydomain.ext'.&quot;\r\n&quot;</div>
 	
 </div><div class="doc-container" id="Property--smtp_helo">
-	<span class="doc-modifiers">public</span> <b>$smtp_helo</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$smtp_helo</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>'127.0.0.1'</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Apply only if send the email message using SMTP Method<br>
+SMTP HELO (server name that is allowed to send mails for this domain)<br>
+Must be set to a real domain host that is valid to send emails for that address</div>
 	
 </div><div class="doc-container" id="Property--smtp_server">
-	<span class="doc-modifiers">public</span> <b>$smtp_server</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$smtp_server</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>null</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Apply only if send the email message using SMTP Method<br>
+SMTP server host or ip</div>
 	
 </div><div class="doc-container" id="Property--smtp_port">
-	<span class="doc-modifiers">public</span> <b>$smtp_port</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$smtp_port</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>null</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>INTEGER+</i>
+			<div class="doc-method-comments">Apply only if send the email message using SMTP Method<br>
+SMTP server port ; usually 25</div>
 	
 </div><div class="doc-container" id="Property--smtp_ssl">
-	<span class="doc-modifiers">public</span> <b>$smtp_ssl</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$smtp_ssl</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>null</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>ENUM</i>
+			<div class="doc-method-comments">Apply only if send the email message using SMTP Method<br>
+SMTP SSL Mode: '', 'ssl', 'sslv3', 'tls', 'starttls'<br>
+If empty string will be set it will be not using SSL Mode</div>
 	
 </div><div class="doc-container" id="Property--smtp_cafile">
-	<span class="doc-modifiers">public</span> <b>$smtp_cafile</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$smtp_cafile</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>null</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Apply only if send the email message using SMTP Method<br>
+Relative Path to a SSL Certificate Authority File<br>
+If SSL Mode is set this is optional, otherwise is not used<br>
+Ex: store within smart-framework/etc/certificates ; specify as 'etc/certificates/ca.pem')<br>
+IMPORTANT: in this case the 'etc/certificates/' directory must be protected with a .htaccess to avoid being public readable - the directory and any files within this directory ...</div>
 	
 </div><div class="doc-container" id="Property--smtp_timeout">
-	<span class="doc-modifiers">public</span> <b>$smtp_timeout</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$smtp_timeout</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>30</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>INTEGER+</i>
+			<div class="doc-method-comments">Apply only if send the email message using SMTP Method<br>
+SMTP Connection Timeout in seconds</div>
 	
 </div><div class="doc-container" id="Property--smtp_login">
-	<span class="doc-modifiers">public</span> <b>$smtp_login</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$smtp_login</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>false</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>BOOLEAN</i>
+			<div class="doc-method-comments">Apply only if send the email message using SMTP Method<br>
+SMTP Authentication ; If set to TRUE will try a SMTP Auth (login) using non-empty and valid $smtp_user and $smtp_password</div>
 	
 </div><div class="doc-container" id="Property--smtp_user">
-	<span class="doc-modifiers">public</span> <b>$smtp_user</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$smtp_user</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>null</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Apply only if send the email message using SMTP Method<br>
+SMTP Authentication username ($smtp_login must be set to TRUE and a valid, non-empty $smtp_password must be provided)</div>
 	
 </div><div class="doc-container" id="Property--smtp_password">
-	<span class="doc-modifiers">public</span> <b>$smtp_password</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$smtp_password</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>null</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Apply only if send the email message using SMTP Method<br>
+SMTP Authentication password ($smtp_login must be set to TRUE and a valid, non-empty $smtp_user must be provided)</div>
+	
+</div><div class="doc-container" id="Property--mime_message">
+	<span class="doc-modifiers">public</span> <b>$mime_message</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Store the composed message by this class<br>
+If used with $class-&gt;send() and not using the 2nd parameter may return the mime message composed in this variable</div>
 	
 </div>
 <!-- Constants -->
+<br>
+<div class="doc-container" id="Constants--Summary-">
+	<h2 class="doc-header">class Constants</h2>
+</div>
+<!-- constants r.20191124 -->
 
 <!-- Sample Code -->
 
 <!-- Summary List -->
 <br>
-<!-- summary r.20191122 -->
-<script>
-// summary r.20191122
+<!-- summary r.20191124 -->
+<script type="text/javascript">
+// summary r.20191124
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -876,92 +978,104 @@ function smartHandleDocSelector(obj) {
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
 		<option value="" selected>* PHP Class \SmartMailerSend # Documentation Index *</option>
 		<optgroup label="Class \SmartMailerSend">
-			<option value="Class--Summary-">***** Class Definition *****</option>
+			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
-			<option value="Methods--Summary-">*** Methods summary ***</option>
-									<option value="Method--__construct">Method: __construct()</option>
+			<option value="Methods--Summary-">Methods list</option>
+									<option value="Method--__construct"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;__construct()</option>
 			
 			
-									<option value="Method--send">Method: send()</option>
+									<option value="Method--send"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;send()</option>
 			
 			
-									<option value="Method--add_attachment">Method: add_attachment()</option>
+									<option value="Method--add_attachment"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;add_attachment()</option>
 			
 			
-									<option value="Method--safe_header_str">Method: safe_header_str()</option>
+									<option value="Method--safe_header_str"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;safe_header_str()</option>
 			
-			
-			
-		</optgroup>
-				<optgroup label="Class Properties">
-			<option value="Properties--Summary-">*** Properties summary ***</option>
-									<option value="Property--error">Property: $error</option>
-			
-									<option value="Property--log">Property: $log</option>
-			
-									<option value="Property--mime_message">Property: $mime_message</option>
-			
-									<option value="Property--debuglevel">Property: $debuglevel</option>
-			
-									<option value="Property--usealways_b64">Property: $usealways_b64</option>
-			
-									<option value="Property--method">Property: $method</option>
-			
-									<option value="Property--from_return">Property: $from_return</option>
-			
-									<option value="Property--namefrom">Property: $namefrom</option>
-			
-									<option value="Property--from">Property: $from</option>
-			
-									<option value="Property--to">Property: $to</option>
-			
-									<option value="Property--cc">Property: $cc</option>
-			
-									<option value="Property--bcc">Property: $bcc</option>
-			
-									<option value="Property--priority">Property: $priority</option>
-			
-									<option value="Property--subject">Property: $subject</option>
-			
-									<option value="Property--body">Property: $body</option>
-			
-									<option value="Property--headers">Property: $headers</option>
-			
-									<option value="Property--is_html">Property: $is_html</option>
-			
-									<option value="Property--is_related">Property: $is_related</option>
-			
-									<option value="Property--charset">Property: $charset</option>
-			
-									<option value="Property--smtp_helo">Property: $smtp_helo</option>
-			
-									<option value="Property--smtp_server">Property: $smtp_server</option>
-			
-									<option value="Property--smtp_port">Property: $smtp_port</option>
-			
-									<option value="Property--smtp_ssl">Property: $smtp_ssl</option>
-			
-									<option value="Property--smtp_cafile">Property: $smtp_cafile</option>
-			
-									<option value="Property--smtp_timeout">Property: $smtp_timeout</option>
-			
-									<option value="Property--smtp_login">Property: $smtp_login</option>
-			
-									<option value="Property--smtp_user">Property: $smtp_user</option>
-			
-									<option value="Property--smtp_password">Property: $smtp_password</option>
 			
 			
 		</optgroup>
-		
-		
+		<optgroup label="Class Properties">
+			<option value="Properties--Summary-">Properties list</option>
+									<option value="Property--debuglevel"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$debuglevel</option>
+			
+									<option value="Property--error"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$error</option>
+			
+									<option value="Property--log"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$log</option>
+			
+									<option value="Property--usealways_b64"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$usealways_b64</option>
+			
+									<option value="Property--method"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$method</option>
+			
+									<option value="Property--is_html"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$is_html</option>
+			
+									<option value="Property--charset"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$charset</option>
+			
+									<option value="Property--from_return"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$from_return</option>
+			
+									<option value="Property--namefrom"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$namefrom</option>
+			
+									<option value="Property--from"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$from</option>
+			
+									<option value="Property--to"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$to</option>
+			
+									<option value="Property--cc"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$cc</option>
+			
+									<option value="Property--bcc"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$bcc</option>
+			
+									<option value="Property--priority"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$priority</option>
+			
+									<option value="Property--subject"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$subject</option>
+			
+									<option value="Property--body"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$body</option>
+			
+									<option value="Property--headers"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$headers</option>
+			
+									<option value="Property--smtp_helo"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$smtp_helo</option>
+			
+									<option value="Property--smtp_server"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$smtp_server</option>
+			
+									<option value="Property--smtp_port"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$smtp_port</option>
+			
+									<option value="Property--smtp_ssl"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$smtp_ssl</option>
+			
+									<option value="Property--smtp_cafile"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$smtp_cafile</option>
+			
+									<option value="Property--smtp_timeout"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$smtp_timeout</option>
+			
+									<option value="Property--smtp_login"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$smtp_login</option>
+			
+									<option value="Property--smtp_user"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$smtp_user</option>
+			
+									<option value="Property--smtp_password"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$smtp_password</option>
+			
+									<option value="Property--mime_message"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$mime_message</option>
+			
+			
+		</optgroup>
+		<optgroup label="Class Constants">
+			<option value="Constants--Summary-">Constants list</option>
+			
+		</optgroup>
 		
 	</select>
 </div>
+<!-- summary-selectjs r.20191124 -->
+<link rel="stylesheet" type="text/css" href="../js/slimselect.css">
+<script type="text/javascript" src="../js/slimselect.js"></script>
+<script type="text/javascript">
+try {
+	new SlimSelect({
+		select: '#select-summary'
+	});
+} catch(err){
+	console.error('ERROR: SlimSelect Failed: ' + err);
+}
+</script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-11-22 19:06:04 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-11-25 14:33:39 +0000</small>
 <hr>
 <br>
 <!-- # -->

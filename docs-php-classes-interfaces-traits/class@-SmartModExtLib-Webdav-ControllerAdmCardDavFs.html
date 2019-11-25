@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20191122 -->
+<!-- Template: Smart.Framework@Documentor v.20191124 -->
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartModExtLib\Webdav\ControllerAdmCardDavFs        abstract class \SmartModExtLib\Webdav\ ControllerAdmCardDavFs  extends \SmartAbstractAppController">
-	<meta name="keywords" content="smartmodextlib webdav controlleradmcarddavfs, abstract, class, smartmodextlib webdav, controlleradmcarddavfs, extends, smartabstractappcontroller, -, dav, carddav, filesystem, admin, controller, it, supports, only, the, area, admin.php, so, can, be, used, to, implement, smartappadmincontroller, does, a, direct, output, needs, set, in, controller, smart app module direct output, true, language, php, located, at, modules mod-webdav libs controlleradmcarddavfs.php, package, development modules webdav, namespace, name, version, inheritance, chart, →, ↳, methods, summary, final, public, function, davfsrunserver, dav fs root path, show usage quota, false, nfo title, dav webaddressbook, nfo signature, smart.framework  carddav, nfo prefix crrpath, dav, nfo lnk welcome, nfo txt welcome, carddav, home, nfo svg logo, modules mod-webdav libs img abook.svg, -, construct, string, y module path, y controller, y url page, y hardcoded area, inherited, from, param, string, y module path, relative, path, followed, by, trailing, slash, current, module, containing, served, middleware, service, ex, modules mod-mytest">
+	<meta name="keywords" content="smartmodextlib webdav controlleradmcarddavfs, abstract, class, smartmodextlib webdav, controlleradmcarddavfs, extends, smartabstractappcontroller, -, dav, carddav, filesystem, admin, controller, it, supports, only, the, area, admin.php, so, can, be, used, to, implement, smartappadmincontroller, does, a, direct, output, needs, set, in, controller, smart app module direct output, true, language, php, located, at, modules mod-webdav libs controlleradmcarddavfs.php, package, development modules webdav, namespace, name, version, inheritance, chart, →, ↳, methods, final, public, function, davfsrunserver, dav fs root path, show usage quota, false, nfo title, dav webaddressbook, nfo signature, smart.framework  carddav, nfo prefix crrpath, dav, nfo lnk welcome, nfo txt welcome, carddav, home, nfo svg logo, modules mod-webdav libs img abook.svg, -, construct, string, y module path, y controller, y url page, y hardcoded area, inherited, from, param, string, y module path, relative, path, followed, by, trailing, slash, current, module, containing, served, middleware, service, ex, modules mod-mytest, y controller">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartModExtLib\Webdav\ControllerAdmCardDavFs</title>
 	<!-- CSS and Fonts -->
@@ -206,7 +206,7 @@
 	[hidden] {
 		display: none !important;
 	}
-	button {
+	button, a.ux-button {
 		/* Structure */
 		display: inline-block; /* do not mark as important as it can't hide using jquery hide() */
 		padding: 7px 15px 7px 15px !important;
@@ -236,13 +236,16 @@
 		user-select: none !important;
 		zoom: 1 !important;
 	}
-	button:hover,
-	button:focus {
+	button *, a.ux-button * {
+		font-weight: bold !important;
+	}
+	button:hover, a.ux-button:hover,
+	button:focus, a.ux-button:focus {
 		border: 1px solid #CCCCCC !important;
 		background-color: #F3F3F3 !important;
 		color: #2069A9 !important;
 	}
-	button:focus {
+	button:focus, a.ux-button:focus {
 		outline: 0 !important;
 	}
 	button[disabled],
@@ -263,7 +266,7 @@
 	nav.ux-navbar {
 		margin: 0;
 		padding: 0;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar div#logo {
 		display: block;
@@ -289,7 +292,7 @@
 		margin: 0px;
 		display: inline-block;
 		float: left;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar a {
 		display: block;
@@ -300,11 +303,11 @@
 		text-decoration: none;
 	}
 	nav.ux-navbar ul li ul li:hover {
-		background-color: #2e40a4;
+		background-color: #2b3a57;
 	}
 	nav.ux-navbar a:hover {
 		color: #FFFFFF;
-		background-color: #1d3093;
+		background-color: #1a2946;
 	}
 	nav.ux-navbar ul ul {
 		display: none;
@@ -353,7 +356,7 @@
 		}
 		nav.ux-navbar label.toggle {
 			display: block;
-			background-color: #3f51b5;
+			background-color: #3c4663;
 			padding: 0 20px;
 			color: #FFFFFF;
 			font-size: 20px;
@@ -366,7 +369,7 @@
 		}
 		nav.ux-navbar label.toggle:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar input[id^=drop]:checked + ul {
 			display: block;
@@ -387,15 +390,15 @@
 		}
 		nav.ux-navbar a:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar ul ul ul a {
 			color: #FFFFFF;
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul li ul li .toggle,
 		nav.ux-navbar ul ul a {
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul ul {
 			float: none;
@@ -449,7 +452,13 @@
 </head>
 <body>
 <nav class="ux-navbar">
-	<div id="logo"><span>&#9776; </span>Smart.Framework and Smart.Framework.Modules : PHP Documentation</div>
+	<div id="logo" style="display:flex; align-items:center;">
+		<span style="line-height:50px;">
+						<img src="../img/php-logo.svg" width="36" height="36" align="left">
+			
+		</span>
+		<span style="margin-left:10px;">Smart.Framework and Smart.Framework.Modules : PHP Documentation</span>
+	</div>
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
@@ -457,10 +466,10 @@
 	</ul>
 	
 </nav>
-<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Demo"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20191122 -->
+<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
+<!-- class r.20191124 -->
 <!-- Styles -->
-<!-- styles r.20191122 -->
+<!-- styles r.20191124 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -579,6 +588,11 @@ div.doc-summary {
 	background: #343C61;
 	color: #FFFFFF;
 	border: 1px solid #CCCCCC;
+	width: 45vw;
+	min-width: 320px !important;
+}
+select#select-summary {
+	width: 99% !important;
 }
 </style>
 <style type="text/css">
@@ -703,9 +717,9 @@ It does a direct output so it needs to set in controller: SMART_APP_MODULE_DIREC
 <!-- Methods -->
 <br>
 <div class="doc-container" id="Methods--Summary-">
-	<h2 class="doc-header">Methods summary</h2>
+	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20191122 -->
+<!-- methods r.20191124 -->
 <div class="doc-container" id="Method--DavFsRunServer">
 	<span class="doc-modifiers">final public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>DavFsRunServer</b></span>&nbsp;(
 				<span class="doc-param-name"><b><span title="`$dav_fs_root_path` Parameter is REQUIRED">$dav_fs_root_path</span></b></span>, 
@@ -1411,16 +1425,26 @@ Because of the PHP Bug #31570, the __destruct() can't operate on relative paths 
 	
 </div>
 <!-- Properties -->
+<br>
+<div class="doc-container" id="Properties--Summary-">
+	<h2 class="doc-header">class Properties</h2>
+</div>
+<!-- properties r.20191124 -->
 
 <!-- Constants -->
+<br>
+<div class="doc-container" id="Constants--Summary-">
+	<h2 class="doc-header">class Constants</h2>
+</div>
+<!-- constants r.20191124 -->
 
 <!-- Sample Code -->
 
 <!-- Summary List -->
 <br>
-<!-- summary r.20191122 -->
-<script>
-// summary r.20191122
+<!-- summary r.20191124 -->
+<script type="text/javascript">
+// summary r.20191124
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1442,148 +1466,166 @@ function smartHandleDocSelector(obj) {
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
 		<option value="" selected>* PHP Class \SmartModExtLib\Webdav\ControllerAdmCardDavFs # Documentation Index *</option>
 		<optgroup label="Class \SmartModExtLib\Webdav\ControllerAdmCardDavFs">
-			<option value="Class--Summary-">***** Class Definition *****</option>
+			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
-			<option value="Methods--Summary-">*** Methods summary ***</option>
-									<option value="Method--DavFsRunServer">Method: DavFsRunServer()</option>
+			<option value="Methods--Summary-">Methods list</option>
+									<option value="Method--DavFsRunServer"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;DavFsRunServer()</option>
 			
 			
-									<option value="Method--__construct">Method: __construct()</option>
+									<option value="Method--__construct"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;__construct()</option>
 			
 			
-									<option value="Method--__destruct">Method: __destruct()</option>
+									<option value="Method--__destruct"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;__destruct()</option>
 			
 			
-									<option value="Method--IfDebug">Method: IfDebug()</option>
+									<option value="Method--IfDebug"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;IfDebug()</option>
 			
 			
-									<option value="Method--SetDebugData">Method: SetDebugData()</option>
+									<option value="Method--SetDebugData"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;SetDebugData()</option>
 			
 			
-									<option value="Method--ControllerGetParam">Method: ControllerGetParam()</option>
+									<option value="Method--ControllerGetParam"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;ControllerGetParam()</option>
 			
 			
-									<option value="Method--ConfigParamGet">Method: ConfigParamGet()</option>
+									<option value="Method--ConfigParamGet"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;ConfigParamGet()</option>
 			
 			
-									<option value="Method--RequestMethodGet">Method: RequestMethodGet()</option>
+									<option value="Method--RequestMethodGet"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;RequestMethodGet()</option>
 			
 			
-									<option value="Method--RequestPathGet">Method: RequestPathGet()</option>
+									<option value="Method--RequestPathGet"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;RequestPathGet()</option>
 			
 			
-									<option value="Method--RequestVarsGet">Method: RequestVarsGet()</option>
+									<option value="Method--RequestVarsGet"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;RequestVarsGet()</option>
 			
 			
-									<option value="Method--RequestVarGet">Method: RequestVarGet()</option>
+									<option value="Method--RequestVarGet"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;RequestVarGet()</option>
 			
 			
-									<option value="Method--CookieVarGet">Method: CookieVarGet()</option>
+									<option value="Method--CookieVarGet"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;CookieVarGet()</option>
 			
 			
-									<option value="Method--CookieVarSet">Method: CookieVarSet()</option>
+									<option value="Method--CookieVarSet"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;CookieVarSet()</option>
 			
 			
-									<option value="Method--PageViewGetData">Method: PageViewGetData()</option>
+									<option value="Method--PageViewGetData"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewGetData()</option>
 			
 			
-									<option value="Method--PageViewSetData">Method: PageViewSetData()</option>
+									<option value="Method--PageViewSetData"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewSetData()</option>
 			
 			
-									<option value="Method--PageViewGetRawHeaders">Method: PageViewGetRawHeaders()</option>
+									<option value="Method--PageViewGetRawHeaders"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewGetRawHeaders()</option>
 			
 			
-									<option value="Method--PageViewSetRawHeaders">Method: PageViewSetRawHeaders()</option>
+									<option value="Method--PageViewSetRawHeaders"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewSetRawHeaders()</option>
 			
 			
-									<option value="Method--PageViewSetRawHeader">Method: PageViewSetRawHeader()</option>
+									<option value="Method--PageViewSetRawHeader"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewSetRawHeader()</option>
 			
 			
-									<option value="Method--PageViewResetRawHeaders">Method: PageViewResetRawHeaders()</option>
+									<option value="Method--PageViewResetRawHeaders"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewResetRawHeaders()</option>
 			
 			
-									<option value="Method--PageViewGetCfgs">Method: PageViewGetCfgs()</option>
+									<option value="Method--PageViewGetCfgs"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewGetCfgs()</option>
 			
 			
-									<option value="Method--PageViewSetCfgs">Method: PageViewSetCfgs()</option>
+									<option value="Method--PageViewSetCfgs"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewSetCfgs()</option>
 			
 			
-									<option value="Method--PageViewSetCfg">Method: PageViewSetCfg()</option>
+									<option value="Method--PageViewSetCfg"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewSetCfg()</option>
 			
 			
-									<option value="Method--PageViewResetCfgs">Method: PageViewResetCfgs()</option>
+									<option value="Method--PageViewResetCfgs"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewResetCfgs()</option>
 			
 			
-									<option value="Method--PageViewGetStatusCode">Method: PageViewGetStatusCode()</option>
+									<option value="Method--PageViewGetStatusCode"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewGetStatusCode()</option>
 			
 			
-									<option value="Method--PageViewSetOkStatus">Method: PageViewSetOkStatus()</option>
+									<option value="Method--PageViewSetOkStatus"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewSetOkStatus()</option>
 			
 			
-									<option value="Method--PageViewSetErrorStatus">Method: PageViewSetErrorStatus()</option>
+									<option value="Method--PageViewSetErrorStatus"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewSetErrorStatus()</option>
 			
 			
-									<option value="Method--PageViewSetRedirectUrl">Method: PageViewSetRedirectUrl()</option>
+									<option value="Method--PageViewSetRedirectUrl"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewSetRedirectUrl()</option>
 			
 			
-									<option value="Method--PageViewGetVars">Method: PageViewGetVars()</option>
+									<option value="Method--PageViewGetVars"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewGetVars()</option>
 			
 			
-									<option value="Method--PageViewSetVars">Method: PageViewSetVars()</option>
+									<option value="Method--PageViewSetVars"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewSetVars()</option>
 			
 			
-									<option value="Method--PageViewSetVar">Method: PageViewSetVar()</option>
+									<option value="Method--PageViewSetVar"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewSetVar()</option>
 			
 			
-									<option value="Method--PageViewPrependVar">Method: PageViewPrependVar()</option>
+									<option value="Method--PageViewPrependVar"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewPrependVar()</option>
 			
 			
-									<option value="Method--PageViewAppendVar">Method: PageViewAppendVar()</option>
+									<option value="Method--PageViewAppendVar"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewAppendVar()</option>
 			
 			
-									<option value="Method--PageViewResetVars">Method: PageViewResetVars()</option>
+									<option value="Method--PageViewResetVars"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewResetVars()</option>
 			
 			
-									<option value="Method--PageViewResetVar">Method: PageViewResetVar()</option>
+									<option value="Method--PageViewResetVar"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewResetVar()</option>
 			
 			
-									<option value="Method--PageCacheisActive">Method: PageCacheisActive()</option>
+									<option value="Method--PageCacheisActive"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageCacheisActive()</option>
 			
 			
-									<option value="Method--PageCacheSafeKey">Method: PageCacheSafeKey()</option>
+									<option value="Method--PageCacheSafeKey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageCacheSafeKey()</option>
 			
 			
-									<option value="Method--PageGetFromCache">Method: PageGetFromCache()</option>
+									<option value="Method--PageGetFromCache"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageGetFromCache()</option>
 			
 			
-									<option value="Method--PageSetInCache">Method: PageSetInCache()</option>
+									<option value="Method--PageSetInCache"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageSetInCache()</option>
 			
 			
-									<option value="Method--PageUnsetFromCache">Method: PageUnsetFromCache()</option>
+									<option value="Method--PageUnsetFromCache"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageUnsetFromCache()</option>
 			
 			
 						
 			
-									<option value="Method--Initialize">Method: Initialize()</option>
+									<option value="Method--Initialize"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Initialize()</option>
 			
 			
-									<option value="Method--ShutDown">Method: ShutDown()</option>
+									<option value="Method--ShutDown"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;ShutDown()</option>
 			
 			
-									<option value="Method--Run">Method: Run()</option>
+									<option value="Method--Run"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Run()</option>
 			
 			
 			
 		</optgroup>
-		
-		
+		<optgroup label="Class Properties">
+			<option value="Properties--Summary-">Properties list</option>
+			
+		</optgroup>
+		<optgroup label="Class Constants">
+			<option value="Constants--Summary-">Constants list</option>
+			
+		</optgroup>
 		
 	</select>
 </div>
+<!-- summary-selectjs r.20191124 -->
+<link rel="stylesheet" type="text/css" href="../js/slimselect.css">
+<script type="text/javascript" src="../js/slimselect.js"></script>
+<script type="text/javascript">
+try {
+	new SlimSelect({
+		select: '#select-summary'
+	});
+} catch(err){
+	console.error('ERROR: SlimSelect Failed: ' + err);
+}
+</script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-11-22 19:06:05 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-11-25 14:33:42 +0000</small>
 <hr>
 <br>
 <!-- # -->

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20191122 -->
+<!-- Template: Smart.Framework@Documentor v.20191124 -->
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartUtils        final class \ SmartUtils    {   } ::    Class: SmartUtils - provides various utility functions for Smart.Framework     Language: PHP">
-	<meta name="keywords" content="smartutils, final, class, smartutils, class, -, provides, various, utility, functions, for, smart.framework, language, php, located, at, lib framework lib utils.php, package, core extra, namespace, name, version, v, depends, classes, smart, smartvalidator, smarthashcrypto, smartauth, smartfilesysutils, smartfilesystem, smarthttpclient, usage, static, object, class  method, this, only, methods, summary, public, function, cookie default domain, get cookie, cookie name, set cookie, cookie data, expire time, cookie path, cookie domain, url hex encode, y val, url hex decode, y enc val, check ip in range, lower range ip address, upper range ip address, needle ip address, date interval days, y date now, y date past, datetime fixed offset, y timezone offset, ydate, data archive, y str, data unarchive, y enc data, comment php code, y code, y repl, array tag-start, -, tag-end, -, pretty print var, y var, indent, pretty print bytes, y bytes, y decimals, y separator, pretty print numbers, y number, number to roman, num">
+	<meta name="keywords" content="smartutils, final, class, smartutils, class, -, provides, various, utility, functions, for, smart.framework, language, php, located, at, lib framework lib utils.php, package, core extra, namespace, name, version, v, depends, classes, smart, smartvalidator, smarthashcrypto, smartauth, smartfilesysutils, smartfilesystem, smarthttpclient, usage, static, object, class  method, this, only, methods, public, function, cookie default domain, get cookie, cookie name, set cookie, cookie data, expire time, cookie path, cookie domain, url hex encode, y val, url hex decode, y enc val, check ip in range, lower range ip address, upper range ip address, needle ip address, date interval days, y date now, y date past, datetime fixed offset, y timezone offset, ydate, data archive, y str, data unarchive, y enc data, comment php code, y code, y repl, array tag-start, -, tag-end, -, pretty print var, y var, indent, pretty print bytes, y bytes, y decimals, y separator, pretty print numbers, y number, number to roman, num">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartUtils</title>
 	<!-- CSS and Fonts -->
@@ -206,7 +206,7 @@
 	[hidden] {
 		display: none !important;
 	}
-	button {
+	button, a.ux-button {
 		/* Structure */
 		display: inline-block; /* do not mark as important as it can't hide using jquery hide() */
 		padding: 7px 15px 7px 15px !important;
@@ -236,13 +236,16 @@
 		user-select: none !important;
 		zoom: 1 !important;
 	}
-	button:hover,
-	button:focus {
+	button *, a.ux-button * {
+		font-weight: bold !important;
+	}
+	button:hover, a.ux-button:hover,
+	button:focus, a.ux-button:focus {
 		border: 1px solid #CCCCCC !important;
 		background-color: #F3F3F3 !important;
 		color: #2069A9 !important;
 	}
-	button:focus {
+	button:focus, a.ux-button:focus {
 		outline: 0 !important;
 	}
 	button[disabled],
@@ -263,7 +266,7 @@
 	nav.ux-navbar {
 		margin: 0;
 		padding: 0;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar div#logo {
 		display: block;
@@ -289,7 +292,7 @@
 		margin: 0px;
 		display: inline-block;
 		float: left;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar a {
 		display: block;
@@ -300,11 +303,11 @@
 		text-decoration: none;
 	}
 	nav.ux-navbar ul li ul li:hover {
-		background-color: #2e40a4;
+		background-color: #2b3a57;
 	}
 	nav.ux-navbar a:hover {
 		color: #FFFFFF;
-		background-color: #1d3093;
+		background-color: #1a2946;
 	}
 	nav.ux-navbar ul ul {
 		display: none;
@@ -353,7 +356,7 @@
 		}
 		nav.ux-navbar label.toggle {
 			display: block;
-			background-color: #3f51b5;
+			background-color: #3c4663;
 			padding: 0 20px;
 			color: #FFFFFF;
 			font-size: 20px;
@@ -366,7 +369,7 @@
 		}
 		nav.ux-navbar label.toggle:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar input[id^=drop]:checked + ul {
 			display: block;
@@ -387,15 +390,15 @@
 		}
 		nav.ux-navbar a:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar ul ul ul a {
 			color: #FFFFFF;
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul li ul li .toggle,
 		nav.ux-navbar ul ul a {
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul ul {
 			float: none;
@@ -449,7 +452,13 @@
 </head>
 <body>
 <nav class="ux-navbar">
-	<div id="logo"><span>&#9776; </span>Smart.Framework and Smart.Framework.Modules : PHP Documentation</div>
+	<div id="logo" style="display:flex; align-items:center;">
+		<span style="line-height:50px;">
+						<img src="../img/php-logo.svg" width="36" height="36" align="left">
+			
+		</span>
+		<span style="margin-left:10px;">Smart.Framework and Smart.Framework.Modules : PHP Documentation</span>
+	</div>
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
@@ -457,10 +466,10 @@
 	</ul>
 	
 </nav>
-<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Demo"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20191122 -->
+<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
+<!-- class r.20191124 -->
 <!-- Styles -->
-<!-- styles r.20191122 -->
+<!-- styles r.20191124 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -579,6 +588,11 @@ div.doc-summary {
 	background: #343C61;
 	color: #FFFFFF;
 	border: 1px solid #CCCCCC;
+	width: 45vw;
+	min-width: 320px !important;
+}
+select#select-summary {
+	width: 99% !important;
 }
 </style>
 <style type="text/css">
@@ -694,9 +708,9 @@ div.doc-summary {
 <!-- Methods -->
 <br>
 <div class="doc-container" id="Methods--Summary-">
-	<h2 class="doc-header">Methods summary</h2>
+	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20191122 -->
+<!-- methods r.20191124 -->
 <div class="doc-container" id="Method--cookie_default_domain">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>cookie_default_domain</b></span>&nbsp;(
 		
@@ -1435,16 +1449,26 @@ When SET will return the content back</div>
 	
 </div><!-- Skip Internal-Priv Method: `run_proc_cmd()` --><!-- Skip Internal-Priv Method: `registerInternalCacheToDebugLog()` -->
 <!-- Properties -->
+<br>
+<div class="doc-container" id="Properties--Summary-">
+	<h2 class="doc-header">class Properties</h2>
+</div>
+<!-- properties r.20191124 -->
 
 <!-- Constants -->
+<br>
+<div class="doc-container" id="Constants--Summary-">
+	<h2 class="doc-header">class Constants</h2>
+</div>
+<!-- constants r.20191124 -->
 
 <!-- Sample Code -->
 
 <!-- Summary List -->
 <br>
-<!-- summary r.20191122 -->
-<script>
-// summary r.20191122
+<!-- summary r.20191124 -->
+<script type="text/javascript">
+// summary r.20191124
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1466,182 +1490,182 @@ function smartHandleDocSelector(obj) {
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
 		<option value="" selected>* PHP Class \SmartUtils # Documentation Index *</option>
 		<optgroup label="Class \SmartUtils">
-			<option value="Class--Summary-">***** Class Definition *****</option>
+			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
-			<option value="Methods--Summary-">*** Methods summary ***</option>
-									<option value="Method--cookie_default_domain">Method: cookie_default_domain()</option>
+			<option value="Methods--Summary-">Methods list</option>
+									<option value="Method--cookie_default_domain"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;cookie_default_domain()</option>
 			
 			
-									<option value="Method--get_cookie">Method: get_cookie()</option>
+									<option value="Method--get_cookie"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_cookie()</option>
 			
 			
-									<option value="Method--set_cookie">Method: set_cookie()</option>
+									<option value="Method--set_cookie"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;set_cookie()</option>
 			
 			
-									<option value="Method--url_hex_encode">Method: url_hex_encode()</option>
+									<option value="Method--url_hex_encode"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;url_hex_encode()</option>
 			
 			
-									<option value="Method--url_hex_decode">Method: url_hex_decode()</option>
+									<option value="Method--url_hex_decode"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;url_hex_decode()</option>
 			
 			
-									<option value="Method--check_ip_in_range">Method: check_ip_in_range()</option>
+									<option value="Method--check_ip_in_range"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;check_ip_in_range()</option>
 			
 			
-									<option value="Method--date_interval_days">Method: date_interval_days()</option>
+									<option value="Method--date_interval_days"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;date_interval_days()</option>
 			
 			
-									<option value="Method--datetime_fixed_offset">Method: datetime_fixed_offset()</option>
+									<option value="Method--datetime_fixed_offset"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;datetime_fixed_offset()</option>
 			
 			
-									<option value="Method--data_archive">Method: data_archive()</option>
+									<option value="Method--data_archive"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;data_archive()</option>
 			
 			
-									<option value="Method--data_unarchive">Method: data_unarchive()</option>
+									<option value="Method--data_unarchive"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;data_unarchive()</option>
 			
 			
-									<option value="Method--comment_php_code">Method: comment_php_code()</option>
+									<option value="Method--comment_php_code"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;comment_php_code()</option>
 			
 			
-									<option value="Method--pretty_print_var">Method: pretty_print_var()</option>
+									<option value="Method--pretty_print_var"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;pretty_print_var()</option>
 			
 			
-									<option value="Method--pretty_print_bytes">Method: pretty_print_bytes()</option>
+									<option value="Method--pretty_print_bytes"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;pretty_print_bytes()</option>
 			
 			
-									<option value="Method--pretty_print_numbers">Method: pretty_print_numbers()</option>
+									<option value="Method--pretty_print_numbers"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;pretty_print_numbers()</option>
 			
 			
-									<option value="Method--number_to_roman">Method: number_to_roman()</option>
+									<option value="Method--number_to_roman"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;number_to_roman()</option>
 			
 			
-									<option value="Method--roman_to_number">Method: roman_to_number()</option>
+									<option value="Method--roman_to_number"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;roman_to_number()</option>
 			
 			
-									<option value="Method--extract_title">Method: extract_title()</option>
+									<option value="Method--extract_title"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;extract_title()</option>
 			
 			
-									<option value="Method--extract_description">Method: extract_description()</option>
+									<option value="Method--extract_description"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;extract_description()</option>
 			
 			
-									<option value="Method--extract_keywords">Method: extract_keywords()</option>
+									<option value="Method--extract_keywords"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;extract_keywords()</option>
 			
 			
-									<option value="Method--extract_words_from_text_html">Method: extract_words_from_text_html()</option>
+									<option value="Method--extract_words_from_text_html"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;extract_words_from_text_html()</option>
 			
 			
-									<option value="Method--cleanup_numbers_from_text">Method: cleanup_numbers_from_text()</option>
+									<option value="Method--cleanup_numbers_from_text"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;cleanup_numbers_from_text()</option>
 			
 			
-									<option value="Method--crypto_blowfish_algo">Method: crypto_blowfish_algo()</option>
+									<option value="Method--crypto_blowfish_algo"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;crypto_blowfish_algo()</option>
 			
 			
-									<option value="Method--crypto_blowfish_encrypt">Method: crypto_blowfish_encrypt()</option>
+									<option value="Method--crypto_blowfish_encrypt"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;crypto_blowfish_encrypt()</option>
 			
 			
-									<option value="Method--crypto_blowfish_decrypt">Method: crypto_blowfish_decrypt()</option>
+									<option value="Method--crypto_blowfish_decrypt"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;crypto_blowfish_decrypt()</option>
 			
 			
-									<option value="Method--crypto_algo">Method: crypto_algo()</option>
+									<option value="Method--crypto_algo"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;crypto_algo()</option>
 			
 			
-									<option value="Method--crypto_encrypt">Method: crypto_encrypt()</option>
+									<option value="Method--crypto_encrypt"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;crypto_encrypt()</option>
 			
 			
-									<option value="Method--crypto_decrypt">Method: crypto_decrypt()</option>
+									<option value="Method--crypto_decrypt"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;crypto_decrypt()</option>
 			
 			
-									<option value="Method--create_semantic_url">Method: create_semantic_url()</option>
+									<option value="Method--create_semantic_url"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;create_semantic_url()</option>
 			
 			
-									<option value="Method--decode_download_link">Method: decode_download_link()</option>
+									<option value="Method--decode_download_link"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;decode_download_link()</option>
 			
 			
-									<option value="Method--create_download_link">Method: create_download_link()</option>
+									<option value="Method--create_download_link"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;create_download_link()</option>
 			
 			
-									<option value="Method--load_cached_file_content">Method: load_cached_file_content()</option>
+									<option value="Method--load_cached_file_content"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;load_cached_file_content()</option>
 			
 			
-									<option value="Method--read_uploaded_file">Method: read_uploaded_file()</option>
+									<option value="Method--read_uploaded_file"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;read_uploaded_file()</option>
 			
 			
-									<option value="Method--store_uploaded_file">Method: store_uploaded_file()</option>
+									<option value="Method--store_uploaded_file"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;store_uploaded_file()</option>
 			
 			
-									<option value="Method--client_ident_private_key">Method: client_ident_private_key()</option>
+									<option value="Method--client_ident_private_key"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;client_ident_private_key()</option>
 			
 			
-									<option value="Method--unique_client_private_key">Method: unique_client_private_key()</option>
+									<option value="Method--unique_client_private_key"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;unique_client_private_key()</option>
 			
 			
-									<option value="Method--unique_auth_client_private_key">Method: unique_auth_client_private_key()</option>
+									<option value="Method--unique_auth_client_private_key"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;unique_auth_client_private_key()</option>
 			
 			
-									<option value="Method--get_selfrobot_useragent_name">Method: get_selfrobot_useragent_name()</option>
+									<option value="Method--get_selfrobot_useragent_name"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_selfrobot_useragent_name()</option>
 			
 			
-									<option value="Method--get_visitor_signature">Method: get_visitor_signature()</option>
+									<option value="Method--get_visitor_signature"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_visitor_signature()</option>
 			
 			
-									<option value="Method--get_visitor_tracking_uid">Method: get_visitor_tracking_uid()</option>
+									<option value="Method--get_visitor_tracking_uid"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_visitor_tracking_uid()</option>
 			
 			
-									<option value="Method--get_encoding_charset">Method: get_encoding_charset()</option>
+									<option value="Method--get_encoding_charset"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_encoding_charset()</option>
 			
 			
-									<option value="Method--get_server_current_request_method">Method: get_server_current_request_method()</option>
+									<option value="Method--get_server_current_request_method"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_request_method()</option>
 			
 			
-									<option value="Method--get_server_current_protocol">Method: get_server_current_protocol()</option>
+									<option value="Method--get_server_current_protocol"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_protocol()</option>
 			
 			
-									<option value="Method--get_server_current_port">Method: get_server_current_port()</option>
+									<option value="Method--get_server_current_port"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_port()</option>
 			
 			
-									<option value="Method--get_server_current_ip">Method: get_server_current_ip()</option>
+									<option value="Method--get_server_current_ip"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_ip()</option>
 			
 			
-									<option value="Method--get_server_current_domain_name">Method: get_server_current_domain_name()</option>
+									<option value="Method--get_server_current_domain_name"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_domain_name()</option>
 			
 			
-									<option value="Method--get_server_current_basedomain_name">Method: get_server_current_basedomain_name()</option>
+									<option value="Method--get_server_current_basedomain_name"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_basedomain_name()</option>
 			
 			
-									<option value="Method--get_server_current_request_path">Method: get_server_current_request_path()</option>
+									<option value="Method--get_server_current_request_path"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_request_path()</option>
 			
 			
-									<option value="Method--get_server_current_request_uri">Method: get_server_current_request_uri()</option>
+									<option value="Method--get_server_current_request_uri"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_request_uri()</option>
 			
 			
-									<option value="Method--get_server_current_full_script">Method: get_server_current_full_script()</option>
+									<option value="Method--get_server_current_full_script"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_full_script()</option>
 			
 			
-									<option value="Method--get_server_current_path">Method: get_server_current_path()</option>
+									<option value="Method--get_server_current_path"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_path()</option>
 			
 			
-									<option value="Method--get_server_current_url">Method: get_server_current_url()</option>
+									<option value="Method--get_server_current_url"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_url()</option>
 			
 			
-									<option value="Method--get_server_current_script">Method: get_server_current_script()</option>
+									<option value="Method--get_server_current_script"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_script()</option>
 			
 			
-									<option value="Method--get_server_current_queryurl">Method: get_server_current_queryurl()</option>
+									<option value="Method--get_server_current_queryurl"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_queryurl()</option>
 			
 			
-									<option value="Method--get_webserver_version">Method: get_webserver_version()</option>
+									<option value="Method--get_webserver_version"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_webserver_version()</option>
 			
 			
-									<option value="Method--get_server_os">Method: get_server_os()</option>
+									<option value="Method--get_server_os"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_os()</option>
 			
 			
-									<option value="Method--get_ip_client">Method: get_ip_client()</option>
+									<option value="Method--get_ip_client"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_ip_client()</option>
 			
 			
-									<option value="Method--get_ip_proxyclient">Method: get_ip_proxyclient()</option>
+									<option value="Method--get_ip_proxyclient"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_ip_proxyclient()</option>
 			
 			
-									<option value="Method--get_os_browser_ip">Method: get_os_browser_ip()</option>
+									<option value="Method--get_os_browser_ip"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_os_browser_ip()</option>
 			
 			
 						
@@ -1650,14 +1674,32 @@ function smartHandleDocSelector(obj) {
 			
 			
 		</optgroup>
-		
-		
+		<optgroup label="Class Properties">
+			<option value="Properties--Summary-">Properties list</option>
+			
+		</optgroup>
+		<optgroup label="Class Constants">
+			<option value="Constants--Summary-">Constants list</option>
+			
+		</optgroup>
 		
 	</select>
 </div>
+<!-- summary-selectjs r.20191124 -->
+<link rel="stylesheet" type="text/css" href="../js/slimselect.css">
+<script type="text/javascript" src="../js/slimselect.js"></script>
+<script type="text/javascript">
+try {
+	new SlimSelect({
+		select: '#select-summary'
+	});
+} catch(err){
+	console.error('ERROR: SlimSelect Failed: ' + err);
+}
+</script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-11-22 19:06:03 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-11-25 14:33:38 +0000</small>
 <hr>
 <br>
 <!-- # -->

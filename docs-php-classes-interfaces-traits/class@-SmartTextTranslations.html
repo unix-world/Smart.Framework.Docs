@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20191122 -->
+<!-- Template: Smart.Framework@Documentor v.20191124 -->
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartTextTranslations        final class \ SmartTextTranslations    {   } ::    Class Smart Text Translations. It provides a Language Based Text">
-	<meta name="keywords" content="smarttexttranslations, final, class, smarttexttranslations, smart, text, translations., it, provides, a, language, based, translations, layer, for, the, smart.framework, applications., language, php, located, at, lib framework lib translate.php, package, core translations, namespace, name, version, v, depends, classes, smartpersistentcache, smartadaptertexttranslations, usage, static, object, class  method, -, this, only, methods, summary, public, function, getavailablelanguages, array, return, array, with, available, ids, sample, en, ro, regional, get, languages, getlistoflanguages, list, english, ro, romanian, available, isdefaultlanguage">
+	<meta name="keywords" content="smarttexttranslations, final, class, smarttexttranslations, smart, text, translations., it, provides, a, language, based, translations, layer, for, the, smart.framework, applications., language, php, located, at, lib framework lib translate.php, package, core translations, namespace, name, version, v, depends, classes, smartpersistentcache, smartadaptertexttranslations, usage, static, object, class  method, -, this, only, methods, public, function, getavailablelanguages, array, return, array, with, available, ids, sample, en, ro, regional, get, languages, getlistoflanguages, list, english, ro, romanian, available, isdefaultlanguage">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartTextTranslations</title>
 	<!-- CSS and Fonts -->
@@ -206,7 +206,7 @@
 	[hidden] {
 		display: none !important;
 	}
-	button {
+	button, a.ux-button {
 		/* Structure */
 		display: inline-block; /* do not mark as important as it can't hide using jquery hide() */
 		padding: 7px 15px 7px 15px !important;
@@ -236,13 +236,16 @@
 		user-select: none !important;
 		zoom: 1 !important;
 	}
-	button:hover,
-	button:focus {
+	button *, a.ux-button * {
+		font-weight: bold !important;
+	}
+	button:hover, a.ux-button:hover,
+	button:focus, a.ux-button:focus {
 		border: 1px solid #CCCCCC !important;
 		background-color: #F3F3F3 !important;
 		color: #2069A9 !important;
 	}
-	button:focus {
+	button:focus, a.ux-button:focus {
 		outline: 0 !important;
 	}
 	button[disabled],
@@ -263,7 +266,7 @@
 	nav.ux-navbar {
 		margin: 0;
 		padding: 0;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar div#logo {
 		display: block;
@@ -289,7 +292,7 @@
 		margin: 0px;
 		display: inline-block;
 		float: left;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar a {
 		display: block;
@@ -300,11 +303,11 @@
 		text-decoration: none;
 	}
 	nav.ux-navbar ul li ul li:hover {
-		background-color: #2e40a4;
+		background-color: #2b3a57;
 	}
 	nav.ux-navbar a:hover {
 		color: #FFFFFF;
-		background-color: #1d3093;
+		background-color: #1a2946;
 	}
 	nav.ux-navbar ul ul {
 		display: none;
@@ -353,7 +356,7 @@
 		}
 		nav.ux-navbar label.toggle {
 			display: block;
-			background-color: #3f51b5;
+			background-color: #3c4663;
 			padding: 0 20px;
 			color: #FFFFFF;
 			font-size: 20px;
@@ -366,7 +369,7 @@
 		}
 		nav.ux-navbar label.toggle:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar input[id^=drop]:checked + ul {
 			display: block;
@@ -387,15 +390,15 @@
 		}
 		nav.ux-navbar a:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar ul ul ul a {
 			color: #FFFFFF;
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul li ul li .toggle,
 		nav.ux-navbar ul ul a {
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul ul {
 			float: none;
@@ -449,7 +452,13 @@
 </head>
 <body>
 <nav class="ux-navbar">
-	<div id="logo"><span>&#9776; </span>Smart.Framework and Smart.Framework.Modules : PHP Documentation</div>
+	<div id="logo" style="display:flex; align-items:center;">
+		<span style="line-height:50px;">
+						<img src="../img/php-logo.svg" width="36" height="36" align="left">
+			
+		</span>
+		<span style="margin-left:10px;">Smart.Framework and Smart.Framework.Modules : PHP Documentation</span>
+	</div>
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
@@ -457,10 +466,10 @@
 	</ul>
 	
 </nav>
-<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Demo"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20191122 -->
+<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
+<!-- class r.20191124 -->
 <!-- Styles -->
-<!-- styles r.20191122 -->
+<!-- styles r.20191124 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -579,6 +588,11 @@ div.doc-summary {
 	background: #343C61;
 	color: #FFFFFF;
 	border: 1px solid #CCCCCC;
+	width: 45vw;
+	min-width: 320px !important;
+}
+select#select-summary {
+	width: 99% !important;
 }
 </style>
 <style type="text/css">
@@ -695,9 +709,9 @@ It provides a Language Based Text Translations Layer for the Smart.Framework bas
 <!-- Methods -->
 <br>
 <div class="doc-container" id="Methods--Summary-">
-	<h2 class="doc-header">Methods summary</h2>
+	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20191122 -->
+<!-- methods r.20191124 -->
 <div class="doc-container" id="Method--getAvailableLanguages">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getAvailableLanguages</b></span>&nbsp;(
 		
@@ -816,13 +830,23 @@ It provides a Language Based Text Translations Layer for the Smart.Framework bas
 	
 </div><!-- Skip Internal-Priv Method: `getDateFormatForJs()` --><!-- Skip Internal-Priv Method: `getDateFormatForPhp()` --><!-- Skip Internal-Priv Method: `getSafeRegionalSettings()` --><!-- Skip Internal-Priv Method: `formatAsLocalNumber()` --><!-- Skip Internal-Priv Method: `reverseSignOfLocalFormattedNumber()` --><!-- Skip Internal-Priv Method: `getTranslationByKey()` --><!-- Skip Internal-Priv Method: `getAllTranslations()` -->
 <!-- Properties -->
+<br>
+<div class="doc-container" id="Properties--Summary-">
+	<h2 class="doc-header">class Properties</h2>
+</div>
+<!-- properties r.20191124 -->
 
 <!-- Constants -->
+<br>
+<div class="doc-container" id="Constants--Summary-">
+	<h2 class="doc-header">class Constants</h2>
+</div>
+<!-- constants r.20191124 -->
 
 <!-- Sample Code -->
 <br>
 <div class="doc-container" id="SAMPLE--Code-">
-	<h2 class="doc-header">Sample Code: PHP</h2>
+	<h2 class="doc-header">Sample code: PHP</h2>
 </div>
 <div class="doc-code">
 	<pre><code><!-- Smart/HTML.Cleaner [@] --><code><span style="color: #57A64A">
@@ -832,9 +856,9 @@ It provides a Language Based Text Translations Layer for the Smart.Framework bas
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20191122 -->
-<script>
-// summary r.20191122
+<!-- summary r.20191124 -->
+<script type="text/javascript">
+// summary r.20191124
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -856,32 +880,32 @@ function smartHandleDocSelector(obj) {
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
 		<option value="" selected>* PHP Class \SmartTextTranslations # Documentation Index *</option>
 		<optgroup label="Class \SmartTextTranslations">
-			<option value="Class--Summary-">***** Class Definition *****</option>
+			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
-			<option value="Methods--Summary-">*** Methods summary ***</option>
-									<option value="Method--getAvailableLanguages">Method: getAvailableLanguages()</option>
+			<option value="Methods--Summary-">Methods list</option>
+									<option value="Method--getAvailableLanguages"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getAvailableLanguages()</option>
 			
 			
-									<option value="Method--getListOfLanguages">Method: getListOfLanguages()</option>
+									<option value="Method--getListOfLanguages"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getListOfLanguages()</option>
 			
 			
-									<option value="Method--isDefaultLanguage">Method: isDefaultLanguage()</option>
+									<option value="Method--isDefaultLanguage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;isDefaultLanguage()</option>
 			
 			
-									<option value="Method--getDefaultLanguage">Method: getDefaultLanguage()</option>
+									<option value="Method--getDefaultLanguage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getDefaultLanguage()</option>
 			
 			
-									<option value="Method--getLanguage">Method: getLanguage()</option>
+									<option value="Method--getLanguage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getLanguage()</option>
 			
 			
-									<option value="Method--setLanguage">Method: setLanguage()</option>
+									<option value="Method--setLanguage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;setLanguage()</option>
 			
 			
-									<option value="Method--validateLanguage">Method: validateLanguage()</option>
+									<option value="Method--validateLanguage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;validateLanguage()</option>
 			
 			
-									<option value="Method--getTranslator">Method: getTranslator()</option>
+									<option value="Method--getTranslator"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getTranslator()</option>
 			
 			
 						
@@ -900,17 +924,35 @@ function smartHandleDocSelector(obj) {
 			
 			
 		</optgroup>
-		
-		
-				<optgroup label="Class Sample code">
-			<option value="SAMPLE--Code-">*** Sample code ***</option>
+		<optgroup label="Class Properties">
+			<option value="Properties--Summary-">Properties list</option>
+			
+		</optgroup>
+		<optgroup label="Class Constants">
+			<option value="Constants--Summary-">Constants list</option>
+			
+		</optgroup>
+				<optgroup label="Class Sample usage">
+			<option value="SAMPLE--Code-">Sample code</option>
 		</optgroup>
 		
 	</select>
 </div>
+<!-- summary-selectjs r.20191124 -->
+<link rel="stylesheet" type="text/css" href="../js/slimselect.css">
+<script type="text/javascript" src="../js/slimselect.js"></script>
+<script type="text/javascript">
+try {
+	new SlimSelect({
+		select: '#select-summary'
+	});
+} catch(err){
+	console.error('ERROR: SlimSelect Failed: ' + err);
+}
+</script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-11-22 19:06:03 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-11-25 14:33:37 +0000</small>
 <hr>
 <br>
 <!-- # -->

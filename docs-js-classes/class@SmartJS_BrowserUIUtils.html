@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20191122 -->
+<!-- Template: Smart.Framework@Documentor v.20191124 -->
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="SmartJS_BrowserUIUtils        static class SmartJS_BrowserUIUtils  {  } .    CLASS :: Browser UI Utils :: SimpleUI This is a standalone implementation of">
-	<meta name="keywords" content="smartjs browseruiutils, static, class, ., browser, ui, utils, simpleui, this, is, a, standalone, implementation, of, the, components, javascript, in, smart.framework, an, alternate, compatible, provided, using, jqueryui, and, can, be, loaded, by, loading, from, smart.framework.modules, modules mod-ui-jqueryui toolkit jquery.smartframework.ui.js, javascript, provides, methods, to, simplify, several, basic, components., language, located, at, lib js framework smart-framework.js, jquery.smartframework.ui.js, package, sf.javascript ui, name, usage, smartjs browseruiutils.method, version, depends, jquery, smartjs coreutils, smartjs browserutils, jquery.simpledialog, jquery.listselect, jquery.datepicker, jquery.timepicker, jquery.tabs, jquery.autosuggest, jquery.datatable, summary, public, function, tooltip, string, selector, object, return, html, element, param, ex, .class, or, id, requires, lib js jquery jquery.tiptop.css, lib js jquery jquery.tiptop.js, display, component, dialogalert, y message html, function, evcode, y title, integer, y width, y height, message, code, execute, on, press">
+	<meta name="keywords" content="smartjs browseruiutils, static, class, ., browser, ui, utils, simpleui, this, is, a, standalone, implementation, of, the, components, javascript, in, smart.framework, an, alternate, compatible, provided, using, jqueryui, and, can, be, loaded, by, loading, from, smart.framework.modules, modules mod-ui-jqueryui toolkit jquery.smartframework.ui.js, javascript, provides, methods, to, simplify, several, basic, components., language, located, at, lib js framework smart-framework.js, jquery.smartframework.ui.js, package, sf.javascript ui, name, usage, smartjs browseruiutils.method, version, depends, jquery, smartjs coreutils, smartjs dateutils, smartjs browserutils, jquery.simpledialog, jquery.listselect, jquery.datepicker, jquery.timepicker, jquery.tabs, jquery.autosuggest, jquery.datatable, public, function, tooltip, string, selector, object, return, html, element, param, ex, .class, or, id, requires, lib js jquery jquery.tiptop.css, lib js jquery jquery.tiptop.js, display, component, dialogalert, y message html, function, evcode, y title, integer, y width, y height, message, code, execute, on, press">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : Javascript">
 	<title>JS Documentation for: SmartJS_BrowserUIUtils</title>
 	<!-- CSS and Fonts -->
@@ -206,7 +206,7 @@
 	[hidden] {
 		display: none !important;
 	}
-	button {
+	button, a.ux-button {
 		/* Structure */
 		display: inline-block; /* do not mark as important as it can't hide using jquery hide() */
 		padding: 7px 15px 7px 15px !important;
@@ -236,13 +236,16 @@
 		user-select: none !important;
 		zoom: 1 !important;
 	}
-	button:hover,
-	button:focus {
+	button *, a.ux-button * {
+		font-weight: bold !important;
+	}
+	button:hover, a.ux-button:hover,
+	button:focus, a.ux-button:focus {
 		border: 1px solid #CCCCCC !important;
 		background-color: #F3F3F3 !important;
 		color: #2069A9 !important;
 	}
-	button:focus {
+	button:focus, a.ux-button:focus {
 		outline: 0 !important;
 	}
 	button[disabled],
@@ -263,7 +266,7 @@
 	nav.ux-navbar {
 		margin: 0;
 		padding: 0;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar div#logo {
 		display: block;
@@ -289,7 +292,7 @@
 		margin: 0px;
 		display: inline-block;
 		float: left;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar a {
 		display: block;
@@ -300,11 +303,11 @@
 		text-decoration: none;
 	}
 	nav.ux-navbar ul li ul li:hover {
-		background-color: #2e40a4;
+		background-color: #2b3a57;
 	}
 	nav.ux-navbar a:hover {
 		color: #FFFFFF;
-		background-color: #1d3093;
+		background-color: #1a2946;
 	}
 	nav.ux-navbar ul ul {
 		display: none;
@@ -353,7 +356,7 @@
 		}
 		nav.ux-navbar label.toggle {
 			display: block;
-			background-color: #3f51b5;
+			background-color: #3c4663;
 			padding: 0 20px;
 			color: #FFFFFF;
 			font-size: 20px;
@@ -366,7 +369,7 @@
 		}
 		nav.ux-navbar label.toggle:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar input[id^=drop]:checked + ul {
 			display: block;
@@ -387,15 +390,15 @@
 		}
 		nav.ux-navbar a:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar ul ul ul a {
 			color: #FFFFFF;
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul li ul li .toggle,
 		nav.ux-navbar ul ul a {
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul ul {
 			float: none;
@@ -449,7 +452,13 @@
 </head>
 <body>
 <nav class="ux-navbar">
-	<div id="logo"><span>&#9776; </span>Smart.Framework and Smart.Framework.Modules : Javascript Documentation</div>
+	<div id="logo" style="display:flex; align-items:center;">
+		<span style="line-height:50px;">
+						<img src="../img/javascript-logo.svg" width="36" height="36" align="left">
+			
+		</span>
+		<span style="margin-left:10px;">Smart.Framework and Smart.Framework.Modules : Javascript Documentation</span>
+	</div>
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
@@ -457,10 +466,10 @@
 	</ul>
 	
 </nav>
-<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Demo"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20191122 -->
+<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
+<!-- class r.20191124 -->
 <!-- Styles -->
-<!-- styles r.20191122 -->
+<!-- styles r.20191124 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -579,6 +588,11 @@ div.doc-summary {
 	background: #343C61;
 	color: #FFFFFF;
 	border: 1px solid #CCCCCC;
+	width: 45vw;
+	min-width: 320px !important;
+}
+select#select-summary {
+	width: 99% !important;
 }
 </style>
 <style type="text/css">
@@ -685,17 +699,17 @@ This JavaScript class provides methods to simplify implementation of several bas
 		
 		
 		
-		<li><b>Version:</b> 20191122</li>
-		<li><b>Depends:</b> jQuery, SmartJS_CoreUtils, SmartJS_BrowserUtils, jQuery.SimpleDialog, jQuery.ListSelect, jQuery.DatePicker, jQuery.TimePicker, jQuery.Tabs, jQuery.AutoSuggest, jQuery.DataTable</li>
+		<li><b>Version:</b> 20191123</li>
+		<li><b>Depends:</b> jQuery, SmartJS_CoreUtils, SmartJS_DateUtils, SmartJS_BrowserUtils, jQuery.SimpleDialog, jQuery.ListSelect, jQuery.DatePicker, jQuery.TimePicker, jQuery.Tabs, jQuery.AutoSuggest, jQuery.DataTable</li>
 		
 	</ul>
 </div>
 <!-- Methods -->
 <br>
 <div class="doc-container" id="Methods--Summary-">
-	<h2 class="doc-header">Methods summary</h2>
+	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20191122 -->
+<!-- methods r.20191124 -->
 <div class="doc-container" id="Method--ToolTip">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>ToolTip</b></span>&nbsp;(
 			<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`selector` Parameter">selector</span></b></span>
@@ -871,7 +885,7 @@ The selected date will be in ISO format as yyyy-mm-dd</div>
 			<div class="doc-method-comments">Handle Display for an already Initialized Date Picker ; UI Component<br>
 The selected date will be in ISO format as yyyy-mm-dd</div>
 	
-			<pre><b>Sample Code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-keyword">var</span> selectedDate = <span class="hljs-string">''</span>; <span class="hljs-comment">// or can be yyyy-mm-dd</span>
+			<pre><b>Sample code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-keyword">var</span> selectedDate = <span class="hljs-string">''</span>; <span class="hljs-comment">// or can be yyyy-mm-dd</span>
  <span class="hljs-keyword">var</span> elemID = <span class="hljs-string">'myDatePicker'</span>;
  <span class="hljs-keyword">var</span> html = <span class="hljs-string">'
  &lt;span id=&quot;date-area-'</span> + myDatePicker + <span class="hljs-string">'&quot;&gt;
@@ -944,7 +958,7 @@ The selected value will be get directly from the `value` attribute of the html e
 			<div class="doc-method-comments">Handle Display for an already Initialized Time Picker ; UI Component<br>
 The selected time will be in ISO format as hh:ii</div>
 	
-			<pre><b>Sample Code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-keyword">var</span> selectedTime = <span class="hljs-string">''</span>; <span class="hljs-comment">// or can be hh:ii</span>
+			<pre><b>Sample code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-keyword">var</span> selectedTime = <span class="hljs-string">''</span>; <span class="hljs-comment">// or can be hh:ii</span>
  <span class="hljs-keyword">var</span> elemID = <span class="hljs-string">'myTimePicker'</span>;
  <span class="hljs-keyword">var</span> html = <span class="hljs-string">'
  &lt;span id=&quot;time-area-'</span> + elemID + <span class="hljs-string">'&quot; title=&quot;&lbrack;###TEXT-SELECT|html###&rbrack; [HH:ii]&quot;&gt;
@@ -982,7 +996,7 @@ The selected time will be in ISO format as hh:ii</div>
 			<div class="doc-method-comments">Initialize Tabs Component ; UI Component<br>
 The content of each tab (from the tabs component) can be loaded async by Ajax when the Tab is selected for display</div>
 	
-			<pre><b>Sample Code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-keyword">var</span> tabs = <span class="hljs-string">'
+			<pre><b>Sample code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-keyword">var</span> tabs = <span class="hljs-string">'
  &lt;div id=&quot;tabs_draw&quot;&gt;
    &lt;div id=&quot;tabs_nav&quot;&gt;
      &lt;li&gt;&lt;a href=&quot;#tab-in-page&quot;&gt;Tab with Content Preset&lt;/a&gt;&lt;/li&gt;
@@ -1023,7 +1037,7 @@ By default all the Tabs are active ; Use this function to deactivate and perhaps
 When deactivated, only the current selected tab can be used<br>
 This can be useful for using by example with edit operations to prevent switch tabs before saving the current form from the current active Tab</div>
 	
-			<pre><b>Sample Code: JavaScript</b><br><code class="hljs javascript"> SmartJS_BrowserUIUtils.Tabs_Activate(<span class="hljs-literal">false</span>); <span class="hljs-comment">// deactivate tabs</span>
+			<pre><b>Sample code: JavaScript</b><br><code class="hljs javascript"> SmartJS_BrowserUIUtils.Tabs_Activate(<span class="hljs-literal">false</span>); <span class="hljs-comment">// deactivate tabs</span>
  SmartJS_BrowserUIUtils.Tabs_Activate(<span class="hljs-literal">true</span>); <span class="hljs-comment">// re-activate tabs</span></code></pre>
 	
 </div><div class="doc-container" id="Method--AutoCompleteField">
@@ -1057,7 +1071,7 @@ This can be useful for using by example with edit operations to prevent switch t
 	</div>
 			<div class="doc-method-comments">Creates a Single-Value or Multi-Value AutoComplete (AutoSuggest) Field ; UI Component</div>
 	
-			<pre><b>Sample Code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-comment">// the expected JSON structure that have to be served via the DataURL + VarTerm</span>
+			<pre><b>Sample code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-comment">// the expected JSON structure that have to be served via the DataURL + VarTerm</span>
  [
  		{ <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-string">&quot;id1&quot;</span>, <span class="hljs-string">&quot;value&quot;</span>:<span class="hljs-string">&quot;Value1&quot;</span>,<span class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string">&quot;Label1&quot;</span> },
  		{ <span class="hljs-string">&quot;id&quot;</span>:<span class="hljs-string">&quot;id2&quot;</span>, <span class="hljs-string">&quot;value&quot;</span>:<span class="hljs-string">&quot;Value2&quot;</span>,<span class="hljs-string">&quot;label&quot;</span>:<span class="hljs-string">&quot;Label2&quot;</span> },
@@ -1092,7 +1106,7 @@ This can be useful for using by example with edit operations to prevent switch t
 DataTables is a table enhancing plug-in for the jQuery Javascript library,<br>
 adding sorting, paging and filtering abilities to plain HTML tables.</div>
 	
-			<pre><b>Sample Code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-comment">// &lt;!-- transform the following table into a DataTable with filtering, pagination, column ordering and many other features --&gt;</span>
+			<pre><b>Sample code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-comment">// &lt;!-- transform the following table into a DataTable with filtering, pagination, column ordering and many other features --&gt;</span>
  <span class="hljs-comment">//&lt;table id=&quot;myTable&quot;&gt;</span>
  <span class="hljs-comment">// &lt;thead&gt;</span>
  <span class="hljs-comment">// 	&lt;tr&gt;</span>
@@ -1173,28 +1187,36 @@ adding sorting, paging and filtering abilities to plain HTML tables.</div>
 	</div>
 			<div class="doc-method-comments">Programatically Filters a DataTable using a regular expression ; UI Component</div>
 	
-			<pre><b>Sample Code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-comment">// filter a DataTable by column no.1 (2nd column, starting from zero) and display only lines where column no.1 have the value: 'warning' or 'error'</span>
+			<pre><b>Sample code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-comment">// filter a DataTable by column no.1 (2nd column, starting from zero) and display only lines where column no.1 have the value: 'warning' or 'error'</span>
  SmartJS_BrowserUIUtils.Smart_DataTable_FilterColumns(<span class="hljs-string">'myTable'</span>, <span class="hljs-number">1</span>, <span class="hljs-string">'^(warning|error)$'</span>);</code></pre>
 	
 </div>
 <!-- Properties -->
 <br>
 <div class="doc-container" id="Properties--Summary-">
-	<h2 class="doc-header">Properties summary</h2>
+	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20191122 -->
+<!-- properties r.20191124 -->
 <div class="doc-container" id="Property--overlayCssClass">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>var</i></span> <b>overlayCssClass</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>'simpledialog-overlay'</b></span>&nbsp;;&nbsp;&nbsp;<span title="Static Property"><b>.</b></span>&nbsp;<i>{String}</i>
 			<div class="doc-method-comments">Overlay CSS class</div>
 	
 </div>
+<!-- Constants -->
+<br>
+<div class="doc-container" id="Constants--Summary-">
+	<h2 class="doc-header">class Constants</h2>
+</div>
+<!-- constants r.20191124 -->
+
+
 <!-- Sample Code -->
 
 <!-- Summary List -->
 <br>
-<!-- summary r.20191122 -->
+<!-- summary r.20191124 -->
 <script>
-// summary r.20191122
+// summary r.20191124
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1216,51 +1238,66 @@ function smartHandleDocSelector(obj) {
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
 		<option value="" selected>* Javascript Class SmartJS_BrowserUIUtils # Documentation Index *</option>
 		<optgroup label="Class SmartJS_BrowserUIUtils">
-			<option value="Class--Summary-">***** Class Definition *****</option>
+			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
-			<option value="Methods--Summary-">*** Methods summary ***</option>
-									<option value="Method--ToolTip">Method: ToolTip()</option>
+			<option value="Methods--Summary-">Methods list</option>
+									<option value="Method--ToolTip"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;ToolTip()</option>
 			
-									<option value="Method--DialogAlert">Method: DialogAlert()</option>
+									<option value="Method--DialogAlert"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;DialogAlert()</option>
 			
-									<option value="Method--DialogConfirm">Method: DialogConfirm()</option>
+									<option value="Method--DialogConfirm"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;DialogConfirm()</option>
 			
-									<option value="Method--Smart_SelectList">Method: Smart_SelectList()</option>
+									<option value="Method--Smart_SelectList"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Smart_SelectList()</option>
 			
-									<option value="Method--Date_Picker_Init">Method: Date_Picker_Init()</option>
+									<option value="Method--Date_Picker_Init"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Date_Picker_Init()</option>
 			
-									<option value="Method--Date_Picker_Display">Method: Date_Picker_Display()</option>
+									<option value="Method--Date_Picker_Display"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Date_Picker_Display()</option>
 			
-									<option value="Method--Time_Picker_Init">Method: Time_Picker_Init()</option>
+									<option value="Method--Time_Picker_Init"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Time_Picker_Init()</option>
 			
-									<option value="Method--Time_Picker_Display">Method: Time_Picker_Display()</option>
+									<option value="Method--Time_Picker_Display"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Time_Picker_Display()</option>
 			
-									<option value="Method--Tabs_Init">Method: Tabs_Init()</option>
+									<option value="Method--Tabs_Init"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Tabs_Init()</option>
 			
-									<option value="Method--Tabs_Activate">Method: Tabs_Activate()</option>
+									<option value="Method--Tabs_Activate"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Tabs_Activate()</option>
 			
-									<option value="Method--AutoCompleteField">Method: AutoCompleteField()</option>
+									<option value="Method--AutoCompleteField"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;AutoCompleteField()</option>
 			
-									<option value="Method--Smart_DataTable_Init">Method: Smart_DataTable_Init()</option>
+									<option value="Method--Smart_DataTable_Init"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Smart_DataTable_Init()</option>
 			
-									<option value="Method--Smart_DataTable_FilterColumns">Method: Smart_DataTable_FilterColumns()</option>
-			
-			
-		</optgroup>
-				<optgroup label="Class Properties">
-			<option value="Properties--Summary-">*** Properties summary ***</option>
-									<option value="Property--overlayCssClass">Property: overlayCssClass</option>
+									<option value="Method--Smart_DataTable_FilterColumns"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Smart_DataTable_FilterColumns()</option>
 			
 			
 		</optgroup>
-		
+		<optgroup label="Class Properties">
+			<option value="Properties--Summary-">Properties list</option>
+									<option value="Property--overlayCssClass"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;overlayCssClass</option>
+			
+			
+		</optgroup>
+		<optgroup label="Class Constants">
+			<option value="Constants--Summary-">Constants list</option>
+			
+		</optgroup>
 		
 	</select>
 </div>
+<!-- summary-selectjs r.20191124 -->
+<link rel="stylesheet" type="text/css" href="../js/slimselect.css">
+<script type="text/javascript" src="../js/slimselect.js"></script>
+<script type="text/javascript">
+try {
+	new SlimSelect({
+		select: '#select-summary'
+	});
+} catch(err){
+	console.error('ERROR: SlimSelect Failed: ' + err);
+}
+</script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-11-22 19:07:07 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-11-25 14:33:48 +0000</small>
 <hr>
 <br>
 <!-- # -->

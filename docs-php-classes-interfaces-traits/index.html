@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20191122 -->
+<!-- Template: Smart.Framework@Documentor v.20191124 -->
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -206,7 +206,7 @@
 	[hidden] {
 		display: none !important;
 	}
-	button {
+	button, a.ux-button {
 		/* Structure */
 		display: inline-block; /* do not mark as important as it can't hide using jquery hide() */
 		padding: 7px 15px 7px 15px !important;
@@ -236,13 +236,16 @@
 		user-select: none !important;
 		zoom: 1 !important;
 	}
-	button:hover,
-	button:focus {
+	button *, a.ux-button * {
+		font-weight: bold !important;
+	}
+	button:hover, a.ux-button:hover,
+	button:focus, a.ux-button:focus {
 		border: 1px solid #CCCCCC !important;
 		background-color: #F3F3F3 !important;
 		color: #2069A9 !important;
 	}
-	button:focus {
+	button:focus, a.ux-button:focus {
 		outline: 0 !important;
 	}
 	button[disabled],
@@ -263,7 +266,7 @@
 	nav.ux-navbar {
 		margin: 0;
 		padding: 0;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar div#logo {
 		display: block;
@@ -289,7 +292,7 @@
 		margin: 0px;
 		display: inline-block;
 		float: left;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar a {
 		display: block;
@@ -300,11 +303,11 @@
 		text-decoration: none;
 	}
 	nav.ux-navbar ul li ul li:hover {
-		background-color: #2e40a4;
+		background-color: #2b3a57;
 	}
 	nav.ux-navbar a:hover {
 		color: #FFFFFF;
-		background-color: #1d3093;
+		background-color: #1a2946;
 	}
 	nav.ux-navbar ul ul {
 		display: none;
@@ -353,7 +356,7 @@
 		}
 		nav.ux-navbar label.toggle {
 			display: block;
-			background-color: #3f51b5;
+			background-color: #3c4663;
 			padding: 0 20px;
 			color: #FFFFFF;
 			font-size: 20px;
@@ -366,7 +369,7 @@
 		}
 		nav.ux-navbar label.toggle:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar input[id^=drop]:checked + ul {
 			display: block;
@@ -387,15 +390,15 @@
 		}
 		nav.ux-navbar a:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar ul ul ul a {
 			color: #FFFFFF;
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul li ul li .toggle,
 		nav.ux-navbar ul ul a {
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul ul {
 			float: none;
@@ -449,7 +452,13 @@
 </head>
 <body>
 <nav class="ux-navbar">
-	<div id="logo"><span>&#9776; </span>Smart.Framework and Smart.Framework.Modules : PHP Documentation</div>
+	<div id="logo" style="display:flex; align-items:center;">
+		<span style="line-height:50px;">
+						<img src="../img/php-logo.svg" width="36" height="36" align="left">
+			
+		</span>
+		<span style="margin-left:10px;">Smart.Framework and Smart.Framework.Modules : PHP Documentation</span>
+	</div>
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
@@ -457,10 +466,10 @@
 	</ul>
 	
 </nav>
-<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Demo"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- packages r.20191122 -->
+<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
+<!-- packages r.20191124 -->
 <!-- Styles -->
-<!-- styles r.20191122 -->
+<!-- styles r.20191124 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -579,6 +588,11 @@ div.doc-summary {
 	background: #343C61;
 	color: #FFFFFF;
 	border: 1px solid #CCCCCC;
+	width: 45vw;
+	min-width: 320px !important;
+}
+select#select-summary {
+	width: 99% !important;
 }
 </style>
 <style type="text/css">
@@ -668,369 +682,369 @@ div.doc-summary {
 <div class="doc-container" id="Package--Core-">
 	<h1><span class="doc-package"><i>package</i></span> @Core</h1>
 	<ul>
-			<li title="Package: @Core"><a href="class@-Smart.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\Smart</b></span></h5></a></li>
-			<li title="Package: @Core"><a href="class@-SmartCache.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartCache</b></span></h5></a></li>
-			<li title="Package: @Core"><a href="class@-SmartUnicode.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartUnicode</b></span></h5></a></li>
+			<li title="Package: @Core" id="Ref--class-Smarthtml-"><a href="class@-Smart.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\Smart</b></span></h5></a></li>
+			<li title="Package: @Core" id="Ref--class-SmartCachehtml-"><a href="class@-SmartCache.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartCache</b></span></h5></a></li>
+			<li title="Package: @Core" id="Ref--class-SmartUnicodehtml-"><a href="class@-SmartUnicode.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartUnicode</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--CoreAuthentication-">
 	<h1><span class="doc-package"><i>package</i></span> @Core:Authentication</h1>
 	<ul>
-			<li title="Package: @Core:Authentication"><a href="class@-SmartAuth.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartAuth</b></span></h5></a></li>
+			<li title="Package: @Core:Authentication" id="Ref--class-SmartAuthhtml-"><a href="class@-SmartAuth.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartAuth</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--CoreCrypto-">
 	<h1><span class="doc-package"><i>package</i></span> @Core:Crypto</h1>
 	<ul>
-			<li title="Package: @Core:Crypto"><a href="class@-SmartCipherCrypto.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartCipherCrypto</b></span></h5></a></li>
-			<li title="Package: @Core:Crypto"><a href="class@-SmartHashCrypto.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartHashCrypto</b></span></h5></a></li>
+			<li title="Package: @Core:Crypto" id="Ref--class-SmartCipherCryptohtml-"><a href="class@-SmartCipherCrypto.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartCipherCrypto</b></span></h5></a></li>
+			<li title="Package: @Core:Crypto" id="Ref--class-SmartHashCryptohtml-"><a href="class@-SmartHashCrypto.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartHashCrypto</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--CoreExtra-">
 	<h1><span class="doc-package"><i>package</i></span> @Core:Extra</h1>
 	<ul>
-			<li title="Package: @Core:Extra"><a href="class@-SmartParser.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartParser</b></span></h5></a></li>
-			<li title="Package: @Core:Extra"><a href="class@-SmartUtils.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartUtils</b></span></h5></a></li>
-			<li title="Package: @Core:Extra"><a href="class@-SmartValidator.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartValidator</b></span></h5></a></li>
+			<li title="Package: @Core:Extra" id="Ref--class-SmartParserhtml-"><a href="class@-SmartParser.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartParser</b></span></h5></a></li>
+			<li title="Package: @Core:Extra" id="Ref--class-SmartUtilshtml-"><a href="class@-SmartUtils.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartUtils</b></span></h5></a></li>
+			<li title="Package: @Core:Extra" id="Ref--class-SmartValidatorhtml-"><a href="class@-SmartValidator.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartValidator</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--CoreFileSystem-">
 	<h1><span class="doc-package"><i>package</i></span> @Core:FileSystem</h1>
 	<ul>
-			<li title="Package: @Core:FileSystem"><a href="class@-SmartFileSysUtils.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartFileSysUtils</b></span></h5></a></li>
-			<li title="Package: @Core:FileSystem"><a href="class@-SmartFileSystem.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartFileSystem</b></span></h5></a></li>
-			<li title="Package: @Core:FileSystem"><a href="class@-SmartGetFileSystem.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartGetFileSystem</b></span></h5></a></li>
+			<li title="Package: @Core:FileSystem" id="Ref--class-SmartFileSysUtilshtml-"><a href="class@-SmartFileSysUtils.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartFileSysUtils</b></span></h5></a></li>
+			<li title="Package: @Core:FileSystem" id="Ref--class-SmartFileSystemhtml-"><a href="class@-SmartFileSystem.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartFileSystem</b></span></h5></a></li>
+			<li title="Package: @Core:FileSystem" id="Ref--class-SmartGetFileSystemhtml-"><a href="class@-SmartGetFileSystem.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartGetFileSystem</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--CoreNetwork-">
 	<h1><span class="doc-package"><i>package</i></span> @Core:Network</h1>
 	<ul>
-			<li title="Package: @Core:Network"><a href="class@-SmartHttpClient.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartHttpClient</b></span></h5></a></li>
-			<li title="Package: @Core:Network"><a href="class@-SmartHttpUtils.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartHttpUtils</b></span></h5></a></li>
+			<li title="Package: @Core:Network" id="Ref--class-SmartHttpClienthtml-"><a href="class@-SmartHttpClient.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartHttpClient</b></span></h5></a></li>
+			<li title="Package: @Core:Network" id="Ref--class-SmartHttpUtilshtml-"><a href="class@-SmartHttpUtils.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartHttpUtils</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--CoreTemplatingEngine-">
 	<h1><span class="doc-package"><i>package</i></span> @Core:TemplatingEngine</h1>
 	<ul>
-			<li title="Package: @Core:TemplatingEngine"><a href="class@-SmartMarkersTemplating.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMarkersTemplating</b></span></h5></a></li>
+			<li title="Package: @Core:TemplatingEngine" id="Ref--class-SmartMarkersTemplatinghtml-"><a href="class@-SmartMarkersTemplating.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMarkersTemplating</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--CoreTranslations-">
 	<h1><span class="doc-package"><i>package</i></span> @Core:Translations</h1>
 	<ul>
-			<li title="Package: @Core:Translations"><a href="class@-SmartTextTranslations.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartTextTranslations</b></span></h5></a></li>
-			<li title="Package: @Core:Translations"><a href="class@-SmartTextTranslator.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartTextTranslator</b></span></h5></a></li>
+			<li title="Package: @Core:Translations" id="Ref--class-SmartTextTranslationshtml-"><a href="class@-SmartTextTranslations.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartTextTranslations</b></span></h5></a></li>
+			<li title="Package: @Core:Translations" id="Ref--class-SmartTextTranslatorhtml-"><a href="class@-SmartTextTranslator.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartTextTranslator</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--Application-">
 	<h1><span class="doc-package"><i>package</i></span> Application</h1>
 	<ul>
-			<li title="Package: Application"><a href="class@-SmartAppAdminController.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartAppAdminController</b></span></h5></a></li>
-			<li title="Package: Application"><a href="class@-SmartAppIndexController.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartAppIndexController</b></span></h5></a></li>
-			<li title="Package: Application"><a href="class@-SmartAppInfo.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartAppInfo</b></span></h5></a></li>
+			<li title="Package: Application" id="Ref--class-SmartAppAdminControllerhtml-"><a href="class@-SmartAppAdminController.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartAppAdminController</b></span></h5></a></li>
+			<li title="Package: Application" id="Ref--class-SmartAppIndexControllerhtml-"><a href="class@-SmartAppIndexController.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartAppIndexController</b></span></h5></a></li>
+			<li title="Package: Application" id="Ref--class-SmartAppInfohtml-"><a href="class@-SmartAppInfo.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartAppInfo</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--ApplicationCaching-">
 	<h1><span class="doc-package"><i>package</i></span> Application:Caching</h1>
 	<ul>
-			<li title="Package: Application:Caching"><a href="class@-SmartPersistentCache.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartPersistentCache</b></span></h5></a></li>
+			<li title="Package: Application:Caching" id="Ref--class-SmartPersistentCachehtml-"><a href="class@-SmartPersistentCache.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartPersistentCache</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--ApplicationSession-">
 	<h1><span class="doc-package"><i>package</i></span> Application:Session</h1>
 	<ul>
-			<li title="Package: Application:Session"><a href="class@-SmartSession.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartSession</b></span></h5></a></li>
+			<li title="Package: Application:Session" id="Ref--class-SmartSessionhtml-"><a href="class@-SmartSession.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartSession</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--ApplicationViewComponents-">
 	<h1><span class="doc-package"><i>package</i></span> Application:ViewComponents</h1>
 	<ul>
-			<li title="Package: Application:ViewComponents"><a href="class@-SmartComponents.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartComponents</b></span></h5></a></li>
+			<li title="Package: Application:ViewComponents" id="Ref--class-SmartComponentshtml-"><a href="class@-SmartComponents.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartComponents</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--PluginsArchivers-">
 	<h1><span class="doc-package"><i>package</i></span> Plugins:Archivers</h1>
 	<ul>
-			<li title="Package: Plugins:Archivers"><a href="class@-SmartArchiverLZS.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartArchiverLZS</b></span></h5></a></li>
+			<li title="Package: Plugins:Archivers" id="Ref--class-SmartArchiverLZShtml-"><a href="class@-SmartArchiverLZS.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartArchiverLZS</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--PluginsConvertersAndParsers-">
 	<h1><span class="doc-package"><i>package</i></span> Plugins:ConvertersAndParsers</h1>
 	<ul>
-			<li title="Package: Plugins:ConvertersAndParsers"><a href="class@-SmartHtmlParser.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartHtmlParser</b></span></h5></a></li>
-			<li title="Package: Plugins:ConvertersAndParsers"><a href="class@-SmartMarkdownToHTML.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMarkdownToHTML</b></span></h5></a></li>
-			<li title="Package: Plugins:ConvertersAndParsers"><a href="class@-SmartPunycode.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartPunycode</b></span></h5></a></li>
-			<li title="Package: Plugins:ConvertersAndParsers"><a href="class@-SmartXmlComposer.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartXmlComposer</b></span></h5></a></li>
-			<li title="Package: Plugins:ConvertersAndParsers"><a href="class@-SmartXmlParser.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartXmlParser</b></span></h5></a></li>
-			<li title="Package: Plugins:ConvertersAndParsers"><a href="class@-SmartYamlConverter.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartYamlConverter</b></span></h5></a></li>
+			<li title="Package: Plugins:ConvertersAndParsers" id="Ref--class-SmartHtmlParserhtml-"><a href="class@-SmartHtmlParser.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartHtmlParser</b></span></h5></a></li>
+			<li title="Package: Plugins:ConvertersAndParsers" id="Ref--class-SmartMarkdownToHTMLhtml-"><a href="class@-SmartMarkdownToHTML.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMarkdownToHTML</b></span></h5></a></li>
+			<li title="Package: Plugins:ConvertersAndParsers" id="Ref--class-SmartPunycodehtml-"><a href="class@-SmartPunycode.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartPunycode</b></span></h5></a></li>
+			<li title="Package: Plugins:ConvertersAndParsers" id="Ref--class-SmartXmlComposerhtml-"><a href="class@-SmartXmlComposer.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartXmlComposer</b></span></h5></a></li>
+			<li title="Package: Plugins:ConvertersAndParsers" id="Ref--class-SmartXmlParserhtml-"><a href="class@-SmartXmlParser.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartXmlParser</b></span></h5></a></li>
+			<li title="Package: Plugins:ConvertersAndParsers" id="Ref--class-SmartYamlConverterhtml-"><a href="class@-SmartYamlConverter.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartYamlConverter</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--PluginsDatabaseMongoDB-">
 	<h1><span class="doc-package"><i>package</i></span> Plugins:Database:MongoDB</h1>
 	<ul>
-			<li title="Package: Plugins:Database:MongoDB"><a href="class@-SmartMongoDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMongoDb</b></span></h5></a></li>
+			<li title="Package: Plugins:Database:MongoDB" id="Ref--class-SmartMongoDbhtml-"><a href="class@-SmartMongoDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMongoDb</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--PluginsDatabaseMySQL-">
 	<h1><span class="doc-package"><i>package</i></span> Plugins:Database:MySQL</h1>
 	<ul>
-			<li title="Package: Plugins:Database:MySQL"><a href="class@-SmartMysqliDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMysqliDb</b></span></h5></a></li>
-			<li title="Package: Plugins:Database:MySQL"><a href="class@-SmartMysqliExtDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMysqliExtDb</b></span></h5></a></li>
+			<li title="Package: Plugins:Database:MySQL" id="Ref--class-SmartMysqliDbhtml-"><a href="class@-SmartMysqliDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMysqliDb</b></span></h5></a></li>
+			<li title="Package: Plugins:Database:MySQL" id="Ref--class-SmartMysqliExtDbhtml-"><a href="class@-SmartMysqliExtDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMysqliExtDb</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--PluginsDatabasePostgreSQL-">
 	<h1><span class="doc-package"><i>package</i></span> Plugins:Database:PostgreSQL</h1>
 	<ul>
-			<li title="Package: Plugins:Database:PostgreSQL"><a href="class@-SmartPgsqlDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartPgsqlDb</b></span></h5></a></li>
-			<li title="Package: Plugins:Database:PostgreSQL"><a href="class@-SmartPgsqlExtDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartPgsqlExtDb</b></span></h5></a></li>
+			<li title="Package: Plugins:Database:PostgreSQL" id="Ref--class-SmartPgsqlDbhtml-"><a href="class@-SmartPgsqlDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartPgsqlDb</b></span></h5></a></li>
+			<li title="Package: Plugins:Database:PostgreSQL" id="Ref--class-SmartPgsqlExtDbhtml-"><a href="class@-SmartPgsqlExtDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartPgsqlExtDb</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--PluginsDatabaseRedis-">
 	<h1><span class="doc-package"><i>package</i></span> Plugins:Database:Redis</h1>
 	<ul>
-			<li title="Package: Plugins:Database:Redis"><a href="class@-SmartRedisDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartRedisDb</b></span></h5></a></li>
+			<li title="Package: Plugins:Database:Redis" id="Ref--class-SmartRedisDbhtml-"><a href="class@-SmartRedisDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartRedisDb</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--PluginsDatabaseSQLite-">
 	<h1><span class="doc-package"><i>package</i></span> Plugins:Database:SQLite</h1>
 	<ul>
-			<li title="Package: Plugins:Database:SQLite"><a href="class@-SmartSQliteDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartSQliteDb</b></span></h5></a></li>
+			<li title="Package: Plugins:Database:SQLite" id="Ref--class-SmartSQliteDbhtml-"><a href="class@-SmartSQliteDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartSQliteDb</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--PluginsExportAndImport-">
 	<h1><span class="doc-package"><i>package</i></span> Plugins:ExportAndImport</h1>
 	<ul>
-			<li title="Package: Plugins:ExportAndImport"><a href="class@-SmartPdfExport.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartPdfExport</b></span></h5></a></li>
-			<li title="Package: Plugins:ExportAndImport"><a href="class@-SmartSpreadSheetExport.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartSpreadSheetExport</b></span></h5></a></li>
-			<li title="Package: Plugins:ExportAndImport"><a href="class@-SmartSpreadSheetImport.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartSpreadSheetImport</b></span></h5></a></li>
+			<li title="Package: Plugins:ExportAndImport" id="Ref--class-SmartPdfExporthtml-"><a href="class@-SmartPdfExport.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartPdfExport</b></span></h5></a></li>
+			<li title="Package: Plugins:ExportAndImport" id="Ref--class-SmartSpreadSheetExporthtml-"><a href="class@-SmartSpreadSheetExport.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartSpreadSheetExport</b></span></h5></a></li>
+			<li title="Package: Plugins:ExportAndImport" id="Ref--class-SmartSpreadSheetImporthtml-"><a href="class@-SmartSpreadSheetImport.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartSpreadSheetImport</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--PluginsImage-">
 	<h1><span class="doc-package"><i>package</i></span> Plugins:Image</h1>
 	<ul>
-			<li title="Package: Plugins:Image"><a href="class@-SmartDetectImages.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartDetectImages</b></span></h5></a></li>
-			<li title="Package: Plugins:Image"><a href="class@-SmartImageGdProcess.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartImageGdProcess</b></span></h5></a></li>
+			<li title="Package: Plugins:Image" id="Ref--class-SmartDetectImageshtml-"><a href="class@-SmartDetectImages.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartDetectImages</b></span></h5></a></li>
+			<li title="Package: Plugins:Image" id="Ref--class-SmartImageGdProcesshtml-"><a href="class@-SmartImageGdProcess.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartImageGdProcess</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--PluginsMailer-">
 	<h1><span class="doc-package"><i>package</i></span> Plugins:Mailer</h1>
 	<ul>
-			<li title="Package: Plugins:Mailer"><a href="class@-SmartMailerImap4Client.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMailerImap4Client</b></span></h5></a></li>
-			<li title="Package: Plugins:Mailer"><a href="class@-SmartMailerMimeDecode.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMailerMimeDecode</b></span></h5></a></li>
-			<li title="Package: Plugins:Mailer"><a href="class@-SmartMailerMimeParser.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMailerMimeParser</b></span></h5></a></li>
-			<li title="Package: Plugins:Mailer"><a href="class@-SmartMailerPop3Client.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMailerPop3Client</b></span></h5></a></li>
-			<li title="Package: Plugins:Mailer"><a href="class@-SmartMailerSend.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMailerSend</b></span></h5></a></li>
-			<li title="Package: Plugins:Mailer"><a href="class@-SmartMailerSmtpClient.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMailerSmtpClient</b></span></h5></a></li>
-			<li title="Package: Plugins:Mailer"><a href="class@-SmartMailerUtils.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMailerUtils</b></span></h5></a></li>
+			<li title="Package: Plugins:Mailer" id="Ref--class-SmartMailerImap4Clienthtml-"><a href="class@-SmartMailerImap4Client.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMailerImap4Client</b></span></h5></a></li>
+			<li title="Package: Plugins:Mailer" id="Ref--class-SmartMailerMimeDecodehtml-"><a href="class@-SmartMailerMimeDecode.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMailerMimeDecode</b></span></h5></a></li>
+			<li title="Package: Plugins:Mailer" id="Ref--class-SmartMailerMimeParserhtml-"><a href="class@-SmartMailerMimeParser.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMailerMimeParser</b></span></h5></a></li>
+			<li title="Package: Plugins:Mailer" id="Ref--class-SmartMailerPop3Clienthtml-"><a href="class@-SmartMailerPop3Client.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMailerPop3Client</b></span></h5></a></li>
+			<li title="Package: Plugins:Mailer" id="Ref--class-SmartMailerSendhtml-"><a href="class@-SmartMailerSend.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMailerSend</b></span></h5></a></li>
+			<li title="Package: Plugins:Mailer" id="Ref--class-SmartMailerSmtpClienthtml-"><a href="class@-SmartMailerSmtpClient.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMailerSmtpClient</b></span></h5></a></li>
+			<li title="Package: Plugins:Mailer" id="Ref--class-SmartMailerUtilshtml-"><a href="class@-SmartMailerUtils.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartMailerUtils</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--PluginsNetwork-">
 	<h1><span class="doc-package"><i>package</i></span> Plugins:Network</h1>
 	<ul>
-			<li title="Package: Plugins:Network"><a href="class@-SmartFtpClient.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartFtpClient</b></span></h5></a></li>
-			<li title="Package: Plugins:Network"><a href="class@-SmartRobot.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartRobot</b></span></h5></a></li>
+			<li title="Package: Plugins:Network" id="Ref--class-SmartFtpClienthtml-"><a href="class@-SmartFtpClient.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartFtpClient</b></span></h5></a></li>
+			<li title="Package: Plugins:Network" id="Ref--class-SmartRobothtml-"><a href="class@-SmartRobot.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartRobot</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--PluginsViewComponents-">
 	<h1><span class="doc-package"><i>package</i></span> Plugins:ViewComponents</h1>
 	<ul>
-			<li title="Package: Plugins:ViewComponents"><a href="class@-SmartBarcode1D.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartBarcode1D</b></span></h5></a></li>
-			<li title="Package: Plugins:ViewComponents"><a href="class@-SmartBarcode2D.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartBarcode2D</b></span></h5></a></li>
-			<li title="Package: Plugins:ViewComponents"><a href="class@-SmartCalendarComponent.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartCalendarComponent</b></span></h5></a></li>
-			<li title="Package: Plugins:ViewComponents"><a href="class@-SmartCaptchaFormCheck.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartCaptchaFormCheck</b></span></h5></a></li>
-			<li title="Package: Plugins:ViewComponents"><a href="class@-SmartHTMLCalendar.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartHTMLCalendar</b></span></h5></a></li>
-			<li title="Package: Plugins:ViewComponents"><a href="class@-SmartViewHtmlHelpers.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartViewHtmlHelpers</b></span></h5></a></li>
+			<li title="Package: Plugins:ViewComponents" id="Ref--class-SmartBarcode1Dhtml-"><a href="class@-SmartBarcode1D.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartBarcode1D</b></span></h5></a></li>
+			<li title="Package: Plugins:ViewComponents" id="Ref--class-SmartBarcode2Dhtml-"><a href="class@-SmartBarcode2D.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartBarcode2D</b></span></h5></a></li>
+			<li title="Package: Plugins:ViewComponents" id="Ref--class-SmartCalendarComponenthtml-"><a href="class@-SmartCalendarComponent.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartCalendarComponent</b></span></h5></a></li>
+			<li title="Package: Plugins:ViewComponents" id="Ref--class-SmartCaptchaFormCheckhtml-"><a href="class@-SmartCaptchaFormCheck.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartCaptchaFormCheck</b></span></h5></a></li>
+			<li title="Package: Plugins:ViewComponents" id="Ref--class-SmartHTMLCalendarhtml-"><a href="class@-SmartHTMLCalendar.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartHTMLCalendar</b></span></h5></a></li>
+			<li title="Package: Plugins:ViewComponents" id="Ref--class-SmartViewHtmlHelpershtml-"><a href="class@-SmartViewHtmlHelpers.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartViewHtmlHelpers</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--developmentCore-">
 	<h1><span class="doc-package"><i>package</i></span> development:@Core</h1>
 	<ul>
-			<li title="Package: development:@Core"><a href="interface@-SmartInterfaceAdapterTextTranslations.html"><h5 style="display:inline-block;"><span class="doc-type-interface">interface</span> <span class="doc-name"><b>\SmartInterfaceAdapterTextTranslations</b></span></h5></a></li>
+			<li title="Package: development:@Core" id="Ref--interface-SmartInterfaceAdapterTextTranslationshtml-"><a href="interface@-SmartInterfaceAdapterTextTranslations.html"><h5 style="display:inline-block;"><span class="doc-type-interface">interface</span> <span class="doc-name"><b>\SmartInterfaceAdapterTextTranslations</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--developmentApplication-">
 	<h1><span class="doc-package"><i>package</i></span> development:Application</h1>
 	<ul>
-			<li title="Package: development:Application"><a href="class@-SmartAbstractAppController.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartAbstractAppController</b></span></h5></a></li>
-			<li title="Package: development:Application"><a href="class@-SmartAbstractCustomSession.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartAbstractCustomSession</b></span></h5></a></li>
-			<li title="Package: development:Application"><a href="class@-SmartAbstractPersistentCache.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartAbstractPersistentCache</b></span></h5></a></li>
+			<li title="Package: development:Application" id="Ref--class-SmartAbstractAppControllerhtml-"><a href="class@-SmartAbstractAppController.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartAbstractAppController</b></span></h5></a></li>
+			<li title="Package: development:Application" id="Ref--class-SmartAbstractCustomSessionhtml-"><a href="class@-SmartAbstractCustomSession.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartAbstractCustomSession</b></span></h5></a></li>
+			<li title="Package: development:Application" id="Ref--class-SmartAbstractPersistentCachehtml-"><a href="class@-SmartAbstractPersistentCache.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartAbstractPersistentCache</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--developmentextralibsDatabase-">
 	<h1><span class="doc-package"><i>package</i></span> development:extralibs:Database</h1>
 	<ul>
-			<li title="Package: development:extralibs:Database"><a href="class@-SmartAbstractPgsqlExtDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartAbstractPgsqlExtDb</b></span></h5></a></li>
+			<li title="Package: development:extralibs:Database" id="Ref--class-SmartAbstractPgsqlExtDbhtml-"><a href="class@-SmartAbstractPgsqlExtDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartAbstractPgsqlExtDb</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--developmentmodulesAuthAdmins-">
 	<h1><span class="doc-package"><i>package</i></span> development:modules:AuthAdmins</h1>
 	<ul>
-			<li title="Package: development:modules:AuthAdmins"><a href="class@-SmartModExtLib-AuthAdmins-AuthAdminsHandler.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\AuthAdmins\AuthAdminsHandler</b></span></h5></a></li>
-			<li title="Package: development:modules:AuthAdmins"><a href="class@-SmartModExtLib-AuthAdmins-SimpleAuthAdminsHandler.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\AuthAdmins\SimpleAuthAdminsHandler</b></span></h5></a></li>
+			<li title="Package: development:modules:AuthAdmins" id="Ref--class-SmartModExtLib-AuthAdmins-AuthAdminsHandlerhtml-"><a href="class@-SmartModExtLib-AuthAdmins-AuthAdminsHandler.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\AuthAdmins\AuthAdminsHandler</b></span></h5></a></li>
+			<li title="Package: development:modules:AuthAdmins" id="Ref--class-SmartModExtLib-AuthAdmins-SimpleAuthAdminsHandlerhtml-"><a href="class@-SmartModExtLib-AuthAdmins-SimpleAuthAdminsHandler.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\AuthAdmins\SimpleAuthAdminsHandler</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--developmentmodulesPageBuilder-">
 	<h1><span class="doc-package"><i>package</i></span> development:modules:PageBuilder</h1>
 	<ul>
-			<li title="Package: development:modules:PageBuilder"><a href="class@-SmartModExtLib-PageBuilder-AbstractFrontendController.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\PageBuilder\AbstractFrontendController</b></span></h5></a></li>
-			<li title="Package: development:modules:PageBuilder"><a href="class@-SmartModExtLib-PageBuilder-AbstractFrontendPlugin.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\PageBuilder\AbstractFrontendPlugin</b></span></h5></a></li>
+			<li title="Package: development:modules:PageBuilder" id="Ref--class-SmartModExtLib-PageBuilder-AbstractFrontendControllerhtml-"><a href="class@-SmartModExtLib-PageBuilder-AbstractFrontendController.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\PageBuilder\AbstractFrontendController</b></span></h5></a></li>
+			<li title="Package: development:modules:PageBuilder" id="Ref--class-SmartModExtLib-PageBuilder-AbstractFrontendPluginhtml-"><a href="class@-SmartModExtLib-PageBuilder-AbstractFrontendPlugin.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\PageBuilder\AbstractFrontendPlugin</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--developmentmodulesWebdav-">
 	<h1><span class="doc-package"><i>package</i></span> development:modules:Webdav</h1>
 	<ul>
-			<li title="Package: development:modules:Webdav"><a href="class@-SmartModExtLib-Webdav-ControllerAdmCalDavFs.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\Webdav\ControllerAdmCalDavFs</b></span></h5></a></li>
-			<li title="Package: development:modules:Webdav"><a href="class@-SmartModExtLib-Webdav-ControllerAdmCardDavFs.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\Webdav\ControllerAdmCardDavFs</b></span></h5></a></li>
-			<li title="Package: development:modules:Webdav"><a href="class@-SmartModExtLib-Webdav-ControllerAdmDavFs.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\Webdav\ControllerAdmDavFs</b></span></h5></a></li>
+			<li title="Package: development:modules:Webdav" id="Ref--class-SmartModExtLib-Webdav-ControllerAdmCalDavFshtml-"><a href="class@-SmartModExtLib-Webdav-ControllerAdmCalDavFs.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\Webdav\ControllerAdmCalDavFs</b></span></h5></a></li>
+			<li title="Package: development:modules:Webdav" id="Ref--class-SmartModExtLib-Webdav-ControllerAdmCardDavFshtml-"><a href="class@-SmartModExtLib-Webdav-ControllerAdmCardDavFs.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\Webdav\ControllerAdmCardDavFs</b></span></h5></a></li>
+			<li title="Package: development:modules:Webdav" id="Ref--class-SmartModExtLib-Webdav-ControllerAdmDavFshtml-"><a href="class@-SmartModExtLib-Webdav-ControllerAdmDavFs.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\Webdav\ControllerAdmDavFs</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--extralibsArchivers-">
 	<h1><span class="doc-package"><i>package</i></span> extralibs:Archivers</h1>
 	<ul>
-			<li title="Package: extralibs:Archivers"><a href="class@-SmartZipArchive.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartZipArchive</b></span></h5></a></li>
+			<li title="Package: extralibs:Archivers" id="Ref--class-SmartZipArchivehtml-"><a href="class@-SmartZipArchive.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartZipArchive</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--extralibsDatabaseSolr-">
 	<h1><span class="doc-package"><i>package</i></span> extralibs:Database:Solr</h1>
 	<ul>
-			<li title="Package: extralibs:Database:Solr"><a href="class@-SmartSolrDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartSolrDb</b></span></h5></a></li>
+			<li title="Package: extralibs:Database:Solr" id="Ref--class-SmartSolrDbhtml-"><a href="class@-SmartSolrDb.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartSolrDb</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--extralibsExportAndImport-">
 	<h1><span class="doc-package"><i>package</i></span> extralibs:ExportAndImport</h1>
 	<ul>
-			<li title="Package: extralibs:ExportAndImport"><a href="class@-SmartExportToOpenOffice.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartExportToOpenOffice</b></span></h5></a></li>
-			<li title="Package: extralibs:ExportAndImport"><a href="class@-SmartImportFromOpenOffice.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartImportFromOpenOffice</b></span></h5></a></li>
+			<li title="Package: extralibs:ExportAndImport" id="Ref--class-SmartExportToOpenOfficehtml-"><a href="class@-SmartExportToOpenOffice.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartExportToOpenOffice</b></span></h5></a></li>
+			<li title="Package: extralibs:ExportAndImport" id="Ref--class-SmartImportFromOpenOfficehtml-"><a href="class@-SmartImportFromOpenOffice.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartImportFromOpenOffice</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--extralibsLanguageDetection-">
 	<h1><span class="doc-package"><i>package</i></span> extralibs:LanguageDetection</h1>
 	<ul>
-			<li title="Package: extralibs:LanguageDetection"><a href="class@-SmartLangIdClient.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartLangIdClient</b></span></h5></a></li>
+			<li title="Package: extralibs:LanguageDetection" id="Ref--class-SmartLangIdClienthtml-"><a href="class@-SmartLangIdClient.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartLangIdClient</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--extralibsNetwork-">
 	<h1><span class="doc-package"><i>package</i></span> extralibs:Network</h1>
 	<ul>
-			<li title="Package: extralibs:Network"><a href="class@-SmartCurlHttpFtpClient.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartCurlHttpFtpClient</b></span></h5></a></li>
+			<li title="Package: extralibs:Network" id="Ref--class-SmartCurlHttpFtpClienthtml-"><a href="class@-SmartCurlHttpFtpClient.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartCurlHttpFtpClient</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--extralibsTemplatingEngine-">
 	<h1><span class="doc-package"><i>package</i></span> extralibs:TemplatingEngine</h1>
 	<ul>
-			<li title="Package: extralibs:TemplatingEngine"><a href="class@-SmartTemplating.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartTemplating</b></span></h5></a></li>
+			<li title="Package: extralibs:TemplatingEngine" id="Ref--class-SmartTemplatinghtml-"><a href="class@-SmartTemplating.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartTemplating</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--extralibsViewComponents-">
 	<h1><span class="doc-package"><i>package</i></span> extralibs:ViewComponents</h1>
 	<ul>
-			<li title="Package: extralibs:ViewComponents"><a href="class@-SmartImgBizCharts.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartImgBizCharts</b></span></h5></a></li>
-			<li title="Package: extralibs:ViewComponents"><a href="class@-SmartImgGfxCharts.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartImgGfxCharts</b></span></h5></a></li>
+			<li title="Package: extralibs:ViewComponents" id="Ref--class-SmartImgBizChartshtml-"><a href="class@-SmartImgBizCharts.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartImgBizCharts</b></span></h5></a></li>
+			<li title="Package: extralibs:ViewComponents" id="Ref--class-SmartImgGfxChartshtml-"><a href="class@-SmartImgGfxCharts.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartImgGfxCharts</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--modulesDatabasePDORedbean-ORM-">
 	<h1><span class="doc-package"><i>package</i></span> modules:Database:PDO:Redbean-ORM</h1>
 	<ul>
-			<li title="Package: modules:Database:PDO:Redbean-ORM"><a href="class@-SmartModExtLib-DbOrmRedbean-ORM.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\DbOrmRedbean\ORM</b></span></h5></a></li>
+			<li title="Package: modules:Database:PDO:Redbean-ORM" id="Ref--class-SmartModExtLib-DbOrmRedbean-ORMhtml-"><a href="class@-SmartModExtLib-DbOrmRedbean-ORM.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\DbOrmRedbean\ORM</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--modulesDatabasePDOZend-Dbal-">
 	<h1><span class="doc-package"><i>package</i></span> modules:Database:PDO:Zend-Dbal</h1>
 	<ul>
-			<li title="Package: modules:Database:PDO:Zend-Dbal"><a href="class@-SmartModExtLib-DbalZend-DbalPdo.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\DbalZend\DbalPdo</b></span></h5></a></li>
+			<li title="Package: modules:Database:PDO:Zend-Dbal" id="Ref--class-SmartModExtLib-DbalZend-DbalPdohtml-"><a href="class@-SmartModExtLib-DbalZend-DbalPdo.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\DbalZend\DbalPdo</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--modulesHighlightSyntax-">
 	<h1><span class="doc-package"><i>package</i></span> modules:HighlightSyntax</h1>
 	<ul>
-			<li title="Package: modules:HighlightSyntax"><a href="class@-SmartModExtLib-HighlightSyntax-Highlighter.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\HighlightSyntax\Highlighter</b></span></h5></a></li>
+			<li title="Package: modules:HighlightSyntax" id="Ref--class-SmartModExtLib-HighlightSyntax-Highlighterhtml-"><a href="class@-SmartModExtLib-HighlightSyntax-Highlighter.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\HighlightSyntax\Highlighter</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--modulesLanguageDetection-">
 	<h1><span class="doc-package"><i>package</i></span> modules:LanguageDetection</h1>
 	<ul>
-			<li title="Package: modules:LanguageDetection"><a href="class@-SmartModExtLib-LangDetect-LanguageNgrams.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\LangDetect\LanguageNgrams</b></span></h5></a></li>
+			<li title="Package: modules:LanguageDetection" id="Ref--class-SmartModExtLib-LangDetect-LanguageNgramshtml-"><a href="class@-SmartModExtLib-LangDetect-LanguageNgrams.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\LangDetect\LanguageNgrams</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--modulesNetwork-">
 	<h1><span class="doc-package"><i>package</i></span> modules:Network</h1>
 	<ul>
-			<li title="Package: modules:Network"><a href="class@-SmartModExtLib-Soap-SoapServerRequestHandler.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\Soap\SoapServerRequestHandler</b></span></h5></a></li>
+			<li title="Package: modules:Network" id="Ref--class-SmartModExtLib-Soap-SoapServerRequestHandlerhtml-"><a href="class@-SmartModExtLib-Soap-SoapServerRequestHandler.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\Soap\SoapServerRequestHandler</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--modulesSocialMedia-">
 	<h1><span class="doc-package"><i>package</i></span> modules:SocialMedia</h1>
 	<ul>
-			<li title="Package: modules:SocialMedia"><a href="class@-SmartModExtLib-SmFacebook-FacebookApi.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\SmFacebook\FacebookApi</b></span></h5></a></li>
-			<li title="Package: modules:SocialMedia"><a href="class@-SmartModExtLib-SmTwitter-TwitterApi.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\SmTwitter\TwitterApi</b></span></h5></a></li>
+			<li title="Package: modules:SocialMedia" id="Ref--class-SmartModExtLib-SmFacebook-FacebookApihtml-"><a href="class@-SmartModExtLib-SmFacebook-FacebookApi.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\SmFacebook\FacebookApi</b></span></h5></a></li>
+			<li title="Package: modules:SocialMedia" id="Ref--class-SmartModExtLib-SmTwitter-TwitterApihtml-"><a href="class@-SmartModExtLib-SmTwitter-TwitterApi.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\SmTwitter\TwitterApi</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--modulesTemplatingEngine-">
 	<h1><span class="doc-package"><i>package</i></span> modules:TemplatingEngine</h1>
 	<ul>
-			<li title="Package: modules:TemplatingEngine"><a href="class@-SmartModExtLib-TplDust-SmartDustTemplating.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\TplDust\SmartDustTemplating</b></span></h5></a></li>
-			<li title="Package: modules:TemplatingEngine"><a href="class@-SmartModExtLib-TplNetteLatte-SmartNetteLatteTemplating.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\TplNetteLatte\SmartNetteLatteTemplating</b></span></h5></a></li>
-			<li title="Package: modules:TemplatingEngine"><a href="class@-SmartModExtLib-TplTwig-SmartTwigTemplating.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\TplTwig\SmartTwigTemplating</b></span></h5></a></li>
-			<li title="Package: modules:TemplatingEngine"><a href="class@-SmartModExtLib-TplTypo3Fluid-SmartTypo3FluidTemplating.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\TplTypo3Fluid\SmartTypo3FluidTemplating</b></span></h5></a></li>
+			<li title="Package: modules:TemplatingEngine" id="Ref--class-SmartModExtLib-TplDust-SmartDustTemplatinghtml-"><a href="class@-SmartModExtLib-TplDust-SmartDustTemplating.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\TplDust\SmartDustTemplating</b></span></h5></a></li>
+			<li title="Package: modules:TemplatingEngine" id="Ref--class-SmartModExtLib-TplNetteLatte-SmartNetteLatteTemplatinghtml-"><a href="class@-SmartModExtLib-TplNetteLatte-SmartNetteLatteTemplating.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\TplNetteLatte\SmartNetteLatteTemplating</b></span></h5></a></li>
+			<li title="Package: modules:TemplatingEngine" id="Ref--class-SmartModExtLib-TplTwig-SmartTwigTemplatinghtml-"><a href="class@-SmartModExtLib-TplTwig-SmartTwigTemplating.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\TplTwig\SmartTwigTemplating</b></span></h5></a></li>
+			<li title="Package: modules:TemplatingEngine" id="Ref--class-SmartModExtLib-TplTypo3Fluid-SmartTypo3FluidTemplatinghtml-"><a href="class@-SmartModExtLib-TplTypo3Fluid-SmartTypo3FluidTemplating.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\TplTypo3Fluid\SmartTypo3FluidTemplating</b></span></h5></a></li>
 	
 	</ul>
 </div><br>
 <div class="doc-container" id="Package--modulesViewComponents-">
 	<h1><span class="doc-package"><i>package</i></span> modules:ViewComponents</h1>
 	<ul>
-			<li title="Package: modules:ViewComponents"><a href="class@-SmartModExtLib-JsComponents-TextEditor.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\JsComponents\TextEditor</b></span></h5></a></li>
-			<li title="Package: modules:ViewComponents"><a href="class@-SmartModExtLib-MediaGallery-Manager.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\MediaGallery\Manager</b></span></h5></a></li>
+			<li title="Package: modules:ViewComponents" id="Ref--class-SmartModExtLib-JsComponents-TextEditorhtml-"><a href="class@-SmartModExtLib-JsComponents-TextEditor.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\JsComponents\TextEditor</b></span></h5></a></li>
+			<li title="Package: modules:ViewComponents" id="Ref--class-SmartModExtLib-MediaGallery-Managerhtml-"><a href="class@-SmartModExtLib-MediaGallery-Manager.html"><h5 style="display:inline-block;"><span class="doc-type-class">class</span> <span class="doc-name"><b>\SmartModExtLib\MediaGallery\Manager</b></span></h5></a></li>
 	
 	</ul>
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20191122 -->
+<!-- summary r.20191124 -->
 <script>
-// summary r.20191122
+// summary r.20191124
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1050,60 +1064,208 @@ function smartHandleDocSelector(obj) {
 </script>
 <div class="doc-summary">
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
-		<option value="" selected>* Documentation Index *</option>
+		<option value="" selected>* PHP Documentation Index *</option>
 		<optgroup label="Packages">
-						<option value="Package--Core-">Package: @Core</option>
-						<option value="Package--CoreAuthentication-">Package: @Core:Authentication</option>
-						<option value="Package--CoreCrypto-">Package: @Core:Crypto</option>
-						<option value="Package--CoreExtra-">Package: @Core:Extra</option>
-						<option value="Package--CoreFileSystem-">Package: @Core:FileSystem</option>
-						<option value="Package--CoreNetwork-">Package: @Core:Network</option>
-						<option value="Package--CoreTemplatingEngine-">Package: @Core:TemplatingEngine</option>
-						<option value="Package--CoreTranslations-">Package: @Core:Translations</option>
-						<option value="Package--Application-">Package: Application</option>
-						<option value="Package--ApplicationCaching-">Package: Application:Caching</option>
-						<option value="Package--ApplicationSession-">Package: Application:Session</option>
-						<option value="Package--ApplicationViewComponents-">Package: Application:ViewComponents</option>
-						<option value="Package--PluginsArchivers-">Package: Plugins:Archivers</option>
-						<option value="Package--PluginsConvertersAndParsers-">Package: Plugins:ConvertersAndParsers</option>
-						<option value="Package--PluginsDatabaseMongoDB-">Package: Plugins:Database:MongoDB</option>
-						<option value="Package--PluginsDatabaseMySQL-">Package: Plugins:Database:MySQL</option>
-						<option value="Package--PluginsDatabasePostgreSQL-">Package: Plugins:Database:PostgreSQL</option>
-						<option value="Package--PluginsDatabaseRedis-">Package: Plugins:Database:Redis</option>
-						<option value="Package--PluginsDatabaseSQLite-">Package: Plugins:Database:SQLite</option>
-						<option value="Package--PluginsExportAndImport-">Package: Plugins:ExportAndImport</option>
-						<option value="Package--PluginsImage-">Package: Plugins:Image</option>
-						<option value="Package--PluginsMailer-">Package: Plugins:Mailer</option>
-						<option value="Package--PluginsNetwork-">Package: Plugins:Network</option>
-						<option value="Package--PluginsViewComponents-">Package: Plugins:ViewComponents</option>
-						<option value="Package--developmentCore-">Package: development:@Core</option>
-						<option value="Package--developmentApplication-">Package: development:Application</option>
-						<option value="Package--developmentextralibsDatabase-">Package: development:extralibs:Database</option>
-						<option value="Package--developmentmodulesAuthAdmins-">Package: development:modules:AuthAdmins</option>
-						<option value="Package--developmentmodulesPageBuilder-">Package: development:modules:PageBuilder</option>
-						<option value="Package--developmentmodulesWebdav-">Package: development:modules:Webdav</option>
-						<option value="Package--extralibsArchivers-">Package: extralibs:Archivers</option>
-						<option value="Package--extralibsDatabaseSolr-">Package: extralibs:Database:Solr</option>
-						<option value="Package--extralibsExportAndImport-">Package: extralibs:ExportAndImport</option>
-						<option value="Package--extralibsLanguageDetection-">Package: extralibs:LanguageDetection</option>
-						<option value="Package--extralibsNetwork-">Package: extralibs:Network</option>
-						<option value="Package--extralibsTemplatingEngine-">Package: extralibs:TemplatingEngine</option>
-						<option value="Package--extralibsViewComponents-">Package: extralibs:ViewComponents</option>
-						<option value="Package--modulesDatabasePDORedbean-ORM-">Package: modules:Database:PDO:Redbean-ORM</option>
-						<option value="Package--modulesDatabasePDOZend-Dbal-">Package: modules:Database:PDO:Zend-Dbal</option>
-						<option value="Package--modulesHighlightSyntax-">Package: modules:HighlightSyntax</option>
-						<option value="Package--modulesLanguageDetection-">Package: modules:LanguageDetection</option>
-						<option value="Package--modulesNetwork-">Package: modules:Network</option>
-						<option value="Package--modulesSocialMedia-">Package: modules:SocialMedia</option>
-						<option value="Package--modulesTemplatingEngine-">Package: modules:TemplatingEngine</option>
-						<option value="Package--modulesViewComponents-">Package: modules:ViewComponents</option>
+					<option value="Package--Core-">Package @Core</option>
+						<option value="Ref--class-Smarthtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \Smart</option>
+						<option value="Ref--class-SmartCachehtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartCache</option>
+						<option value="Ref--class-SmartUnicodehtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartUnicode</option>
 			
+					<option value="Package--CoreAuthentication-">Package @Core:Authentication</option>
+						<option value="Ref--class-SmartAuthhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartAuth</option>
+			
+					<option value="Package--CoreCrypto-">Package @Core:Crypto</option>
+						<option value="Ref--class-SmartCipherCryptohtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartCipherCrypto</option>
+						<option value="Ref--class-SmartHashCryptohtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartHashCrypto</option>
+			
+					<option value="Package--CoreExtra-">Package @Core:Extra</option>
+						<option value="Ref--class-SmartParserhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartParser</option>
+						<option value="Ref--class-SmartUtilshtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartUtils</option>
+						<option value="Ref--class-SmartValidatorhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartValidator</option>
+			
+					<option value="Package--CoreFileSystem-">Package @Core:FileSystem</option>
+						<option value="Ref--class-SmartFileSysUtilshtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartFileSysUtils</option>
+						<option value="Ref--class-SmartFileSystemhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartFileSystem</option>
+						<option value="Ref--class-SmartGetFileSystemhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartGetFileSystem</option>
+			
+					<option value="Package--CoreNetwork-">Package @Core:Network</option>
+						<option value="Ref--class-SmartHttpClienthtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartHttpClient</option>
+						<option value="Ref--class-SmartHttpUtilshtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartHttpUtils</option>
+			
+					<option value="Package--CoreTemplatingEngine-">Package @Core:TemplatingEngine</option>
+						<option value="Ref--class-SmartMarkersTemplatinghtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartMarkersTemplating</option>
+			
+					<option value="Package--CoreTranslations-">Package @Core:Translations</option>
+						<option value="Ref--class-SmartTextTranslationshtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartTextTranslations</option>
+						<option value="Ref--class-SmartTextTranslatorhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartTextTranslator</option>
+			
+					<option value="Package--Application-">Package Application</option>
+						<option value="Ref--class-SmartAppAdminControllerhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartAppAdminController</option>
+						<option value="Ref--class-SmartAppIndexControllerhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartAppIndexController</option>
+						<option value="Ref--class-SmartAppInfohtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartAppInfo</option>
+			
+					<option value="Package--ApplicationCaching-">Package Application:Caching</option>
+						<option value="Ref--class-SmartPersistentCachehtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartPersistentCache</option>
+			
+					<option value="Package--ApplicationSession-">Package Application:Session</option>
+						<option value="Ref--class-SmartSessionhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartSession</option>
+			
+					<option value="Package--ApplicationViewComponents-">Package Application:ViewComponents</option>
+						<option value="Ref--class-SmartComponentshtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartComponents</option>
+			
+					<option value="Package--PluginsArchivers-">Package Plugins:Archivers</option>
+						<option value="Ref--class-SmartArchiverLZShtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartArchiverLZS</option>
+			
+					<option value="Package--PluginsConvertersAndParsers-">Package Plugins:ConvertersAndParsers</option>
+						<option value="Ref--class-SmartHtmlParserhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartHtmlParser</option>
+						<option value="Ref--class-SmartMarkdownToHTMLhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartMarkdownToHTML</option>
+						<option value="Ref--class-SmartPunycodehtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartPunycode</option>
+						<option value="Ref--class-SmartXmlComposerhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartXmlComposer</option>
+						<option value="Ref--class-SmartXmlParserhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartXmlParser</option>
+						<option value="Ref--class-SmartYamlConverterhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartYamlConverter</option>
+			
+					<option value="Package--PluginsDatabaseMongoDB-">Package Plugins:Database:MongoDB</option>
+						<option value="Ref--class-SmartMongoDbhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartMongoDb</option>
+			
+					<option value="Package--PluginsDatabaseMySQL-">Package Plugins:Database:MySQL</option>
+						<option value="Ref--class-SmartMysqliDbhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartMysqliDb</option>
+						<option value="Ref--class-SmartMysqliExtDbhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartMysqliExtDb</option>
+			
+					<option value="Package--PluginsDatabasePostgreSQL-">Package Plugins:Database:PostgreSQL</option>
+						<option value="Ref--class-SmartPgsqlDbhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartPgsqlDb</option>
+						<option value="Ref--class-SmartPgsqlExtDbhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartPgsqlExtDb</option>
+			
+					<option value="Package--PluginsDatabaseRedis-">Package Plugins:Database:Redis</option>
+						<option value="Ref--class-SmartRedisDbhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartRedisDb</option>
+			
+					<option value="Package--PluginsDatabaseSQLite-">Package Plugins:Database:SQLite</option>
+						<option value="Ref--class-SmartSQliteDbhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartSQliteDb</option>
+			
+					<option value="Package--PluginsExportAndImport-">Package Plugins:ExportAndImport</option>
+						<option value="Ref--class-SmartPdfExporthtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartPdfExport</option>
+						<option value="Ref--class-SmartSpreadSheetExporthtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartSpreadSheetExport</option>
+						<option value="Ref--class-SmartSpreadSheetImporthtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartSpreadSheetImport</option>
+			
+					<option value="Package--PluginsImage-">Package Plugins:Image</option>
+						<option value="Ref--class-SmartDetectImageshtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartDetectImages</option>
+						<option value="Ref--class-SmartImageGdProcesshtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartImageGdProcess</option>
+			
+					<option value="Package--PluginsMailer-">Package Plugins:Mailer</option>
+						<option value="Ref--class-SmartMailerImap4Clienthtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartMailerImap4Client</option>
+						<option value="Ref--class-SmartMailerMimeDecodehtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartMailerMimeDecode</option>
+						<option value="Ref--class-SmartMailerMimeParserhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartMailerMimeParser</option>
+						<option value="Ref--class-SmartMailerPop3Clienthtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartMailerPop3Client</option>
+						<option value="Ref--class-SmartMailerSendhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartMailerSend</option>
+						<option value="Ref--class-SmartMailerSmtpClienthtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartMailerSmtpClient</option>
+						<option value="Ref--class-SmartMailerUtilshtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartMailerUtils</option>
+			
+					<option value="Package--PluginsNetwork-">Package Plugins:Network</option>
+						<option value="Ref--class-SmartFtpClienthtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartFtpClient</option>
+						<option value="Ref--class-SmartRobothtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartRobot</option>
+			
+					<option value="Package--PluginsViewComponents-">Package Plugins:ViewComponents</option>
+						<option value="Ref--class-SmartBarcode1Dhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartBarcode1D</option>
+						<option value="Ref--class-SmartBarcode2Dhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartBarcode2D</option>
+						<option value="Ref--class-SmartCalendarComponenthtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartCalendarComponent</option>
+						<option value="Ref--class-SmartCaptchaFormCheckhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartCaptchaFormCheck</option>
+						<option value="Ref--class-SmartHTMLCalendarhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartHTMLCalendar</option>
+						<option value="Ref--class-SmartViewHtmlHelpershtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartViewHtmlHelpers</option>
+			
+					<option value="Package--developmentCore-">Package development:@Core</option>
+						<option value="Ref--interface-SmartInterfaceAdapterTextTranslationshtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;interface \SmartInterfaceAdapterTextTranslations</option>
+			
+					<option value="Package--developmentApplication-">Package development:Application</option>
+						<option value="Ref--class-SmartAbstractAppControllerhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartAbstractAppController</option>
+						<option value="Ref--class-SmartAbstractCustomSessionhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartAbstractCustomSession</option>
+						<option value="Ref--class-SmartAbstractPersistentCachehtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartAbstractPersistentCache</option>
+			
+					<option value="Package--developmentextralibsDatabase-">Package development:extralibs:Database</option>
+						<option value="Ref--class-SmartAbstractPgsqlExtDbhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartAbstractPgsqlExtDb</option>
+			
+					<option value="Package--developmentmodulesAuthAdmins-">Package development:modules:AuthAdmins</option>
+						<option value="Ref--class-SmartModExtLib-AuthAdmins-AuthAdminsHandlerhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\AuthAdmins\AuthAdminsHandler</option>
+						<option value="Ref--class-SmartModExtLib-AuthAdmins-SimpleAuthAdminsHandlerhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\AuthAdmins\SimpleAuthAdminsHandler</option>
+			
+					<option value="Package--developmentmodulesPageBuilder-">Package development:modules:PageBuilder</option>
+						<option value="Ref--class-SmartModExtLib-PageBuilder-AbstractFrontendControllerhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\PageBuilder\AbstractFrontendController</option>
+						<option value="Ref--class-SmartModExtLib-PageBuilder-AbstractFrontendPluginhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\PageBuilder\AbstractFrontendPlugin</option>
+			
+					<option value="Package--developmentmodulesWebdav-">Package development:modules:Webdav</option>
+						<option value="Ref--class-SmartModExtLib-Webdav-ControllerAdmCalDavFshtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\Webdav\ControllerAdmCalDavFs</option>
+						<option value="Ref--class-SmartModExtLib-Webdav-ControllerAdmCardDavFshtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\Webdav\ControllerAdmCardDavFs</option>
+						<option value="Ref--class-SmartModExtLib-Webdav-ControllerAdmDavFshtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\Webdav\ControllerAdmDavFs</option>
+			
+					<option value="Package--extralibsArchivers-">Package extralibs:Archivers</option>
+						<option value="Ref--class-SmartZipArchivehtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartZipArchive</option>
+			
+					<option value="Package--extralibsDatabaseSolr-">Package extralibs:Database:Solr</option>
+						<option value="Ref--class-SmartSolrDbhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartSolrDb</option>
+			
+					<option value="Package--extralibsExportAndImport-">Package extralibs:ExportAndImport</option>
+						<option value="Ref--class-SmartExportToOpenOfficehtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartExportToOpenOffice</option>
+						<option value="Ref--class-SmartImportFromOpenOfficehtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartImportFromOpenOffice</option>
+			
+					<option value="Package--extralibsLanguageDetection-">Package extralibs:LanguageDetection</option>
+						<option value="Ref--class-SmartLangIdClienthtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartLangIdClient</option>
+			
+					<option value="Package--extralibsNetwork-">Package extralibs:Network</option>
+						<option value="Ref--class-SmartCurlHttpFtpClienthtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartCurlHttpFtpClient</option>
+			
+					<option value="Package--extralibsTemplatingEngine-">Package extralibs:TemplatingEngine</option>
+						<option value="Ref--class-SmartTemplatinghtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartTemplating</option>
+			
+					<option value="Package--extralibsViewComponents-">Package extralibs:ViewComponents</option>
+						<option value="Ref--class-SmartImgBizChartshtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartImgBizCharts</option>
+						<option value="Ref--class-SmartImgGfxChartshtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartImgGfxCharts</option>
+			
+					<option value="Package--modulesDatabasePDORedbean-ORM-">Package modules:Database:PDO:Redbean-ORM</option>
+						<option value="Ref--class-SmartModExtLib-DbOrmRedbean-ORMhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\DbOrmRedbean\ORM</option>
+			
+					<option value="Package--modulesDatabasePDOZend-Dbal-">Package modules:Database:PDO:Zend-Dbal</option>
+						<option value="Ref--class-SmartModExtLib-DbalZend-DbalPdohtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\DbalZend\DbalPdo</option>
+			
+					<option value="Package--modulesHighlightSyntax-">Package modules:HighlightSyntax</option>
+						<option value="Ref--class-SmartModExtLib-HighlightSyntax-Highlighterhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\HighlightSyntax\Highlighter</option>
+			
+					<option value="Package--modulesLanguageDetection-">Package modules:LanguageDetection</option>
+						<option value="Ref--class-SmartModExtLib-LangDetect-LanguageNgramshtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\LangDetect\LanguageNgrams</option>
+			
+					<option value="Package--modulesNetwork-">Package modules:Network</option>
+						<option value="Ref--class-SmartModExtLib-Soap-SoapServerRequestHandlerhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\Soap\SoapServerRequestHandler</option>
+			
+					<option value="Package--modulesSocialMedia-">Package modules:SocialMedia</option>
+						<option value="Ref--class-SmartModExtLib-SmFacebook-FacebookApihtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\SmFacebook\FacebookApi</option>
+						<option value="Ref--class-SmartModExtLib-SmTwitter-TwitterApihtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\SmTwitter\TwitterApi</option>
+			
+					<option value="Package--modulesTemplatingEngine-">Package modules:TemplatingEngine</option>
+						<option value="Ref--class-SmartModExtLib-TplDust-SmartDustTemplatinghtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\TplDust\SmartDustTemplating</option>
+						<option value="Ref--class-SmartModExtLib-TplNetteLatte-SmartNetteLatteTemplatinghtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\TplNetteLatte\SmartNetteLatteTemplating</option>
+						<option value="Ref--class-SmartModExtLib-TplTwig-SmartTwigTemplatinghtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\TplTwig\SmartTwigTemplating</option>
+						<option value="Ref--class-SmartModExtLib-TplTypo3Fluid-SmartTypo3FluidTemplatinghtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\TplTypo3Fluid\SmartTypo3FluidTemplating</option>
+			
+					<option value="Package--modulesViewComponents-">Package modules:ViewComponents</option>
+						<option value="Ref--class-SmartModExtLib-JsComponents-TextEditorhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\JsComponents\TextEditor</option>
+						<option value="Ref--class-SmartModExtLib-MediaGallery-Managerhtml-"> &nbsp;&nbsp;&middot;&nbsp;&nbsp;class \SmartModExtLib\MediaGallery\Manager</option>
+			
+		
 		</optgroup>
 	</select>
 </div>
+<!-- summary-selectjs r.20191124 -->
+<link rel="stylesheet" type="text/css" href="../js/slimselect.css">
+<script type="text/javascript" src="../js/slimselect.js"></script>
+<script type="text/javascript">
+try {
+	new SlimSelect({
+		select: '#select-summary'
+	});
+} catch(err){
+	console.error('ERROR: SlimSelect Failed: ' + err);
+}
+</script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-11-22 19:06:06 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-11-25 14:33:44 +0000</small>
 <hr>
 <br>
 <!-- # -->

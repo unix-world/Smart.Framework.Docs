@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20191122 -->
+<!-- Template: Smart.Framework@Documentor v.20191124 -->
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="SmartJS_BrowserUtils        static class SmartJS_BrowserUtils  {  } .    CLASS :: Browser Utils This JavaScript class provides methods to simplify the">
-	<meta name="keywords" content="smartjs browserutils, static, class, ., browser, utils, this, javascript, provides, methods, to, simplify, the, interraction, with, ajax, forms, and, provide, basic, implementation, of, several, ui, util, components., language, located, at, lib js framework smart-framework.js, browser utils.js, package, sf.javascript browser, name, usage, smartjs browserutils.method, version, depends, smartjs coreutils, smartjs cryptohash, smartjs bas, jquery, smartjs modalbox, jquery.gritter, jquery.alertable, smartsimpledialog, smartjs browseruiutils, summary, public, function, windowisiframe, boolean, return, true, if, iframe, false, not, detect, a, window, is, windowispopup, popup, parsecurrenturlgetparams, object, para  valu, para  value, ., parse, current, url, extract, get, params, sample, code, http s    some.url  para valu para value, printpage, void, fires, print, dialog, show, event, page, countdown, integer, counter, string, elid, js-code, evcode, custom, set, in, js">
+	<meta name="keywords" content="smartjs browserutils, static, class, ., browser, utils, this, javascript, provides, methods, to, simplify, the, interraction, with, ajax, forms, and, provide, basic, implementation, of, several, ui, util, components., language, located, at, lib js framework smart-framework.js, browser utils.js, package, sf.javascript browser, name, usage, smartjs browserutils.method, version, depends, smartjs coreutils, smartjs cryptohash, smartjs bas, jquery, smartjs modalbox, jquery.gritter, jquery.alertable, smartsimpledialog, smartjs browseruiutils, public, function, windowisiframe, boolean, return, true, if, iframe, false, not, detect, a, window, is, windowispopup, popup, parsecurrenturlgetparams, object, para  valu, para  value, ., parse, current, url, extract, get, params, sample, code, http s    some.url  para valu para value, printpage, void, fires, print, dialog, show, event, page, countdown, integer, counter, string, elid, js-code, evcode, custom, set, in, js, code">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : Javascript">
 	<title>JS Documentation for: SmartJS_BrowserUtils</title>
 	<!-- CSS and Fonts -->
@@ -206,7 +206,7 @@
 	[hidden] {
 		display: none !important;
 	}
-	button {
+	button, a.ux-button {
 		/* Structure */
 		display: inline-block; /* do not mark as important as it can't hide using jquery hide() */
 		padding: 7px 15px 7px 15px !important;
@@ -236,13 +236,16 @@
 		user-select: none !important;
 		zoom: 1 !important;
 	}
-	button:hover,
-	button:focus {
+	button *, a.ux-button * {
+		font-weight: bold !important;
+	}
+	button:hover, a.ux-button:hover,
+	button:focus, a.ux-button:focus {
 		border: 1px solid #CCCCCC !important;
 		background-color: #F3F3F3 !important;
 		color: #2069A9 !important;
 	}
-	button:focus {
+	button:focus, a.ux-button:focus {
 		outline: 0 !important;
 	}
 	button[disabled],
@@ -263,7 +266,7 @@
 	nav.ux-navbar {
 		margin: 0;
 		padding: 0;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar div#logo {
 		display: block;
@@ -289,7 +292,7 @@
 		margin: 0px;
 		display: inline-block;
 		float: left;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar a {
 		display: block;
@@ -300,11 +303,11 @@
 		text-decoration: none;
 	}
 	nav.ux-navbar ul li ul li:hover {
-		background-color: #2e40a4;
+		background-color: #2b3a57;
 	}
 	nav.ux-navbar a:hover {
 		color: #FFFFFF;
-		background-color: #1d3093;
+		background-color: #1a2946;
 	}
 	nav.ux-navbar ul ul {
 		display: none;
@@ -353,7 +356,7 @@
 		}
 		nav.ux-navbar label.toggle {
 			display: block;
-			background-color: #3f51b5;
+			background-color: #3c4663;
 			padding: 0 20px;
 			color: #FFFFFF;
 			font-size: 20px;
@@ -366,7 +369,7 @@
 		}
 		nav.ux-navbar label.toggle:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar input[id^=drop]:checked + ul {
 			display: block;
@@ -387,15 +390,15 @@
 		}
 		nav.ux-navbar a:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar ul ul ul a {
 			color: #FFFFFF;
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul li ul li .toggle,
 		nav.ux-navbar ul ul a {
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul ul {
 			float: none;
@@ -449,7 +452,13 @@
 </head>
 <body>
 <nav class="ux-navbar">
-	<div id="logo"><span>&#9776; </span>Smart.Framework and Smart.Framework.Modules : Javascript Documentation</div>
+	<div id="logo" style="display:flex; align-items:center;">
+		<span style="line-height:50px;">
+						<img src="../img/javascript-logo.svg" width="36" height="36" align="left">
+			
+		</span>
+		<span style="margin-left:10px;">Smart.Framework and Smart.Framework.Modules : Javascript Documentation</span>
+	</div>
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
@@ -457,10 +466,10 @@
 	</ul>
 	
 </nav>
-<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Demo"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20191122 -->
+<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
+<!-- class r.20191124 -->
 <!-- Styles -->
-<!-- styles r.20191122 -->
+<!-- styles r.20191124 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -579,6 +588,11 @@ div.doc-summary {
 	background: #343C61;
 	color: #FFFFFF;
 	border: 1px solid #CCCCCC;
+	width: 45vw;
+	min-width: 320px !important;
+}
+select#select-summary {
+	width: 99% !important;
 }
 </style>
 <style type="text/css">
@@ -683,7 +697,7 @@ This JavaScript class provides methods to simplify the interraction with the Bro
 		
 		
 		
-		<li><b>Version:</b> 20191122</li>
+		<li><b>Version:</b> 20191123</li>
 		<li><b>Depends:</b> SmartJS_CoreUtils, SmartJS_CryptoHash, SmartJS_Base64, jQuery, SmartJS_ModalBox, jQuery.Gritter, *jQuery.alertable, *SmartSimpleDialog, *SmartJS_BrowserUIUtils</li>
 		
 	</ul>
@@ -691,9 +705,9 @@ This JavaScript class provides methods to simplify the interraction with the Bro
 <!-- Methods -->
 <br>
 <div class="doc-container" id="Methods--Summary-">
-	<h2 class="doc-header">Methods summary</h2>
+	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20191122 -->
+<!-- methods r.20191124 -->
 <div class="doc-container" id="Method--WindowIsiFrame">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>WindowIsiFrame</b></span>&nbsp;(
 	
@@ -744,7 +758,7 @@ This JavaScript class provides methods to simplify the interraction with the Bro
 	</div>
 			<div class="doc-method-comments">Parse Current URL to extract GET Params</div>
 	
-			<pre><b>Sample Code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-string">'http(s)://some.url/?param1=value1&amp;param2=value%202'</span> <span class="hljs-comment">// sample URL</span></code></pre>
+			<pre><b>Sample code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-string">'http(s)://some.url/?param1=value1&amp;param2=value%202'</span> <span class="hljs-comment">// sample URL</span></code></pre>
 	
 </div><div class="doc-container" id="Method--PrintPage">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>PrintPage</b></span>&nbsp;(
@@ -1387,7 +1401,7 @@ This function must be called by a form button onClick followed by 'return false;
 	</div>
 			<div class="doc-method-comments">Catch TAB Key in a TextArea or other compatible input field</div>
 	
-			<pre><b>Sample Code: JavaScript</b><br><code class="hljs javascript"> &lt;textarea id=<span class="hljs-string">&quot;txt&quot;</span> onKeyDown=<span class="hljs-string">&quot;SmartJS_BrowserUtils.catch_TABKey(event);&quot;</span>&gt;</code></pre>
+			<pre><b>Sample code: JavaScript</b><br><code class="hljs javascript"> &lt;textarea id=<span class="hljs-string">&quot;txt&quot;</span> onKeyDown=<span class="hljs-string">&quot;SmartJS_BrowserUtils.catch_TABKey(event);&quot;</span>&gt;</code></pre>
 	
 </div><div class="doc-container" id="Method--checkAll_CkBoxes">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>checkAll_CkBoxes</b></span>&nbsp;(
@@ -1435,7 +1449,7 @@ This function must be called by a form button onClick followed by 'return false;
 	</div>
 			<div class="doc-method-comments">Clone a HTML Element</div>
 	
-			<pre><b>Sample Code: JavaScript</b><br><code class="hljs javascript"> &lt;div id=<span class="hljs-string">&quot;multifile_list&quot;</span> style=<span class="hljs-string">&quot;text-align:left; max-width:550px;&quot;</span>&gt;
+			<pre><b>Sample code: JavaScript</b><br><code class="hljs javascript"> &lt;div id=<span class="hljs-string">&quot;multifile_list&quot;</span> style=<span class="hljs-string">&quot;text-align:left; max-width:550px;&quot;</span>&gt;
  		<span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;multifile_uploader&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;file&quot;</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;myvar[]&quot;</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;width:90%;&quot;</span>&gt;</span>
  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;text/javascript&quot;</span>&gt;</span>
@@ -1471,7 +1485,7 @@ This function must be called by a form button onClick followed by 'return false;
 			<div class="doc-method-comments">Submit a Form by Ajax via POST and Handle the Answer<br>
 This function expects a json answer with the following structure: see more in framework PHP lib SmartComponents::js_ajax_replyto_html_form()</div>
 	
-			<pre><b>Sample Code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-comment">// Json Structure for Answer</span>
+			<pre><b>Sample code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-comment">// Json Structure for Answer</span>
  		{
  			<span class="hljs-string">'completed'</span>: 	<span class="hljs-string">'DONE'</span>,
  			<span class="hljs-string">'status'</span>: 		<span class="hljs-string">'OK|ERROR'</span>,
@@ -1508,7 +1522,7 @@ This function expects a json answer with the following structure: see more in fr
 			<div class="doc-method-comments">Create an Ajax XHR Request (POST) by Form<br>
 It supports simple forms or complex forms with multipart/form-data and file attachments.</div>
 	
-			<pre><b>Sample Code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-keyword">var</span> ajax = SmartJS_BrowserUtils.Ajax_XHR_GetByForm(<span class="hljs-string">'my-form'</span>, <span class="hljs-string">'http(s);//url-to'</span>, <span class="hljs-string">'json'</span>)
+			<pre><b>Sample code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-keyword">var</span> ajax = SmartJS_BrowserUtils.Ajax_XHR_GetByForm(<span class="hljs-string">'my-form'</span>, <span class="hljs-string">'http(s);//url-to'</span>, <span class="hljs-string">'json'</span>)
  		.done: 		<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{}
  		.fail: 		<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{}
  		.always: 	<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{}</code></pre>
@@ -1550,7 +1564,7 @@ SmartJS_BrowserUtils.Ajax_XHR_GetByForm(); 		// basic, will detect the form type
 or even much better use this:<br>
 SmartJS_BrowserUtils.Submit_Form_By_Ajax(); 	// advanced, will handle the XHR form request and the answer</div>
 	
-			<pre><b>Sample Code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-keyword">var</span> ajax = SmartJS_BrowserUtils.Ajax_XHR_Request_From_URL(<span class="hljs-string">'http(s);//url'</span>, <span class="hljs-string">'POST'</span>, <span class="hljs-string">'json'</span>, <span class="hljs-string">'&amp;var1=value1&amp;var2=value2'</span>)
+			<pre><b>Sample code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-keyword">var</span> ajax = SmartJS_BrowserUtils.Ajax_XHR_Request_From_URL(<span class="hljs-string">'http(s);//url'</span>, <span class="hljs-string">'POST'</span>, <span class="hljs-string">'json'</span>, <span class="hljs-string">'&amp;var1=value1&amp;var2=value2'</span>)
  		.done: 		<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{}
  		.fail: 		<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{}
  		.always: 	<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">msg</span>) </span>{}</code></pre>
@@ -1700,9 +1714,9 @@ Requires in HTML:<br>
 <!-- Properties -->
 <br>
 <div class="doc-container" id="Properties--Summary-">
-	<h2 class="doc-header">Properties summary</h2>
+	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20191122 -->
+<!-- properties r.20191124 -->
 <div class="doc-container" id="Property--param_Notifications">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>var</i></span> <b>param_Notifications</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>'growl'</b></span>&nbsp;;&nbsp;&nbsp;<span title="Static Property"><b>.</b></span>&nbsp;<i>{String}</i>
 			<div class="doc-method-comments">Notification Mode<br>
@@ -1748,13 +1762,21 @@ Allowed Values: hexa color between #000000 - #FFFFFF</div>
 Allowed Values: between 0.1 and 1</div>
 	
 </div>
+<!-- Constants -->
+<br>
+<div class="doc-container" id="Constants--Summary-">
+	<h2 class="doc-header">class Constants</h2>
+</div>
+<!-- constants r.20191124 -->
+
+
 <!-- Sample Code -->
 
 <!-- Summary List -->
 <br>
-<!-- summary r.20191122 -->
+<!-- summary r.20191124 -->
 <script>
-// summary r.20191122
+// summary r.20191124
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1776,127 +1798,142 @@ function smartHandleDocSelector(obj) {
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
 		<option value="" selected>* Javascript Class SmartJS_BrowserUtils # Documentation Index *</option>
 		<optgroup label="Class SmartJS_BrowserUtils">
-			<option value="Class--Summary-">***** Class Definition *****</option>
+			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
-			<option value="Methods--Summary-">*** Methods summary ***</option>
-									<option value="Method--WindowIsiFrame">Method: WindowIsiFrame()</option>
+			<option value="Methods--Summary-">Methods list</option>
+									<option value="Method--WindowIsiFrame"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;WindowIsiFrame()</option>
 			
-									<option value="Method--WindowIsPopup">Method: WindowIsPopup()</option>
+									<option value="Method--WindowIsPopup"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;WindowIsPopup()</option>
 			
-									<option value="Method--parseCurrentUrlGetParams">Method: parseCurrentUrlGetParams()</option>
+									<option value="Method--parseCurrentUrlGetParams"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;parseCurrentUrlGetParams()</option>
 			
-									<option value="Method--PrintPage">Method: PrintPage()</option>
+									<option value="Method--PrintPage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PrintPage()</option>
 			
-									<option value="Method--CountDown">Method: CountDown()</option>
+									<option value="Method--CountDown"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;CountDown()</option>
 			
-									<option value="Method--PageAwayControl">Method: PageAwayControl()</option>
+									<option value="Method--PageAwayControl"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageAwayControl()</option>
 			
-									<option value="Method--RedirectToURL">Method: RedirectToURL()</option>
+									<option value="Method--RedirectToURL"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;RedirectToURL()</option>
 			
-									<option value="Method--RedirectDelayedToURL">Method: RedirectDelayedToURL()</option>
+									<option value="Method--RedirectDelayedToURL"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;RedirectDelayedToURL()</option>
 			
-									<option value="Method--RedirectParent">Method: RedirectParent()</option>
+									<option value="Method--RedirectParent"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;RedirectParent()</option>
 			
-									<option value="Method--RefreshParent">Method: RefreshParent()</option>
+									<option value="Method--RefreshParent"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;RefreshParent()</option>
 			
-									<option value="Method--CloseModalPopUp">Method: CloseModalPopUp()</option>
+									<option value="Method--CloseModalPopUp"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;CloseModalPopUp()</option>
 			
-									<option value="Method--CloseDelayedModalPopUp">Method: CloseDelayedModalPopUp()</option>
-			
-						
-									<option value="Method--windowFocus">Method: windowFocus()</option>
-			
-									<option value="Method--windwScrollDown">Method: windwScrollDown()</option>
-			
-									<option value="Method--getHighestZIndex">Method: getHighestZIndex()</option>
-			
-									<option value="Method--Overlay_Show">Method: Overlay_Show()</option>
-			
-									<option value="Method--Overlay_Clear">Method: Overlay_Clear()</option>
-			
-									<option value="Method--Overlay_Hide">Method: Overlay_Hide()</option>
-			
-									<option value="Method--GrowlNotificationAdd">Method: GrowlNotificationAdd()</option>
-			
-									<option value="Method--GrowlNotificationRemove">Method: GrowlNotificationRemove()</option>
-			
-									<option value="Method--MaximizeElement">Method: MaximizeElement()</option>
-			
-									<option value="Method--alert_Dialog">Method: alert_Dialog()</option>
-			
-									<option value="Method--confirm_Dialog">Method: confirm_Dialog()</option>
-			
-									<option value="Method--confirmSubmitForm">Method: confirmSubmitForm()</option>
-			
-									<option value="Method--PopUpSendForm">Method: PopUpSendForm()</option>
-			
-									<option value="Method--PopUpLink">Method: PopUpLink()</option>
-			
-									<option value="Method--getCookie">Method: getCookie()</option>
-			
-									<option value="Method--setCookie">Method: setCookie()</option>
-			
-									<option value="Method--deleteCookie">Method: deleteCookie()</option>
+									<option value="Method--CloseDelayedModalPopUp"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;CloseDelayedModalPopUp()</option>
 			
 						
-									<option value="Method--textArea_addLimit">Method: textArea_addLimit()</option>
+									<option value="Method--windowFocus"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;windowFocus()</option>
 			
-									<option value="Method--catch_TABKey">Method: catch_TABKey()</option>
+									<option value="Method--windwScrollDown"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;windwScrollDown()</option>
 			
-									<option value="Method--checkAll_CkBoxes">Method: checkAll_CkBoxes()</option>
+									<option value="Method--getHighestZIndex"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getHighestZIndex()</option>
 			
-									<option value="Method--CloneElement">Method: CloneElement()</option>
+									<option value="Method--Overlay_Show"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Overlay_Show()</option>
+			
+									<option value="Method--Overlay_Clear"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Overlay_Clear()</option>
+			
+									<option value="Method--Overlay_Hide"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Overlay_Hide()</option>
+			
+									<option value="Method--GrowlNotificationAdd"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;GrowlNotificationAdd()</option>
+			
+									<option value="Method--GrowlNotificationRemove"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;GrowlNotificationRemove()</option>
+			
+									<option value="Method--MaximizeElement"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;MaximizeElement()</option>
+			
+									<option value="Method--alert_Dialog"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;alert_Dialog()</option>
+			
+									<option value="Method--confirm_Dialog"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;confirm_Dialog()</option>
+			
+									<option value="Method--confirmSubmitForm"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;confirmSubmitForm()</option>
+			
+									<option value="Method--PopUpSendForm"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PopUpSendForm()</option>
+			
+									<option value="Method--PopUpLink"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PopUpLink()</option>
+			
+									<option value="Method--getCookie"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getCookie()</option>
+			
+									<option value="Method--setCookie"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;setCookie()</option>
+			
+									<option value="Method--deleteCookie"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;deleteCookie()</option>
 			
 						
-									<option value="Method--Submit_Form_By_Ajax">Method: Submit_Form_By_Ajax()</option>
+									<option value="Method--textArea_addLimit"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;textArea_addLimit()</option>
 			
-									<option value="Method--Ajax_XHR_GetByForm">Method: Ajax_XHR_GetByForm()</option>
+									<option value="Method--catch_TABKey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;catch_TABKey()</option>
+			
+									<option value="Method--checkAll_CkBoxes"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;checkAll_CkBoxes()</option>
+			
+									<option value="Method--CloneElement"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;CloneElement()</option>
 			
 						
-									<option value="Method--Ajax_XHR_Request_From_URL">Method: Ajax_XHR_Request_From_URL()</option>
+									<option value="Method--Submit_Form_By_Ajax"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Submit_Form_By_Ajax()</option>
 			
-									<option value="Method--Load_Div_Content_By_Ajax">Method: Load_Div_Content_By_Ajax()</option>
+									<option value="Method--Ajax_XHR_GetByForm"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Ajax_XHR_GetByForm()</option>
 			
-									<option value="Method--bookmark_url">Method: bookmark_url()</option>
+						
+									<option value="Method--Ajax_XHR_Request_From_URL"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Ajax_XHR_Request_From_URL()</option>
 			
-									<option value="Method--WayPoint">Method: WayPoint()</option>
+									<option value="Method--Load_Div_Content_By_Ajax"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Load_Div_Content_By_Ajax()</option>
 			
-									<option value="Method--VirtualFileDownload">Method: VirtualFileDownload()</option>
+									<option value="Method--bookmark_url"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;bookmark_url()</option>
 			
-									<option value="Method--VirtualImageUploadHandler">Method: VirtualImageUploadHandler()</option>
+									<option value="Method--WayPoint"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;WayPoint()</option>
+			
+									<option value="Method--VirtualFileDownload"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;VirtualFileDownload()</option>
+			
+									<option value="Method--VirtualImageUploadHandler"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;VirtualImageUploadHandler()</option>
 			
 			
 		</optgroup>
-				<optgroup label="Class Properties">
-			<option value="Properties--Summary-">*** Properties summary ***</option>
-									<option value="Property--param_Notifications">Property: param_Notifications</option>
+		<optgroup label="Class Properties">
+			<option value="Properties--Summary-">Properties list</option>
+									<option value="Property--param_Notifications"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;param_Notifications</option>
 			
-									<option value="Property--param_NotifyLoadError">Property: param_NotifyLoadError</option>
+									<option value="Property--param_NotifyLoadError"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;param_NotifyLoadError</option>
 			
-									<option value="Property--param_Use_iFModalBox_Protection">Property: param_Use_iFModalBox_Protection</option>
+									<option value="Property--param_Use_iFModalBox_Protection"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;param_Use_iFModalBox_Protection</option>
 			
-									<option value="Property--param_PopUp_ShowToolBar">Property: param_PopUp_ShowToolBar</option>
+									<option value="Property--param_PopUp_ShowToolBar"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;param_PopUp_ShowToolBar</option>
 			
-									<option value="Property--param_LoaderImg">Property: param_LoaderImg</option>
+									<option value="Property--param_LoaderImg"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;param_LoaderImg</option>
 			
-									<option value="Property--param_ImgOK">Property: param_ImgOK</option>
+									<option value="Property--param_ImgOK"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;param_ImgOK</option>
 			
-									<option value="Property--param_ImgWarn">Property: param_ImgWarn</option>
+									<option value="Property--param_ImgWarn"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;param_ImgWarn</option>
 			
-									<option value="Property--param_Overlay_BgColor">Property: param_Overlay_BgColor</option>
+									<option value="Property--param_Overlay_BgColor"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;param_Overlay_BgColor</option>
 			
-									<option value="Property--param_Overlay_Opacity">Property: param_Overlay_Opacity</option>
+									<option value="Property--param_Overlay_Opacity"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;param_Overlay_Opacity</option>
 			
 			
 		</optgroup>
-		
+		<optgroup label="Class Constants">
+			<option value="Constants--Summary-">Constants list</option>
+			
+		</optgroup>
 		
 	</select>
 </div>
+<!-- summary-selectjs r.20191124 -->
+<link rel="stylesheet" type="text/css" href="../js/slimselect.css">
+<script type="text/javascript" src="../js/slimselect.js"></script>
+<script type="text/javascript">
+try {
+	new SlimSelect({
+		select: '#select-summary'
+	});
+} catch(err){
+	console.error('ERROR: SlimSelect Failed: ' + err);
+}
+</script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-11-22 19:07:07 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-11-25 14:33:48 +0000</small>
 <hr>
 <br>
 <!-- # -->

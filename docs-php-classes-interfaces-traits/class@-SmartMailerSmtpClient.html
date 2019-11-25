@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20191122 -->
+<!-- Template: Smart.Framework@Documentor v.20191124 -->
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartMailerSmtpClient        final class \ SmartMailerSmtpClient    {   } -&gt;    Class: SmartMailerSmtpClient - provides the raw communication protocol">
-	<meta name="keywords" content="smartmailersmtpclient, final, class, smartmailersmtpclient, -, class, -, provides, the, raw, communication, protocol, between, php, and, a, smtp, server, with, support, for, ssl tls., this, is, very, advanced, use., it, just, implements, server., does, not, implement, mail, send, client., to, easy, email, messages, use, smartmailerutils  send email, smartmailerutils  send extended email, functions., more, needs, on, emails, use, smartmailersend, ., language, located, at, lib core plugins lib mail send.php, package, plugins mailer, namespace, name, version, v, depends, classes, smart, usage, dynamic, object, new, class   - method, only, methods, summary, public, function, construct, set ssl tls ca file, cafile">
+	<meta name="keywords" content="smartmailersmtpclient, final, class, smartmailersmtpclient, -, class, -, provides, the, raw, communication, protocol, between, php, and, a, smtp, server, with, support, for, ssl tls., this, is, advanced, usage., it, just, implements, or, esmtp, server., does, not, implement, mail, send, client, message, composing., bit, more, easy, use, on, emails, smartmailersend, ., language, located, at, lib core plugins lib mail send.php, package, plugins mailer, namespace, name, version, v, depends, classes, smart, usage, dynamic, object, new, class   - method, only, methods, public, function, construct, constructor, set ssl tls ca file, string, cafile, void, return, void, param, string, cafile, relative, path, to, ssl, certificate, authority, file, ex, store, within, smart-framework etc certificates, specify, as, etc certificates ca.pem, important, in">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartMailerSmtpClient</title>
 	<!-- CSS and Fonts -->
@@ -206,7 +206,7 @@
 	[hidden] {
 		display: none !important;
 	}
-	button {
+	button, a.ux-button {
 		/* Structure */
 		display: inline-block; /* do not mark as important as it can't hide using jquery hide() */
 		padding: 7px 15px 7px 15px !important;
@@ -236,13 +236,16 @@
 		user-select: none !important;
 		zoom: 1 !important;
 	}
-	button:hover,
-	button:focus {
+	button *, a.ux-button * {
+		font-weight: bold !important;
+	}
+	button:hover, a.ux-button:hover,
+	button:focus, a.ux-button:focus {
 		border: 1px solid #CCCCCC !important;
 		background-color: #F3F3F3 !important;
 		color: #2069A9 !important;
 	}
-	button:focus {
+	button:focus, a.ux-button:focus {
 		outline: 0 !important;
 	}
 	button[disabled],
@@ -263,7 +266,7 @@
 	nav.ux-navbar {
 		margin: 0;
 		padding: 0;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar div#logo {
 		display: block;
@@ -289,7 +292,7 @@
 		margin: 0px;
 		display: inline-block;
 		float: left;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar a {
 		display: block;
@@ -300,11 +303,11 @@
 		text-decoration: none;
 	}
 	nav.ux-navbar ul li ul li:hover {
-		background-color: #2e40a4;
+		background-color: #2b3a57;
 	}
 	nav.ux-navbar a:hover {
 		color: #FFFFFF;
-		background-color: #1d3093;
+		background-color: #1a2946;
 	}
 	nav.ux-navbar ul ul {
 		display: none;
@@ -353,7 +356,7 @@
 		}
 		nav.ux-navbar label.toggle {
 			display: block;
-			background-color: #3f51b5;
+			background-color: #3c4663;
 			padding: 0 20px;
 			color: #FFFFFF;
 			font-size: 20px;
@@ -366,7 +369,7 @@
 		}
 		nav.ux-navbar label.toggle:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar input[id^=drop]:checked + ul {
 			display: block;
@@ -387,15 +390,15 @@
 		}
 		nav.ux-navbar a:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar ul ul ul a {
 			color: #FFFFFF;
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul li ul li .toggle,
 		nav.ux-navbar ul ul a {
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul ul {
 			float: none;
@@ -449,7 +452,13 @@
 </head>
 <body>
 <nav class="ux-navbar">
-	<div id="logo"><span>&#9776; </span>Smart.Framework and Smart.Framework.Modules : PHP Documentation</div>
+	<div id="logo" style="display:flex; align-items:center;">
+		<span style="line-height:50px;">
+						<img src="../img/php-logo.svg" width="36" height="36" align="left">
+			
+		</span>
+		<span style="margin-left:10px;">Smart.Framework and Smart.Framework.Modules : PHP Documentation</span>
+	</div>
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
@@ -457,10 +466,10 @@
 	</ul>
 	
 </nav>
-<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Demo"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20191122 -->
+<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
+<!-- class r.20191124 -->
 <!-- Styles -->
-<!-- styles r.20191122 -->
+<!-- styles r.20191124 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -579,6 +588,11 @@ div.doc-summary {
 	background: #343C61;
 	color: #FFFFFF;
 	border: 1px solid #CCCCCC;
+	width: 45vw;
+	min-width: 320px !important;
+}
+select#select-summary {
+	width: 99% !important;
 }
 </style>
 <style type="text/css">
@@ -674,11 +688,10 @@ div.doc-summary {
 </h1>
 <!-- Description -->
 <div class="doc-comments">Class: SmartMailerSmtpClient - provides the raw communication protocol between PHP and a SMTP server with support for SSL/TLS.<br>
-This class is for very advanced use.<br>
-It just implements the communication protocol between PHP and a SMTP server.<br>
-It does and NOT implement the Mail Send Client.<br>
-To easy send email messages use: SmartMailerUtils::send_email() / SmartMailerUtils::send_extended_email() functions.<br>
-For more advanced needs on send emails use the SmartMailerSend class ...</div><br>
+This class is for advanced usage.<br>
+It just implements the communication protocol between PHP and a SMTP or ESMTP server.<br>
+It does and NOT implement the Mail Send Client or Message Composing.<br>
+For a bit more easy use on send emails use the SmartMailerSend class ...</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
 	<ul class="doc-list">
@@ -688,7 +701,7 @@ For more advanced needs on send emails use the SmartMailerSend class ...</div><b
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartMailerSmtpClient</span></li>
 		
-		<li><b>Version:</b> v.20191120</li>
+		<li><b>Version:</b> v.20191125</li>
 		<li><b>Depends:</b> classes:  Smart</li>
 		
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -699,9 +712,9 @@ For more advanced needs on send emails use the SmartMailerSend class ...</div><b
 <!-- Methods -->
 <br>
 <div class="doc-container" id="Methods--Summary-">
-	<h2 class="doc-header">Methods summary</h2>
+	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20191122 -->
+<!-- methods r.20191124 -->
 <div class="doc-container" id="Method--__construct">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-special-name"><b>__construct</b></span>&nbsp;(
 		
@@ -710,46 +723,65 @@ For more advanced needs on send emails use the SmartMailerSend class ...</div><b
 	
 	
 	
+			<div class="doc-method-comments">SMTP Client Class constructor</div>
 	
 	
 	
 </div><div class="doc-container" id="Method--set_ssl_tls_ca_file">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>set_ssl_tls_ca_file</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$cafile` Parameter is REQUIRED">$cafile</span></b></span>
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$cafile` Parameter is REQUIRED">$cafile</span></b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;VOID
 	
 	
+			<div class="doc-method-ret-params">@return: {VOID}<br>
+@param: {STRING} $cafile: Relative Path to a SSL Certificate Authority File (Ex: store within smart-framework/etc/certificates ; specify as 'etc/certificates/ca.pem') ; IMPORTANT: in this case the 'etc/certificates/' directory must be protected with a .htaccess to avoid being public readable - the directory and any files within this directory ...)</div>
 	
+			<div class="doc-method-comments">Set a SSL/TLS Certificate Authority File<br>
+If not set but SMART_FRAMEWORK_SSL_CA_FILE is defined will use the SMART_FRAMEWORK_SSL_CA_FILE</div>
 	
 	
 	
 </div><div class="doc-container" id="Method--connect">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>connect</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$helo` Parameter is REQUIRED">$helo</span></b></span>, 
-			<span class="doc-param-name"><b><span title="`$server` Parameter is REQUIRED">$server</span></b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$port` Parameter is OPTIONAL, with the Default Value: 25">$port</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>25</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$sslversion` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$sslversion</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$helo` Parameter is REQUIRED">$helo</span></b></span>, 
+			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$server` Parameter is REQUIRED">$server</span></b></span>, 
+			<i>INTEGER+</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$port` Parameter is OPTIONAL, with the Default Value: 25">$port</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>25</b></span>, 
+			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$sslversion` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$sslversion</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;INTEGER+
 	
 	
+			<div class="doc-method-ret-params">@hints: SMTP  SUCCESS CODE: 220 ; SMTP FAILURE CODE: 421<br>
+@return: {INTEGER+} 1 on success, 0 on fail<br>
+@param: {STRING} $helo: The SMTP HELO (server name that is allowed to send mails for this domain) ; Must be set to a real domain host that is valid to send emails for that address ; Ex: 'mail.mydomain.ext'<br>
+@param: {STRING} $server: The SMTP server Hostname or IP address<br>
+@param: {INTEGER+} $port: *Optional* The SMTP Server Port ; Default is: 25<br>
+@param: {ENUM} $sslversion: To connect using SSL mode this must be set to any of these accepted values: '', 'ssl', 'sslv3', 'tls', 'starttls' ; If empty string will be set will be not using SSL Mode</div>
 	
+			<div class="doc-method-comments">Will try to open a socket to the specified SMTP Server using the host/ip and port ; If a SSL option is selected will try to establish a SSL socket or fail</div>
 	
 	
 	
 </div><div class="doc-container" id="Method--login">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>login</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$username` Parameter is REQUIRED">$username</span></b></span>, 
-			<span class="doc-param-name"><b><span title="`$pass` Parameter is REQUIRED">$pass</span></b></span>
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$username` Parameter is REQUIRED">$username</span></b></span>, 
+			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$pass` Parameter is REQUIRED">$pass</span></b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;INTEGER+
 	
 	
+			<div class="doc-method-ret-params">@hints: SMTP  SUCCESS CODES are: 334 OR 235 (final)<br>
+@return: {INTEGER+} 1 on Success or 0 on Error<br>
+@param: {STRING} $username: The SMTP authentication username<br>
+@param: {STRING} $pass: The SMTP authentication password</div>
 	
+			<div class="doc-method-comments">Try a SMTP Authentication with a username and password<br>
+Generally this must be run after running the SMTP hello() method<br>
+Sends both user and pass to the SMTP server</div>
 	
 	
 	
@@ -757,10 +789,15 @@ For more advanced needs on send emails use the SmartMailerSend class ...</div><b
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>quit</b></span>&nbsp;(
 		
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;INTEGER+
 	
 	
+			<div class="doc-method-ret-params">@hints: SMTP  SUCCESS CODE: 221 ; SMTP ERROR CODE: 500<br>
+@return: {INTEGER+} 1 on Success or 0 on Error</div>
 	
+			<div class="doc-method-comments">Sends the QUIT command to the SMTP server<br>
+Closes the communication socket after sending QUIT command<br>
+Implemented as RFC 821: QUIT &lt;CRLF&gt;</div>
 	
 	
 	
@@ -768,10 +805,15 @@ For more advanced needs on send emails use the SmartMailerSend class ...</div><b
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>noop</b></span>&nbsp;(
 		
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;INTEGER+
 	
 	
+			<div class="doc-method-ret-params">@hints: SMTP  SUCCESS CODE: 250 ; SMTP ERROR CODE: 500, 421<br>
+@return: {INTEGER+} 1 on Success or 0 on Error</div>
 	
+			<div class="doc-method-comments">Ping the SMTP Server<br>
+Sends the command NOOP to the SMTP server<br>
+Implemented as RFC 821: NOOP &lt;CRLF&gt;</div>
 	
 	
 	
@@ -779,10 +821,15 @@ For more advanced needs on send emails use the SmartMailerSend class ...</div><b
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>help</b></span>&nbsp;(
 		
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;INTEGER+
 	
 	
+			<div class="doc-method-ret-params">@hints: SMTP  SUCCESS CODE: 211, 214 ; SMTP ERROR CODE: 500, 501, 502, 504, 421<br>
+@return: {INTEGER+} 1 on Success or 0 on Error</div>
 	
+			<div class="doc-method-comments">Help for supported commands on the SMTP Server<br>
+Sends the command HELP to the SMTP server.<br>
+Implemented as RFC 821: HELP [ &lt;SP&gt; &lt;string&gt; ] &lt;CRLF&gt;</div>
 	
 	
 	
@@ -790,10 +837,14 @@ For more advanced needs on send emails use the SmartMailerSend class ...</div><b
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>reset</b></span>&nbsp;(
 		
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;INTEGER+
 	
 	
+			<div class="doc-method-ret-params">@hints: SMTP  SUCCESS CODE: 250 ; SMTP ERROR CODE: 500, 501, 504, 421<br>
+@return: {INTEGER+} 1 on Success or 0 on Error</div>
 	
+			<div class="doc-method-comments">Sends the RSET command to the SMTP Server to abort any transaction that is currently in progress<br>
+Implemented as RFC 821: RSET &lt;CRLF&gt;</div>
 	
 	
 	
@@ -802,70 +853,108 @@ For more advanced needs on send emails use the SmartMailerSend class ...</div><b
 				<span class="doc-param-name"><b><span title="`$hostname` Parameter is REQUIRED">$hostname</span></b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;INTEGER+
 	
 	
+			<div class="doc-method-ret-params">@hints: SMTP  SUCCESS CODE: 250 ; SMTP ERROR CODE: 500, 501, 504, 421<br>
+@return: {INTEGER+} 1 on Success (if any of EHLO/HELO is successful) ; 0 on Error (if both EHLO and HELO fail)</div>
 	
+			<div class="doc-method-comments">Sends the EHLO and/or HELO command to the SMTP Server<br>
+First will try the extended SMTP feature by sending EHLO. If EHLO is not successful will try HELO<br>
+This makes sure that the client and the server are in the same known state.<br>
+Implemented as RFC 821: EHLO &lt;SP&gt; &lt;domain&gt; &lt;CRLF&gt; / HELO &lt;SP&gt; &lt;domain&gt; &lt;CRLF&gt;</div>
 	
 	
 	
 </div><div class="doc-container" id="Method--verify">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>verify</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$name` Parameter is REQUIRED">$name</span></b></span>
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$name` Parameter is REQUIRED">$name</span></b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;INTEGER+
 	
 	
+			<div class="doc-method-ret-params">@hints: SMTP  SUCCESS CODE: 250, 251 ; SMTP FAIL CODE: 550, 551, 553 ; SMTP ERROR CODE: 500, 501, 502, 421<br>
+@return: {INTEGER+} 1 on Success or 0 on Error<br>
+@param: {STRING} $name: The recipient name to be verified ; Ex: name@domain.ext</div>
 	
+			<div class="doc-method-comments">Verifies if the given recipient name is recognized by the SMTP server<br>
+Implemented as RFC 821: VRFY &lt;SP&gt; &lt;string&gt; &lt;CRLF&gt;</div>
 	
 	
 	
 </div><div class="doc-container" id="Method--expand">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>expand</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$name` Parameter is REQUIRED">$name</span></b></span>
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$name` Parameter is REQUIRED">$name</span></b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;INTEGER+
 	
 	
+			<div class="doc-method-ret-params">@hints: SMTP  SUCCESS CODE: 250 ; SMTP FAIL CODE: 550 ; SMTP ERROR CODE: 500, 501, 502, 504, 421<br>
+@return: {INTEGER+} 1 on Success or 0 on Error<br>
+@param: {STRING} $name: The recipient name to be expanded ; Ex: mail-list@domain.ext</div>
 	
+			<div class="doc-method-comments">Expand takes the recipient name and asks the server to list all the recipients who are members of the _list_<br>
+SMTP Expand will return back an empty string for error and the reply with reply lines ended by [CRLF]<br>
+Each value in the array returned has the format of: [ &lt;full-name&gt; &lt;sp&gt; ] &lt;path&gt;<br>
+The definition of &lt;path&gt; is defined in RFC 821<br>
+Implemented as RFC 821: EXPN &lt;SP&gt; &lt;string&gt; &lt;CRLF&gt;</div>
 	
 	
 	
 </div><div class="doc-container" id="Method--mail">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>mail</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$from` Parameter is REQUIRED">$from</span></b></span>
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$from` Parameter is REQUIRED">$from</span></b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;INTEGER+
 	
 	
+			<div class="doc-method-ret-params">@hints: SMTP  SUCCESS CODE: 250 ; SMTP FAIL CODE: 552, 451, 452 ; SMTP ERROR CODE: 500, 501, 421<br>
+@return: {INTEGER+} 1 on Success or 0 on Error<br>
+@param: {STRING} $from: The originating email recipient ; Ex: me@my-email.ext</div>
 	
+			<div class="doc-method-comments">Starts a send mail (message) transaction originating from the email address specified in $from recipient name on the SMTP Server<br>
+If this command is successful then the mail transaction is started and then one or more Recipient commands may be called followed by a Data command<br>
+Implemented as RFC 821: MAIL &lt;SP&gt; FROM:&lt;reverse-path&gt; &lt;CRLF&gt;</div>
 	
 	
 	
 </div><div class="doc-container" id="Method--recipient">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>recipient</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$to` Parameter is REQUIRED">$to</span></b></span>
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$to` Parameter is REQUIRED">$to</span></b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;INTEGER+
 	
 	
+			<div class="doc-method-ret-params">@hints: SMTP  SUCCESS CODE: 250, 251 ; SMTP FAIL CODE: 550, 551, 552, 553, 450, 451, 452 ; SMTP ERROR CODE: 500, 501, 503, 421<br>
+@return: {INTEGER+} 1 on Success or 0 on Error<br>
+@param: {STRING} $to: The destination email recipient (or email list) ; Ex: destination@your-email.ext</div>
 	
+			<div class="doc-method-comments">Sends the command RCPT to the SMTP server with the TO: argument of $to.<br>
+Implemented as RFC 821: RCPT &lt;SP&gt; TO:&lt;forward-path&gt; &lt;CRLF&gt;</div>
 	
 	
 	
 </div><div class="doc-container" id="Method--data_send">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>data_send</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$msg_data` Parameter is REQUIRED">$msg_data</span></b></span>
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$msg_data` Parameter is REQUIRED">$msg_data</span></b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;INTEGER+
 	
 	
+			<div class="doc-method-ret-params">@hints: [  Intermediate codes for {data} &lt;CRLF&gt;.&lt;CRLF&gt; are: SMTP INTERMEDIATE CODE: 354 ; SMTP CODE SUCCESS: 250 ; SMTP CODE FAILURE: 552,554,451,452 ] ; [ Final Transaction codes are: SMTP SUCCESS CODE: 250 ; SMTP FAIL CODE: 451, 554 ; SMTP ERROR CODE: 500, 501, 503, 421 ]<br>
+@return: {INTEGER+} 1 on Success or 0 on Error<br>
+@param: {STRING} $msg_data: The message data (headers + body) to be sent to the SMTP Server</div>
 	
+			<div class="doc-method-comments">Initiates a data command on the SMTP Server and sends the $msg_data to the server finalizing the mail transaction started with mail($from) and followed by recipient($to)<br>
+The $msg_data as data is the message that is to be send together with the message headers<br>
+Each header line (if any) needs to be on a single line followed by a &lt;CRLF&gt;<br>
+After headers the mail message body have to be appended and being separated by and additional &lt;CRLF&gt;<br>
+Implemented as RFC 821: DATA &lt;CRLF&gt;</div>
 	
 	
 	
@@ -873,9 +962,9 @@ For more advanced needs on send emails use the SmartMailerSend class ...</div><b
 <!-- Properties -->
 <br>
 <div class="doc-container" id="Properties--Summary-">
-	<h2 class="doc-header">Properties summary</h2>
+	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20191122 -->
+<!-- properties r.20191124 -->
 <div class="doc-container" id="Property--timeout">
 	<span class="doc-modifiers">public</span> <b>$timeout</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>30</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>INTEGER+</i>
 			<div class="doc-method-comments">socket timeout in seconds</div>
@@ -898,14 +987,19 @@ For more advanced needs on send emails use the SmartMailerSend class ...</div><b
 	
 </div>
 <!-- Constants -->
+<br>
+<div class="doc-container" id="Constants--Summary-">
+	<h2 class="doc-header">class Constants</h2>
+</div>
+<!-- constants r.20191124 -->
 
 <!-- Sample Code -->
 
 <!-- Summary List -->
 <br>
-<!-- summary r.20191122 -->
-<script>
-// summary r.20191122
+<!-- summary r.20191124 -->
+<script type="text/javascript">
+// summary r.20191124
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -927,76 +1021,90 @@ function smartHandleDocSelector(obj) {
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
 		<option value="" selected>* PHP Class \SmartMailerSmtpClient # Documentation Index *</option>
 		<optgroup label="Class \SmartMailerSmtpClient">
-			<option value="Class--Summary-">***** Class Definition *****</option>
+			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
-			<option value="Methods--Summary-">*** Methods summary ***</option>
-									<option value="Method--__construct">Method: __construct()</option>
+			<option value="Methods--Summary-">Methods list</option>
+									<option value="Method--__construct"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;__construct()</option>
 			
 			
-									<option value="Method--set_ssl_tls_ca_file">Method: set_ssl_tls_ca_file()</option>
+									<option value="Method--set_ssl_tls_ca_file"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;set_ssl_tls_ca_file()</option>
 			
 			
-									<option value="Method--connect">Method: connect()</option>
+									<option value="Method--connect"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;connect()</option>
 			
 			
-									<option value="Method--login">Method: login()</option>
+									<option value="Method--login"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;login()</option>
 			
 			
-									<option value="Method--quit">Method: quit()</option>
+									<option value="Method--quit"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;quit()</option>
 			
 			
-									<option value="Method--noop">Method: noop()</option>
+									<option value="Method--noop"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;noop()</option>
 			
 			
-									<option value="Method--help">Method: help()</option>
+									<option value="Method--help"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;help()</option>
 			
 			
-									<option value="Method--reset">Method: reset()</option>
+									<option value="Method--reset"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;reset()</option>
 			
 			
-									<option value="Method--hello">Method: hello()</option>
+									<option value="Method--hello"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;hello()</option>
 			
 			
-									<option value="Method--verify">Method: verify()</option>
+									<option value="Method--verify"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;verify()</option>
 			
 			
-									<option value="Method--expand">Method: expand()</option>
+									<option value="Method--expand"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;expand()</option>
 			
 			
-									<option value="Method--mail">Method: mail()</option>
+									<option value="Method--mail"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;mail()</option>
 			
 			
-									<option value="Method--recipient">Method: recipient()</option>
+									<option value="Method--recipient"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;recipient()</option>
 			
 			
-									<option value="Method--data_send">Method: data_send()</option>
+									<option value="Method--data_send"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;data_send()</option>
 			
-			
-			
-		</optgroup>
-				<optgroup label="Class Properties">
-			<option value="Properties--Summary-">*** Properties summary ***</option>
-									<option value="Property--timeout">Property: $timeout</option>
-			
-									<option value="Property--debug">Property: $debug</option>
-			
-									<option value="Property--dbglevel">Property: $dbglevel</option>
-			
-									<option value="Property--error">Property: $error</option>
-			
-									<option value="Property--log">Property: $log</option>
 			
 			
 		</optgroup>
-		
-		
+		<optgroup label="Class Properties">
+			<option value="Properties--Summary-">Properties list</option>
+									<option value="Property--timeout"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$timeout</option>
+			
+									<option value="Property--debug"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$debug</option>
+			
+									<option value="Property--dbglevel"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$dbglevel</option>
+			
+									<option value="Property--error"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$error</option>
+			
+									<option value="Property--log"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$log</option>
+			
+			
+		</optgroup>
+		<optgroup label="Class Constants">
+			<option value="Constants--Summary-">Constants list</option>
+			
+		</optgroup>
 		
 	</select>
 </div>
+<!-- summary-selectjs r.20191124 -->
+<link rel="stylesheet" type="text/css" href="../js/slimselect.css">
+<script type="text/javascript" src="../js/slimselect.js"></script>
+<script type="text/javascript">
+try {
+	new SlimSelect({
+		select: '#select-summary'
+	});
+} catch(err){
+	console.error('ERROR: SlimSelect Failed: ' + err);
+}
+</script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-11-22 19:06:04 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-11-25 14:33:39 +0000</small>
 <hr>
 <br>
 <!-- # -->

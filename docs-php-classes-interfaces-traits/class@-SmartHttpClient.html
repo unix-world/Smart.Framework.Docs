@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20191122 -->
+<!-- Template: Smart.Framework@Documentor v.20191124 -->
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartHttpClient        final class \ SmartHttpClient    {   } -&gt;    Class: SmartHttpClient - provides a HTTP / HTTPS Client (browser). To work with TLS /">
-	<meta name="keywords" content="smarthttpclient, final, class, smarthttpclient, -, class, -, provides, a, http, https, client, browser ., to, work, with, tls, ssl, requires, the, php, openssl, module ., implemented, methods, standard, get, post, head, extended, put, delete, mkcol, options, move, copy, propfind ., methods, will, prefere, which, provide, faster, access, instead, of, because, some, additional, headers, that, may, validate, for, error, checks, ., language, located, at, lib framework lib http cli.php, package, core network, namespace, name, version, v, depends, extensions, optional, just, https, classes, smart">
+	<meta name="keywords" content="smarthttpclient, final, class, smarthttpclient, -, class, -, provides, a, http, https, client, browser ., to, work, with, tls, ssl, requires, the, php, openssl, module ., implemented, methods, standard, get, post, head, extended, put, delete, mkcol, options, move, copy, propfind ., methods, will, prefere, which, provide, faster, access, instead, of, because, some, additional, headers, that, may, validate, for, error, checks, ., language, located, at, lib framework lib http cli.php, package, core network, namespace, name, version, v, depends, extensions, optional, just, https, classes, smart, usage, dynamic, object, new, class   - method, this, only, public, function, construct, enum, http protocol, param, enum, http protocol, protocol, version, use, can, be, set, or, default">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartHttpClient</title>
 	<!-- CSS and Fonts -->
@@ -206,7 +206,7 @@
 	[hidden] {
 		display: none !important;
 	}
-	button {
+	button, a.ux-button {
 		/* Structure */
 		display: inline-block; /* do not mark as important as it can't hide using jquery hide() */
 		padding: 7px 15px 7px 15px !important;
@@ -236,13 +236,16 @@
 		user-select: none !important;
 		zoom: 1 !important;
 	}
-	button:hover,
-	button:focus {
+	button *, a.ux-button * {
+		font-weight: bold !important;
+	}
+	button:hover, a.ux-button:hover,
+	button:focus, a.ux-button:focus {
 		border: 1px solid #CCCCCC !important;
 		background-color: #F3F3F3 !important;
 		color: #2069A9 !important;
 	}
-	button:focus {
+	button:focus, a.ux-button:focus {
 		outline: 0 !important;
 	}
 	button[disabled],
@@ -263,7 +266,7 @@
 	nav.ux-navbar {
 		margin: 0;
 		padding: 0;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar div#logo {
 		display: block;
@@ -289,7 +292,7 @@
 		margin: 0px;
 		display: inline-block;
 		float: left;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar a {
 		display: block;
@@ -300,11 +303,11 @@
 		text-decoration: none;
 	}
 	nav.ux-navbar ul li ul li:hover {
-		background-color: #2e40a4;
+		background-color: #2b3a57;
 	}
 	nav.ux-navbar a:hover {
 		color: #FFFFFF;
-		background-color: #1d3093;
+		background-color: #1a2946;
 	}
 	nav.ux-navbar ul ul {
 		display: none;
@@ -353,7 +356,7 @@
 		}
 		nav.ux-navbar label.toggle {
 			display: block;
-			background-color: #3f51b5;
+			background-color: #3c4663;
 			padding: 0 20px;
 			color: #FFFFFF;
 			font-size: 20px;
@@ -366,7 +369,7 @@
 		}
 		nav.ux-navbar label.toggle:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar input[id^=drop]:checked + ul {
 			display: block;
@@ -387,15 +390,15 @@
 		}
 		nav.ux-navbar a:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar ul ul ul a {
 			color: #FFFFFF;
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul li ul li .toggle,
 		nav.ux-navbar ul ul a {
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul ul {
 			float: none;
@@ -449,7 +452,13 @@
 </head>
 <body>
 <nav class="ux-navbar">
-	<div id="logo"><span>&#9776; </span>Smart.Framework and Smart.Framework.Modules : PHP Documentation</div>
+	<div id="logo" style="display:flex; align-items:center;">
+		<span style="line-height:50px;">
+						<img src="../img/php-logo.svg" width="36" height="36" align="left">
+			
+		</span>
+		<span style="margin-left:10px;">Smart.Framework and Smart.Framework.Modules : PHP Documentation</span>
+	</div>
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
@@ -457,10 +466,10 @@
 	</ul>
 	
 </nav>
-<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Demo"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20191122 -->
+<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
+<!-- class r.20191124 -->
 <!-- Styles -->
-<!-- styles r.20191122 -->
+<!-- styles r.20191124 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -579,6 +588,11 @@ div.doc-summary {
 	background: #343C61;
 	color: #FFFFFF;
 	border: 1px solid #CCCCCC;
+	width: 45vw;
+	min-width: 320px !important;
+}
+select#select-summary {
+	width: 99% !important;
 }
 </style>
 <style type="text/css">
@@ -687,7 +701,7 @@ The Extended Methods will prefere HTTP 1.1 instead of 1.0 because of some additi
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartHttpClient</span></li>
 		
-		<li><b>Version:</b> v.20191113</li>
+		<li><b>Version:</b> v.20191124</li>
 		<li><b>Depends:</b> extensions:  PHP OpenSSL (optional, just for HTTPS) ; classes: Smart</li>
 		
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -698,18 +712,20 @@ The Extended Methods will prefere HTTP 1.1 instead of 1.0 because of some additi
 <!-- Methods -->
 <br>
 <div class="doc-container" id="Methods--Summary-">
-	<h2 class="doc-header">Methods summary</h2>
+	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20191122 -->
+<!-- methods r.20191124 -->
 <div class="doc-container" id="Method--__construct">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-special-name"><b>__construct</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span class="doc-param-optional" title="`$http_protocol` Parameter is OPTIONAL, with the Default Value: &quot;1.0&quot;">$http_protocol</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;1.0&quot;</b></span>
+				<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$http_protocol` Parameter is OPTIONAL, with the Default Value: &quot;1.0&quot;">$http_protocol</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;1.0&quot;</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="* Special* Method"><b>@</b></span>&nbsp;
 	
 	
+			<div class="doc-method-ret-params">@param: {ENUM} $http_protocol: The HTTP protocol version to use ; can be set to 1.0 or 1.1 ; default is 1.0 (HTTP 1.0) which is fastest for single requests, especially in simple situations like GET or POST ; can be set to 1.1 (HTTP 1.1) which may be required in special situations for more complex requests</div>
 	
+			<div class="doc-method-comments">Class constructor</div>
 	
 	
 	
@@ -745,52 +761,75 @@ The Extended Methods will prefere HTTP 1.1 instead of 1.0 because of some additi
 <!-- Properties -->
 <br>
 <div class="doc-container" id="Properties--Summary-">
-	<h2 class="doc-header">Properties summary</h2>
+	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20191122 -->
+<!-- properties r.20191124 -->
 <div class="doc-container" id="Property--useragent">
-	<span class="doc-modifiers">public</span> <b>$useragent</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$useragent</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>'NetSurf/3.7  (Smart.Framework {version}; {OS} {Release} {Arch}; PHP/{php-ver})'</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">User agent (if used as robot, it must have the robot in the name to avoid start un-necessary sessions)</div>
 	
 </div><div class="doc-container" id="Property--connect_timeout">
-	<span class="doc-modifiers">public</span> <b>$connect_timeout</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$connect_timeout</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>30</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>INTEGER+</i>
+			<div class="doc-method-comments">Connect timeout in seconds</div>
 	
 </div><div class="doc-container" id="Property--rawheaders">
-	<span class="doc-modifiers">public</span> <b>$rawheaders</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$rawheaders</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>[]</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>ARRAY</i>
+			<div class="doc-method-comments">Array of RawHeaders (to send)</div>
 	
 </div><div class="doc-container" id="Property--cookies">
-	<span class="doc-modifiers">public</span> <b>$cookies</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$cookies</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>[]</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>ARRAY</i>
+			<div class="doc-method-comments">Array of Cookies (to send)</div>
 	
 </div><div class="doc-container" id="Property--postvars">
-	<span class="doc-modifiers">public</span> <b>$postvars</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$postvars</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>[]</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>ARRAY</i>
+			<div class="doc-method-comments">Array of PostVars (to send)</div>
 	
 </div><div class="doc-container" id="Property--poststring">
-	<span class="doc-modifiers">public</span> <b>$poststring</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$poststring</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+			<div class="doc-method-comments">Pre-Built Post String (as alternative to PostVars) ; must not contain unencoded \r\n ; must use the RFC 3986 standard.</div>
 	
 </div><div class="doc-container" id="Property--putbodymode">
-	<span class="doc-modifiers">public</span> <b>$putbodymode</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$putbodymode</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>'string'</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>ENUM</i>
+			<div class="doc-method-comments">PUT Request Mode (used for $putbodyres<br>
+Can have one of the values: 'string' or 'file'</div>
 	
 </div><div class="doc-container" id="Property--putbodyres">
-	<span class="doc-modifiers">public</span> <b>$putbodyres</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$putbodyres</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>MIXED</i>
+			<div class="doc-method-comments">PUT Request (to send)<br>
+If $putbodymode is set to 'string', this string will be sent as put<br>
+If $putbodymode is set to 'file', the content of this file will be sent as put ; this must be a valid relative path to a file (ex: tmp/file-to-put.txt)</div>
 	
 </div><div class="doc-container" id="Property--skipcontentif401">
-	<span class="doc-modifiers">public</span> <b>$skipcontentif401</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$skipcontentif401</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>true</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>BOOLEAN</i>
+			<div class="doc-method-comments">Return no Content (empty response body) if Not Auth (401)<br>
+If the response HTTP Status will return 401, if this is set to TRUE, will return empty content body ; else will return the HTML response body that server response set for 401 (irrelevant but in some cases may be important to parse)</div>
 	
 </div><div class="doc-container" id="Property--skip100continue">
-	<span class="doc-modifiers">public</span> <b>$skip100continue</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$skip100continue</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>false</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>BOOLEAN</i>
+			<div class="doc-method-comments">If set to TRUE will disable expect-100-continue and will skip parsing 100-continue header from server<br>
+Applies just for HTTP 1.1 and<br>
+This is a fix for those servers that does not comply with situations where 100-continue is required on HTTP 1.1</div>
 	
 </div><div class="doc-container" id="Property--debug">
-	<span class="doc-modifiers">public</span> <b>$debug</b>&nbsp;<span title="Object Property"><b>-&gt;</b></span>
+	<span class="doc-modifiers">public</span> <b>$debug</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>false</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>BOOLEAN</i>
+			<div class="doc-method-comments">Enable or Disable Debug for this class and the HTTP Request<br>
+If set to TRUE will enable debug</div>
 	
 </div>
 <!-- Constants -->
+<br>
+<div class="doc-container" id="Constants--Summary-">
+	<h2 class="doc-header">class Constants</h2>
+</div>
+<!-- constants r.20191124 -->
 
 <!-- Sample Code -->
 
 <!-- Summary List -->
 <br>
-<!-- summary r.20191122 -->
-<script>
-// summary r.20191122
+<!-- summary r.20191124 -->
+<script type="text/javascript">
+// summary r.20191124
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -812,55 +851,69 @@ function smartHandleDocSelector(obj) {
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
 		<option value="" selected>* PHP Class \SmartHttpClient # Documentation Index *</option>
 		<optgroup label="Class \SmartHttpClient">
-			<option value="Class--Summary-">***** Class Definition *****</option>
+			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
-			<option value="Methods--Summary-">*** Methods summary ***</option>
-									<option value="Method--__construct">Method: __construct()</option>
+			<option value="Methods--Summary-">Methods list</option>
+									<option value="Method--__construct"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;__construct()</option>
 			
 			
-									<option value="Method--set_ssl_tls_ca_file">Method: set_ssl_tls_ca_file()</option>
+									<option value="Method--set_ssl_tls_ca_file"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;set_ssl_tls_ca_file()</option>
 			
 			
-									<option value="Method--browse_url">Method: browse_url()</option>
+									<option value="Method--browse_url"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;browse_url()</option>
 			
-			
-			
-		</optgroup>
-				<optgroup label="Class Properties">
-			<option value="Properties--Summary-">*** Properties summary ***</option>
-									<option value="Property--useragent">Property: $useragent</option>
-			
-									<option value="Property--connect_timeout">Property: $connect_timeout</option>
-			
-									<option value="Property--rawheaders">Property: $rawheaders</option>
-			
-									<option value="Property--cookies">Property: $cookies</option>
-			
-									<option value="Property--postvars">Property: $postvars</option>
-			
-									<option value="Property--poststring">Property: $poststring</option>
-			
-									<option value="Property--putbodymode">Property: $putbodymode</option>
-			
-									<option value="Property--putbodyres">Property: $putbodyres</option>
-			
-									<option value="Property--skipcontentif401">Property: $skipcontentif401</option>
-			
-									<option value="Property--skip100continue">Property: $skip100continue</option>
-			
-									<option value="Property--debug">Property: $debug</option>
 			
 			
 		</optgroup>
-		
-		
+		<optgroup label="Class Properties">
+			<option value="Properties--Summary-">Properties list</option>
+									<option value="Property--useragent"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$useragent</option>
+			
+									<option value="Property--connect_timeout"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$connect_timeout</option>
+			
+									<option value="Property--rawheaders"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$rawheaders</option>
+			
+									<option value="Property--cookies"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$cookies</option>
+			
+									<option value="Property--postvars"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$postvars</option>
+			
+									<option value="Property--poststring"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$poststring</option>
+			
+									<option value="Property--putbodymode"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$putbodymode</option>
+			
+									<option value="Property--putbodyres"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$putbodyres</option>
+			
+									<option value="Property--skipcontentif401"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$skipcontentif401</option>
+			
+									<option value="Property--skip100continue"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$skip100continue</option>
+			
+									<option value="Property--debug"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$debug</option>
+			
+			
+		</optgroup>
+		<optgroup label="Class Constants">
+			<option value="Constants--Summary-">Constants list</option>
+			
+		</optgroup>
 		
 	</select>
 </div>
+<!-- summary-selectjs r.20191124 -->
+<link rel="stylesheet" type="text/css" href="../js/slimselect.css">
+<script type="text/javascript" src="../js/slimselect.js"></script>
+<script type="text/javascript">
+try {
+	new SlimSelect({
+		select: '#select-summary'
+	});
+} catch(err){
+	console.error('ERROR: SlimSelect Failed: ' + err);
+}
+</script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-11-22 19:06:03 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-11-25 14:33:38 +0000</small>
 <hr>
 <br>
 <!-- # -->

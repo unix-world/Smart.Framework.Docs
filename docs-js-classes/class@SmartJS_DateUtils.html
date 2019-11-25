@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20191122 -->
+<!-- Template: Smart.Framework@Documentor v.20191124 -->
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="SmartJS_DateUtils        static class SmartJS_DateUtils  {  } .    CLASS :: Date Utils Date Utils class for Javascript     Language: Javascript  Located">
-	<meta name="keywords" content="smartjs dateutils, static, class, ., date, utils, for, javascript, language, located, at, lib js framework smart-framework.js, date utils.js, package, sf.javascript core, name, usage, smartjs dateutils.method, version, methods, summary, public, function, createsafedate, integer, year, month, day, object, return, normalized, object, as, year, yyyy, month, day, param, the, raw, if, wrong, will, fix, ahead, or, behind, create, a, safe, standardizedate">
+	<meta name="keywords" content="smartjs dateutils, static, class, ., date, utils, for, javascript, language, located, at, lib js framework smart-framework.js, date utils.js, package, sf.javascript core, name, usage, smartjs dateutils.method, version, depends, smartjs coreutils, methods, public, function, createsafedate, integer, year, month, day, object, return, normalized, object, as, year, yyyy, month, day, param, the, raw, if, wrong, will, fix, ahead, or, behind, create, a, safe, standardizedate, instanceof, date, that, need, to, be, fixed, as, normalize, getisodate, string, string, yyyy-mm-dd, get, iso">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : Javascript">
 	<title>JS Documentation for: SmartJS_DateUtils</title>
 	<!-- CSS and Fonts -->
@@ -206,7 +206,7 @@
 	[hidden] {
 		display: none !important;
 	}
-	button {
+	button, a.ux-button {
 		/* Structure */
 		display: inline-block; /* do not mark as important as it can't hide using jquery hide() */
 		padding: 7px 15px 7px 15px !important;
@@ -236,13 +236,16 @@
 		user-select: none !important;
 		zoom: 1 !important;
 	}
-	button:hover,
-	button:focus {
+	button *, a.ux-button * {
+		font-weight: bold !important;
+	}
+	button:hover, a.ux-button:hover,
+	button:focus, a.ux-button:focus {
 		border: 1px solid #CCCCCC !important;
 		background-color: #F3F3F3 !important;
 		color: #2069A9 !important;
 	}
-	button:focus {
+	button:focus, a.ux-button:focus {
 		outline: 0 !important;
 	}
 	button[disabled],
@@ -263,7 +266,7 @@
 	nav.ux-navbar {
 		margin: 0;
 		padding: 0;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar div#logo {
 		display: block;
@@ -289,7 +292,7 @@
 		margin: 0px;
 		display: inline-block;
 		float: left;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar a {
 		display: block;
@@ -300,11 +303,11 @@
 		text-decoration: none;
 	}
 	nav.ux-navbar ul li ul li:hover {
-		background-color: #2e40a4;
+		background-color: #2b3a57;
 	}
 	nav.ux-navbar a:hover {
 		color: #FFFFFF;
-		background-color: #1d3093;
+		background-color: #1a2946;
 	}
 	nav.ux-navbar ul ul {
 		display: none;
@@ -353,7 +356,7 @@
 		}
 		nav.ux-navbar label.toggle {
 			display: block;
-			background-color: #3f51b5;
+			background-color: #3c4663;
 			padding: 0 20px;
 			color: #FFFFFF;
 			font-size: 20px;
@@ -366,7 +369,7 @@
 		}
 		nav.ux-navbar label.toggle:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar input[id^=drop]:checked + ul {
 			display: block;
@@ -387,15 +390,15 @@
 		}
 		nav.ux-navbar a:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar ul ul ul a {
 			color: #FFFFFF;
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul li ul li .toggle,
 		nav.ux-navbar ul ul a {
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul ul {
 			float: none;
@@ -449,7 +452,13 @@
 </head>
 <body>
 <nav class="ux-navbar">
-	<div id="logo"><span>&#9776; </span>Smart.Framework and Smart.Framework.Modules : Javascript Documentation</div>
+	<div id="logo" style="display:flex; align-items:center;">
+		<span style="line-height:50px;">
+						<img src="../img/javascript-logo.svg" width="36" height="36" align="left">
+			
+		</span>
+		<span style="margin-left:10px;">Smart.Framework and Smart.Framework.Modules : Javascript Documentation</span>
+	</div>
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
@@ -457,10 +466,10 @@
 	</ul>
 	
 </nav>
-<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Demo"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20191122 -->
+<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
+<!-- class r.20191124 -->
 <!-- Styles -->
-<!-- styles r.20191122 -->
+<!-- styles r.20191124 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -579,6 +588,11 @@ div.doc-summary {
 	background: #343C61;
 	color: #FFFFFF;
 	border: 1px solid #CCCCCC;
+	width: 45vw;
+	min-width: 320px !important;
+}
+select#select-summary {
+	width: 99% !important;
 }
 </style>
 <style type="text/css">
@@ -683,17 +697,17 @@ Date Utils class for Javascript</div><br>
 		
 		
 		
-		<li><b>Version:</b> 20191122</li>
-		
+		<li><b>Version:</b> 20191123</li>
+		<li><b>Depends:</b> SmartJS_CoreUtils</li>
 		
 	</ul>
 </div>
 <!-- Methods -->
 <br>
 <div class="doc-container" id="Methods--Summary-">
-	<h2 class="doc-header">Methods summary</h2>
+	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20191122 -->
+<!-- methods r.20191124 -->
 <div class="doc-container" id="Method--createSafeDate">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>createSafeDate</b></span>&nbsp;(
 			<i>{Integer}</i>&nbsp;<span class="doc-param-name"><b><span title="`year` Parameter">year</span></b></span>, 
@@ -900,13 +914,93 @@ Date Utils class for Javascript</div><br>
 			<div class="doc-method-comments">Test if the given Year is a Leap Year or not</div>
 	
 	
+</div><div class="doc-container" id="Method--formatDate">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>formatDate</b></span>&nbsp;(
+			<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`format` Parameter">format</span></b></span>, 
+			<i>{Date}</i>&nbsp;<span class="doc-param-name"><b><span title="`date` Parameter">date</span></b></span>, 
+			<i>{Object}</i>&nbsp;<span class="doc-param-name"><b><span title="`settings` Parameter">settings</span></b></span>
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
+	<div class="doc-method-ret-params">
+			@hint: This is similar with jQueryUI formatDate<br>
+	
+	
+			@return: {String} The date in the above format<br>
+	
+	
+	
+			@param: {String} format The desired format of the date<br>
+			@param: {Date} date The date value to format, from Date() object<br>
+			@param: {Object} settings Attributes include: dayNamesShort string[7] - abbreviated names of the days from Sunday (optional) ; dayNames string[7] - names of the days from Sunday (optional) ; monthNamesShort string[12] - abbreviated names of the months (optional) ; monthNames string[12] - names of the months (optional)<br>
+	
+	
+	</div>
+			<div class="doc-method-comments">Format a date object into a string value.<br>
+The format can be combinations of the following:<br>
+d  - day of month (no leading zero) ;<br>
+dd - day of month (two digit) ;<br>
+o  - day of year (no leading zeros) ;<br>
+oo - day of year (three digit) ;<br>
+D  - day name short ;<br>
+DD - day name long ;<br>
+m  - month of year (no leading zero) ;<br>
+mm - month of year (two digit) ;<br>
+M  - month name short ;<br>
+MM - month name long ;<br>
+y  - year (two digit) ;<br>
+yy - year (four digit) ;<br>
+! - Windows ticks (100ns since 01/01/0001) ;<br>
+&quot;...&quot; - literal text ;<br>
+'' - single quote ;</div>
+	
+	
+</div><div class="doc-container" id="Method--determineDate">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>determineDate</b></span>&nbsp;(
+			<i>{Mixed}</i>&nbsp;<span class="doc-param-name"><b><span title="`date` Parameter">date</span></b></span>, 
+			<i>{Mixed}</i>&nbsp;<span class="doc-param-name"><b><span title="`defaultDate` Parameter">defaultDate</span></b></span>
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Mixed}
+	<div class="doc-method-ret-params">
+			@hint: This is similar with jQueryUI determineDate<br>
+	
+	
+			@return: {Mixed} A Date object or null if fails to validate expression<br>
+	
+	
+	
+			@param: {Mixed} date The Date object or date relative expression to the defaultDate<br>
+			@param: {Mixed} defaultDate *Optional* null (for today) or a Date object / timestamp as default (selected) date to be used for relative expressions<br>
+	
+	
+	</div>
+			<div class="doc-method-comments">Determine a date by a Date object or Expression<br>
+Valid date objects or expressions:<br>
+new Date(1937, 1 - 1, 1) 	:: a date in the past, as object ;<br>
+'-1y -1m -1d' 				:: a date in the past as relative expression to the defaultDate ;<br>
+new Date(2037, 12 - 1, 31) 	:: a date in the future as object ;<br>
+'1y 1m 1d' 					:: a date in the future as relative expression to the defaultDate ;</div>
+	
+	
 </div>
 <!-- Properties -->
+<br>
+<div class="doc-container" id="Properties--Summary-">
+	<h2 class="doc-header">class Properties</h2>
+</div>
+<!-- properties r.20191124 -->
+
+<!-- Constants -->
+<br>
+<div class="doc-container" id="Constants--Summary-">
+	<h2 class="doc-header">class Constants</h2>
+</div>
+<!-- constants r.20191124 -->
+
 
 <!-- Sample Code -->
 <br>
 <div class="doc-container" id="SAMPLE--Code-">
-	<h2 class="doc-header">Sample Code: JavaScript</h2>
+	<h2 class="doc-header">Sample code: JavaScript</h2>
 </div>
 <div class="doc-code">
 	<pre><br><code class="hljs javascript"> <span class="hljs-keyword">var</span> d = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>();
@@ -950,9 +1044,9 @@ Date Utils class for Javascript</div><br>
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20191122 -->
+<!-- summary r.20191124 -->
 <script>
-// summary r.20191122
+// summary r.20191124
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -974,42 +1068,65 @@ function smartHandleDocSelector(obj) {
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
 		<option value="" selected>* Javascript Class SmartJS_DateUtils # Documentation Index *</option>
 		<optgroup label="Class SmartJS_DateUtils">
-			<option value="Class--Summary-">***** Class Definition *****</option>
+			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
-			<option value="Methods--Summary-">*** Methods summary ***</option>
-									<option value="Method--createSafeDate">Method: createSafeDate()</option>
+			<option value="Methods--Summary-">Methods list</option>
+									<option value="Method--createSafeDate"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;createSafeDate()</option>
 			
-									<option value="Method--standardizeDate">Method: standardizeDate()</option>
+									<option value="Method--standardizeDate"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;standardizeDate()</option>
 			
-									<option value="Method--getIsoDate">Method: getIsoDate()</option>
+									<option value="Method--getIsoDate"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getIsoDate()</option>
 			
-									<option value="Method--calculateDaysOffset">Method: calculateDaysOffset()</option>
+									<option value="Method--calculateDaysOffset"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;calculateDaysOffset()</option>
 			
-									<option value="Method--calculateMonthsOffset">Method: calculateMonthsOffset()</option>
+									<option value="Method--calculateMonthsOffset"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;calculateMonthsOffset()</option>
 			
-									<option value="Method--addYears">Method: addYears()</option>
+									<option value="Method--addYears"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;addYears()</option>
 			
-									<option value="Method--addMonths">Method: addMonths()</option>
+									<option value="Method--addMonths"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;addMonths()</option>
 			
-									<option value="Method--addDays">Method: addDays()</option>
+									<option value="Method--addDays"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;addDays()</option>
 			
-									<option value="Method--daysInMonth">Method: daysInMonth()</option>
+									<option value="Method--daysInMonth"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;daysInMonth()</option>
 			
-									<option value="Method--isLeapYear">Method: isLeapYear()</option>
+									<option value="Method--isLeapYear"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;isLeapYear()</option>
+			
+									<option value="Method--formatDate"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;formatDate()</option>
+			
+									<option value="Method--determineDate"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;determineDate()</option>
 			
 			
 		</optgroup>
-		
+		<optgroup label="Class Properties">
+			<option value="Properties--Summary-">Properties list</option>
+			
+		</optgroup>
+		<optgroup label="Class Constants">
+			<option value="Constants--Summary-">Constants list</option>
+			
+		</optgroup>
 				<optgroup label="Class Sample code">
-			<option value="SAMPLE--Code-">*** Sample code ***</option>
+			<option value="SAMPLE--Code-">Sample code</option>
 		</optgroup>
 		
 	</select>
 </div>
+<!-- summary-selectjs r.20191124 -->
+<link rel="stylesheet" type="text/css" href="../js/slimselect.css">
+<script type="text/javascript" src="../js/slimselect.js"></script>
+<script type="text/javascript">
+try {
+	new SlimSelect({
+		select: '#select-summary'
+	});
+} catch(err){
+	console.error('ERROR: SlimSelect Failed: ' + err);
+}
+</script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-11-22 19:07:07 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-11-25 14:33:47 +0000</small>
 <hr>
 <br>
 <!-- # -->

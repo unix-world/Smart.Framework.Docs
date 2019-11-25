@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20191122 -->
+<!-- Template: Smart.Framework@Documentor v.20191124 -->
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="SmartJS_CoreUtils        static class SmartJS_CoreUtils  {  } .    CLASS :: Core Utils This class provide the core functions for JavaScript API of">
-	<meta name="keywords" content="smartjs coreutils, static, class, ., core, utils, this, provide, the, functions, for, javascript, api, of, smart.framework, language, located, at, lib js framework smart-framework.js, core utils.js, package, sf.javascript core, name, usage, smartjs coreutils.method, version, methods, summary, public, function, isfinitenumber, number, num, boolean, return, true, is, number, finite, and, nan, false, otherwise, param, to, be, tested, check, if, a, valid, stringtrim, string, str, trimmed, string, trim, at, begining, or, end, by, any, whitespace, space, n, r, t, stringucfirst, hint, implementation, compatible, with, php, unicode, mb convert case mb case upper, on, first, letter, processed, make, uppercase, character, stringucwords, mb convert case mb case title, each, word, in, while, making, lowercase, others, stringreplaceall, token, newtoken, part, replaced">
+	<meta name="keywords" content="smartjs coreutils, static, class, ., core, utils, this, provide, the, functions, for, javascript, api, of, smart.framework, language, located, at, lib js framework smart-framework.js, core utils.js, package, sf.javascript core, name, usage, smartjs coreutils.method, version, methods, public, function, isfinitenumber, number, num, boolean, return, true, is, number, finite, and, nan, false, otherwise, param, to, be, tested, check, if, a, valid, stringtrim, string, str, trimmed, string, trim, at, begining, or, end, by, any, whitespace, space, n, r, t, stringucfirst, hint, implementation, compatible, with, php, unicode, mb convert case mb case upper, on, first, letter, processed, make, uppercase, character, stringucwords, mb convert case mb case title, each, word, in, while, making, lowercase, others, stringreplaceall, token, newtoken, part, replaced, replacement">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : Javascript">
 	<title>JS Documentation for: SmartJS_CoreUtils</title>
 	<!-- CSS and Fonts -->
@@ -206,7 +206,7 @@
 	[hidden] {
 		display: none !important;
 	}
-	button {
+	button, a.ux-button {
 		/* Structure */
 		display: inline-block; /* do not mark as important as it can't hide using jquery hide() */
 		padding: 7px 15px 7px 15px !important;
@@ -236,13 +236,16 @@
 		user-select: none !important;
 		zoom: 1 !important;
 	}
-	button:hover,
-	button:focus {
+	button *, a.ux-button * {
+		font-weight: bold !important;
+	}
+	button:hover, a.ux-button:hover,
+	button:focus, a.ux-button:focus {
 		border: 1px solid #CCCCCC !important;
 		background-color: #F3F3F3 !important;
 		color: #2069A9 !important;
 	}
-	button:focus {
+	button:focus, a.ux-button:focus {
 		outline: 0 !important;
 	}
 	button[disabled],
@@ -263,7 +266,7 @@
 	nav.ux-navbar {
 		margin: 0;
 		padding: 0;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar div#logo {
 		display: block;
@@ -289,7 +292,7 @@
 		margin: 0px;
 		display: inline-block;
 		float: left;
-		background-color: #3f51b5;
+		background-color: #3c4663;
 	}
 	nav.ux-navbar a {
 		display: block;
@@ -300,11 +303,11 @@
 		text-decoration: none;
 	}
 	nav.ux-navbar ul li ul li:hover {
-		background-color: #2e40a4;
+		background-color: #2b3a57;
 	}
 	nav.ux-navbar a:hover {
 		color: #FFFFFF;
-		background-color: #1d3093;
+		background-color: #1a2946;
 	}
 	nav.ux-navbar ul ul {
 		display: none;
@@ -353,7 +356,7 @@
 		}
 		nav.ux-navbar label.toggle {
 			display: block;
-			background-color: #3f51b5;
+			background-color: #3c4663;
 			padding: 0 20px;
 			color: #FFFFFF;
 			font-size: 20px;
@@ -366,7 +369,7 @@
 		}
 		nav.ux-navbar label.toggle:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar input[id^=drop]:checked + ul {
 			display: block;
@@ -387,15 +390,15 @@
 		}
 		nav.ux-navbar a:hover {
 			color: #FFFFFF;
-			background-color: #1d3093;
+			background-color: #1a2946;
 		}
 		nav.ux-navbar ul ul ul a {
 			color: #FFFFFF;
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul li ul li .toggle,
 		nav.ux-navbar ul ul a {
-			background-color: #2e40a4;
+			background-color: #2b3a57;
 		}
 		nav.ux-navbar ul ul {
 			float: none;
@@ -449,7 +452,13 @@
 </head>
 <body>
 <nav class="ux-navbar">
-	<div id="logo"><span>&#9776; </span>Smart.Framework and Smart.Framework.Modules : Javascript Documentation</div>
+	<div id="logo" style="display:flex; align-items:center;">
+		<span style="line-height:50px;">
+						<img src="../img/javascript-logo.svg" width="36" height="36" align="left">
+			
+		</span>
+		<span style="margin-left:10px;">Smart.Framework and Smart.Framework.Modules : Javascript Documentation</span>
+	</div>
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
@@ -457,10 +466,10 @@
 	</ul>
 	
 </nav>
-<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Demo"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20191122 -->
+<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
+<!-- class r.20191124 -->
 <!-- Styles -->
-<!-- styles r.20191122 -->
+<!-- styles r.20191124 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -579,6 +588,11 @@ div.doc-summary {
 	background: #343C61;
 	color: #FFFFFF;
 	border: 1px solid #CCCCCC;
+	width: 45vw;
+	min-width: 320px !important;
+}
+select#select-summary {
+	width: 99% !important;
 }
 </style>
 <style type="text/css">
@@ -683,7 +697,7 @@ This class provide the core functions for JavaScript API of Smart.Framework</div
 		
 		
 		
-		<li><b>Version:</b> 20191122</li>
+		<li><b>Version:</b> 20191123</li>
 		
 		
 	</ul>
@@ -691,9 +705,9 @@ This class provide the core functions for JavaScript API of Smart.Framework</div
 <!-- Methods -->
 <br>
 <div class="doc-container" id="Methods--Summary-">
-	<h2 class="doc-header">Methods summary</h2>
+	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20191122 -->
+<!-- methods r.20191124 -->
 <div class="doc-container" id="Method--isFiniteNumber">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>isFiniteNumber</b></span>&nbsp;(
 			<i>{Number}</i>&nbsp;<span class="doc-param-name"><b><span title="`num` Parameter">num</span></b></span>
@@ -1341,73 +1355,6 @@ Will convert all accented characters in UTF-8 / ISO-8859-* with their unnaccente
 			<div class="doc-method-comments">Sort a stack (array / object / property) using Numeric Sort algorithm</div>
 	
 	
-</div><div class="doc-container" id="Method--formatDate">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>formatDate</b></span>&nbsp;(
-			<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`format` Parameter">format</span></b></span>, 
-			<i>{Date}</i>&nbsp;<span class="doc-param-name"><b><span title="`date` Parameter">date</span></b></span>, 
-			<i>{Object}</i>&nbsp;<span class="doc-param-name"><b><span title="`settings` Parameter">settings</span></b></span>
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
-	<div class="doc-method-ret-params">
-			@hint: This is similar with jQueryUI formatDate<br>
-	
-	
-			@return: {String} The date in the above format<br>
-	
-	
-	
-			@param: {String} format The desired format of the date<br>
-			@param: {Date} date The date value to format, from Date() object<br>
-			@param: {Object} settings Attributes include: dayNamesShort string[7] - abbreviated names of the days from Sunday (optional) ; dayNames string[7] - names of the days from Sunday (optional) ; monthNamesShort string[12] - abbreviated names of the months (optional) ; monthNames string[12] - names of the months (optional)<br>
-	
-	
-	</div>
-			<div class="doc-method-comments">Format a date object into a string value.<br>
-The format can be combinations of the following:<br>
-d  - day of month (no leading zero) ;<br>
-dd - day of month (two digit) ;<br>
-o  - day of year (no leading zeros) ;<br>
-oo - day of year (three digit) ;<br>
-D  - day name short ;<br>
-DD - day name long ;<br>
-m  - month of year (no leading zero) ;<br>
-mm - month of year (two digit) ;<br>
-M  - month name short ;<br>
-MM - month name long ;<br>
-y  - year (two digit) ;<br>
-yy - year (four digit) ;<br>
-! - Windows ticks (100ns since 01/01/0001) ;<br>
-&quot;...&quot; - literal text ;<br>
-'' - single quote ;</div>
-	
-	
-</div><div class="doc-container" id="Method--determineDate">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>determineDate</b></span>&nbsp;(
-			<i>{Mixed}</i>&nbsp;<span class="doc-param-name"><b><span title="`date` Parameter">date</span></b></span>, 
-			<i>{Mixed}</i>&nbsp;<span class="doc-param-name"><b><span title="`defaultDate` Parameter">defaultDate</span></b></span>
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Mixed}
-	<div class="doc-method-ret-params">
-			@hint: This is similar with jQueryUI determineDate<br>
-	
-	
-			@return: {Mixed} A Date object or null if fails to validate expression<br>
-	
-	
-	
-			@param: {Mixed} date The Date object or date relative expression to the defaultDate<br>
-			@param: {Mixed} defaultDate *Optional* null (for today) or a Date object / timestamp as default (selected) date to be used for relative expressions<br>
-	
-	
-	</div>
-			<div class="doc-method-comments">Determine a date by a Date object or Expression<br>
-Valid date objects or expressions:<br>
-new Date(1937, 1 - 1, 1) 	:: a date in the past, as object ;<br>
-'-1y -1m -1d' 				:: a date in the past as relative expression to the defaultDate ;<br>
-new Date(2037, 12 - 1, 31) 	:: a date in the future as object ;<br>
-'1y 1m 1d' 					:: a date in the future as relative expression to the defaultDate ;</div>
-	
-	
 </div><div class="doc-container" id="Method--renderMarkersTpl">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>renderMarkersTpl</b></span>&nbsp;(
 			<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`template` Parameter">template</span></b></span>, 
@@ -1434,7 +1381,7 @@ new Date(2037, 12 - 1, 31) 	:: a date in the future as object ;<br>
 			<div class="doc-method-comments">Render Simple Markers-TPL Template + Comments + Specials (only markers replacements with escaping or processing syntax and support for comments and special replacements: SPACE, TAB, R, N ; no support for IF / LOOP / INCLUDE syntax since the js regex is too simplistic and this can be implemented using real js code)<br>
 This is compatible just with the REPLACE MARKERS of Smart.Framework PHP server-side Markers-TPL Templating for substitutions on client-side, except the extended syntax as IF/LOOP/INCLUDE.</div>
 	
-			<pre><b>Sample Code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-comment">// sample client side MarkersTPL rendering</span>
+			<pre><b>Sample code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-comment">// sample client side MarkersTPL rendering</span>
  <span class="hljs-keyword">var</span> tpl = <span class="hljs-string">'&lt;div onclick=&quot;var question=\'&lbrack;###QUESTION|js|html###&rbrack;\'; alert(question);&quot;&gt;&lbrack;###TITLE|html###&rbrack;&lt;/div&gt;'</span>; <span class="hljs-comment">// the TPL</span>
  <span class="hljs-keyword">var</span> html = SmartJS_CoreUtils.renderMarkersTpl( <span class="hljs-comment">// render TPL</span>
  		tpl,
@@ -1446,14 +1393,27 @@ This is compatible just with the REPLACE MARKERS of Smart.Framework PHP server-s
 	
 </div>
 <!-- Properties -->
+<br>
+<div class="doc-container" id="Properties--Summary-">
+	<h2 class="doc-header">class Properties</h2>
+</div>
+<!-- properties r.20191124 -->
+
+<!-- Constants -->
+<br>
+<div class="doc-container" id="Constants--Summary-">
+	<h2 class="doc-header">class Constants</h2>
+</div>
+<!-- constants r.20191124 -->
+
 
 <!-- Sample Code -->
 
 <!-- Summary List -->
 <br>
-<!-- summary r.20191122 -->
+<!-- summary r.20191124 -->
 <script>
-// summary r.20191122
+// summary r.20191124
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1475,89 +1435,104 @@ function smartHandleDocSelector(obj) {
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
 		<option value="" selected>* Javascript Class SmartJS_CoreUtils # Documentation Index *</option>
 		<optgroup label="Class SmartJS_CoreUtils">
-			<option value="Class--Summary-">***** Class Definition *****</option>
+			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
-			<option value="Methods--Summary-">*** Methods summary ***</option>
-									<option value="Method--isFiniteNumber">Method: isFiniteNumber()</option>
+			<option value="Methods--Summary-">Methods list</option>
+									<option value="Method--isFiniteNumber"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;isFiniteNumber()</option>
 			
-									<option value="Method--stringTrim">Method: stringTrim()</option>
+									<option value="Method--stringTrim"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;stringTrim()</option>
 			
-									<option value="Method--stringUcFirst">Method: stringUcFirst()</option>
+									<option value="Method--stringUcFirst"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;stringUcFirst()</option>
 			
-									<option value="Method--stringUcWords">Method: stringUcWords()</option>
+									<option value="Method--stringUcWords"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;stringUcWords()</option>
 			
-									<option value="Method--stringReplaceAll">Method: stringReplaceAll()</option>
+									<option value="Method--stringReplaceAll"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;stringReplaceAll()</option>
 			
-									<option value="Method--stringIReplaceAll">Method: stringIReplaceAll()</option>
+									<option value="Method--stringIReplaceAll"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;stringIReplaceAll()</option>
 			
-									<option value="Method--stringRegexMatchAll">Method: stringRegexMatchAll()</option>
+									<option value="Method--stringRegexMatchAll"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;stringRegexMatchAll()</option>
 			
-									<option value="Method--stringContains">Method: stringContains()</option>
+									<option value="Method--stringContains"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;stringContains()</option>
 			
-									<option value="Method--stringSplitbyColon">Method: stringSplitbyColon()</option>
+									<option value="Method--stringSplitbyColon"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;stringSplitbyColon()</option>
 			
-									<option value="Method--stringSplitbySemicolon">Method: stringSplitbySemicolon()</option>
+									<option value="Method--stringSplitbySemicolon"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;stringSplitbySemicolon()</option>
 			
-									<option value="Method--stringSplitbyComma">Method: stringSplitbyComma()</option>
+									<option value="Method--stringSplitbyComma"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;stringSplitbyComma()</option>
 			
-									<option value="Method--stringSplitbyEqual">Method: stringSplitbyEqual()</option>
+									<option value="Method--stringSplitbyEqual"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;stringSplitbyEqual()</option>
 			
-									<option value="Method--arrayGetFirst">Method: arrayGetFirst()</option>
+									<option value="Method--arrayGetFirst"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;arrayGetFirst()</option>
 			
-									<option value="Method--arrayGetLast">Method: arrayGetLast()</option>
+									<option value="Method--arrayGetLast"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;arrayGetLast()</option>
 			
-									<option value="Method--format_number_int">Method: format_number_int()</option>
+									<option value="Method--format_number_int"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;format_number_int()</option>
 			
-									<option value="Method--format_number_dec">Method: format_number_dec()</option>
+									<option value="Method--format_number_dec"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;format_number_dec()</option>
 			
-									<option value="Method--stripslashes">Method: stripslashes()</option>
+									<option value="Method--stripslashes"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;stripslashes()</option>
 			
-									<option value="Method--addcslashes">Method: addcslashes()</option>
+									<option value="Method--addcslashes"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;addcslashes()</option>
 			
-									<option value="Method--escape_css">Method: escape_css()</option>
+									<option value="Method--escape_css"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;escape_css()</option>
 			
-									<option value="Method--escape_html">Method: escape_html()</option>
+									<option value="Method--escape_html"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;escape_html()</option>
 			
-									<option value="Method--escape_js">Method: escape_js()</option>
+									<option value="Method--escape_js"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;escape_js()</option>
 			
-									<option value="Method--escape_url">Method: escape_url()</option>
+									<option value="Method--escape_url"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;escape_url()</option>
 			
-									<option value="Method--nl2br">Method: nl2br()</option>
+									<option value="Method--nl2br"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;nl2br()</option>
 			
-									<option value="Method--utf8_encode">Method: utf8_encode()</option>
+									<option value="Method--utf8_encode"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;utf8_encode()</option>
 			
-									<option value="Method--utf8_decode">Method: utf8_decode()</option>
+									<option value="Method--utf8_decode"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;utf8_decode()</option>
 			
-									<option value="Method--deaccent_str">Method: deaccent_str()</option>
+									<option value="Method--deaccent_str"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;deaccent_str()</option>
 			
-									<option value="Method--bin2hex">Method: bin2hex()</option>
+									<option value="Method--bin2hex"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;bin2hex()</option>
 			
-									<option value="Method--hex2bin">Method: hex2bin()</option>
+									<option value="Method--hex2bin"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;hex2bin()</option>
 			
-									<option value="Method--preg_quote">Method: preg_quote()</option>
+									<option value="Method--preg_quote"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;preg_quote()</option>
 			
-									<option value="Method--uuid">Method: uuid()</option>
+									<option value="Method--uuid"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;uuid()</option>
 			
-									<option value="Method--textSort">Method: textSort()</option>
+									<option value="Method--textSort"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;textSort()</option>
 			
-									<option value="Method--numericSort">Method: numericSort()</option>
+									<option value="Method--numericSort"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;numericSort()</option>
 			
-									<option value="Method--formatDate">Method: formatDate()</option>
-			
-									<option value="Method--determineDate">Method: determineDate()</option>
-			
-									<option value="Method--renderMarkersTpl">Method: renderMarkersTpl()</option>
+									<option value="Method--renderMarkersTpl"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;renderMarkersTpl()</option>
 			
 			
 		</optgroup>
-		
+		<optgroup label="Class Properties">
+			<option value="Properties--Summary-">Properties list</option>
+			
+		</optgroup>
+		<optgroup label="Class Constants">
+			<option value="Constants--Summary-">Constants list</option>
+			
+		</optgroup>
 		
 	</select>
 </div>
+<!-- summary-selectjs r.20191124 -->
+<link rel="stylesheet" type="text/css" href="../js/slimselect.css">
+<script type="text/javascript" src="../js/slimselect.js"></script>
+<script type="text/javascript">
+try {
+	new SlimSelect({
+		select: '#select-summary'
+	});
+} catch(err){
+	console.error('ERROR: SlimSelect Failed: ' + err);
+}
+</script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-11-22 19:07:07 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-11-25 14:33:47 +0000</small>
 <hr>
 <br>
 <!-- # -->
