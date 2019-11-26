@@ -11,7 +11,9 @@ Copyright (c) 2009-2019, unix-world.org
 Author: Radu Ovidiu Ilies
 All rights reserved.
 License (dual, any of): BSD or GPLv3
-https://github.com/unix-world/Smart.Framework
-https://github.com/unix-world/Smart.Framework.Modules
-https://github.com/unix-world/Smart.Framework.Docs
+
+### Project Sources on Github
+* https://github.com/unix-world/Smart.Framework
+* https://github.com/unix-world/Smart.Framework.Modules
+* https://github.com/unix-world/Smart.Framework.Docs
 
