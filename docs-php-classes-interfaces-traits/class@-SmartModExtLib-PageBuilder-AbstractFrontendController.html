@@ -829,8 +829,25 @@ See the comments from ShutDown() function in this class !</div>
 	
 			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if Debug is ON, FALSE if not</div>
 	
-			<div class="doc-method-comments">Test if Debug is On<br>
-If Debug is turned on, this area of Debug messages will be displayed in Modules section</div>
+			<div class="doc-method-comments">Test if Debug is On</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--forceRawDebug">
+	<span class="doc-modifiers">final public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>forceRawDebug</b></span>&nbsp;(
+				<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$show_output` Parameter is OPTIONAL, with the Default Value: false">$show_output</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;BOOLEAN
+	<br><span class="doc-inherited"><i>inherited</i>&nbsp;from&nbsp;<b>\SmartAbstractAppController</b></span>
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if Debug is ON, FALSE if not<br>
+@param: {BOOLEAN} $show_output: *Optional* ; Default is FALSE ; If set to TRUE will try to output the contents as HTML ; BEWARE, if the content is binary it should not ...</div>
+	
+			<div class="doc-method-comments">Force Debug View Over Raw Output or DownloadPacket Output Pages<br>
+The output of this pages is not displayed by default in the Debug Profiler because is not a common HTML Page<br>
+To debug this type of pages this function should be called (ONLY IN DEBUG MODE) at the end (or before return) of the controller Run() method<br>
+This is not available for direct Direct Output pages (which can be integrated in Debug Profiler only if called as sub-request in an Ajax call from any HTML page)</div>
 	
 	
 	
@@ -1544,6 +1561,9 @@ function smartHandleDocSelector(obj) {
 									<option value="Method--IfDebug"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;IfDebug()</option>
 			
 			
+									<option value="Method--forceRawDebug"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;forceRawDebug()</option>
+			
+			
 									<option value="Method--SetDebugData"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;SetDebugData()</option>
 			
 			
@@ -1691,7 +1711,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-11-26 12:00:29 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-11-27 07:32:39 +0000</small>
 <hr>
 <br>
 <!-- # -->

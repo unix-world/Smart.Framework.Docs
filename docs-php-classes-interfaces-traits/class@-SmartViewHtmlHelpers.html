@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartViewHtmlHelpers        final class \ SmartViewHtmlHelpers    {   } ::    Class: SmartViewHelpers - Easy to use HTML ViewHelper Components.">
-	<meta name="keywords" content="smartviewhtmlhelpers, final, class, smartviewhtmlhelpers, class, smartviewhelpers, -, easy, to, use, html, viewhelper, components., language, php, located, at, lib core plugins lib viewhelpers.php, package, plugins viewcomponents, namespace, name, version, v, depends, classes, smart, usage, static, object, class  method, this, provides, only, methods, public, function, html js date field, string, y id, y var, date, yvalue, y text select, js-date, yjs mindate, yjs maxdate, array, y extra options, array, js-code, y js evcode, return, string, html, code, param, y id, page, id, for, field, unique, used, foor, javascript, y var, variable, name, or, empty, if, no, necessary, date, yvalue, date, formated, as, yyyy-mm-dd, y text select, the, text, title, select, date, js-date, yjs mindate, js, expression, min, date, new, date, yjs maxdate, max, date">
+	<meta name="keywords" content="smartviewhtmlhelpers, final, class, smartviewhtmlhelpers, class, smartviewhelpers, -, easy, to, use, html, viewhelper, components., language, php, located, at, lib core plugins lib viewhelpers.php, package, plugins viewcomponents, namespace, name, version, v, depends, classes, smart, usage, static, object, class  method, this, provides, only, methods, public, function, html js highlightsyntax, string, dom selector, hints, should, be, rendered, just, once, per, page, for, a, specific, dom, selector, it, can, used, more, than, with, different, selectors, that, are, not, contained, one, within, another, return, string, html, code, param, dom selector, valid, jquery, html-dom, as, container s, pre code, see, ., return, the, css, javascript, code, highlightjs, areas, in, if, is, specified, all, will, highlighted, html jsload highlightsyntax">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartViewHtmlHelpers</title>
 	<!-- CSS and Fonts -->
@@ -694,7 +694,7 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartViewHtmlHelpers</span></li>
 		
-		<li><b>Version:</b> v.20191115</li>
+		<li><b>Version:</b> v.20191126</li>
 		<li><b>Depends:</b> classes:  Smart</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -708,7 +708,62 @@ select#select-summary {
 	<h2 class="doc-header">class Methods</h2>
 </div>
 <!-- methods r.20191124 -->
-<div class="doc-container" id="Method--html_js_date_field">
+<div class="doc-container" id="Method--html_js_highlightsyntax">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>html_js_highlightsyntax</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$dom_selector` Parameter is REQUIRED">$dom_selector</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@hints: This  should be rendered just once per HTML page for a specific DOM Selector ; It can be used more than once per HTML page with different DOM Selectors that are not contained one within another<br>
+@return: {STRING} [HTML Code]<br>
+@param: {STRING} $dom_selector: A valid jQuery HTML-DOM Selector as container(s) for Pre&gt;Code (see jQuery ...)</div>
+	
+			<div class="doc-method-comments">Return the HTML / CSS / Javascript code to HighlightJs DOM Areas in a DOM Selector<br>
+If a valid DOM Selector is specified all code areas in that dom selector will be highlighted</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--html_jsload_highlightsyntax">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>html_jsload_highlightsyntax</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$dom_selector` Parameter is REQUIRED">$dom_selector</span></b></span>, 
+			<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$plugins` Parameter is OPTIONAL, with the Default Value: array(0 =&gt; &quot;web&quot;)">$plugins</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>array(0 =&gt; &quot;web&quot;)</b></span>, 
+			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$theme` Parameter is OPTIONAL, with the Default Value: &quot;github&quot;">$theme</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;github&quot;</b></span>, 
+			<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$loadpacks` Parameter is OPTIONAL, with the Default Value: true">$loadpacks</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} [HTML Code]<br>
+@param: {STRING} $dom_selector: A valid jQuery HTML-DOM Selector as container(s) for Pre&gt;Code (see jQuery ...)<br>
+@param: {ARRAY} $plugins: The Array with enum of packages to load<br>
+@param: {ENUM} $theme: The Visual CSS Theme to Load<br>
+@param: {BOOLEAN} $loadpacks: If TRUE will load syntax packed files instead of syntax single files which are many</div>
+	
+			<div class="doc-method-comments">Return the HTML / CSS / Javascript code to Load the required Javascripts for the Highlight.Js<br>
+If a valid DOM Selector is specified all code areas in that dom selector will be highlighted<br>
+This function should not be rendered more than once in a HTML page</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--get_highlightsyntax_by_filetype">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_highlightsyntax_by_filetype</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$path` Parameter is REQUIRED">$path</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
+	
+	
+			<div class="doc-method-ret-params">@return: {ARRAY} [ type, pack ]<br>
+@param: {STRING} $path: The file path or file name (includding file extension)</div>
+	
+			<div class="doc-method-comments">Get the HighlightJs Syntax type for a file type</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--html_js_date_field">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>html_js_date_field</b></span>&nbsp;(
 				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_id` Parameter is REQUIRED">$y_id</span></b></span>, 
 			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_var` Parameter is REQUIRED">$y_var</span></b></span>, 
@@ -1240,6 +1295,15 @@ function smartHandleDocSelector(obj) {
 		</optgroup>
 		<optgroup label="Class Methods">
 			<option value="Methods--Summary-">Methods list</option>
+									<option value="Method--html_js_highlightsyntax"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;html_js_highlightsyntax()</option>
+			
+			
+									<option value="Method--html_jsload_highlightsyntax"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;html_jsload_highlightsyntax()</option>
+			
+			
+									<option value="Method--get_highlightsyntax_by_filetype"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_highlightsyntax_by_filetype()</option>
+			
+			
 									<option value="Method--html_js_date_field"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;html_js_date_field()</option>
 			
 			
@@ -1349,7 +1413,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-11-26 12:00:28 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-11-27 07:32:39 +0000</small>
 <hr>
 <br>
 <!-- # -->
