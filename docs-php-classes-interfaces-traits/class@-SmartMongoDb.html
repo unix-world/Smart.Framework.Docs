@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20191126 -->
+<!-- Template: Smart.Framework@Documentor v.20191201 -->
 <html>
 <head>
 	<meta charset="UTF-8">
@@ -695,7 +695,7 @@ Tested and Stable on MongoDB Server versions: 3.2 / 3.4 / 3.6 / 4.0 / 4.1 / 4.2<
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartMongoDb</span></li>
 		<li><span class="doc-throws"><b>Throws:</b> \Exception  : Depending how this class it is constructed it may throw Exception or Raise Fatal Error</span></li>
-		<li><b>Version:</b> v.20191121</li>
+		<li><b>Version:</b> v.20191205</li>
 		<li><b>Depends:</b> extensions:  PHP MongoDB (v.1.1.0 or later) ; classes: Smart</li>
 		<li><b>Hints:</b> Important:  MongoDB database specifies that max BSON document size is 16 megabytes and supports no more than 100 levels of nesting, thus this limit cannot be exceeded from PHP side when creating new mongodb documents: https://docs.mongodb.com/manual/reference/limits/ ; To store documents larger than the maximum size, MongoDB provides the GridFS API</li>
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -708,7 +708,7 @@ Tested and Stable on MongoDB Server versions: 3.2 / 3.4 / 3.6 / 4.0 / 4.1 / 4.2<
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20191124 -->
+<!-- methods r.20191201 -->
 <div class="doc-container" id="Method--__construct">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-special-name"><b>__construct</b></span>&nbsp;(
 				<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_configs_arr` Parameter is OPTIONAL, with the Default Value: array()">$y_configs_arr</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>array()</b></span>, 
@@ -925,14 +925,15 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
 							<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span title="`$arrQuery` Parameter is REQUIRED">$arrQuery</span></b></span>
 			
 			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;MIXED
-						<div class="doc-method-ret-params">
-							@return {MIXED}<br>
+			<div class="doc-method-ret-params">
+			@magic __call()<br>
+										@return {MIXED}<br>
 			
 							@param {STRING} $strCollection<br>
 							@param {ARRAY} $arrQuery<br>
 			
-			</div>
 			
+			</div>
 							<div class="doc-method-comments">count documents in a collection</div>
 			
 			</div>
@@ -944,16 +945,17 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
 							<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$arrOptions` Parameter is OPTIONAL">$arrOptions</span></b></span>
 			
 			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;MIXED
-						<div class="doc-method-ret-params">
-							@return {MIXED}<br>
+			<div class="doc-method-ret-params">
+			@magic __call()<br>
+										@return {MIXED}<br>
 			
 							@param {STRING} $strCollection<br>
 							@param {ARRAY} $arrQuery<br>
 							@param {ARRAY} $arrProjFields<br>
 							@param {ARRAY} $arrOptions<br>
 			
-			</div>
 			
+			</div>
 							<div class="doc-method-comments">find single or multiple documents in a collection with optional filter criteria / limit</div>
 			
 			</div>
@@ -965,16 +967,17 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
 							<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$arrOptions` Parameter is OPTIONAL">$arrOptions</span></b></span>
 			
 			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;MIXED
-						<div class="doc-method-ret-params">
-							@return {MIXED}<br>
+			<div class="doc-method-ret-params">
+			@magic __call()<br>
+										@return {MIXED}<br>
 			
 							@param {STRING} $strCollection<br>
 							@param {ARRAY} $arrQuery<br>
 							@param {ARRAY} $arrProjFields<br>
 							@param {ARRAY} $arrOptions<br>
 			
-			</div>
 			
+			</div>
 							<div class="doc-method-comments">find single document in a collection with optional filter criteria / limit</div>
 			
 			</div>
@@ -984,14 +987,15 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
 							<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span title="`$arrMultiDocs` Parameter is REQUIRED">$arrMultiDocs</span></b></span>
 			
 			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;MIXED
-						<div class="doc-method-ret-params">
-							@return {MIXED}<br>
+			<div class="doc-method-ret-params">
+			@magic __call()<br>
+										@return {MIXED}<br>
 			
 							@param {STRING} $strCollection<br>
 							@param {ARRAY} $arrMultiDocs<br>
 			
-			</div>
 			
+			</div>
 							<div class="doc-method-comments">add multiple documents to a collection</div>
 			
 			</div>
@@ -1001,14 +1005,15 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
 							<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span title="`$arrDoc` Parameter is REQUIRED">$arrDoc</span></b></span>
 			
 			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;MIXED
-						<div class="doc-method-ret-params">
-							@return {MIXED}<br>
+			<div class="doc-method-ret-params">
+			@magic __call()<br>
+										@return {MIXED}<br>
 			
 							@param {STRING} $strCollection<br>
 							@param {ARRAY} $arrDoc<br>
 			
-			</div>
 			
+			</div>
 							<div class="doc-method-comments">add single document to a collection</div>
 			
 			</div>
@@ -1020,16 +1025,17 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
 							<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span title="`$arrUpd` Parameter is REQUIRED">$arrUpd</span></b></span>
 			
 			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;MIXED
-						<div class="doc-method-ret-params">
-							@return {MIXED}<br>
+			<div class="doc-method-ret-params">
+			@magic __call()<br>
+										@return {MIXED}<br>
 			
 							@param {STRING} $strCollection<br>
 							@param {ARRAY} $arrFilter<br>
 							@param {STRING} $strUpdOp<br>
 							@param {ARRAY} $arrUpd<br>
 			
-			</div>
 			
+			</div>
 							<div class="doc-method-comments">insert single or modify single or multi documents in a collection that are matching the filter criteria ; this is always non-fatal, will throw catcheable exception on error ...</div>
 			
 			</div>
@@ -1041,16 +1047,17 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
 							<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span title="`$arrUpd` Parameter is REQUIRED">$arrUpd</span></b></span>
 			
 			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;MIXED
-						<div class="doc-method-ret-params">
-							@return {MIXED}<br>
+			<div class="doc-method-ret-params">
+			@magic __call()<br>
+										@return {MIXED}<br>
 			
 							@param {STRING} $strCollection<br>
 							@param {ARRAY} $arrFilter<br>
 							@param {STRING} $strUpdOp<br>
 							@param {ARRAY} $arrUpd<br>
 			
-			</div>
 			
+			</div>
 							<div class="doc-method-comments">modify single or many documents in a collection that are matching the filter criteria</div>
 			
 			</div>
@@ -1060,14 +1067,15 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
 							<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span title="`$arrFilter` Parameter is REQUIRED">$arrFilter</span></b></span>
 			
 			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;MIXED
-						<div class="doc-method-ret-params">
-							@return {MIXED}<br>
+			<div class="doc-method-ret-params">
+			@magic __call()<br>
+										@return {MIXED}<br>
 			
 							@param {STRING} $strCollection<br>
 							@param {ARRAY} $arrFilter<br>
 			
-			</div>
 			
+			</div>
 							<div class="doc-method-comments">delete single or many documents from a collection that are matching the filter criteria</div>
 			
 			</div>
@@ -1076,13 +1084,14 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
 							<span class="doc-param-name"><b><span title="`$arrCmd` Parameter is REQUIRED">$arrCmd</span></b></span>
 			
 			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;MIXED
-						<div class="doc-method-ret-params">
-							@return {MIXED}<br>
+			<div class="doc-method-ret-params">
+			@magic __call()<br>
+										@return {MIXED}<br>
 			
 							@param  $arrCmd<br>
 			
-			</div>
 			
+			</div>
 							<div class="doc-method-comments">run a command over database like: aggregate, distinct, mapReduce, create Collection, drop Collection, ...</div>
 			
 			</div>
@@ -1091,13 +1100,14 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
 							<span class="doc-param-name"><b><span title="`$arrCmd` Parameter is REQUIRED">$arrCmd</span></b></span>
 			
 			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;MIXED
-						<div class="doc-method-ret-params">
-							@return {MIXED}<br>
+			<div class="doc-method-ret-params">
+			@magic __call()<br>
+										@return {MIXED}<br>
 			
 							@param  $arrCmd<br>
 			
-			</div>
 			
+			</div>
 							<div class="doc-method-comments">run a command over database and ignore if error ; in the case of throw error will ignore it and will not stop execution ; will return the errors instead of result like: create Collection which may throw errors if collection already exists, drop Collection, similar if does not exists</div>
 			
 			</div>
@@ -1224,7 +1234,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-11-27 07:32:39 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-12-07 20:44:03 +0000</small>
 <hr>
 <br>
 <!-- # -->

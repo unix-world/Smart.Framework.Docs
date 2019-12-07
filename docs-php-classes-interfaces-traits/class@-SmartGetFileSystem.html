@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20191126 -->
+<!-- Template: Smart.Framework@Documentor v.20191201 -->
 <html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartGetFileSystem        final class \ SmartGetFileSystem    {   } -&gt;    Class: SmartGetFileSystem - provides the File System Get/Scan functions. This">
-	<meta name="keywords" content="smartgetfilesystem, final, class, smartgetfilesystem, -, class, -, provides, the, file, system, get scan, functions., this, enforces, use, of, relative, paths, to, force, using, correct, path, access, in, a, web, environment, application., must, be, application, folder, as, folder, some-folder, or, file, some-folder my-file.txt ., absolute, are, denied, by, internal, checks, they, not, safe, from, security, point, view, ., also, backward, like, . some-file-or-folder, is, above, exposed, reasons., files, and, folders, contain, only, characters, as, a-z, a-z, ., can, slashes, as, separators, no, spaces, allowed, language, php, located, at, lib framework lib filesys.php, package, core filesystem, namespace, name, version, v, depends, classes, smart, hints, handle, thread, concurency">
+	<meta name="keywords" content="smartgetfilesystem, final, class, smartgetfilesystem, -, class, -, provides, the, file, system, get scan, functions., this, requires, use, of, relative, paths, to, force, using, correct, path, access, in, a, web, environment, application., must, be, application, folder, as, folder, some-folder, or, file, some-folder my-file.txt ., absolute, are, denied, by, internal, checks, they, not, safe, from, security, point, view, ., also, backward, like, . some-file-or-folder, is, above, exposed, reasons., files, and, folders, contain, only, characters, as, a-z, a-z, ., can, slashes, as, separators, no, spaces, allowed, language, php, located, at, lib framework lib filesys.php, package, core filesystem, namespace, name, version, v, depends, classes, smart, hints, handle, thread, concurency">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartGetFileSystem</title>
 	<!-- CSS and Fonts -->
@@ -685,7 +685,7 @@ select#select-summary {
 </h1>
 <!-- Description -->
 <div class="doc-comments">Class: SmartGetFileSystem - provides the File System Get/Scan functions.<br>
-This class enforces the use of RELATIVE PATHS to force using correct path access in a web environment application.<br>
+This class requires the use of RELATIVE PATHS to force using correct path access in a web environment application.<br>
 Relative paths must be relative to the web application folder as folder: `some-folder/` or file: `some-folder/my-file.txt`.<br>
 Absolute paths are denied by internal checks as they are NOT SAFE in a Web Application from the security point of view ...<br>
 Also the backward path access like `../some-file-or-folder` is denied from the above exposed reasons.<br>
@@ -699,7 +699,7 @@ Files and Folders must contain ONLY safe characters as: `[a-z] [A-Z] [0-9] _ - .
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartGetFileSystem</span></li>
 		
-		<li><b>Version:</b> v.20191105</li>
+		<li><b>Version:</b> v.20191203</li>
 		<li><b>Depends:</b> classes:  Smart</li>
 		<li><b>Hints:</b> This  class can handle thread concurency to the filesystem in a safe way by using the LOCK_EX (lock exclusive) feature on each file written / appended thus making also reads to be safe</li>
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -712,7 +712,7 @@ Files and Folders must contain ONLY safe characters as: `[a-z] [A-Z] [0-9] _ - .
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20191124 -->
+<!-- methods r.20191201 -->
 <div class="doc-container" id="Method--__construct">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-special-name"><b>__construct</b></span>&nbsp;(
 				<span class="doc-param-name"><b><span class="doc-param-optional" title="`$list_files_and_dirs` Parameter is OPTIONAL, with the Default Value: false">$list_files_and_dirs</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
@@ -853,7 +853,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-11-27 07:32:38 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-12-07 20:44:01 +0000</small>
 <hr>
 <br>
 <!-- # -->

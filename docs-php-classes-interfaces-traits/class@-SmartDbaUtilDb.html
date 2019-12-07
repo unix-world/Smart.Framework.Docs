@@ -5,10 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
-	<meta name="description" content="\SmartTextTranslations        final class \ SmartTextTranslations    {   } ::    Class Smart Text Translations. It provides a Language Based Text">
-	<meta name="keywords" content="smarttexttranslations, final, class, smarttexttranslations, smart, text, translations., it, provides, a, language, based, translations, layer, for, the, smart.framework, applications., language, php, located, at, lib framework lib translate.php, package, core translations, namespace, name, version, v, depends, classes, smartpersistentcache, smartadaptertexttranslations, usage, static, object, class  method, -, this, only, methods, public, function, getavailablelanguages, array, return, array, with, available, ids, sample, en, ro, regional, get, languages, getlistoflanguages, list, english, ro, romanian, available, isdefaultlanguage">
+	<meta name="description" content="\SmartDbaUtilDb        final class \ SmartDbaUtilDb    {   } ::    Class: SmartDbaUtilDb - provides a Static Utility for the DBA Database Client.">
+	<meta name="keywords" content="smartdbautildb, final, class, smartdbautildb, class, -, provides, a, static, utility, for, the, dba, database, client., language, php, located, at, lib core plugins lib db dba.php, package, plugins database dba, namespace, name, version, v, depends, extensions, extension, classes, smart, smartutils, usage, object, class  method, this, only, methods, public, function, isdbaandhandleravailable, string, handler, boolean, return, boolean, will, return, true, if, is, available, and, handler, false, not, param, string, handler, optional">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
-	<title>PHP Documentation for: \SmartTextTranslations</title>
+	<title>PHP Documentation for: \SmartDbaUtilDb</title>
 	<!-- CSS and Fonts -->
 		<link rel="stylesheet" type="text/css" href="../fonts/source-sans-pro.css">
 	
@@ -459,7 +459,7 @@
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
-		<li><a href="index.html#Package--CoreTranslations-" title="return to Index">return to Index</a></li>
+		<li><a href="index.html#Package--PluginsDatabaseDba-" title="return to Index">return to Index</a></li>
 	</ul>
 	
 </nav>
@@ -675,8 +675,8 @@ select#select-summary {
 
 </style>
 <!-- Headings -->
-<h1 title="PHP class: `\SmartTextTranslations` @ PHP Namespace: `\`" id="Class--Summary-">
-	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\</span><span class="doc-name">SmartTextTranslations</span><br>
+<h1 title="PHP class: `\SmartDbaUtilDb` @ PHP Namespace: `\`" id="Class--Summary-">
+	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\</span><span class="doc-name">SmartDbaUtilDb</span><br>
 	
 	
 	{
@@ -684,19 +684,18 @@ select#select-summary {
 	}&nbsp;::
 </h1>
 <!-- Description -->
-<div class="doc-comments">Class Smart Text Translations.<br>
-It provides a Language Based Text Translations Layer for the Smart.Framework based Applications.</div><br>
+<div class="doc-comments">Class: SmartDbaUtilDb - provides a Static Utility for the DBA Database Client.</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
 	<ul class="doc-list">
 		<li><span class="doc-language"><b>Language:</b> PHP<span></li>
-		<li><span class="doc-located"><b>Located at:</b> lib/framework/lib_translate.php</span></li>
-		<li><span class="doc-package"><b>Package:</b> @Core:Translations</span></li>
+		<li><span class="doc-located"><b>Located at:</b> lib/core/plugins/lib_db_dba.php</span></li>
+		<li><span class="doc-package"><b>Package:</b> Plugins:Database:Dba</span></li>
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
-		<li><span class="doc-name"><b>Class Name:</b> SmartTextTranslations</span></li>
+		<li><span class="doc-name"><b>Class Name:</b> SmartDbaUtilDb</span></li>
 		
-		<li><b>Version:</b> v.20191101</li>
-		<li><b>Depends:</b> classes:  Smart, SmartPersistentCache, SmartAdapterTextTranslations</li>
+		<li><b>Version:</b> v.20191207</li>
+		<li><b>Depends:</b> extensions:  PHP DBA Extension ; classes: Smart, SmartUtils</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
 		
@@ -709,123 +708,78 @@ It provides a Language Based Text Translations Layer for the Smart.Framework bas
 	<h2 class="doc-header">class Methods</h2>
 </div>
 <!-- methods r.20191201 -->
-<div class="doc-container" id="Method--getAvailableLanguages">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getAvailableLanguages</b></span>&nbsp;(
-		
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
-	
-	
-			<div class="doc-method-ret-params">@return: {ARRAY} The array with available language IDs ; sample: ['en', 'ro']</div>
-	
-			<div class="doc-method-comments">Regional Text :: Get Available Languages</div>
-	
-	
-	
-</div><div class="doc-container" id="Method--getListOfLanguages">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getListOfLanguages</b></span>&nbsp;(
-		
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
-	
-	
-			<div class="doc-method-ret-params">@return: {ARRAY} The array with available languages List ['en' =&gt; 'English', 'ro' =&gt; 'Romanian']</div>
-	
-			<div class="doc-method-comments">Regional Text :: Get (available) Languages List</div>
-	
-	
-	
-</div><div class="doc-container" id="Method--isDefaultLanguage">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>isDefaultLanguage</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_language` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_language</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+<div class="doc-container" id="Method--isDbaAndHandlerAvailable">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>isDbaAndHandlerAvailable</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$handler` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$handler</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOLEAN
 	
 	
-			<div class="doc-method-ret-params">@return: {BOOLEAN} Returns TRUE if the Current Language is the Default Language for the current session / or parameter otherwise returns FALSE<br>
-@param: {STRING} $y_language: Optional, the language ID to be checked ; otherwise will check the session language ; sample (for English) will be: 'en'</div>
+			<div class="doc-method-ret-params">@return: {BOOLEAN} Will return TRUE if DBA extension is available and the handler is available ; FALSE if not<br>
+@param: {STRING} $handler: *Optional* The handler to check ; leave it empty to check the handler from configs: dba.handler</div>
 	
-			<div class="doc-method-comments">Regional Text :: Checks if the Current Language is the Default Language for the current session / or parameter</div>
+			<div class="doc-method-comments">Check if the DBA Extension is available with the given handler or if empty with the handler set in configs</div>
 	
 	
 	
-</div><div class="doc-container" id="Method--getDefaultLanguage">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getDefaultLanguage</b></span>&nbsp;(
+</div><div class="doc-container" id="Method--getDbaHandler">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getDbaHandler</b></span>&nbsp;(
 		
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
 	
 	
-			<div class="doc-method-ret-params">@return: {STRING} The language ID ; sample (for English) will return: 'en'</div>
+			<div class="doc-method-ret-params">@return: {STRING} The DBA Handler from configs, if available, or empty string if not</div>
 	
-			<div class="doc-method-comments">Regional Text :: Get the Default Language for the current session as Set by Init</div>
+			<div class="doc-method-comments">Get the current DBA Handler</div>
 	
 	
 	
-</div><div class="doc-container" id="Method--getLanguage">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getLanguage</b></span>&nbsp;(
+</div><div class="doc-container" id="Method--getDbaHandlers">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getDbaHandlers</b></span>&nbsp;(
 		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
+	
+	
+			<div class="doc-method-ret-params">@return: {ARRAY} The array list of available handlers or empty array if DBA extension is not found</div>
+	
+			<div class="doc-method-comments">Get the list of available DBA Handlers</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--dataPack">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>dataPack</b></span>&nbsp;(
+				<i>MIXED</i>&nbsp;<span class="doc-param-name"><b><span title="`$originalData` Parameter is REQUIRED">$originalData</span></b></span>
+	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
 	
 	
-			<div class="doc-method-ret-params">@return: {STRING} The language ID ; sample (for English) will return: 'en'</div>
+			<div class="doc-method-ret-params">@return: {STRING} the packed data<br>
+@param: {MIXED} $originalData: The data to be packed ; can be: string, array, number ...</div>
 	
-			<div class="doc-method-comments">Regional Text :: Get the Current Language for the current session as Set by Config / URL / Cookie / Method-Set</div>
-	
-	
-	
-</div><div class="doc-container" id="Method--setLanguage">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>setLanguage</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_language` Parameter is REQUIRED">$y_language</span></b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOLEAN
-	
-	
-			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if successful, FALSE if not<br>
-@param: {STRING} $y_language: The language ID ; sample (for English) will be: 'en'</div>
-	
-			<div class="doc-method-comments">Regional Text :: Set the Language for current session</div>
+			<div class="doc-method-comments">Pack the data using a safe archive format to minimize space</div>
 	
 	
 	
-</div><div class="doc-container" id="Method--validateLanguage">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>validateLanguage</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_language` Parameter is REQUIRED">$y_language</span></b></span>
+</div><div class="doc-container" id="Method--dataUnpack">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>dataUnpack</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$packedData` Parameter is REQUIRED">$packedData</span></b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOLEAN
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;MIXED
 	
 	
-			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if language defined in configs, FALSE if not<br>
-@param: {STRING} $y_language: The language ID ; sample (for English) will be: 'en'</div>
+			<div class="doc-method-ret-params">@return: {MIXED} the unpacked data ; can be: string, array, number ...<br>
+@param: {STRING} $packedData: The previous packed data</div>
 	
-			<div class="doc-method-comments">Validate Language</div>
-	
-	
-	
-</div><div class="doc-container" id="Method--getTranslator">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getTranslator</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_area` Parameter is REQUIRED">$y_area</span></b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_subarea` Parameter is REQUIRED">$y_subarea</span></b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_custom_language` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_custom_language</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;OBJECT
-	
-	
-			<div class="doc-method-ret-params">@return: {OBJECT} An Instance of SmartTextTranslator-&gt;<br>
-@param: {STRING} $y_area: The Translation Area<br>
-@param: {STRING} $y_subarea: The Translation Sub-Area<br>
-@param: {STRING} $y_custom_language: *OPTIONAL* a language code ; default empty ; if empty will use the current language</div>
-	
-			<div class="doc-method-comments">Regional Text :: Get the Translator object for: area, subarea and a custom language (if enforced and not using the current language)</div>
+			<div class="doc-method-comments">UnPack the data from packed archive format to it's original state</div>
 	
 	
 	
-</div><!-- Skip Internal-Priv Method: `getDateFormatForJs()` --><!-- Skip Internal-Priv Method: `getDateFormatForPhp()` --><!-- Skip Internal-Priv Method: `getSafeRegionalSettings()` --><!-- Skip Internal-Priv Method: `formatAsLocalNumber()` --><!-- Skip Internal-Priv Method: `reverseSignOfLocalFormattedNumber()` --><!-- Skip Internal-Priv Method: `getTranslationByKey()` --><!-- Skip Internal-Priv Method: `getAllTranslations()` -->
+</div>
 <!-- Properties -->
 <br>
 <div class="doc-container" id="Properties--Summary-">
@@ -841,16 +795,7 @@ It provides a Language Based Text Translations Layer for the Smart.Framework bas
 <!-- constants r.20191124 -->
 
 <!-- Sample Code -->
-<br>
-<div class="doc-container" id="SAMPLE--Code-">
-	<h2 class="doc-header">Sample code: PHP</h2>
-</div>
-<div class="doc-code">
-	<pre><code><!-- Smart/HTML.Cleaner [@] --><code><span style="color: #57A64A">
-<span style="color: #FFFFFF">&lt;?php<br><br></span><span style="color: #999999">//&nbsp;Usage&nbsp;example:<br>&nbsp;</span><span style="color: #FFFFFF">SmartTextTranslations</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">some_method_of_this_class</span><span style="color: #FFCC00; font-weight: bold">(...);<br><br></span><span style="color: #FFFFFF">?&gt;</span>
-</span>
-</code><!-- [/@] Smart/HTML.Cleaner --></code></pre>
-</div>
+
 <!-- Summary List -->
 <br>
 <!-- summary r.20191124 -->
@@ -875,49 +820,26 @@ function smartHandleDocSelector(obj) {
 </script>
 <div class="doc-summary">
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
-		<option value="" selected>* PHP Class \SmartTextTranslations # Documentation Index *</option>
-		<optgroup label="Class \SmartTextTranslations">
+		<option value="" selected>* PHP Class \SmartDbaUtilDb # Documentation Index *</option>
+		<optgroup label="Class \SmartDbaUtilDb">
 			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
 			<option value="Methods--Summary-">Methods list</option>
-									<option value="Method--getAvailableLanguages"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getAvailableLanguages()</option>
+									<option value="Method--isDbaAndHandlerAvailable"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;isDbaAndHandlerAvailable()</option>
 			
 			
-									<option value="Method--getListOfLanguages"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getListOfLanguages()</option>
+									<option value="Method--getDbaHandler"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getDbaHandler()</option>
 			
 			
-									<option value="Method--isDefaultLanguage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;isDefaultLanguage()</option>
+									<option value="Method--getDbaHandlers"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getDbaHandlers()</option>
 			
 			
-									<option value="Method--getDefaultLanguage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getDefaultLanguage()</option>
+									<option value="Method--dataPack"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;dataPack()</option>
 			
 			
-									<option value="Method--getLanguage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getLanguage()</option>
+									<option value="Method--dataUnpack"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;dataUnpack()</option>
 			
-			
-									<option value="Method--setLanguage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;setLanguage()</option>
-			
-			
-									<option value="Method--validateLanguage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;validateLanguage()</option>
-			
-			
-									<option value="Method--getTranslator"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getTranslator()</option>
-			
-			
-						
-			
-						
-			
-						
-			
-						
-			
-						
-			
-						
-			
-						
 			
 			
 		</optgroup>
@@ -928,9 +850,6 @@ function smartHandleDocSelector(obj) {
 		<optgroup label="Class Constants">
 			<option value="Constants--Summary-">Constants list</option>
 			
-		</optgroup>
-				<optgroup label="Class Sample usage">
-			<option value="SAMPLE--Code-">Sample code</option>
 		</optgroup>
 		
 	</select>
@@ -949,7 +868,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-12-07 20:44:01 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-12-07 20:44:02 +0000</small>
 <hr>
 <br>
 <!-- # -->

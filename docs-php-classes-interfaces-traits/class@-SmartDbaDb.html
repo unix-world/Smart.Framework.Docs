@@ -5,10 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
-	<meta name="description" content="\SmartTextTranslations        final class \ SmartTextTranslations    {   } ::    Class Smart Text Translations. It provides a Language Based Text">
-	<meta name="keywords" content="smarttexttranslations, final, class, smarttexttranslations, smart, text, translations., it, provides, a, language, based, translations, layer, for, the, smart.framework, applications., language, php, located, at, lib framework lib translate.php, package, core translations, namespace, name, version, v, depends, classes, smartpersistentcache, smartadaptertexttranslations, usage, static, object, class  method, -, this, only, methods, public, function, getavailablelanguages, array, return, array, with, available, ids, sample, en, ro, regional, get, languages, getlistoflanguages, list, english, ro, romanian, available, isdefaultlanguage">
+	<meta name="description" content="\SmartDbaDb        final class \ SmartDbaDb    {   } -&gt;    Class: SmartDbaDb - provides a Client for DBA Databases. By default this class will just log">
+	<meta name="keywords" content="smartdbadb, final, class, smartdbadb, -, class, -, provides, a, client, for, dba, databases., by, default, this, will, just, log, the, errors., it, supports, following, handlers, gdbm, qdbm, d, which, do, not, have, limits, on, record, size., handler, be, locked, using, lockfile, as, is, supported, all, platforms, and, handlers., language, php, located, at, lib core plugins lib db dba.php, package, plugins database dba, namespace, name, version, v, depends, extensions, extension, classes, smart, hints, mainly, written, to, used, with, key value, store, usage, dynamic, object, new, class   - method, only, methods, public, function, construct, string, file, y description, default, boolean, y fatal err, false, float, y debug exch slowtime, param, string, file, db, path, if">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
-	<title>PHP Documentation for: \SmartTextTranslations</title>
+	<title>PHP Documentation for: \SmartDbaDb</title>
 	<!-- CSS and Fonts -->
 		<link rel="stylesheet" type="text/css" href="../fonts/source-sans-pro.css">
 	
@@ -459,7 +459,7 @@
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
-		<li><a href="index.html#Package--CoreTranslations-" title="return to Index">return to Index</a></li>
+		<li><a href="index.html#Package--PluginsDatabaseDba-" title="return to Index">return to Index</a></li>
 	</ul>
 	
 </nav>
@@ -675,30 +675,32 @@ select#select-summary {
 
 </style>
 <!-- Headings -->
-<h1 title="PHP class: `\SmartTextTranslations` @ PHP Namespace: `\`" id="Class--Summary-">
-	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\</span><span class="doc-name">SmartTextTranslations</span><br>
+<h1 title="PHP class: `\SmartDbaDb` @ PHP Namespace: `\`" id="Class--Summary-">
+	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\</span><span class="doc-name">SmartDbaDb</span><br>
 	
 	
 	{
 	
-	}&nbsp;::
+	}&nbsp;-&gt;
 </h1>
 <!-- Description -->
-<div class="doc-comments">Class Smart Text Translations.<br>
-It provides a Language Based Text Translations Layer for the Smart.Framework based Applications.</div><br>
+<div class="doc-comments">Class: SmartDbaDb - provides a Client for DBA Databases.<br>
+By default this class will just log the errors.<br>
+It supports the following handlers: gdbm, qdbm, db4 which do not have limits on the record size.<br>
+The handler will be locked using LockFile as it is supported on all platforms and all handlers.</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
 	<ul class="doc-list">
 		<li><span class="doc-language"><b>Language:</b> PHP<span></li>
-		<li><span class="doc-located"><b>Located at:</b> lib/framework/lib_translate.php</span></li>
-		<li><span class="doc-package"><b>Package:</b> @Core:Translations</span></li>
+		<li><span class="doc-located"><b>Located at:</b> lib/core/plugins/lib_db_dba.php</span></li>
+		<li><span class="doc-package"><b>Package:</b> Plugins:Database:Dba</span></li>
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
-		<li><span class="doc-name"><b>Class Name:</b> SmartTextTranslations</span></li>
+		<li><span class="doc-name"><b>Class Name:</b> SmartDbaDb</span></li>
 		
-		<li><b>Version:</b> v.20191101</li>
-		<li><b>Depends:</b> classes:  Smart, SmartPersistentCache, SmartAdapterTextTranslations</li>
-		
-		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
+		<li><b>Version:</b> v.20191207</li>
+		<li><b>Depends:</b> extensions:  PHP DBA Extension ; classes: Smart</li>
+		<li><b>Hints:</b> This  class is mainly written to be used with DBA Key/Value store</li>
+		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
 		
 		
 	</ul>
@@ -709,123 +711,214 @@ It provides a Language Based Text Translations Layer for the Smart.Framework bas
 	<h2 class="doc-header">class Methods</h2>
 </div>
 <!-- methods r.20191201 -->
-<div class="doc-container" id="Method--getAvailableLanguages">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getAvailableLanguages</b></span>&nbsp;(
+<div class="doc-container" id="Method--__construct">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-special-name"><b>__construct</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$file` Parameter is REQUIRED">$file</span></b></span>, 
+			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_description` Parameter is OPTIONAL, with the Default Value: &quot;DEFAULT&quot;">$y_description</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;DEFAULT&quot;</b></span>, 
+			<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_fatal_err` Parameter is OPTIONAL, with the Default Value: false">$y_fatal_err</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>, 
+			<i>FLOAT</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_debug_exch_slowtime` Parameter is OPTIONAL, with the Default Value: 0">$y_debug_exch_slowtime</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>0</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="* Special* Method"><b>@</b></span>&nbsp;
+	
+	
+			<div class="doc-method-ret-params">@param: {STRING} $file: The DBA DB Path ; If does not exists will be created, but will be re-suffixed (see getDbRealPath() in this class ...)<br>
+@param: {STRING} $y_description: *OPTIONAL* The description of the DBA instance to make easy debug and log errors<br>
+@param: {BOOLEAN} $y_fatal_err: *OPTIONAL* If Errors are Fatal or Not ... ; Set this parameter to TRUE if you want to Raise a fatal error on DBA errors ; otherwise default is FALSE and will ignore DBA errors but just log them as warnings (this is the wanted behaviour on a production server ...)<br>
+@param: {FLOAT} $y_debug_exch_slowtime: *OPTIONAL* The Debug Slow Time in microseconds to Record slow Queries ; if &gt; 0 will use this, otherwise will use the value from configs</div>
+	
+			<div class="doc-method-comments">Class Constructor :: It try to initiate the DB connection or FAIL</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--__destruct">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-special-name"><b>__destruct</b></span>&nbsp;(
 		
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
-	
-	
-			<div class="doc-method-ret-params">@return: {ARRAY} The array with available language IDs ; sample: ['en', 'ro']</div>
-	
-			<div class="doc-method-comments">Regional Text :: Get Available Languages</div>
+	)&nbsp;{}&nbsp;<span title="* Special* Method"><b>@</b></span>&nbsp;
 	
 	
 	
-</div><div class="doc-container" id="Method--getListOfLanguages">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getListOfLanguages</b></span>&nbsp;(
+			<div class="doc-method-comments">Class Destructor :: It try to close the DB connection if any<br>
+Will randomly optimize the DB prior to close connection</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--isAvailable">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>isAvailable</b></span>&nbsp;(
 		
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;BOOLEAN
 	
 	
-			<div class="doc-method-ret-params">@return: {ARRAY} The array with available languages List ['en' =&gt; 'English', 'ro' =&gt; 'Romanian']</div>
+			<div class="doc-method-ret-params">@return: {BOOLEAN} Will return TRUE if available and FALSE if not</div>
 	
-			<div class="doc-method-comments">Regional Text :: Get (available) Languages List</div>
-	
-	
-	
-</div><div class="doc-container" id="Method--isDefaultLanguage">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>isDefaultLanguage</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_language` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_language</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOLEAN
-	
-	
-			<div class="doc-method-ret-params">@return: {BOOLEAN} Returns TRUE if the Current Language is the Default Language for the current session / or parameter otherwise returns FALSE<br>
-@param: {STRING} $y_language: Optional, the language ID to be checked ; otherwise will check the session language ; sample (for English) will be: 'en'</div>
-	
-			<div class="doc-method-comments">Regional Text :: Checks if the Current Language is the Default Language for the current session / or parameter</div>
+			<div class="doc-method-comments">Check if the PHP DBA Extension is available and also have the handler set in config</div>
 	
 	
 	
-</div><div class="doc-container" id="Method--getDefaultLanguage">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getDefaultLanguage</b></span>&nbsp;(
+</div><div class="doc-container" id="Method--getDbRealPath">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getDbRealPath</b></span>&nbsp;(
 		
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;STRING
 	
 	
-			<div class="doc-method-ret-params">@return: {STRING} The language ID ; sample (for English) will return: 'en'</div>
+			<div class="doc-method-ret-params">@return: {STRING} The Real Path to the current DB File OR Empty string if there is no connection on this instance</div>
 	
-			<div class="doc-method-comments">Regional Text :: Get the Default Language for the current session as Set by Init</div>
+			<div class="doc-method-comments">Get the Real Path to the DB File. If the DB instance failed will return empty string.<br>
+The DB File Path will be re-suffixed with the handler's name in the file extension to avoid operate a handler on another handler's DB<br>
+Ex: tmp/my-db.dba will be actually be: tmp/my-db.gdbm.dba (for the gdbm hanlder), tmp/my-db.qdbm.dba (for the qdbm hanlder), tmp/my-db.db4.dba (for the db4 hanlder)</div>
 	
 	
 	
-</div><div class="doc-container" id="Method--getLanguage">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getLanguage</b></span>&nbsp;(
+</div><div class="doc-container" id="Method--getTtl">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getTtl</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$key` Parameter is REQUIRED">$key</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;INTEGER
+	
+	
+			<div class="doc-method-ret-params">@return: {INTEGER} number of seconds the key will expire ; -1 if the key does not expire (is persistent) ; -2 if the key does not exists ; -3 if N/A or ERR<br>
+@param: {STRING} $key: The Key</div>
+	
+			<div class="doc-method-comments">Get the TTL in seconds for a key from DB<br>
+If will try to get the TTL for an expired key will automatically unset it and will return a result like the key does not exists</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--getKey">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getKey</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$key` Parameter is REQUIRED">$key</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;MIXED
+	
+	
+			<div class="doc-method-ret-params">@return: {MIXED} Returns FALSE if the Key is expired or Invalid ; NULL if the Key does not exists ; STRING as the value of the given Key as set in DB<br>
+@param: {STRING} $key: The Key</div>
+	
+			<div class="doc-method-comments">Get a Key from DB and return it's value<br>
+If will try to get an expired key will automatically unset it and will return a result like the key does not exists</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--setKey">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>setKey</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$key` Parameter is REQUIRED">$key</span></b></span>, 
+			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$value` Parameter is REQUIRED">$value</span></b></span>, 
+			<i>INTEGER+</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$expire` Parameter is OPTIONAL, with the Default Value: 0">$expire</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>0</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;BOOLEAN
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} Returns TRUE if the key was set or FALSE if not (that might be an error)<br>
+@param: {STRING} $key: The Key<br>
+@param: {STRING} $value: The value to be stored (if non-string must be sent as json-encoded string)<br>
+@param: {INTEGER+} $expire: Key Expiration in seconds (zero if key does not expire)</div>
+	
+			<div class="doc-method-comments">Set a Key in the DB with a given VALUE<br>
+If Key Exists will replace it's value with new one</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--keyExists">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>keyExists</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$key` Parameter is REQUIRED">$key</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;BOOLEAN
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if Key Exists or FALSE if not<br>
+@param: {STRING} $key: The Key</div>
+	
+			<div class="doc-method-comments">Check if a Key exists in the DB<br>
+If will check an expired key will automatically unset it and will return a result like the key does not exists</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--unsetKey">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>unsetKey</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$key` Parameter is REQUIRED">$key</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;BOOLEAN
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} Returns TRUE if the key was unset or FALSE if not<br>
+@param: {STRING} $key: The Key</div>
+	
+			<div class="doc-method-comments">Unset a Key from DB<br>
+Will randomly optimize the DB</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--optimizeDb">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>optimizeDb</b></span>&nbsp;(
+				<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$randomly` Parameter is OPTIONAL, with the Default Value: false">$randomly</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;BOOLEAN
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} Returns TRUE if was running or FALSE if not<br>
+@param: {BOOLEAN} $randomly: If set to TRUE will only randomly run it with a probability as of 1 in 1000</div>
+	
+			<div class="doc-method-comments">Optimize the DB</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--getKeysList">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getKeysList</b></span>&nbsp;(
 		
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;ARRAY
 	
 	
-			<div class="doc-method-ret-params">@return: {STRING} The language ID ; sample (for English) will return: 'en'</div>
+			<div class="doc-method-ret-params">@return: {ARRAY} A non-associative array with all, non-expired keys in DB or empty array if no key available ; Ex: [ key1, key2, ..., keyN ]</div>
 	
-			<div class="doc-method-comments">Regional Text :: Get the Current Language for the current session as Set by Config / URL / Cookie / Method-Set</div>
-	
-	
-	
-</div><div class="doc-container" id="Method--setLanguage">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>setLanguage</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_language` Parameter is REQUIRED">$y_language</span></b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOLEAN
-	
-	
-			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if successful, FALSE if not<br>
-@param: {STRING} $y_language: The language ID ; sample (for English) will be: 'en'</div>
-	
-			<div class="doc-method-comments">Regional Text :: Set the Language for current session</div>
+			<div class="doc-method-comments">Get the list with all available keys in the DB<br>
+Will clear al expired key while iterating on all DB records to get the list<br>
+Will optimize the DB</div>
 	
 	
 	
-</div><div class="doc-container" id="Method--validateLanguage">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>validateLanguage</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_language` Parameter is REQUIRED">$y_language</span></b></span>
+</div><div class="doc-container" id="Method--clearExpiredKeys">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>clearExpiredKeys</b></span>&nbsp;(
+				<i>INTEGER+</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$limit` Parameter is OPTIONAL, with the Default Value: 0">$limit</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>0</b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOLEAN
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;BOOLEAN
 	
 	
-			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if language defined in configs, FALSE if not<br>
-@param: {STRING} $y_language: The language ID ; sample (for English) will be: 'en'</div>
+			<div class="doc-method-ret-params">@return: {BOOLEAN} Will return TRUE if success or FALSE if not<br>
+@param: {INTEGER+} $limit: How many Keys to iterate ; If zero will iterate over all ; If non zero and positive will stop after reaching this limit</div>
 	
-			<div class="doc-method-comments">Validate Language</div>
-	
-	
-	
-</div><div class="doc-container" id="Method--getTranslator">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getTranslator</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_area` Parameter is REQUIRED">$y_area</span></b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_subarea` Parameter is REQUIRED">$y_subarea</span></b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_custom_language` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_custom_language</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;OBJECT
-	
-	
-			<div class="doc-method-ret-params">@return: {OBJECT} An Instance of SmartTextTranslator-&gt;<br>
-@param: {STRING} $y_area: The Translation Area<br>
-@param: {STRING} $y_subarea: The Translation Sub-Area<br>
-@param: {STRING} $y_custom_language: *OPTIONAL* a language code ; default empty ; if empty will use the current language</div>
-	
-			<div class="doc-method-comments">Regional Text :: Get the Translator object for: area, subarea and a custom language (if enforced and not using the current language)</div>
+			<div class="doc-method-comments">Clear all expired keys from the DB<br>
+Will have to iterate on all keys in DB<br>
+Will optimize the DB</div>
 	
 	
 	
-</div><!-- Skip Internal-Priv Method: `getDateFormatForJs()` --><!-- Skip Internal-Priv Method: `getDateFormatForPhp()` --><!-- Skip Internal-Priv Method: `getSafeRegionalSettings()` --><!-- Skip Internal-Priv Method: `formatAsLocalNumber()` --><!-- Skip Internal-Priv Method: `reverseSignOfLocalFormattedNumber()` --><!-- Skip Internal-Priv Method: `getTranslationByKey()` --><!-- Skip Internal-Priv Method: `getAllTranslations()` -->
+</div><div class="doc-container" id="Method--truncateDb">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>truncateDb</b></span>&nbsp;(
+				<span class="doc-param-name"><b><span class="doc-param-optional" title="`$testFirstKey` Parameter is OPTIONAL, with the Default Value: false">$testFirstKey</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;BOOLEAN
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} Will return TRUE on success and FALSE if FAIL</div>
+	
+			<div class="doc-method-comments">TRUNCATE The Database by clearing (erasing) all data<br>
+This may break current transactions if called</div>
+	
+	
+	
+</div>
 <!-- Properties -->
 <br>
 <div class="doc-container" id="Properties--Summary-">
@@ -847,7 +940,7 @@ It provides a Language Based Text Translations Layer for the Smart.Framework bas
 </div>
 <div class="doc-code">
 	<pre><code><!-- Smart/HTML.Cleaner [@] --><code><span style="color: #57A64A">
-<span style="color: #FFFFFF">&lt;?php<br><br></span><span style="color: #999999">//&nbsp;Usage&nbsp;example:<br>&nbsp;</span><span style="color: #FFFFFF">SmartTextTranslations</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">some_method_of_this_class</span><span style="color: #FFCC00; font-weight: bold">(...);<br><br></span><span style="color: #FFFFFF">?&gt;</span>
+<span style="color: #FFFFFF">&lt;?php<br><br></span><span style="color: #999999">//&nbsp;Example&nbsp;(must&nbsp;be&nbsp;set&nbsp;in&nbsp;etc/config.php)<br>&nbsp;</span><span style="color: #FFFFFF">$configs</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'dba'</span><span style="color: #FFCC00; font-weight: bold">][</span><span style="color: #5F9CCE">'handler'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;=&nbsp;</span><span style="color: #5F9CCE">'gdbm'</span><span style="color: #FFCC00; font-weight: bold">;<br><br></span><span style="color: #FFFFFF">?&gt;</span>
 </span>
 </code><!-- [/@] Smart/HTML.Cleaner --></code></pre>
 </div>
@@ -875,49 +968,50 @@ function smartHandleDocSelector(obj) {
 </script>
 <div class="doc-summary">
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
-		<option value="" selected>* PHP Class \SmartTextTranslations # Documentation Index *</option>
-		<optgroup label="Class \SmartTextTranslations">
+		<option value="" selected>* PHP Class \SmartDbaDb # Documentation Index *</option>
+		<optgroup label="Class \SmartDbaDb">
 			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
 			<option value="Methods--Summary-">Methods list</option>
-									<option value="Method--getAvailableLanguages"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getAvailableLanguages()</option>
+									<option value="Method--__construct"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;__construct()</option>
 			
 			
-									<option value="Method--getListOfLanguages"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getListOfLanguages()</option>
+									<option value="Method--__destruct"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;__destruct()</option>
 			
 			
-									<option value="Method--isDefaultLanguage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;isDefaultLanguage()</option>
+									<option value="Method--isAvailable"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;isAvailable()</option>
 			
 			
-									<option value="Method--getDefaultLanguage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getDefaultLanguage()</option>
+									<option value="Method--getDbRealPath"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getDbRealPath()</option>
 			
 			
-									<option value="Method--getLanguage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getLanguage()</option>
+									<option value="Method--getTtl"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getTtl()</option>
 			
 			
-									<option value="Method--setLanguage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;setLanguage()</option>
+									<option value="Method--getKey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getKey()</option>
 			
 			
-									<option value="Method--validateLanguage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;validateLanguage()</option>
+									<option value="Method--setKey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;setKey()</option>
 			
 			
-									<option value="Method--getTranslator"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getTranslator()</option>
+									<option value="Method--keyExists"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;keyExists()</option>
 			
 			
-						
+									<option value="Method--unsetKey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;unsetKey()</option>
 			
-						
 			
-						
+									<option value="Method--optimizeDb"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;optimizeDb()</option>
 			
-						
 			
-						
+									<option value="Method--getKeysList"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getKeysList()</option>
 			
-						
 			
-						
+									<option value="Method--clearExpiredKeys"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;clearExpiredKeys()</option>
+			
+			
+									<option value="Method--truncateDb"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;truncateDb()</option>
+			
 			
 			
 		</optgroup>
@@ -949,7 +1043,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-12-07 20:44:01 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-12-07 20:44:02 +0000</small>
 <hr>
 <br>
 <!-- # -->
