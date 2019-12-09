@@ -697,7 +697,7 @@ It must contain ONLY public functions to avoid late state binding (self:: vs sta
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartAbstractPersistentCache</span></li>
 		
-		<li><b>Version:</b> v.20191207</li>
+		<li><b>Version:</b> v.20191209</li>
 		<li><b>Depends:</b> -</li>
 		
 		
@@ -940,6 +940,23 @@ Cannot be empty and must comply with self::safeKey() restricted charset: _ a-z A
 	
 	
 	
+</div><div class="doc-container" id="Method--validateValue">
+	<span class="doc-modifiers">final public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>validateValue</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_value` Parameter is REQUIRED">$y_value</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOLEAN
+	
+	
+			<div class="doc-method-ret-params">@hints: If  the value is oversized try to archive it before SET using SmartPersistentCache::varCompress() and after GET use SmartPersistentCache::varUncompress()<br>
+@return: {BOOLEAN} Returns TRUE if the value is valid or FALSE if not<br>
+@param: {STRING} $y_value: The Cache Value to be tested</div>
+	
+			<div class="doc-method-comments">Validate persistent Cache Value<br>
+Should not be not empty and not oversized (max 16MB)</div>
+	
+	
+	
 </div><div class="doc-container" id="Method--safeKey">
 	<span class="doc-modifiers">final public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>safeKey</b></span>&nbsp;(
 				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_key_or_realm` Parameter is REQUIRED">$y_key_or_realm</span></b></span>
@@ -1117,6 +1134,9 @@ function smartHandleDocSelector(obj) {
 									<option value="Method--validateKey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;validateKey()</option>
 			
 			
+									<option value="Method--validateValue"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;validateValue()</option>
+			
+			
 									<option value="Method--safeKey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;safeKey()</option>
 			
 			
@@ -1159,7 +1179,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-12-07 20:44:01 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-12-09 09:34:13 +0000</small>
 <hr>
 <br>
 <!-- # -->
