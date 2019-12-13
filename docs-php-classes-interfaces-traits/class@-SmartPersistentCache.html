@@ -707,9 +707,9 @@ This is why Smart.Framework supply only the Redis and DBA adapters (and not a Me
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartPersistentCache</span></li>
 		
-		<li><b>Version:</b> v.20191207</li>
+		<li><b>Version:</b> v.20191209</li>
 		<li><b>Depends:</b> -</li>
-		<li><b>Hints:</b> The  Persistent Cache will share the keys between both areas (INDEX and ADMIN) ; It is programmer's choice and work to ensure realm separation if needed for the keys if required so (Ex: INDEX area may use separate realms than ADMIN area)</li>
+		<li><b>Hints:</b> The  Persistent Cache will share the keys between both areas (INDEX and ADMIN) ; It is developer's choice and work to ensure realm separation if needed for the keys if required so (Ex: INDEX area may use separate realms than ADMIN area)</li>
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
 		
 				<li><b>Inheritance Chart:</b>
@@ -970,7 +970,7 @@ Cannot be empty and must comply with self::safeKey() restricted charset: _ a-z A
 @param: {STRING} $y_value: The Cache Value to be tested</div>
 	
 			<div class="doc-method-comments">Validate persistent Cache Value<br>
-Should not be not empty and not oversized (max 16MB)</div>
+Should not be not empty and not oversized (max ~16MB minus 65KB reserved for metainfo)</div>
 	
 	
 	
@@ -1196,7 +1196,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-12-09 09:34:13 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-12-13 16:45:28 +0000</small>
 <hr>
 <br>
 <!-- # -->

@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartHashCrypto        final class \ SmartHashCrypto    {   } ::    Class: SmartHashCrypto - provide various hashes for a string: salted password,">
-	<meta name="keywords" content="smarthashcrypto, final, class, smarthashcrypto, class, -, provide, various, hashes, for, a, string, salted, password, sh, sh, sh, sh, m, language, php, located, at, lib framework lib crypto.php, package, core crypto, namespace, name, version, v, depends, hash algos, hash, usage, static, object, class  method, this, provides, only, methods, public, function, string, y pass, y custom salt, return, string, chars, length, param, string">
+	<meta name="keywords" content="smarthashcrypto, final, class, smarthashcrypto, class, -, provide, various, hashes, for, a, string, salted, password, sh, sh, sh, sh, m, language, php, located, at, lib framework lib crypto.php, package, core crypto, namespace, name, version, v, depends, hash algos, hash, usage, static, object, class  method, this, provides, only, methods, public, function, string, y pass, y custom salt, return, string, chars, length, param, string, encrypt, one, way, may">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartHashCrypto</title>
 	<!-- CSS and Fonts -->
@@ -694,7 +694,7 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartHashCrypto</span></li>
 		
-		<li><b>Version:</b> v.20190103</li>
+		<li><b>Version:</b> v.20191213</li>
 		<li><b>Depends:</b> PHP  hash_algos() / hash()</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -801,16 +801,18 @@ select#select-summary {
 	
 </div><div class="doc-container" id="Method--crc32b">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>crc32b</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_str` Parameter is REQUIRED">$y_str</span></b></span>
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_str` Parameter is REQUIRED">$y_str</span></b></span>, 
+			<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_base36` Parameter is OPTIONAL, with the Default Value: false">$y_base36</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING,
 	
 	
 			<div class="doc-method-ret-params">@return: {STRING,} 8 chars length<br>
-@param: {STRING} $y_str</div>
+@param: {STRING} $y_str<br>
+@param: {BOOLEAN} $y_base36</div>
 	
-			<div class="doc-method-comments">Returns the CRC32B hash of a string (better than CRC32, portable between 32-bit and 64-bit platforms, unsigned)</div>
+			<div class="doc-method-comments">Returns the CRC32B hash of a string in base16 by default or base36 optional (better than CRC32, portable between 32-bit and 64-bit platforms, unsigned)</div>
 	
 	
 	
@@ -923,7 +925,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-12-09 09:34:14 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-12-13 16:45:29 +0000</small>
 <hr>
 <br>
 <!-- # -->

@@ -698,7 +698,7 @@ To easy send email messages use: SmartMailerUtils::send_email() / SmartMailerUti
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartMailerSend</span></li>
 		
-		<li><b>Version:</b> v.20191125</li>
+		<li><b>Version:</b> v.20191213</li>
 		<li><b>Depends:</b> classes:  Smart</li>
 		
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -780,6 +780,21 @@ Can be a Text or HTML Message</div>
 @param: {STRING} $str: The mime header line (MUST NOT Contain the line ending CRLF as \r\n) ; Line ending must be added after escaping the header line using this function</div>
 	
 			<div class="doc-method-comments">Provide a helper to safe escape Mime (Email) Message Header Lines</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--safe_value_str">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>safe_value_str</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} The safe escaped Mime Message Value<br>
+@param: {STRING} $str: The mime value</div>
+	
+			<div class="doc-method-comments">Provide a helper to safe escape Mime (Email) Message Values</div>
 	
 	
 	
@@ -991,6 +1006,9 @@ function smartHandleDocSelector(obj) {
 									<option value="Method--safe_header_str"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;safe_header_str()</option>
 			
 			
+									<option value="Method--safe_value_str"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;safe_value_str()</option>
+			
+			
 			
 		</optgroup>
 		<optgroup label="Class Properties">
@@ -1072,7 +1090,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-12-09 09:34:15 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-12-13 16:45:30 +0000</small>
 <hr>
 <br>
 <!-- # -->

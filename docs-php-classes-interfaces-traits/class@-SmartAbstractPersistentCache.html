@@ -697,7 +697,7 @@ It must contain ONLY public functions to avoid late state binding (self:: vs sta
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartAbstractPersistentCache</span></li>
 		
-		<li><b>Version:</b> v.20191209</li>
+		<li><b>Version:</b> v.20191210</li>
 		<li><b>Depends:</b> -</li>
 		
 		
@@ -953,7 +953,7 @@ Cannot be empty and must comply with self::safeKey() restricted charset: _ a-z A
 @param: {STRING} $y_value: The Cache Value to be tested</div>
 	
 			<div class="doc-method-comments">Validate persistent Cache Value<br>
-Should not be not empty and not oversized (max 16MB)</div>
+Should not be not empty and not oversized (max ~16MB minus 65KB reserved for metainfo)</div>
 	
 	
 	
@@ -1179,7 +1179,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-12-09 09:34:13 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-12-13 16:45:28 +0000</small>
 <hr>
 <br>
 <!-- # -->
