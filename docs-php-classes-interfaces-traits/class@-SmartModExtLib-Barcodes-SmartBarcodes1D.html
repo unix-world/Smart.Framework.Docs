@@ -5,10 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
-	<meta name="description" content="\SmartBarcode2D        final class \ SmartBarcode2D    {   } ::    Class: SmartBarcode2D - Generates 2D BarCodes: QRCode, DataMatrix (SemaCode), PDF417.">
-	<meta name="keywords" content="smartbarcod, final, class, smartbarcod, class, -, generates, barcodes, qrcode, datamatrix, semacode, pd, language, php, located, at, lib core plugins lib barcodes .php, package, plugins viewcomponents, namespace, name, version, v, depends, smart.framework, usage, static, object, class  method, this, provides, only, methods, public, function, getbarcode, string, y code, enum, y type, y format, integer, y size, hexcolor, y color, mixed, y extraoptions, integer, y cachetime, return, mixed, by, type, selection, html, code, png, image, svg, param, string, y code, the, for, barcode, generator, enum, y type">
+	<meta name="description" content="\SmartModExtLib\Barcodes\SmartBarcodes1D        final class \SmartModExtLib\Barcodes\ SmartBarcodes1D    {   } ::    Class: SmartBarcodes1D - Generates 1D">
+	<meta name="keywords" content="smartmodextlib barcodes smartbarcode, final, class, smartmodextlib barcodes, smartbarcode, class, -, generates, barcodes, ean upc, b, e, e, kix., language, php, located, at, modules mod-barcodes libs smartbarcode .php, package, modules barcodes, namespace, name, version, v, depends, smart.framework, usage, static, object, class  method, this, provides, only, methods, public, function, getbarcode, string, y code, enum, y type, y format, integer, y size, y height, hexcolor, y color, boolean, y display text, false, integer, y cachetime, mixed, return, mixed, by, type, selection, html, code, png, image, svg, param, string, y code, the">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
-	<title>PHP Documentation for: \SmartBarcode2D</title>
+	<title>PHP Documentation for: \SmartModExtLib\Barcodes\SmartBarcodes1D</title>
 	<!-- CSS and Fonts -->
 		<link rel="stylesheet" type="text/css" href="../fonts/source-sans-pro.css">
 	
@@ -459,7 +459,7 @@
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
-		<li><a href="index.html#Package--PluginsViewComponents-" title="return to Index">return to Index</a></li>
+		<li><a href="index.html#Package--modulesBarcodes-" title="return to Index">return to Index</a></li>
 	</ul>
 	
 </nav>
@@ -675,8 +675,8 @@ select#select-summary {
 
 </style>
 <!-- Headings -->
-<h1 title="PHP class: `\SmartBarcode2D` @ PHP Namespace: `\`" id="Class--Summary-">
-	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\</span><span class="doc-name">SmartBarcode2D</span><br>
+<h1 title="PHP class: `\SmartModExtLib\Barcodes\SmartBarcodes1D` @ PHP Namespace: `\SmartModExtLib\Barcodes\`" id="Class--Summary-">
+	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\SmartModExtLib\Barcodes\</span><span class="doc-name">SmartBarcodes1D</span><br>
 	
 	
 	{
@@ -684,17 +684,17 @@ select#select-summary {
 	}&nbsp;::
 </h1>
 <!-- Description -->
-<div class="doc-comments">Class: SmartBarcode2D - Generates 2D BarCodes: QRCode, DataMatrix (SemaCode), PDF417.</div><br>
+<div class="doc-comments">Class: SmartBarcodes1D - Generates 1D BarCodes: EAN/UPC, 128 B, 93 E+, 39 E, KIX.</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
 	<ul class="doc-list">
 		<li><span class="doc-language"><b>Language:</b> PHP<span></li>
-		<li><span class="doc-located"><b>Located at:</b> lib/core/plugins/lib_barcodes_2d.php</span></li>
-		<li><span class="doc-package"><b>Package:</b> Plugins:ViewComponents</span></li>
-		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
-		<li><span class="doc-name"><b>Class Name:</b> SmartBarcode2D</span></li>
+		<li><span class="doc-located"><b>Located at:</b> modules/mod-barcodes/libs/SmartBarcodes1D.php</span></li>
+		<li><span class="doc-package"><b>Package:</b> modules:Barcodes</span></li>
+		<li><span class="doc-ns"><b>Namespace:</b> \SmartModExtLib\Barcodes\</span></li>
+		<li><span class="doc-name"><b>Class Name:</b> SmartBarcodes1D</span></li>
 		
-		<li><b>Version:</b> v.20191209</li>
+		<li><b>Version:</b> v.20191214</li>
 		<li><b>Depends:</b> Smart.Framework</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -714,8 +714,9 @@ select#select-summary {
 			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_type` Parameter is REQUIRED">$y_type</span></b></span>, 
 			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_format` Parameter is REQUIRED">$y_format</span></b></span>, 
 			<i>INTEGER+</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_size` Parameter is REQUIRED">$y_size</span></b></span>, 
+			<i>INTEGER+</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_height` Parameter is REQUIRED">$y_height</span></b></span>, 
 			<i>HEXCOLOR</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_color` Parameter is OPTIONAL, with the Default Value: &quot;#000000&quot;">$y_color</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;#000000&quot;</b></span>, 
-			<i>MIXED</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_extraoptions` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_extraoptions</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
+			<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_display_text` Parameter is OPTIONAL, with the Default Value: false">$y_display_text</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>, 
 			<i>INTEGER</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_cachetime` Parameter is OPTIONAL, with the Default Value: -1">$y_cachetime</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>-1</b></span>
 	
 	
@@ -724,14 +725,15 @@ select#select-summary {
 	
 			<div class="doc-method-ret-params">@return: {MIXED} By Type Selection: 	HTML Code / PNG Image / SVG Code<br>
 @param: {STRING} $y_code: The code for the BarCode Generator<br>
-@param: {ENUM} $y_type: The BarCode Type: qrcode / semacode / pdf417<br>
+@param: {ENUM} $y_type: The BarCode Type: 128 / 93 / 39 / KIX / RMS<br>
 @param: {ENUM} $y_format: The Barcode format: html, html-png, png, html-svg, svg<br>
 @param: {INTEGER+} $y_size: The Scale-Size for Barcode (1..4)<br>
-@param: {HEXCOLOR} $y_color: The Hexadecimal Color for the Barcode Pixels ; default is Black = #000000<br>
-@param: {MIXED} $y_extraoptions: Extra Options: for QRCode = Quality [L, M, Q, H] L as default ; for PDF417 a Ratio Integer between 1 and 17<br>
+@param: {INTEGER+} $y_height: The Height in pixels for the Barcode<br>
+@param: {HEXCOLOR} $y_color: The Hexadecimal Color for the Barcode Bars ; default is Black = #000000<br>
+@param: {BOOLEAN} $y_display_text: If TRUE will display the Code below of BarCode Bars ; default is FALSE<br>
 @param: {INTEGER} $y_cachetime: If &gt; 0 will cache it for this number of seconds ; if zero will never expire ; if &lt; 0 will use no cache</div>
 	
-			<div class="doc-method-comments">Function: Generate a 2D Barcode: QRCode, DataMatrix (SemaCode), PDF417</div>
+			<div class="doc-method-comments">Function: Generate a 1D Barcode: EAN/UPC, 128 B, 93 E+, 39 E, KIX, RMS</div>
 	
 	
 	
@@ -776,8 +778,8 @@ function smartHandleDocSelector(obj) {
 </script>
 <div class="doc-summary">
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
-		<option value="" selected>* PHP Class \SmartBarcode2D # Documentation Index *</option>
-		<optgroup label="Class \SmartBarcode2D">
+		<option value="" selected>* PHP Class \SmartModExtLib\Barcodes\SmartBarcodes1D # Documentation Index *</option>
+		<optgroup label="Class \SmartModExtLib\Barcodes\SmartBarcodes1D">
 			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
@@ -822,7 +824,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-12-13 16:45:31 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-12-19 14:18:12 +0000</small>
 <hr>
 <br>
 <!-- # -->

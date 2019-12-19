@@ -5,10 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
-	<meta name="description" content="\SmartCaptchaFormCheck        final class \ SmartCaptchaFormCheck    {   } ::    Class: SmartCaptchaFormCheck - Render and Check the Captcha Image/Form.">
-	<meta name="keywords" content="smartcaptchaformcheck, final, class, smartcaptchaformcheck, class, -, render, and, check, the, captcha, image form., language, php, located, at, lib core plugins lib captcha.php, package, plugins viewcomponents, namespace, name, version, v, depends, extensions, xml, classes, smart, hints, to, smartcaptchaformcheck  captcha form, smartcaptchaformcheck  captcha image, are, required., verify, use, smartcaptchaformcheck  verify, smartcaptchaformcheck  clear, is, optional, depending, how, called, usage, static, object, class  method, this, provides, only, methods, public, function, captcha image, y form name, y store, y mode, hashed, y pool, y noise, y chars, y width, y height, y format, png, y font file, lib core plugins fonts captcha barrio.ttf, y font size, y char space, y char xvar, y char yvar, y char colors, array, y noise colors">
+	<meta name="description" content="\SmartModExtLib\Barcodes\SmartBarcodes2D        final class \SmartModExtLib\Barcodes\ SmartBarcodes2D    {   } ::    Class: SmartBarcodes2D - Generates 2D">
+	<meta name="keywords" content="smartmodextlib barcodes smartbarcode, final, class, smartmodextlib barcodes, smartbarcode, class, -, generates, barcodes, qrcode, aztec, datamatrix, semacode, pd, language, php, located, at, modules mod-barcodes libs smartbarcode .php, package, modules barcodes, namespace, name, version, v, depends, smart.framework, usage, static, object, class  method, this, provides, only, methods, public, function, getbarcode, string, y code, enum, y type, y format, integer, y size, hexcolor, y color, mixed, y extraoptions, integer, y cachetime, return, mixed, by, type, selection, html, code, png, image, svg, param, string, y code, the, for, barcode, generator, enum, y type, type">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
-	<title>PHP Documentation for: \SmartCaptchaFormCheck</title>
+	<title>PHP Documentation for: \SmartModExtLib\Barcodes\SmartBarcodes2D</title>
 	<!-- CSS and Fonts -->
 		<link rel="stylesheet" type="text/css" href="../fonts/source-sans-pro.css">
 	
@@ -459,7 +459,7 @@
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
-		<li><a href="index.html#Package--PluginsViewComponents-" title="return to Index">return to Index</a></li>
+		<li><a href="index.html#Package--modulesBarcodes-" title="return to Index">return to Index</a></li>
 	</ul>
 	
 </nav>
@@ -675,8 +675,8 @@ select#select-summary {
 
 </style>
 <!-- Headings -->
-<h1 title="PHP class: `\SmartCaptchaFormCheck` @ PHP Namespace: `\`" id="Class--Summary-">
-	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\</span><span class="doc-name">SmartCaptchaFormCheck</span><br>
+<h1 title="PHP class: `\SmartModExtLib\Barcodes\SmartBarcodes2D` @ PHP Namespace: `\SmartModExtLib\Barcodes\`" id="Class--Summary-">
+	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\SmartModExtLib\Barcodes\</span><span class="doc-name">SmartBarcodes2D</span><br>
 	
 	
 	{
@@ -684,19 +684,19 @@ select#select-summary {
 	}&nbsp;::
 </h1>
 <!-- Description -->
-<div class="doc-comments">Class: SmartCaptchaFormCheck - Render and Check the Captcha Image/Form.</div><br>
+<div class="doc-comments">Class: SmartBarcodes2D - Generates 2D BarCodes: QRCode, Aztec, DataMatrix (SemaCode), PDF417.</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
 	<ul class="doc-list">
 		<li><span class="doc-language"><b>Language:</b> PHP<span></li>
-		<li><span class="doc-located"><b>Located at:</b> lib/core/plugins/lib_captcha.php</span></li>
-		<li><span class="doc-package"><b>Package:</b> Plugins:ViewComponents</span></li>
-		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
-		<li><span class="doc-name"><b>Class Name:</b> SmartCaptchaFormCheck</span></li>
+		<li><span class="doc-located"><b>Located at:</b> modules/mod-barcodes/libs/SmartBarcodes2D.php</span></li>
+		<li><span class="doc-package"><b>Package:</b> modules:Barcodes</span></li>
+		<li><span class="doc-ns"><b>Namespace:</b> \SmartModExtLib\Barcodes\</span></li>
+		<li><span class="doc-name"><b>Class Name:</b> SmartBarcodes2D</span></li>
 		
-		<li><b>Version:</b> v.20191111</li>
-		<li><b>Depends:</b> extensions:  PHP XML ; classes: Smart</li>
-		<li><b>Hints:</b> To  render captcha, SmartCaptchaFormCheck::captcha_form() and SmartCaptchaFormCheck::captcha_image() are required. To verify, use SmartCaptchaFormCheck::verify() ; SmartCaptchaFormCheck::clear() is optional, depending how SmartCaptchaFormCheck::verify() is called</li>
+		<li><b>Version:</b> v.20191214</li>
+		<li><b>Depends:</b> Smart.Framework</li>
+		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
 		
 		
@@ -708,74 +708,34 @@ select#select-summary {
 	<h2 class="doc-header">class Methods</h2>
 </div>
 <!-- methods r.20191201 -->
-<div class="doc-container" id="Method--captcha_image">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>captcha_image</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$y_form_name` Parameter is REQUIRED">$y_form_name</span></b></span>, 
-			<span class="doc-param-name"><b><span title="`$y_store` Parameter is REQUIRED">$y_store</span></b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_mode` Parameter is OPTIONAL, with the Default Value: &quot;hashed&quot;">$y_mode</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;hashed&quot;</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_pool` Parameter is OPTIONAL, with the Default Value: &quot;0123456789&quot;">$y_pool</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;0123456789&quot;</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_noise` Parameter is OPTIONAL, with the Default Value: 300">$y_noise</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>300</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_chars` Parameter is OPTIONAL, with the Default Value: 5">$y_chars</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>5</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_width` Parameter is OPTIONAL, with the Default Value: 175">$y_width</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>175</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_height` Parameter is OPTIONAL, with the Default Value: 50">$y_height</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>50</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_format` Parameter is OPTIONAL, with the Default Value: &quot;png&quot;">$y_format</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;png&quot;</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_font_file` Parameter is OPTIONAL, with the Default Value: &quot;lib/core/plugins/fonts/captcha/barrio.ttf&quot;">$y_font_file</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;lib/core/plugins/fonts/captcha/barrio.ttf&quot;</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_font_size` Parameter is OPTIONAL, with the Default Value: 24">$y_font_size</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>24</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_char_space` Parameter is OPTIONAL, with the Default Value: 20">$y_char_space</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>20</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_char_xvar` Parameter is OPTIONAL, with the Default Value: 15">$y_char_xvar</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>15</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_char_yvar` Parameter is OPTIONAL, with the Default Value: 7">$y_char_yvar</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>7</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_char_colors` Parameter is OPTIONAL, with the Default Value: array(0 =&gt; 1118481, 1 =&gt; 3355443, 2 =&gt; 7833753, 3 =&gt; 6710937, 4 =&gt; 13158, 5 =&gt; 6723942, 6 =&gt; 26112, 7 =&gt; 16724736)">$y_char_colors</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>array(0 =&gt; 1118481, 1 =&gt; 3355443, 2 =&gt; 7833753, 3 =&gt; 6710937, 4 =&gt; 13158, 5 =&gt; 6723942, 6 =&gt; 26112, 7 =&gt; 16724736)</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_noise_colors` Parameter is OPTIONAL, with the Default Value: array(0 =&gt; 8947848, 1 =&gt; 10066329, 2 =&gt; 11184810, 3 =&gt; 12303291, 4 =&gt; 13421772, 5 =&gt; 14540253, 6 =&gt; 15658734, 7 =&gt; 8421568)">$y_noise_colors</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>array(0 =&gt; 8947848, 1 =&gt; 10066329, 2 =&gt; 11184810, 3 =&gt; 12303291, 4 =&gt; 13421772, 5 =&gt; 14540253, 6 =&gt; 15658734, 7 =&gt; 8421568)</b></span>
+<div class="doc-container" id="Method--getBarcode">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getBarcode</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_code` Parameter is REQUIRED">$y_code</span></b></span>, 
+			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_type` Parameter is REQUIRED">$y_type</span></b></span>, 
+			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_format` Parameter is REQUIRED">$y_format</span></b></span>, 
+			<i>INTEGER+</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_size` Parameter is REQUIRED">$y_size</span></b></span>, 
+			<i>HEXCOLOR</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_color` Parameter is OPTIONAL, with the Default Value: &quot;#000000&quot;">$y_color</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;#000000&quot;</b></span>, 
+			<i>MIXED</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_extraoptions` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_extraoptions</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
+			<i>INTEGER</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_cachetime` Parameter is OPTIONAL, with the Default Value: -1">$y_cachetime</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>-1</b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;MIXED
 	
 	
+			<div class="doc-method-ret-params">@return: {MIXED} By Type Selection: 	HTML Code / PNG Image / SVG Code<br>
+@param: {STRING} $y_code: The code for the BarCode Generator<br>
+@param: {ENUM} $y_type: The BarCode Type: qrcode / aztec / semacode / pdf417 (the pdf417 req. PHP BCMath Extension))<br>
+@param: {ENUM} $y_format: The Barcode format: html, html-png, png, html-svg, svg<br>
+@param: {INTEGER+} $y_size: The Scale-Size for Barcode (1..4)<br>
+@param: {HEXCOLOR} $y_color: The Hexadecimal Color for the Barcode Pixels ; default is Black = #000000<br>
+@param: {MIXED} $y_extraoptions: Extra Options: for QRCode = Quality [L, M, Q, H] L as default ; for PDF417 a Ratio Integer between 1 and 17<br>
+@param: {INTEGER} $y_cachetime: If &gt; 0 will cache it for this number of seconds ; if zero will never expire ; if &lt; 0 will use no cache</div>
 	
-	
-	
-	
-</div><div class="doc-container" id="Method--captcha_form">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>captcha_form</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$y_captcha_image_url` Parameter is REQUIRED">$y_captcha_image_url</span></b></span>, 
-			<span class="doc-param-name"><b><span title="`$y_form_name` Parameter is REQUIRED">$y_form_name</span></b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
+			<div class="doc-method-comments">Function: Generate a 2D Barcode: QRCode, DataMatrix (SemaCode), PDF417</div>
 	
 	
 	
-	
-	
-	
-</div><div class="doc-container" id="Method--verify">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>verify</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$y_form_name` Parameter is REQUIRED">$y_form_name</span></b></span>, 
-			<span class="doc-param-name"><b><span title="`$y_mode` Parameter is REQUIRED">$y_mode</span></b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_clear` Parameter is OPTIONAL, with the Default Value: true">$y_clear</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
-	
-	
-	
-	
-	
-	
-</div><div class="doc-container" id="Method--clear">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>clear</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$y_form_name` Parameter is REQUIRED">$y_form_name</span></b></span>, 
-			<span class="doc-param-name"><b><span title="`$y_mode` Parameter is REQUIRED">$y_mode</span></b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
-	
-	
-	
-	
-	
-	
-</div><!-- Skip Internal-Priv Method: `validate_form_name()` --><!-- Skip Internal-Priv Method: `checksum()` --><!-- Skip Internal-Priv Method: `jscookiename()` --><!-- Skip Internal-Priv Method: `chkcookiename()` --><!-- Skip Internal-Priv Method: `cookiename()` -->
+</div><!-- Skip Internal-Priv Method: `getBarcodeHTML()` --><!-- Skip Internal-Priv Method: `getBarcodeEmbeddedHTMLSVG()` --><!-- Skip Internal-Priv Method: `getBarcodeSVG()` --><!-- Skip Internal-Priv Method: `getBarcodeEmbeddedHTMLPNG()` --><!-- Skip Internal-Priv Method: `getBarcodePNG()` -->
 <!-- Properties -->
 <br>
 <div class="doc-container" id="Properties--Summary-">
@@ -791,16 +751,7 @@ select#select-summary {
 <!-- constants r.20191124 -->
 
 <!-- Sample Code -->
-<br>
-<div class="doc-container" id="SAMPLE--Code-">
-	<h2 class="doc-header">Sample code: PHP</h2>
-</div>
-<div class="doc-code">
-	<pre><code><!-- Smart/HTML.Cleaner [@] --><code><span style="color: #57A64A">
-<span style="color: #FFFFFF">&lt;?php<br><br></span><span style="color: #999999">//==<br>&nbsp;//--&nbsp;captcha&nbsp;image&nbsp;(generate)<br>&nbsp;</span><span style="color: #FFFFFF">header</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">"Content-type:&nbsp;image/png"</span><span style="color: #FFCC00; font-weight: bold">);&nbsp;</span><span style="color: #999999">//&nbsp;by&nbsp;default&nbsp;outputs&nbsp;PNG&nbsp;;&nbsp;this&nbsp;can&nbsp;be&nbsp;changed&nbsp;to&nbsp;GIF&nbsp;or&nbsp;JPG<br>&nbsp;</span><span style="color: #FFCC00; font-weight: bold">echo&nbsp;</span><span style="color: #FFFFFF">SmartCaptchaFormCheck</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">captcha_image</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'form_name'</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #5F9CCE">'session'</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #5F9CCE">'hashed'</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #5F9CCE">'0123456789ABCDEF'</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #5F9CCE">'200'</span><span style="color: #FFCC00; font-weight: bold">);&nbsp;</span><span style="color: #999999">//&nbsp;this&nbsp;controller&nbsp;should&nbsp;output&nbsp;a&nbsp;raw&nbsp;image<br>&nbsp;//--&nbsp;captcha&nbsp;form&nbsp;(draw)<br>&nbsp;</span><span style="color: #FFCC00; font-weight: bold">echo&nbsp;</span><span style="color: #FFFFFF">SmartCaptchaFormCheck</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">captcha_form</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'index.php?page=mymodule.mycaptcha-image'</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #5F9CCE">'form_name'</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #5F9CCE">'300'</span><span style="color: #FFCC00; font-weight: bold">);&nbsp;</span><span style="color: #999999">//&nbsp;this&nbsp;controller&nbsp;should&nbsp;output&nbsp;HTML&nbsp;code&nbsp;to&nbsp;render&nbsp;the&nbsp;form<br>&nbsp;//--&nbsp;captcha&nbsp;check&nbsp;(verify)<br>&nbsp;</span><span style="color: #FFCC00; font-weight: bold">echo&nbsp;</span><span style="color: #FFFFFF">$check&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;</span><span style="color: #FFFFFF">SmartCaptchaFormCheck</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">verify</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'form_name'</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #5F9CCE">'session'</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #FFFFFF">true</span><span style="color: #FFCC00; font-weight: bold">);&nbsp;</span><span style="color: #999999">//&nbsp;and&nbsp;this&nbsp;is&nbsp;the&nbsp;way&nbsp;you&nbsp;verify&nbsp;the&nbsp;captcha&nbsp;(1&nbsp;=&nbsp;ok&nbsp;;&nbsp;0&nbsp;=&nbsp;not&nbsp;ok)<br>&nbsp;//--&nbsp;some&nbsp;more&nbsp;info&nbsp;on&nbsp;verify()<br>&nbsp;//&nbsp;captcha&nbsp;will&nbsp;reset&nbsp;(clear)&nbsp;by&nbsp;default&nbsp;upon&nbsp;each&nbsp;SmartCaptchaFormCheck::verify()<br>&nbsp;//&nbsp;to&nbsp;avoid&nbsp;this&nbsp;(default)&nbsp;behaviour,&nbsp;you&nbsp;can&nbsp;set&nbsp;the&nbsp;3rd&nbsp;parameters&nbsp;of&nbsp;verify()&nbsp;to&nbsp;FALSE<br>&nbsp;//&nbsp;but&nbsp;if&nbsp;you&nbsp;do&nbsp;so,&nbsp;don't&nbsp;forget&nbsp;to&nbsp;manually&nbsp;clear&nbsp;by&nbsp;calling&nbsp;SmartCaptchaFormCheck::clear()&nbsp;at&nbsp;the&nbsp;end&nbsp;!!!<br>&nbsp;//--<br>&nbsp;//==<br><br></span><span style="color: #FFFFFF">?&gt;</span>
-</span>
-</code><!-- [/@] Smart/HTML.Cleaner --></code></pre>
-</div>
+
 <!-- Summary List -->
 <br>
 <!-- summary r.20191124 -->
@@ -825,22 +776,13 @@ function smartHandleDocSelector(obj) {
 </script>
 <div class="doc-summary">
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
-		<option value="" selected>* PHP Class \SmartCaptchaFormCheck # Documentation Index *</option>
-		<optgroup label="Class \SmartCaptchaFormCheck">
+		<option value="" selected>* PHP Class \SmartModExtLib\Barcodes\SmartBarcodes2D # Documentation Index *</option>
+		<optgroup label="Class \SmartModExtLib\Barcodes\SmartBarcodes2D">
 			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
 			<option value="Methods--Summary-">Methods list</option>
-									<option value="Method--captcha_image"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;captcha_image()</option>
-			
-			
-									<option value="Method--captcha_form"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;captcha_form()</option>
-			
-			
-									<option value="Method--verify"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;verify()</option>
-			
-			
-									<option value="Method--clear"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;clear()</option>
+									<option value="Method--getBarcode"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getBarcode()</option>
 			
 			
 						
@@ -863,9 +805,6 @@ function smartHandleDocSelector(obj) {
 			<option value="Constants--Summary-">Constants list</option>
 			
 		</optgroup>
-				<optgroup label="Class Sample usage">
-			<option value="SAMPLE--Code-">Sample code</option>
-		</optgroup>
 		
 	</select>
 </div>
@@ -883,7 +822,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-12-13 16:45:31 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-12-19 14:18:12 +0000</small>
 <hr>
 <br>
 <!-- # -->
