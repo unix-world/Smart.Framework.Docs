@@ -5,10 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
-	<meta name="description" content="\SmartAppInfo        final class \ SmartAppInfo   implements \SmartInterfaceAppInfo  {   } ::    Class: SmartAppInfo Provides some methods for integration">
-	<meta name="keywords" content="smartappinfo, final, class, smartappinfo, implements, smartinterfaceappinfo, class, provides, some, methods, for, integration, between, the, smart.framework, app modules., language, php, located, at, lib run app-bootstrap.php, package, application, namespace, name, version, v, depends, -, usage, static, object, class  method, this, only, inheritance, chart, →, ↳, interface">
-	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
-	<title>PHP Documentation for: \SmartAppInfo</title>
+	<meta name="description" content="ArchLzs        static class ArchLzs  {  } .    CLASS :: LZS Archive Compress or Decompress a LZS archive This is very slow with large strings ...">
+	<meta name="keywords" content="archlzs, static, class, ., lzs, archive, compress, or, decompress, a, this, is, very, slow, with, large, strings, ., extremely, why, the, max, hardcoded, length, of, string, it, can, compress decompress, bytes, purpose, to, cookies, that, be, shared, also, php, version, available, in, modules mod-js-components libs archlzs.php, archiver, for, javascript, on-the-fly, using, only, algorithm, language, located, at, lib js framework smart-framework.pak.js, arch utils.js, name, usage, archlzs.method, version, depends, smartjs coreutils">
+	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : Javascript">
+	<title>JS Documentation for: ArchLzs</title>
 	<!-- CSS and Fonts -->
 		<link rel="stylesheet" type="text/css" href="../fonts/source-sans-pro.css">
 	
@@ -451,15 +451,15 @@
 <nav class="ux-navbar">
 	<div id="logo" style="display:flex; align-items:center;">
 		<span style="line-height:50px;">
-						<img src="../img/php-logo.svg" width="36" height="36" align="left">
+						<img src="../img/javascript-logo.svg" width="36" height="36" align="left">
 			
 		</span>
-		<span style="margin-left:10px;">Smart.Framework and Smart.Framework.Modules : PHP Documentation</span>
+		<span style="margin-left:10px;">Smart.Framework and Smart.Framework.Modules : Javascript Documentation</span>
 	</div>
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
-		<li><a href="index.html#Package--Application-" title="return to Index">return to Index</a></li>
+		<li><a href="index.html#Package--No-Package-" title="return to Index">return to Index</a></li>
 	</ul>
 	
 </nav>
@@ -675,38 +675,32 @@ select#select-summary {
 
 </style>
 <!-- Headings -->
-<h1 title="PHP class: `\SmartAppInfo` @ PHP Namespace: `\`" id="Class--Summary-">
-	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\</span><span class="doc-name">SmartAppInfo</span><br>
-	
-	<span title="implements Interface(s)" class="doc-implements"><i>implements</i> \SmartInterfaceAppInfo</span><br>
+<h1 title="PHP class: `ArchLzs` @ JavaScript" id="Class--Summary-">
+	<span class="doc-modifiers">static</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-name">ArchLzs</span><br>
 	{
-	
-	}&nbsp;::
+	}&nbsp;.
 </h1>
 <!-- Description -->
-<div class="doc-comments">Class: SmartAppInfo<br>
-Provides some methods for integration between the Smart.Framework App/Modules.</div><br>
+<div class="doc-comments">CLASS :: LZS Archive<br>
+Compress or Decompress a LZS archive<br>
+This is very slow with large strings ... extremely slow !!!<br>
+This is why the max (hardcoded) length of the string it can compress/decompress is 4096 bytes<br>
+The purpose of this class is to compress/decompress cookies that can be shared also with PHP<br>
+The PHP version of this class is available in modules/mod-js-components/libs/ArchLzs.php<br>
+LZS Archiver for JavaScript :: compress on-the-fly a string using only Javascript with the LZS algorithm</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
 	<ul class="doc-list">
-		<li><span class="doc-language"><b>Language:</b> PHP<span></li>
-		<li><span class="doc-located"><b>Located at:</b> lib/run/app-bootstrap.php</span></li>
-		<li><span class="doc-package"><b>Package:</b> Application</span></li>
-		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
-		<li><span class="doc-name"><b>Class Name:</b> SmartAppInfo</span></li>
+		<li><span class="doc-language"><b>Language:</b> Javascript<span></li>
+		<li><span class="doc-located"><b>Located at:</b> lib/js/framework/smart-framework.pak.js; arch_utils.js</span></li>
 		
-		<li><b>Version:</b> v.170920</li>
-		<li><b>Depends:</b> -</li>
+		<li><span class="doc-name"><b>Class Name:</b> ArchLzs</span></li>
+		<li><b>Usage:</b> ArchLzs.method();</li>
 		
-		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
 		
-				<li><b>Inheritance Chart:</b>
-			<ul>
-				<span class="doc-name"><i>class</i>&nbsp;\SmartAppInfo</span>&nbsp;&rarr;
-								<li>&nbsp;&#8627;&nbsp;<span class="doc-type-interface"><i>interface</i>&nbsp;\SmartInterfaceAppInfo</span></li>
-				
-			</ul>
-		</li>
+		
+		<li><b>Version:</b> 20191220</li>
+		<li><b>Depends:</b> SmartJS_CoreUtils</li>
 		
 	</ul>
 </div>
@@ -715,33 +709,43 @@ Provides some methods for integration between the Smart.Framework App/Modules.</
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20191201 -->
-<div class="doc-container" id="Method--TestIfTemplateExists">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>TestIfTemplateExists</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$y_template_name` Parameter is REQUIRED">$y_template_name</span></b></span>
+<!-- methods r.20191124 -->
+<div class="doc-container" id="Method--compressToBase64">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>compressToBase64</b></span>&nbsp;(
+			<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`input` Parameter">input</span></b></span>
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
+	<div class="doc-method-ret-params">
 	
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
-	<br><span class="doc-reimplemented"><i>reimplemented&nbsp;</i>&nbsp;over&nbsp;<b>\SmartInterfaceAppInfo</b></span>
-	
-	
-			<div class="doc-method-comments">Test if a specific App Template Exists<br>
-RETURN: true or false</div>
+			@return: {String} The compressed string LZS + Base64<br>
 	
 	
 	
-</div><div class="doc-container" id="Method--TestIfModuleExists">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>TestIfModuleExists</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$y_module_name` Parameter is REQUIRED">$y_module_name</span></b></span>
+			@param: {String} input The original string to be compressed<br>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
-	<br><span class="doc-reimplemented"><i>reimplemented&nbsp;</i>&nbsp;over&nbsp;<b>\SmartInterfaceAppInfo</b></span>
+	</div>
+			<div class="doc-method-comments">Compress a string to LZS + Base64</div>
 	
 	
-			<div class="doc-method-comments">Test if a specific App Module Exists<br>
-RETURN: true or false</div>
+</div><div class="doc-container" id="Method--decompressFromBase64">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>decompressFromBase64</b></span>&nbsp;(
+			<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`input` Parameter">input</span></b></span>
 	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
+	<div class="doc-method-ret-params">
+	
+	
+			@return: {String} The uncompressed (original) string<br>
+	
+	
+	
+			@param: {String} input The LZS + Base64 compressed string<br>
+	
+	
+	</div>
+			<div class="doc-method-comments">Decompress from Base64 + LZS</div>
 	
 	
 </div>
@@ -759,21 +763,25 @@ RETURN: true or false</div>
 </div>
 <!-- constants r.20191124 -->
 
+
 <!-- Sample Code -->
 <br>
 <div class="doc-container" id="SAMPLE--Code-">
-	<h2 class="doc-header">Sample code: PHP</h2>
+	<h2 class="doc-header">Sample code: JavaScript</h2>
 </div>
 <div class="doc-code">
-	<pre><code><!-- Smart/HTML.Cleaner [@] --><code><span style="color: #57A64A">
-<span style="color: #FFFFFF">&lt;?php<br><br></span><span style="color: #999999">//&nbsp;Usage&nbsp;example:<br>&nbsp;</span><span style="color: #FFFFFF">SmartAppInfo</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">some_method_of_this_class</span><span style="color: #FFCC00; font-weight: bold">(...);<br><br></span><span style="color: #FFFFFF">?&gt;</span>
-</span>
-</code><!-- [/@] Smart/HTML.Cleaner --></code></pre>
+	<pre><br><code class="hljs javascript"> <span class="hljs-keyword">var</span> plainStr = <span class="hljs-string">'Some String'</span>;
+ <span class="hljs-keyword">var</span> archivedStr = ArchLzs.compressToBase64(plainStr);
+ <span class="hljs-keyword">var</span> unArchivedStr = ArchLzs.decompressFromBase64(archivedStr);
+ <span class="hljs-keyword">if</span>(plainStr !== unArchivedStr) {
+ 	alert(<span class="hljs-string">'Js LZS Archiver Failed: Plain String is different after Archive/Unarchive operations !'</span>);
+ }
+ <span class="hljs-built_in">console</span>.log(plainStr, archivedStr, unArchivedStr);</code><br></pre>
 </div>
 <!-- Summary List -->
 <br>
 <!-- summary r.20191124 -->
-<script type="text/javascript">
+<script>
 // summary r.20191124
 function smartHandleDocSelector(obj) {
 	if(!obj) {
@@ -794,17 +802,15 @@ function smartHandleDocSelector(obj) {
 </script>
 <div class="doc-summary">
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
-		<option value="" selected>* PHP Class \SmartAppInfo # Documentation Index *</option>
-		<optgroup label="Class \SmartAppInfo">
+		<option value="" selected>* Javascript Class ArchLzs # Documentation Index *</option>
+		<optgroup label="Class ArchLzs">
 			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
 			<option value="Methods--Summary-">Methods list</option>
-									<option value="Method--TestIfTemplateExists"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;TestIfTemplateExists()</option>
+									<option value="Method--compressToBase64"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;compressToBase64()</option>
 			
-			
-									<option value="Method--TestIfModuleExists"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;TestIfModuleExists()</option>
-			
+									<option value="Method--decompressFromBase64"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;decompressFromBase64()</option>
 			
 			
 		</optgroup>
@@ -816,7 +822,7 @@ function smartHandleDocSelector(obj) {
 			<option value="Constants--Summary-">Constants list</option>
 			
 		</optgroup>
-				<optgroup label="Class Sample usage">
+				<optgroup label="Class Sample code">
 			<option value="SAMPLE--Code-">Sample code</option>
 		</optgroup>
 		
@@ -836,7 +842,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-12-20 17:18:25 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-12-20 17:18:35 +0000</small>
 <hr>
 <br>
 <!-- # -->

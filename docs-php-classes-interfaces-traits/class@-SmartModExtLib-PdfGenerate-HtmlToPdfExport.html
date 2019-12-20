@@ -5,10 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
-	<meta name="description" content="\SmartPdfExport        final class \ SmartPdfExport    {   } ::    Class: SmartPdfExport - Exports HTML Code to PDF Document.     Language: PHP  Located">
-	<meta name="keywords" content="smartpdfexport, final, class, smartpdfexport, class, -, exports, html, code, to, pdf, document., language, php, located, at, lib core plugins lib export pdf.php, package, plugins exportandimport, namespace, name, version, v, depends, executables, htmldoc, classes, smart, smartutils, smartfilesysutils, smarthtmlparser, usage, static, object, class  method, this, provides, only, methods, public, function, is active, return, or, path to htmldoc.exe, check, if, exists, and, is, set, correctly, is sv ng active, path to rsvg-convert.exe, tag remove start, html, comment, an, tag, end, all, between, start end, like, these, tags, will, be, removed">
+	<meta name="description" content="\SmartModExtLib\PdfGenerate\HtmlToPdfExport        final class \SmartModExtLib\PdfGenerate\ HtmlToPdfExport    {   } ::    Class: HtmlToPdfExport -">
+	<meta name="keywords" content="smartmodextlib pdfgenerate htmltopdfexport, final, class, smartmodextlib pdfgenerate, htmltopdfexport, class, -, exports, html, code, to, pdf, document, using, htmldoc, and, rsvg., this, is, a, very, safe, but, limited, export, of, code., it, does, support, most, the, htm, cs, not, javascript., images, png, gif, jpg, as, link, or, bas, embedded., svg, vector, images, embedded, requires, rsvg, convert, them, format ., language, php, located, at, modules mod-pdf-generate libs htmltopdfexport.php, package, modules pdf-generate, namespace, name, version, v, depends, executables, classes, smart, smartutils, smartfilesysutils, smarthtmlparser, usage, static, object, class  method, provides, only, methods, public, function, is active, return, path to htmldoc.exe, check, if, exists, set, correctly, generate, string, y html content, enum, y orientation, normal">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
-	<title>PHP Documentation for: \SmartPdfExport</title>
+	<title>PHP Documentation for: \SmartModExtLib\PdfGenerate\HtmlToPdfExport</title>
 	<!-- CSS and Fonts -->
 		<link rel="stylesheet" type="text/css" href="../fonts/source-sans-pro.css">
 	
@@ -459,7 +459,7 @@
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
-		<li><a href="index.html#Package--PluginsExportAndImport-" title="return to Index">return to Index</a></li>
+		<li><a href="index.html#Package--modulesPDF-Generate-" title="return to Index">return to Index</a></li>
 	</ul>
 	
 </nav>
@@ -675,8 +675,8 @@ select#select-summary {
 
 </style>
 <!-- Headings -->
-<h1 title="PHP class: `\SmartPdfExport` @ PHP Namespace: `\`" id="Class--Summary-">
-	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\</span><span class="doc-name">SmartPdfExport</span><br>
+<h1 title="PHP class: `\SmartModExtLib\PdfGenerate\HtmlToPdfExport` @ PHP Namespace: `\SmartModExtLib\PdfGenerate\`" id="Class--Summary-">
+	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\SmartModExtLib\PdfGenerate\</span><span class="doc-name">HtmlToPdfExport</span><br>
 	
 	
 	{
@@ -684,17 +684,22 @@ select#select-summary {
 	}&nbsp;::
 </h1>
 <!-- Description -->
-<div class="doc-comments">Class: SmartPdfExport - Exports HTML Code to PDF Document.</div><br>
+<div class="doc-comments">Class: HtmlToPdfExport - Exports HTML Code to PDF Document using HTMLDoc and RSvg.<br>
+This is a very safe but limited PDF export of HTML code.<br>
+It does support most of the HTML5 and CSS3.<br>
+It does not support Javascript.<br>
+It does support images: PNG, GIF, JPG as link or base64 embedded.<br>
+It does support SVG vector images as link or base64 embedded (requires RSvg to convert them to PNG format).</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
 	<ul class="doc-list">
 		<li><span class="doc-language"><b>Language:</b> PHP<span></li>
-		<li><span class="doc-located"><b>Located at:</b> lib/core/plugins/lib_export_pdf.php</span></li>
-		<li><span class="doc-package"><b>Package:</b> Plugins:ExportAndImport</span></li>
-		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
-		<li><span class="doc-name"><b>Class Name:</b> SmartPdfExport</span></li>
+		<li><span class="doc-located"><b>Located at:</b> modules/mod-pdf-generate/libs/HtmlToPdfExport.php</span></li>
+		<li><span class="doc-package"><b>Package:</b> modules:PDF-Generate</span></li>
+		<li><span class="doc-ns"><b>Namespace:</b> \SmartModExtLib\PdfGenerate\</span></li>
+		<li><span class="doc-name"><b>Class Name:</b> HtmlToPdfExport</span></li>
 		
-		<li><b>Version:</b> v.20191213</li>
+		<li><b>Version:</b> v.20191220</li>
 		<li><b>Depends:</b> executables:  HTMLDoc ; classes: Smart, SmartUtils, SmartFileSysUtils, SmartHtmlParser</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -721,16 +726,22 @@ select#select-summary {
 	
 	
 	
-</div><div class="doc-container" id="Method--is_svg2png_active">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>is_svg2png_active</b></span>&nbsp;(
-		
+</div><!-- Skip Internal-Priv Method: `is_rsvg_active()` --><div class="doc-container" id="Method--generate">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>generate</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_html_content` Parameter is REQUIRED">$y_html_content</span></b></span>, 
+			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_orientation` Parameter is OPTIONAL, with the Default Value: &quot;normal&quot;">$y_orientation</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;normal&quot;</b></span>, 
+			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_allow_set_credentials` Parameter is OPTIONAL, with the Default Value: &quot;no&quot;">$y_allow_set_credentials</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;no&quot;</b></span>
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;''
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
 	
 	
-			<div class="doc-method-ret-params">@return: {''} OR '/path/to/rsvg-convert.exe'</div>
+			<div class="doc-method-ret-params">@param: {STRING} $y_html_content: The HTML Code<br>
+@param: {ENUM} $y_orientation: Page Orientation: 'normal' | 'wide'<br>
+@param: {ENUM} $y_allow_set_credentials: DEFAULT IS SET to 'no' ; set this value to 'yes' must be set just for internal URLs as this can be a security issue ; if set to 'auto' (this is safe) will auto detect if can trust based on admin.php / index.php local framework scripts</div>
 	
-			<div class="doc-method-comments">Check if HTMLDoc exists and is set correctly</div>
+			<div class="doc-method-comments">Generate a PDF Document on the fly from a piece of HTML code.<br>
+Notice: this is using a secured cache folder, unique per visitor ID</div>
 	
 	
 	
@@ -812,55 +823,6 @@ select#select-summary {
 	
 	
 	
-</div><div class="doc-container" id="Method--pdf_mime_header">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>pdf_mime_header</b></span>&nbsp;(
-		
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
-	
-	
-			<div class="doc-method-ret-params">@return: {STRING} 'application/pdf'</div>
-	
-			<div class="doc-method-comments">Get the PDF Document Mime Type Header Data</div>
-	
-	
-	
-</div><div class="doc-container" id="Method--pdf_disposition_header">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>pdf_disposition_header</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_filename` Parameter is OPTIONAL, with the Default Value: &quot;file.pdf&quot;">$y_filename</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;file.pdf&quot;</b></span>, 
-			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_disp` Parameter is OPTIONAL, with the Default Value: &quot;inline&quot;">$y_disp</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;inline&quot;</b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
-	
-	
-			<div class="doc-method-ret-params">@return: {STRING} 'inline; filename=&quot;somedoc.pdf&quot;' or 'attachment; filename=&quot;somedoc.pdf&quot;'<br>
-@param: {STRING} $y_filename: The PDF Document file name: default is: file.pdf<br>
-@param: {ENUM} $y_disp: The content disposition, default is: inline ; can be also: attachment</div>
-	
-			<div class="doc-method-comments">Get the PDF Document FileName Header Data</div>
-	
-	
-	
-</div><div class="doc-container" id="Method--generate">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>generate</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_html_content` Parameter is REQUIRED">$y_html_content</span></b></span>, 
-			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_orientation` Parameter is OPTIONAL, with the Default Value: &quot;normal&quot;">$y_orientation</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;normal&quot;</b></span>, 
-			<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_allow_set_credentials` Parameter is OPTIONAL, with the Default Value: &quot;no&quot;">$y_allow_set_credentials</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;no&quot;</b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
-	
-	
-			<div class="doc-method-ret-params">@param: {STRING} $y_html_content: The HTML Code<br>
-@param: {ENUM} $y_orientation: Page Orientation: 'normal' | 'wide'<br>
-@param: {BOOLEAN} $y_allow_set_credentials: DEFAULT IS SET to NO ; if YES must be set just for internal URLs ; if set to AUTO will try to detect if can trust based on admin.php / index.php local framework scripts</div>
-	
-			<div class="doc-method-comments">Generate a PDF Document on the fly from a piece of HTML code.<br>
-Notice: this is using a secured cache folder, unique per visitor ID</div>
-	
-	
-	
 </div>
 <!-- Properties -->
 <br>
@@ -902,8 +864,8 @@ function smartHandleDocSelector(obj) {
 </script>
 <div class="doc-summary">
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
-		<option value="" selected>* PHP Class \SmartPdfExport # Documentation Index *</option>
-		<optgroup label="Class \SmartPdfExport">
+		<option value="" selected>* PHP Class \SmartModExtLib\PdfGenerate\HtmlToPdfExport # Documentation Index *</option>
+		<optgroup label="Class \SmartModExtLib\PdfGenerate\HtmlToPdfExport">
 			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
@@ -911,7 +873,9 @@ function smartHandleDocSelector(obj) {
 									<option value="Method--is_active"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;is_active()</option>
 			
 			
-									<option value="Method--is_svg2png_active"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;is_svg2png_active()</option>
+						
+			
+									<option value="Method--generate"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;generate()</option>
 			
 			
 									<option value="Method--tag_remove_start"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;tag_remove_start()</option>
@@ -930,15 +894,6 @@ function smartHandleDocSelector(obj) {
 			
 			
 									<option value="Method--tag_page_wide"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;tag_page_wide()</option>
-			
-			
-									<option value="Method--pdf_mime_header"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;pdf_mime_header()</option>
-			
-			
-									<option value="Method--pdf_disposition_header"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;pdf_disposition_header()</option>
-			
-			
-									<option value="Method--generate"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;generate()</option>
 			
 			
 			
@@ -968,7 +923,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-12-19 14:18:11 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-12-20 17:18:30 +0000</small>
 <hr>
 <br>
 <!-- # -->

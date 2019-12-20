@@ -5,10 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
-	<meta name="description" content="\SmartArchiverLZS        final class \ SmartArchiverLZS    {   } ::    Class: SmartArchiverLZS - Compress or Decompress a LZS archive. This is very slow">
-	<meta name="keywords" content="smartarchiverlzs, final, class, smartarchiverlzs, class, -, compress, or, decompress, a, lzs, archive., this, is, very, slow, with, large, strings, ., extremely, should, be, used, only, small, language, php, located, at, modules smart-extra-libs lib archlzs.php, package, extralibs archivers, namespace, name, version, v, depends, extensions, mbstring, classes, smart, smarthashcrypto, usage, static, object, class  method, provides, methods, public, function, compresstobas, string, input">
+	<meta name="description" content="\SmartModExtLib\JsComponents\ArchLzs        final class \SmartModExtLib\JsComponents\ ArchLzs    {   } ::    Class: ArchLzs - Compress or Decompress a LZS">
+	<meta name="keywords" content="smartmodextlib jscomponents archlzs, final, class, smartmodextlib jscomponents, archlzs, class, -, compress, or, decompress, a, lzs, archive., this, is, very, slow, with, large, strings, ., extremely, why, the, max, hardcoded, length, of, string, it, can, compress decompress, bytes, purpose, to, cookies, that, be, shared, also, javascript, version, available, in, modules mod-js-components views js arch-lzs arch-lzs.js, language, php, located, at, modules mod-js-components libs archlzs.php, package, modules archivers, namespace, name, version, v, depends, extensions, mbstring, classes, smart, smarthashcrypto, usage, static, object, class  method, provides, only, methods, public">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
-	<title>PHP Documentation for: \SmartArchiverLZS</title>
+	<title>PHP Documentation for: \SmartModExtLib\JsComponents\ArchLzs</title>
 	<!-- CSS and Fonts -->
 		<link rel="stylesheet" type="text/css" href="../fonts/source-sans-pro.css">
 	
@@ -459,7 +459,7 @@
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
-		<li><a href="index.html#Package--extralibsArchivers-" title="return to Index">return to Index</a></li>
+		<li><a href="index.html#Package--modulesArchivers-" title="return to Index">return to Index</a></li>
 	</ul>
 	
 </nav>
@@ -675,8 +675,8 @@ select#select-summary {
 
 </style>
 <!-- Headings -->
-<h1 title="PHP class: `\SmartArchiverLZS` @ PHP Namespace: `\`" id="Class--Summary-">
-	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\</span><span class="doc-name">SmartArchiverLZS</span><br>
+<h1 title="PHP class: `\SmartModExtLib\JsComponents\ArchLzs` @ PHP Namespace: `\SmartModExtLib\JsComponents\`" id="Class--Summary-">
+	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\SmartModExtLib\JsComponents\</span><span class="doc-name">ArchLzs</span><br>
 	
 	
 	{
@@ -684,19 +684,21 @@ select#select-summary {
 	}&nbsp;::
 </h1>
 <!-- Description -->
-<div class="doc-comments">Class: SmartArchiverLZS - Compress or Decompress a LZS archive.<br>
-This is very slow with large strings ... extremely slow !<br>
-Should be used only with very small strings !!</div><br>
+<div class="doc-comments">Class: ArchLzs - Compress or Decompress a LZS archive.<br>
+This is very slow with large strings ... extremely slow !!!<br>
+This is why the max (hardcoded) length of the string it can compress/decompress is 4096 bytes<br>
+The purpose of this class is to compress/decompress cookies that can be shared also with Javascript<br>
+The Javascript version of this class is available in modules/mod-js-components/views/js/arch-lzs/arch-lzs.js</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
 	<ul class="doc-list">
 		<li><span class="doc-language"><b>Language:</b> PHP<span></li>
-		<li><span class="doc-located"><b>Located at:</b> modules/smart-extra-libs/lib_archlzs.php</span></li>
-		<li><span class="doc-package"><b>Package:</b> extralibs:Archivers</span></li>
-		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
-		<li><span class="doc-name"><b>Class Name:</b> SmartArchiverLZS</span></li>
+		<li><span class="doc-located"><b>Located at:</b> modules/mod-js-components/libs/ArchLzs.php</span></li>
+		<li><span class="doc-package"><b>Package:</b> modules:Archivers</span></li>
+		<li><span class="doc-ns"><b>Namespace:</b> \SmartModExtLib\JsComponents\</span></li>
+		<li><span class="doc-name"><b>Class Name:</b> ArchLzs</span></li>
 		
-		<li><b>Version:</b> v.20191203</li>
+		<li><b>Version:</b> v.20191220</li>
 		<li><b>Depends:</b> extensions:  PHP MBString ; classes: Smart, SmartHashCrypto</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -762,7 +764,7 @@ Should be used only with very small strings !!</div><br>
 </div>
 <div class="doc-code">
 	<pre><code><!-- Smart/HTML.Cleaner [@] --><code><span style="color: #57A64A">
-<span style="color: #FFFFFF">&lt;?php<br><br></span><span style="color: #999999">//&nbsp;Usage&nbsp;example:<br>&nbsp;</span><span style="color: #FFFFFF">$myString&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;</span><span style="color: #5F9CCE">'Some&nbsp;string&nbsp;to&nbsp;archive&nbsp;as&nbsp;LZS'</span><span style="color: #FFCC00; font-weight: bold">;<br>&nbsp;</span><span style="color: #FFFFFF">$archString&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;</span><span style="color: #FFFFFF">SmartArchiverLZS</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">compressToBase64</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #FFFFFF">$myString</span><span style="color: #FFCC00; font-weight: bold">);&nbsp;</span><span style="color: #999999">//&nbsp;archive&nbsp;the&nbsp;string<br>&nbsp;</span><span style="color: #FFFFFF">$unarchString&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;</span><span style="color: #FFFFFF">SmartArchiverLZS</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">decompressFromBase64</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #FFFFFF">$archString</span><span style="color: #FFCC00; font-weight: bold">);&nbsp;</span><span style="color: #999999">//&nbsp;unarchive&nbsp;it&nbsp;back<br>&nbsp;</span><span style="color: #FFCC00; font-weight: bold">if((string)</span><span style="color: #FFFFFF">$unarchString&nbsp;</span><span style="color: #FFCC00; font-weight: bold">!==&nbsp;(string)</span><span style="color: #FFFFFF">$myString</span><span style="color: #FFCC00; font-weight: bold">)&nbsp;{&nbsp;</span><span style="color: #999999">//&nbsp;Test:&nbsp;check&nbsp;if&nbsp;unarchive&nbsp;is&nbsp;the&nbsp;same&nbsp;as&nbsp;archive<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FFCC00; font-weight: bold">@</span><span style="color: #FFFFFF">http_response_code</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #FFFFFF">500</span><span style="color: #FFCC00; font-weight: bold">);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;die(</span><span style="color: #5F9CCE">'LZS&nbsp;Archive&nbsp;test&nbsp;Failed&nbsp;!'</span><span style="color: #FFCC00; font-weight: bold">);<br>&nbsp;}&nbsp;</span><span style="color: #999999">//end&nbsp;if<br><br></span><span style="color: #FFFFFF">?&gt;</span>
+<span style="color: #FFFFFF">&lt;?php<br><br></span><span style="color: #999999">//&nbsp;Usage&nbsp;example:<br>&nbsp;</span><span style="color: #FFFFFF">$myString&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;</span><span style="color: #5F9CCE">'Some&nbsp;string&nbsp;to&nbsp;archive&nbsp;as&nbsp;LZS'</span><span style="color: #FFCC00; font-weight: bold">;<br>&nbsp;</span><span style="color: #FFFFFF">$archString&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;\</span><span style="color: #FFFFFF">SmartModExtLib</span><span style="color: #FFCC00; font-weight: bold">\</span><span style="color: #FFFFFF">JsComponents</span><span style="color: #FFCC00; font-weight: bold">\</span><span style="color: #FFFFFF">ArchLzs</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">compressToBase64</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #FFFFFF">$myString</span><span style="color: #FFCC00; font-weight: bold">);&nbsp;</span><span style="color: #999999">//&nbsp;archive&nbsp;the&nbsp;string<br>&nbsp;</span><span style="color: #FFFFFF">$unarchString&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;\</span><span style="color: #FFFFFF">SmartModExtLib</span><span style="color: #FFCC00; font-weight: bold">\</span><span style="color: #FFFFFF">JsComponents</span><span style="color: #FFCC00; font-weight: bold">\</span><span style="color: #FFFFFF">ArchLzs</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">decompressFromBase64</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #FFFFFF">$archString</span><span style="color: #FFCC00; font-weight: bold">);&nbsp;</span><span style="color: #999999">//&nbsp;unarchive&nbsp;it&nbsp;back<br>&nbsp;</span><span style="color: #FFCC00; font-weight: bold">if((string)</span><span style="color: #FFFFFF">$unarchString&nbsp;</span><span style="color: #FFCC00; font-weight: bold">!==&nbsp;(string)</span><span style="color: #FFFFFF">$myString</span><span style="color: #FFCC00; font-weight: bold">)&nbsp;{&nbsp;</span><span style="color: #999999">//&nbsp;Test:&nbsp;check&nbsp;if&nbsp;unarchive&nbsp;is&nbsp;the&nbsp;same&nbsp;as&nbsp;archive<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FFCC00; font-weight: bold">@</span><span style="color: #FFFFFF">http_response_code</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #FFFFFF">500</span><span style="color: #FFCC00; font-weight: bold">);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;die(</span><span style="color: #5F9CCE">'LZS&nbsp;Archive&nbsp;test&nbsp;Failed&nbsp;!'</span><span style="color: #FFCC00; font-weight: bold">);<br>&nbsp;}&nbsp;</span><span style="color: #999999">//end&nbsp;if<br><br></span><span style="color: #FFFFFF">?&gt;</span>
 </span>
 </code><!-- [/@] Smart/HTML.Cleaner --></code></pre>
 </div>
@@ -790,8 +792,8 @@ function smartHandleDocSelector(obj) {
 </script>
 <div class="doc-summary">
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
-		<option value="" selected>* PHP Class \SmartArchiverLZS # Documentation Index *</option>
-		<optgroup label="Class \SmartArchiverLZS">
+		<option value="" selected>* PHP Class \SmartModExtLib\JsComponents\ArchLzs # Documentation Index *</option>
+		<optgroup label="Class \SmartModExtLib\JsComponents\ArchLzs">
 			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
@@ -836,7 +838,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2019-12-19 14:18:13 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2019-12-20 17:18:30 +0000</small>
 <hr>
 <br>
 <!-- # -->
