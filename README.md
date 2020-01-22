@@ -7,7 +7,7 @@
 * Smart.Framework.Modules Javascript Classes
 
 ### About
-Copyright (c) 2009-2019, unix-world.org
+Copyright (c) 2009-2020, unix-world.org
 Author: Radu Ovidiu Ilies
 All rights reserved.
 License (dual, any of): BSD or GPLv3
