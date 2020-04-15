@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartMailerImap4Client        final class \ SmartMailerImap4Client    {   } -&gt;    Class: SmartMailerImap4Client - provides an IMAP4 Mail Client with">
-	<meta name="keywords" content="smartmailerima lient, final, class, smartmailerima lient, -, class, -, provides, an, ima, mail, client, with, ssl tls, support., language, php, located, at, lib core plugins lib mail get.php, package, plugins mailer, namespace, name, version, v, depends, classes, smart, hints, after, each, operation, on, the, server, should, check, ima error, string, and, if, non-empty, stop, disconnect, to, free, socket, usage, dynamic, object, new, class   - method, this, only, methods, public, function, construct, buffer, constructor, set ssl tls ca file, cafile, void, return, void, param, string, cafile, relative, path, a, ssl, certificate, authority, file, ex, store, within, smart-framework etc certificates, specify, as, etc certificates ca.pem, important, in, case, etc certificates, directory, must, be, protected, .htaccess, avoid, being, readable, any, files">
+	<meta name="keywords" content="smartmailerima lient, final, class, smartmailerima lient, -, class, -, provides, an, ima, mail, client, with, ssl tls, support., language, php, located, at, lib core plugins lib mail get.php, package, plugins mailer, namespace, name, version, v, depends, classes, smart, hints, after, each, operation, on, the, server, should, check, ima error, string, and, if, non-empty, stop, disconnect, to, free, socket, usage, dynamic, object, new, class   - method, this, only, methods, public, function, construct, buffer, constructor, is connected and logged in, get, connected, logged, in, status, get selected mailbox, selected, mailbox, on, will, be, available, just, connect, login, select, mailbox, clear last error, clear, last, error, set ssl tls ca file, cafile, void, return, void, param, string, cafile, relative, path, a, ssl, certificate, authority">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartMailerImap4Client</title>
 	<!-- CSS and Fonts -->
@@ -696,7 +696,7 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartMailerImap4Client</span></li>
 		
-		<li><b>Version:</b> v.20200121</li>
+		<li><b>Version:</b> v.20200414</li>
 		<li><b>Depends:</b> classes:  Smart</li>
 		<li><b>Hints:</b> After  each operation on the IMAP4 Server should check the $imap4-&gt;error string and if non-empty stop and disconnect to free the socket</li>
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -720,6 +720,42 @@ select#select-summary {
 	
 	
 			<div class="doc-method-comments">IMAP4 Client Class constructor</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--is_connected_and_logged_in">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>is_connected_and_logged_in</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	
+	
+	
+			<div class="doc-method-comments">Get The Connected + Logged In Status</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--get_selected_mailbox">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_selected_mailbox</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	
+	
+	
+			<div class="doc-method-comments">Get The Selected MailBox (on IMAP4 will be available just after connect + login + select mailbox)</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--clear_last_error">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>clear_last_error</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	
+	
+	
+			<div class="doc-method-comments">Clear the Last Error</div>
 	
 	
 	
@@ -787,7 +823,8 @@ Sends the command NOOP to the Server</div>
 	
 </div><div class="doc-container" id="Method--quit">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>quit</b></span>&nbsp;(
-		
+				<span class="doc-param-name"><b><span class="doc-param-optional" title="`$expunge` Parameter is OPTIONAL, with the Default Value: false">$expunge</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+	
 	
 	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;INTEGER+
 	
@@ -875,6 +912,7 @@ Unlike the POP3 servers the IMAP4 servers can operate on multiple MailBoxes over
 @param: {STRING} $msg_num: *Optional* A specific UID for a specific message or leave empty to get the list with all UIDs</div>
 	
 			<div class="doc-method-comments">Get the list of UIDs or a specific UID for the selected message<br>
+The UID(s) will be formated as this library does: 'IMAP4-UIV-@num@-UID-@uid@'<br>
 A list with multiple UIDs provided by this method can be parsed using $imap4-&gt;parse_uidls($list)</div>
 	
 	
@@ -884,20 +922,22 @@ A list with multiple UIDs provided by this method can be parsed using $imap4-&gt
 				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_list` Parameter is REQUIRED">$y_list</span></b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;ARRAY
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;ASSOCIATIVE
 	
 	
 			<div class="doc-method-ret-params">@hints: Some  IMAP4 servers have non-standard responses for the format of $mailget-&gt;uid() and in this case you may have to build your own parser ...<br>
-@return: {ARRAY} the list of parsed UIDs as [ id1 =&gt; uid1, id2 =&gt; uid2, ..., idN =&gt; uidN ]<br>
+@return: {ASSOCIATIVE} ARRAY the list of parsed UIDs as [ id1 =&gt; uid1, id2 =&gt; uid2, ..., idN =&gt; uidN ]<br>
 @param: {STRING} $y_list: The UIDs list given by the IMAP4 server with command: $mailget-&gt;uid() ; Expects a format similar with: ID[SPACE]UID\n</div>
 	
-			<div class="doc-method-comments">Parse the (standard) list of UIDs supplied IMAP4 protocol</div>
+			<div class="doc-method-comments">Parse the (standard) list of UIDs supplied IMAP4 protocol<br>
+The UIDs will be formated as this library does: 'IMAP4-UIV-@num@-UID-@uid@'</div>
 	
 	
 	
 </div><div class="doc-container" id="Method--size">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>size</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$msg_num` Parameter is REQUIRED">$msg_num</span></b></span>
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$msg_num` Parameter is REQUIRED">$msg_num</span></b></span>, 
+			<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$by_uid` Parameter is OPTIONAL, with the Default Value: false">$by_uid</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;STRING
@@ -905,7 +945,8 @@ A list with multiple UIDs provided by this method can be parsed using $imap4-&gt
 	
 			<div class="doc-method-ret-params">@hints: Some  servers may not comply with this method and may return empty result<br>
 @return: {STRING} the size of the selected message (ussualy in Bytes) or empty string if Error<br>
-@param: {STRING} $msg_num: The Message Number</div>
+@param: {STRING} $msg_num: The Message Number<br>
+@param: {BOOLEAN} $by_uid: *Optional* ; Default is FALSE ; If TRUE a Message UID should be supplied for 1st param ; If FALSE a Message Number should be supplied for 1st param</div>
 	
 			<div class="doc-method-comments">Get the size for the selected message</div>
 	
@@ -931,6 +972,7 @@ A list with multiple UIDs provided by this method can be parsed using $imap4-&gt
 </div><div class="doc-container" id="Method--header">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>header</b></span>&nbsp;(
 				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$msg_num` Parameter is REQUIRED">$msg_num</span></b></span>, 
+			<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$by_uid` Parameter is OPTIONAL, with the Default Value: false">$by_uid</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>, 
 			<i>INTEGER+</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$read_lines` Parameter is OPTIONAL, with the Default Value: 5">$read_lines</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>5</b></span>
 	
 	
@@ -939,6 +981,7 @@ A list with multiple UIDs provided by this method can be parsed using $imap4-&gt
 	
 			<div class="doc-method-ret-params">@return: {STRING} The first lines of the message body or empty string on ERROR<br>
 @param: {STRING} $msg_num: The Message Number<br>
+@param: {BOOLEAN} $by_uid: *Optional* ; Default is FALSE ; If TRUE a Message UID should be supplied for 1st param ; If FALSE a Message Number should be supplied for 1st param<br>
 @param: {INTEGER+} $read_lines: The number of lines to retrieve 1..255</div>
 	
 			<div class="doc-method-comments">Get the Message Head Lines (first lines of the message body)</div>
@@ -1069,6 +1112,15 @@ function smartHandleDocSelector(obj) {
 									<option value="Method--__construct"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;__construct()</option>
 			
 			
+									<option value="Method--is_connected_and_logged_in"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;is_connected_and_logged_in()</option>
+			
+			
+									<option value="Method--get_selected_mailbox"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_selected_mailbox()</option>
+			
+			
+									<option value="Method--clear_last_error"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;clear_last_error()</option>
+			
+			
 									<option value="Method--set_ssl_tls_ca_file"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;set_ssl_tls_ca_file()</option>
 			
 			
@@ -1157,7 +1209,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-01-21 19:23:04 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-04-15 15:29:58 +0000</small>
 <hr>
 <br>
 <!-- # -->

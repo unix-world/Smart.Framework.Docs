@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartMailerSend        final class \ SmartMailerSend    {   } -&gt;    Class: SmartMailerSend - provides a Mail Send Client that supports both: MAIL or SMTP">
-	<meta name="keywords" content="smartmailersend, final, class, smartmailersend, -, class, -, provides, a, mail, send, client, that, supports, both, or, smtp, with, ssl tls, support., it, automatically, includes, the, smartmailersmtpclient, when, sending, via, method., this, is, low, level, message, composer, and, utility, for, advanced, usage., if, defined, smart software mailsend safe rules, set, to, true, will, use, extra, safe, rules, composing, email, mime, messages, be, sent, ex, adding, alternate, text, body, html, messages, easy, use, smartmailerutils  send email, smartmailerutils  send extended email, functions., language, php, located, at, lib core plugins lib mail send.php, package, plugins mailer, namespace, name, version, v, depends, classes, smart, usage, dynamic, object, new, class   - method, only, methods, public, function, construct, constructor, enum, do send, string">
+	<meta name="keywords" content="smartmailersend, final, class, smartmailersend, -, class, -, provides, a, mail, send, client, that, supports, both, or, smtp, with, ssl tls, support., it, automatically, includes, the, smartmailersmtpclient, when, sending, via, method., this, is, low, level, message, composer, and, utility, for, advanced, usage., to, easy, email, messages, use, smartmailerutils  send email, smartmailerutils  send extended email, functions., language, php, located, at, lib core plugins lib mail send.php, package, plugins mailer, namespace, name, version, v, depends, classes, smart, usage, dynamic, object, new, class   - method, only, methods, public, function, construct, constructor, enum, do send, string, raw message, return, string, empty, if, success, error, on, failure, may, come, as, missing, some, required, compose, properties, and or, yes, will, also">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartMailerSend</title>
 	<!-- CSS and Fonts -->
@@ -689,7 +689,6 @@ select#select-summary {
 <div class="doc-comments">Class: SmartMailerSend - provides a Mail Send Client that supports both: MAIL or SMTP with SSL/TLS support.<br>
 It automatically includes the SmartMailerSmtpClient class when sending via SMTP method.<br>
 This class is a low level message composer and send utility for advanced usage.<br>
-If defined the SMART_SOFTWARE_MAILSEND_SAFE_RULES and set to TRUE will use extra safe rules when composing email mime messages to be sent (Ex: adding alternate TEXT body to HTML email messages)<br>
 To easy send email messages use: SmartMailerUtils::send_email() / SmartMailerUtils::send_extended_email() functions.</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
@@ -700,7 +699,7 @@ To easy send email messages use: SmartMailerUtils::send_email() / SmartMailerUti
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartMailerSend</span></li>
 		
-		<li><b>Version:</b> v.20200121</li>
+		<li><b>Version:</b> v.20200415</li>
 		<li><b>Depends:</b> classes:  Smart</li>
 		
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -826,8 +825,20 @@ default ''</div>
 	
 </div><div class="doc-container" id="Property--usealways_b64">
 	<span class="doc-modifiers">public</span> <b>$usealways_b64</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>TRUE</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>BOOLEAN</i>
-			<div class="doc-method-comments">If set to TRUE will encode using Base64Encode (the most safe)<br>
-Otherwise will use QuotePrintableEncode (the most used)</div>
+			<div class="doc-method-comments">If set to TRUE will encode using Base64 Encode for Subject, Body Parts and Attachments (the most safe)<br>
+Otherwise will use Q Encode for Subject, QuotePrintable Encode for Body Parts and Base64 Encode for Attachments (the most used)</div>
+	
+</div><div class="doc-container" id="Property--use_min_enc_subj">
+	<span class="doc-modifiers">public</span> <b>$use_min_enc_subj</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>TRUE</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>BOOLEAN</i>
+			<div class="doc-method-comments">If set to TRUE will use oportunistic encode of Subject (all or just parts) in a minimal way, using an auto algorithm to analyze it ; encode entire Subject or some parts of it ; and only if necessary ; it also may apply line wrapping on long subjects if necessary<br>
+Otherwise will use Base64 (if usealways_b64 is TRUE) or Q Encode (if usealways_b64 is FALSE)<br>
+Setting this to true may be a better choice for Anti-SPAM filters but some non-compliant email clients may not display the subjects correctly when encoded this way ...</div>
+	
+</div><div class="doc-container" id="Property--use_antispam_rules">
+	<span class="doc-modifiers">public</span> <b>$use_antispam_rules</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>TRUE</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>BOOLEAN</i>
+			<div class="doc-method-comments">If set to TRUE will use extra safe rules when composing email mime messages to be sent (Ex: adding alternate TEXT body to HTML email messages ; adding the X-AntiAbuse headers, ...)<br>
+Otherwise will make messages shorter by avoid embedding extra stuff that are required to better pass AntiSPAM Filters<br>
+Setting this to false may be a better choice for local messages but a bad choice for real world messages ...</div>
 	
 </div><div class="doc-container" id="Property--method">
 	<span class="doc-modifiers">public</span> <b>$method</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>'mail'</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>ENUM</i>
@@ -884,7 +895,7 @@ Ex: 'bcc@email101.ext'</div>
 	
 </div><div class="doc-container" id="Property--subject">
 	<span class="doc-modifiers">public</span> <b>$subject</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
-			<div class="doc-method-comments">Message Subject ; Ex: 'This is the subject of the email Message'</div>
+			<div class="doc-method-comments">Message Subject (max 127 characters) ; Ex: 'This is the subject of the email Message'</div>
 	
 </div><div class="doc-container" id="Property--body">
 	<span class="doc-modifiers">public</span> <b>$body</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
@@ -1023,6 +1034,10 @@ function smartHandleDocSelector(obj) {
 			
 									<option value="Property--usealways_b64"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$usealways_b64</option>
 			
+									<option value="Property--use_min_enc_subj"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$use_min_enc_subj</option>
+			
+									<option value="Property--use_antispam_rules"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$use_antispam_rules</option>
+			
 									<option value="Property--method"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$method</option>
 			
 									<option value="Property--is_html"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$is_html</option>
@@ -1092,7 +1107,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-01-21 19:23:04 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-04-15 15:29:58 +0000</small>
 <hr>
 <br>
 <!-- # -->

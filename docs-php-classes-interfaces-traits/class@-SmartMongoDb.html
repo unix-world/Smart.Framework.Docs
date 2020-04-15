@@ -697,7 +697,7 @@ Tested and Stable on MongoDB Server versions: 3.2 / 3.4 / 3.6 / 4.0 / 4.1 / 4.2 
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartMongoDb</span></li>
 		<li><span class="doc-throws"><b>Throws:</b> \Exception  : Depending how this class it is constructed it may throw Exception or Raise Fatal Error</span></li>
-		<li><b>Version:</b> v.20200121</li>
+		<li><b>Version:</b> v.20200227</li>
 		<li><b>Depends:</b> extensions:  PHP MongoDB (v.1.1.0 or later) ; classes: Smart</li>
 		<li><b>Hints:</b> Important:  MongoDB database specifies that max BSON document size is 16 megabytes and supports no more than 100 levels of nesting, thus this limit cannot be exceeded from PHP side when creating new mongodb documents: https://docs.mongodb.com/manual/reference/limits/ ; To store documents larger than the maximum size, MongoDB provides the GridFS API</li>
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -872,7 +872,7 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
  $update = $mongo-&gt;update(
  		<span class="hljs-string">'myTestCollection'</span>,
  		[ <span class="hljs-string">'id'</span> =&gt; <span class="hljs-string">'XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX'</span> ], 			<span class="hljs-comment">// filter (update only this)</span>
- 		<span class="hljs-string">'$set'</span>, 														<span class="hljs-comment">// increment operation</span>
+ 		<span class="hljs-string">'$set'</span>, 													<span class="hljs-comment">// increment operation</span>
  		(<span class="hljs-keyword">array</span>) $doc												<span class="hljs-comment">// update array</span>
  	);
  $doc = [];
@@ -880,15 +880,18 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
 
 <span class="hljs-comment">// Sample Upsert</span>
  $doc = [];
- $doc[<span class="hljs-string">'id'</span>]  = <span class="hljs-string">'XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX'</span>; <span class="hljs-comment">// comes from $mongo-&gt;assign_uuid();</span>
+ $docID  = <span class="hljs-string">'XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX'</span>; <span class="hljs-comment">// comes from $mongo-&gt;assign_uuid();</span>
  $doc[<span class="hljs-string">'name'</span>] = <span class="hljs-string">'My Newest Name'</span>;
  $doc[<span class="hljs-string">'description'</span>] = <span class="hljs-string">'Some description goes here ...'</span>;
  <span class="hljs-keyword">try</span> {
  		$upsert = $mongo-&gt;upsert(
  			<span class="hljs-string">'myTestCollection'</span>,
- 			[ <span class="hljs-string">'id'</span> =&gt; $doc[<span class="hljs-string">'id'</span>] ], 	<span class="hljs-comment">// filter (update only this)</span>
- 			<span class="hljs-string">'$set'</span>, 					<span class="hljs-comment">// increment operation</span>
- 			(<span class="hljs-keyword">array</span>) $doc			<span class="hljs-comment">// update array</span>
+ 			[ <span class="hljs-string">'id'</span> =&gt; $docID ], 								<span class="hljs-comment">// filter (update only this)</span>
+ 			[ <span class="hljs-comment">// also the $mongo-&gt;update() can use this style of associative array</span>
+ 				<span class="hljs-string">'$setOnInsert'</span> 	=&gt; (<span class="hljs-keyword">array</span>) [ <span class="hljs-string">'id'</span> =&gt; $docID ], 						<span class="hljs-comment">// just on insert</span>
+ 				<span class="hljs-string">'$set'</span> 			=&gt; (<span class="hljs-keyword">array</span>) $doc, 									<span class="hljs-comment">// update array</span>
+ 				<span class="hljs-string">'$addToSet'</span> 	=&gt; (<span class="hljs-keyword">array</span>) [ <span class="hljs-string">'updated'</span> =&gt; date(<span class="hljs-string">'Y-m-d H:i:s'</span>) ] 	<span class="hljs-comment">// update array #2 using $addToSet (can be also: $push or $inc, ...)</span>
+ 			]
  		);
  } <span class="hljs-keyword">catch</span>(\<span class="hljs-keyword">Exception</span> $err) {
  		<span class="hljs-comment">// if upsert goes wrong ...</span>
@@ -1023,8 +1026,8 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
 			<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-sub-name"><b>upsert</b></span>&nbsp;(
 							<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$strCollection` Parameter is REQUIRED">$strCollection</span></b></span>, 
 							<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span title="`$arrFilter` Parameter is REQUIRED">$arrFilter</span></b></span>, 
-							<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$strUpdOp` Parameter is REQUIRED">$strUpdOp</span></b></span>, 
-							<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span title="`$arrUpd` Parameter is REQUIRED">$arrUpd</span></b></span>
+							<i>MIXED</i>&nbsp;<span class="doc-param-name"><b><span title="`$strUpdOpOrArrUpd` Parameter is REQUIRED">$strUpdOpOrArrUpd</span></b></span>, 
+							<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$arrUpd` Parameter is OPTIONAL">$arrUpd</span></b></span>
 			
 			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;MIXED
 			<div class="doc-method-ret-params">
@@ -1033,20 +1036,20 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
 			
 							@param {STRING} $strCollection<br>
 							@param {ARRAY} $arrFilter<br>
-							@param {STRING} $strUpdOp<br>
+							@param {MIXED} $strUpdOpOrArrUpd<br>
 							@param {ARRAY} $arrUpd<br>
 			
 			
 			</div>
-							<div class="doc-method-comments">insert single or modify single or multi documents in a collection that are matching the filter criteria ; this is always non-fatal, will throw catcheable exception on error ...</div>
+							<div class="doc-method-comments">insert single or modify single or multi documents in a collection that are matching the filter criteria</div>
 			
 			</div>
 					<div class="doc-container" id="Method-Sub--update">
 			<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-sub-name"><b>update</b></span>&nbsp;(
 							<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$strCollection` Parameter is REQUIRED">$strCollection</span></b></span>, 
 							<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span title="`$arrFilter` Parameter is REQUIRED">$arrFilter</span></b></span>, 
-							<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$strUpdOp` Parameter is REQUIRED">$strUpdOp</span></b></span>, 
-							<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span title="`$arrUpd` Parameter is REQUIRED">$arrUpd</span></b></span>
+							<i>MIXED</i>&nbsp;<span class="doc-param-name"><b><span title="`$strUpdOpOrArrUpd` Parameter is REQUIRED">$strUpdOpOrArrUpd</span></b></span>, 
+							<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$arrUpd` Parameter is OPTIONAL">$arrUpd</span></b></span>
 			
 			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;MIXED
 			<div class="doc-method-ret-params">
@@ -1055,7 +1058,7 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
 			
 							@param {STRING} $strCollection<br>
 							@param {ARRAY} $arrFilter<br>
-							@param {STRING} $strUpdOp<br>
+							@param {MIXED} $strUpdOpOrArrUpd<br>
 							@param {ARRAY} $arrUpd<br>
 			
 			
@@ -1138,7 +1141,7 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
 </div>
 <div class="doc-code">
 	<pre><code><!-- Smart/HTML.Cleaner [@] --><code><span style="color: #57A64A">
-<span style="color: #FFFFFF">&lt;?php<br><br></span><span style="color: #999999">//&nbsp;sample&nbsp;mongo&nbsp;config<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;array();<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'type'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="color: #5F9CCE">'mongo-standalone'</span><span style="color: #FFCC00; font-weight: bold">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999999">//&nbsp;mongodb&nbsp;server(s)&nbsp;type:&nbsp;'mongo-standalone'&nbsp;|&nbsp;'mongo-cluster'&nbsp;(sharding)<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'server-host'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="color: #5F9CCE">'127.0.0.1'</span><span style="color: #FFCC00; font-weight: bold">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999999">//&nbsp;mongodb&nbsp;host<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'server-port'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="color: #5F9CCE">'27017'</span><span style="color: #FFCC00; font-weight: bold">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999999">//&nbsp;mongodb&nbsp;port<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'dbname'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="color: #5F9CCE">'smart_framework'</span><span style="color: #FFCC00; font-weight: bold">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999999">//&nbsp;mongodb&nbsp;database<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'username'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="color: #5F9CCE">''</span><span style="color: #FFCC00; font-weight: bold">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999999">//&nbsp;mongodb&nbsp;username<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'password'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="color: #5F9CCE">''</span><span style="color: #FFCC00; font-weight: bold">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999999">//&nbsp;mongodb&nbsp;Base64-Encoded&nbsp;password<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'timeout'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="color: #FFFFFF">5</span><span style="color: #FFCC00; font-weight: bold">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999999">//&nbsp;mongodb&nbsp;connect&nbsp;timeout&nbsp;in&nbsp;seconds<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'slowtime'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="color: #FFFFFF">0.0035</span><span style="color: #FFCC00; font-weight: bold">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999999">//&nbsp;0.0025&nbsp;..&nbsp;0.0090&nbsp;slow&nbsp;query&nbsp;time&nbsp;(for&nbsp;debugging)<br><br>&nbsp;//&nbsp;sample&nbsp;mongo&nbsp;connect<br>&nbsp;</span><span style="color: #FFFFFF">$mongo&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;new&nbsp;\</span><span style="color: #FFFFFF">SmartMongoDb</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">);<br><br></span><span style="color: #FFFFFF">?&gt;</span>
+<span style="color: #FFFFFF">&lt;?php<br><br></span><span style="color: #999999">//&nbsp;sample&nbsp;mongo&nbsp;config<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;array();<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'type'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="color: #5F9CCE">'mongo-standalone'</span><span style="color: #FFCC00; font-weight: bold">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999999">//&nbsp;mongodb&nbsp;server(s)&nbsp;type:&nbsp;'mongo-standalone'&nbsp;|&nbsp;'mongo-cluster'&nbsp;(sharding)&nbsp;|&nbsp;'mongo-replica-set:My-Replica'&nbsp;(replica&nbsp;set)<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'server-host'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="color: #5F9CCE">'127.0.0.1'</span><span style="color: #FFCC00; font-weight: bold">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999999">//&nbsp;mongodb&nbsp;host&nbsp;or&nbsp;comma&nbsp;separed&nbsp;list&nbsp;of&nbsp;multiple&nbsp;hosts<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'server-port'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="color: #5F9CCE">'27017'</span><span style="color: #FFCC00; font-weight: bold">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999999">//&nbsp;mongodb&nbsp;port<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'dbname'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="color: #5F9CCE">'smart_framework'</span><span style="color: #FFCC00; font-weight: bold">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999999">//&nbsp;mongodb&nbsp;database<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'username'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="color: #5F9CCE">''</span><span style="color: #FFCC00; font-weight: bold">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999999">//&nbsp;mongodb&nbsp;username<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'password'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="color: #5F9CCE">''</span><span style="color: #FFCC00; font-weight: bold">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999999">//&nbsp;mongodb&nbsp;Base64-Encoded&nbsp;password<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'timeout'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="color: #FFFFFF">5</span><span style="color: #FFCC00; font-weight: bold">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999999">//&nbsp;mongodb&nbsp;connect&nbsp;timeout&nbsp;in&nbsp;seconds<br>&nbsp;</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">[</span><span style="color: #5F9CCE">'slowtime'</span><span style="color: #FFCC00; font-weight: bold">]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=&nbsp;</span><span style="color: #FFFFFF">0.0035</span><span style="color: #FFCC00; font-weight: bold">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #999999">//&nbsp;0.0025&nbsp;..&nbsp;0.0090&nbsp;slow&nbsp;query&nbsp;time&nbsp;(for&nbsp;debugging)<br><br>&nbsp;//&nbsp;sample&nbsp;mongo&nbsp;connect<br>&nbsp;</span><span style="color: #FFFFFF">$mongo&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;new&nbsp;\</span><span style="color: #FFFFFF">SmartMongoDb</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #FFFFFF">$cfg_mongo</span><span style="color: #FFCC00; font-weight: bold">);<br><br></span><span style="color: #FFFFFF">?&gt;</span>
 </span>
 </code><!-- [/@] Smart/HTML.Cleaner --></code></pre>
 </div>
@@ -1236,7 +1239,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-01-21 19:23:05 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-04-15 15:30:00 +0000</small>
 <hr>
 <br>
 <!-- # -->

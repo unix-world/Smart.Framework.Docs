@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartUtils        final class \ SmartUtils    {   } ::    Class: SmartUtils - provides various utility functions for Smart.Framework     Language: PHP">
-	<meta name="keywords" content="smartutils, final, class, smartutils, class, -, provides, various, utility, functions, for, smart.framework, language, php, located, at, lib framework lib utils.php, package, core extra, namespace, name, version, v, depends, classes, smart, smartvalidator, smarthashcrypto, smartauth, smartfilesysutils, smartfilesystem, usage, static, object, class  method, this, only, methods, public, function, cookie default domain, get cookie, cookie name, set cookie, cookie data, expire time, cookie path, cookie domain, unset cookie, url hex encode, y val, url hex decode, y enc val, check ip in range, lower range ip address, upper range ip address, needle ip address, date interval days, y date now, y date past, datetime fixed offset, y timezone offset, ydate, data archive, y str, data unarchive, y enc data, comment php code, y code, y repl, array tag-start, -, tag-end, -, pretty print var, y var, indent">
+	<meta name="keywords" content="smartutils, final, class, smartutils, class, -, provides, various, utility, functions, for, smart.framework, language, php, located, at, lib framework lib utils.php, package, core extra, namespace, name, version, v, depends, classes, smart, smartvalidator, smarthashcrypto, smartauth, smartfilesysutils, smartfilesystem, usage, static, object, class  method, this, only, methods, public, function, cookies current size used on domain, cookie size max, cookie default domain, get cookie, cookie name, set cookie, cookie data, expire time, cookie path, cookie domain, unset cookie, url hex encode, y val, url hex decode, y enc val, check ip in range, lower range ip address, upper range ip address, needle ip address, date interval days, y date now, y date past, datetime fixed offset, y timezone offset, ydate, data archive, y str, data unarchive, y enc data, comment php code, y code, y repl, array tag-start, -, tag-end, -, pretty print var, y var, indent">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartUtils</title>
 	<!-- CSS and Fonts -->
@@ -696,7 +696,7 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartUtils</span></li>
 		
-		<li><b>Version:</b> v.20200121</li>
+		<li><b>Version:</b> v.20200403</li>
 		<li><b>Depends:</b> classes:  Smart, SmartValidator, SmartHashCrypto, SmartAuth, SmartFileSysUtils, SmartFileSystem</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -710,7 +710,29 @@ select#select-summary {
 	<h2 class="doc-header">class Methods</h2>
 </div>
 <!-- methods r.20200121 -->
-<div class="doc-container" id="Method--cookie_default_domain">
+<div class="doc-container" id="Method--cookies_current_size_used_on_domain">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>cookies_current_size_used_on_domain</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
+	
+	
+	
+	
+	
+	
+</div><div class="doc-container" id="Method--cookie_size_max">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>cookie_size_max</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
+	
+	
+	
+	
+	
+	
+</div><div class="doc-container" id="Method--cookie_default_domain">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>cookie_default_domain</b></span>&nbsp;(
 		
 	
@@ -881,7 +903,8 @@ select#select-summary {
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>pretty_print_bytes</b></span>&nbsp;(
 				<span class="doc-param-name"><b><span title="`$y_bytes` Parameter is REQUIRED">$y_bytes</span></b></span>, 
 			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_decimals` Parameter is OPTIONAL, with the Default Value: 1">$y_decimals</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>1</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_separator` Parameter is OPTIONAL, with the Default Value: &quot; &quot;">$y_separator</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot; &quot;</b></span>
+			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_separator` Parameter is OPTIONAL, with the Default Value: &quot; &quot;">$y_separator</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot; &quot;</b></span>, 
+			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_base` Parameter is OPTIONAL, with the Default Value: 1000">$y_base</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>1000</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
@@ -1404,10 +1427,13 @@ select#select-summary {
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_ip_client</b></span>&nbsp;(
 		
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
 	
 	
+			<div class="doc-method-ret-params">@return: {STRING} IP Address ; if no address detected will RAISE an ERROR ...</div>
 	
+			<div class="doc-method-comments">Get the Client real IP such as: REMOTE_ADDR<br>
+This function should be used always across the Smart.Framework to get the client's real IP and never must use directly REMOTE_ADDR as it may change when using apache/php behind haproxy or varnish and in this case the HTTP_X_FORWARDED_FOR will return client's real IP address by example !</div>
 	
 	
 	
@@ -1415,10 +1441,13 @@ select#select-summary {
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_ip_proxyclient</b></span>&nbsp;(
 		
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
 	
 	
+			<div class="doc-method-ret-params">@return: {STRING} IP Address or a space (if no proxy address detected)</div>
 	
+			<div class="doc-method-comments">Get the Client Proxy IP if any such as: HTTP_CLIENT_IP or HTTP_X_FORWARDED_FOR<br>
+This function should be used always across the Smart.Framework to get the client's proxy IP and never must use directly HTTP_CLIENT_IP or HTTP_X_FORWARDED_FOR as they may change when using apache/php behind haproxy or varnish !</div>
 	
 	
 	
@@ -1481,6 +1510,12 @@ function smartHandleDocSelector(obj) {
 		</optgroup>
 		<optgroup label="Class Methods">
 			<option value="Methods--Summary-">Methods list</option>
+									<option value="Method--cookies_current_size_used_on_domain"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;cookies_current_size_used_on_domain()</option>
+			
+			
+									<option value="Method--cookie_size_max"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;cookie_size_max()</option>
+			
+			
 									<option value="Method--cookie_default_domain"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;cookie_default_domain()</option>
 			
 			
@@ -1686,7 +1721,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-01-21 19:23:03 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-04-15 15:29:57 +0000</small>
 <hr>
 <br>
 <!-- # -->
