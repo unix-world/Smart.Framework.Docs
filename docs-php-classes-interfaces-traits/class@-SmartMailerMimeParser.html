@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartMailerMimeParser        final class \ SmartMailerMimeParser    {   } ::    Class: SmartMailerMimeParser - provides an easy to use eMail MIME Parser.">
-	<meta name="keywords" content="smartmailermimeparser, final, class, smartmailermimeparser, class, -, provides, an, easy, to, use, email, mime, parser., language, php, located, at, lib core plugins lib mail utils.php, package, plugins mailer, namespace, name, version, v, depends, classes, smart, smartutils, smartfilesysutils, smartfilesystem, smartmailermimedecode, usage, static, object, class  method, this, only, methods, public, function, encode mime fileurl, string, y msg file, y ctrl key, return, string, the, encoded, and, encrypted, url, segment, param, y msg file, relative, path, .eml, message, file, y ctrl key, encryption, private, key, encode, encrypts, a, using, crypto, algo, defined, in, smart framework security crypto, or, hash sh, as, fallback, it, takes">
+	<meta name="keywords" content="smartmailermimeparser, final, class, smartmailermimeparser, class, -, provides, an, easy, to, use, email, mime, parser., language, php, located, at, lib core plugins lib mail utils.php, package, plugins mailer, namespace, name, version, v, depends, classes, smart, smartutils, smartfilesysutils, smartfilesystem, smartmailermimedecode, smartmailernotes, usage, static, object, class  method, this, only, methods, public, function, encode mime fileurl, string, y msg file, y ctrl key, return, string, the, encoded, and, encrypted, url, segment, param, y msg file, relative, path, .eml, message, file, y ctrl key, encryption, private, key, encode, encrypts, a, using, crypto, algo, defined, in, smart framework security crypto, or, hash sh, as, fallback, it, takes, account">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartMailerMimeParser</title>
 	<!-- CSS and Fonts -->
@@ -696,8 +696,8 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartMailerMimeParser</span></li>
 		
-		<li><b>Version:</b> v.20200415</li>
-		<li><b>Depends:</b> classes:  Smart, SmartUtils, SmartFileSysUtils, SmartFileSystem, SmartMailerMimeDecode</li>
+		<li><b>Version:</b> v.20200420</li>
+		<li><b>Depends:</b> classes:  Smart, SmartUtils, SmartFileSysUtils, SmartFileSystem, SmartMailerMimeDecode, SmartMailerNotes</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
 		
@@ -749,7 +749,8 @@ It takes in account if the User is Authenticated or not</div>
 	
 </div><div class="doc-container" id="Method--display_message">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>display_message</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$y_enc_msg_file` Parameter is REQUIRED">$y_enc_msg_file</span></b></span>, 
+				<span class="doc-param-name"><b><span title="`$y_msg_type` Parameter is REQUIRED">$y_msg_type</span></b></span>, 
+			<span class="doc-param-name"><b><span title="`$y_enc_msg_file` Parameter is REQUIRED">$y_enc_msg_file</span></b></span>, 
 			<span class="doc-param-name"><b><span title="`$y_ctrl_key` Parameter is REQUIRED">$y_ctrl_key</span></b></span>, 
 			<span class="doc-param-name"><b><span title="`$y_link` Parameter is REQUIRED">$y_link</span></b></span>, 
 			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_target` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_target</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
@@ -769,7 +770,8 @@ It takes in account if the User is Authenticated or not</div>
 	
 </div><div class="doc-container" id="Method--get_message_data_structure">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_message_data_structure</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$y_enc_msg_file` Parameter is REQUIRED">$y_enc_msg_file</span></b></span>, 
+				<span class="doc-param-name"><b><span title="`$y_msg_type` Parameter is REQUIRED">$y_msg_type</span></b></span>, 
+			<span class="doc-param-name"><b><span title="`$y_enc_msg_file` Parameter is REQUIRED">$y_enc_msg_file</span></b></span>, 
 			<span class="doc-param-name"><b><span title="`$y_ctrl_key` Parameter is REQUIRED">$y_ctrl_key</span></b></span>, 
 			<span class="doc-param-name"><b><span title="`$y_process_mode` Parameter is REQUIRED">$y_process_mode</span></b></span>, 
 			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_link` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_link</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
@@ -872,7 +874,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-04-15 15:29:58 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-05-11 14:17:53 +0000</small>
 <hr>
 <br>
 <!-- # -->

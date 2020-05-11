@@ -736,7 +736,8 @@ IP address and the browser signature of the client. The Smart Session provides a
 			<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_user_metadata` Parameter is OPTIONAL, with the Default Value: array()">$y_user_metadata</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>array()</b></span>, 
 			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_realm` Parameter is OPTIONAL, with the Default Value: &quot;DEFAULT&quot;">$y_realm</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;DEFAULT&quot;</b></span>, 
 			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_method` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_method</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_pass` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_pass</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_pass` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_pass</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
+			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_keys` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_keys</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOLEAN
@@ -752,7 +753,8 @@ IP address and the browser signature of the client. The Smart Session provides a
 @param: {ARRAY} $y_user_metadata: *OPTIONAL* The user metainfo, associative array key =&gt; value<br>
 @param: {STRING} $y_realm: *OPTIONAL* The user Authentication Realm(s)<br>
 @param: {ENUM} $y_method: *OPTIONAL* The authentication method used: HTTP-BASIC / HTTP-DIGEST / OTHER<br>
-@param: {STRING} $y_pass: *OPTIONAL* The user login password (will be stored in memory as Blowfish encrypted to avoid exposure)</div>
+@param: {STRING} $y_pass: *OPTIONAL* The user login password (will be stored in memory as encrypted to avoid exposure)<br>
+@param: {STRING} $y_keys: *OPTIONAL* The encrypted user privacy-keys (will be stored in memory as encrypted to avoid exposure)</div>
 	
 			<div class="doc-method-comments">Set the (in-memory) Auth Login Data<br>
 It can be used just once per execution (session) as it stores the data using constants,<br>
@@ -796,6 +798,19 @@ and the data cannot be changed after a successful or failed authentication has s
 			<div class="doc-method-ret-params">@return: {STRING} The plain password if was set or empty string</div>
 	
 			<div class="doc-method-comments">Get the auth (safe) stored password from (in-memory)</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--get_login_privkey">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_login_privkey</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} The plain privacy-key if was set and valid or empty string</div>
+	
+			<div class="doc-method-comments">Get the auth (safe) stored privacy-key from (in-memory)</div>
 	
 	
 	
@@ -958,6 +973,44 @@ and the data cannot be changed after a successful or failed authentication has s
 	
 	
 	
+</div><div class="doc-container" id="Method--decrypt_privkey">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>decrypt_privkey</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_pkey` Parameter is REQUIRED">$y_pkey</span></b></span>, 
+			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_pass` Parameter is REQUIRED">$y_pass</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} returns a string with the privacy-key (decrypted, if any, and if valid) which was supposed to be provided as encrypted<br>
+@param: {STRING} $y_pkey: The private key to be decrypted<br>
+@param: {STRING} $y_pass: The encryption password</div>
+	
+			<div class="doc-method-comments">Decrypt a private key using a password, using Blowfish CBC<br>
+The provided password have to be the same as the login password for the user is being used to avoid decryption of the key by other users<br>
+This is completely safe as long as the users login passwords are supposed to be stored as ireversible hashes (by default they are ... but with custom login implementations they can be or not, depending the developer's choice)</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--encrypt_privkey">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>encrypt_privkey</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_pkey` Parameter is REQUIRED">$y_pkey</span></b></span>, 
+			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_pass` Parameter is REQUIRED">$y_pass</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} returns a string with the safe encrypted privacy-key or empty string if was empty<br>
+@param: {STRING} $y_pkey: The private key to be safe encrypted<br>
+@param: {STRING} $y_pass: The encryption password</div>
+	
+			<div class="doc-method-comments">Safe Encrypt a private key using a password, using Blowfish CBC<br>
+The provided password have to be the same as the login password for the user is being used to avoid decryption of the key by other users<br>
+This is completely safe as long as the users login passwords are supposed to be stored as ireversible hashes (by default they are ... but with custom login implementations they can be or not, depending the developer's choice)</div>
+	
+	
+	
 </div><!-- Skip Internal-Priv Method: `registerInternalCacheToDebugLog()` -->
 <!-- Properties -->
 <br>
@@ -1026,6 +1079,9 @@ function smartHandleDocSelector(obj) {
 									<option value="Method--get_login_password"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_login_password()</option>
 			
 			
+									<option value="Method--get_login_privkey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_login_privkey()</option>
+			
+			
 									<option value="Method--get_login_data"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_login_data()</option>
 			
 			
@@ -1062,6 +1118,12 @@ function smartHandleDocSelector(obj) {
 									<option value="Method--build_arr_privileges"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;build_arr_privileges()</option>
 			
 			
+									<option value="Method--decrypt_privkey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;decrypt_privkey()</option>
+			
+			
+									<option value="Method--encrypt_privkey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;encrypt_privkey()</option>
+			
+			
 						
 			
 			
@@ -1094,7 +1156,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-04-15 15:29:57 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-05-11 14:17:51 +0000</small>
 <hr>
 <br>
 <!-- # -->

@@ -698,7 +698,7 @@ Tested and Stable on Redis versions: 2.6.x / 2.8.x / 3.0.x / 3.2.x / 4.x / 5.x</
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartRedisDb</span></li>
 		
-		<li><b>Version:</b> v.20200302</li>
+		<li><b>Version:</b> v.20200504</li>
 		<li><b>Depends:</b> extensions:  PHP Sockets ; classes: Smart</li>
 		<li><b>Hints:</b> for  the rest of supported methods take a look at the SmartRedisDb class magic __call method ; Visit: http://redis.io/commands ; Most of the base methods are implemented.</li>
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -761,7 +761,9 @@ If no value is provided for Host, Port and DbNum it will use the values from the
 	
 			<div class="doc-method-comments">This is the Magic Method (Call) that maps the PHP class extra methods to Redis methods.<br>
 It have variadic parameters mapped to Redis sub-calls.<br>
-The most common Redis methods are documented here. For the rest of the Redis methods see: https://redis.io/commands</div>
+The most common Redis methods are documented here. For the rest of the Redis methods see: https://redis.io/commands<br>
+There are some methods that are not available in this driver because they need to use more than one database and this is not supported (this driver binds to only one database at a time). Example: MOVE (but MOVE can be emulated with an example by using two Redis instances that will GET the key from DB#1/connection#1 SET the key in DB#2/connection#2 and if successful UNSET the key from DB#1/connection#1)<br>
+NOTICE: Not all Redis methods were ported to this driver but the most essential methods are available.</div>
 	
 	
 			<br>
@@ -777,6 +779,78 @@ The most common Redis methods are documented here. For the rest of the Redis met
 			
 			</div>
 							<div class="doc-method-comments">Ping the Redis server ; returns: the test answer which is always PONG</div>
+			
+			</div>
+					<div class="doc-container" id="Method-Sub--watch">
+			<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-sub-name"><b>watch</b></span>&nbsp;(
+							<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$keys` Parameter is REQUIRED">$keys</span></b></span>
+			
+			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;STRING
+			<div class="doc-method-ret-params">
+			@magic __call()<br>
+										@return {STRING}<br>
+			
+							@param {STRING} $keys<br>
+			
+			
+			</div>
+							<div class="doc-method-comments">Must be used before starting the transaction (MULTI) ; Marks the given key(s) to be watched for conditional execution of a transaction ; A single key can be passed as 'key1'; If multiple keys have to be passed they have to be separed by comma as: 'key1, key2' ; This method always return: OK</div>
+			
+			</div>
+					<div class="doc-container" id="Method-Sub--unwatch">
+			<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-sub-name"><b>unwatch</b></span>&nbsp;(
+			
+			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;STRING
+			<div class="doc-method-ret-params">
+			@magic __call()<br>
+										@return {STRING}<br>
+			
+			
+			
+			</div>
+							<div class="doc-method-comments">Can be used after ending the transaction (EXEC) ; Flushes all the previously watched keys for a transaction ; If EXEC or DISCARD, there's not mandatory to manually call UNWATCH ; This method always return: OK</div>
+			
+			</div>
+					<div class="doc-container" id="Method-Sub--multi">
+			<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-sub-name"><b>multi</b></span>&nbsp;(
+			
+			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;STRING
+			<div class="doc-method-ret-params">
+			@magic __call()<br>
+										@return {STRING}<br>
+			
+			
+			
+			</div>
+							<div class="doc-method-comments">Marks the start of a transaction block. Subsequent commands will be queued for atomic execution using EXEC ; This method always return: OK ; NOTICE: all subsequent commands when used in a transaction block will return: QUEUED (instead of OK, 1, ... or other responses)</div>
+			
+			</div>
+					<div class="doc-container" id="Method-Sub--exec">
+			<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-sub-name"><b>exec</b></span>&nbsp;(
+			
+			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;ARRAY
+			<div class="doc-method-ret-params">
+			@magic __call()<br>
+										@return {ARRAY}<br>
+			
+			
+			
+			</div>
+							<div class="doc-method-comments">Executes all previously queued commands in a transaction started by MULTI ; When using WATCH before MULTI, EXEC will execute commands only if the watched keys were not modified, allowing for a check-and-set mechanism ; if using DISCARD all the statements before DISCARD will be discarded and will not be executed ; When using WATCH, EXEC can return a Null reply if the execution was aborted ; If not a Null reply the returned array looks like [ 0 =&gt; OK, 1 =&gt; OK, ..., 2 =&gt; 1, ..., 5 =&gt; OK ] (non-associative array), each entry represent the result of each statement after EXEC</div>
+			
+			</div>
+					<div class="doc-container" id="Method-Sub--discard">
+			<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-sub-name"><b>discard</b></span>&nbsp;(
+			
+			)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;STRING
+			<div class="doc-method-ret-params">
+			@magic __call()<br>
+										@return {STRING}<br>
+			
+			
+			
+			</div>
+							<div class="doc-method-comments">Flushes all previously queued commands in a transaction ; If required, must be called withing transaction (after MULTI and before EXEC) ; This method always return: OK</div>
 			
 			</div>
 					<div class="doc-container" id="Method-Sub--exists">
@@ -1188,6 +1262,11 @@ function smartHandleDocSelector(obj) {
 									<option value="Method--__call"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;__call()</option>
 			
 									<option value="Method-Sub--ping">&nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;ping()</option>
+						<option value="Method-Sub--watch">&nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;watch()</option>
+						<option value="Method-Sub--unwatch">&nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;unwatch()</option>
+						<option value="Method-Sub--multi">&nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;multi()</option>
+						<option value="Method-Sub--exec">&nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;exec()</option>
+						<option value="Method-Sub--discard">&nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;discard()</option>
 						<option value="Method-Sub--exists">&nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;exists()</option>
 						<option value="Method-Sub--get">&nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get()</option>
 						<option value="Method-Sub--set">&nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;set()</option>
@@ -1244,7 +1323,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-04-15 15:30:00 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-05-11 14:17:54 +0000</small>
 <hr>
 <br>
 <!-- # -->

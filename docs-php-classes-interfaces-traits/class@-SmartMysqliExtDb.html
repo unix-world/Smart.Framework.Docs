@@ -700,7 +700,7 @@ Tested and Stable with Percona Server versions: 5.5.x / 5.6.x</div><br>
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartMysqliExtDb</span></li>
 		
-		<li><b>Version:</b> v.20200121</li>
+		<li><b>Version:</b> v.20200505</li>
 		<li><b>Depends:</b> extensions:  PHP MySQLi ; classes: Smart, SmartUnicode, SmartUtils, SmartComponents</li>
 		<li><b>Hints:</b> This  class have no catcheable Exception because the ONLY errors will raise are when the server returns an ERROR regarding a malformed SQL Statement, which is not acceptable to be just Exception, so will raise a fatal error !</li>
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -932,7 +932,7 @@ The statement must not contain any Single Quotes to prevent SQL injections which
 	
 	
 			<div class="doc-method-ret-params">@return: {STRING} the generated Unique ID<br>
-@param: {ENUM} $y_mode: mode: uid10str | uid10num | uid36 | uid45<br>
+@param: {ENUM} $y_mode: mode: uid10str | uid10num | uid10seq | uid12seq | uid32 | uid34 | uid36 | uid45<br>
 @param: {STRING} $y_field_name: the field name<br>
 @param: {STRING} $y_table_name: the table name</div>
 	
@@ -1067,7 +1067,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-04-15 15:30:00 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-05-11 14:17:54 +0000</small>
 <hr>
 <br>
 <!-- # -->

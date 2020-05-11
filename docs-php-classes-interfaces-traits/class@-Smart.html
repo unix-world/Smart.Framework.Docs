@@ -696,7 +696,7 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> Smart</span></li>
 		
-		<li><b>Version:</b> v.20200310</li>
+		<li><b>Version:</b> v.20200507</li>
 		<li><b>Depends:</b> extensions:  PHP JSON ; classes: SmartUnicode</li>
 		<li><b>Hints:</b> It  is recommended to use the methods in this class instead of PHP native methods whenever is possible because this class will offer Long Term Support and the methods will be supported even if the behind PHP methods can change over time, so the code would be easier to maintain.</li>
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -1443,9 +1443,24 @@ The min is zero. The max is limited to 2147483647 on most of the platforms.</div
 	
 	
 	
+</div><div class="doc-container" id="Method--net_server_id">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>net_server_id</b></span>&nbsp;(
+				<span class="doc-param-name"><b><span class="doc-param-optional" title="`$base36` Parameter is OPTIONAL, with the Default Value: false">$base36</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
+	
+	
+	
+			<div class="doc-method-comments">Returns the valid Net Server ID (to be used in a cluster)<br>
+Valid values are 0..1295 (or 00..ZZ if BASE36)</div>
+	
+	
+	
 </div><div class="doc-container" id="Method--unique_entropy">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>unique_entropy</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_suffix` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_suffix</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+				<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_suffix` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_suffix</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
+			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_use_net_server_id` Parameter is OPTIONAL, with the Default Value: true">$y_use_net_server_id</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -1459,36 +1474,6 @@ If a suffix is provided will append it.</div>
 	
 	
 	
-</div><div class="doc-container" id="Method--uuid_10_seq">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>uuid_10_seq</b></span>&nbsp;(
-		
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
-	
-	
-			<div class="doc-method-ret-params">@return: {STRING} the UUID</div>
-	
-			<div class="doc-method-comments">Generates a random string (base36) UUID of 10 characters [0..9A..Z] ; Example: 0G1G74W362 .<br>
-Intended usage: Medium scale / Sequential / Non-Repeating (never repeats in a period cycle of 1000 years).<br>
-This is sequential, date and time based with miliseconds and a randomizer factor to ensure an ~ unique ID.<br>
-Duplicate values can occur just in the same milisecond (1000 miliseconds = 1 second) with a chance of ~ 3%<br>
-Values: 34k / sec ; 200k / min ; 120 mil / hour .<br>
-Advantages: This is one of the most powerful UUID system as the ID will never repeat in a huge period of time.<br>
-Compared with the classic autoincremental IDs this UUID is much better as on the next cycle can fill up unallocated<br>
-values and more, because the next cycle occur after so many time there is no risk to re-use some IDs if they were<br>
-previous deleted or deactivated in terms of generating confusions with previous records.<br>
-The classic autoincremental systems can NOT do this and also, once the max ID is reached the DB table is blocked<br>
-as autoincremental records reach the max ID !!!<br>
-Disadvantages: The database connectors require more complexity and must be able to retry within a cycle with<br>
-double check before alocating, such UUIDs and must use a pre-alocation table since the UUIDs are time based and if<br>
-in the same milisecond more than 1 inserts is allocated they can conflict each other without such pre-alocation !<br>
-Smart.Framework implements the retry + cycle + pre-alocating table as a standard feature<br>
-in the bundled PostgreSQL library (connector/plugin) as PostgreSQL can do DDLs in transactions.<br>
-Using such functionality with MySQL would be tricky as DDLs will break the transactions ;-).<br>
-And for SQLite it does not make sense since SQLite is designed for small DBs thus no need for such high scalability ...</div>
-	
-	
-	
 </div><div class="doc-container" id="Method--uuid_10_num">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>uuid_10_num</b></span>&nbsp;(
 		
@@ -1498,8 +1483,8 @@ And for SQLite it does not make sense since SQLite is designed for small DBs thu
 	
 			<div class="doc-method-ret-params">@return: {STRING} the UUID</div>
 	
-			<div class="doc-method-comments">Generates a random, almost unique numeric UUID of 10 characters [0..9] ; Example: 5457229400 .<br>
-Intended usage: Small scale.<br>
+			<div class="doc-method-comments">Intended usage: Small scale.<br>
+Generates a random, almost unique numeric UUID of 10 characters [0..9] ; Example: 5457229400 .<br>
 For the same time moment, duplicate values can happen with a chance of 1 in a 9 million.<br>
 Min is: 0000000001 ; Max id: 9999999999 .<br>
 Values: 9999999998 .</div>
@@ -1515,45 +1500,211 @@ Values: 9999999998 .</div>
 	
 			<div class="doc-method-ret-params">@return: {STRING} the UUID</div>
 	
-			<div class="doc-method-comments">Generates a random, almost unique string (base36) UUID of 10 characters [0..9A..Z] ; Example: Z4C9S6F1H1 .<br>
-Intended usage: Large scale.<br>
+			<div class="doc-method-comments">Intended usage: Medium scale.<br>
+Generates a random, almost unique string (base36) UUID of 10 characters [0..9A..Z] ; Example: Z4C9S6F1H1 .<br>
 For the same time moment, duplicate values can occur with a chance of ~ 1 in a 3000 trillion.<br>
 Min is: 0A0A0A0A0A (28232883707050) ; Max id: Z9Z9Z9Z9Z9 (3582752942424645) .<br>
 Values YZYZYZYZYZ (3554520058717595) .</div>
 	
 	
 	
-</div><div class="doc-container" id="Method--uuid_36">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>uuid_36</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span class="doc-param-optional" title="`$prefix` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$prefix</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
-	
+</div><div class="doc-container" id="Method--uuid_10_seq">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>uuid_10_seq</b></span>&nbsp;(
+		
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
 	
 	
 			<div class="doc-method-ret-params">@return: {STRING} the UUID</div>
 	
-			<div class="doc-method-comments">Generates an almost unique MD5 based UUID of 36 characters [0..9a..f] ; Example: cfcb6c2a-a6e0-f539-141d-083abee19a4e .<br>
-The uniqueness of this is based on a full unique signature in space and time: 2 random UUIDS, server name, server unique id, year/day/month hour:minute:seconds, time, microseconds, a random value 0...9999 .<br>
-For the same time moment, duplicates values can occur with a chance of 1 in ~ a 340282366920938586008062602462446642046 .<br>
+			<div class="doc-method-comments">Intended usage: Large scale.<br>
+Generates a random string (base36) UUID of 10 characters [0..9A..Z] ; Example: 0G1G74W362 .<br>
+Intended usage: Medium scale / Sequential / Non-Repeating (never repeats in a period cycle of 1000 years).<br>
+This is sequential, date and time based with miliseconds and a randomizer factor to ensure an ~ unique ID.<br>
+Duplicate values can occur just in the same milisecond (1000 miliseconds = 1 second) with a chance of ~ 3%<br>
+Values: 34 k / sec ; 200 k / min ; 120 mil / hour .<br>
+Advantages: This is one of the most powerful UUID system for medium scale as the ID will never repeat in a large period of time.<br>
+Compared with the classic autoincremental IDs this UUID is much better as on the next cycle can fill up unallocated<br>
+values and more, because the next cycle occur after so many time there is no risk to re-use some IDs if they were<br>
+previous deleted or deactivated in terms of generating confusions with previous records.<br>
+The classic autoincremental systems can NOT do this and also, once the max ID is reached the DB table is blocked<br>
+as autoincremental records reach the max ID !!!<br>
+Disadvantages: The database connectors require more complexity and must be able to retry within a cycle with<br>
+double check before alocating, such UUIDs and must use a pre-alocation table since the UUIDs are time based and if<br>
+in the same milisecond more than 1 inserts is allocated they can conflict each other without such pre-alocation !<br>
+Smart.Framework implements the retry + cycle + pre-alocating table as a standard feature<br>
+in the bundled PostgreSQL library (connector/plugin) as PostgreSQL can do DDLs in transactions.<br>
+Using such functionality with MySQL would be tricky as DDLs will break the transactions, but still usable ;-).<br>
+And for SQLite it does not make sense since SQLite is designed for small DBs thus no need for such high scalability ...</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--uuid_12_seq">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>uuid_12_seq</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} the UUID</div>
+	
+			<div class="doc-method-comments">Intended usage: Large scale, in a cluster.<br>
+Generates a random string (base62) UUID of 15 characters [0..9a..zA..Z] ; Example: 0K4M6V04JM01 .<br>
+It is based on Smart::uuid_10_seq() but will append the last two characters in base36 00..ZZ using Smart::net_server_id(true) that represent the Net Server ID in a cluster.<br>
+To set the Net Server ID as unique per each running instance of Smart.Framework under the same domain,<br>
+set the constant SMART_FRAMEWORK_NETSERVER_ID in etc/init.php with a number between 0..1295 to have a unique number for each instance of Smart.Framework<br>
+where supposed all this instances will run in a cluster.<br>
+If there is only one instance running and no plans at all to implement a multi-server cluster, makes non-sense to use this function, use instead the Smart::uuid_10_seq()<br>
+For how is implemented, read the documentation for the functions: Smart::uuid_10_seq() and Smart::net_server_id(true)</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--uuid_13_seq">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>uuid_13_seq</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} the UUID</div>
+	
+			<div class="doc-method-comments">Intended usage: Very Large scale. Case sensitive.<br>
+Generates a random string (base62) UUID of 13 characters [0..9a..zA..Z] ; Example: 00wA0whhw2e9L .<br>
+Intended usage: Very Large scale / Sequential / Non-Repeating (never repeats in a period cycle of 9999999 years).<br>
+This is sequential, date and time based with miliseconds and a randomizer factor to ensure an ~ unique ID.<br>
+Duplicate values can occur just in the same milisecond (1000 miliseconds = 1 second) with a chance of ~ 0.3%<br>
+Values: 340000 k / sec ; 2000000 k / min ; 1200000 mil / hour .<br>
+Advantages: This is one of the most powerful UUID system for large scale as the ID will never repeat in a huge period of time.<br>
+Compared with the classic autoincremental IDs this UUID is much better as on the next cycle can fill up unallocated<br>
+values and more, because the next cycle occur after so many time there is no risk to re-use some IDs if they were<br>
+previous deleted or deactivated in terms of generating confusions with previous records.<br>
+The classic autoincremental systems can NOT do this and also, once the max ID is reached the DB table is blocked<br>
+as autoincremental records reach the max ID !!!<br>
+Disadvantages: The database connectors require more complexity and must be able to retry within a cycle with<br>
+double check before alocating, such UUIDs and must use a pre-alocation table since the UUIDs are time based and if<br>
+in the same milisecond more than 1 inserts is allocated they can conflict each other without such pre-alocation !<br>
+Smart.Framework implements the retry + cycle + pre-alocating table as a standard feature<br>
+in the bundled PostgreSQL library (connector/plugin) as PostgreSQL can do DDLs in transactions.<br>
+Using such functionality with MySQL would be tricky as DDLs will break the transactions, but still usable ;-).<br>
+And for SQLite it does not make sense since SQLite is designed for small DBs thus no need for such high scalability ...</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--uuid_15_seq">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>uuid_15_seq</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} the UUID</div>
+	
+			<div class="doc-method-comments">Intended usage: Very Large scale, in a cluster. Case sensitive.<br>
+Generates a random string (base62) UUID of 15 characters [0..9a..zA..Z] ; Example: 00wA0whhw2e9L01 .<br>
+It is based on Smart::uuid_13_seq() but will append the last two characters in base36 00..ZZ using Smart::net_server_id(true) that represent the Net Server ID in a cluster.<br>
+To set the Net Server ID as unique per each running instance of Smart.Framework under the same domain,<br>
+set the constant SMART_FRAMEWORK_NETSERVER_ID in etc/init.php with a number between 0..1295 to have a unique number for each instance of Smart.Framework<br>
+where supposed all this instances will run in a cluster.<br>
+If there is only one instance running and no plans at all to implement a multi-server cluster, makes non-sense to use this function, use instead the Smart::uuid_13_seq()<br>
+For how is implemented, read the documentation for the functions: Smart::uuid_13_seq() and Smart::net_server_id(true)</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--uuid_32">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>uuid_32</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} the UUID</div>
+	
+			<div class="doc-method-comments">Generates an almost unique BASE36 based UUID of 32 characters [0..9A..Z] ; Example: Y123AY7WK5-9187139702-Z98W7T091K .<br>
+This compose as: Smart::uuid_10_seq().'-'.Smart::uuid_10_num().'-'.Smart::uuid_10_str()<br>
 Intended usage: Very Large scale.</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--uuid_34">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>uuid_34</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} the UUID</div>
+	
+			<div class="doc-method-comments">Generates an almost unique BASE36 based UUID of 34 characters [0..9A..Z] ; Example: Y123AY7WK501-9187139702-Z98W7T091K .<br>
+This compose as: Smart::uuid_12_seq().'-'.Smart::uuid_10_num().'-'.Smart::uuid_10_str()<br>
+Intended usage: Very Large scale, in a cluster.</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--uuid_35">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>uuid_35</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} the UUID</div>
+	
+			<div class="doc-method-comments">Generates an almost unique BASE62 + BASE36 based UUID of 35 characters [0..9a..zA..Z] ; Example: 00wA0whhw2e9L-9187139702-Z98W7T091K .<br>
+This compose as: Smart::uuid_13_seq().'-'.Smart::uuid_10_num().'-'.Smart::uuid_10_str()<br>
+Intended usage: Extremely Large scale. Case sensitive.</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--uuid_37">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>uuid_37</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} the UUID</div>
+	
+			<div class="doc-method-comments">Generates an almost unique BASE62 + BASE36 based UUID of 35 characters [0..9a..zA..Z] ; Example: 00wA0whhw2e9L01-9187139702-Z98W7T091K .<br>
+This compose as: Smart::uuid_15_seq().'-'.Smart::uuid_10_num().'-'.Smart::uuid_10_str()<br>
+Intended usage: Extremely Large scale, in a cluster. Case sensitive.</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--uuid_36">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>uuid_36</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$prefix` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$prefix</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} the UUID<br>
+@param: {STRING} $prefix: A prefix to use for more uniqueness entropy ; Ex: can use the Smart::net_server_id()</div>
+	
+			<div class="doc-method-comments">Generates an almost unique MD5 based UUID of 36 characters [0..9a..f] ; Example: cfcb6c2a-a6e0-f539-141d-083abee19a4e .<br>
+The uniqueness of this is based on a full unique signature in space and time: 2 random UUIDS, server name, year/day/month hour:minute:seconds, time, microseconds, a random value 0...9999 .<br>
+For the same time moment, duplicates values can occur with a chance of 1 in ~ a 340282366920938586008062602462446642046 .<br>
+The Net Server ID can be passed via the $prefix parameter<br>
+Intended usage: Large scale. Standard.</div>
 	
 	
 	
 </div><div class="doc-container" id="Method--uuid_45">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>uuid_45</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span class="doc-param-optional" title="`$prefix` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$prefix</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$prefix` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$prefix</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
 	
 	
-			<div class="doc-method-ret-params">@return: {STRING} the UUID</div>
+			<div class="doc-method-ret-params">@return: {STRING} the UUID<br>
+@param: {STRING} $prefix: A prefix to use for more uniqueness entropy ; Ex: can use the Smart::net_server_id()</div>
 	
 			<div class="doc-method-comments">Generates an almost unique SHA1 based UUID of 45 characters [0..9a..f] ; Example: c02acc84-97f4-0807-b12c-ed6f28dd2078-400c1baf .<br>
-The uniqueness of this is based on a full unique signature in space and time: 2 random UUIDS, server name, server unique id, year/day/month hour:minute:seconds, time, microseconds, a random value 0...9999 .<br>
+The uniqueness of this is based on a full unique signature in space and time: 2 random UUIDS, server name, year/day/month hour:minute:seconds, time, microseconds, a random value 0...9999 .<br>
 For the same time moment, duplicates values can occur with a chance of 1 in ~ a 1461501637330903466848266086008062602462446642046 .<br>
-Intended usage: Huge scale.</div>
+The Net Server ID can be passed via the $prefix parameter<br>
+Intended usage: Large scale. Standard.</div>
 	
 	
 	
@@ -1863,16 +2014,40 @@ function smartHandleDocSelector(obj) {
 									<option value="Method--random_number"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;random_number()</option>
 			
 			
+									<option value="Method--net_server_id"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;net_server_id()</option>
+			
+			
 									<option value="Method--unique_entropy"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;unique_entropy()</option>
-			
-			
-									<option value="Method--uuid_10_seq"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;uuid_10_seq()</option>
 			
 			
 									<option value="Method--uuid_10_num"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;uuid_10_num()</option>
 			
 			
 									<option value="Method--uuid_10_str"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;uuid_10_str()</option>
+			
+			
+									<option value="Method--uuid_10_seq"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;uuid_10_seq()</option>
+			
+			
+									<option value="Method--uuid_12_seq"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;uuid_12_seq()</option>
+			
+			
+									<option value="Method--uuid_13_seq"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;uuid_13_seq()</option>
+			
+			
+									<option value="Method--uuid_15_seq"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;uuid_15_seq()</option>
+			
+			
+									<option value="Method--uuid_32"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;uuid_32()</option>
+			
+			
+									<option value="Method--uuid_34"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;uuid_34()</option>
+			
+			
+									<option value="Method--uuid_35"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;uuid_35()</option>
+			
+			
+									<option value="Method--uuid_37"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;uuid_37()</option>
 			
 			
 									<option value="Method--uuid_36"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;uuid_36()</option>
@@ -1936,7 +2111,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-04-15 15:29:55 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-05-11 14:17:50 +0000</small>
 <hr>
 <br>
 <!-- # -->
