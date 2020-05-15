@@ -696,7 +696,7 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Interface Name:</b> SmartInterfaceAdapterTextTranslations</span></li>
 		
-		<li><b>Version:</b> v.20200121</li>
+		<li><b>Version:</b> v.20200515</li>
 		
 		
 		
@@ -758,7 +758,7 @@ RETURN: a non-empty string the provides the latest version string of the current
 	
 			<div class="doc-method-comments">Register the usage (increment counter or register in logs) for a Regional Text Translation into Source or alternate source by: Language, Area, Subarea, Key<br>
 This function must implement a way to increment or register the usage of every used pair of Language/Area/Subarea/Key as it was used to help the cleanup of unused translations.<br>
-This function will operate only in DEV mode (SMART_ERROR_HANDLER == 'dev') and add in init.php: define('SMART_FRAMEWORK__DEBUG__TEXT_TRANSLATIONS', true);<br>
+This function will operate only in DEV mode (SmartFrameworkRuntime::ifProdEnv() !== true) and add in init.php: define('SMART_FRAMEWORK__DEBUG__TEXT_TRANSLATIONS', true);<br>
 It can be implemented to write into one of the variety of sources: Text/CSV, Database, ...<br>
 RETURN: N/A</div>
 	
@@ -847,7 +847,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-05-11 14:17:50 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-05-15 15:09:20 +0000</small>
 <hr>
 <br>
 <!-- # -->
