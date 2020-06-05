@@ -418,7 +418,7 @@
 	</style>
 	<style type="text/css">
 		
-/* -- CSS Start :: Smart.Framework / Debug / TPL Highlight :: r.5.7.2 / smart.framework.v.5.7 -- */
+/* -- CSS Start :: Smart.Framework / Debug / TPL Highlight :: r.7.2.1 / smart.framework.v.7.2 -- */
 
 /* ----------------------------- */
 
@@ -701,7 +701,7 @@ Files and Folders must contain ONLY safe characters as: `[a-z] [A-Z] [0-9] _ - .
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartGetFileSystem</span></li>
 		
-		<li><b>Version:</b> v.20200121</li>
+		<li><b>Version:</b> v.20200519</li>
 		<li><b>Depends:</b> classes:  Smart</li>
 		<li><b>Hints:</b> This  class can handle thread concurency to the filesystem in a safe way by using the LOCK_EX (lock exclusive) feature on each file written / appended thus making also reads to be safe</li>
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -782,7 +782,7 @@ Files and Folders must contain ONLY safe characters as: `[a-z] [A-Z] [0-9] _ - .
 </div>
 <div class="doc-code">
 	<pre><code><!-- Smart/HTML.Cleaner [@] --><code><span style="color: #57A64A">
-<span style="color: #FFFFFF">&lt;?php<br><br></span><span style="color: #999999">//&nbsp;Usage&nbsp;example:<br>&nbsp;</span><span style="color: #FFFFFF">$filesys&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;new&nbsp;</span><span style="color: #FFFFFF">SmartGetFileSystem</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #FFFFFF">true</span><span style="color: #FFCC00; font-weight: bold">);<br>&nbsp;</span><span style="color: #FFFFFF">$data&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;</span><span style="color: #FFFFFF">$filesys</span><span style="color: #FFCC00; font-weight: bold">-&gt;</span><span style="color: #FFFFFF">get_storage</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'my_dir/my_subdir'</span><span style="color: #FFCC00; font-weight: bold">);<br>&nbsp;</span><span style="color: #FFFFFF">print_r</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #FFFFFF">$data</span><span style="color: #FFCC00; font-weight: bold">);<br><br></span><span style="color: #FFFFFF">?&gt;</span>
+<span style="color: #FFFFFF">&lt;?php<br><br></span><span style="color: #999999">//&nbsp;Get&nbsp;Storage&nbsp;example:<br>&nbsp;</span><span style="color: #FFFFFF">$filesys&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;new&nbsp;</span><span style="color: #FFFFFF">SmartGetFileSystem</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #FFFFFF">true</span><span style="color: #FFCC00; font-weight: bold">);<br>&nbsp;</span><span style="color: #FFFFFF">$data&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;</span><span style="color: #FFFFFF">$filesys</span><span style="color: #FFCC00; font-weight: bold">-&gt;</span><span style="color: #FFFFFF">get_storage</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'my_dir/my_subdir'</span><span style="color: #FFCC00; font-weight: bold">);<br>&nbsp;</span><span style="color: #FFFFFF">print_r</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #FFFFFF">$data</span><span style="color: #FFCC00; font-weight: bold">);<br><br>&nbsp;</span><span style="color: #999999">//&nbsp;Search&nbsp;for&nbsp;Files&nbsp;example:<br>&nbsp;</span><span style="color: #FFFFFF">$obj&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;new&nbsp;</span><span style="color: #FFFFFF">SmartGetFileSystem</span><span style="color: #FFCC00; font-weight: bold">();<br>&nbsp;</span><span style="color: #FFFFFF">$arr&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;</span><span style="color: #FFFFFF">$obj</span><span style="color: #FFCC00; font-weight: bold">-&gt;</span><span style="color: #FFFFFF">search_files</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #FFFFFF">true</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #5F9CCE">'uploads/'</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #FFFFFF">false</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #5F9CCE">'.svg'</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #5F9CCE">'100'</span><span style="color: #FFCC00; font-weight: bold">);<br>&nbsp;</span><span style="color: #FFFFFF">print_r</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #FFFFFF">$arr</span><span style="color: #FFCC00; font-weight: bold">);<br><br></span><span style="color: #FFFFFF">?&gt;</span>
 </span>
 </code><!-- [/@] Smart/HTML.Cleaner --></code></pre>
 </div>
@@ -855,7 +855,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-05-15 15:09:21 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-06-05 10:37:36 +0000</small>
 <hr>
 <br>
 <!-- # -->

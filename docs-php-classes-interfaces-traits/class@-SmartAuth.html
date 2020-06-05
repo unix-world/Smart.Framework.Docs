@@ -418,7 +418,7 @@
 	</style>
 	<style type="text/css">
 		
-/* -- CSS Start :: Smart.Framework / Debug / TPL Highlight :: r.5.7.2 / smart.framework.v.5.7 -- */
+/* -- CSS Start :: Smart.Framework / Debug / TPL Highlight :: r.7.2.1 / smart.framework.v.7.2 -- */
 
 /* ----------------------------- */
 
@@ -711,7 +711,7 @@ IP address and the browser signature of the client. The Smart Session provides a
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartAuth</span></li>
 		
-		<li><b>Version:</b> v.20200121</li>
+		<li><b>Version:</b> v.20200605</li>
 		<li><b>Depends:</b> -</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -731,9 +731,9 @@ IP address and the browser signature of the client. The Smart Session provides a
 			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_user_alias` Parameter is REQUIRED">$y_user_alias</span></b></span>, 
 			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_user_email` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_user_email</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
 			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_user_fullname` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_user_fullname</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
-			<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_user_privileges_list` Parameter is OPTIONAL, with the Default Value: array(0 =&gt; &quot;none&quot;, 1 =&gt; &quot;no-privilege&quot;)">$y_user_privileges_list</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>array(0 =&gt; &quot;none&quot;, 1 =&gt; &quot;no-privilege&quot;)</b></span>, 
+			<i>ARRAY/STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_user_privileges_list` Parameter is OPTIONAL, with the Default Value: array(0 =&gt; &quot;none&quot;, 1 =&gt; &quot;no-privilege&quot;)">$y_user_privileges_list</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>array(0 =&gt; &quot;none&quot;, 1 =&gt; &quot;no-privilege&quot;)</b></span>, 
 			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_user_quota` Parameter is OPTIONAL, with the Default Value: -1">$y_user_quota</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>-1</b></span>, 
-			<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_user_metadata` Parameter is OPTIONAL, with the Default Value: array()">$y_user_metadata</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>array()</b></span>, 
+			<i>array</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_user_metadata` Parameter is OPTIONAL, with the Default Value: array()">$y_user_metadata</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>array()</b></span>, 
 			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_realm` Parameter is OPTIONAL, with the Default Value: &quot;DEFAULT&quot;">$y_realm</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;DEFAULT&quot;</b></span>, 
 			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_method` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_method</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
 			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_pass` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_pass</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
@@ -748,7 +748,7 @@ IP address and the browser signature of the client. The Smart Session provides a
 @param: {STRING} $y_user_alias: The user (login) Alias (aka Username), used to display the logged in user ; Mandatory ; can be the same as the login ID or different (Ex: login ID can be 'myUserName' and this 'myUserName' ; or: login ID can be 5017 and this 'myUserName')<br>
 @param: {STRING} $y_user_email: *OPTIONAL* The user Email ; if email is used as login ID this may be redundant !<br>
 @param: {STRING} $y_user_fullname: *OPTIONAL* The user Full Name (First Name + Last Name)<br>
-@param: {ARRAY} $y_user_privileges_list: *OPTIONAL* The user Privileges List as array that list all the current user privileges<br>
+@param: {ARRAY/STRING} $y_user_privileges_list: *OPTIONAL* The user Privileges List as string '&lt;priv1&gt;&lt;priv2&gt;,...' or array ['priv1','priv2'] that list all the current user privileges<br>
 @param: {STRING} $y_user_quota: *OPTIONAL* The user (storage) Quota<br>
 @param: {ARRAY} $y_user_metadata: *OPTIONAL* The user metainfo, associative array key =&gt; value<br>
 @param: {STRING} $y_realm: *OPTIONAL* The user Authentication Realm(s)<br>
@@ -1156,7 +1156,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-05-15 15:09:21 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-06-05 10:37:36 +0000</small>
 <hr>
 <br>
 <!-- # -->
