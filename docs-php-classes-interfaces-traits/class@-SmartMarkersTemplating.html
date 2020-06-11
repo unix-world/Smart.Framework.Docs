@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartMarkersTemplating        final class \ SmartMarkersTemplating    {   } ::    Class: SmartMarkersTemplating - provides a very fast and low footprint">
-	<meta name="keywords" content="smartmarkerstemplating, final, class, smartmarkerstemplating, class, -, provides, a, very, fast, and, low, footprint, templating, system, markers-tpl, language, php, located, at, lib framework lib templating.php, package, core templatingengine, namespace, name, version, v, depends, classes, smart, smartfilesystem, smartfilesysutils, usage, static, object, class  method, this, only, methods, public, function, analyze debug template, string, mtemplate, return, string, the, analyze, info, html js, param, mtemplate, marker, template, no, sub-templates, are, loaded, is, intended, for, development, debug, never, use, in, production, environments, render template, array, y arr vars, enum, y ignore if empty, no, parsed, partial, text html, markers, ex, span, marke, br, marke, .  span, array, y arr vars, associative, with, variables, mapping, keys, to, markers, case, insensitive, marke, valu">
+	<meta name="keywords" content="smartmarkerstemplating, final, class, smartmarkerstemplating, class, -, provides, a, very, fast, and, low, footprint, templating, system, marker-tpl, language, php, located, at, lib framework lib templating.php, package, core templatingengine, namespace, name, version, v, depends, classes, smart, smartfilesystem, smartfilesysutils, usage, static, object, class  method, this, only, methods, public, function, analyze debug template, string, mtemplate, return, string, the, analyze, info, html js, param, mtemplate, marker, template, no, sub-templates, are, loaded, is, intended, for, development, debug, never, use, in, production, environments, render template, array, y arr vars, enum, y ignore if empty, no, parsed, partial, text html, markers, ex, span, marke, br, marke, .  span, array, y arr vars, associative, with, variables, mapping, keys, to, markers, case, insensitive, marke, valu">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartMarkersTemplating</title>
 	<!-- CSS and Fonts -->
@@ -686,7 +686,7 @@ select#select-summary {
 	}&nbsp;::
 </h1>
 <!-- Description -->
-<div class="doc-comments">Class: SmartMarkersTemplating - provides a very fast and low footprint templating system: Markers-TPL</div><br>
+<div class="doc-comments">Class: SmartMarkersTemplating - provides a very fast and low footprint templating system: Marker-TPL</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
 	<ul class="doc-list">
@@ -696,7 +696,7 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartMarkersTemplating</span></li>
 		
-		<li><b>Version:</b> v.20200406</li>
+		<li><b>Version:</b> v.20200609</li>
 		<li><b>Depends:</b> classes:  Smart, SmartFileSystem, SmartFileSysUtils</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -719,7 +719,7 @@ select#select-summary {
 	
 	
 			<div class="doc-method-ret-params">@return: {STRING} The analyze info HTML+JS<br>
-@param: {STRING} $mtemplate: The Markers-TPL string</div>
+@param: {STRING} $mtemplate: The Marker-TPL string</div>
 	
 			<div class="doc-method-comments">Analyze a Marker Template String (NO Sub-Templates are loaded)<br>
 This is intended for DEVELOPMENT / DEBUG ONLY (never use this in production environments !)</div>
@@ -737,9 +737,9 @@ This is intended for DEVELOPMENT / DEBUG ONLY (never use this in production envi
 	
 	
 			<div class="doc-method-ret-params">@return: {STRING} The parsed template<br>
-@param: {STRING} $mtemplate: The Markers-TPL string (partial text/html + markers) ; Ex: '&lt;span&gt;<span class="sf__tpl__highlight__marker" title="TPL Marker: Start">&lbrack;###</span>MARKER1<span class="sf__tpl__highlight__marker" title="TPL Marker: End">###&rbrack;</span>&lt;br&gt;<span class="sf__tpl__highlight__marker" title="TPL Marker: Start">&lbrack;###</span>MARKER2<span class="sf__tpl__highlight__marker" title="TPL Marker: End">###&rbrack;</span>, ...&lt;/span&gt;'<br>
+@param: {STRING} $mtemplate: The Marker-TPL string (partial text/html + markers) ; Ex: '&lt;span&gt;<span class="sf__tpl__highlight__marker" title="TPL Marker: Start">&lbrack;###</span>MARKER1<span class="sf__tpl__highlight__marker" title="TPL Marker: End">###&rbrack;</span>&lt;br&gt;<span class="sf__tpl__highlight__marker" title="TPL Marker: Start">&lbrack;###</span>MARKER2<span class="sf__tpl__highlight__marker" title="TPL Marker: End">###&rbrack;</span>, ...&lt;/span&gt;'<br>
 @param: {ARRAY} $y_arr_vars: The associative array with the template variables ; mapping the array keys to template markers is case insensitive ; Ex: [ 'MARKER1' =&gt; 'Value1', 'marker2' =&gt; 'Value2', ..., 'MarkerN' =&gt; 100 ]<br>
-@param: {ENUM} $y_ignore_if_empty: 'yes' will ignore if Markers-TPL is empty ; 'no' will add a warning (default)</div>
+@param: {ENUM} $y_ignore_if_empty: 'yes' will ignore if Marker-TPL is empty ; 'no' will add a warning (default)</div>
 	
 			<div class="doc-method-comments">Render Marker Template (String Template ; no sub-templates are allowed as there is no possibility to set a relative path from where to get them)</div>
 	
@@ -756,7 +756,7 @@ This is intended for DEVELOPMENT / DEBUG ONLY (never use this in production envi
 	
 	
 			<div class="doc-method-ret-params">@return: {STRING} The parsed and rendered template<br>
-@param: {STRING} $y_file_path: The relative path to the file Markers-TPL (partial text/html + markers + *sub-templates*) ; if sub-templates are used, they will use the base path from this (main template) file ; Ex: views/my-template.inc.htm ; (partial text/html + markers) ; Ex (file content): '&lt;span&gt;<span class="sf__tpl__highlight__marker" title="TPL Marker: Start">&lbrack;###</span>MARKER1<span class="sf__tpl__highlight__marker" title="TPL Marker: End">###&rbrack;</span>&lt;br&gt;<span class="sf__tpl__highlight__marker" title="TPL Marker: Start">&lbrack;###</span>MARKER2<span class="sf__tpl__highlight__marker" title="TPL Marker: End">###&rbrack;</span>, ...&lt;/span&gt;'<br>
+@param: {STRING} $y_file_path: The relative path to the file Marker-TPL (partial text/html + markers + *sub-templates*) ; if sub-templates are used, they will use the base path from this (main template) file ; Ex: views/my-template.inc.htm ; (partial text/html + markers) ; Ex (file content): '&lt;span&gt;<span class="sf__tpl__highlight__marker" title="TPL Marker: Start">&lbrack;###</span>MARKER1<span class="sf__tpl__highlight__marker" title="TPL Marker: End">###&rbrack;</span>&lt;br&gt;<span class="sf__tpl__highlight__marker" title="TPL Marker: Start">&lbrack;###</span>MARKER2<span class="sf__tpl__highlight__marker" title="TPL Marker: End">###&rbrack;</span>, ...&lt;/span&gt;'<br>
 @param: {ARRAY} $y_arr_vars: The associative array with the template variables ; mapping the array keys to template markers is case insensitive ; Ex: [ 'MARKER1' =&gt; 'Value1', 'marker2' =&gt; 'Value2', ..., 'MarkerN' =&gt; 100 ]<br>
 @param: {ENUM} $y_use_caching: 'yes' will cache the template (incl. sub-templates if any) into memory to avoid re-read them from file system (to be used if a template is used more than once per execution) ; 'no' means no caching is used (default)</div>
 	
@@ -898,7 +898,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-06-05 10:37:36 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-06-11 08:06:22 +0000</small>
 <hr>
 <br>
 <!-- # -->

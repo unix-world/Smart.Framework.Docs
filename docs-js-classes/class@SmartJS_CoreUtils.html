@@ -696,7 +696,7 @@ This class provide the core functions for JavaScript API of Smart.Framework</div
 		
 		
 		
-		<li><b>Version:</b> 20200502</li>
+		<li><b>Version:</b> 20200609</li>
 		
 		
 	</ul>
@@ -1363,7 +1363,7 @@ Will convert all accented characters in UTF-8 / ISO-8859-* with their unnaccente
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
 	<div class="doc-method-ret-params">
-			@hint: To be used together with the server-side Markers-TPL templating, to avoid the server-side markers to be replaced as `&lbrack;###MARKER###&rbrack;` will need the template to be escape_url+escape_js and 3rd param: isEncoded = TRUE<br>
+			@hint: To be used together with the server-side Marker-TPL templating, to avoid the server-side markers to be replaced as `&lbrack;###MARKER###&rbrack;` will need the template to be escape_url+escape_js and 3rd param: isEncoded = TRUE<br>
 	
 	
 			@return: {String} The processed string<br>
@@ -1377,8 +1377,8 @@ Will convert all accented characters in UTF-8 / ISO-8859-* with their unnaccente
 	
 	
 	</div>
-			<div class="doc-method-comments">Render Simple Markers-TPL Template + Comments + Specials (only markers replacements with escaping or processing syntax and support for comments and special replacements: SPACE, TAB, R, N ; no support for IF / LOOP / INCLUDE syntax since the js regex is too simplistic and this can be implemented using real js code)<br>
-This is compatible just with the REPLACE MARKERS of Smart.Framework PHP server-side Markers-TPL Templating for substitutions on client-side, except the extended syntax as IF/LOOP/INCLUDE.</div>
+			<div class="doc-method-comments">Render Simple Marker-TPL Template + Comments + Specials (only markers replacements with escaping or processing syntax and support for comments and special replacements: SPACE, TAB, R, N ; no support for IF / LOOP / INCLUDE syntax since the js regex is too simplistic and this can be implemented using real js code)<br>
+This is compatible just with the REPLACE MARKERS of Smart.Framework PHP server-side Marker-TPL Templating for substitutions on client-side, except the extended syntax as IF/LOOP/INCLUDE.</div>
 	
 			<pre><b>Sample code: JavaScript</b><br><code class="hljs javascript"> <span class="hljs-comment">// sample client side MarkersTPL rendering</span>
  <span class="hljs-keyword">var</span> tpl = <span class="hljs-string">'&lt;div onclick=&quot;var question=\'&lbrack;###QUESTION|js|html###&rbrack;\'; alert(question);&quot;&gt;&lbrack;###TITLE|html###&rbrack;&lt;/div&gt;'</span>; <span class="hljs-comment">// the TPL</span>
@@ -1531,7 +1531,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-06-05 10:37:52 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-06-11 08:06:35 +0000</small>
 <hr>
 <br>
 <!-- # -->

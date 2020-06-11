@@ -696,7 +696,7 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> Smart</span></li>
 		
-		<li><b>Version:</b> v.20200605</li>
+		<li><b>Version:</b> v.20200610</li>
 		<li><b>Depends:</b> extensions:  PHP JSON ; classes: SmartUnicode</li>
 		<li><b>Hints:</b> It  is recommended to use the methods in this class instead of PHP native methods whenever is possible because this class will offer Long Term Support and the methods will be supported even if the behind PHP methods can change over time, so the code would be easier to maintain.</li>
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -766,7 +766,7 @@ select#select-summary {
 			<div class="doc-method-ret-params">@return: {STRING} The dirname or . or empty string<br>
 @param: {STRING} $y_path: The path name from to extract dirname()</div>
 	
-			<div class="doc-method-comments">Return the FIXED dirname(), also with fix on Windows</div>
+			<div class="doc-method-comments">Return the FIXED dirname(), safe on Linux and Unix and with safety fix on Windows</div>
 	
 	
 	
@@ -1549,7 +1549,7 @@ And for SQLite it does not make sense since SQLite is designed for small DBs thu
 			<div class="doc-method-ret-params">@return: {STRING} the UUID</div>
 	
 			<div class="doc-method-comments">Intended usage: Large scale, in a cluster.<br>
-Generates a random string (base62) UUID of 15 characters [0..9a..zA..Z] ; Example: 0K4M6V04JM01 .<br>
+Generates a random string (base62) UUID of 12 characters [0..9a..zA..Z] ; Example: 0K4M6V04JM01 .<br>
 It is based on Smart::uuid_10_seq() but will append the last two characters in base36 00..ZZ using Smart::net_server_id(true) that represent the Net Server ID in a cluster.<br>
 To set the Net Server ID as unique per each running instance of Smart.Framework under the same domain,<br>
 set the constant SMART_FRAMEWORK_NETSERVER_ID in etc/init.php with a number between 0..1295 to have a unique number for each instance of Smart.Framework<br>
@@ -1664,7 +1664,7 @@ Intended usage: Extremely Large scale. Case sensitive.</div>
 	
 			<div class="doc-method-ret-params">@return: {STRING} the UUID</div>
 	
-			<div class="doc-method-comments">Generates an almost unique BASE62 + BASE36 based UUID of 35 characters [0..9a..zA..Z] ; Example: 00wA0whhw2e9L01-9187139702-Z98W7T091K .<br>
+			<div class="doc-method-comments">Generates an almost unique BASE62 + BASE36 based UUID of 37 characters [0..9a..zA..Z] ; Example: 00wA0whhw2e9L01-9187139702-Z98W7T091K .<br>
 This compose as: Smart::uuid_15_seq().'-'.Smart::uuid_10_num().'-'.Smart::uuid_10_str()<br>
 Intended usage: Extremely Large scale, in a cluster. Case sensitive.</div>
 	
@@ -2111,7 +2111,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-06-05 10:37:34 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-06-11 08:06:20 +0000</small>
 <hr>
 <br>
 <!-- # -->

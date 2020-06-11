@@ -700,7 +700,7 @@ The Extended Methods will prefere HTTP 1.1 instead of 1.0 because of some additi
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartHttpClient</span></li>
 		
-		<li><b>Version:</b> v.20200429</li>
+		<li><b>Version:</b> v.20200611</li>
 		<li><b>Depends:</b> extensions:  PHP OpenSSL (optional, just for HTTPS) ; classes: Smart</li>
 		
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -753,37 +753,6 @@ The Extended Methods will prefere HTTP 1.1 instead of 1.0 because of some additi
 	
 	
 	
-	
-	
-	
-</div><div class="doc-container" id="Method--chunked_part_decode">
-	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>chunked_part_decode</b></span>&nbsp;(
-				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$chunk` Parameter is REQUIRED">$chunk</span></b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;string
-	
-	
-			<div class="doc-method-ret-params">@return: {string} the decoded message.<br>
-@param: {string} $chunk: the encoded message</div>
-	
-			<div class="doc-method-comments">Dechunk an HTTP 'transfer-encoding: chunked' part (Ex: Body)<br>
-If The Chunked Part was not encoded properly it will be returned it unmodified.</div>
-	
-	
-	
-</div><div class="doc-container" id="Method--is_hex">
-	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>is_hex</b></span>&nbsp;(
-				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$hex` Parameter is REQUIRED">$hex</span></b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;boolean
-	
-	
-			<div class="doc-method-ret-params">@return: {boolean} true if the string is a hex, otherwise false<br>
-@param: {string} $hex</div>
-	
-			<div class="doc-method-comments">determine if a string can represent a number in hexadecimal</div>
 	
 	
 	
@@ -908,12 +877,6 @@ function smartHandleDocSelector(obj) {
 									<option value="Method--browse_url"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;browse_url()</option>
 			
 			
-									<option value="Method--chunked_part_decode"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;chunked_part_decode()</option>
-			
-			
-									<option value="Method--is_hex"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;is_hex()</option>
-			
-			
 			
 		</optgroup>
 		<optgroup label="Class Properties">
@@ -968,7 +931,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-06-05 10:37:36 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-06-11 08:06:21 +0000</small>
 <hr>
 <br>
 <!-- # -->
