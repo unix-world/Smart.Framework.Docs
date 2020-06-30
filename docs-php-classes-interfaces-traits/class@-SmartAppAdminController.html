@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartAppAdminController        final class \ SmartAppAdminController  extends \SmartAbstractAppController   {   } -&gt;    Admin Area Controller">
-	<meta name="keywords" content="smartappadmincontroller, final, class, smartappadmincontroller, extends, smartabstractappcontroller, -, admin, area, controller, language, php, located, at, modules mod-documentor doc.php, package, application, namespace, name, version, inheritance, chart, →, ↳, methods, public, function, initialize, void, reimplemented, over, return, void, this, does, not, return, anything, is, the, pre, run, will, be, called, before, run, integer, integer, optional, http, status, code, by, default, it, or, must, returns, which, optional, other, supported, codes, are, ok, with, notice warning error, messages, -, used, only, for, rest apis, permanent, redirect, temporary, not, found, forbidden, authentication, required, error, too, many, requests, internal, error, bad, gateway, service, unavailable, if, code, in, range, of">
+	<meta name="keywords" content="smartappadmincontroller, final, class, smartappadmincontroller, extends, smartabstractappcontroller, -, admin, area, controller, language, php, located, at, modules mod-documentor doc.php, package, application, namespace, name, version, inheritance, chart, →, ↳, methods, public, function, initialize, bool, reimplemented, over, return, bool, optional, if, an, error, occurs, during, it, can, return, false, to, avoid, continue, and, call, the, run, method, shutdown, will, still, be, called, otherwise, true, or, void, this, is, pre, before, run, integer, integer, http, status, code, by, default, does, not, must, returns, which, optional, other, supported, codes, are, ok, with, notice warning error, messages, -, used, only, for, rest apis, permanent, redirect, temporary, not, found, forbidden">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartAppAdminController</title>
 	<!-- CSS and Fonts -->
@@ -721,10 +721,10 @@ select#select-summary {
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>Initialize</b></span>&nbsp;(
 		
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;VOID
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;BOOL
 	<br><span class="doc-reimplemented"><i>reimplemented&nbsp;</i>&nbsp;over&nbsp;<b>\SmartAbstractAppController</b></span>
 	
-			<div class="doc-method-ret-params">@return: {VOID} This function does not return anything</div>
+			<div class="doc-method-ret-params">@return: {BOOL} *OPTIONAL* If an ERROR occurs during initialize it can return FALSE to avoid continue and call the Run() method ; ShutDown() method will still be called ; otherwise it can return TRUE or VOID</div>
 	
 			<div class="doc-method-comments">This is the pre Run() function<br>
 This function will be called before Run()</div>
@@ -802,6 +802,19 @@ This is used to destruct a middleware controller service<br>
 NOTICE: Use the ShutDown() function as custom destructor, it will be called after Run() safely prior to destruct this class.<br>
 The class destructors are not safe in controller instances.<br>
 See the comments from ShutDown() function in this class !</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--IsRawPage">
+	<span class="doc-modifiers">final public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>IsRawPage</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;BOOLEAN
+	<br><span class="doc-inherited"><i>inherited</i>&nbsp;from&nbsp;<b>\SmartAbstractAppController</b></span>
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if 'rawpage' is 'yes' or true ; FALSE otherwise</div>
+	
+			<div class="doc-method-comments">Test if Raw Page in ON</div>
 	
 	
 	
@@ -1508,6 +1521,9 @@ function smartHandleDocSelector(obj) {
 									<option value="Method--__destruct"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;__destruct()</option>
 			
 			
+									<option value="Method--IsRawPage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;IsRawPage()</option>
+			
+			
 									<option value="Method--IfProdEnv"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;IfProdEnv()</option>
 			
 			
@@ -1654,7 +1670,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-06-11 08:06:23 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-06-30 10:29:04 +0000</small>
 <hr>
 <br>
 <!-- # -->

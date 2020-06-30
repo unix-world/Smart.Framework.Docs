@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartModExtLib\PageBuilder\AbstractFrontendPlugin        abstract class \SmartModExtLib\PageBuilder\ AbstractFrontendPlugin  extends">
-	<meta name="keywords" content="smartmodextlib pagebuilder abstractfrontendplugin, abstract, class, smartmodextlib pagebuilder, abstractfrontendplugin, extends, smartabstractappcontroller, -, class, -, frontend, plugin, provides, the, definitions, to, create, pagebuilder, frontend, plugins., language, php, located, at, modules mod-page-builder libs abstractfrontendplugin.php, package, development modules pagebuilder, namespace, name, version, v, hints, needs, be, extended, as, uniqueclasspluginname, usage, dynamic, object, new, class   - method, this, only, methods, inheritance, chart, →, ↳, final, public, function, getpluginname, -, get, name, getpluginconfig, config, as, array, getplugincallermodulepath, caller, module, path, construct, string, y module path, y controller, y url page, y hardcoded area, inherited, from, param, string, y module path, relative, followed, by, a, trailing, slash, current, containing, controller, served, middleware, service, ex, modules mod-mytest, y controller, serve, action, for, mytest.some-controller, referring, file, modules mod-mytest some-controller.php">
+	<meta name="keywords" content="smartmodextlib pagebuilder abstractfrontendplugin, abstract, class, smartmodextlib pagebuilder, abstractfrontendplugin, extends, smartabstractappcontroller, -, class, -, frontend, plugin, provides, the, definitions, to, create, pagebuilder, frontend, plugins., language, php, located, at, modules mod-page-builder libs abstractfrontendplugin.php, package, development modules pagebuilder, namespace, name, version, v, hints, needs, be, extended, as, uniqueclasspluginname, usage, dynamic, object, new, class   - method, this, only, methods, inheritance, chart, →, ↳, final, public, function, getpluginname, -, get, name, getpluginconfig, config, as, array, getplugincallermodulepath, caller, module, path, getplugindata, data, construct, string, y module path, y controller, y url page, y hardcoded area, inherited, from, param, string, y module path, relative, followed, by, a, trailing, slash, current, containing, controller, served, middleware, service, ex, modules mod-mytest, y controller, serve, action, for, mytest.some-controller, referring">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartModExtLib\PageBuilder\AbstractFrontendPlugin</title>
 	<!-- CSS and Fonts -->
@@ -696,7 +696,7 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \SmartModExtLib\PageBuilder\</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> AbstractFrontendPlugin</span></li>
 		
-		<li><b>Version:</b> v.20200515</li>
+		<li><b>Version:</b> v.20200630</li>
 		
 		<li><b>Hints:</b> needs  to be extended as: UniqueClassPluginName</li>
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -753,6 +753,18 @@ select#select-summary {
 	
 	
 	
+</div><div class="doc-container" id="Method--getPluginData">
+	<span class="doc-modifiers">final public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getPluginData</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	
+	
+	
+			<div class="doc-method-comments">Get Plugin Data as Array</div>
+	
+	
+	
 </div><div class="doc-container" id="Method--__construct">
 	<span class="doc-modifiers">final public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-special-name"><b>__construct</b></span>&nbsp;(
 				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_module_path` Parameter is REQUIRED">$y_module_path</span></b></span>, 
@@ -787,6 +799,19 @@ This is used to destruct a middleware controller service<br>
 NOTICE: Use the ShutDown() function as custom destructor, it will be called after Run() safely prior to destruct this class.<br>
 The class destructors are not safe in controller instances.<br>
 See the comments from ShutDown() function in this class !</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--IsRawPage">
+	<span class="doc-modifiers">final public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>IsRawPage</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;BOOLEAN
+	<br><span class="doc-inherited"><i>inherited</i>&nbsp;from&nbsp;<b>\SmartAbstractAppController</b></span>
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if 'rawpage' is 'yes' or true ; FALSE otherwise</div>
+	
+			<div class="doc-method-comments">Test if Raw Page in ON</div>
 	
 	
 	
@@ -1435,10 +1460,10 @@ This is based on PersistentCache</div>
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>Initialize</b></span>&nbsp;(
 		
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;VOID
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;BOOL
 	<br><span class="doc-inherited"><i>inherited</i>&nbsp;from&nbsp;<b>\SmartAbstractAppController</b></span>
 	
-			<div class="doc-method-ret-params">@return: {VOID} This function does not return anything</div>
+			<div class="doc-method-ret-params">@return: {BOOL} *OPTIONAL* If an ERROR occurs during initialize it can return FALSE to avoid continue and call the Run() method ; ShutDown() method will still be called ; otherwise it can return TRUE or VOID</div>
 	
 			<div class="doc-method-comments">This is the pre Run() function<br>
 This function will be called before Run()</div>
@@ -1540,10 +1565,16 @@ function smartHandleDocSelector(obj) {
 									<option value="Method--getPluginCallerModulePath"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getPluginCallerModulePath()</option>
 			
 			
+									<option value="Method--getPluginData"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getPluginData()</option>
+			
+			
 									<option value="Method--__construct"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;__construct()</option>
 			
 			
 									<option value="Method--__destruct"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;__destruct()</option>
+			
+			
+									<option value="Method--IsRawPage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;IsRawPage()</option>
 			
 			
 									<option value="Method--IfProdEnv"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;IfProdEnv()</option>
@@ -1701,7 +1732,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-06-11 08:06:27 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-06-30 10:29:08 +0000</small>
 <hr>
 <br>
 <!-- # -->

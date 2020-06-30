@@ -696,7 +696,7 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartCaptcha</span></li>
 		
-		<li><b>Version:</b> v.20200121</li>
+		<li><b>Version:</b> v.20200619</li>
 		<li><b>Depends:</b> classes:  Smart, SmartUtils, SmartTextTranslations ; javascript: jquery.js, smart-framework.pak.js ; css: captcha.css</li>
 		<li><b>Hints:</b> To  render captcha, SmartCaptcha::drawCaptchaForm() and a captcha plugin is required. To verify, use SmartCaptcha::verifyCaptcha() ; SmartCaptcha::clearCaptcha() is optional to be call after verify, depending how SmartCaptcha::verifyCaptcha() is called</li>
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -731,7 +731,8 @@ This should be used for internal development only of new captcha Plugins (ex: im
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>drawCaptchaForm</b></span>&nbsp;(
 				<span class="doc-param-name"><b><span title="`$y_form_name` Parameter is REQUIRED">$y_form_name</span></b></span>, 
 			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_captcha_image_url` Parameter is OPTIONAL, with the Default Value: null">$y_captcha_image_url</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>null</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_mode` Parameter is OPTIONAL, with the Default Value: &quot;cookie&quot;">$y_mode</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;cookie&quot;</b></span>
+			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_mode` Parameter is OPTIONAL, with the Default Value: &quot;cookie&quot;">$y_mode</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;cookie&quot;</b></span>, 
+			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_use_absolute_url` Parameter is OPTIONAL, with the Default Value: false">$y_use_absolute_url</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -874,7 +875,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-06-11 08:06:24 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-06-30 10:29:06 +0000</small>
 <hr>
 <br>
 <!-- # -->

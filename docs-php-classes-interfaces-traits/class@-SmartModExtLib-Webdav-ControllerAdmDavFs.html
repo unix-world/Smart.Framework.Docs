@@ -775,6 +775,19 @@ See the comments from ShutDown() function in this class !</div>
 	
 	
 	
+</div><div class="doc-container" id="Method--IsRawPage">
+	<span class="doc-modifiers">final public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>IsRawPage</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;BOOLEAN
+	<br><span class="doc-inherited"><i>inherited</i>&nbsp;from&nbsp;<b>\SmartAbstractAppController</b></span>
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if 'rawpage' is 'yes' or true ; FALSE otherwise</div>
+	
+			<div class="doc-method-comments">Test if Raw Page in ON</div>
+	
+	
+	
 </div><div class="doc-container" id="Method--IfProdEnv">
 	<span class="doc-modifiers">final public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>IfProdEnv</b></span>&nbsp;(
 		
@@ -1420,10 +1433,10 @@ This is based on PersistentCache</div>
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>Initialize</b></span>&nbsp;(
 		
 	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;VOID
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;BOOL
 	<br><span class="doc-inherited"><i>inherited</i>&nbsp;from&nbsp;<b>\SmartAbstractAppController</b></span>
 	
-			<div class="doc-method-ret-params">@return: {VOID} This function does not return anything</div>
+			<div class="doc-method-ret-params">@return: {BOOL} *OPTIONAL* If an ERROR occurs during initialize it can return FALSE to avoid continue and call the Run() method ; ShutDown() method will still be called ; otherwise it can return TRUE or VOID</div>
 	
 			<div class="doc-method-comments">This is the pre Run() function<br>
 This function will be called before Run()</div>
@@ -1521,6 +1534,9 @@ function smartHandleDocSelector(obj) {
 			
 			
 									<option value="Method--__destruct"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;__destruct()</option>
+			
+			
+									<option value="Method--IsRawPage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;IsRawPage()</option>
 			
 			
 									<option value="Method--IfProdEnv"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;IfProdEnv()</option>
@@ -1678,7 +1694,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-06-11 08:06:27 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-06-30 10:29:08 +0000</small>
 <hr>
 <br>
 <!-- # -->
