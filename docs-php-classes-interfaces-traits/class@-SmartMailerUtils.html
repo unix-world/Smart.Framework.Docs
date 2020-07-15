@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartMailerUtils        final class \ SmartMailerUtils    {   } ::    Class: SmartMailerUtils - provides various util functions for eMail like:">
-	<meta name="keywords" content="smartmailerutils, final, class, smartmailerutils, class, -, provides, various, util, functions, for, email, like, check validate, send., language, php, located, at, lib core plugins lib mail utils.php, package, plugins mailer, namespace, name, version, v, depends, classes, smart, smartutils, smartfilesysutils, smartfilesystem, smartmailersend, usage, static, object, class  method, this, only, methods, public, function, check email address, string, email, enum, ycheckdomain, no, helo, number, y smtp port, return, string, param, email, address, enum, ycheckdomain, no, validate, if, is, in, the, form, of, text texte.xt, yes, check, with, mx, smtp, validation, helo, helo, if, domain, will, be, used, cannot, empty, number, y smtp port, port, normal, public, validate mx email address, does, private, send email, logsend dir, string array, to, cc, bcc, subj">
+	<meta name="keywords" content="smartmailerutils, final, class, smartmailerutils, class, -, provides, various, util, functions, for, email, like, check validate, send., language, php, located, at, lib core plugins lib mail utils.php, package, plugins mailer, namespace, name, version, v, depends, classes, smart, smartutils, smartfilesysutils, smartfilesystem, smartmailersend, usage, static, object, class  method, this, only, methods, public, function, check email address, string, email, enum, ycheckdomain, no, helo, number, y smtp port, array, return, array, status, ok, notok, message, validation, message, param, string, email, address, enum, ycheckdomain, no, validate, if, is, in, the, form, of, text texte.xt, yes, check, with, mx, smtp, helo, helo, if, domain, will, be, used, cannot, empty, number, y smtp port, port, normal, public, validate mx email address, does, private">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartMailerUtils</title>
 	<!-- CSS and Fonts -->
@@ -696,7 +696,7 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartMailerUtils</span></li>
 		
-		<li><b>Version:</b> v.20200605</li>
+		<li><b>Version:</b> v.20200708</li>
 		<li><b>Depends:</b> classes:  Smart, SmartUtils, SmartFileSysUtils, SmartFileSystem, SmartMailerSend</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -718,10 +718,10 @@ select#select-summary {
 			<i>NUMBER</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_smtp_port` Parameter is OPTIONAL, with the Default Value: &quot;25&quot;">$y_smtp_port</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;25&quot;</b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
 	
 	
-			<div class="doc-method-ret-params">@return: {STRING}<br>
+			<div class="doc-method-ret-params">@return: {ARRAY} ['status'] = ok / notok ; ['message'] = validation message<br>
 @param: {STRING} $email: eMail Address<br>
 @param: {ENUM} $ycheckdomain: 'no' = only validate if email address is in the form of text@texte.xt | 'yes' = check email with MX + SMTP validation<br>
 @param: {STRING} $helo: SMTP HELO (if check MX + Domain will be used, cannot be empty)<br>
@@ -811,7 +811,7 @@ It will use the default server settings from configs: $configs['sendmail'][]</di
 	
 	
 			<div class="doc-method-ret-params">@return: {ARRAY} [ 'result' =&gt; 'Operation RESULT', 'error' =&gt; 'ERROR Message if any', 'log' =&gt; 'Send LOG', 'message' =&gt; 'The Mime MESSAGE' ]<br>
-@param: {ARRAY} $mail_config: send config array (keys that start with * are optional): [ server-mx-domain, server-host, server-port, server-ssl, server-cafile, auth-user, auth-password, *from-return, from-address, from-name, *use-qp-encoding, *use-min-enc-subj, *use-antispam-rules ]<br>
+@param: {ARRAY} $mail_config: send config array (keys that start with * are optional): [ server-mx-domain, server-host, server-port, server-ssl, *server-cafile, *auth-user, *auth-password, *auth-mode, *from-return, from-address, from-name, *use-qp-encoding, *use-min-enc-subj, *use-antispam-rules ]<br>
 @param: {STRING} $logsend_dir: A Directory relative path where to store send log messages OR Empty (no store): '' | 'tmp/my-email-send-log-dir'<br>
 @param: {STRING/ARRAY} $to: To: to@addr | [ 'to1@addr', 'to2@addr', ... ]<br>
 @param: {STRING/ARRAY} $cc: Cc: '' | cc@addr | [ 'cc1@addr', 'cc2@addr', ... ]<br>
@@ -918,7 +918,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-06-30 10:29:05 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-07-09 11:36:14 +0000</small>
 <hr>
 <br>
 <!-- # -->

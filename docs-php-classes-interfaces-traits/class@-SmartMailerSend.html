@@ -699,7 +699,7 @@ To easy send email messages use: SmartMailerUtils::send_email() / SmartMailerUti
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartMailerSend</span></li>
 		
-		<li><b>Version:</b> v.20200415</li>
+		<li><b>Version:</b> v.20200708</li>
 		<li><b>Depends:</b> classes:  Smart</li>
 		
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -913,7 +913,7 @@ If non-empty, each header line must be end as CRLF (\r\n)<br>
 Ex: 'X-AntiAbuse: This header was added to track abuse, please include it with any abuse report'.&quot;\r\n&quot;.'X-AntiAbuse: Sender Address Domain - mydomain.ext'.&quot;\r\n&quot;</div>
 	
 </div><div class="doc-container" id="Property--smtp_helo">
-	<span class="doc-modifiers">public</span> <b>$smtp_helo</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>'127.0.0.1'</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
+	<span class="doc-modifiers">public</span> <b>$smtp_helo</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>'localhost'</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
 			<div class="doc-method-comments">Apply only if send the email message using SMTP Method<br>
 SMTP HELO (server name that is allowed to send mails for this domain)<br>
 Must be set to a real domain host that is valid to send emails for that address</div>
@@ -931,7 +931,7 @@ SMTP server port ; usually 25</div>
 </div><div class="doc-container" id="Property--smtp_ssl">
 	<span class="doc-modifiers">public</span> <b>$smtp_ssl</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>null</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>ENUM</i>
 			<div class="doc-method-comments">Apply only if send the email message using SMTP Method<br>
-SMTP SSL Mode: '', 'ssl', 'sslv3', 'tls', 'starttls'<br>
+SMTP SSL Mode: '', 'starttls', 'starttls:1.0', 'starttls:1.1', 'starttls:1.2', 'tls', 'tls:1.0', 'tls:1.1', 'tls:1.2', 'ssl', 'sslv3'<br>
 If empty string will be set it will be not using SSL Mode</div>
 	
 </div><div class="doc-container" id="Property--smtp_cafile">
@@ -961,6 +961,12 @@ SMTP Authentication username ($smtp_login must be set to TRUE and a valid, non-e
 	<span class="doc-modifiers">public</span> <b>$smtp_password</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>null</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
 			<div class="doc-method-comments">Apply only if send the email message using SMTP Method<br>
 SMTP Authentication password ($smtp_login must be set to TRUE and a valid, non-empty $smtp_user must be provided)</div>
+	
+</div><div class="doc-container" id="Property--smtp_modeauth">
+	<span class="doc-modifiers">public</span> <b>$smtp_modeauth</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>ENUM</i>
+			<div class="doc-method-comments">Apply only if send the email message using SMTP Method<br>
+SMTP Authentication mode ($smtp_login must be set to TRUE and a valid, non-empty $smtp_user and $smtp_password must be provided)<br>
+Can be set to any of: 'login', 'auth:plain', 'auth:cram-md5', 'auth:xoauth2' ; Default is '' which selects the default 'login'</div>
 	
 </div><div class="doc-container" id="Property--mime_message">
 	<span class="doc-modifiers">public</span> <b>$mime_message</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>STRING</i>
@@ -1082,6 +1088,8 @@ function smartHandleDocSelector(obj) {
 			
 									<option value="Property--smtp_password"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$smtp_password</option>
 			
+									<option value="Property--smtp_modeauth"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$smtp_modeauth</option>
+			
 									<option value="Property--mime_message"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$mime_message</option>
 			
 			
@@ -1107,7 +1115,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-06-30 10:29:05 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-07-09 11:36:14 +0000</small>
 <hr>
 <br>
 <!-- # -->

@@ -696,7 +696,7 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartMailerPop3Client</span></li>
 		
-		<li><b>Version:</b> v.20200413</li>
+		<li><b>Version:</b> v.20200708</li>
 		<li><b>Depends:</b> classes:  Smart</li>
 		<li><b>Hints:</b> After  each operation on the POP3 Server should check the $pop3-&gt;error string and if non-empty stop and disconnect to free the socket</li>
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -788,7 +788,7 @@ If not set but SMART_FRAMEWORK_SSL_CA_FILE is defined will use the SMART_FRAMEWO
 			<div class="doc-method-ret-params">@return: {INTEGER+} 1 on success, 0 on fail<br>
 @param: {STRING} $server: The Server Hostname or IP address<br>
 @param: {INTEGER+} $port: *Optional* The Server Port ; Default is: 110<br>
-@param: {ENUM} $sslversion: To connect using SSL mode this must be set to any of these accepted values: '', 'ssl', 'sslv3', 'tls', 'starttls' ; If empty string will be set will be not using SSL Mode</div>
+@param: {ENUM} $sslversion: To connect using SSL mode this must be set to any of these accepted values: '', 'starttls', 'starttls:1.0', 'starttls:1.1', 'starttls:1.2', 'tls', 'tls:1.0', 'tls:1.1', 'tls:1.2', 'ssl', 'sslv3' ; If empty string is set here it will be operate in unsecure mode (NOT using any SSL/TLS Mode)</div>
 	
 			<div class="doc-method-comments">Will try to open a socket to the specified POP3 Server using the host/ip and port ; If a SSL option is selected will try to establish a SSL socket or fail</div>
 	
@@ -817,7 +817,7 @@ Sends the command NOOP to the Server</div>
 	
 			<div class="doc-method-ret-params">@return: {INTEGER+} 1 on Success or 0 on Error</div>
 	
-			<div class="doc-method-comments">Reset the IMAP4 server connection (includding all messages marked to be deleted)</div>
+			<div class="doc-method-comments">Reset the POP3 server connection (includding all messages marked to be deleted)</div>
 	
 	
 	
@@ -848,7 +848,7 @@ Closes the communication socket after sending LOGOUT command</div>
 			<div class="doc-method-ret-params">@return: {INTEGER+} 1 on Success or 0 on Failure or Error<br>
 @param: {STRING} $username: The authentication username<br>
 @param: {STRING} $pass: The authentication password<br>
-@param: {ENUM} $mode: *Optional* The authentication mode ; can be set to 'standard' or 'apop' ; Default is 'standard'</div>
+@param: {ENUM} $mode: *Optional* The authentication mode ; can be set to any of: 'login', 'apop', 'auth:cram-md5' ; Default is 'login'</div>
 	
 			<div class="doc-method-comments">Try to Authenticate on the POP3 Server with a username and password<br>
 Sends both user and pass to the Server</div>
@@ -1101,7 +1101,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-06-30 10:29:05 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-07-09 11:36:14 +0000</small>
 <hr>
 <br>
 <!-- # -->
