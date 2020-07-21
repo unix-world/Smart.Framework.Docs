@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\Smart        final class \ Smart    {   } ::    Class: Smart (Base Functions) - provides the base methods for an easy and secure development with">
-	<meta name="keywords" content="smart, final, class, smart, class, base, functions, -, provides, the, base, methods, for, an, easy, and, secure, development, with, smart.framework, php., language, php, located, at, lib framework lib smart.php, package, core, namespace, name, version, v, depends, extensions, json, classes, smartunicode, hints, it, is, recommended, to, use, in, this, instead, of, native, whenever, possible, because, will, offer, long, term, support, be, supported, even, if, behind, can, change, over, time, so, code, would, easier, maintain., usage, static, object, class  method, only, public, function, get from config, enum, param, mixed, return, mixed, value, selected, parameter., config, parameter, does, not, exists, return, empty, string., param, enum, param">
+	<meta name="keywords" content="smart, final, class, smart, class, base, functions, -, provides, the, base, methods, for, an, easy, and, secure, development, with, smart.framework, php., language, php, located, at, lib framework lib smart.php, package, core, namespace, name, version, v, depends, extensions, json, classes, smartunicode, hints, it, is, recommended, to, use, in, this, instead, of, native, whenever, possible, because, will, offer, long, term, support, be, supported, even, if, behind, can, change, over, time, so, code, would, easier, maintain., usage, static, object, class  method, only, public, function, get from config, string, param, mixed, return, mixed, value, selected, parameter., config, parameter, does, not, exists, return, empty, string., param, enum, param">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \Smart</title>
 	<!-- CSS and Fonts -->
@@ -696,7 +696,7 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> Smart</span></li>
 		
-		<li><b>Version:</b> v.20200610</li>
+		<li><b>Version:</b> v.20200719</li>
 		<li><b>Depends:</b> extensions:  PHP JSON ; classes: SmartUnicode</li>
 		<li><b>Hints:</b> It  is recommended to use the methods in this class instead of PHP native methods whenever is possible because this class will offer Long Term Support and the methods will be supported even if the behind PHP methods can change over time, so the code would be easier to maintain.</li>
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -712,7 +712,7 @@ select#select-summary {
 <!-- methods r.20200121 -->
 <div class="doc-container" id="Method--get_from_config">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_from_config</b></span>&nbsp;(
-				<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span title="`$param` Parameter is REQUIRED">$param</span></b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$param` Parameter is REQUIRED">$param</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;MIXED
@@ -727,7 +727,7 @@ select#select-summary {
 	
 </div><div class="doc-container" id="Method--fix_path_separator">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>fix_path_separator</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_path` Parameter is REQUIRED">$y_path</span></b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_path` Parameter is REQUIRED">$y_path</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -742,7 +742,7 @@ select#select-summary {
 	
 </div><div class="doc-container" id="Method--real_path">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>real_path</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_path` Parameter is REQUIRED">$y_path</span></b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_path` Parameter is REQUIRED">$y_path</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -757,7 +757,7 @@ select#select-summary {
 	
 </div><div class="doc-container" id="Method--dir_name">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>dir_name</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_path` Parameter is REQUIRED">$y_path</span></b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_path` Parameter is REQUIRED">$y_path</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -772,8 +772,8 @@ select#select-summary {
 	
 </div><div class="doc-container" id="Method--base_name">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>base_name</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_path` Parameter is REQUIRED">$y_path</span></b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_suffix` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_suffix</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_path` Parameter is REQUIRED">$y_path</span></b></span>, 
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_suffix` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_suffix</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -790,7 +790,7 @@ The directory separator character is the forward slash (/), except Windows where
 	
 </div><div class="doc-container" id="Method--path_info">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>path_info</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_path` Parameter is REQUIRED">$y_path</span></b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_path` Parameter is REQUIRED">$y_path</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
@@ -803,9 +803,47 @@ The directory separator character is the forward slash (/), except Windows where
 	
 	
 	
+</div><div class="doc-container" id="Method--str_replace_first">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>str_replace_first</b></span>&nbsp;(
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$search` Parameter is REQUIRED">$search</span></b></span>, 
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$replace` Parameter is REQUIRED">$replace</span></b></span>, 
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} This function returns a string with the replaced value only on first occurence if search value is found<br>
+@param: {STRING} $search: The value being searched for, otherwise known as the needle<br>
+@param: {STRING} $replace: The replacement value that replaces found search value<br>
+@param: {STRING} $str: The string being searched and replaced on, otherwise known as the haystack</div>
+	
+			<div class="doc-method-comments">Str Replace, Only First Occurence</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--str_replace_last">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>str_replace_last</b></span>&nbsp;(
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$search` Parameter is REQUIRED">$search</span></b></span>, 
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$replace` Parameter is REQUIRED">$replace</span></b></span>, 
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} This function returns a string with the replaced value only on last occurence if search value is found<br>
+@param: {STRING} $search: The value being searched for, otherwise known as the needle<br>
+@param: {STRING} $replace: The replacement value that replaces found search value<br>
+@param: {STRING} $str: The string being searched and replaced on, otherwise known as the haystack</div>
+	
+			<div class="doc-method-comments">Str Replace, Only Last Occurence</div>
+	
+	
+	
 </div><div class="doc-container" id="Method--url_add_params">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>url_add_params</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_url` Parameter is REQUIRED">$y_url</span></b></span>, 
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_url` Parameter is REQUIRED">$y_url</span></b></span>, 
 			<i>array</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_params` Parameter is REQUIRED">$y_params</span></b></span>
 	
 	
@@ -822,8 +860,8 @@ The directory separator character is the forward slash (/), except Windows where
 	
 </div><div class="doc-container" id="Method--url_add_suffix">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>url_add_suffix</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_url` Parameter is REQUIRED">$y_url</span></b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_suffix` Parameter is REQUIRED">$y_suffix</span></b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_url` Parameter is REQUIRED">$y_url</span></b></span>, 
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_suffix` Parameter is REQUIRED">$y_suffix</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -839,8 +877,8 @@ The directory separator character is the forward slash (/), except Windows where
 	
 </div><div class="doc-container" id="Method--url_add_anchor">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>url_add_anchor</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_url` Parameter is REQUIRED">$y_url</span></b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_anchor` Parameter is REQUIRED">$y_anchor</span></b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_url` Parameter is REQUIRED">$y_url</span></b></span>, 
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_anchor` Parameter is REQUIRED">$y_anchor</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -919,9 +957,9 @@ This is a shortcut to the htmlspecialchars() to avoid use long options each time
 </div><div class="doc-container" id="Method--json_encode">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>json_encode</b></span>&nbsp;(
 				<i>MIXED</i>&nbsp;<span class="doc-param-name"><b><span title="`$data` Parameter is REQUIRED">$data</span></b></span>, 
-			<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$prettyprint` Parameter is OPTIONAL, with the Default Value: false">$prettyprint</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>, 
-			<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$unescaped_unicode` Parameter is OPTIONAL, with the Default Value: true">$unescaped_unicode</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>, 
-			<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$htmlsafe` Parameter is OPTIONAL, with the Default Value: true">$htmlsafe</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
+			<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$prettyprint` Parameter is OPTIONAL, with the Default Value: false">$prettyprint</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>, 
+			<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$unescaped_unicode` Parameter is OPTIONAL, with the Default Value: true">$unescaped_unicode</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>, 
+			<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$htmlsafe` Parameter is OPTIONAL, with the Default Value: true">$htmlsafe</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -940,7 +978,7 @@ This is a shortcut to the htmlspecialchars() to avoid use long options each time
 </div><div class="doc-container" id="Method--json_decode">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>json_decode</b></span>&nbsp;(
 				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$json` Parameter is REQUIRED">$json</span></b></span>, 
-			<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$return_array` Parameter is OPTIONAL, with the Default Value: true">$return_array</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
+			<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$return_array` Parameter is OPTIONAL, with the Default Value: true">$return_array</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;MIXED
@@ -1043,7 +1081,7 @@ This is a better replacement for the PHP's number_format() which throws a warnin
 </div><div class="doc-container" id="Method--array_sort">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>array_sort</b></span>&nbsp;(
 				<i>array</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_arr` Parameter is REQUIRED">$y_arr</span></b></span>, 
-			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_mode` Parameter is REQUIRED">$y_mode</span></b></span>
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_mode` Parameter is REQUIRED">$y_mode</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
@@ -1075,8 +1113,8 @@ This is a better replacement for the PHP's number_format() which throws a warnin
 </div><div class="doc-container" id="Method--array_get_by_key_path">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>array_get_by_key_path</b></span>&nbsp;(
 				<i>array</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_arr` Parameter is REQUIRED">$y_arr</span></b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_key_path` Parameter is REQUIRED">$y_key_path</span></b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_path_separator` Parameter is REQUIRED">$y_path_separator</span></b></span>
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_key_path` Parameter is REQUIRED">$y_key_path</span></b></span>, 
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_path_separator` Parameter is REQUIRED">$y_path_separator</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;MIXED
@@ -1094,8 +1132,8 @@ This is a better replacement for the PHP's number_format() which throws a warnin
 </div><div class="doc-container" id="Method--array_test_key_by_path_exists">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>array_test_key_by_path_exists</b></span>&nbsp;(
 				<i>array</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_arr` Parameter is REQUIRED">$y_arr</span></b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_key_path` Parameter is REQUIRED">$y_key_path</span></b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_path_separator` Parameter is REQUIRED">$y_path_separator</span></b></span>
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_key_path` Parameter is REQUIRED">$y_key_path</span></b></span>, 
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_path_separator` Parameter is REQUIRED">$y_path_separator</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
@@ -1113,7 +1151,7 @@ This is a better replacement for the PHP's number_format() which throws a warnin
 </div><div class="doc-container" id="Method--array_change_key_case_recursive">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>array_change_key_case_recursive</b></span>&nbsp;(
 				<i>array</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_arr` Parameter is REQUIRED">$y_arr</span></b></span>, 
-			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_mode` Parameter is REQUIRED">$y_mode</span></b></span>
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_mode` Parameter is REQUIRED">$y_mode</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
@@ -1178,10 +1216,10 @@ This is a better replacement for the PHP's number_format() which throws a warnin
 	
 </div><div class="doc-container" id="Method--text_cut_by_limit">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>text_cut_by_limit</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$ytxt` Parameter is REQUIRED">$ytxt</span></b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$ylen` Parameter is REQUIRED">$ylen</span></b></span>, 
-			<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_cut_words` Parameter is OPTIONAL, with the Default Value: true">$y_cut_words</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>, 
-			<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_suffix` Parameter is OPTIONAL, with the Default Value: &quot;...&quot;">$y_suffix</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;...&quot;</b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$ytxt` Parameter is REQUIRED">$ytxt</span></b></span>, 
+			<i>int</i>&nbsp;<span class="doc-param-name"><b><span title="`$ylen` Parameter is REQUIRED">$ylen</span></b></span>, 
+			<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_cut_words` Parameter is OPTIONAL, with the Default Value: true">$y_cut_words</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>, 
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_suffix` Parameter is OPTIONAL, with the Default Value: &quot;...&quot;">$y_suffix</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;...&quot;</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -1216,8 +1254,8 @@ The default cut suffix is (...) but can be disabled using the last parameter.</d
 	
 </div><div class="doc-container" id="Method--striptags">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>striptags</b></span>&nbsp;(
-				<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span title="`$yhtmlcode` Parameter is REQUIRED">$yhtmlcode</span></b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$ynewline` Parameter is OPTIONAL, with the Default Value: &quot;yes&quot;">$ynewline</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;yes&quot;</b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$yhtmlcode` Parameter is REQUIRED">$yhtmlcode</span></b></span>, 
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$ynewline` Parameter is OPTIONAL, with the Default Value: &quot;yes&quot;">$ynewline</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;yes&quot;</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -1233,8 +1271,8 @@ The default cut suffix is (...) but can be disabled using the last parameter.</d
 	
 </div><!-- Skip Internal-Priv Method: `safe_fix_invalid_filesys_names()` --><div class="doc-container" id="Method--safe_pathname">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>safe_pathname</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_path` Parameter is REQUIRED">$y_path</span></b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$ysupresschar` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$ysupresschar</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_path` Parameter is REQUIRED">$y_path</span></b></span>, 
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$ysupresschar` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$ysupresschar</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -1254,8 +1292,8 @@ ALLOWED CHARS: [a-zA-Z0-9] _ - . @ # /</div>
 	
 </div><div class="doc-container" id="Method--safe_filename">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>safe_filename</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_fname` Parameter is REQUIRED">$y_fname</span></b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$ysupresschar` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$ysupresschar</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_fname` Parameter is REQUIRED">$y_fname</span></b></span>, 
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$ysupresschar` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$ysupresschar</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -1275,15 +1313,16 @@ ALLOWED CHARS: [a-zA-Z0-9] _ - . @ #</div>
 	
 </div><div class="doc-container" id="Method--safe_varname">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>safe_varname</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_name` Parameter is REQUIRED">$y_name</span></b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_allow_upper` Parameter is OPTIONAL, with the Default Value: false">$y_allow_upper</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_name` Parameter is REQUIRED">$y_name</span></b></span>, 
+			<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_allow_upper` Parameter is OPTIONAL, with the Default Value: false">$y_allow_upper</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
 	
 	
 			<div class="doc-method-ret-params">@return: {STRING} The safe variable name ; if invalid should return empty value<br>
-@param: {STRING} $y_name: Variable Name to be processed</div>
+@param: {STRING} $y_name: Variable Name to be processed<br>
+@param: {BOOL} $y_allow_upper: Allow UpperCase ; *Optional* ; Default is FALSE</div>
 	
 			<div class="doc-method-comments">Creates a Safe Valid Variable Name<br>
 NOTICE: this have a special usage and must allow also 0..9 as prefix because is can be used for other purposes not just for real safe variable names, thus if real safe valid variable name must be tested later (real safe variable names cannot start with numbers ...)<br>
@@ -1294,8 +1333,8 @@ ALLOWED CHARS: [a-zA-Z0-9] _</div>
 	
 </div><div class="doc-container" id="Method--safe_validname">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>safe_validname</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_name` Parameter is REQUIRED">$y_name</span></b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$ysupresschar` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$ysupresschar</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_name` Parameter is REQUIRED">$y_name</span></b></span>, 
+			<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$ysupresschar` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$ysupresschar</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -1313,7 +1352,7 @@ ALLOWED CHARS: [a-z0-9] _ - . @</div>
 	
 </div><div class="doc-container" id="Method--safe_username">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>safe_username</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_name` Parameter is REQUIRED">$y_name</span></b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_name` Parameter is REQUIRED">$y_name</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -1330,8 +1369,8 @@ ALLOWED CHARS: [a-z0-9] .</div>
 	
 </div><div class="doc-container" id="Method--create_slug">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>create_slug</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_str` Parameter is REQUIRED">$y_str</span></b></span>, 
-			<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_lowercase` Parameter is OPTIONAL, with the Default Value: false">$y_lowercase</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_str` Parameter is REQUIRED">$y_str</span></b></span>, 
+			<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_lowercase` Parameter is OPTIONAL, with the Default Value: false">$y_lowercase</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -1347,7 +1386,7 @@ ALLOWED CHARS: [a-z0-9] .</div>
 	
 </div><div class="doc-container" id="Method--create_htmid">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>create_htmid</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_str` Parameter is REQUIRED">$y_str</span></b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_str` Parameter is REQUIRED">$y_str</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -1362,7 +1401,7 @@ ALLOWED CHARS: [a-z0-9] .</div>
 	
 </div><div class="doc-container" id="Method--create_jsvar">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>create_jsvar</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_str` Parameter is REQUIRED">$y_str</span></b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_str` Parameter is REQUIRED">$y_str</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -1377,7 +1416,7 @@ ALLOWED CHARS: [a-z0-9] .</div>
 	
 </div><div class="doc-container" id="Method--normalize_spaces">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>normalize_spaces</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_txt` Parameter is REQUIRED">$y_txt</span></b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_txt` Parameter is REQUIRED">$y_txt</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -1426,9 +1465,9 @@ This is more intended for decimal numbers like financial operations where the si
 	
 </div><div class="doc-container" id="Method--random_number">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>random_number</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_min` Parameter is OPTIONAL, with the Default Value: 0">$y_min</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>0</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_max` Parameter is OPTIONAL, with the Default Value: -1">$y_max</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>-1</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_seed` Parameter is OPTIONAL, with the Default Value: false">$y_seed</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+				<i>int</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_min` Parameter is OPTIONAL, with the Default Value: 0">$y_min</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>0</b></span>, 
+			<i>int</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_max` Parameter is OPTIONAL, with the Default Value: -1">$y_max</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>-1</b></span>, 
+			<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_seed` Parameter is OPTIONAL, with the Default Value: false">$y_seed</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;INTEGER
@@ -1445,7 +1484,7 @@ The min is zero. The max is limited to 2147483647 on most of the platforms.</div
 	
 </div><div class="doc-container" id="Method--net_server_id">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>net_server_id</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span class="doc-param-optional" title="`$base36` Parameter is OPTIONAL, with the Default Value: false">$base36</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+				<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$base36` Parameter is OPTIONAL, with the Default Value: false">$base36</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
@@ -1459,8 +1498,8 @@ Valid values are 0..1295 (or 00..ZZ if BASE36)</div>
 	
 </div><div class="doc-container" id="Method--unique_entropy">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>unique_entropy</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_suffix` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_suffix</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
-			<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_use_net_server_id` Parameter is OPTIONAL, with the Default Value: true">$y_use_net_server_id</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_suffix` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_suffix</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
+			<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_use_net_server_id` Parameter is OPTIONAL, with the Default Value: true">$y_use_net_server_id</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -1672,7 +1711,7 @@ Intended usage: Extremely Large scale, in a cluster. Case sensitive.</div>
 	
 </div><div class="doc-container" id="Method--uuid_36">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>uuid_36</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$prefix` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$prefix</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$prefix` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$prefix</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -1691,7 +1730,7 @@ Intended usage: Large scale. Standard.</div>
 	
 </div><div class="doc-container" id="Method--uuid_45">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>uuid_45</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$prefix` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$prefix</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$prefix` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$prefix</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -1710,7 +1749,7 @@ Intended usage: Large scale. Standard.</div>
 	
 </div><div class="doc-container" id="Method--url_parse">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>url_parse</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_url` Parameter is REQUIRED">$y_url</span></b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_url` Parameter is REQUIRED">$y_url</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
@@ -1740,8 +1779,8 @@ Intended usage: Large scale. Standard.</div>
 	
 </div><div class="doc-container" id="Method--list_to_array">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>list_to_array</b></span>&nbsp;(
-				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_list` Parameter is REQUIRED">$y_list</span></b></span>, 
-			<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_trim` Parameter is OPTIONAL, with the Default Value: true">$y_trim</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_list` Parameter is REQUIRED">$y_list</span></b></span>, 
+			<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_trim` Parameter is OPTIONAL, with the Default Value: true">$y_trim</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
@@ -1899,6 +1938,12 @@ function smartHandleDocSelector(obj) {
 			
 			
 									<option value="Method--path_info"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;path_info()</option>
+			
+			
+									<option value="Method--str_replace_first"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;str_replace_first()</option>
+			
+			
+									<option value="Method--str_replace_last"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;str_replace_last()</option>
 			
 			
 									<option value="Method--url_add_params"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;url_add_params()</option>
@@ -2111,7 +2156,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-07-17 10:26:15 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-07-21 14:22:38 +0000</small>
 <hr>
 <br>
 <!-- # -->

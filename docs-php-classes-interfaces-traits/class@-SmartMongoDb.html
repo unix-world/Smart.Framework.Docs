@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartMongoDb        final class \ SmartMongoDb    {   } -&gt;    Class Smart MongoDB Client (for PHP MongoDB extension v.1.1.0 or later) Tested and Stable">
-	<meta name="keywords" content="smartmongodb, final, class, smartmongodb, -, smart, mongodb, client, for, php, extension, v, or, later, tested, and, stable, on, server, versions, language, located, at, lib core plugins lib db mongodb.php, package, plugins database mongodb, namespace, name, throws, exception, depending, how, this, it, is, constructed, may, throw, exception, raise, fatal, error, version, v, depends, extensions, v, classes, hints, important, database, specifies, that, max, bson, document, size, megabytes, supports, no, more, than, levels, of, nesting, thus, limit, cannot, be, exceeded, from, side, when, creating, new, documents, https   docs.mongodb.com manual reference limits, to, store, documents, larger, the, maximum, provides, gridfs, api, usage, dynamic, object, new, class   - method, -, only, methods, public, function, construct">
+	<meta name="keywords" content="smartmongodb, final, class, smartmongodb, -, smart, mongodb, client, for, php, extension, v, or, later, tested, and, stable, on, server, versions, language, located, at, lib core plugins lib db mongodb.php, package, plugins database mongodb, namespace, name, throws, exception, depending, how, this, it, is, constructed, may, throw, exception, raise, fatal, error, version, v, depends, extensions, classes, hints, important, database, specifies, that, max, bson, document, size, megabytes, supports, no, more, than, levels, of, nesting, thus, limit, cannot, be, exceeded, from, side, when, creating, new, documents, https   docs.mongodb.com manual reference limits, to, store, documents, larger, the, maximum, provides, gridfs, api, usage, dynamic, object, new, class   - method, -, only, methods, public, function, construct, array">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartMongoDb</title>
 	<!-- CSS and Fonts -->
@@ -697,8 +697,8 @@ Tested and Stable on MongoDB Server versions: 3.2 / 3.4 / 3.6 / 4.0 / 4.1 / 4.2 
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartMongoDb</span></li>
 		<li><span class="doc-throws"><b>Throws:</b> \Exception  : Depending how this class it is constructed it may throw Exception or Raise Fatal Error</span></li>
-		<li><b>Version:</b> v.20200615</li>
-		<li><b>Depends:</b> extensions:  PHP MongoDB (v.1.1.0 or later) ; classes: Smart</li>
+		<li><b>Version:</b> v.20200720</li>
+		<li><b>Depends:</b> extensions:  PHP MongoDB ; classes: Smart</li>
 		<li><b>Hints:</b> Important:  MongoDB database specifies that max BSON document size is 16 megabytes and supports no more than 100 levels of nesting, thus this limit cannot be exceeded from PHP side when creating new mongodb documents: https://docs.mongodb.com/manual/reference/limits/ ; To store documents larger than the maximum size, MongoDB provides the GridFS API</li>
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
 		
@@ -714,7 +714,7 @@ Tested and Stable on MongoDB Server versions: 3.2 / 3.4 / 3.6 / 4.0 / 4.1 / 4.2 
 <div class="doc-container" id="Method--__construct">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-special-name"><b>__construct</b></span>&nbsp;(
 				<i>array</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_configs_arr` Parameter is OPTIONAL, with the Default Value: array()">$y_configs_arr</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>array()</b></span>, 
-			<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_fatal_err` Parameter is OPTIONAL, with the Default Value: true">$y_fatal_err</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
+			<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_fatal_err` Parameter is OPTIONAL, with the Default Value: true">$y_fatal_err</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="* Special* Method"><b>@</b></span>&nbsp;
@@ -767,9 +767,23 @@ Tested and Stable on MongoDB Server versions: 3.2 / 3.4 / 3.6 / 4.0 / 4.1 / 4.2 
 	
 	
 	
+</div><div class="doc-container" id="Method--getObjectId">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getObjectId</b></span>&nbsp;(
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$id` Parameter is REQUIRED">$id</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;MIXED
+	
+	
+			<div class="doc-method-ret-params">@return: {MIXED} return a MongoDB ObjectId as OBJECT or STRING if invalid Id</div>
+	
+			<div class="doc-method-comments">Get the MongoDB ObjectId by Id</div>
+	
+	
+	
 </div><div class="doc-container" id="Method--getFtsDictionaryByLang">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getFtsDictionaryByLang</b></span>&nbsp;(
-				<span class="doc-param-name"><b><span title="`$lang` Parameter is REQUIRED">$lang</span></b></span>
+				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$lang` Parameter is REQUIRED">$lang</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;STRING
@@ -865,7 +879,19 @@ It have variadic parameters mapped to MongoDB sub-calls.</div>
  $docs = <span class="hljs-keyword">array</span>();
  var_dump($insert);
 
-<span class="hljs-comment">// Sample Update</span>
+<span class="hljs-comment">// Sample Complete Update (Replace) ; it will completely replace the document with a new one, except the _id UID key, by _id ; works only with one document ; if more documents match the criteria, only the first one will be updated</span>
+ $doc = [];
+ $doc[<span class="hljs-string">'name'</span>] = <span class="hljs-string">'My New Name'</span>;
+ $doc[<span class="hljs-string">'description'</span>] = <span class="hljs-string">'Some description goes here ...'</span>;
+ $update = $mongo-&gt;update(
+ 		<span class="hljs-string">'myTestCollection'</span>,
+ 		[ <span class="hljs-string">'_id'</span> =&gt; <span class="hljs-string">'XXXXXXXXXX-XXXXXXXXXX-XXXXXXXXXX'</span> ], 			<span class="hljs-comment">// filter (update only this)</span>
+ 		[ <span class="hljs-number">0</span> =&gt; (<span class="hljs-keyword">array</span>) $doc ]										<span class="hljs-comment">// replace array</span>
+ 	);
+ $doc = [];
+ var_dump($update);
+
+<span class="hljs-comment">// Sample Partial Update, will update one or many: name and description ; if other keys exist in the stored document they remain unchanged</span>
  $doc = [];
  $doc[<span class="hljs-string">'name'</span>] = <span class="hljs-string">'My New Name'</span>;
  $doc[<span class="hljs-string">'description'</span>] = <span class="hljs-string">'Some description goes here ...'</span>;
@@ -1187,6 +1213,9 @@ function smartHandleDocSelector(obj) {
 									<option value="Method--get_server_version"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_version()</option>
 			
 			
+									<option value="Method--getObjectId"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getObjectId()</option>
+			
+			
 									<option value="Method--getFtsDictionaryByLang"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getFtsDictionaryByLang()</option>
 			
 			
@@ -1239,7 +1268,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-07-17 10:26:22 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-07-21 14:22:44 +0000</small>
 <hr>
 <br>
 <!-- # -->
