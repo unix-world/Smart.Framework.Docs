@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="\SmartAppAdminController        final class \ SmartAppAdminController  extends \SmartAbstractAppController   {   } -&gt;    Admin Area Controller">
-	<meta name="keywords" content="smartappadmincontroller, final, class, smartappadmincontroller, extends, smartabstractappcontroller, -, admin, area, controller, language, php, located, at, modules mod-documentor doc.php, package, application, namespace, name, version, inheritance, chart, →, ↳, methods, public, function, initialize, bool, reimplemented, over, return, bool, optional, if, an, error, occurs, during, it, can, return, false, to, avoid, continue, and, call, the, run, method, shutdown, will, still, be, called, otherwise, true, or, void, this, is, pre, before, run, integer, integer, http, status, code, by, default, does, not, must, returns, which, optional, other, supported, codes, are, ok, with, notice warning error, messages, -, used, only, for, rest apis, permanent, redirect, temporary, not, found, forbidden">
+	<meta name="keywords" content="smartappadmincontroller, final, class, extends, smartabstractappcontroller, admin, area, controller, language, php, located, at, modules mod-documentor doc.php, package, application, namespace, name, version, inheritance, chart, →, ↳, methods, public, function, initialize, bool, reimplemented, over, return, optional, if, an, error, occurs, during, it, can, false, to, avoid, continue, and, call, the, run, method, shutdown, will, still, be, called, otherwise, true, or, void, this, is, pre, before, integer, http, status, code, by, default, does, not, must, returns, which, other, supported, codes, are, ok, with, notice warning error, messages, used, only, for, rest apis, permanent, redirect, temporary, found, forbidden, authentication, required, too, many, requests, internal, bad, gateway, service">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 	<title>PHP Documentation for: \SmartAppAdminController</title>
 	<!-- CSS and Fonts -->
@@ -1020,7 +1020,7 @@ timezone 					:: 		ex: UTC</div>
 	<span class="doc-modifiers">final public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>CookieVarSet</b></span>&nbsp;(
 				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$name` Parameter is REQUIRED">$name</span></b></span>, 
 			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$data` Parameter is REQUIRED">$data</span></b></span>, 
-			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$expire` Parameter is REQUIRED">$expire</span></b></span>, 
+			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$expire` Parameter is OPTIONAL, with the Default Value: 0">$expire</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>0</b></span>, 
 			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$path` Parameter is OPTIONAL, with the Default Value: &quot;/&quot;">$path</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;/&quot;</b></span>, 
 			<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$domain` Parameter is OPTIONAL, with the Default Value: &quot;@&quot;">$domain</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;@&quot;</b></span>
 	
@@ -1031,7 +1031,7 @@ timezone 					:: 		ex: UTC</div>
 			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if Set, FALSE if Not<br>
 @param: {STRING} $name: The cookie name<br>
 @param: {STRING} $data: The cookie data<br>
-@param: {STRING} $expire: The cookie expire time (zero for session cookies)<br>
+@param: {STRING} $expire: The cookie expire time (zero for session cookies) ; default is zero<br>
 @param: {STRING} $path: The cookie path ; default is /<br>
 @param: {STRING} $domain: The cookie domain ; default is @ (will get as it is set in SMART_FRAMEWORK_UNIQUE_ID_COOKIE_DOMAIN)</div>
 	
@@ -1200,6 +1200,21 @@ The general purpose of this function is to set all Page Data at once when import
 	
 	
 	
+</div><div class="doc-container" id="Method--PageViewGetErrorMessage">
+	<span class="doc-modifiers">final public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>PageViewGetErrorMessage</b></span>&nbsp;(
+				<i>BOOL</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$errhtml` Parameter is OPTIONAL, with the Default Value: false">$errhtml</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;STRING
+	<br><span class="doc-inherited"><i>inherited</i>&nbsp;from&nbsp;<b>\SmartAbstractAppController</b></span>
+	
+			<div class="doc-method-ret-params">@return: {STRING} the ERROR Message if Any<br>
+@param: {BOOL} $errhtml: *Optional* ; Default is FALSE ; If TRUE will return the HTML Error Message instead of default plain HTML Message</div>
+	
+			<div class="doc-method-comments">Get ERROR Message for a controller page</div>
+	
+	
+	
 </div><div class="doc-container" id="Method--PageViewGetStatusCode">
 	<span class="doc-modifiers">final public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>PageViewGetStatusCode</b></span>&nbsp;(
 		
@@ -1263,6 +1278,21 @@ The Controller should stop the execution after calling this function using 'retu
 	
 			<div class="doc-method-comments">Set Redirect URL for a controller page<br>
 The Controller should stop the execution after calling this function using 'return;' or ending the 'Run()' main function</div>
+	
+	
+	
+</div><div class="doc-container" id="Method--PageViewGetVar">
+	<span class="doc-modifiers">final public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>PageViewGetVar</b></span>&nbsp;(
+				<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$param` Parameter is REQUIRED">$param</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;MIXED
+	<br><span class="doc-inherited"><i>inherited</i>&nbsp;from&nbsp;<b>\SmartAbstractAppController</b></span>
+	
+			<div class="doc-method-ret-params">@return: {MIXED} the content of the specific PageView variable currently set<br>
+@param: {STRING} $param: the variable to be get</div>
+	
+			<div class="doc-method-comments">Get the current controller PageView specific Var</div>
 	
 	
 	
@@ -1593,6 +1623,9 @@ function smartHandleDocSelector(obj) {
 									<option value="Method--PageViewResetCfgs"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewResetCfgs()</option>
 			
 			
+									<option value="Method--PageViewGetErrorMessage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewGetErrorMessage()</option>
+			
+			
 									<option value="Method--PageViewGetStatusCode"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewGetStatusCode()</option>
 			
 			
@@ -1603,6 +1636,9 @@ function smartHandleDocSelector(obj) {
 			
 			
 									<option value="Method--PageViewSetRedirectUrl"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewSetRedirectUrl()</option>
+			
+			
+									<option value="Method--PageViewGetVar"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewGetVar()</option>
 			
 			
 									<option value="Method--PageViewGetVars"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;PageViewGetVars()</option>
@@ -1670,7 +1706,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-07-21 14:22:41 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-08-19 07:28:07 +0000</small>
 <hr>
 <br>
 <!-- # -->

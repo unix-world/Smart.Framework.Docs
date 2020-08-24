@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="author" content="unix-world.org">
 	<meta name="description" content="SmartJS_BrowserUtils        static class SmartJS_BrowserUtils  {  } .    CLASS :: Browser Utils This JavaScript class provides methods to simplify the">
-	<meta name="keywords" content="smartjs browserutils, static, class, ., browser, utils, this, javascript, provides, methods, to, simplify, the, interraction, with, ajax, forms, and, provide, basic, implementation, of, several, ui, util, components., language, located, at, lib js framework smart-framework.pak.js, browser utils.js, package, sf.javascript browser, name, usage, smartjs browserutils.method, version, depends, smartjs coreutils, smartjs cryptohash, smartjs bas, jquery, smartjs modalbox, jquery.gritter, jquery.alertable, smartsimpledialog, smartjs browseruiutils, public, function, windowisiframe, boolean, return, true, if, iframe, false, not, detect, a, window, is, windowispopup, popup, parsecurrenturlgetparams, object, para  valu, para  value, ., parse, current, url, extract, get, params, sample, code, http s    some.url  para valu para value, printpage, void, fires, print, dialog, show, event, page, countdown, integer, counter, string, elid, js-code, evcode, custom, set, in, js, code">
+	<meta name="keywords" content="smartjs browserutils, static, class, browser, utils, this, javascript, provides, methods, to, simplify, the, interraction, with, ajax, forms, and, provide, basic, implementation, of, several, ui, util, components, language, located, at, lib js framework smart-framework.pak.js, browser utils.js, package, sf.javascript browser, name, usage, smartjs browserutils.method, version, depends, smartjs coreutils, smartjs cryptohash, smartjs base64, jquery, smartjs modalbox, jquery.gritter, jquery.alertable, smartsimpledialog, smartjs browseruiutils, public, function, windowisiframe, boolean, return, true, if, iframe, false, not, detect, a, window, is, windowispopup, popup, parsecurrenturlgetparams, object, param1  value1, param1  value, parse, current, url, extract, get, params, sample, code, http s some.url  param1 value1&amp;param2 value, printpage, void, fires, print, dialog, show, event, page, countdown, integer, counter, string, elid, js-code, evcode, custom, set, in, js, execute, when, done">
 	<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : Javascript">
 	<title>JS Documentation for: SmartJS_BrowserUtils</title>
 	<!-- CSS and Fonts -->
@@ -696,7 +696,7 @@ This JavaScript class provides methods to simplify the interraction with the Bro
 		
 		
 		
-		<li><b>Version:</b> 20200121</li>
+		<li><b>Version:</b> 20200813</li>
 		<li><b>Depends:</b> SmartJS_CoreUtils, SmartJS_CryptoHash, SmartJS_Base64, jQuery, SmartJS_ModalBox, jQuery.Gritter, *jQuery.alertable, *SmartSimpleDialog, *SmartJS_BrowserUIUtils</li>
 		
 	</ul>
@@ -1695,7 +1695,7 @@ SmartJS_BrowserUtils.Submit_Form_By_Ajax(); 	// advanced, will handle the XHR fo
 			@param: {Decimal} imgMaxResizeMBSize The max resized image size in MB (0.01 ... 2) ; Default is 0.1<br>
 			@param: {Integer} imgMaxResizeW The max resize width of the image (if the image width is lower will be not resized)<br>
 			@param: {Integer} imgMaxResizeH The max resize height of the image (if the image height is lower will be not resized)<br>
-			@param: {CallBack} fxDone A callback function(imgDataURL, w, h, isSVG, type, size) { ... } for done<br>
+			@param: {CallBack} fxDone A callback function(imgDataURL, w, h, isSVG, type, size, name) { ... } for done<br>
 			@param: {Boolean} clearPreview If FALSE will not clear the preview container after done; Default is TRUE<br>
 			@param: {Integer} widthPreview The Preview Width to set if not clearing the preview ; if not defined, full resized image width will be used (imgMaxResizeW)<br>
 			@param: {Integer} heightPreview The Preview Height to set if not clearing the preview ; if not defined, full resized image height will be used (imgMaxResizeH)<br>
@@ -1932,7 +1932,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2020-07-21 14:22:55 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2020-08-19 07:28:22 +0000</small>
 <hr>
 <br>
 <!-- # -->
