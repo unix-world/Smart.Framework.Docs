@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
 <meta name="description" content="\SmartUtils        final class \ SmartUtils    {   } ::    Class: SmartUtils - provides various utility functions for Smart.Framework     Language: PHP">
-<meta name="keywords" content="smartutils, final, class, provides, various, utility, functions, for, smart.framework, language, php, located, at, lib framework lib utils.php, package, core:extra, namespace, name, version, v.20210611, depends, classes, smart, smartunicode, smartvalidator, smarthashcrypto, smartauth, smartfilesysutils, smartfilesystem, smartframeworksecurity, smartframeworkregistry, optional-constants, smart framework security opensslbfcrypto, smart framework security crypto, smart framework cookies default lifetime, smart framework cookies default domain, smart framework cookies default samesite, smart framework ipdetect client, smart framework ipdetect custom, smart framework ipdetect proxy client, smart framework allow upload extensions, smart framework deny upload extensions, smart framework ident robots, usage, static, object, class::method, this, only, methods, public, function, get app release hash, cookies current size used on domain, cookie size max, cookie default expire, cookie default domain, cookie default samesite policy, get cookie, string, cookie name, set cookie, cookie data, int, expire seconds, cookie path, cookie domain, cookie samesite, bool, cookie secure, false, cookie httponly, unset cookie, url hex encode, y val, url hex decode, y enc val, check ip in range, lower range ip address, upper range ip address, needle ip address, date interval days, y date now, y date past, datetime fixed offset, y timezone offset, ydate, data archive, y str, data unarchive, y enc data, comment php code, y code, array, y repl, tag-start, tag-end">
+<meta name="keywords" content="smartutils, final, class, provides, various, utility, functions, for, smart.framework, language, php, located, at, lib framework lib utils.php, package, core:extra, namespace, name, version, v.20220210, depends, classes, smart, smartunicode, smartvalidator, smarthashcrypto, smartauth, smartfilesysutils, smartfilesystem, smartframeworksecurity, smartframeworkregistry, optional-constants, smart framework security opensslbfcrypto, smart framework security crypto, smart framework cookies default lifetime, smart framework cookies default domain, smart framework cookies default samesite, smart framework srvproxy client ip, smart framework srvproxy enabled, smart framework srvproxy client proxy ip, smart framework allow upload extensions, smart framework deny upload extensions, smart framework ident robots, usage, static, object, class::method, this, only, methods, public, function, get app release hash, cookies current size used on domain, cookie size max, cookie default expire, cookie default domain, cookie default samesite policy, get cookie, string, cookie name, set cookie, cookie data, int, expire seconds, cookie path, cookie domain, cookie samesite, bool, cookie secure, false, cookie httponly, unset cookie, url obfs encode, y val, url obfs decode, y enc val, check ip in range, lower range ip address, upper range ip address, needle ip address, date interval days, y date now, y date past, datetime fixed offset, y timezone offset, ydate, data archive, y str, data unarchive, y enc data, comment php code, y code, array, y repl, tag-start, tag-end">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 <link rel="icon" href="data:,">
 <title>PHP Documentation for: \SmartUtils</title>
@@ -706,8 +706,8 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartUtils</span></li>
 		
-		<li><b>Version:</b> v.20210611</li>
-		<li><b>Depends:</b> classes:  Smart, SmartUnicode, SmartValidator, SmartHashCrypto, SmartAuth, SmartFileSysUtils, SmartFileSystem, SmartFrameworkSecurity, SmartFrameworkRegistry ; optional-constants: SMART_FRAMEWORK_SECURITY_OPENSSLBFCRYPTO, SMART_FRAMEWORK_SECURITY_CRYPTO, SMART_FRAMEWORK_COOKIES_DEFAULT_LIFETIME, SMART_FRAMEWORK_COOKIES_DEFAULT_DOMAIN, SMART_FRAMEWORK_COOKIES_DEFAULT_SAMESITE, SMART_FRAMEWORK_IPDETECT_CLIENT, SMART_FRAMEWORK_IPDETECT_CUSTOM, SMART_FRAMEWORK_IPDETECT_PROXY_CLIENT, SMART_FRAMEWORK_ALLOW_UPLOAD_EXTENSIONS, SMART_FRAMEWORK_DENY_UPLOAD_EXTENSIONS, SMART_FRAMEWORK_IDENT_ROBOTS</li>
+		<li><b>Version:</b> v.20220210</li>
+		<li><b>Depends:</b> classes:  Smart, SmartUnicode, SmartValidator, SmartHashCrypto, SmartAuth, SmartFileSysUtils, SmartFileSystem, SmartFrameworkSecurity, SmartFrameworkRegistry ; optional-constants: SMART_FRAMEWORK_SECURITY_OPENSSLBFCRYPTO, SMART_FRAMEWORK_SECURITY_CRYPTO, SMART_FRAMEWORK_COOKIES_DEFAULT_LIFETIME, SMART_FRAMEWORK_COOKIES_DEFAULT_DOMAIN, SMART_FRAMEWORK_COOKIES_DEFAULT_SAMESITE, SMART_FRAMEWORK_SRVPROXY_CLIENT_IP, SMART_FRAMEWORK_SRVPROXY_ENABLED, SMART_FRAMEWORK_SRVPROXY_CLIENT_PROXY_IP, SMART_FRAMEWORK_ALLOW_UPLOAD_EXTENSIONS, SMART_FRAMEWORK_DENY_UPLOAD_EXTENSIONS, SMART_FRAMEWORK_IDENT_ROBOTS</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
 		
@@ -834,8 +834,8 @@ select#select-summary {
 	
 	
 	
-</div><div class="doc-container" id="Method--url_hex_encode">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>url_hex_encode</b></span>&nbsp;(
+</div><div class="doc-container" id="Method--url_obfs_encode">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>url_obfs_encode</b></span>&nbsp;(
 				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_val` Parameter is REQUIRED">$y_val</span></b></span>
 	
 	
@@ -846,8 +846,8 @@ select#select-summary {
 	
 	
 	
-</div><div class="doc-container" id="Method--url_hex_decode">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>url_hex_decode</b></span>&nbsp;(
+</div><div class="doc-container" id="Method--url_obfs_decode">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>url_obfs_decode</b></span>&nbsp;(
 				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_enc_val` Parameter is REQUIRED">$y_enc_val</span></b></span>
 	
 	
@@ -1388,28 +1388,6 @@ select#select-summary {
 	
 	
 	
-</div><div class="doc-container" id="Method--get_server_current_path">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_server_current_path</b></span>&nbsp;(
-		
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
-	
-	
-	
-	
-	
-	
-</div><div class="doc-container" id="Method--get_server_current_url">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_server_current_url</b></span>&nbsp;(
-		
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
-	
-	
-	
-	
-	
-	
 </div><div class="doc-container" id="Method--get_server_current_script">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_server_current_script</b></span>&nbsp;(
 		
@@ -1423,6 +1401,28 @@ select#select-summary {
 	
 </div><div class="doc-container" id="Method--get_server_current_queryurl">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_server_current_queryurl</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
+	
+	
+	
+	
+	
+	
+</div><div class="doc-container" id="Method--get_server_current_path">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_server_current_path</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
+	
+	
+	
+	
+	
+	
+</div><div class="doc-container" id="Method--get_server_current_url">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_server_current_url</b></span>&nbsp;(
 		
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
@@ -1454,6 +1454,20 @@ select#select-summary {
 	
 	
 	
+</div><div class="doc-container" id="Method--is_ip_client_trusted">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>is_ip_client_trusted</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOLEAN
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if trusted ; FALSE if not</div>
+	
+			<div class="doc-method-comments">Check if the Client real IP is trusted<br>
+If something fails in the detection of the Client real IP address this will return FALSE</div>
+	
+	
+	
 </div><div class="doc-container" id="Method--get_ip_client">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_ip_client</b></span>&nbsp;(
 		
@@ -1461,10 +1475,10 @@ select#select-summary {
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
 	
 	
-			<div class="doc-method-ret-params">@return: {STRING} IP Address ; if no address detected will RAISE an ERROR ...</div>
+			<div class="doc-method-ret-params">@return: {STRING} IP Address ; if no address detected will RAISE a FATAL ERROR ...</div>
 	
-			<div class="doc-method-comments">Get the Client real IP such as: REMOTE_ADDR<br>
-This function should be used always across the Smart.Framework to get the client's real IP and never must use directly REMOTE_ADDR as it may change when using apache/php behind haproxy or varnish and in this case the HTTP_X_FORWARDED_FOR will return client's real IP address by example !</div>
+			<div class="doc-method-comments">Get the Client real IP ; by default will use $_SERVER['REMOTE_ADDR'] ; but if set in configs can use by example $_SERVER['HTTP_X_FORWARDED_FOR'] or other values (ex: in the case of a reverse proxy)<br>
+This function should be used always across the Smart.Framework to get the client's real IP instead using directly the $_SERVER['REMOTE_ADDR'] as the real client IP may change when using apache/php behind haproxy or varnish and in this case by example the $_SERVER['HTTP_X_FORWARDED_FOR'] may return client's real IP address and the $_SERVER['REMOTE_ADDR'] will be in this case the IP of the proxy ...</div>
 	
 	
 	
@@ -1568,10 +1582,10 @@ function smartHandleDocSelector(obj) {
 									<option value="Method--unset_cookie"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;unset_cookie()</option>
 			
 			
-									<option value="Method--url_hex_encode"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;url_hex_encode()</option>
+									<option value="Method--url_obfs_encode"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;url_obfs_encode()</option>
 			
 			
-									<option value="Method--url_hex_decode"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;url_hex_decode()</option>
+									<option value="Method--url_obfs_decode"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;url_obfs_decode()</option>
 			
 			
 									<option value="Method--check_ip_in_range"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;check_ip_in_range()</option>
@@ -1700,22 +1714,25 @@ function smartHandleDocSelector(obj) {
 									<option value="Method--get_server_current_full_script"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_full_script()</option>
 			
 			
-									<option value="Method--get_server_current_path"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_path()</option>
-			
-			
-									<option value="Method--get_server_current_url"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_url()</option>
-			
-			
 									<option value="Method--get_server_current_script"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_script()</option>
 			
 			
 									<option value="Method--get_server_current_queryurl"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_queryurl()</option>
 			
 			
+									<option value="Method--get_server_current_path"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_path()</option>
+			
+			
+									<option value="Method--get_server_current_url"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_current_url()</option>
+			
+			
 									<option value="Method--get_webserver_version"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_webserver_version()</option>
 			
 			
 									<option value="Method--get_server_os"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_server_os()</option>
+			
+			
+									<option value="Method--is_ip_client_trusted"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;is_ip_client_trusted()</option>
 			
 			
 									<option value="Method--get_ip_client"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_ip_client()</option>
@@ -1758,13 +1775,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2021-06-12 19:55:35 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2022-02-10 04:47:36 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2021 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2022 unix-world.org</small>
 </center></div>
 </body>
 </html>

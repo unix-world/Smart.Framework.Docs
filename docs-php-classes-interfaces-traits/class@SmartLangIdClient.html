@@ -772,11 +772,10 @@ If LangId.Py is not set in configuration as it may not be available will return 
 	<h2 class="doc-header">Sample code: PHP</h2>
 </div>
 <div class="doc-code">
-	<!-- pre (already preformatted) --><code><!-- Smart/HTML.Cleaner [T] --><code><span style="color: #57A64A"><span style="color: #FFFFFF">&lt;?php<br>
-<br>
-$check_with_default_service&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;(array)&nbsp;(new&nbsp;</span><span style="color: #FFFFFF">SmartLangIdClient</span><span style="color: #FFCC00; font-weight: bold">())-&gt;</span><span style="color: #FFFFFF">getLanguageConfidence</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">&#39;Your&nbsp;text&nbsp;to&nbsp;check&nbsp;goes&nbsp;here&nbsp;...&#39;</span><span style="color: #FFCC00; font-weight: bold">);<br>
-&nbsp;</span><span style="color: #FFFFFF">$check_with_custom_service&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;(array)&nbsp;(new&nbsp;</span><span style="color: #FFFFFF">SmartLangIdClient</span><span style="color: #FFCC00; font-weight: bold">([&nbsp;</span><span style="color: #5F9CCE">&#39;url&#39;&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #5F9CCE">&#39;http://langid.host:9008/detect&#39;</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #5F9CCE">&#39;ssl&#39;&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #5F9CCE">&#39;&#39;</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #5F9CCE">&#39;auth-user&#39;&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #5F9CCE">&#39;&#39;</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #5F9CCE">&#39;auth-pass&#39;&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #5F9CCE">&#39;&#39;&nbsp;</span><span style="color: #FFCC00; font-weight: bold">]))-&gt;</span><span style="color: #FFFFFF">getLanguageConfidence</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">&#39;Your&nbsp;text&nbsp;to&nbsp;check&nbsp;goes&nbsp;here&nbsp;...&#39;</span><span style="color: #FFCC00; font-weight: bold">);<br>
-<br></span><span style="color: #999999">//&nbsp;#end&nbsp;php&nbsp;code<br></span></span></code><!-- [/T] Smart/HTML.Cleaner --></code><!-- /pre -->
+	<!-- pre (already preformatted) --><code><!-- Smart/HTML.Cleaner [D] --><code><span style="color: #57A64A">
+<span style="color: #FFFFFF">&lt;?php<br><br>$check_with_default_service&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;(array)&nbsp;(new&nbsp;</span><span style="color: #FFFFFF">SmartLangIdClient</span><span style="color: #FFCC00; font-weight: bold">())-&gt;</span><span style="color: #FFFFFF">getLanguageConfidence</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'Your&nbsp;text&nbsp;to&nbsp;check&nbsp;goes&nbsp;here&nbsp;...'</span><span style="color: #FFCC00; font-weight: bold">);<br>&nbsp;</span><span style="color: #FFFFFF">$check_with_custom_service&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;(array)&nbsp;(new&nbsp;</span><span style="color: #FFFFFF">SmartLangIdClient</span><span style="color: #FFCC00; font-weight: bold">([&nbsp;</span><span style="color: #5F9CCE">'url'&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #5F9CCE">'http://langid.host:9008/detect'</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #5F9CCE">'ssl'&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #5F9CCE">''</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #5F9CCE">'auth-user'&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #5F9CCE">''</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #5F9CCE">'auth-pass'&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #5F9CCE">''&nbsp;</span><span style="color: #FFCC00; font-weight: bold">]))-&gt;</span><span style="color: #FFFFFF">getLanguageConfidence</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'Your&nbsp;text&nbsp;to&nbsp;check&nbsp;goes&nbsp;here&nbsp;...'</span><span style="color: #FFCC00; font-weight: bold">);<br><br></span><span style="color: #999999">//&nbsp;#end&nbsp;php&nbsp;code<br></span>
+</span>
+</code><!-- [/D] Smart/HTML.Cleaner --></code><!-- /pre -->
 </div>
 <!-- Summary List -->
 <br>
@@ -844,13 +843,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2021-06-12 19:55:48 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2022-02-10 04:47:43 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2021 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2022 unix-world.org</small>
 </center></div>
 </body>
 </html>
