@@ -9,7 +9,7 @@ The Smart.Framework.Docs is licensed under MIT License.
 * Smart.Framework.Modules Javascript Classes
 
 ### About Smart.Framework and Smart.Framework.Modules
-Copyright (c) 2009-2021, unix-world.org
+Copyright (c) 2009-2022, unix-world.org
 Author: Radu Ovidiu Ilies
 All rights reserved.
 License (dual, any of): BSD or GPLv3
