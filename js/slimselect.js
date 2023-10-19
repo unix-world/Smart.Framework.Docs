@@ -1,10 +1,11 @@
 
-// slimselect.js v.1.27
+// slimselect.js v.1.27.0.2 (with fixes from v.1.27.1) from # r.20220906
 // github.com/brianvoe/slim-select
 // (c) 2017-2021 Brian Voelker
 // License: MIT
-// changes by unixman :: (c) 2021, r.20210617
-//	* fixes: add option title from original
+// changes by unixman :: (c) 2021-2022
+//	* fix: add option title from original
+//	* feature: add html attributes: role
 
 (function webpackUniversalModuleDefinition(root, factory) {
 	if(typeof exports === 'object' && typeof module === 'object') {
@@ -993,7 +994,8 @@ var SlimSelect = (function () {
 	};
 	SlimSelect.prototype.destroy = function (id) {
 		if (id === void 0) { id = null; }
-		var slim = (id ? document.querySelector('.' + id + '.ss-main') : this.slim.container);
+	//	var slim = (id ? document.querySelector('.' + id + '.ss-main') : this.slim.container);
+		var slim = (id ? document.querySelector('.' + id + '.' + this.main.config.main) : this.slim.container); // fix by unixman
 		var select = (id ? document.querySelector("[data-ssid=" + id + "]") : this.select.element);
 		if (!slim || !select) {
 			return;
@@ -1343,6 +1345,9 @@ var Slim = (function () {
 		container.className = '';
 		container.classList.add(this.main.config.id);
 		container.classList.add(this.main.config.main);
+		//-- fix by unixman
+		container.setAttribute('role', 'switch');
+		//-- #fix
 		for (var _i = 0, _a = this.main.config["class"]; _i < _a.length; _i++) {
 			var c = _a[_i];
 			if (c.trim() !== '') {
@@ -1772,6 +1777,9 @@ var Slim = (function () {
 	Slim.prototype.listDiv = function () {
 		var list = document.createElement('div');
 		list.classList.add(this.main.config.list);
+		//-- fix by unixman
+		list.setAttribute('role', 'listbox');
+		//-- #fix
 		return list;
 	};
 	Slim.prototype.options = function (content) {
@@ -1851,10 +1859,16 @@ var Slim = (function () {
 			var placeholder = document.createElement('div');
 			placeholder.classList.add(this.main.config.option);
 			placeholder.classList.add(this.main.config.hide);
+			//-- fix by unixman
+		//	placeholder.setAttribute('role', 'option'); // not needed here
+			//--
 			return placeholder;
 		}
 		var optionEl = document.createElement('div');
 		optionEl.classList.add(this.main.config.option);
+		//-- fix by unixman
+		optionEl.setAttribute('role', 'option');
+		//--
 		if (data["class"]) {
 			data["class"].split(' ').forEach(function (dataClass) {
 				optionEl.classList.add(dataClass);

@@ -5,11 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
-<meta name="description" content="\SmartCache final class \ SmartCache { } :: Class: SmartCache - Provides per Execution, Volatille Cache (in-PHP-Memory). This cache type is volatille, not">
-<meta name="keywords" content="smartcache, final, class, provides, per, execution, volatille, cache, in php memory, this, type, is, not, persistent, and, will, reset, after, each, php, because, kind, of, per execution, the, key, values, be, shared, between, executions, it, intended, to, used, on, optimizations, avoid, repetitive, complex, high cost, methods, that, would, output, same, result, under, conditions, as, environment, parameters, client, language, located, at, lib framework lib caching php, package, core, namespace, name, version, v, depends, classes, smart, smartenvironment, usage, static, object, class method, only, public, function, keyexists, string, y realm, y key, bool, return, boolean, true, if, exists, or, false, param, realm, check, a, in, non persistent, getkey, mixed, value, stored, null">
+<meta name="description" content="\SmartModExtLib\AuthAdmins\SmartAuthAdminsHandler final class \SmartModExtLib\AuthAdmins\ SmartAuthAdminsHandler { } :: Smart.Unicorn (Multi-Account) Auth">
+<meta name="keywords" content="smartmodextlib authadmins smartauthadminshandler, final, class, smartmodextlib authadmins, smartauthadminshandler, smart unicorn, multi account, auth, admins, handler, this, provide, a, complex, authentication, for, admin, area, admin php task php, using, multi accounts, system, with, sqlite, db, supports, http, basic, bear, swt, optional, built in, token, stk, required, constants, app auth admin username, app auth admin password, app auth privileges, must, be, set, in, config admin php, configuration, configs  app auth    adm namespaces, manager, admin php page auth admins manager stml, language, php, located, at, modules mod auth admins libs smartauthadminshandler php, package, development modules authadmins, namespace, name, version, v, methods, public, static, function, authenticate, bool, enforce https, false, disable tokens, disable 2fa, void, properties, documentation, index, definition, list, generated, on">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 <link rel="icon" href="data:,">
-<title>PHP Documentation for: \SmartCache</title>
+<title>PHP Documentation for: \SmartModExtLib\AuthAdmins\SmartAuthAdminsHandler</title>
 <!-- CSS and Fonts -->
 <link rel="stylesheet" type="text/css" href="../fonts/source-sans-pro.css">
 <style type="text/css">
@@ -461,7 +461,7 @@ nav.ux-navbar li > a:only-child::after {
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
-		<li><a href="index.html#Package--Core-" title="return to Index">return to Index</a></li>
+		<li><a href="index.html#Package--developmentmodulesAuthAdmins-" title="return to Index">return to Index</a></li>
 	</ul>
 	
 </nav>
@@ -687,8 +687,8 @@ select#select-summary {
 
 </style>
 <!-- Headings -->
-<h1 title="PHP class: `\SmartCache` @ PHP Namespace: `\`" id="Class--Summary-">
-	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\</span><span class="doc-name">SmartCache</span><br>
+<h1 title="PHP class: `\SmartModExtLib\AuthAdmins\SmartAuthAdminsHandler` @ PHP Namespace: `\SmartModExtLib\AuthAdmins\`" id="Class--Summary-">
+	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\SmartModExtLib\AuthAdmins\</span><span class="doc-name">SmartAuthAdminsHandler</span><br>
 	
 	
 	{
@@ -696,25 +696,24 @@ select#select-summary {
 	}&nbsp;::
 </h1>
 <!-- Description -->
-<div class="doc-comments">Class: SmartCache - Provides per Execution, Volatille Cache (in-PHP-Memory).<br>
-This cache type is volatille, not persistent and will reset after each PHP execution.<br>
-Because this kind of cache is per-execution, the key values will not be shared between executions.<br>
-It is intended to be used on per-execution optimizations to avoid repetitive<br>
-execution of complex high-cost methods that would output the same result under<br>
-the same execution conditions as: same environment / same parameters / same client.</div><br>
+<div class="doc-comments">Smart.Unicorn (Multi-Account) Auth Admins Handler<br>
+This class provide a complex authentication for admin area (admin.php|task.php) using multi-accounts system with SQLite DB<br>
+Supports: HTTP Basic Auth ; HTTP Bear Auth (SWT) *optional* ; built-in HTTP Basic Token Auth (STK) *optional*<br>
+Required constants: APP_AUTH_ADMIN_USERNAME, APP_AUTH_ADMIN_PASSWORD, APP_AUTH_PRIVILEGES (must be set in set in config-admin.php)<br>
+Required configuration: $configs['app-auth']['adm-namespaces'][ 'Admins Manager' =&gt; 'admin.php?page=auth-admins.manager.stml', ... ] (must be set in set in config-admin.php)</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
 	<ul class="doc-list">
 		<li><span class="doc-language"><b>Language:</b> PHP<span></li>
-		<li><span class="doc-located"><b>Located at:</b> lib/framework/lib_caching.php</span></li>
-		<li><span class="doc-package"><b>Package:</b> @Core</span></li>
-		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
-		<li><span class="doc-name"><b>Class Name:</b> SmartCache</span></li>
+		<li><span class="doc-located"><b>Located at:</b> modules/mod-auth-admins/libs/SmartAuthAdminsHandler.php</span></li>
+		<li><span class="doc-package"><b>Package:</b> development:modules:AuthAdmins</span></li>
+		<li><span class="doc-ns"><b>Namespace:</b> \SmartModExtLib\AuthAdmins\</span></li>
+		<li><span class="doc-name"><b>Class Name:</b> SmartAuthAdminsHandler</span></li>
 		
-		<li><b>Version:</b> v.20221220</li>
-		<li><b>Depends:</b> classes:  Smart, SmartEnvironment</li>
+		<li><b>Version:</b> v.20231020</li>
 		
-		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
+		
+		
 		
 		
 	</ul>
@@ -725,82 +724,21 @@ the same execution conditions as: same environment / same parameters / same clie
 	<h2 class="doc-header">class Methods</h2>
 </div>
 <!-- methods r.20200121 -->
-<div class="doc-container" id="Method--keyExists">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>keyExists</b></span>&nbsp;(
-		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_realm` Parameter is REQUIRED">$y_realm</span></b></span>, 
-	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_key` Parameter is REQUIRED">$y_key</span></b></span>
+<div class="doc-container" id="Method--Authenticate">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>Authenticate</b></span>&nbsp;(
+		<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$enforce_https` Parameter is OPTIONAL, with the Default Value: false">$enforce_https</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$disable_tokens` Parameter is OPTIONAL, with the Default Value: false">$disable_tokens</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$disable_2fa` Parameter is OPTIONAL, with the Default Value: false">$disable_2fa</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;VOID
 	
 	
-			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if Key Exists or FALSE if not<br>
-@param: {STRING} $y_realm: The Cache Realm<br>
-@param: {STRING} $y_key: The Cache Key</div>
 	
-			<div class="doc-method-comments">Check if a Key exists in the non-persistent Cache</div>
 	
 	
 	
 </div>
-<div class="doc-container" id="Method--getKey">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getKey</b></span>&nbsp;(
-		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_realm` Parameter is REQUIRED">$y_realm</span></b></span>, 
-	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_key` Parameter is REQUIRED">$y_key</span></b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;MIXED
-	
-	
-			<div class="doc-method-ret-params">@return: {MIXED} The value of the stored key or NULL if key not found in cache<br>
-@param: {STRING} $y_realm: The Cache Realm<br>
-@param: {STRING} $y_key: The Cache Key</div>
-	
-			<div class="doc-method-comments">Get a Key from the non-persistent Cache</div>
-	
-	
-	
-</div>
-<div class="doc-container" id="Method--setKey">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>setKey</b></span>&nbsp;(
-		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_realm` Parameter is REQUIRED">$y_realm</span></b></span>, 
-	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_key` Parameter is REQUIRED">$y_key</span></b></span>, 
-	<i>MIXED</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_value` Parameter is REQUIRED">$y_value</span></b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
-	
-	
-			<div class="doc-method-ret-params">@return: {BOOLEAN} Always returns true<br>
-@param: {STRING} $y_realm: The Cache Realm<br>
-@param: {STRING} $y_key: The Cache Key<br>
-@param: {MIXED} $y_value: The value to be stored</div>
-	
-			<div class="doc-method-comments">Set a Key into the non-persistent Cache</div>
-	
-	
-	
-</div>
-<div class="doc-container" id="Method--unsetKey">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>unsetKey</b></span>&nbsp;(
-		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_realm` Parameter is REQUIRED">$y_realm</span></b></span>, 
-	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_key` Parameter is REQUIRED">$y_key</span></b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
-	
-	
-			<div class="doc-method-ret-params">@return: {BOOLEAN} Always returns true<br>
-@param: {STRING} $y_realm: The Cache Realm<br>
-@param: {STRING} $y_key: The Cache Key</div>
-	
-			<div class="doc-method-comments">Unset a Key into the non-persistent Cache</div>
-	
-	
-	
-</div>
-<!-- Skip Internal-Priv Method: `getAll()` -->
-<!-- Skip Internal-Priv Method: `clearData()` -->
 
 <!-- Properties -->
 <br>
@@ -842,26 +780,13 @@ function smartHandleDocSelector(obj) {
 </script>
 <div class="doc-summary">
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
-		<option value="" selected>* PHP Class \SmartCache # Documentation Index *</option>
-		<optgroup label="Class \SmartCache">
+		<option value="" selected>* PHP Class \SmartModExtLib\AuthAdmins\SmartAuthAdminsHandler # Documentation Index *</option>
+		<optgroup label="Class \SmartModExtLib\AuthAdmins\SmartAuthAdminsHandler">
 			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
 			<option value="Methods--Summary-">Methods list</option>
-						<option value="Method--keyExists"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;keyExists()</option>
-			
-			
-						<option value="Method--getKey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getKey()</option>
-			
-			
-						<option value="Method--setKey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;setKey()</option>
-			
-			
-						<option value="Method--unsetKey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;unsetKey()</option>
-			
-			
-			
-			
+						<option value="Method--Authenticate"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Authenticate()</option>
 			
 			
 			
@@ -891,7 +816,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2023-10-19 23:15:44 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2023-10-19 23:15:52 +0000</small>
 <hr>
 <br>
 <!-- # -->

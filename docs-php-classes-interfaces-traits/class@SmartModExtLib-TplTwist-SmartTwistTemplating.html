@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20210612 -->
+<!-- Template: Smart.Framework@Documentor v.20231010 -->
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
-<meta name="description" content="\SmartModExtLib\AuthAdmins\AuthAdminsHandler        final class \SmartModExtLib\AuthAdmins\ AuthAdminsHandler    {   } ::    Multi-Account Auth Admins">
-<meta name="keywords" content="smartmodextlib authadmins authadminshandler, final, class, smartmodextlib authadmins, authadminshandler, multi-account, auth, admins, handler, this, provide, a, complex, authentication, for, admin, area, admin.php task.php, using, multi-accounts, system, with, sqlite, db, required, constants, app auth admin username, app auth admin password, app auth privileges, must, be, set, in, config-admin.php, configuration, configs  app-auth adm-namespaces, manager, admin.php page auth-admins.manager.stml, language, php, located, at, modules mod-auth-admins libs authadminshandler.php, package, development:modules:authadmins, namespace, name, version, v.20210830, methods, public, static, function, authenticate, bool, enforce https, false, string, tpl path, tpl file, properties, documentation, index, definition, list, generated, on">
+<meta name="description" content="\SmartModExtLib\TplTwist\SmartTwistTemplating final class \SmartModExtLib\TplTwist\ SmartTwistTemplating implements">
+<meta name="keywords" content="smartmodextlib tpltwist smarttwisttemplating, final, class, smartmodextlib tpltwist, smarttwisttemplating, implements, smartmodextlib tpl interfacesmarttemplating, provides, an, easy, to, use, connector, for, twist, templating, engine, inside, the, smart framework, language, php, located, at, modules mod tpl twist libs smarttwisttemplating php, package, modules templatingengine, namespace, name, version, v, depends, extensions, ctype, classes, twisttpl, smartmodextlib tpltwist templating, usage, static, object, class method, this, only, methods, inheritance, chart, →, ↳, interface, public, function, string, reimplemented, over, render file template, file, array, arr vars, debug, tpl, properties, constants, sample, code, in, a, controller, of, after, you, install, smart framework modules, pageviewsetvar, main, modules my module name views my view twist htm, somevar, hello, world, othervar, date, y m d, h i s, end, documentation, index, definition, list, generated, on">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 <link rel="icon" href="data:,">
-<title>PHP Documentation for: \SmartModExtLib\AuthAdmins\AuthAdminsHandler</title>
+<title>PHP Documentation for: \SmartModExtLib\TplTwist\SmartTwistTemplating</title>
 <!-- CSS and Fonts -->
 <link rel="stylesheet" type="text/css" href="../fonts/source-sans-pro.css">
 <style type="text/css">
@@ -461,14 +461,14 @@ nav.ux-navbar li > a:only-child::after {
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
-		<li><a href="index.html#Package--developmentmodulesAuthAdmins-" title="return to Index">return to Index</a></li>
+		<li><a href="index.html#Package--modulesTemplatingEngine-" title="return to Index">return to Index</a></li>
 	</ul>
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20210525 -->
+<!-- class r.20220331 -->
 <!-- Styles -->
-<!-- styles r.20210417 -->
+<!-- styles r.20220906 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -591,12 +591,12 @@ ul.doc-list ul {
 }
 div.doc-summary {
 	position: fixed;
-	bottom: 25px;
-	right: 25px;
+	top: 75px;
+	right: 175px;
 	padding: 10px;
 	background: #343C61;
 	color: #FFFFFF;
-	border: 1px solid #CCCCCC;
+	border: 1px solid #3C4663;
 	width: 45vw;
 	min-width: 320px !important;
 }
@@ -687,33 +687,37 @@ select#select-summary {
 
 </style>
 <!-- Headings -->
-<h1 title="PHP class: `\SmartModExtLib\AuthAdmins\AuthAdminsHandler` @ PHP Namespace: `\SmartModExtLib\AuthAdmins\`" id="Class--Summary-">
-	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\SmartModExtLib\AuthAdmins\</span><span class="doc-name">AuthAdminsHandler</span><br>
+<h1 title="PHP class: `\SmartModExtLib\TplTwist\SmartTwistTemplating` @ PHP Namespace: `\SmartModExtLib\TplTwist\`" id="Class--Summary-">
+	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\SmartModExtLib\TplTwist\</span><span class="doc-name">SmartTwistTemplating</span><br>
 	
-	
+	<span title="implements Interface(s)" class="doc-implements"><i>implements</i> \SmartModExtLib\Tpl\InterfaceSmartTemplating</span><br>
 	{
 	
 	}&nbsp;::
 </h1>
 <!-- Description -->
-<div class="doc-comments">Multi-Account Auth Admins Handler<br>
-This class provide a complex authentication for admin area (admin.php|task.php) using multi-accounts system with SQLite DB<br>
-Required constants: APP_AUTH_ADMIN_USERNAME, APP_AUTH_ADMIN_PASSWORD, APP_AUTH_PRIVILEGES (must be set in set in config-admin.php)<br>
-Required configuration: $configs['app-auth']['adm-namespaces'][ 'Admins Manager' =&gt; 'admin.php?page=auth-admins.manager.stml', ... ] (must be set in set in config-admin.php)</div><br>
+<div class="doc-comments">Provides an easy to use connector for Twist Templating Engine inside the Smart.Framework.</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
 	<ul class="doc-list">
 		<li><span class="doc-language"><b>Language:</b> PHP<span></li>
-		<li><span class="doc-located"><b>Located at:</b> modules/mod-auth-admins/libs/AuthAdminsHandler.php</span></li>
-		<li><span class="doc-package"><b>Package:</b> development:modules:AuthAdmins</span></li>
-		<li><span class="doc-ns"><b>Namespace:</b> \SmartModExtLib\AuthAdmins\</span></li>
-		<li><span class="doc-name"><b>Class Name:</b> AuthAdminsHandler</span></li>
+		<li><span class="doc-located"><b>Located at:</b> modules/mod-tpl-twist/libs/SmartTwistTemplating.php</span></li>
+		<li><span class="doc-package"><b>Package:</b> modules:TemplatingEngine</span></li>
+		<li><span class="doc-ns"><b>Namespace:</b> \SmartModExtLib\TplTwist\</span></li>
+		<li><span class="doc-name"><b>Class Name:</b> SmartTwistTemplating</span></li>
 		
-		<li><b>Version:</b> v.20210830</li>
+		<li><b>Version:</b> v.20221220</li>
+		<li><b>Depends:</b> extensions:  PHP Ctype ; classes: TwistTPL, \SmartModExtLib\TplTwist\Templating</li>
 		
+		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
 		
-		
-		
+				<li><b>Inheritance Chart:</b>
+			<ul>
+				<span class="doc-name"><i>class</i>&nbsp;\SmartModExtLib\TplTwist\SmartTwistTemplating</span>&nbsp;&rarr;
+				<li>&nbsp;&#8627;&nbsp;<span class="doc-type-interface"><i>interface</i>&nbsp;\SmartModExtLib\Tpl\InterfaceSmartTemplating</span></li>
+				
+			</ul>
+		</li>
 		
 	</ul>
 </div>
@@ -723,21 +727,46 @@ Required configuration: $configs['app-auth']['adm-namespaces'][ 'Admins Manager'
 	<h2 class="doc-header">class Methods</h2>
 </div>
 <!-- methods r.20200121 -->
-<div class="doc-container" id="Method--Authenticate">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>Authenticate</b></span>&nbsp;(
-				<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$enforce_https` Parameter is OPTIONAL, with the Default Value: false">$enforce_https</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>, 
-			<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$tpl_path` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$tpl_path</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
-			<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$tpl_file` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$tpl_file</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+<div class="doc-container" id="Method--version">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>version</b></span>&nbsp;(
+		
 	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
-	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	<br><span class="doc-reimplemented"><i>reimplemented&nbsp;</i>&nbsp;over&nbsp;<b>\SmartModExtLib\Tpl\InterfaceSmartTemplating</b></span>
 	
 	
 	
 	
 	
 </div>
+<div class="doc-container" id="Method--render_file_template">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>render_file_template</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$file` Parameter is REQUIRED">$file</span></b></span>, 
+	<i>array</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$arr_vars` Parameter is OPTIONAL, with the Default Value: []">$arr_vars</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>[]</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	<br><span class="doc-reimplemented"><i>reimplemented&nbsp;</i>&nbsp;over&nbsp;<b>\SmartModExtLib\Tpl\InterfaceSmartTemplating</b></span>
+	
+	
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--debug">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>debug</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$tpl` Parameter is REQUIRED">$tpl</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	<br><span class="doc-reimplemented"><i>reimplemented&nbsp;</i>&nbsp;over&nbsp;<b>\SmartModExtLib\Tpl\InterfaceSmartTemplating</b></span>
+	
+	
+	
+	
+	
+</div>
+
 <!-- Properties -->
 <br>
 <div class="doc-container" id="Properties--Summary-">
@@ -753,7 +782,16 @@ Required configuration: $configs['app-auth']['adm-namespaces'][ 'Admins Manager'
 <!-- constants r.20200121 -->
 
 <!-- Sample Code -->
-
+<br>
+<div class="doc-container" id="SAMPLE--Code-">
+	<h2 class="doc-header">Sample code: PHP</h2>
+</div>
+<div class="doc-code">
+	<!-- pre (already preformatted) --><code><!-- Smart/HTML.Cleaner [D] --><code><span style="color: #57A64A">
+<span style="color: #FFFFFF">&lt;?php<br><br></span><span style="color: #999999">//&nbsp;Sample:&nbsp;use&nbsp;this&nbsp;code&nbsp;in&nbsp;a&nbsp;controller&nbsp;of&nbsp;Smart.Framework&nbsp;(after&nbsp;you&nbsp;install&nbsp;the&nbsp;Smart.Framework.Modules)<br>&nbsp;</span><span style="color: #FFFFFF">$this</span><span style="color: #FFCC00; font-weight: bold">-&gt;</span><span style="color: #FFFFFF">PageViewSetVar</span><span style="color: #FFCC00; font-weight: bold">(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'main'</span><span style="color: #FFCC00; font-weight: bold">,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FFFFFF">\SmartModExtLib\TplTwist\SmartTwistTemplating</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">render_file_template</span><span style="color: #FFCC00; font-weight: bold">(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'modules/my-module-name/views/my-view.twist.htm'</span><span style="color: #FFCC00; font-weight: bold">,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'someVar'&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #5F9CCE">'Hello&nbsp;World'</span><span style="color: #FFCC00; font-weight: bold">,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'otherVar'&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #FFFFFF">date</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'Y-m-d&nbsp;H:i:s'</span><span style="color: #FFCC00; font-weight: bold">)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)<br>&nbsp;);<br><br></span><span style="color: #999999">//&nbsp;#end&nbsp;php&nbsp;code<br></span>
+</span>
+</code><!-- [/D] Smart/HTML.Cleaner --></code><!-- /pre -->
+</div>
 <!-- Summary List -->
 <br>
 <!-- summary r.20210420 -->
@@ -778,13 +816,19 @@ function smartHandleDocSelector(obj) {
 </script>
 <div class="doc-summary">
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
-		<option value="" selected>* PHP Class \SmartModExtLib\AuthAdmins\AuthAdminsHandler # Documentation Index *</option>
-		<optgroup label="Class \SmartModExtLib\AuthAdmins\AuthAdminsHandler">
+		<option value="" selected>* PHP Class \SmartModExtLib\TplTwist\SmartTwistTemplating # Documentation Index *</option>
+		<optgroup label="Class \SmartModExtLib\TplTwist\SmartTwistTemplating">
 			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
 			<option value="Methods--Summary-">Methods list</option>
-									<option value="Method--Authenticate"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Authenticate()</option>
+						<option value="Method--version"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;version()</option>
+			
+			
+						<option value="Method--render_file_template"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;render_file_template()</option>
+			
+			
+						<option value="Method--debug"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;debug()</option>
 			
 			
 			
@@ -796,6 +840,9 @@ function smartHandleDocSelector(obj) {
 		<optgroup label="Class Constants">
 			<option value="Constants--Summary-">Constants list</option>
 			
+		</optgroup>
+				<optgroup label="Class Sample usage">
+			<option value="SAMPLE--Code-">Sample code</option>
 		</optgroup>
 		
 	</select>
@@ -814,13 +861,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2022-02-21 17:34:22 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2023-10-19 23:15:56 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2022 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2023 unix-world.org</small>
 </center></div>
 </body>
 </html>

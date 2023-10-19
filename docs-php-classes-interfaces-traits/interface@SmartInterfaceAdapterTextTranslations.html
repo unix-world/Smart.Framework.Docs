@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20210612 -->
+<!-- Template: Smart.Framework@Documentor v.20231010 -->
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
-<meta name="description" content="\SmartInterfaceAdapterTextTranslations        interface \ SmartInterfaceAdapterTextTranslations    {   } ^::    Abstract Inteface Smart Adapter Text">
-<meta name="keywords" content="smartinterfaceadaptertexttranslations, interface, abstract, inteface, smart, adapter, text, translations, language, php, located, at, lib core lib translations.php, package, development: core, namespace, name, version, v.20211214, internal-private, yes, methods, public, static, function, gettranslationsversion, get, regional, containing, the, latest, of, this, must, implement, a, way, to, last, string, validate, if, cannot, be, provided, return, date  y-m-d, and, texts, persistent, cache, will, re-validated, daily, real, can, it, is, best, so, would, just, upon, changes, non-empty, provides, current, gettranslationsfromsource, the lang, y area, y subarea, translation, from, source, by, area, subarea, parser, implemented, read, one, variety, sources, arrays, ini, yaml, xml, json, sqlite, postgresql, mysql, mongodb, gettext, an, associative, array, as">
+<meta name="description" content="\SmartInterfaceAdapterTextTranslations interface \ SmartInterfaceAdapterTextTranslations { } ^:: Abstract Inteface Smart Adapter Text Translations">
+<meta name="keywords" content="smartinterfaceadaptertexttranslations, interface, abstract, inteface, smart, adapter, text, translations, language, php, located, at, lib core lib translations php, package, development application, namespace, name, version, v, internal private, yes, methods, public, static, function, gettranslationsversion, get, regional, containing, the, latest, of, this, must, implement, a, way, to, last, string, validate, if, cannot, be, provided, return, date  y m d, and, texts, persistent, cache, will, re validated, daily, real, can, it, is, best, so, would, just, upon, changes, non empty, provides, current, gettranslationsfromsource, the lang, y area, y subarea, translation, from, source, by, area, subarea, parser, implemented, read, one, variety, sources, arrays, ini, yaml, xml, json, sqlite, postgresql, mysql, mongodb, gettext, an, associative, array, as">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 <link rel="icon" href="data:,">
 <title>PHP Documentation for: \SmartInterfaceAdapterTextTranslations</title>
@@ -461,14 +461,14 @@ nav.ux-navbar li > a:only-child::after {
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
-		<li><a href="index.html#Package--developmentCore-" title="return to Index">return to Index</a></li>
+		<li><a href="index.html#Package--developmentApplication-" title="return to Index">return to Index</a></li>
 	</ul>
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20210525 -->
+<!-- class r.20220331 -->
 <!-- Styles -->
-<!-- styles r.20210417 -->
+<!-- styles r.20220906 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -591,12 +591,12 @@ ul.doc-list ul {
 }
 div.doc-summary {
 	position: fixed;
-	bottom: 25px;
-	right: 25px;
+	top: 75px;
+	right: 175px;
 	padding: 10px;
 	background: #343C61;
 	color: #FFFFFF;
-	border: 1px solid #CCCCCC;
+	border: 1px solid #3C4663;
 	width: 45vw;
 	min-width: 320px !important;
 }
@@ -702,11 +702,11 @@ select#select-summary {
 	<ul class="doc-list">
 		<li><span class="doc-language"><b>Language:</b> PHP<span></li>
 		<li><span class="doc-located"><b>Located at:</b> lib/core/lib_translations.php</span></li>
-		<li><span class="doc-package"><b>Package:</b> development:@Core</span></li>
+		<li><span class="doc-package"><b>Package:</b> development:Application</span></li>
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Interface Name:</b> SmartInterfaceAdapterTextTranslations</span></li>
 		
-		<li><b>Version:</b> v.20211214</li>
+		<li><b>Version:</b> v.20221220</li>
 		
 		
 		
@@ -736,11 +736,12 @@ RETURN: a non-empty string the provides the latest version string of the current
 	
 	
 	
-</div><div class="doc-container" id="Method--getTranslationsFromSource">
+</div>
+<div class="doc-container" id="Method--getTranslationsFromSource">
 	<span class="doc-modifiers">abstract public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-abstract-name"><b>getTranslationsFromSource</b></span>&nbsp;(
-				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$the_lang` Parameter is REQUIRED">$the_lang</span></b></span>, 
-			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_area` Parameter is REQUIRED">$y_area</span></b></span>, 
-			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_subarea` Parameter is REQUIRED">$y_subarea</span></b></span>
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$the_lang` Parameter is REQUIRED">$the_lang</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_area` Parameter is REQUIRED">$y_area</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_subarea` Parameter is REQUIRED">$y_subarea</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
@@ -754,12 +755,13 @@ RETURN: an associative array as [key =&gt; value] for the specific translation s
 	
 	
 	
-</div><div class="doc-container" id="Method--setTranslationsKeyUsageCount">
+</div>
+<div class="doc-container" id="Method--setTranslationsKeyUsageCount">
 	<span class="doc-modifiers">abstract public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-abstract-name"><b>setTranslationsKeyUsageCount</b></span>&nbsp;(
-				<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$the_lang` Parameter is REQUIRED">$the_lang</span></b></span>, 
-			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_area` Parameter is REQUIRED">$y_area</span></b></span>, 
-			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_subarea` Parameter is REQUIRED">$y_subarea</span></b></span>, 
-			<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_textkey` Parameter is REQUIRED">$y_textkey</span></b></span>
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$the_lang` Parameter is REQUIRED">$the_lang</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_area` Parameter is REQUIRED">$y_area</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_subarea` Parameter is REQUIRED">$y_subarea</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_textkey` Parameter is REQUIRED">$y_textkey</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
@@ -768,13 +770,14 @@ RETURN: an associative array as [key =&gt; value] for the specific translation s
 	
 			<div class="doc-method-comments">Register the usage (increment counter or register in logs) for a Regional Text Translation into Source or alternate source by: Language, Area, Subarea, Key<br>
 This function must implement a way to increment or register the usage of every used pair of Language/Area/Subarea/Key as it was used to help the cleanup of unused translations.<br>
-This function will operate only in DEV mode only (SmartFrameworkRegistry::ifProdEnv() !== true) ; for filesystem based adapters must also set in init.php: const SMART_FRAMEWORK__DEBUG__TEXT_TRANSLATIONS = true;<br>
+This function will operate only in DEV mode only (SmartEnvironment::ifDevMode() === true) ; for filesystem based adapters must also set in init.php: const SMART_FRAMEWORK__DEBUG__TEXT_TRANSLATIONS = true;<br>
 It can be implemented to write into one of the variety of sources: Text/CSV, Database, ...<br>
 RETURN: N/A</div>
 	
 	
 	
 </div>
+
 <!-- Properties -->
 <br>
 <div class="doc-container" id="Properties--Summary-">
@@ -821,13 +824,13 @@ function smartHandleDocSelector(obj) {
 		</optgroup>
 		<optgroup label="Interface Methods">
 			<option value="Methods--Summary-">Methods list</option>
-									<option value="Method--getTranslationsVersion"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getTranslationsVersion()</option>
+						<option value="Method--getTranslationsVersion"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getTranslationsVersion()</option>
 			
 			
-									<option value="Method--getTranslationsFromSource"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getTranslationsFromSource()</option>
+						<option value="Method--getTranslationsFromSource"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getTranslationsFromSource()</option>
 			
 			
-									<option value="Method--setTranslationsKeyUsageCount"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;setTranslationsKeyUsageCount()</option>
+						<option value="Method--setTranslationsKeyUsageCount"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;setTranslationsKeyUsageCount()</option>
 			
 			
 			
@@ -857,13 +860,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2022-02-21 17:34:18 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2023-10-19 23:15:49 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2022 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2023 unix-world.org</small>
 </center></div>
 </body>
 </html>
