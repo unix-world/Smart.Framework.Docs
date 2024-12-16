@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
 <meta name="description" content="smartJ$Browser static class smartJ$Browser { } . CLASS :: Smart BrowserUtils (ES6) The JavaScript class provides methods to simplify the interraction with">
-<meta name="keywords" content="smartj browser, static, class, smart, browserutils, es6, the, javascript, provides, methods, to, simplify, interraction, with, browser, ajax, xhr, requests, forms, message, alerts, and, dialogs, growl, provide, many, useful, for, language, located, at, lib js framework smart framework pak js, browser utils js, package, sf javascript browser, name, frozen, yes, version, usage, smartj browser method, depends, smartj utils, smartj date, smartj base64, smartj cryptohash, smartj cryptoblowfish, smartj testbrowser, jquery, smartj modalbox, jquery toastr, jquery alertable, smartj ui, optional, smartj ui growladd, smartj ui growlremove, smartj ui dialogalert, smartj ui dialogconfirm, smartj ui overlaycssclass, public, setflag, string, flag, mixed, value, boolean, return, true, if, success, false, not, param, set, of, that, an, internal, available, flags, are, pageunloadconfirm, pageaway, refreshstate, refreshurl, getflag, get, getrefpopup, null, or, object, popup, window, reference, any, getcurrentisodatetime, current">
+<meta name="keywords" content="smartj browser, static, class, smart, browserutils, es6, the, javascript, provides, methods, to, simplify, interraction, with, browser, ajax, xhr, requests, forms, message, alerts, and, dialogs, growl, provide, many, useful, for, language, located, at, lib js framework smart framework pak js, browser utils js, package, sf javascript browser, name, frozen, yes, version, usage, smartj browser method, depends, smartj utils, smartj date, smartj cryptohash, smartj testbrowser, jquery, smartj modalbox, jquery toastr, jquery alertable, smartj ui, optional, smartj ui growladd, smartj ui growlremove, smartj ui dialogalert, smartj ui dialogconfirm, smartj ui overlaycssclass, public, setflag, string, flag, mixed, value, boolean, return, true, if, success, false, not, param, set, of, that, an, internal, available, flags, are, pageunloadconfirm, pageaway, refreshstate, refreshurl, getflag, get, getrefpopup, null, or, object, popup, window, reference, any, getcurrentisodatetime, current, iso, date">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : Javascript">
 <link rel="icon" href="data:,">
 <title>JS Documentation for: smartJ$Browser</title>
@@ -703,12 +703,12 @@ The JavaScript class provides methods to simplify the interraction with the Brow
 		<li><span class="doc-package"><b>Package:</b> Sf.Javascript:Browser</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> smartJ$Browser</span></li>
 		<li><span class="doc-frozen"><b>Frozen:</b> Yes</span></li>
-		<li><span class="doc-version"><b>Version:</b> 20230123</span></li>
+		<li><span class="doc-version"><b>Version:</b> 20241125</span></li>
 		<li><b>Usage:</b> smartJ$Browser.method();</li>
 		
 		
 		
-		<li><b>Depends:</b> smartJ$Utils, smartJ$Date, smartJ$Base64, smartJ$CryptoHash, smartJ$CryptoBlowfish, smartJ$TestBrowser, jQuery, *smartJ$ModalBox, *jQuery.toastr, *jQuery.alertable, *smartJ$UI  (optional) [ smartJ$UI.GrowlAdd ; smartJ$UI.GrowlRemove ; smartJ$UI.DialogAlert ; smartJ$UI.DialogConfirm ; smartJ$UI.overlayCssClass ]</li>
+		<li><b>Depends:</b> smartJ$Utils, smartJ$Date, smartJ$CryptoHash, smartJ$TestBrowser, jQuery, *smartJ$ModalBox, *jQuery.toastr, *jQuery.alertable, *smartJ$UI  (optional) [ smartJ$UI.GrowlAdd ; smartJ$UI.GrowlRemove ; smartJ$UI.DialogAlert ; smartJ$UI.DialogConfirm ; smartJ$UI.overlayCssClass ]</li>
 		
 	</ul>
 </div>
@@ -803,46 +803,6 @@ RefreshURL 			{String} || ''</div>
 	
 	</div>
 			<div class="doc-method-comments">Get the Current ISO Date and Time</div>
-	
-	
-</div>
-<div class="doc-container" id="Method--blowfishEncrypt">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>blowfishEncrypt</b></span>&nbsp;=&nbsp;(
-	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`str` Parameter">str</span></b></span>
-	
-	)&nbsp;=&gt;&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
-	<div class="doc-method-ret-params">
-	
-	
-			@return: {String} The Blowfish Encrypted string<br>
-	
-	
-	
-	@param: {String} str The plain string to be encoded<br>
-	
-	
-	</div>
-			<div class="doc-method-comments">Blowfish (CBC) Encrypt</div>
-	
-	
-</div>
-<div class="doc-container" id="Method--blowfishDecrypt">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>blowfishDecrypt</b></span>&nbsp;=&nbsp;(
-	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`enc` Parameter">enc</span></b></span>
-	
-	)&nbsp;=&gt;&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
-	<div class="doc-method-ret-params">
-	
-	
-			@return: {String} The plain decoded string<br>
-	
-	
-	
-	@param: {String} enc The Blowfish Encrypted string<br>
-	
-	
-	</div>
-			<div class="doc-method-comments">Blowfish (CBC) Decrypt</div>
 	
 	
 </div>
@@ -1221,8 +1181,8 @@ It will add a maximize / un-maximize button and the handler for it to be able to
 	
 	
 	
-	@param: {String} text *Optional* a text to display in overlay as notification<br>
-	@param: {String} title *Optional* a title to display for overlay as notification<br>
+	@param: {String} text *Optional* a text to display (HTML) in overlay as notification<br>
+	@param: {String} title *Optional* a title to display (Plain Text) for overlay as notification<br>
 	@param: {String} css_class *Optional* a CSS class name for the notification (if any)<br>
 	@param: {String} overlay_id *Optional* the overlay ID ; default is null and will use a hard-coded ID<br>
 	@param: {Boolean} clear *Optional* clear the overlay from loading img<br>
@@ -1278,7 +1238,8 @@ All page elements that must be visible over the overlay must have zIndex in rang
 	<i>{Integer}</i>&nbsp;<span class="doc-param-name"><b><span title="`time` Parameter">time</span></b></span>, 
 	<i>{Boolean}</i>&nbsp;<span class="doc-param-name"><b><span title="`sticky` Parameter">sticky</span></b></span>, 
 	<i>{Enum}</i>&nbsp;<span class="doc-param-name"><b><span title="`css_class` Parameter">css_class</span></b></span>, 
-	<i>{Array-Obj}</i>&nbsp;<span class="doc-param-name"><b><span title="`options` Parameter">options</span></b></span>
+	<i>{Array-Obj}</i>&nbsp;<span class="doc-param-name"><b><span title="`options` Parameter">options</span></b></span>, 
+	<i>{Boolean}</i>&nbsp;<span class="doc-param-name"><b><span title="`isTitleHtml` Parameter">isTitleHtml</span></b></span>
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Boolean}
 	<div class="doc-method-ret-params">
@@ -1288,13 +1249,14 @@ All page elements that must be visible over the overlay must have zIndex in rang
 	
 	
 	
-	@param: {String} title a title for the notification (HTML) ; it can be empty string<br>
+	@param: {String} title a title for the notification (Plain Text) ; it can be empty string<br>
 	@param: {String} text the main notification message (HTML) ; it is mandatory<br>
 	@param: {String} image the URL link to a notification icon image (svg/gif/png/jpg/webp) or null<br>
 	@param: {Integer} time the notification display time in milliseconds ; use 0 for sticky ; between 0 (0 sec) and 60000 (60 sec)<br>
 	@param: {Boolean} sticky *Optional* FALSE by default (will auto-close after the display time expire) ; TRUE to set sticky (require manual close, will not auto-close)<br>
 	@param: {Enum} css_class *Optional* a CSS class name for the notification or empty string to use default one: darknote (black), notice (white), info (blue), success (green), warning (yellow), error (red)<br>
 	@param: {Array-Obj} options *Optional* Extra Growl Properties:<br>
+	@param: {Boolean} isTitleHtml *Optional* The Dialog Type ; default is FALSE ; If TRUE, will allow HTML Title<br>
 	
 	
 	</div>
@@ -1333,7 +1295,8 @@ after_close: 	() =&gt; {}<br>
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`y_title` Parameter">y_title</span></b></span>, 
 	<i>{Integer}</i>&nbsp;<span class="doc-param-name"><b><span title="`y_width` Parameter">y_width</span></b></span>, 
 	<i>{Integer}</i>&nbsp;<span class="doc-param-name"><b><span title="`y_height` Parameter">y_height</span></b></span>, 
-	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`dialogType` Parameter">dialogType</span></b></span>
+	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`dialogType` Parameter">dialogType</span></b></span>, 
+	<i>{Boolean}</i>&nbsp;<span class="doc-param-name"><b><span title="`isTitleHtml` Parameter">isTitleHtml</span></b></span>
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Void}
 	<div class="doc-method-ret-params">
@@ -1345,10 +1308,11 @@ after_close: 	() =&gt; {}<br>
 	
 	@param: {String} y_message The message to display (HTML)<br>
 	@param: {JS-Code} evcode *Optional* the JS Code to execute on closing the alert / Dialog by pressing the OK button (the alert / Dialog can be closed only if OK button is clicked)<br>
-	@param: {String} y_title *Optional* a title for the alert / Dialog (HTML)<br>
+	@param: {String} y_title *Optional* a title for the alert / Dialog (Plain Text)<br>
 	@param: {Integer} y_width *Optional* the width of the Dialog (will be used just if UIDialog / SimpleDialog are detected) ; if not set the default width will be used<br>
 	@param: {Integer} y_height *Optional* the height of the Dialog (will be used just if UIDialog / SimpleDialog are detected) ; if not set the default height will be used<br>
 	@param: {String} dialogType *Optional* The Dialog Type ; default is 'auto'<br>
+	@param: {Boolean} isTitleHtml *Optional* The Dialog Type ; default is FALSE ; If TRUE, will allow HTML Title<br>
 	
 	
 	</div>
@@ -1366,7 +1330,8 @@ If none of the above are available will try to use jQuery.alertable/alert else j
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`y_title` Parameter">y_title</span></b></span>, 
 	<i>{Integer}</i>&nbsp;<span class="doc-param-name"><b><span title="`y_width` Parameter">y_width</span></b></span>, 
 	<i>{Integer}</i>&nbsp;<span class="doc-param-name"><b><span title="`y_height` Parameter">y_height</span></b></span>, 
-	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`dialogType` Parameter">dialogType</span></b></span>
+	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`dialogType` Parameter">dialogType</span></b></span>, 
+	<i>{Boolean}</i>&nbsp;<span class="doc-param-name"><b><span title="`isTitleHtml` Parameter">isTitleHtml</span></b></span>
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Void}
 	<div class="doc-method-ret-params">
@@ -1382,6 +1347,7 @@ If none of the above are available will try to use jQuery.alertable/alert else j
 	@param: {Integer} y_width *Optional* the width of the Dialog (will be used just if UIDialog / SimpleDialog are detected) ; if not set the default width will be used<br>
 	@param: {Integer} y_height *Optional* the height of the Dialog (will be used just if UIDialog / SimpleDialog are detected) ; if not set the default height will be used<br>
 	@param: {String} dialogType *Optional* The Dialog Type ; default is 'auto'<br>
+	@param: {Boolean} isTitleHtml *Optional* The Dialog Type ; default is FALSE ; If TRUE, will allow HTML Title<br>
 	
 	
 	</div>
@@ -1568,7 +1534,7 @@ The function must be called by a form button onClick followed by 'return false;'
 	@param: {Numeric} expire *Optional* The cookie expire time in seconds since now ; if set to zero will expire by session ; if set to -1 will be unset (deleted) ; if set to NULL will use the value from smartJ$Browser.param_CookieLifeTime ; default is 0<br>
 	@param: {String} path *Optional* The cookie path (default is /)<br>
 	@param: {String} domain *Optional* The cookie domain (default is @ and will use '@' to use the smartJ$Browser.param_CookieDomain)<br>
-	@param: {Enum} samesite *Optional* The SameSite cookie policy ; Can be: None, Lax, Strict ; (default is @ and will use '@' to use the smartJ$Browser.param_CookieSameSitePolicy)<br>
+	@param: {Enum} samesite *Optional* The SameSite cookie policy ; Can be: None, Lax, Strict or Empty ; (default is @ and will use '@' to use the smartJ$Browser.param_CookieSameSitePolicy: Lax)<br>
 	@param: {Boolean} secure *Optional* Force Cookie Secure Mode (default is FALSE)<br>
 	
 	
@@ -1730,6 +1696,28 @@ It works on TextArea or other compatible input fields ...</div>
  <span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span></code></pre>
 	
 </div>
+<div class="doc-container" id="Method--SerializeFormAsObject">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>SerializeFormAsObject</b></span>&nbsp;(
+	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`formID` Parameter">formID</span></b></span>, 
+	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`rKey` Parameter">rKey</span></b></span>
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Object}
+	<div class="doc-method-ret-params">
+	
+	
+			@return: {Object} Serialized data: ex: { &quot;#&quot;:{ &quot;levels&quot;: 2, &quot;keys&quot;:6, &quot;size&quot;:11}, &quot;data&quot;:{...} }<br>
+	
+	
+	
+	@param: {String} formID The element ID of the Form to be serialized<br>
+	@param: {String} rKey The object root key ; Optional ; if not specified will be set as 'data' ; '#' is the object metainfo<br>
+	
+	
+	</div>
+			<div class="doc-method-comments">Serialize Form as Object</div>
+	
+	
+</div>
 <div class="doc-container" id="Method--SubmitFormByAjax">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>SubmitFormByAjax</b></span>&nbsp;(
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`the_form_id` Parameter">the_form_id</span></b></span>, 
@@ -1817,7 +1805,8 @@ It supports simple forms or complex forms with multipart/form-data and file atta
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`y_AuthUser` Parameter">y_AuthUser</span></b></span>, 
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`y_AuthPass` Parameter">y_AuthPass</span></b></span>, 
 	<i>{Object}</i>&nbsp;<span class="doc-param-name"><b><span title="`y_Headers` Parameter">y_Headers</span></b></span>, 
-	<i>{Boolean}</i>&nbsp;<span class="doc-param-name"><b><span title="`y_withCredentials` Parameter">y_withCredentials</span></b></span>
+	<i>{Boolean}</i>&nbsp;<span class="doc-param-name"><b><span title="`y_withCredentials` Parameter">y_withCredentials</span></b></span>, 
+	<i>{Boolean}</i>&nbsp;<span class="doc-param-name"><b><span title="`y_crossDomain` Parameter">y_crossDomain</span></b></span>
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Object}
 	<div class="doc-method-ret-params">
@@ -1829,13 +1818,14 @@ It supports simple forms or complex forms with multipart/form-data and file atta
 	
 	
 	@param: {String} y_url The URL to send the Request to<br>
-	@param: {Enum} y_method The Request Method: GET / POST / PUT / DELETE / OPTIONS / HEAD<br>
+	@param: {Enum} y_method The Request Method: HEAD / GET / POST / PUT / DELETE / OPTIONS / HEAD<br>
 	@param: {Enum} y_data_type The type of Data served back by the Request: json | jsonp | script | html | xml | text<br>
 	@param: {Mixed} y_data_arr_or_serialized The Data to be sent: a serialized string via serialize() such as: '&amp;var1=value1&amp;var2=value2' or an associative array (Object) as: { var1: &quot;value1&quot;, var2: &quot;value2&quot; }<br>
-	@param: {String} y_AuthUser *Optional* The Authentication UserName (if custom Authentication need to be used)<br>
-	@param: {String} y_AuthPass *Optional* The Authentication Password (if custom Authentication need to be used)<br>
+	@param: {String} y_AuthUser *Optional* The Authentication UserName (if custom Authentication need to be used) ; set to FALSE to avoid accidental auto-send, if unused, for CORS or 3rd party domains (security !)<br>
+	@param: {String} y_AuthPass *Optional* The Authentication Password (if custom Authentication need to be used) ; set to FALSE to avoid accidental auto-send, if unused, for CORS or 3rd party domains (security !)<br>
 	@param: {Object} y_Headers *Optional* Extra Headers to be sent with the Request ; Default is NULL (ex: { 'X-Head1': 'Test1', ... })<br>
-	@param: {Boolean} y_withCredentials *Optional* Send Credentials (CORS Only) ; default is FALSE ; set to TRUE to send XHR Credentials<br>
+	@param: {Boolean} y_withCredentials *Optional* Send Credentials over CORS ; default is FALSE ; set to TRUE to send XHR Credentials ; !!! Never set this when URL is a 3rd party domain to avoid leak credentials ; this can be set to TRUE just when exchanging requests between different sub-domains of the same domain !<br>
+	@param: {Boolean} y_crossDomain *Optional* when set to TRUE will handle a CROSS Domain Request (y_withCredentials is forced to FALSE in this context) ; default is FALSE<br>
 	
 	
 	</div>
@@ -1933,13 +1923,34 @@ It will focus the referenced browser window first.</div>
 	
 	
 </div>
+<div class="doc-container" id="Method--copyToClipboard">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>copyToClipboard</b></span>&nbsp;=&nbsp;(
+	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`elId` Parameter">elId</span></b></span>
+	
+	)&nbsp;=&gt;&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
+	<div class="doc-method-ret-params">
+	
+	
+			@return: {String} Error or Empty String<br>
+	
+			@fires: copy text element by using ranges<br>
+	
+	
+	@param: {String} elId The element ID<br>
+	
+	
+	</div>
+			<div class="doc-method-comments">Copy Element Text Content to ClipBoard</div>
+	
+	
+</div>
 <div class="doc-container" id="Method--VirtualFileDownload">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>VirtualFileDownload</b></span>&nbsp;(
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`data` Parameter">data</span></b></span>, 
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`fileName` Parameter">fileName</span></b></span>, 
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`mimeType` Parameter">mimeType</span></b></span>, 
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`charset` Parameter">charset</span></b></span>, 
-	<i>{Boolean}</i>&nbsp;<span class="doc-param-name"><b><span title="`binary` Parameter">binary</span></b></span>
+	<i>{Boolean}</i>&nbsp;<span class="doc-param-name"><b><span title="`isBinary` Parameter">isBinary</span></b></span>
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Void}
 	<div class="doc-method-ret-params">
@@ -1952,8 +1963,8 @@ It will focus the referenced browser window first.</div>
 	@param: {String} data The content of the file to be downloaded<br>
 	@param: {String} fileName The file name (ex: 'file.txt')<br>
 	@param: {String} mimeType The mime type (ex: 'text/plain')<br>
-	@param: {String} charset *Optional* ; Default is NULL, will use the value from param_Charset or if not set will use 'UTF-8' ; set it to FALSE if binary is set to TRUE ; The character set of the file content (ex: 'UTF-8' for text OR FALSE for binary)<br>
-	@param: {Boolean} binary *Optional* ; Default is FALSE ; if TRUE will use no character set, but binary ASCII<br>
+	@param: {String} charset *Optional* ; Charset ; Default is NULL, will use the value from param_Charset or if not set will use 'UTF-8' ; set it to FALSE if binary is set to TRUE ; The character set of the file content (ex: 'UTF-8' for text OR FALSE for binary ASCII)<br>
+	@param: {Boolean} isBinary *Optional* ; Encoding Charset mode ; Default is FALSE ; set to TRUE if the string is binary ASCII to avoid normalize as UTF-8 ; for normal, UTF-8 content this must be set to FALSE<br>
 	
 	
 	</div>
@@ -2039,10 +2050,10 @@ Requires in HTML:<br>
 	
 </div>
 <div class="doc-container" id="Property--param_CookieSameSitePolicy">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>var</i></span> <b>param_CookieSameSitePolicy</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Static Property"><b>.</b></span>&nbsp;<i>{String}</i>
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>var</i></span> <b>param_CookieSameSitePolicy</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>'Lax'</b></span>&nbsp;;&nbsp;&nbsp;<span title="Static Property"><b>.</b></span>&nbsp;<i>{String}</i>
 	<div class="doc-param-set"><i>set</i>&nbsp;<span class="doc-param-set-comment">[before] smartJ$Options .BrowserUtils.CookieSameSitePolicy</span></div>
 	<div class="doc-param-get"><i>get</i>&nbsp;<span class="doc-param-get-comment">smartJ$Browser.param_CookieSameSitePolicy</span></div>
-			<div class="doc-method-comments">Cookie SameSite Policy (must be set as in PHP, see the SMART_FRAMEWORK_UNIQUE_ID_COOKIE_SAMESITE)</div>
+			<div class="doc-method-comments">Cookie SameSite Policy (must be set as in PHP, see the SMART_FRAMEWORK_UNIQUE_ID_COOKIE_SAMESITE) ; To avoid set a policy, use 'Empty'</div>
 	
 </div>
 <div class="doc-container" id="Property--param_Notifications">
@@ -2117,6 +2128,13 @@ Allowed Values: true | false</div>
 			<div class="doc-method-comments">Set ModalBox protected mode (if used)<br>
 If set to TRUE will use the protected mode for the modal iFrame (can be closed just explicit by buttons, not clicking outside of it)<br>
 Allowed Values: true | false</div>
+	
+</div>
+<div class="doc-container" id="Property--param_Prefix">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>var</i></span> <b>param_Prefix</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>''</b></span>&nbsp;;&nbsp;&nbsp;<span title="Static Property"><b>.</b></span>&nbsp;<i>{String}</i>
+	<div class="doc-param-set"><i>set</i>&nbsp;<span class="doc-param-set-comment">[before] smartJ$Options .BrowserUtils.Prefix</span></div>
+	<div class="doc-param-get"><i>get</i>&nbsp;<span class="doc-param-get-comment">smartJ$Browser.param_Prefix</span></div>
+			<div class="doc-method-comments">Prefix, for the below Loaders, Images, Icons</div>
 	
 </div>
 <div class="doc-container" id="Property--param_LoaderImg">
@@ -2209,10 +2227,6 @@ function smartHandleDocSelector(obj) {
 			
 						<option value="Method--getCurrentIsoDateTime"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;getCurrentIsoDateTime()</option>
 			
-						<option value="Method--blowfishEncrypt"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;blowfishEncrypt()</option>
-			
-						<option value="Method--blowfishDecrypt"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;blowfishDecrypt()</option>
-			
 						<option value="Method--stripTags"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;stripTags()</option>
 			
 						<option value="Method--parseCurrentUrlGetParams"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;parseCurrentUrlGetParams()</option>
@@ -2285,6 +2299,8 @@ function smartHandleDocSelector(obj) {
 			
 						<option value="Method--CloneElement"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;CloneElement()</option>
 			
+						<option value="Method--SerializeFormAsObject"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;SerializeFormAsObject()</option>
+			
 						<option value="Method--SubmitFormByAjax"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;SubmitFormByAjax()</option>
 			
 						<option value="Method--AjaxRequestByForm"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;AjaxRequestByForm()</option>
@@ -2297,6 +2313,8 @@ function smartHandleDocSelector(obj) {
 						<option value="Method--windwScrollDown"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;windwScrollDown()</option>
 			
 						<option value="Method--WayPoint"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;WayPoint()</option>
+			
+						<option value="Method--copyToClipboard"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;copyToClipboard()</option>
 			
 						<option value="Method--VirtualFileDownload"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;VirtualFileDownload()</option>
 			
@@ -2333,6 +2351,8 @@ function smartHandleDocSelector(obj) {
 						<option value="Property--param_ModalBoxNoCascade"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;param_ModalBoxNoCascade</option>
 			
 						<option value="Property--param_ModalBoxProtected"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;param_ModalBoxProtected</option>
+			
+						<option value="Property--param_Prefix"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;param_Prefix</option>
 			
 						<option value="Property--param_LoaderImg"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;param_LoaderImg</option>
 			
@@ -2372,13 +2392,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2023-10-19 23:19:05 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:26 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2023 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
 </center></div>
 </body>
 </html>

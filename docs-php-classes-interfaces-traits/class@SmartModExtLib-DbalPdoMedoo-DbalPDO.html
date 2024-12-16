@@ -5,11 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
-<meta name="description" content="\SmartModExtLib\AuthAdmins\SimpleAuthAdminsHandler final class \SmartModExtLib\AuthAdmins\ SimpleAuthAdminsHandler { } :: Simple Auth Admins Handler This">
-<meta name="keywords" content="smartmodextlib authadmins simpleauthadminshandler, final, class, smartmodextlib authadmins, simpleauthadminshandler, simple, auth, admins, handler, this, provide, a, very, authentication, for, admin, area, admin php task php, using, single, account, with, username password, set, in, config admin php, supports, http, basic, bear, swt, optional, required, constants, app auth admin username, app auth admin password, and, the, app auth admin encrypted privkey, they, must, be, app auth privileges, language, php, located, at, modules mod auth admins libs simpleauthadminshandler php, package, development modules authadmins, namespace, name, version, v, methods, public, static, function, authenticate, bool, enforce https, false, disable tokens, properties, documentation, index, definition, list, generated, on">
+<meta name="description" content="\SmartModExtLib\DbalPdoMedoo\DbalPDO final class \SmartModExtLib\DbalPdoMedoo\ DbalPDO { } -&gt; Class: \SmartModExtLib\DbalPdoMedoo\DbalPDO - provides a">
+<meta name="keywords" content="smartmodextlib dbalpdomedoo dbalpdo, final, class, smartmodextlib dbalpdomedoo, dbalpdo, provides, a, general, dbal, database, adapter, using, medoo, pdo, as, module, for, smart framework, that, supports, the, following, drivers, such, pdo sqlite, mysql, postgresql, if, you, wish, to, use, an, extended, in, your, projects, instead, of, direct, supported, directly, by, this, is, good, solution, language, php, located, at, modules mod dbal pdo medoo libs dbalpdo php, package, modules database pdo medoo dbal, namespace, name, version, v, depends, extensions, vendor classes, medoo medoo, classes, smart, smartfilesysutils, smartenvironment, usage, dynamic, object, new, class   - method, only, methods, public, function, construct, setup, string, type, array, options, properties, constants, documentation, index, definition, list, generated, on">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 <link rel="icon" href="data:,">
-<title>PHP Documentation for: \SmartModExtLib\AuthAdmins\SimpleAuthAdminsHandler</title>
+<title>PHP Documentation for: \SmartModExtLib\DbalPdoMedoo\DbalPDO</title>
 <!-- CSS and Fonts -->
 <link rel="stylesheet" type="text/css" href="../fonts/source-sans-pro.css">
 <style type="text/css">
@@ -461,7 +461,7 @@ nav.ux-navbar li > a:only-child::after {
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
-		<li><a href="index.html#Package--developmentmodulesAuthAdmins-" title="return to Index">return to Index</a></li>
+		<li><a href="index.html#Package--modulesDatabasePDOMedoo-DBAL-" title="return to Index">return to Index</a></li>
 	</ul>
 	
 </nav>
@@ -687,33 +687,30 @@ select#select-summary {
 
 </style>
 <!-- Headings -->
-<h1 title="PHP class: `\SmartModExtLib\AuthAdmins\SimpleAuthAdminsHandler` @ PHP Namespace: `\SmartModExtLib\AuthAdmins\`" id="Class--Summary-">
-	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\SmartModExtLib\AuthAdmins\</span><span class="doc-name">SimpleAuthAdminsHandler</span><br>
+<h1 title="PHP class: `\SmartModExtLib\DbalPdoMedoo\DbalPDO` @ PHP Namespace: `\SmartModExtLib\DbalPdoMedoo\`" id="Class--Summary-">
+	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\SmartModExtLib\DbalPdoMedoo\</span><span class="doc-name">DbalPDO</span><br>
 	
 	
 	{
 	
-	}&nbsp;::
+	}&nbsp;-&gt;
 </h1>
 <!-- Description -->
-<div class="doc-comments">Simple Auth Admins Handler<br>
-This class provide a very simple authentication for admin area (admin.php|task.php) using a single account with username/password set in config-admin.php<br>
-Supports: HTTP Basic Auth ; HTTP Bear Auth (SWT) *optional*<br>
-Required constants: APP_AUTH_ADMIN_USERNAME, APP_AUTH_ADMIN_PASSWORD and *optional* the APP_AUTH_ADMIN_ENCRYPTED_PRIVKEY ; they must be set in set in config-admin.php<br>
-Optional constants: APP_AUTH_PRIVILEGES (set in set in config-admin.php)</div><br>
+<div class="doc-comments">Class: \SmartModExtLib\DbalPdoMedoo\DbalPDO - provides a general DBAL Database Adapter using Medoo PDO as a module for Smart.Framework that supports the following drivers such as: PDO(SQLite, MySQL, PostgreSQL).<br>
+If you wish to use an PDO extended DBAL in your projects instead of the direct PDO supported directly by Smart.Framework this is a good solution.</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
 	<ul class="doc-list">
 		<li><span class="doc-language"><b>Language:</b> PHP<span></li>
-		<li><span class="doc-located"><b>Located at:</b> modules/mod-auth-admins/libs/SimpleAuthAdminsHandler.php</span></li>
-		<li><span class="doc-package"><b>Package:</b> development:modules:AuthAdmins</span></li>
-		<li><span class="doc-ns"><b>Namespace:</b> \SmartModExtLib\AuthAdmins\</span></li>
-		<li><span class="doc-name"><b>Class Name:</b> SimpleAuthAdminsHandler</span></li>
+		<li><span class="doc-located"><b>Located at:</b> modules/mod-dbal-pdo-medoo/libs/DbalPDO.php</span></li>
+		<li><span class="doc-package"><b>Package:</b> modules:Database:PDO:Medoo-DBAL</span></li>
+		<li><span class="doc-ns"><b>Namespace:</b> \SmartModExtLib\DbalPdoMedoo\</span></li>
+		<li><span class="doc-name"><b>Class Name:</b> DbalPDO</span></li>
 		
-		<li><b>Version:</b> v.20231020</li>
+		<li><b>Version:</b> v.20241216</li>
+		<li><b>Depends:</b> extensions:  PHP PDO ; vendor-classes: \Medoo\Medoo ; classes: Smart, SmartFileSysUtils, SmartEnvironment</li>
 		
-		
-		
+		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
 		
 		
 	</ul>
@@ -724,13 +721,25 @@ Optional constants: APP_AUTH_PRIVILEGES (set in set in config-admin.php)</div><b
 	<h2 class="doc-header">class Methods</h2>
 </div>
 <!-- methods r.20200121 -->
-<div class="doc-container" id="Method--Authenticate">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>Authenticate</b></span>&nbsp;(
-		<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$enforce_https` Parameter is OPTIONAL, with the Default Value: false">$enforce_https</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>, 
-	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$disable_tokens` Parameter is OPTIONAL, with the Default Value: false">$disable_tokens</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+<div class="doc-container" id="Method--__construct">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-special-name"><b>__construct</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="* Special* Method"><b>@</b></span>&nbsp;
 	
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;
+	
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--setup">
+	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>setup</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$type` Parameter is REQUIRED">$type</span></b></span>, 
+	<i>array</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$options` Parameter is OPTIONAL, with the Default Value: []">$options</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>[]</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;?MEDOO\MEDOO
 	
 	
 	
@@ -779,13 +788,16 @@ function smartHandleDocSelector(obj) {
 </script>
 <div class="doc-summary">
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
-		<option value="" selected>* PHP Class \SmartModExtLib\AuthAdmins\SimpleAuthAdminsHandler # Documentation Index *</option>
-		<optgroup label="Class \SmartModExtLib\AuthAdmins\SimpleAuthAdminsHandler">
+		<option value="" selected>* PHP Class \SmartModExtLib\DbalPdoMedoo\DbalPDO # Documentation Index *</option>
+		<optgroup label="Class \SmartModExtLib\DbalPdoMedoo\DbalPDO">
 			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
 			<option value="Methods--Summary-">Methods list</option>
-						<option value="Method--Authenticate"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Authenticate()</option>
+						<option value="Method--__construct"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;__construct()</option>
+			
+			
+						<option value="Method--setup"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;setup()</option>
 			
 			
 			
@@ -815,13 +827,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2023-10-19 23:15:52 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:20 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2023 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
 </center></div>
 </body>
 </html>

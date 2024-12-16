@@ -787,10 +787,22 @@ select#select-summary {
 	<h2 class="doc-header">Sample code: PHP</h2>
 </div>
 <div class="doc-code">
-	<!-- pre (already preformatted) --><code><!-- Smart/HTML.Cleaner [D] --><code><span style="color: #57A64A">
-<span style="color: #FFFFFF">&lt;?php<br><br></span><span style="color: #999999">//&nbsp;Sample:&nbsp;use&nbsp;this&nbsp;code&nbsp;in&nbsp;a&nbsp;controller&nbsp;of&nbsp;Smart.Framework&nbsp;(after&nbsp;you&nbsp;install&nbsp;the&nbsp;Smart.Framework.Modules)<br>&nbsp;</span><span style="color: #FFFFFF">$this</span><span style="color: #FFCC00; font-weight: bold">-&gt;</span><span style="color: #FFFFFF">PageViewSetVar</span><span style="color: #FFCC00; font-weight: bold">(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'main'</span><span style="color: #FFCC00; font-weight: bold">,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FFFFFF">\SmartModExtLib\TplTwist\SmartTwistTemplating</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">render_file_template</span><span style="color: #FFCC00; font-weight: bold">(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'modules/my-module-name/views/my-view.twist.htm'</span><span style="color: #FFCC00; font-weight: bold">,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'someVar'&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #5F9CCE">'Hello&nbsp;World'</span><span style="color: #FFCC00; font-weight: bold">,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'otherVar'&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #FFFFFF">date</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'Y-m-d&nbsp;H:i:s'</span><span style="color: #FFCC00; font-weight: bold">)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;]<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)<br>&nbsp;);<br><br></span><span style="color: #999999">//&nbsp;#end&nbsp;php&nbsp;code<br></span>
-</span>
-</code><!-- [/D] Smart/HTML.Cleaner --></code><!-- /pre -->
+	<!-- pre (already preformatted) --><code><!-- Smart/HTML.Cleaner [D] --><pre><code style="color: #57A64A"><span style="color: #FFFFFF">&lt;?php
+
+</span><span style="color: #999999">// Sample: use this code in a controller of Smart.Framework (after you install the Smart.Framework.Modules)
+ </span><span style="color: #FFFFFF">$this</span><span style="color: #FFCC00; font-weight: bold">-&gt;</span><span style="color: #FFFFFF">PageViewSetVar</span><span style="color: #FFCC00; font-weight: bold">(
+     </span><span style="color: #5F9CCE">'main'</span><span style="color: #FFCC00; font-weight: bold">,
+     </span><span style="color: #FFFFFF">\SmartModExtLib\TplTwist\SmartTwistTemplating</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">render_file_template</span><span style="color: #FFCC00; font-weight: bold">(
+         </span><span style="color: #5F9CCE">'modules/my-module-name/views/my-view.twist.htm'</span><span style="color: #FFCC00; font-weight: bold">,
+         [
+             </span><span style="color: #5F9CCE">'someVar' </span><span style="color: #FFCC00; font-weight: bold">=&gt; </span><span style="color: #5F9CCE">'Hello World'</span><span style="color: #FFCC00; font-weight: bold">,
+             </span><span style="color: #5F9CCE">'otherVar' </span><span style="color: #FFCC00; font-weight: bold">=&gt; </span><span style="color: #FFFFFF">date</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'Y-m-d H:i:s'</span><span style="color: #FFCC00; font-weight: bold">)
+         ]
+     )
+ );
+
+</span><span style="color: #999999">// #end php code
+</span></code></pre><!-- [/D] Smart/HTML.Cleaner --></code><!-- /pre -->
 </div>
 <!-- Summary List -->
 <br>
@@ -861,13 +873,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2023-10-19 23:15:56 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:20 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2023 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
 </center></div>
 </body>
 </html>

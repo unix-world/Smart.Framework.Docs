@@ -798,10 +798,34 @@ select#select-summary {
 	<h2 class="doc-header">Sample code: PHP</h2>
 </div>
 <div class="doc-code">
-	<!-- pre (already preformatted) --><code><!-- Smart/HTML.Cleaner [D] --><code><span style="color: #57A64A">
-<span style="color: #FFFFFF">&lt;?php<br><br></span><span style="color: #999999">//&nbsp;Usage&nbsp;example:<br>&nbsp;//--<br>&nbsp;</span><span style="color: #FFFFFF">$mySolr&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;new&nbsp;</span><span style="color: #FFFFFF">SmartSolrDb</span><span style="color: #FFCC00; font-weight: bold">();<br>&nbsp;</span><span style="color: #999999">//--<br>&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FFFFFF">$data&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&nbsp;</span><span style="color: #FFFFFF">$mySolr</span><span style="color: #FFCC00; font-weight: bold">-&gt;</span><span style="color: #FFFFFF">findQuery</span><span style="color: #FFCC00; font-weight: bold">(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'word1&nbsp;word2'</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #999999">//&nbsp;this&nbsp;is&nbsp;a&nbsp;real&nbsp;Solr&nbsp;Query&nbsp;and&nbsp;must&nbsp;be&nbsp;escaped&nbsp;in&nbsp;a&nbsp;proper&nbsp;way&nbsp;using&nbsp;SolrUtils::escapeQueryChars()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FFCC00; font-weight: bold">[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'settings'&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'start'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #FFFFFF">0</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #999999">//&nbsp;offset<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'rows'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #FFFFFF">10</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #999999">//&nbsp;limit<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FFCC00; font-weight: bold">],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'sort'&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'score'&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;-</span><span style="color: #FFFFFF">1<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FFCC00; font-weight: bold">],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'filters'&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;[<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'!id'&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #5F9CCE">'ID1'</span><span style="color: #FFCC00; font-weight: bold">,&nbsp;</span><span style="color: #999999">//&nbsp;not&nbsp;ID1<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'category'&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #5F9CCE">'Some&nbsp;Categ'</span><span style="color: #FFCC00; font-weight: bold">,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'subcategory'&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;</span><span style="color: #5F9CCE">'Some&nbsp;Sub-Categ'<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FFCC00; font-weight: bold">],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #5F9CCE">'fields'&nbsp;</span><span style="color: #FFCC00; font-weight: bold">=&gt;&nbsp;[]&nbsp;</span><span style="color: #999999">//&nbsp;all<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span style="color: #FFCC00; font-weight: bold">]<br>&nbsp;&nbsp;&nbsp;&nbsp;);<br>&nbsp;</span><span style="color: #999999">//--<br><br>//&nbsp;#end&nbsp;php&nbsp;code<br></span>
-</span>
-</code><!-- [/D] Smart/HTML.Cleaner --></code><!-- /pre -->
+	<!-- pre (already preformatted) --><code><!-- Smart/HTML.Cleaner [D] --><pre><code style="color: #57A64A"><span style="color: #FFFFFF">&lt;?php
+
+</span><span style="color: #999999">// Usage example:
+ //--
+ </span><span style="color: #FFFFFF">$mySolr </span><span style="color: #FFCC00; font-weight: bold">= new </span><span style="color: #FFFFFF">SmartSolrDb</span><span style="color: #FFCC00; font-weight: bold">();
+ </span><span style="color: #999999">//--
+    </span><span style="color: #FFFFFF">$data </span><span style="color: #FFCC00; font-weight: bold">= </span><span style="color: #FFFFFF">$mySolr</span><span style="color: #FFCC00; font-weight: bold">-&gt;</span><span style="color: #FFFFFF">findQuery</span><span style="color: #FFCC00; font-weight: bold">(
+        </span><span style="color: #5F9CCE">'word1 word2'</span><span style="color: #FFCC00; font-weight: bold">, </span><span style="color: #999999">// this is a real Solr Query and must be escaped in a proper way using SolrUtils::escapeQueryChars()
+        </span><span style="color: #FFCC00; font-weight: bold">[
+            </span><span style="color: #5F9CCE">'settings' </span><span style="color: #FFCC00; font-weight: bold">=&gt; [
+                </span><span style="color: #5F9CCE">'start'             </span><span style="color: #FFCC00; font-weight: bold">=&gt; </span><span style="color: #FFFFFF">0</span><span style="color: #FFCC00; font-weight: bold">, </span><span style="color: #999999">// offset
+                </span><span style="color: #5F9CCE">'rows'                 </span><span style="color: #FFCC00; font-weight: bold">=&gt; </span><span style="color: #FFFFFF">10</span><span style="color: #FFCC00; font-weight: bold">, </span><span style="color: #999999">// limit
+            </span><span style="color: #FFCC00; font-weight: bold">],
+            </span><span style="color: #5F9CCE">'sort' </span><span style="color: #FFCC00; font-weight: bold">=&gt; [
+                </span><span style="color: #5F9CCE">'score' </span><span style="color: #FFCC00; font-weight: bold">=&gt; -</span><span style="color: #FFFFFF">1
+            </span><span style="color: #FFCC00; font-weight: bold">],
+            </span><span style="color: #5F9CCE">'filters' </span><span style="color: #FFCC00; font-weight: bold">=&gt; [
+                </span><span style="color: #5F9CCE">'!id' </span><span style="color: #FFCC00; font-weight: bold">=&gt; </span><span style="color: #5F9CCE">'ID1'</span><span style="color: #FFCC00; font-weight: bold">, </span><span style="color: #999999">// not ID1
+                </span><span style="color: #5F9CCE">'category' </span><span style="color: #FFCC00; font-weight: bold">=&gt; </span><span style="color: #5F9CCE">'Some Categ'</span><span style="color: #FFCC00; font-weight: bold">,
+                </span><span style="color: #5F9CCE">'subcategory' </span><span style="color: #FFCC00; font-weight: bold">=&gt; </span><span style="color: #5F9CCE">'Some Sub-Categ'
+            </span><span style="color: #FFCC00; font-weight: bold">],
+            </span><span style="color: #5F9CCE">'fields' </span><span style="color: #FFCC00; font-weight: bold">=&gt; [] </span><span style="color: #999999">// all
+        </span><span style="color: #FFCC00; font-weight: bold">]
+    );
+ </span><span style="color: #999999">//--
+
+// #end php code
+</span></code></pre><!-- [/D] Smart/HTML.Cleaner --></code><!-- /pre -->
 </div>
 <!-- Summary List -->
 <br>
@@ -879,13 +903,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2023-10-19 23:15:56 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:20 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2023 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
 </center></div>
 </body>
 </html>

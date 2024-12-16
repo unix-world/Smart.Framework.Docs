@@ -5,11 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
-<meta name="description" content="\SmartModExtLib\SmFacebook\FacebookApi final class \SmartModExtLib\SmFacebook\ FacebookApi { } -&gt; Provides a PHP connector for Facebook Graph Api (default">
-<meta name="keywords" content="smartmodextlib smfacebook facebookapi, final, class, smartmodextlib smfacebook, facebookapi, provides, a, php, connector, for, facebook, graph, api, default, to, inside, the, smart framework, language, located, at, modules mod sm facebook libs facebookapi php, package, modules socialmedia, namespace, name, version, v, depends, extensions, classes, usage, dynamic, object, new, class   - method, this, only, methods, public, function, construct, app id, app secret, api version, v5, getapiobject, getlasterror, getuserdata, validateuserdata, properties, constants, documentation, index, definition, list, generated, on">
+<meta name="description" content="\SmartCsrf final class \ SmartCsrf { } :: Class Smart.Framework CSRF A Safety Handler against Cross-Site Request Forgery (CSRF) Language: PHP Located at:">
+<meta name="keywords" content="smartcsrf, final, class, smart framework, csrf, a, safety, handler, against, cross site, request, forgery, language, php, located, at, lib framework lib cryptohs php, package, application, namespace, name, version, v, depends, smart, smarthashcrypto, hints, this, is, generally, intended, for, advanced, usage, static, object, class method, provides, only, methods, public, function, newprivatekey, string, getpublickey, privkey, secret, verifykeys, pubkey, bool, properties, constants, sample, code, example, some method of this class, end, documentation, index, definition, list, generated, on">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 <link rel="icon" href="data:,">
-<title>PHP Documentation for: \SmartModExtLib\SmFacebook\FacebookApi</title>
+<title>PHP Documentation for: \SmartCsrf</title>
 <!-- CSS and Fonts -->
 <link rel="stylesheet" type="text/css" href="../fonts/source-sans-pro.css">
 <style type="text/css">
@@ -461,7 +461,7 @@ nav.ux-navbar li > a:only-child::after {
 	<label for="drop-0" class="toggle">&#9776;</label>
 	<input type="checkbox" id="drop-0">
 		<ul class="menu">
-		<li><a href="index.html#Package--modulesSocialMedia-" title="return to Index">return to Index</a></li>
+		<li><a href="index.html#Package--Application-" title="return to Index">return to Index</a></li>
 	</ul>
 	
 </nav>
@@ -687,29 +687,30 @@ select#select-summary {
 
 </style>
 <!-- Headings -->
-<h1 title="PHP class: `\SmartModExtLib\SmFacebook\FacebookApi` @ PHP Namespace: `\SmartModExtLib\SmFacebook\`" id="Class--Summary-">
-	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\SmartModExtLib\SmFacebook\</span><span class="doc-name">FacebookApi</span><br>
+<h1 title="PHP class: `\SmartCsrf` @ PHP Namespace: `\`" id="Class--Summary-">
+	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\</span><span class="doc-name">SmartCsrf</span><br>
 	
 	
 	{
 	
-	}&nbsp;-&gt;
+	}&nbsp;::
 </h1>
 <!-- Description -->
-<div class="doc-comments">Provides a PHP connector for Facebook Graph Api (default to 5.0) inside the Smart.Framework.</div><br>
+<div class="doc-comments">Class Smart.Framework CSRF<br>
+A Safety Handler against Cross-Site Request Forgery (CSRF)</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
 	<ul class="doc-list">
 		<li><span class="doc-language"><b>Language:</b> PHP<span></li>
-		<li><span class="doc-located"><b>Located at:</b> modules/mod-sm-facebook/libs/FacebookApi.php</span></li>
-		<li><span class="doc-package"><b>Package:</b> modules:SocialMedia</span></li>
-		<li><span class="doc-ns"><b>Namespace:</b> \SmartModExtLib\SmFacebook\</span></li>
-		<li><span class="doc-name"><b>Class Name:</b> FacebookApi</span></li>
+		<li><span class="doc-located"><b>Located at:</b> lib/framework/lib_cryptohs.php</span></li>
+		<li><span class="doc-package"><b>Package:</b> Application</span></li>
+		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
+		<li><span class="doc-name"><b>Class Name:</b> SmartCsrf</span></li>
 		
-		<li><b>Version:</b> v.20200121</li>
-		<li><b>Depends:</b> extensions:  classes: Facebook Graph Api</li>
-		
-		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
+		<li><b>Version:</b> v.20231114</li>
+		<li><b>Depends:</b> Smart,  SmartHashCrypto</li>
+		<li><b>Hints:</b> This  is generally intended for advanced usage !</li>
+		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
 		
 		
 	</ul>
@@ -720,14 +721,11 @@ select#select-summary {
 	<h2 class="doc-header">class Methods</h2>
 </div>
 <!-- methods r.20200121 -->
-<div class="doc-container" id="Method--__construct">
-	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-special-name"><b>__construct</b></span>&nbsp;(
-		<span class="doc-param-name"><b><span title="`$app_id` Parameter is REQUIRED">$app_id</span></b></span>, 
-	<span class="doc-param-name"><b><span title="`$app_secret` Parameter is REQUIRED">$app_secret</span></b></span>, 
-	<span class="doc-param-name"><b><span class="doc-param-optional" title="`$api_version` Parameter is OPTIONAL, with the Default Value: &quot;v5.0&quot;">$api_version</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;v5.0&quot;</b></span>
+<div class="doc-container" id="Method--newPrivateKey">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>newPrivateKey</b></span>&nbsp;(
+		
 	
-	
-	)&nbsp;{}&nbsp;<span title="* Special* Method"><b>@</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
 	
 	
 	
@@ -735,23 +733,13 @@ select#select-summary {
 	
 	
 </div>
-<div class="doc-container" id="Method--getApiObject">
-	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getApiObject</b></span>&nbsp;(
-		
-	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
-	
+<div class="doc-container" id="Method--getPublicKey">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getPublicKey</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$privKey` Parameter is REQUIRED">$privKey</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$secret` Parameter is REQUIRED">$secret</span></b></span>
 	
 	
-	
-	
-	
-</div>
-<div class="doc-container" id="Method--getLastError">
-	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getLastError</b></span>&nbsp;(
-		
-	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
 	
 	
 	
@@ -759,23 +747,14 @@ select#select-summary {
 	
 	
 </div>
-<div class="doc-container" id="Method--getUserData">
-	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getUserData</b></span>&nbsp;(
-		
-	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
-	
-	
+<div class="doc-container" id="Method--verifyKeys">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>verifyKeys</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$pubKey` Parameter is REQUIRED">$pubKey</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$privKey` Parameter is REQUIRED">$privKey</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$secret` Parameter is REQUIRED">$secret</span></b></span>
 	
 	
-	
-	
-</div>
-<div class="doc-container" id="Method--validateUserData">
-	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>validateUserData</b></span>&nbsp;(
-		
-	
-	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
 	
 	
 	
@@ -799,7 +778,19 @@ select#select-summary {
 <!-- constants r.20200121 -->
 
 <!-- Sample Code -->
+<br>
+<div class="doc-container" id="SAMPLE--Code-">
+	<h2 class="doc-header">Sample code: PHP</h2>
+</div>
+<div class="doc-code">
+	<!-- pre (already preformatted) --><code><!-- Smart/HTML.Cleaner [D] --><pre><code style="color: #57A64A"><span style="color: #FFFFFF">&lt;?php
 
+</span><span style="color: #999999">// Usage example:
+ </span><span style="color: #FFFFFF">SmartCsrf</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">some_method_of_this_class</span><span style="color: #FFCC00; font-weight: bold">(...);
+
+</span><span style="color: #999999">// #end php code
+</span></code></pre><!-- [/D] Smart/HTML.Cleaner --></code><!-- /pre -->
+</div>
 <!-- Summary List -->
 <br>
 <!-- summary r.20210420 -->
@@ -824,25 +815,19 @@ function smartHandleDocSelector(obj) {
 </script>
 <div class="doc-summary">
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
-		<option value="" selected>* PHP Class \SmartModExtLib\SmFacebook\FacebookApi # Documentation Index *</option>
-		<optgroup label="Class \SmartModExtLib\SmFacebook\FacebookApi">
+		<option value="" selected>* PHP Class \SmartCsrf # Documentation Index *</option>
+		<optgroup label="Class \SmartCsrf">
 			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
 			<option value="Methods--Summary-">Methods list</option>
-						<option value="Method--__construct"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;__construct()</option>
+						<option value="Method--newPrivateKey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;newPrivateKey()</option>
 			
 			
-						<option value="Method--getApiObject"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getApiObject()</option>
+						<option value="Method--getPublicKey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getPublicKey()</option>
 			
 			
-						<option value="Method--getLastError"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getLastError()</option>
-			
-			
-						<option value="Method--getUserData"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getUserData()</option>
-			
-			
-						<option value="Method--validateUserData"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;validateUserData()</option>
+						<option value="Method--verifyKeys"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;verifyKeys()</option>
 			
 			
 			
@@ -854,6 +839,9 @@ function smartHandleDocSelector(obj) {
 		<optgroup label="Class Constants">
 			<option value="Constants--Summary-">Constants list</option>
 			
+		</optgroup>
+				<optgroup label="Class Sample usage">
+			<option value="SAMPLE--Code-">Sample code</option>
 		</optgroup>
 		
 	</select>
@@ -872,13 +860,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2023-10-19 23:15:59 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:19 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2023 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
 </center></div>
 </body>
 </html>
