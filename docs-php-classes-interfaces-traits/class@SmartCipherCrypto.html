@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
 <meta name="description" content="\SmartCipherCrypto final class \ SmartCipherCrypto { } :: Class: Smart Cipher Crypto Provides a built-in based feature to handle various encryption /">
-<meta name="keywords" content="smartciphercrypto, final, class, smart, cipher, crypto, provides, a, built in, based, feature, to, handle, various, encryption, decryption, language, php, located, at, lib framework lib cryptoas php, package, core crypto, namespace, name, version, v, depends, classes, smartenvironment, smartcryptocipherstwofishcbc, smartcryptociphersblowfishcbc, smartcryptociphersopenssl, smartcryptociphershashcryptofb, smartdhkx, usage, static, object, class method, this, only, methods, public, function, t3f encrypt, string, data, key, bool, b2fpreenc, false, return, the, encrypted, as, b64s, or, empty, on, error, param, plain, be, secret, must, between, and, bytes, if, no, is, provided, will, use, internal, from, init, smart framework security key, default, set, true, pre encrypt, using, bf, enc, v2, encrypts, threefish, cbc, 1024bit, v3, intended, used, for, high sensitive, persistent, ex">
+<meta name="keywords" content="smartciphercrypto, final, class, smart, cipher, crypto, provides, a, built in, based, feature, to, handle, various, encryption, decryption, max, allowed, packet, encrypt, is, 16mb, theoretical, from, memory, point, of, view, but, may, depend, by, many, factors, decrypt, 64mb, algo, language, php, located, at, lib framework lib cryptoss php, package, core crypto, namespace, name, version, v, depends, classes, smartenvironment, smarthashcrypto, smartcryptocipherstwofishcbc, smartcryptociphersblowfishcbc, smartcryptociphersopenssl, smartcryptociphershashcryptofb, smartdhkx, usage, static, object, class method, this, only, methods, public, function, t3f encrypt, string, data, key, bool, b2fpreenc, false, randomize, true, return, the, encrypted, as, b64s, or, empty, on, error, param, plain, be, secret, must, between, and, bytes, if, no, provided, will, use">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 <link rel="icon" href="data:,">
 <title>PHP Documentation for: \SmartCipherCrypto</title>
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -697,18 +697,20 @@ select#select-summary {
 </h1>
 <!-- Description -->
 <div class="doc-comments">Class: Smart Cipher Crypto<br>
-Provides a built-in based feature to handle various encryption / decryption.</div><br>
+Provides a built-in based feature to handle various encryption / decryption.<br>
+Max allowed packet to encrypt is 16MB theoretical from memory point of view, ... but may depend by many factors ...<br>
+Max allowed packet to decrypt is 64MB theoretical from memory point of view, ... but may depend by algo ...</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
 	<ul class="doc-list">
 		<li><span class="doc-language"><b>Language:</b> PHP<span></li>
-		<li><span class="doc-located"><b>Located at:</b> lib/framework/lib_cryptoas.php</span></li>
+		<li><span class="doc-located"><b>Located at:</b> lib/framework/lib_cryptoss.php</span></li>
 		<li><span class="doc-package"><b>Package:</b> @Core:Crypto</span></li>
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartCipherCrypto</span></li>
 		
-		<li><b>Version:</b> v.20231203</li>
-		<li><b>Depends:</b> classes:  Smart, SmartEnvironment, SmartCryptoCiphersTwofishCBC, SmartCryptoCiphersBlowfishCBC, SmartCryptoCiphersOpenSSL, SmartCryptoCiphersHashCryptOFB, SmartDhKx</li>
+		<li><b>Version:</b> v.20250714</li>
+		<li><b>Depends:</b> classes:  Smart, SmartEnvironment, SmartHashCrypto, SmartCryptoCiphersTwofishCBC, SmartCryptoCiphersBlowfishCBC, SmartCryptoCiphersOpenSSL, SmartCryptoCiphersHashCryptOFB, SmartDhKx</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
 		
@@ -720,13 +722,14 @@ Provides a built-in based feature to handle various encryption / decryption.</di
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20200121 -->
+<!-- methods r.20250107 -->
 <!-- Skip Internal-Priv Method: `t3f_algo()` -->
 <div class="doc-container" id="Method--t3f_encrypt">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>t3f_encrypt</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$data` Parameter is REQUIRED">$data</span></b></span>, 
 	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$key` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$key</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
-	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$b2fpreenc` Parameter is OPTIONAL, with the Default Value: false">$b2fpreenc</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$b2fpreenc` Parameter is OPTIONAL, with the Default Value: false">$b2fpreenc</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$randomize` Parameter is OPTIONAL, with the Default Value: true">$randomize</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -771,7 +774,8 @@ Ciphers: threefish.cbc (internal)</div>
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>tf_encrypt</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$data` Parameter is REQUIRED">$data</span></b></span>, 
 	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$key` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$key</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
-	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$bfpreenc` Parameter is OPTIONAL, with the Default Value: false">$bfpreenc</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$bfpreenc` Parameter is OPTIONAL, with the Default Value: false">$bfpreenc</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$randomize` Parameter is OPTIONAL, with the Default Value: true">$randomize</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -815,7 +819,8 @@ Ciphers: twofish.cbc (internal)</div>
 <div class="doc-container" id="Method--bf_encrypt">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>bf_encrypt</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$data` Parameter is REQUIRED">$data</span></b></span>, 
-	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$key` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$key</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$key` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$key</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$randomize` Parameter is OPTIONAL, with the Default Value: true">$randomize</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -857,7 +862,8 @@ Ciphers: blowfish.cbc (internal)</div>
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>encrypt</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$data` Parameter is REQUIRED">$data</span></b></span>, 
 	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$key` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$key</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
-	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$cipher` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$cipher</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$cipher` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$cipher</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$randomize` Parameter is OPTIONAL, with the Default Value: true">$randomize</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -903,14 +909,42 @@ This is intended to be used for non-persistent data ; these ciphers may change o
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20200121 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20200121 -->
+<!-- constants r.20250107 -->
+<div class="doc-container" id="Constant--SIGNATURE_3FISH_1K_V1_DEFAULT">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>SIGNATURE_3FISH_1K_V1_DEFAULT</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;3f1kD.v1!&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--SIGNATURE_3FISH_1K_V1_2FBF_D">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>SIGNATURE_3FISH_1K_V1_2FBF_D</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;3ffb2kD.v1!&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--SIGNATURE_2FISH_V1_DEFAULT">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>SIGNATURE_2FISH_V1_DEFAULT</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;2f256.v1!&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--SIGNATURE_2FISH_V1_BF_DEFAULT">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>SIGNATURE_2FISH_V1_BF_DEFAULT</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;2fb88.v1!&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--SIGNATURE_BFISH_V3">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>SIGNATURE_BFISH_V3</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;bf448.v3!&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--SIGNATURE_BFISH_V2">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>SIGNATURE_BFISH_V2</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;bf448.v2!&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--SIGNATURE_BFISH_V1">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>SIGNATURE_BFISH_V1</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;bf384.v1!&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
 
 <!-- Sample Code -->
 <br>
@@ -928,9 +962,9 @@ This is intended to be used for non-persistent data ; these ciphers may change o
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20210420 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1000,6 +1034,20 @@ function smartHandleDocSelector(obj) {
 		</optgroup>
 		<optgroup label="Class Constants">
 			<option value="Constants--Summary-">Constants list</option>
+						<option value="Constant--SIGNATURE_3FISH_1K_V1_DEFAULT">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;SIGNATURE_3FISH_1K_V1_DEFAULT</option>
+			
+						<option value="Constant--SIGNATURE_3FISH_1K_V1_2FBF_D">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;SIGNATURE_3FISH_1K_V1_2FBF_D</option>
+			
+						<option value="Constant--SIGNATURE_2FISH_V1_DEFAULT">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;SIGNATURE_2FISH_V1_DEFAULT</option>
+			
+						<option value="Constant--SIGNATURE_2FISH_V1_BF_DEFAULT">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;SIGNATURE_2FISH_V1_BF_DEFAULT</option>
+			
+						<option value="Constant--SIGNATURE_BFISH_V3">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;SIGNATURE_BFISH_V3</option>
+			
+						<option value="Constant--SIGNATURE_BFISH_V2">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;SIGNATURE_BFISH_V2</option>
+			
+						<option value="Constant--SIGNATURE_BFISH_V1">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;SIGNATURE_BFISH_V1</option>
+			
 			
 		</optgroup>
 				<optgroup label="Class Sample usage">
@@ -1008,7 +1056,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -1022,13 +1070,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:19 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:49 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

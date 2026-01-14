@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
 <meta name="description" content="\SmartMysqliDb final class \ SmartMysqliDb { } :: Class: SmartMysqliDb - provides a Static Client for MariaDB Server / MySQL that can be used just with">
-<meta name="keywords" content="smartmysqlidb, final, class, provides, a, static, client, for, mariadb, server, mysql, that, can, be, used, just, with, the, default, connection, from, configs, this, which, must, set, in, etc config php, configs  mysqli, it, connects, automatically, when, needed, is, lazy, and, made, to, avoid, permanent, connections, slower, down, app, takes, busy, slots, tested, stable, versions, x, on, language, php, located, at, lib framework plugins lib db mysqli php, package, plugins database mysql, namespace, name, version, v, depends, extensions, mysqli, classes, smart, smartenvironment, smartunicode, smartcomponents, optional, constants, smart framework sql charset, usage, object, class method, only, methods, public, function, default connect, pre connects, manually, as, will, done, anyway, if, there, need, create, an, explicit, earlier, by">
+<meta name="keywords" content="smartmysqlidb, final, class, provides, a, static, client, for, mariadb, server, mysql, that, can, be, used, just, with, the, default, connection, from, configs, this, which, must, set, in, etc config php, configs  mysqli, it, connects, automatically, when, needed, is, lazy, and, made, to, avoid, permanent, connections, slower, down, app, takes, busy, slots, minimum, supported, version, of, mysql mariadb, tested, stable, versions, x, on, language, php, located, at, lib framework plugins lib db mysqli php, package, plugins database mysql, namespace, name, v, depends, extensions, mysqli, classes, smart, smartenvironment, smartunicode, smartcomponents, optional, constants, smart framework sql charset, usage, object, class method, only, methods, public, function, default connect, pre connects, manually, as, will, done, anyway, if, there, need, create">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 <link rel="icon" href="data:,">
 <title>PHP Documentation for: \SmartMysqliDb</title>
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -699,8 +699,9 @@ select#select-summary {
 <div class="doc-comments">Class: SmartMysqliDb - provides a Static Client for MariaDB Server / MySQL that can be used just with the DEFAULT connection from configs.<br>
 This class can be used just with the DEFAULT connection which must be set in etc/config.php: $configs['mysqli'].<br>
 It connects automatically, when needed (the connection is lazy, and is made just when is needed to avoid permanent connections to MySQL which slower down the app and takes busy the slots).<br>
-Tested and Stable with MariaDB versions: 5.5.x / 10.x<br>
-Tested and Stable on MySQL versions: 5.5.x / 5.6.x / 5.7.x / 6.x / 7.x / 8.x</div><br>
+Minimum supported version of MySQL/MariaDB is: 5.0.0<br>
+Tested and Stable with MariaDB versions: 5.5.x / 10.x / 11.x<br>
+Tested and Stable on MySQL versions: 5.x / 6.x / 7.x / 8.x / 9.x</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
 	<ul class="doc-list">
@@ -710,7 +711,7 @@ Tested and Stable on MySQL versions: 5.5.x / 5.6.x / 5.7.x / 6.x / 7.x / 8.x</di
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartMysqliDb</span></li>
 		
-		<li><b>Version:</b> v.20221223</li>
+		<li><b>Version:</b> v.20251204</li>
 		<li><b>Depends:</b> extensions:  PHP MySQLi ; classes: Smart, SmartEnvironment, SmartUnicode, SmartComponents (optional) ; constants: SMART_FRAMEWORK_SQL_CHARSET</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -723,7 +724,7 @@ Tested and Stable on MySQL versions: 5.5.x / 5.6.x / 5.7.x / 6.x / 7.x / 8.x</di
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20200121 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--default_connect">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>default_connect</b></span>&nbsp;(
 		
@@ -980,14 +981,14 @@ The statement must not contain any Single Quotes to prevent SQL injections which
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20200121 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20200121 -->
+<!-- constants r.20250107 -->
 
 <!-- Sample Code -->
 <br>
@@ -1002,7 +1003,7 @@ The statement must not contain any Single Quotes to prevent SQL injections which
  </span><span style="color: #FFFFFF">$non_associative_read_multi_records </span><span style="color: #FFCC00; font-weight: bold">= (array) </span><span style="color: #FFFFFF">SmartMysqliDb</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">read_data</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'SELECT * FROM `table` WHERE `id` = ?'</span><span style="color: #FFCC00; font-weight: bold">, array(</span><span style="color: #FFFFFF">3</span><span style="color: #FFCC00; font-weight: bold">));
  </span><span style="color: #FFFFFF">$associative_read_multi_records </span><span style="color: #FFCC00; font-weight: bold">= (array) </span><span style="color: #FFFFFF">SmartMysqliDb</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">read_adata</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'SELECT * FROM `table` WHERE `id` = ?'</span><span style="color: #FFCC00; font-weight: bold">, array(</span><span style="color: #5F9CCE">'some-id'</span><span style="color: #FFCC00; font-weight: bold">));
  </span><span style="color: #FFFFFF">$associative_read_for_just_one_record </span><span style="color: #FFCC00; font-weight: bold">= (array) </span><span style="color: #FFFFFF">SmartMysqliDb</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">read_asdata</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'SELECT * FROM `table` WHERE `id` = ? LIMIT 1 OFFSET 0'</span><span style="color: #FFCC00; font-weight: bold">, array(</span><span style="color: #FFFFFF">99</span><span style="color: #FFCC00; font-weight: bold">)); </span><span style="color: #999999">// NOTICE: this function will return just one record, so always use LIMIT 1 OFFSET 0 (or LIMIT 0,1) ; if the query will return more records will raise an error
- </span><span style="color: #FFFFFF">$update </span><span style="color: #FFCC00; font-weight: bold">= (array) </span><span style="color: #FFFFFF">SmartMysqliDb</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">write_data</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'UPDATE `table` SET `active` = 1 WHERE `id` = ?'</span><span style="color: #FFCC00; font-weight: bold">, array(</span><span style="color: #FFFFFF">55</span><span style="color: #FFCC00; font-weight: bold">)); </span><span style="color: #999999">// will return an array[ 0 =&gt; message, 1 =&gt; (integer) affected rows ]
+ </span><span style="color: #FFFFFF">$update </span><span style="color: #FFCC00; font-weight: bold">= (array) </span><span style="color: #FFFFFF">SmartMysqliDb</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">write_data</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'UPDATE `table` SET `active` = 1 WHERE `id` = ?'</span><span style="color: #FFCC00; font-weight: bold">, array(</span><span style="color: #FFFFFF">55</span><span style="color: #FFCC00; font-weight: bold">)); </span><span style="color: #999999">// will return an array[ 0 =&gt; message, 1 =&gt; (int) affected rows ]
  </span><span style="color: #FFFFFF">$arr_insert </span><span style="color: #FFCC00; font-weight: bold">= array(
          </span><span style="color: #5F9CCE">'id' </span><span style="color: #FFCC00; font-weight: bold">=&gt; </span><span style="color: #FFFFFF">100</span><span style="color: #FFCC00; font-weight: bold">,
          </span><span style="color: #5F9CCE">'active' </span><span style="color: #FFCC00; font-weight: bold">=&gt; </span><span style="color: #FFFFFF">1</span><span style="color: #FFCC00; font-weight: bold">,
@@ -1016,9 +1017,9 @@ The statement must not contain any Single Quotes to prevent SQL injections which
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20210420 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1104,7 +1105,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -1118,13 +1119,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:19 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:50 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

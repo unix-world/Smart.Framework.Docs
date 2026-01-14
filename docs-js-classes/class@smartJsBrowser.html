@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -703,7 +703,7 @@ The JavaScript class provides methods to simplify the interraction with the Brow
 		<li><span class="doc-package"><b>Package:</b> Sf.Javascript:Browser</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> smartJ$Browser</span></li>
 		<li><span class="doc-frozen"><b>Frozen:</b> Yes</span></li>
-		<li><span class="doc-version"><b>Version:</b> 20241125</span></li>
+		<li><span class="doc-version"><b>Version:</b> 20251216</span></li>
 		<li><b>Usage:</b> smartJ$Browser.method();</li>
 		
 		
@@ -717,7 +717,7 @@ The JavaScript class provides methods to simplify the interraction with the Brow
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20210414 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--setFlag">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>setFlag</b></span>&nbsp;=&nbsp;(
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`flag` Parameter">flag</span></b></span>, 
@@ -1254,7 +1254,7 @@ All page elements that must be visible over the overlay must have zIndex in rang
 	@param: {String} image the URL link to a notification icon image (svg/gif/png/jpg/webp) or null<br>
 	@param: {Integer} time the notification display time in milliseconds ; use 0 for sticky ; between 0 (0 sec) and 60000 (60 sec)<br>
 	@param: {Boolean} sticky *Optional* FALSE by default (will auto-close after the display time expire) ; TRUE to set sticky (require manual close, will not auto-close)<br>
-	@param: {Enum} css_class *Optional* a CSS class name for the notification or empty string to use default one: darknote (black), notice (white), info (blue), success (green), warning (yellow), error (red)<br>
+	@param: {Enum} css_class *Optional* a CSS class name for the notification or empty string: info (white), hint (black), notice (blue), success (green), warning (yellow), error (pink), fail (red)<br>
 	@param: {Array-Obj} options *Optional* Extra Growl Properties:<br>
 	@param: {Boolean} isTitleHtml *Optional* The Dialog Type ; default is FALSE ; If TRUE, will allow HTML Title<br>
 	
@@ -1372,6 +1372,7 @@ If none of the above are available will try to use jQuery.alertable/confirm else
 	
 	
 	
+			@fires: open a Notification Message (custom or default, depends on settings)<br>
 	
 	
 	@param: {String} ytitle The Title<br>
@@ -1418,6 +1419,7 @@ If none of the above are available will try to use jQuery.alertable/confirm else
 	
 	</div>
 			<div class="doc-method-comments">Confirm a Form Submit by a confirm / Dialog, with OK and Cancel buttons.<br>
+To Submit the form to the Modal/iFrame, the target name should be: smart__iFModalBox__iFrame.<br>
 The form will be submitted just if OK button is clicked.</div>
 	
 	
@@ -1453,6 +1455,7 @@ The form will be submitted just if OK button is clicked.</div>
 	
 	</div>
 			<div class="doc-method-comments">Open a Modal/iFrame or PopUp child window with a new target to post a form within.<br>
+To POST to the Modal/iFrame, the target name should be: smart__iFModalBox__iFrame.<br>
 It will get the form URL and form method GET/POST directly from the objForm.<br>
 The function must be called by a form button onClick followed by 'return false;' not by classic submit to avoid fire the form send twice 1st before (in a _blank window) and 2nd after opening the child popup/modal.</div>
 	
@@ -1697,11 +1700,11 @@ It works on TextArea or other compatible input fields ...</div>
 	
 </div>
 <div class="doc-container" id="Method--SerializeFormAsObject">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>SerializeFormAsObject</b></span>&nbsp;(
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>SerializeFormAsObject</b></span>&nbsp;=&nbsp;(
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`formID` Parameter">formID</span></b></span>, 
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`rKey` Parameter">rKey</span></b></span>
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Object}
+	)&nbsp;=&gt;&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Object}
 	<div class="doc-method-ret-params">
 	
 	
@@ -1877,11 +1880,11 @@ smartJ$Browser.SubmitFormByAjax(); 	// advanced, will handle the XHR form reques
 	
 </div>
 <div class="doc-container" id="Method--windwScrollDown">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>windwScrollDown</b></span>&nbsp;=&nbsp;(
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>windwScrollDown</b></span>&nbsp;(
 	<i>{Object}</i>&nbsp;<span class="doc-param-name"><b><span title="`wnd` Parameter">wnd</span></b></span>, 
 	<i>{Integer}</i>&nbsp;<span class="doc-param-name"><b><span title="`offset` Parameter">offset</span></b></span>
 	
-	)&nbsp;=&gt;&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Void}
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Void}
 	<div class="doc-method-ret-params">
 	
 	
@@ -1972,6 +1975,36 @@ It will focus the referenced browser window first.</div>
 	
 	
 </div>
+<div class="doc-container" id="Method--VirtualFileUploadHandler">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>VirtualFileUploadHandler</b></span>&nbsp;(
+	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`inputUpldFileId` Parameter">inputUpldFileId</span></b></span>, 
+	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`previewPlaceholderId` Parameter">previewPlaceholderId</span></b></span>, 
+	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`fileMaxMBSize` Parameter">fileMaxMBSize</span></b></span>, 
+	<i>{CallBack}</i>&nbsp;<span class="doc-param-name"><b><span title="`fxDone` Parameter">fxDone</span></b></span>, 
+	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`mimeType` Parameter">mimeType</span></b></span>
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Void}
+	<div class="doc-method-ret-params">
+	
+	
+	
+	
+	
+	@param: {String} inputUpldFileId The HTML-Id of the input type file (#1)<br>
+	@param: {String} previewPlaceholderId The HTML-Id of the preview container (#2)<br>
+	@param: {String} fileMaxMBSize The max file size in MB (0.01 ... 24) ; Default is 0.1<br>
+	@param: {CallBack} fxDone A callback function(fileDataURL, type, size, name) { ... } for done<br>
+	@param: {String} mimeType The allowed MimeType, ex: application/pdf<br>
+	
+	
+	</div>
+			<div class="doc-method-comments">Create a virtual file upload handler<br>
+Requires in HTML:<br>
+(#1) an input type file (can be any of visible or hidden/triggered by a button click)<br>
+(#2) a file icon preview container (div)</div>
+	
+	
+</div>
 <div class="doc-container" id="Method--VirtualImageUploadHandler">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>VirtualImageUploadHandler</b></span>&nbsp;(
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`inputUpldFileId` Parameter">inputUpldFileId</span></b></span>, 
@@ -1996,7 +2029,7 @@ It will focus the referenced browser window first.</div>
 	@param: {String} inputUpldFileId The HTML-Id of the input type file (#1)<br>
 	@param: {String} previewPlaceholderId The HTML-Id of the preview container (#2)<br>
 	@param: {Decimal} imgQuality The image quality (0.1 ... 1)<br>
-	@param: {Decimal} imgMaxResizeMBSize The max resized image size in MB (0.01 ... 2) ; Default is 0.1<br>
+	@param: {Decimal} imgMaxResizeMBSize The max resized image size in MB (0.01 ... 4) ; Default is 0.1<br>
 	@param: {Integer} imgMaxResizeW The max resize width of the image (if the image width is lower will be not resized)<br>
 	@param: {Integer} imgMaxResizeH The max resize height of the image (if the image height is lower will be not resized)<br>
 	@param: {CallBack} fxDone A callback function(imgDataURL, w, h, isSVG, type, size, name) { ... } for done<br>
@@ -2014,13 +2047,70 @@ Requires in HTML:<br>
 	
 	
 </div>
+<div class="doc-container" id="Method--DateSmartField">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>DateSmartField</b></span>&nbsp;=&nbsp;(
+	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`elem` Parameter">elem</span></b></span>
+	
+	)&nbsp;=&gt;&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Void}
+	<div class="doc-method-ret-params">
+	
+	
+	
+	
+	
+	@param: {String} elem The jQuery element selector to apply this method to ; expects: `&lt;input type=&quot;date&quot;&gt;`<br>
+	
+	
+	</div>
+			<div class="doc-method-comments">Converts a Date Field to a Smart Date Field<br>
+Requires in HTML: an input type date that will display ISO yyyy-mm-dd date instead as browser locales as mm/dd/yyyy.</div>
+	
+	
+</div>
+<div class="doc-container" id="Method--DateSmartsFields">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>DateSmartsFields</b></span>&nbsp;=&nbsp;(
+	
+	)&nbsp;=&gt;&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Void}
+	<div class="doc-method-ret-params">
+	
+	
+	
+	
+	
+	
+	
+	</div>
+			<div class="doc-method-comments">Converts all Text Fields of type .ux-date-field to Date Fields<br>
+See: DateSmartField()</div>
+	
+	
+</div>
+<div class="doc-container" id="Method--SelectReadOnly">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>SelectReadOnly</b></span>&nbsp;=&nbsp;(
+	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`$elem` Parameter">$elem</span></b></span>
+	
+	)&nbsp;=&gt;&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Void}
+	<div class="doc-method-ret-params">
+	
+	
+	
+	
+	
+	@param: {String} $elem The jQuery select element to apply this method to ; expects: `&lt;select&gt;&lt;option&gt;...&lt;/select&gt;`<br>
+	
+	
+	</div>
+			<div class="doc-method-comments">Make a Select List ReadOnly by marking all non-selected options as disabled</div>
+	
+	
+</div>
 
 <!-- Properties -->
 <br>
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20210417 -->
+<!-- properties r.20250107 -->
 <div class="doc-container" id="Property--param_LanguageId">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>var</i></span> <b>param_LanguageId</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>'en'</b></span>&nbsp;;&nbsp;&nbsp;<span title="Static Property"><b>.</b></span>&nbsp;<i>{String}</i>
 	<div class="doc-param-set"><i>set</i>&nbsp;<span class="doc-param-set-comment">[before] smartJ$Options .BrowserUtils.LanguageId</span></div>
@@ -2171,7 +2261,7 @@ Allowed Values: hexa color between #000000 - #FFFFFF</div>
 	
 </div>
 <div class="doc-container" id="Property--param_CssOverlayOpacity">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>var</i></span> <b>param_CssOverlayOpacity</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>0.85</b></span>&nbsp;;&nbsp;&nbsp;<span title="Static Property"><b>.</b></span>&nbsp;<i>{Decimal}</i>
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>var</i></span> <b>param_CssOverlayOpacity</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>0.1</b></span>&nbsp;;&nbsp;&nbsp;<span title="Static Property"><b>.</b></span>&nbsp;<i>{Decimal}</i>
 	<div class="doc-param-set"><i>set</i>&nbsp;<span class="doc-param-set-comment">[before] smartJ$Options .BrowserUtils.CssOverlayOpacity</span></div>
 	<div class="doc-param-get"><i>get</i>&nbsp;<span class="doc-param-get-comment">smartJ$Browser.param_CssOverlayOpacity</span></div>
 			<div class="doc-method-comments">Overlay Customization - Opacity<br>
@@ -2185,15 +2275,15 @@ Allowed Values: between 0.1 and 1</div>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20210417 -->
+<!-- constants r.20250107 -->
 
 <!-- Sample Code -->
 
 <!-- Summary List -->
 <br>
-<!-- summary r.20210414 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -2299,7 +2389,7 @@ function smartHandleDocSelector(obj) {
 			
 						<option value="Method--CloneElement"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;CloneElement()</option>
 			
-						<option value="Method--SerializeFormAsObject"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;SerializeFormAsObject()</option>
+						<option value="Method--SerializeFormAsObject"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;SerializeFormAsObject()</option>
 			
 						<option value="Method--SubmitFormByAjax"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;SubmitFormByAjax()</option>
 			
@@ -2310,7 +2400,7 @@ function smartHandleDocSelector(obj) {
 			
 						<option value="Method--LoadElementContentByAjax"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;LoadElementContentByAjax()</option>
 			
-						<option value="Method--windwScrollDown"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;windwScrollDown()</option>
+						<option value="Method--windwScrollDown"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;windwScrollDown()</option>
 			
 						<option value="Method--WayPoint"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;WayPoint()</option>
 			
@@ -2318,7 +2408,15 @@ function smartHandleDocSelector(obj) {
 			
 						<option value="Method--VirtualFileDownload"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;VirtualFileDownload()</option>
 			
+						<option value="Method--VirtualFileUploadHandler"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;VirtualFileUploadHandler()</option>
+			
 						<option value="Method--VirtualImageUploadHandler"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;VirtualImageUploadHandler()</option>
+			
+						<option value="Method--DateSmartField"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;DateSmartField()</option>
+			
+						<option value="Method--DateSmartsFields"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;DateSmartsFields()</option>
+			
+						<option value="Method--SelectReadOnly"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;SelectReadOnly()</option>
 			
 			
 		</optgroup>
@@ -2378,7 +2476,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -2392,13 +2490,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:26 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:53:25 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

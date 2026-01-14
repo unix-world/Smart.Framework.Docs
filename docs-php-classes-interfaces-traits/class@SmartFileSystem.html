@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -712,7 +712,7 @@ All operations in this class are safe against TOC/TOU (time-of-check to time-of-
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartFileSystem</span></li>
 		
-		<li><b>Version:</b> v.20240119</li>
+		<li><b>Version:</b> v.20260103</li>
 		<li><b>Depends:</b> classes:  Smart, SmartEnvironment ; constants: SMART_FRAMEWORK_CHMOD_DIRS, SMART_FRAMEWORK_CHMOD_FILES</li>
 		<li><b>Hints:</b> This  class can handle thread concurency to the filesystem in a safe way by using the LOCK_EX (lock exclusive) feature on each file written / appended thus making also reads to be mostly safe ; Reads can also use optional shared locking if needed</li>
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -725,7 +725,7 @@ All operations in this class are safe against TOC/TOU (time-of-check to time-of-
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20200121 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--fix_dir_chmod">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>fix_dir_chmod</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$dir_name` Parameter is REQUIRED">$dir_name</span></b></span>
@@ -972,7 +972,8 @@ Use this in special cases where you need to check if a path that may be a broken
 	<i>int</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$file_len` Parameter is OPTIONAL, with the Default Value: 0">$file_len</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>0</b></span>, 
 	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$markchmod` Parameter is OPTIONAL, with the Default Value: &quot;no&quot;">$markchmod</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;no&quot;</b></span>, 
 	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$safelock` Parameter is OPTIONAL, with the Default Value: &quot;no&quot;">$safelock</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;no&quot;</b></span>, 
-	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$allow_protected_paths` Parameter is OPTIONAL, with the Default Value: false">$allow_protected_paths</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$allow_protected_paths` Parameter is OPTIONAL, with the Default Value: false">$allow_protected_paths</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$dont_read_if_overSized` Parameter is OPTIONAL, with the Default Value: false">$dont_read_if_overSized</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -1258,14 +1259,14 @@ It will FAIL in non-recursive mode if the directory (folder) is not empty.</div>
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20200121 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20200121 -->
+<!-- constants r.20250107 -->
 <div class="doc-container" id="Constant--APP_DB_FOLDER">
 	<span class="doc-modifiers">public</span> <i>const</i> <b>APP_DB_FOLDER</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;#db/&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
 	
@@ -1287,9 +1288,9 @@ It will FAIL in non-recursive mode if the directory (folder) is not empty.</div>
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20210420 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1419,7 +1420,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -1433,13 +1434,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:19 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:50 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

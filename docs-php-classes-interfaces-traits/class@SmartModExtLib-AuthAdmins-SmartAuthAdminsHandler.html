@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
 <meta name="description" content="\SmartModExtLib\AuthAdmins\SmartAuthAdminsHandler final class \SmartModExtLib\AuthAdmins\ SmartAuthAdminsHandler extends">
-<meta name="keywords" content="smartmodextlib, uthadmins smartauthadminshandler, final, class, uthadmins, smartauthadminshandler, extends, bstractauthhandler, implements, uthhandlerinterface, smart unicorn, multi account, auth, admins, handler, this, provide, a, complex, authentication, for, admin, area, admin php task php, using, multi accounts, system, with, sqlite, db, supports, http, basic, bear, swt, optional, built in, token, stk, required, only, init, after, dissalowed, constants, app auth admin init ip address, app auth admin username, app auth admin password, must, be, set, in, config admin php, thereafter, unset, app auth privileges, configuration, configs  app auth    adm namespaces, manager, admin php page auth admins manager stml, language, php, located, at, modules mod auth admins libs smartauthadminshandler php, package, development modules authadmins, namespace, name, version, v, inheritance, chart, →, ↳, interface, methods, public, static, function, authenticate, bool, enforce https, false, void, reimplemented, over, extended, to, handle, an, method, return, on, failed, logins, should">
+<meta name="keywords" content="smartmodextlib authadmins smartauthadminshandler, final, class, smartmodextlib authadmins, smartauthadminshandler, extends, smartmodextlib authadmins abstractauthhandler, implements, smartmodextlib authadmins authhandlerinterface, smart unicorn, multi account, auth, admins, handler, this, provide, a, complex, authentication, for, admin, area, admin php task php, using, multi accounts, system, with, sqlite, db, supports, http, basic, bear, swt, optional, built in, token, stk, required, only, init, after, dissalowed, constants, app auth admin init ip address, app auth admin username, app auth admin password, must, be, set, in, config admin php, thereafter, unset, app auth privileges, configuration, configs  app auth    adm namespaces, manager, admin php page auth admins manager stml, language, php, located, at, modules mod auth admins libs smartauthadminshandler php, package, development modules authadmins, namespace, name, version, v, inheritance, chart, →, ↳, interface, methods, public, static, function, authenticate, void, reimplemented, over, extended, to, handle, an, method, return, authlock, lock, the, has, been, called, protected, getclassname">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 <link rel="icon" href="data:,">
 <title>PHP Documentation for: \SmartModExtLib\AuthAdmins\SmartAuthAdminsHandler</title>
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -711,7 +711,7 @@ Required configuration: $configs['app-auth']['adm-namespaces'][ 'Admins Manager'
 		<li><span class="doc-ns"><b>Namespace:</b> \SmartModExtLib\AuthAdmins\</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartAuthAdminsHandler</span></li>
 		
-		<li><b>Version:</b> v.20240119</li>
+		<li><b>Version:</b> v.20260108</li>
 		
 		
 		
@@ -732,11 +732,10 @@ Required configuration: $configs['app-auth']['adm-namespaces'][ 'Admins Manager'
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20200121 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--Authenticate">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>Authenticate</b></span>&nbsp;(
-		<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$enforce_https` Parameter is OPTIONAL, with the Default Value: false">$enforce_https</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
-	
+		
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;VOID
 	<br><span class="doc-reimplemented"><i>reimplemented&nbsp;</i>&nbsp;over&nbsp;<b>\SmartModExtLib\AuthAdmins\AuthHandlerInterface</b></span>
@@ -744,7 +743,22 @@ Required configuration: $configs['app-auth']['adm-namespaces'][ 'Admins Manager'
 	
 			<div class="doc-method-comments">Auth Handler Authenticate<br>
 THIS MUST BE EXTENDED TO HANDLE AN AUTHENTICATION METHOD<br>
-RETURN: VOID ; On FAILED Logins this method should STOP EXECUTION and provide the proper HTTP Status Message: ex: 401, 403, 429, ...</div>
+RETURN: VOID</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--AuthLock">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>AuthLock</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;VOID
+	<br><span class="doc-reimplemented"><i>reimplemented&nbsp;</i>&nbsp;over&nbsp;<b>\SmartModExtLib\AuthAdmins\AuthHandlerInterface</b></span>
+	
+	
+			<div class="doc-method-comments">Auth Handler AuthLock<br>
+THIS MUST BE EXTENDED TO LOCK AUTHENTICATION AFTER THE Authenticate has been called<br>
+RETURN: VOID</div>
 	
 	
 	
@@ -945,7 +959,7 @@ RETURN: BOOL ; if TRUE, the Login is SUCCESS ; Otherwise Login is FAIL</div>
 	<span class="doc-modifiers">final protected static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>isAuth2FAValid</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$auth_user_name` Parameter is REQUIRED">$auth_user_name</span></b></span>, 
 	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span title="`$use_2fa` Parameter is REQUIRED">$use_2fa</span></b></span>, 
-	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$valid_2fa_pin_token` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$valid_2fa_pin_token</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$valid_2fa_pin_token` Parameter is REQUIRED">$valid_2fa_pin_token</span></b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
@@ -980,14 +994,14 @@ RETURN: BOOL ; if TRUE, the Current Visitor IP is VALID ; otherwise is INVALID</
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20200121 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20200121 -->
+<!-- constants r.20250107 -->
 <div class="doc-container" id="Constant--AUTH_2FA_COOKIE_NAME">
 	<span class="doc-modifiers">protected</span> <i>const</i> <b>AUTH_2FA_COOKIE_NAME</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;Sf_2FA&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
 	
@@ -1049,9 +1063,9 @@ RETURN: BOOL ; if TRUE, the Current Visitor IP is VALID ; otherwise is INVALID</
 
 <!-- Summary List -->
 <br>
-<!-- summary r.20210420 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1078,6 +1092,9 @@ function smartHandleDocSelector(obj) {
 		<optgroup label="Class Methods">
 			<option value="Methods--Summary-">Methods list</option>
 						<option value="Method--Authenticate"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;Authenticate()</option>
+			
+			
+						<option value="Method--AuthLock"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;AuthLock()</option>
 			
 			
 						<option value="Method--getClassName"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getClassName()</option>
@@ -1160,7 +1177,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -1174,13 +1191,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:20 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:50 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

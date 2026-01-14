@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
 <meta name="description" content="\SmartPgsqlExtDb final class \ SmartPgsqlExtDb { } -&gt; Class: SmartPgsqlExtDb - provides a Dynamic (Extended) PostgreSQL DB Server Client that can be used">
-<meta name="keywords" content="smartpgsqlextdb, final, class, provides, a, dynamic, extended, postgresql, db, server, client, that, can, be, used, with, custom, made, connections, tested, and, stable, on, versions, x, pgpool ii, pgbouncer, all, this, is, to, other, servers, than, default, language, php, located, at, lib framework plugins lib db pgsql php, package, plugins database postgresql, namespace, name, version, v, depends, extensions, classes, smart, smartenvironment, smartunicode, smartcomponents, optional, constants, smart framework sql charset, hints, have, no, catcheable, exception, because, the, only, errors, will, raise, are, when, returns, an, error, regarding, malformed, sql, statement, which, not, acceptable, just, so, fatal, usage, object, new, class   - method, methods, public, function, construct, array, y configs arr, param, of, configuration, parameters, for">
+<meta name="keywords" content="smartpgsqlextdb, final, class, provides, a, dynamic, extended, postgresql, db, server, client, that, can, be, used, with, custom, made, connections, minimum, supported, version, of, is, tested, and, stable, on, versions, x, pgpool ii, pgbouncer, all, this, to, other, servers, than, default, language, php, located, at, lib framework plugins lib db pgsql php, package, plugins database postgresql, namespace, name, v, depends, extensions, classes, smart, smartenvironment, smartunicode, smartcomponents, optional, constants, smart framework sql charset, hints, have, no, catcheable, exception, because, the, only, errors, will, raise, are, when, returns, an, error, regarding, malformed, sql, statement, which, not, acceptable, just, so, fatal, usage, object, new, class   - method, methods, public, function, construct, array, y configs arr, param, configuration">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 <link rel="icon" href="data:,">
 <title>PHP Documentation for: \SmartPgsqlExtDb</title>
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -697,8 +697,9 @@ select#select-summary {
 </h1>
 <!-- Description -->
 <div class="doc-comments">Class: SmartPgsqlExtDb - provides a Dynamic (Extended) PostgreSQL DB Server Client that can be used with custom made connections.<br>
-Tested and Stable on PostgreSQL versions: 9.0.x / 9.1.x / 9.2.x / 9.3.x / 9.4.x / 9.5.x / 9.6.x / 10.x / 11.x / 12.x / 13.x<br>
-Tested and Stable with PgPool-II versions: 3.0.x / 3.1.x / 3.2.x / 3.3.x / 3.4.x / 3.5.x / 3.6.x / 3.7.x / 4.0.x / 4.1.x<br>
+Minimum supported version of PostgreSQL is: 9.6<br>
+Tested and Stable on PostgreSQL versions:  9.6.x / 10.x / 11.x / 12.x / 13.x / 14.x / 15.x / 16.x / 17.x<br>
+Tested and Stable with PgPool-II versions: 3.2.x / 3.3.x / 3.4.x / 3.5.x / 3.6.x / 3.7.x / 4.0.x / 4.1.x / 4.2.x<br>
 Tested and Stable with PgBouncer: all versions<br>
 This class is made to be used with custom made PostgreSQL connections (other servers than default).</div><br>
 <!-- Metainfo -->
@@ -710,7 +711,7 @@ This class is made to be used with custom made PostgreSQL connections (other ser
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartPgsqlExtDb</span></li>
 		
-		<li><b>Version:</b> v.20231021</li>
+		<li><b>Version:</b> v.20251204</li>
 		<li><b>Depends:</b> extensions:  PHP PostgreSQL ; classes: Smart, SmartEnvironment, SmartUnicode, SmartComponents (optional) ; constants: SMART_FRAMEWORK_SQL_CHARSET</li>
 		<li><b>Hints:</b> This  class have no catcheable exception because the ONLY errors will raise are when the server returns an ERROR regarding a malformed SQL Statement, which is not acceptable to be just exception, so will raise a fatal error !</li>
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -723,7 +724,7 @@ This class is made to be used with custom made PostgreSQL connections (other ser
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20200121 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--__construct">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-special-name"><b>__construct</b></span>&nbsp;(
 		<i>array</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_configs_arr` Parameter is REQUIRED">$y_configs_arr</span></b></span>
@@ -840,7 +841,7 @@ This is the preferred way to escape variables inside PostgreSQL SQL Statements, 
 @param: {STRING} $y_identifier: The Identifier to be Escaped: field / table</div>
 	
 			<div class="doc-method-comments">Escape an identifier to be compliant and Safe (against SQL Injection) with PgSQL standards.<br>
-This function will add the (double) quotes arround the identifiers (fields / table names) as needed.</div>
+This function will add the double quotes arround the identifiers (fields / table names) as needed.</div>
 	
 	
 	
@@ -1095,14 +1096,14 @@ The statement must not contain any Single Quotes to prevent SQL injections which
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20200121 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20200121 -->
+<!-- constants r.20250107 -->
 
 <!-- Sample Code -->
 <br>
@@ -1133,9 +1134,9 @@ The statement must not contain any Single Quotes to prevent SQL injections which
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20210420 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1240,7 +1241,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -1254,13 +1255,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:19 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:50 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

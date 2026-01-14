@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
 <meta name="description" content="\SmartEnvironment final class \ SmartEnvironment { } :: Class: Smart Environment - provides the methods for the Smart.Framework environment. Language: PHP">
-<meta name="keywords" content="smartenvironment, final, class, smart, environment, provides, the, methods, for, smart framework, language, php, located, at, lib framework lib security php, package, core, namespace, name, version, v, depends, optional constants, smart framework debug mode, smart framework internal debug, smart framework env, smart framework admin area, smart framework runtime mode, hints, it, is, recommended, to, use, in, this, instead, of, native, whenever, possible, because, will, offer, long, term, support, and, be, supported, even, if, behind, can, change, over, time, so, code, would, easier, maintain, usage, static, object, class method, only, public, function, isatkenabled, bool, return, true, enabled, false, not, returns, atk, auth, tokens, are, test, current, area, is2faenabled, 2fa, getarea, string, idx, index, adm, admin, tsk, task, isadminarea, boolean, else">
+<meta name="keywords" content="smartenvironment, final, class, smart, environment, provides, the, methods, for, smart framework, language, php, located, at, lib framework lib security php, package, core, namespace, name, version, v, depends, optional constants, smart framework debug mode, smart framework internal debug, smart framework env, smart framework admin area, smart framework runtime mode, hints, it, is, recommended, to, use, in, this, instead, of, native, whenever, possible, because, will, offer, long, term, support, and, be, supported, even, if, behind, can, change, over, time, so, code, would, easier, maintain, usage, static, object, class method, only, public, function, isatkenabled, bool, return, true, enabled, false, not, returns, atk, auth, tokens, are, test, current, area, is2faenabled, 2fa, is2farequired, required, getarea, string, idx, index, adm, admin, tsk, task, isadminarea">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 <link rel="icon" href="data:,">
 <title>PHP Documentation for: \SmartEnvironment</title>
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -706,7 +706,7 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartEnvironment</span></li>
 		
-		<li><b>Version:</b> v.20240118</li>
+		<li><b>Version:</b> v.20250107</li>
 		<li><b>Depends:</b> optional-constants:  SMART_FRAMEWORK_DEBUG_MODE, SMART_FRAMEWORK_INTERNAL_DEBUG, SMART_FRAMEWORK_ENV, SMART_FRAMEWORK_ADMIN_AREA, SMART_FRAMEWORK_RUNTIME_MODE</li>
 		<li><b>Hints:</b> It  is recommended to use the methods in this class instead of PHP native methods whenever is possible because this class will offer Long Term Support and the methods will be supported even if the behind PHP methods can change over time, so the code would be easier to maintain.</li>
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -719,7 +719,7 @@ select#select-summary {
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20200121 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--isATKEnabled">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>isATKEnabled</b></span>&nbsp;(
 		
@@ -745,6 +745,21 @@ Will test for the current area only</div>
 			<div class="doc-method-ret-params">@return: {BOOL} TRUE if enabled ; FALSE if not</div>
 	
 			<div class="doc-method-comments">Returns TRUE if 2FA is Enabled<br>
+Will test for the current area only</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--is2FARequired">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>is2FARequired</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOL} TRUE if required ; FALSE if not</div>
+	
+			<div class="doc-method-comments">Returns TRUE if 2FA is Required<br>
 Will test for the current area only</div>
 	
 	
@@ -838,7 +853,7 @@ Ex: if(myIPIsDetected()) { define('SMART_FRAMEWORK_DEBUG_MODE', true); } // in i
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20200121 -->
+<!-- properties r.20250107 -->
 <!-- Skip Internal-Priv Property: `$Connections` -->
 
 <!-- Constants -->
@@ -846,7 +861,7 @@ Ex: if(myIPIsDetected()) { define('SMART_FRAMEWORK_DEBUG_MODE', true); } // in i
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20200121 -->
+<!-- constants r.20250107 -->
 
 <!-- Sample Code -->
 <br>
@@ -864,9 +879,9 @@ Ex: if(myIPIsDetected()) { define('SMART_FRAMEWORK_DEBUG_MODE', true); } // in i
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20210420 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -896,6 +911,9 @@ function smartHandleDocSelector(obj) {
 			
 			
 						<option value="Method--is2FAEnabled"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;is2FAEnabled()</option>
+			
+			
+						<option value="Method--is2FARequired"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;is2FARequired()</option>
 			
 			
 						<option value="Method--getArea"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getArea()</option>
@@ -938,7 +956,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -952,13 +970,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:18 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:49 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -703,7 +703,7 @@ Date Utils class for Javascript</div><br>
 		<li><span class="doc-package"><b>Package:</b> Sf.Javascript:Core</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> smartJ$Date</span></li>
 		<li><span class="doc-frozen"><b>Frozen:</b> Yes</span></li>
-		<li><span class="doc-version"><b>Version:</b> 20220907</span></li>
+		<li><span class="doc-version"><b>Version:</b> 20251216</span></li>
 		<li><b>Usage:</b> smartJ$Date.method();</li>
 		
 		
@@ -717,7 +717,7 @@ Date Utils class for Javascript</div><br>
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20210414 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--createSafeDate">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>createSafeDate</b></span>&nbsp;=&nbsp;(
 	<i>{Integer}</i>&nbsp;<span class="doc-param-name"><b><span title="`year` Parameter">year</span></b></span>, 
@@ -1005,23 +1005,25 @@ new Date(2037, 12 - 1, 31) 	:: a date in the future as object ;<br>
 	
 	
 </div>
-<div class="doc-container" id="Method--prettySecondsToDHMS">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>prettySecondsToDHMS</b></span>&nbsp;(
-	<i>{Integer}</i>&nbsp;<span class="doc-param-name"><b><span title="`numSec` Parameter">numSec</span></b></span>
+<div class="doc-container" id="Method--prettySecondsHFmt">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>prettySecondsHFmt</b></span>&nbsp;(
+	<i>{Integer}</i>&nbsp;<span class="doc-param-name"><b><span title="`numSec` Parameter">numSec</span></b></span>, 
+	<i>{Bool}</i>&nbsp;<span class="doc-param-name"><b><span title="`rounded` Parameter">rounded</span></b></span>
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
 	<div class="doc-method-ret-params">
 	
 	
-			@return: {String} The pretty formated time as: '4 Days, 16 Hours, 28 Minutes, 7 Seconds'<br>
+			@return: {String} The pretty formated time as: '4d 16h 28m 7s'<br>
 	
 	
 	
 	@param: {Integer} numSec The number of seconds to convert<br>
+	@param: {Bool} rounded If set to TRUE will show only the first significant value<br>
 	
 	
 	</div>
-			<div class="doc-method-comments">Convert the number of seconds (unixtime) into Pretty Format: Days, Hours, Minutes, Seconds</div>
+			<div class="doc-method-comments">Convert the number of seconds (unixtime) into Human Readable, Pretty Format: Years, Days, Hours, Minutes, Seconds</div>
 	
 	
 </div>
@@ -1031,14 +1033,14 @@ new Date(2037, 12 - 1, 31) 	:: a date in the future as object ;<br>
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20210417 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20210417 -->
+<!-- constants r.20250107 -->
 
 <!-- Sample Code -->
 <br>
@@ -1096,9 +1098,9 @@ new Date(2037, 12 - 1, 31) 	:: a date in the future as object ;<br>
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20210414 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1148,7 +1150,7 @@ function smartHandleDocSelector(obj) {
 			
 						<option value="Method--determineDate"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;determineDate()</option>
 			
-						<option value="Method--prettySecondsToDHMS"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;prettySecondsToDHMS()</option>
+						<option value="Method--prettySecondsHFmt"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;prettySecondsHFmt()</option>
 			
 			
 		</optgroup>
@@ -1166,7 +1168,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -1180,13 +1182,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:26 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:53:25 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

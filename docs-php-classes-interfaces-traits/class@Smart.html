@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -706,7 +706,7 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> Smart</span></li>
 		
-		<li><b>Version:</b> v.20241123</li>
+		<li><b>Version:</b> v.20260113</li>
 		<li><b>Depends:</b> extensions:  PHP JSON ; classes: SmartUnicode, SmartFrameworkSecurity, SmartEnvironment ; constants: SMART_FRAMEWORK_CHARSET ; optional-constants: SMART_FRAMEWORK_SECURITY_KEY, SMART_SOFTWARE_NAMESPACE, SMART_FRAMEWORK_NETSERVER_ID, SMART_FRAMEWORK_INFO_LOG</li>
 		<li><b>Hints:</b> It  is recommended to use the methods in this class instead of PHP native methods whenever is possible because this class will offer Long Term Support and the methods will be supported even if the behind PHP methods can change over time, so the code would be easier to maintain.</li>
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -719,7 +719,7 @@ select#select-summary {
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20200121 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--is_nscalar">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>is_nscalar</b></span>&nbsp;(
 		<i>MIXED</i>&nbsp;<span class="doc-param-name"><b><span title="`$val` Parameter is REQUIRED">$val</span></b></span>
@@ -852,6 +852,60 @@ The directory separator character is the forward slash (/), except Windows where
 @param: {STRING} $y_path: The path to process as pathinfo()</div>
 	
 			<div class="doc-method-comments">Return the FIXED pathinfo(), also with fix on Windows</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--str_contains">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>str_contains</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$part` Parameter is REQUIRED">$part</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} Returns TRUE if contains part or FALSE if not<br>
+@param: {STRING} $str: The string to check<br>
+@param: {STRING} $part: The sub-string to search for in the string</div>
+	
+			<div class="doc-method-comments">Binary Safe 					:: Check if a string contains another, Case Sensitive</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--str_startswith">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>str_startswith</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$part` Parameter is REQUIRED">$part</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} Returns TRUE if starts with or FALSE if not<br>
+@param: {STRING} $str: The string to check<br>
+@param: {STRING} $part: The sub-string to search for in the string</div>
+	
+			<div class="doc-method-comments">Binary Safe 					:: Check if a string starts with another, Case Sensitive</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--str_endswith">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>str_endswith</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$part` Parameter is REQUIRED">$part</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} Returns TRUE if ends with or FALSE if not<br>
+@param: {STRING} $str: The string to check<br>
+@param: {STRING} $part: The sub-string to search for in the string</div>
+	
+			<div class="doc-method-comments">Binary Safe 					:: Check if a string ends with another, Case Sensitive</div>
 	
 	
 	
@@ -1062,14 +1116,16 @@ This is a shortcut to the htmlspecialchars() for HTML mode, to avoid use long op
 </div>
 <div class="doc-container" id="Method--escape_xml">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>escape_xml</b></span>&nbsp;(
-		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_string` Parameter is REQUIRED">$y_string</span></b></span>
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_string` Parameter is REQUIRED">$y_string</span></b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_extra_escapings` Parameter is OPTIONAL, with the Default Value: true">$y_extra_escapings</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
 	
 	
 			<div class="doc-method-ret-params">@return: {STRING} The escaped string using htmlspecialchars() XML standards with Unicode-Safe control<br>
-@param: {STRING} $y_string: The string to be escaped</div>
+@param: {STRING} $y_string: The string to be escaped<br>
+@param: {BOOL} $y_extra_escapings: If set to TRUE will replace special characters such as TAB, LF and CR with the corresponding entities</div>
 	
 			<div class="doc-method-comments">Safe escape strings to be injected in XML code<br>
 This is a shortcut to the htmlspecialchars() for XML mode, to avoid use long options each time and provide a standard into Smart.Framework</div>
@@ -1085,7 +1141,7 @@ This is a shortcut to the htmlspecialchars() for XML mode, to avoid use long opt
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
 	
 	
-			<div class="doc-method-ret-params">@return: {STRING} The escaped string using the WD-CSS21-20060411 standard<br>
+			<div class="doc-method-ret-params">@return: {STRING} The escaped string compatible with Twig standard<br>
 @param: {STRING} $y_string: The string to be escaped</div>
 	
 			<div class="doc-method-comments">Safe escape strings to be injected in CSS code</div>
@@ -1095,16 +1151,18 @@ This is a shortcut to the htmlspecialchars() for XML mode, to avoid use long opt
 </div>
 <div class="doc-container" id="Method--escape_js">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>escape_js</b></span>&nbsp;(
-		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$ldjs` Parameter is OPTIONAL, with the Default Value: false">$ldjs</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
 	
 	
 			<div class="doc-method-ret-params">@return: {STRING} The escaped string using a json_encode() standard to be injected between single quotes '' or double quotes &quot;&quot;<br>
-@param: {STRING} $str: The string to be escaped</div>
+@param: {STRING} $str: The string to be escaped<br>
+@param: {BOOL} $ldjs: Default is FALSE ; If set to TRUE will escape for compatibility with ld+json</div>
 	
-			<div class="doc-method-comments">Safe escape strings to be injected in Javascript code as strings</div>
+			<div class="doc-method-comments">Safe escape strings to be injected in Javascript or LD+JSON code as strings</div>
 	
 	
 	
@@ -1219,6 +1277,40 @@ On 64-bit platforms the INTEGER is between -9223372036854775808 		to		9223372036
 Thus decimal numbers must be between -999999999999.9900 and 999999999999.9900<br>
 All numbers over this must use special operators from BCMath to avoid floating point precision issues<br>
 This is more intended for decimal numbers like financial operations where the significant decimal digits are important</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--floor_number">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>floor_number</b></span>&nbsp;(
+		<i>NUMERIC</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_number` Parameter is REQUIRED">$y_number</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_signed` Parameter is OPTIONAL, with the Default Value: null">$y_signed</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>null</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;INT
+	
+	
+			<div class="doc-method-ret-params">@return: {INT} An integer number<br>
+@param: {NUMERIC} $y_number: A numeric value</div>
+	
+			<div class="doc-method-comments">Safe Floor a number as FLOAT</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--ceil_number">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>ceil_number</b></span>&nbsp;(
+		<i>NUMERIC</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_number` Parameter is REQUIRED">$y_number</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_signed` Parameter is OPTIONAL, with the Default Value: null">$y_signed</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>null</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;INT
+	
+	
+			<div class="doc-method-ret-params">@return: {INT} An integer number<br>
+@param: {NUMERIC} $y_number: A numeric value</div>
+	
+			<div class="doc-method-comments">Safe Ceil a number as FLOAT</div>
 	
 	
 	
@@ -1418,10 +1510,10 @@ This is a better replacement for the PHP's number_format() which throws a warnin
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;INT
 	
 	
-			<div class="doc-method-ret-params">@return: {INT/ENUM} The array type as: 0 = not an array ; 1 = non-associative (sequential) array or empty array ; 2 = associative array or non-sequential, must be non-empty<br>
-@param: {ARRAY} $y_arr: The array to test</div>
+			<div class="doc-method-ret-params">@return: {INT/ENUM} Will return the type: 0 = not an array ; 1 = non-associative array (list, sequential array or empty array) ; 2 = associative array (map, non-sequential key/val)<br>
+@param: {ARRAY} $y_arr: The variable to test</div>
 	
-			<div class="doc-method-comments">Test if the Array Type for being associative or non-associative sequential (0..n)</div>
+			<div class="doc-method-comments">Test if the Array Type for a given variable</div>
 	
 	
 	
@@ -1458,6 +1550,40 @@ This is a better replacement for the PHP's number_format() which throws a warnin
 @param: {ARRAY} $array2</div>
 	
 			<div class="doc-method-comments">Array recursive Diff (One Way Only, from Left to Right)</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--array_to_list">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>array_to_list</b></span>&nbsp;(
+		<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_arr` Parameter is REQUIRED">$y_arr</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} The List String: '&lt;elem1&gt;, &lt;elem2&gt;, ..., &lt;elemN&gt;'<br>
+@param: {ARRAY} $y_arr: The Array to be converted: Array(elem1, elem2, ..., elemN)</div>
+	
+			<div class="doc-method-comments">Convert an Array to a List String</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--list_to_array">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>list_to_array</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_list` Parameter is REQUIRED">$y_list</span></b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_trim` Parameter is OPTIONAL, with the Default Value: true">$y_trim</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
+	
+	
+			<div class="doc-method-ret-params">@return: {ARRAY} The Array: Array(elem1, elem2, ..., elemN)<br>
+@param: {STRING} $y_list: The List String to be converted: '&lt;elem1&gt;, &lt;elem2&gt;, ..., &lt;elemN&gt;'<br>
+@param: {BOOLEAN} $y_trim: *Optional* default is TRUE ; If set to FALSE will not trim the values in the list, in some cases preserve spaces is required</div>
+	
+			<div class="doc-method-comments">Convert a List String to Array</div>
 	
 	
 	
@@ -1661,6 +1787,22 @@ ALLOWED CHARS: [a-zA-Z0-9] _</div>
 	
 	
 </div>
+<div class="doc-container" id="Method--create_idtxt">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>create_idtxt</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_str` Parameter is REQUIRED">$y_str</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} Example: `id_one` will be converted to `Id-One`<br>
+@param: {STRING} $y_str: The string to be processed</div>
+	
+			<div class="doc-method-comments">Creates a Nice Text from an ID</div>
+	
+	
+	
+</div>
 <div class="doc-container" id="Method--create_slug">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>create_slug</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_str` Parameter is REQUIRED">$y_str</span></b></span>, 
@@ -1750,6 +1892,124 @@ The min is zero. The max is limited to 2147483647 on most of the platforms.</div
 	
 	
 </div>
+<div class="doc-container" id="Method--b64_to_b64s">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>b64_to_b64s</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$pad` Parameter is OPTIONAL, with the Default Value: true">$pad</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} The Base64s or Base64u (if no padding) encoded string<br>
+@param: {STRING} $str: The Base64 string to be converted<br>
+@param: {BOOL} $pad: Use padding ; Default is TRUE ; if set to FALSE will not use padding (`=`:`` instead of `=`:`.`)</div>
+	
+			<div class="doc-method-comments">Converts from Base64 to Base64s / Base64u (Base64 Safe URL / Base64 URL) by replacing characters as follows:<br>
+'+' with '-',<br>
+'/' with '_',<br>
+'=' with '.' (if padding) or '' (if no padding)</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--b64s_to_b64">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>b64s_to_b64</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} The Base64 string<br>
+@param: {STRING} $str: The Base64s or Base64u (if no padding) string to be converted</div>
+	
+			<div class="doc-method-comments">Converts from Base64s / Base64u (Base64 Safe URL / Base64 URL) to Base64 by replacing characters as follows:<br>
+'-' with '+',<br>
+'_' with '/',<br>
+'.' with '=' (optional, if padded, otherwise ignore)</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--b64s_enc">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>b64s_enc</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$pad` Parameter is OPTIONAL, with the Default Value: true">$pad</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} The Base64s or Base64u (if no padding) encoded string<br>
+@param: {STRING} $str: The string to be encoded<br>
+@param: {BOOL} $pad: Use padding ; Default is TRUE ; if set to FALSE will not use padding (`=`:`` instead of `=`:`.`)</div>
+	
+			<div class="doc-method-comments">Returns the Base64s / Base64u (Base64 Safe URL / Base64 URL) Modified Encoding from a string by replacing the standard base64 encoding as follows:<br>
+'+' with '-',<br>
+'/' with '_',<br>
+'=' with '.' (if padding) or '' (if no padding)</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--b64s_dec">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>b64s_dec</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$strict` Parameter is OPTIONAL, with the Default Value: false">$strict</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} The decoded string<br>
+@param: {STRING} $str: The Base64s or Base64u (if no padding) encoded string<br>
+@param: {BOOL} $strict: Strict mode: default is FALSE ; set to TRUE for strict decoding (may return null for invalid characters) ; FALSE means non-strict (if the input contains character from outside the base64 alphabet will be silently discarded)</div>
+	
+			<div class="doc-method-comments">Returns the Decoded string from Base64s / Base64u (Base64 Safe URL / Base64 URL) Encoding by replacing back as follows before applying the standard base64 decoding:<br>
+'-' with '+',<br>
+'_' with '/',<br>
+'.' with '=' (optional, if padded, otherwise ignore)</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--b64_dec">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>b64_dec</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$strict` Parameter is OPTIONAL, with the Default Value: false">$strict</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;?STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} | NULL 				:: The decoded string ; if base64_decode() will return FALSE, it will return NULL, otherwise will return STRING<br>
+@param: {STRING} $str: The Base64 encoded string<br>
+@param: {BOOL} $strict: Strict mode: default is FALSE ; set to TRUE for strict decoding (may return null for invalid characters) ; FALSE means non-strict (if the input contains character from outside the base64 alphabet will be silently discarded)</div>
+	
+			<div class="doc-method-comments">Returns the Safet Decoded string from Base64 ; Will Fix the missing padding</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--b64_enc">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>b64_enc</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} The Base64s or Base64u (if no padding) encoded string<br>
+@param: {STRING} $str: The string to be encoded</div>
+	
+			<div class="doc-method-comments">Returns the Base64 Encoded from a string</div>
+	
+	
+	
+</div>
+<!-- Skip Internal-Priv Method: `dataRot13()` -->
+<!-- Skip Internal-Priv Method: `dataRRot13()` -->
 <div class="doc-container" id="Method--safe_hex_2_bin">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>safe_hex_2_bin</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$hexstr` Parameter is REQUIRED">$hexstr</span></b></span>, 
@@ -2132,120 +2392,6 @@ Intended usage: Large scale. Standard.</div>
 	
 	
 </div>
-<div class="doc-container" id="Method--array_to_list">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>array_to_list</b></span>&nbsp;(
-		<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_arr` Parameter is REQUIRED">$y_arr</span></b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
-	
-	
-			<div class="doc-method-ret-params">@return: {STRING} The List String: '&lt;elem1&gt;, &lt;elem2&gt;, ..., &lt;elemN&gt;'<br>
-@param: {ARRAY} $y_arr: The Array to be converted: Array(elem1, elem2, ..., elemN)</div>
-	
-			<div class="doc-method-comments">Convert an Array to a List String</div>
-	
-	
-	
-</div>
-<div class="doc-container" id="Method--list_to_array">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>list_to_array</b></span>&nbsp;(
-		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_list` Parameter is REQUIRED">$y_list</span></b></span>, 
-	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_trim` Parameter is OPTIONAL, with the Default Value: true">$y_trim</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
-	
-	
-			<div class="doc-method-ret-params">@return: {ARRAY} The Array: Array(elem1, elem2, ..., elemN)<br>
-@param: {STRING} $y_list: The List String to be converted: '&lt;elem1&gt;, &lt;elem2&gt;, ..., &lt;elemN&gt;'<br>
-@param: {BOOLEAN} $y_trim: *Optional* default is TRUE ; If set to FALSE will not trim the values in the list</div>
-	
-			<div class="doc-method-comments">Convert a List String to Array</div>
-	
-	
-	
-</div>
-<div class="doc-container" id="Method--b64_to_b64s">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>b64_to_b64s</b></span>&nbsp;(
-		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>, 
-	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$pad` Parameter is OPTIONAL, with the Default Value: true">$pad</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
-	
-	
-			<div class="doc-method-ret-params">@return: {STRING} The Base64s or Base64u (if no padding) encoded string<br>
-@param: {STRING} $str: The Base64 string to be converted<br>
-@param: {BOOL} $pad: Use padding ; Default is TRUE ; if set to FALSE will not use padding (`=`:`` instead of `=`:`.`)</div>
-	
-			<div class="doc-method-comments">Converts from Base64 to Base64s / Base64u (Base64 Safe URL / Base64 URL) by replacing characters as follows:<br>
-'+' with '-',<br>
-'/' with '_',<br>
-'=' with '.' (if padding) or '' (if no padding)</div>
-	
-	
-	
-</div>
-<div class="doc-container" id="Method--b64s_to_b64">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>b64s_to_b64</b></span>&nbsp;(
-		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
-	
-	
-			<div class="doc-method-ret-params">@return: {STRING} The Base64 string<br>
-@param: {STRING} $str: The Base64s or Base64u (if no padding) string to be converted</div>
-	
-			<div class="doc-method-comments">Converts from Base64s / Base64u (Base64 Safe URL / Base64 URL) to Base64 by replacing characters as follows:<br>
-'-' with '+',<br>
-'_' with '/',<br>
-'.' with '=' (optional, if padded, otherwise ignore)</div>
-	
-	
-	
-</div>
-<div class="doc-container" id="Method--b64s_enc">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>b64s_enc</b></span>&nbsp;(
-		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>, 
-	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$pad` Parameter is OPTIONAL, with the Default Value: true">$pad</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
-	
-	
-			<div class="doc-method-ret-params">@return: {STRING} The Base64s or Base64u (if no padding) encoded string<br>
-@param: {STRING} $str: The string to be encoded<br>
-@param: {BOOL} $pad: Use padding ; Default is TRUE ; if set to FALSE will not use padding (`=`:`` instead of `=`:`.`)</div>
-	
-			<div class="doc-method-comments">Returns the Base64s / Base64u (Base64 Safe URL / Base64 URL) Modified Encoding from a string by replacing the standard base64 encoding as follows:<br>
-'+' with '-',<br>
-'/' with '_',<br>
-'=' with '.' (if padding) or '' (if no padding)</div>
-	
-	
-	
-</div>
-<div class="doc-container" id="Method--b64s_dec">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>b64s_dec</b></span>&nbsp;(
-		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
-	
-	
-			<div class="doc-method-ret-params">@return: {STRING} The decoded string<br>
-@param: {STRING} $str: The Base64s or Base64u (if no padding) encoded string</div>
-	
-			<div class="doc-method-comments">Returns the Decoded string from Base64s / Base64u (Base64 Safe URL / Base64 URL) Encoding by replacing back as follows before applying the standard base64 decoding:<br>
-'-' with '+',<br>
-'_' with '/',<br>
-'.' with '=' (optional, if padded, otherwise ignore)</div>
-	
-	
-	
-</div>
 <!-- Skip Internal-Priv Method: `ip_domain_to_ip_addr()` -->
 <div class="doc-container" id="Method--ip_addr_compress">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>ip_addr_compress</b></span>&nbsp;(
@@ -2401,8 +2547,6 @@ This will log the message as ERROR into the App Error Log and stop the execution
 <!-- Skip Internal-Priv Method: `commentOutPhpCode()` -->
 <!-- Skip Internal-Priv Method: `lower_unsafe_characters()` -->
 <!-- Skip Internal-Priv Method: `getClassNameWithoutNamespacePrefix()` -->
-<!-- Skip Internal-Priv Method: `dataRot13()` -->
-<!-- Skip Internal-Priv Method: `dataRRot13()` -->
 <!-- Skip Internal-Priv Method: `registerInternalCacheToDebugLog()` -->
 
 <!-- Properties -->
@@ -2410,14 +2554,26 @@ This will log the message as ERROR into the App Error Log and stop the execution
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20200121 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20200121 -->
+<!-- constants r.20250107 -->
+<div class="doc-container" id="Constant--REGEX_ASCII_NOSPACE_CHARACTERS">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>REGEX_ASCII_NOSPACE_CHARACTERS</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;/^[[:graph:]]+$/&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--REGEX_ASCII_ANDSPACE_CHARACTERS">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>REGEX_ASCII_ANDSPACE_CHARACTERS</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;/^[[:graph:] \\t\\r\\n]+$/&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--REGEX_ASCII_PRINTABLE_CHARACTERS">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>REGEX_ASCII_PRINTABLE_CHARACTERS</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;/^[[:print:]]+$/&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
 <div class="doc-container" id="Constant--REGEX_SAFE_PATH_NAME">
 	<span class="doc-modifiers">public</span> <i>const</i> <b>REGEX_SAFE_PATH_NAME</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;/^[_a-zA-Z0-9\\-\\.@\\#\\/]+$/&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
 	
@@ -2448,6 +2604,10 @@ This will log the message as ERROR into the App Error Log and stop the execution
 </div>
 <div class="doc-container" id="Constant--REGEX_SAFE_B64S_STR">
 	<span class="doc-modifiers">public</span> <i>const</i> <b>REGEX_SAFE_B64S_STR</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;/^[a-zA-Z0-9\\-_\\.]+$/&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--REGEX_SAFE_B64U_STR">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>REGEX_SAFE_B64U_STR</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;/^[a-zA-Z0-9\\-_]+$/&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
 	
 </div>
 <div class="doc-container" id="Constant--DECIMAL_NUM_PRECISION">
@@ -2494,6 +2654,10 @@ This will log the message as ERROR into the App Error Log and stop the execution
 	<span class="doc-modifiers">public</span> <i>const</i> <b>UNDEF_VAR_NAME</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;Undef____V_a_r&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
 	
 </div>
+<div class="doc-container" id="Constant--SIZE_BYTES_16M">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>SIZE_BYTES_16M</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>16777216</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
 
 <!-- Sample Code -->
 <br>
@@ -2511,9 +2675,9 @@ This will log the message as ERROR into the App Error Log and stop the execution
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20210420 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -2561,6 +2725,15 @@ function smartHandleDocSelector(obj) {
 			
 			
 						<option value="Method--path_info"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;path_info()</option>
+			
+			
+						<option value="Method--str_contains"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;str_contains()</option>
+			
+			
+						<option value="Method--str_startswith"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;str_startswith()</option>
+			
+			
+						<option value="Method--str_endswith"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;str_endswith()</option>
 			
 			
 						<option value="Method--str_replace_first"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;str_replace_first()</option>
@@ -2623,6 +2796,12 @@ function smartHandleDocSelector(obj) {
 						<option value="Method--check_dec_number_overflow"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;check_dec_number_overflow()</option>
 			
 			
+						<option value="Method--floor_number"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;floor_number()</option>
+			
+			
+						<option value="Method--ceil_number"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;ceil_number()</option>
+			
+			
 						<option value="Method--format_number_float"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;format_number_float()</option>
 			
 			
@@ -2662,6 +2841,12 @@ function smartHandleDocSelector(obj) {
 						<option value="Method--array_diff_assoc_oneway_recursive"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;array_diff_assoc_oneway_recursive()</option>
 			
 			
+						<option value="Method--array_to_list"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;array_to_list()</option>
+			
+			
+						<option value="Method--list_to_array"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;list_to_array()</option>
+			
+			
 						<option value="Method--text_cut_by_limit"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;text_cut_by_limit()</option>
 			
 			
@@ -2694,6 +2879,9 @@ function smartHandleDocSelector(obj) {
 						<option value="Method--safe_varname"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;safe_varname()</option>
 			
 			
+						<option value="Method--create_idtxt"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;create_idtxt()</option>
+			
+			
 						<option value="Method--create_slug"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;create_slug()</option>
 			
 			
@@ -2707,6 +2895,28 @@ function smartHandleDocSelector(obj) {
 			
 			
 						<option value="Method--random_number"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;random_number()</option>
+			
+			
+						<option value="Method--b64_to_b64s"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;b64_to_b64s()</option>
+			
+			
+						<option value="Method--b64s_to_b64"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;b64s_to_b64()</option>
+			
+			
+						<option value="Method--b64s_enc"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;b64s_enc()</option>
+			
+			
+						<option value="Method--b64s_dec"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;b64s_dec()</option>
+			
+			
+						<option value="Method--b64_dec"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;b64_dec()</option>
+			
+			
+						<option value="Method--b64_enc"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;b64_enc()</option>
+			
+			
+			
+			
 			
 			
 						<option value="Method--safe_hex_2_bin"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;safe_hex_2_bin()</option>
@@ -2769,24 +2979,6 @@ function smartHandleDocSelector(obj) {
 						<option value="Method--uuid_45"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;uuid_45()</option>
 			
 			
-						<option value="Method--array_to_list"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;array_to_list()</option>
-			
-			
-						<option value="Method--list_to_array"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;list_to_array()</option>
-			
-			
-						<option value="Method--b64_to_b64s"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;b64_to_b64s()</option>
-			
-			
-						<option value="Method--b64s_to_b64"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;b64s_to_b64()</option>
-			
-			
-						<option value="Method--b64s_enc"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;b64s_enc()</option>
-			
-			
-						<option value="Method--b64s_dec"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;b64s_dec()</option>
-			
-			
 			
 			
 						<option value="Method--ip_addr_compress"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;ip_addr_compress()</option>
@@ -2826,10 +3018,6 @@ function smartHandleDocSelector(obj) {
 			
 			
 			
-			
-			
-			
-			
 		</optgroup>
 		<optgroup label="Class Properties">
 			<option value="Properties--Summary-">Properties list</option>
@@ -2837,6 +3025,12 @@ function smartHandleDocSelector(obj) {
 		</optgroup>
 		<optgroup label="Class Constants">
 			<option value="Constants--Summary-">Constants list</option>
+						<option value="Constant--REGEX_ASCII_NOSPACE_CHARACTERS">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;REGEX_ASCII_NOSPACE_CHARACTERS</option>
+			
+						<option value="Constant--REGEX_ASCII_ANDSPACE_CHARACTERS">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;REGEX_ASCII_ANDSPACE_CHARACTERS</option>
+			
+						<option value="Constant--REGEX_ASCII_PRINTABLE_CHARACTERS">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;REGEX_ASCII_PRINTABLE_CHARACTERS</option>
+			
 						<option value="Constant--REGEX_SAFE_PATH_NAME">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;REGEX_SAFE_PATH_NAME</option>
 			
 						<option value="Constant--REGEX_SAFE_FILE_NAME">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;REGEX_SAFE_FILE_NAME</option>
@@ -2852,6 +3046,8 @@ function smartHandleDocSelector(obj) {
 						<option value="Constant--REGEX_SAFE_B64_STR">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;REGEX_SAFE_B64_STR</option>
 			
 						<option value="Constant--REGEX_SAFE_B64S_STR">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;REGEX_SAFE_B64S_STR</option>
+			
+						<option value="Constant--REGEX_SAFE_B64U_STR">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;REGEX_SAFE_B64U_STR</option>
 			
 						<option value="Constant--DECIMAL_NUM_PRECISION">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;DECIMAL_NUM_PRECISION</option>
 			
@@ -2875,6 +3071,8 @@ function smartHandleDocSelector(obj) {
 			
 						<option value="Constant--UNDEF_VAR_NAME">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;UNDEF_VAR_NAME</option>
 			
+						<option value="Constant--SIZE_BYTES_16M">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;SIZE_BYTES_16M</option>
+			
 			
 		</optgroup>
 				<optgroup label="Class Sample usage">
@@ -2883,7 +3081,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -2897,13 +3095,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:18 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:49 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

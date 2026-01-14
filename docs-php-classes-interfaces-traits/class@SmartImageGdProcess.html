@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -710,7 +710,7 @@ For Apply an image watermark over an image use: -&gt;applyWatermark()</div><br>
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartImageGdProcess</span></li>
 		
-		<li><b>Version:</b> v.20221223</li>
+		<li><b>Version:</b> v.20251215</li>
 		<li><b>Depends:</b> PHP  GD extension with support for: imagecreatetruecolor / imagecreatefromstring / getimagesizefromstring ; classes: Smart, SmartFileSysUtils</li>
 		
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -723,7 +723,7 @@ For Apply an image watermark over an image use: -&gt;applyWatermark()</div><br>
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20200121 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--__construct">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-special-name"><b>__construct</b></span>&nbsp;(
 		<span class="doc-param-name"><b><span title="`$imgdata` Parameter is REQUIRED">$imgdata</span></b></span>, 
@@ -854,7 +854,8 @@ Possible errors when detecting an image type:<br>
 		<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$type` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$type</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
 	<i>INTEGER+</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$quality` Parameter is OPTIONAL, with the Default Value: 100">$quality</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>100</b></span>, 
 	<i>INTEGER+</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$compression` Parameter is OPTIONAL, with the Default Value: 6">$compression</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>6</b></span>, 
-	<i>MIXED</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$filters` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$filters</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+	<i>INTEGER</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$filters` Parameter is OPTIONAL, with the Default Value: 0">$filters</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>0</b></span>, 
+	<i>BOOLEAN</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$preserveTransparency` Parameter is OPTIONAL, with the Default Value: false">$preserveTransparency</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;STRING
@@ -864,7 +865,8 @@ Possible errors when detecting an image type:<br>
 @param: {ENUM} $type: *Optional* '' | 'gif' | 'png' | 'jpg' | 'webp' ; if '' will return the exact type as the input image<br>
 @param: {INTEGER+} $quality: *Optional* 1..100 ; Default is 100 ; The quality of the image ; currently applies just for JPG and WEBP<br>
 @param: {INTEGER+} $compression: *Optonal* 0..9 ; Default is 6 ; The image compression level (zlib) ; currently applies just for PNG<br>
-@param: {MIXED} $filters: *Optional* ; Default is '' = no filters ; false = PNG_NO_FILTER ; true = PNG_ALL_FILTERS ; array(PNG_FILTER_SUB, PNG_FILTER_UP, PNG_FILTER_AVG, PNG_FILTER_PAETH, PNG_FILTER_NONE) = array with filters ; currently applies just for PNG (using array of filters depends on what filters are available in LibPNG)</div>
+@param: {INTEGER} $filters: *Optional* ; Default is 0 = no filters ; -2 = PNG_NO_FILTER ; -1 = PNG_ALL_FILTERS ; or: PNG_FILTER_SUB | PNG_FILTER_UP | PNG_FILTER_AVG | PNG_FILTER_PAETH | PNG_FILTER_NONE as filters ; currently applies just for PNG (using array of filters depends on what filters are available in LibPNG)<br>
+@param: {BOOLEAN} $preserveTransparency: *Optional* ; Default is FALSE ; apply just for GIF / PNG ; if set to TRUE will preserve transparency</div>
 	
 			<div class="doc-method-comments">Get GD image data as: GIF / PNG / JPG / WEBP</div>
 	
@@ -924,7 +926,7 @@ Possible errors when detecting an image type:<br>
 		<i>STRING</i>&nbsp;<span class="doc-param-name"><b><span title="`$text` Parameter is REQUIRED">$text</span></b></span>, 
 	<i>INTEGER</i>&nbsp;<span class="doc-param-name"><b><span title="`$angle` Parameter is REQUIRED">$angle</span></b></span>, 
 	<i>INTEGER</i>&nbsp;<span class="doc-param-name"><b><span title="`$size` Parameter is REQUIRED">$size</span></b></span>, 
-	<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$font` Parameter is OPTIONAL, with the Default Value: &quot;lib/core/plugins/fonts/typo/sans/ibm-plex-sans-regular.ttf&quot;">$font</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;lib/core/plugins/fonts/typo/sans/ibm-plex-sans-regular.ttf&quot;</b></span>
+	<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$font` Parameter is OPTIONAL, with the Default Value: self::FONT">$font</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>self::FONT</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;ARRAY
@@ -935,7 +937,7 @@ Possible errors when detecting an image type:<br>
 @param: {STRING} $text: the text to be applied<br>
 @param: {INTEGER} $angle: TTF angle rotation (0..180) degrees<br>
 @param: {INTEGER} $size: TTF font size<br>
-@param: {ENUM} $font: *Optional* The font to be used: character's font (1..5 for built-in gd font ; path/to/font.gdf ; path/to/font.ttf) ; Default is: lib/core/plugins/fonts/typo/sans/ibm-plex-sans-regular.ttf</div>
+@param: {ENUM} $font: *Optional* The font to be used: character's font (1..5 for built-in gd font ; path/to/font.gdf ; path/to/font.ttf) ; ibm-plex-sans-regular.ttf</div>
 	
 			<div class="doc-method-comments">Calculate TTF text bounding box for an image</div>
 	
@@ -962,7 +964,7 @@ Possible errors when detecting an image type:<br>
 @param: {INTEGER} $size: TTF font size<br>
 @param: {INTEGER} $width: width of text area (includding margins)<br>
 @param: {INTEGER} $margin: left margin for text placement ; Default is 0<br>
-@param: {ENUM} $font: The font to be used: character's font (1..5 for built-in gd font ; path/to/font.gdf ; path/to/font.ttf) ; Default is: lib/core/plugins/fonts/typo/sans/ibm-plex-sans-regular.ttf</div>
+@param: {ENUM} $font: The font to be used: character's font (1..5 for built-in gd font ; path/to/font.gdf ; path/to/font.ttf) ; Default is: ibm-plex-sans-regular.ttf</div>
 	
 			<div class="doc-method-comments">Prepare multi-line text by width and margin (text will be wrapped on multiple lines) on an image</div>
 	
@@ -978,7 +980,7 @@ Possible errors when detecting an image type:<br>
 	<i>INTEGER</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$vlinespace` Parameter is OPTIONAL, with the Default Value: 5">$vlinespace</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>5</b></span>, 
 	<i>INTEGER</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$angle` Parameter is OPTIONAL, with the Default Value: 0">$angle</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>0</b></span>, 
 	<i>INTEGER</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$size` Parameter is OPTIONAL, with the Default Value: 10">$size</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>10</b></span>, 
-	<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$font` Parameter is OPTIONAL, with the Default Value: &quot;lib/core/plugins/fonts/typo/sans/ibm-plex-sans-regular.ttf&quot;">$font</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;lib/core/plugins/fonts/typo/sans/ibm-plex-sans-regular.ttf&quot;</b></span>, 
+	<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$font` Parameter is OPTIONAL, with the Default Value: self::FONT">$font</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>self::FONT</b></span>, 
 	<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$color_rgb` Parameter is OPTIONAL, with the Default Value: [0 =&gt; 0, 1 =&gt; 0, 2 =&gt; 0, 3 =&gt; 0]">$color_rgb</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>[0 =&gt; 0, 1 =&gt; 0, 2 =&gt; 0, 3 =&gt; 0]</b></span>
 	
 	
@@ -994,7 +996,7 @@ Possible errors when detecting an image type:<br>
 @param: {INTEGER} $vlinespace: *Optional* vertical line spacing (space between vertical text lines)<br>
 @param: {INTEGER} $angle: *Optional* TTF angle rotation (0..180) degrees ; Default is 0 ; Applies just for Align=left ; for Align=center / Align=right ... to be done in the future ...<br>
 @param: {INTEGER} $size: *Optional* TTF font size ; Default is 10 | null (for built-in or GDF fonts)<br>
-@param: {ENUM} $font: *Optional* The font to be used: character's font (1..5 for built-in gd font ; path/to/font.gdf ; path/to/font.ttf) ; Default is: lib/core/plugins/fonts/typo/sans/ibm-plex-sans-regular.ttf<br>
+@param: {ENUM} $font: *Optional* The font to be used: character's font (1..5 for built-in gd font ; path/to/font.gdf ; path/to/font.ttf) ; Default is: ibm-plex-sans-regular.ttf<br>
 @param: {ARRAY} $color_rgb: *Optional* The RGB color with optional alpha channel as Array [0..255, 0..255, 0..255, 0..127] ; Default is: [0, 0, 0, 0]</div>
 	
 			<div class="doc-method-comments">Apply multi-line text (text will be wrapped on multiple lines) on an image: GIF / PNG / JPG / WEBP</div>
@@ -1009,7 +1011,7 @@ Possible errors when detecting an image type:<br>
 	<i>INTEGER</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$offsy` Parameter is OPTIONAL, with the Default Value: 0">$offsy</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>0</b></span>, 
 	<i>INTEGER</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$angle` Parameter is OPTIONAL, with the Default Value: 0">$angle</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>0</b></span>, 
 	<i>INTEGER</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$size` Parameter is OPTIONAL, with the Default Value: 10">$size</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>10</b></span>, 
-	<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$font` Parameter is OPTIONAL, with the Default Value: &quot;lib/core/plugins/fonts/typo/sans/ibm-plex-sans-regular.ttf&quot;">$font</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;lib/core/plugins/fonts/typo/sans/ibm-plex-sans-regular.ttf&quot;</b></span>, 
+	<i>ENUM</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$font` Parameter is OPTIONAL, with the Default Value: self::FONT">$font</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>self::FONT</b></span>, 
 	<i>ARRAY</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$color_rgb` Parameter is OPTIONAL, with the Default Value: [0 =&gt; 0, 1 =&gt; 0, 2 =&gt; 0, 3 =&gt; 0]">$color_rgb</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>[0 =&gt; 0, 1 =&gt; 0, 2 =&gt; 0, 3 =&gt; 0]</b></span>
 	
 	
@@ -1023,7 +1025,7 @@ Possible errors when detecting an image type:<br>
 @param: {INTEGER} $offsy: *Optional* correction offset Y for text placement ; Default is 0<br>
 @param: {INTEGER} $angle: *Optional* TTF angle rotation (0..180) degrees ; Default is 0 | null (for built-in or GDF fonts)<br>
 @param: {INTEGER} $size: *Optional* TTF font size ; Default is 10 | null (for built-in or GDF fonts)<br>
-@param: {ENUM} $font: *Optional* The font to be used: character's font (1..5 for built-in gd font ; path/to/font.gdf ; path/to/font.ttf) ; Default is: lib/core/plugins/fonts/typo/sans/ibm-plex-sans-regular.ttf<br>
+@param: {ENUM} $font: *Optional* The font to be used: character's font (1..5 for built-in gd font ; path/to/font.gdf ; path/to/font.ttf) ; Default is: ibm-plex-sans-regular.ttf<br>
 @param: {ARRAY} $color_rgb: *Optional* The RGB color with optional alpha channel as Array [0..255, 0..255, 0..255, 0..127] ; Default is: [0, 0, 0, 0]</div>
 	
 			<div class="doc-method-comments">Apply text on an image: GIF / PNG / JPG / WEBP</div>
@@ -1037,14 +1039,14 @@ Possible errors when detecting an image type:<br>
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20200121 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20200121 -->
+<!-- constants r.20250107 -->
 
 <!-- Sample Code -->
 <br>
@@ -1087,9 +1089,9 @@ $imgd </span><span style="color: #FFCC00; font-weight: bold">= new </span><span 
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20210420 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1176,7 +1178,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -1190,13 +1192,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:19 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:50 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

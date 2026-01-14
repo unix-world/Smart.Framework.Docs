@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
 <meta name="description" content="smartJ$Utils static class smartJ$Utils { } . CLASS :: Smart CoreUtils (ES6, Strict Mode) The class provides the core methods for JavaScript API of">
-<meta name="keywords" content="smartj utils, static, class, smart, coreutils, es6, strict, mode, the, provides, core, methods, for, javascript, api, of, smart framework, language, located, at, lib js framework smart framework pak js, core utils js, package, sf javascript core, name, frozen, yes, version, usage, smartj utils method, public, evaljsfxcode, string, fxcontext, js code, jscode, boolean, alerterr, return, true, if, successful, false, otherwise, param, fx, context, where, is, executed, used, just, logging, fails, to, know, which, js, callable, method, or, plain, code, optional, default, set, eval, will, display, an, alert, message, evaluate, mixed, in, a, evalute, and, execute, within, try catch, log, errors, console, so, it, can, isfinitenumber, number, num, finite, nan, be, tested, check, valid, must">
+<meta name="keywords" content="smartj utils, static, class, smart, coreutils, es6, strict, mode, the, provides, core, methods, for, javascript, api, of, smart framework, language, located, at, lib js framework smart framework pak js, core utils js, package, sf javascript core, name, frozen, yes, version, usage, smartj utils method, public, evaljsfxcode, string, fxcontext, js code, jscode, boolean, alerterr, return, true, if, successful, false, otherwise, param, fx, context, where, is, executed, used, just, logging, fails, to, know, which, js, callable, method, or, plain, code, optional, default, set, eval, will, display, an, alert, message, evaluate, mixed, in, a, evalute, and, execute, within, try catch, log, errors, console, so, it, can, isplainobject, object, input, variable, check, derived, from, isfinitenumber, number, num">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : Javascript">
 <link rel="icon" href="data:,">
 <title>JS Documentation for: smartJ$Utils</title>
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -703,7 +703,7 @@ The class provides the core methods for JavaScript API of Smart.Framework</div><
 		<li><span class="doc-package"><b>Package:</b> Sf.Javascript:Core</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> smartJ$Utils</span></li>
 		<li><span class="doc-frozen"><b>Frozen:</b> Yes</span></li>
-		<li><span class="doc-version"><b>Version:</b> 20240122</span></li>
+		<li><span class="doc-version"><b>Version:</b> 20251216</span></li>
 		<li><b>Usage:</b> smartJ$Utils.method();</li>
 		
 		
@@ -717,7 +717,7 @@ The class provides the core methods for JavaScript API of Smart.Framework</div><
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20210414 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--evalJsFxCode">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>evalJsFxCode</b></span>&nbsp;=&nbsp;(
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`fxContext` Parameter">fxContext</span></b></span>, 
@@ -741,6 +741,26 @@ The class provides the core methods for JavaScript API of Smart.Framework</div><
 			<div class="doc-method-comments">Evaluate Mixed Js Code in a context<br>
 Will evalute and execute mixed Js Code (Js callable method or Js plain code) within a try/catch context<br>
 If fails, will log errors to the console and optional if set so it can display an alert message</div>
+	
+	
+</div>
+<div class="doc-container" id="Method--isPlainObject">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>isPlainObject</b></span>&nbsp;=&nbsp;(
+	<i>{Mixed}</i>&nbsp;<span class="doc-param-name"><b><span title="`a` Parameter">a</span></b></span>
+	
+	)&nbsp;=&gt;&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{Boolean}
+	<div class="doc-method-ret-params">
+	
+	
+			@return: {Boolean} TRUE is it is a plain object ; FALSE otherwise<br>
+	
+	
+	
+	@param: {Mixed} a The input variable<br>
+	
+	
+	</div>
+			<div class="doc-method-comments">Check if a variable is plain object derived from {}</div>
 	
 	
 </div>
@@ -791,6 +811,28 @@ RULES:<br>
 	
 	
 </div>
+<div class="doc-container" id="Method--stringCharTrim">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>stringCharTrim</b></span>&nbsp;=&nbsp;(
+	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`str` Parameter">str</span></b></span>, 
+	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`char` Parameter">char</span></b></span>
+	
+	)&nbsp;=&gt;&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
+	<div class="doc-method-ret-params">
+	
+	
+			@return: {String} The trimmed string by the given character<br>
+	
+	
+	
+	@param: {String} str The string to be trimmed<br>
+	@param: {String} char The char to be used for trim (must be a single character)<br>
+	
+	
+	</div>
+			<div class="doc-method-comments">Trim a string for a given character</div>
+	
+	
+</div>
 <div class="doc-container" id="Method--stringTrim">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>stringTrim</b></span>&nbsp;=&nbsp;(
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`str` Parameter">str</span></b></span>
@@ -799,7 +841,7 @@ RULES:<br>
 	<div class="doc-method-ret-params">
 	
 	
-			@return: {String} The trimmed string<br>
+			@return: {String} The whitespaces trimmed string<br>
 	
 	
 	
@@ -819,7 +861,7 @@ RULES:<br>
 	<div class="doc-method-ret-params">
 	
 	
-			@return: {String} The trimmed string (left only)<br>
+			@return: {String} The whitespaces trimmed string (left only)<br>
 	
 	
 	
@@ -839,7 +881,7 @@ RULES:<br>
 	<div class="doc-method-ret-params">
 	
 	
-			@return: {String} The trimmed string (right only)<br>
+			@return: {String} The whitespaces trimmed string (right only)<br>
 	
 	
 	
@@ -1397,7 +1439,7 @@ It will remove double / quoted slashes.</div>
 	
 	
 	</div>
-			<div class="doc-method-comments">Convert special characters to HTML entities.</div>
+			<div class="doc-method-comments">Convert special characters to HTML entities, compatible with Twig standard.</div>
 	
 	
 </div>
@@ -1487,10 +1529,10 @@ These values will be converted to safe HTML entities: &lt; &gt; &amp; &quot;</di
 	
 </div>
 <div class="doc-container" id="Method--utf8Enc">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>utf8Enc</b></span>&nbsp;(
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>utf8Enc</b></span>&nbsp;=&nbsp;(
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`str` Parameter">str</span></b></span>
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
+	)&nbsp;=&gt;&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
 	<div class="doc-method-ret-params">
 	
 	
@@ -1507,10 +1549,10 @@ These values will be converted to safe HTML entities: &lt; &gt; &amp; &quot;</di
 	
 </div>
 <div class="doc-container" id="Method--utf8Dec">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>utf8Dec</b></span>&nbsp;(
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>utf8Dec</b></span>&nbsp;=&nbsp;(
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`utftext` Parameter">utftext</span></b></span>
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
+	)&nbsp;=&gt;&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
 	<div class="doc-method-ret-params">
 	
 	
@@ -1644,15 +1686,17 @@ Supports also UTF-8</div>
 </div>
 <div class="doc-container" id="Method--uuid">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>uuid</b></span>&nbsp;(
+	<i>{Enum}</i>&nbsp;<span class="doc-param-name"><b><span title="`mode` Parameter">mode</span></b></span>
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
 	<div class="doc-method-ret-params">
 	
 	
-			@return: {String} A unique UUID, time based, base36 ; Ex: 1A2B3C4D5E<br>
+			@return: {String} A unique UUID, 10 characters, base36 ; Ex: 1A2B3C4D5E<br>
 	
 	
 	
+	@param: {Enum} mode Operation Mode ; default is 'ser' ; 'ser': serial (time based) ; 'str': random string ; 'num': random numeric<br>
 	
 	
 	</div>
@@ -1703,11 +1747,11 @@ Supports also UTF-8</div>
 	
 </div>
 <div class="doc-container" id="Method--url_add_suffix">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i></i></span> <span class="doc-method-name"><b>url_add_suffix</b></span>&nbsp;=&nbsp;(
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>url_add_suffix</b></span>&nbsp;(
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`url` Parameter">url</span></b></span>, 
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`suffix` Parameter">suffix</span></b></span>
 	
-	)&nbsp;=&gt;&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
 	<div class="doc-method-ret-params">
 	
 	
@@ -1842,22 +1886,22 @@ It is compatible just with the REPLACE MARKERS of Smart.Framework PHP server-sid
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20210417 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20210417 -->
+<!-- constants r.20250107 -->
 
 <!-- Sample Code -->
 
 <!-- Summary List -->
 <br>
-<!-- summary r.20210414 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1885,9 +1929,13 @@ function smartHandleDocSelector(obj) {
 			<option value="Methods--Summary-">Methods list</option>
 						<option value="Method--evalJsFxCode"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;evalJsFxCode()</option>
 			
+						<option value="Method--isPlainObject"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;isPlainObject()</option>
+			
 						<option value="Method--isFiniteNumber"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;isFiniteNumber()</option>
 			
 						<option value="Method--stringPureVal"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;stringPureVal()</option>
+			
+						<option value="Method--stringCharTrim"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;stringCharTrim()</option>
 			
 						<option value="Method--stringTrim"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;stringTrim()</option>
 			
@@ -1953,9 +2001,9 @@ function smartHandleDocSelector(obj) {
 			
 						<option value="Method--nl2br"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;nl2br()</option>
 			
-						<option value="Method--utf8Enc"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;utf8Enc()</option>
+						<option value="Method--utf8Enc"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;utf8Enc()</option>
 			
-						<option value="Method--utf8Dec"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;utf8Dec()</option>
+						<option value="Method--utf8Dec"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;utf8Dec()</option>
 			
 						<option value="Method--deaccent_str"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;deaccent_str()</option>
 			
@@ -1973,7 +2021,7 @@ function smartHandleDocSelector(obj) {
 			
 						<option value="Method--numericSort"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;numericSort()</option>
 			
-						<option value="Method--url_add_suffix"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;url_add_suffix()</option>
+						<option value="Method--url_add_suffix"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;url_add_suffix()</option>
 			
 						<option value="Method--create_slug"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; =&gt;&nbsp;create_slug()</option>
 			
@@ -1996,7 +2044,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -2010,13 +2058,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:26 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:53:25 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

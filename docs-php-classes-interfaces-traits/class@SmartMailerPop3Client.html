@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -706,7 +706,7 @@ select#select-summary {
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartMailerPop3Client</span></li>
 		
-		<li><b>Version:</b> v.20231003</li>
+		<li><b>Version:</b> v.20250129</li>
 		<li><b>Depends:</b> classes:  Smart, SmartUnicode</li>
 		<li><b>Hints:</b> After  each operation on the POP3 Server should check the $pop3-&gt;error string and if non-empty stop and disconnect to free the socket</li>
 		<li><b>Usage:</b> dynamic  object: (new Class())-&gt;method() - This class provides only DYNAMIC methods</li>
@@ -719,7 +719,7 @@ select#select-summary {
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20200121 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--__construct">
 	<span class="doc-modifiers">public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-special-name"><b>__construct</b></span>&nbsp;(
 		<span class="doc-param-name"><b><span class="doc-param-optional" title="`$buffer` Parameter is OPTIONAL, with the Default Value: 0">$buffer</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>0</b></span>
@@ -978,7 +978,12 @@ Sends both user and pass to the Server</div>
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20200121 -->
+<!-- properties r.20250107 -->
+<div class="doc-container" id="Property--securemode">
+	<span class="doc-modifiers">public</span> <b>$securemode</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>false</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>BOOLEAN</i>
+			<div class="doc-method-comments">If set to TRUE will allow just SSL / TLS Strict Secure Mode with all (default) verifications. Enabling this will work just with valid certificates (not self-signed).</div>
+	
+</div>
 <div class="doc-container" id="Property--buffer">
 	<span class="doc-modifiers">public</span> <b>$buffer</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>512</b></span>&nbsp;;&nbsp;&nbsp;<span title="Object Property"><b>-&gt;</b></span>&nbsp;<i>INT</i>
 			<div class="doc-method-comments">socket read buffer</div>
@@ -1013,15 +1018,15 @@ Do not SET a value here, but just GET the result</div>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20200121 -->
+<!-- constants r.20250107 -->
 
 <!-- Sample Code -->
 
 <!-- Summary List -->
 <br>
-<!-- summary r.20210420 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1099,6 +1104,8 @@ function smartHandleDocSelector(obj) {
 		</optgroup>
 		<optgroup label="Class Properties">
 			<option value="Properties--Summary-">Properties list</option>
+						<option value="Property--securemode"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$securemode</option>
+			
 						<option value="Property--buffer"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$buffer</option>
 			
 						<option value="Property--timeout"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; var&nbsp;$timeout</option>
@@ -1118,7 +1125,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -1132,13 +1139,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:19 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:50 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

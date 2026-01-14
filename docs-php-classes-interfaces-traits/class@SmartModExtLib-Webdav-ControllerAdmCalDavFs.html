@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -708,7 +708,7 @@ It does a direct output so it needs to set in controller: SMART_APP_MODULE_DIREC
 		<li><span class="doc-ns"><b>Namespace:</b> \SmartModExtLib\Webdav\</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> ControllerAdmCalDavFs</span></li>
 		
-		<li><b>Version:</b> 20240116</li>
+		<li><b>Version:</b> 20250124</li>
 		
 		
 		
@@ -728,7 +728,7 @@ It does a direct output so it needs to set in controller: SMART_APP_MODULE_DIREC
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20200121 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--DavFsRunServer">
 	<span class="doc-modifiers">final public</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>DavFsRunServer</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$dav_fs_root_path` Parameter is REQUIRED">$dav_fs_root_path</span></b></span>, 
@@ -885,7 +885,7 @@ app-env 					:: 		ex: dev | prod ; based on: SmartEnvironment::ifDevMode()<br>
 app-namespace 				:: 		ex: smartframework.default (the app namespace as defined in etc/init.php)<br>
 app-domain 					:: 		ex: 127.0.0.1|localhost|sdom.dom.ext|dom.ext (the domain set in configs, that may differ by area: $configs['app']['index-domain'] | $configs['app']['admin-domain'])<br>
 release-hash 				:: 		ex: 29bp3w (the release hash based on app framework version, framework release and modules version)<br>
-module-area 				:: 		ex: index / admin<br>
+module-area 				:: 		ex: index / admin / task<br>
 module-name 				:: 		ex: mod-samples<br>
 module-path 				:: 		ex: modules/mod-samples/<br>
 module-view-path 			:: 		ex: modules/mod-samples/views/<br>
@@ -1627,7 +1627,7 @@ Because of the PHP Bug #31570, the __destruct() can't operate on relative paths 
 	)&nbsp;{}&nbsp;<span title="Object Method"><b>-&gt;</b></span>&nbsp;MIXED
 	<br><span class="doc-inherited"><i>inherited</i>&nbsp;from&nbsp;<b>\SmartAbstractAppController</b></span>
 	
-			<div class="doc-method-ret-params">@return: {MIXED} *OPTIONAL* The HTTP Status Code: by default it does not return or it must returns 200 which is optional ; other supported HTTP Status Codes are: 202/203/204/208 (OK with notice/warning/error messages - used only for REST/APIs), 301 (Permanent Redirect), 302 (Temporary Redirect), 400 (Bad Request), 401 (Authentication Required), 403 (Forbidden), 404 (Not Found), 405 (Method Not Allowed), 410 (Gone), 422 (Unprocessable Content) / (Unprocessable Entity), 429 (Too many Requests), 500 (Internal Error), 501 (Not Implemented), 502 (Bad Gateway), 503 (Service Unavailable), 504 (Gateway Timeout) ; 204 (No Content) and 304 (Not Modified) are reserved ; if the HTTP status code is in the range of 4xx - 5xx, an extra notification message can be set as: ##EXAMPLE: $this-&gt;PageViewSetCfg('error', 'Access to this page is restricted'); return 403; ## - to have also a detailed error message to be shown near the HTTP status code) ; It also can return VOID or TRUE as HTTP Status 200 or return FALSE as HTTP Status 500</div>
+			<div class="doc-method-ret-params">@return: {MIXED} *OPTIONAL* The HTTP Status Code: by default it does not return or it must returns 200 which is optional ; other supported HTTP Status Codes are: 201/202/203/204/208, 301/302, 400/401/402/403/404/405/406/408/409/410/415/422/423/424/429, 500/501/502/503/504/507 ; 304 (Not Modified) is reserved, cannt be used here ; if the HTTP status code is in the range of 4xx - 5xx, an extra notification message can be set as: ##EXAMPLE: $this-&gt;PageViewSetErrorStatus(400, 'Some parameters are missing'); return; / ##EXAMPLE: $this-&gt;PageViewSetCfg('error', 'Access to this page is restricted'); return 403; ## - to have also a detailed error message to be shown near the HTTP status code) ; It also can return VOID or TRUE as HTTP Status 200 or return FALSE as HTTP Status 500</div>
 	
 			<div class="doc-method-comments">The Controller Runtime - This function is required to be re-defined in all controllers</div>
 	
@@ -1640,22 +1640,22 @@ Because of the PHP Bug #31570, the __destruct() can't operate on relative paths 
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20200121 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20200121 -->
+<!-- constants r.20250107 -->
 
 <!-- Sample Code -->
 
 <!-- Summary List -->
 <br>
-<!-- summary r.20210420 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1849,7 +1849,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -1863,13 +1863,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:20 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:51 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

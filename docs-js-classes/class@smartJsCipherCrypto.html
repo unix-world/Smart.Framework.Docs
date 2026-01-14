@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
 <meta name="description" content="smartJ$CipherCrypto static class smartJ$CipherCrypto { } . CLASS :: Smart Cipher Crypto (ES6, Strict Mode) Smart Twofish / Blowfish (CBC) for JavaScript:">
-<meta name="keywords" content="smartj ciphercrypto, static, class, smart, cipher, crypto, es6, strict, mode, twofish, blowfish, cbc, for, javascript, encrypt, decrypt, language, located, at, lib js framework smart framework pak js, crypt utils js, package, sf javascript crypto, name, frozen, yes, version, usage, smartj ciphercrypto method, depends, smartj utils, smartj baseconv, smartj cryptohash, smartj dhkx, smartj cryptociphertwofish, smartj cryptocipherblowfish, methods, public, function, tfenc, string, key, str, return, the, smart twofish, encrypted, param, encryption, bytes, bit, iv, is, auto managed, plain, encrypts, a, using, derived, and, pbkdf2, based, tfdec, decrypted, decrypts, bfenc, smart blowfish, safe, bfdec, properties, constants, documentation, index, definition, list, generated, on">
+<meta name="keywords" content="smartj ciphercrypto, static, class, smart, cipher, crypto, es6, strict, mode, twofish, blowfish, cbc, for, javascript, encrypt, decrypt, language, located, at, lib js framework smart framework pak js, crypt utils js, package, sf javascript crypto, name, frozen, yes, version, usage, smartj ciphercrypto method, depends, smartj utils, smartj baseconv, smartj cryptohash, smartj dhkx, smartj cryptociphertwofish, smartj cryptocipherblowfish, methods, public, function, tfenc, string, key, str, boolean, isbinary, randomize, return, the, smart twofish, encrypted, param, encryption, bytes, bit, iv, is, auto managed, plain, encoding, character, set, default, false, to, true, if, binary, ascii, avoid, normalize, as, utf, normal, content, this, must, be, add, randomization, get, a, fixed, data, without, encrypts, using, derived, and, pbkdf2, based, tfdec, decrypted, decrypts, bfenc, smart blowfish, safe, bfdec">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : Javascript">
 <link rel="icon" href="data:,">
 <title>JS Documentation for: smartJ$CipherCrypto</title>
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -703,7 +703,7 @@ Smart Twofish / Blowfish (CBC) for JavaScript: Encrypt / Decrypt</div><br>
 		<li><span class="doc-package"><b>Package:</b> Sf.Javascript:Crypto</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> smartJ$CipherCrypto</span></li>
 		<li><span class="doc-frozen"><b>Frozen:</b> Yes</span></li>
-		<li><span class="doc-version"><b>Version:</b> 20241216</span></li>
+		<li><span class="doc-version"><b>Version:</b> 20251216</span></li>
 		<li><b>Usage:</b> smartJ$CipherCrypto.method();</li>
 		
 		
@@ -717,11 +717,13 @@ Smart Twofish / Blowfish (CBC) for JavaScript: Encrypt / Decrypt</div><br>
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20210414 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--tfEnc">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>tfEnc</b></span>&nbsp;(
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`key` Parameter">key</span></b></span>, 
-	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`str` Parameter">str</span></b></span>
+	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`str` Parameter">str</span></b></span>, 
+	<i>{Boolean}</i>&nbsp;<span class="doc-param-name"><b><span title="`isBinary` Parameter">isBinary</span></b></span>, 
+	<i>{Boolean}</i>&nbsp;<span class="doc-param-name"><b><span title="`randomize` Parameter">randomize</span></b></span>
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
 	<div class="doc-method-ret-params">
@@ -733,6 +735,8 @@ Smart Twofish / Blowfish (CBC) for JavaScript: Encrypt / Decrypt</div><br>
 	
 	@param: {String} key The encryption key ; 32 bytes (256 bit) ; iV is auto-managed, 16 bytes (128 bit)<br>
 	@param: {String} str The plain string<br>
+	@param: {Boolean} isBinary Encoding character set mode ; default is FALSE ; set to TRUE if the string is binary ASCII to avoid normalize as UTF-8 ; for normal, UTF-8 content this must be set to FALSE<br>
+	@param: {Boolean} randomize Add randomization ; default is TRUE ; set to false to get a fixed encrypted data, without randomization<br>
 	
 	
 	</div>
@@ -765,7 +769,9 @@ Smart Twofish / Blowfish (CBC) for JavaScript: Encrypt / Decrypt</div><br>
 <div class="doc-container" id="Method--bfEnc">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>bfEnc</b></span>&nbsp;(
 	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`key` Parameter">key</span></b></span>, 
-	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`str` Parameter">str</span></b></span>
+	<i>{String}</i>&nbsp;<span class="doc-param-name"><b><span title="`str` Parameter">str</span></b></span>, 
+	<i>{Boolean}</i>&nbsp;<span class="doc-param-name"><b><span title="`isBinary` Parameter">isBinary</span></b></span>, 
+	<i>{Boolean}</i>&nbsp;<span class="doc-param-name"><b><span title="`randomize` Parameter">randomize</span></b></span>
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>.</b></span>&nbsp;{String}
 	<div class="doc-method-ret-params">
@@ -775,8 +781,10 @@ Smart Twofish / Blowfish (CBC) for JavaScript: Encrypt / Decrypt</div><br>
 	
 	
 	
-	@param: {String} key The encryption key ; 32 bytes (256 bit) ; iV is auto-managed, 16 bytes (128 bit)<br>
+	@param: {String} key The encryption key ; 56 bytes (448 bit) ; iV is auto-managed, 16 bytes (128 bit)<br>
 	@param: {String} str The plain string<br>
+	@param: {Boolean} isBinary Encoding character set mode ; default is FALSE ; set to TRUE if the string is binary ASCII to avoid normalize as UTF-8 ; for normal, UTF-8 content this must be set to FALSE<br>
+	@param: {Boolean} randomize Add randomization ; default is TRUE ; set to false to get a fixed encrypted data, without randomization<br>
 	
 	
 	</div>
@@ -797,7 +805,7 @@ Smart Twofish / Blowfish (CBC) for JavaScript: Encrypt / Decrypt</div><br>
 	
 	
 	
-	@param: {String} key The encryption key ; 32 bytes (256 bit) ; iV is auto-managed, 16 bytes (128 bit)<br>
+	@param: {String} key The encryption key ; 56 bytes (448 bit) ; iV is auto-managed, 16 bytes (128 bit)<br>
 	@param: {String} str The Smart.Blowfish encrypted string<br>
 	
 	
@@ -812,22 +820,22 @@ Smart Twofish / Blowfish (CBC) for JavaScript: Encrypt / Decrypt</div><br>
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20210417 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20210417 -->
+<!-- constants r.20250107 -->
 
 <!-- Sample Code -->
 
 <!-- Summary List -->
 <br>
-<!-- summary r.20210414 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -874,7 +882,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -888,13 +896,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:26 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:53:25 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
 <meta name="description" content="\SmartUnicode final class \ SmartUnicode { } :: Class: SmartUnicode - provides the string util functions to work safe with Unicode (Multibyte) Strings /">
-<meta name="keywords" content="smartunicode, final, class, provides, the, string, util, functions, to, work, safe, with, unicode, multibyte, strings, characters, compatbile, utf, iso, latin, base, extended, greek, cyrillic, japanese, take, a, look, at, replacement, table, below, language, php, located, lib framework lib unicode php, package, core, namespace, name, version, v, depends, extensions, mbstring, xml, constants, smart framework charset, smart framework security filter input, hints, you, must, make, always, difference, for, what, are, goint, do, if, need, bytes, length, then, use, strlen, all, includding, instead, number, of, in, smartunicode str len, variables, know, or, just, suppose, that, usage, static, object, class method, this, only, methods, public, function, str len, ytext, int, return, integer, param, get, as">
+<meta name="keywords" content="smartunicode, final, class, provides, the, string, util, functions, to, work, safe, with, unicode, multibyte, strings, characters, compatbile, utf, iso, latin, base, extended, greek, cyrillic, japanese, take, a, look, at, replacement, table, below, language, php, located, lib framework lib unicode php, package, core, namespace, name, version, v, depends, extensions, mbstring, xml, constants, smart framework charset, smart framework security filter input, hints, you, must, make, always, difference, for, what, are, goint, do, if, need, bytes, length, then, use, strlen, all, includding, instead, number, of, in, smartunicode str len, variables, know, or, just, suppose, that, usage, static, object, class method, this, only, methods, public, function, ord, chr, int, return, integer, code, point, param">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 <link rel="icon" href="data:,">
 <title>PHP Documentation for: \SmartUnicode</title>
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -708,7 +708,7 @@ Take a look at the replacement table below.</div><br>
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartUnicode</span></li>
 		
-		<li><b>Version:</b> v.20230101</li>
+		<li><b>Version:</b> v.20251210</li>
 		<li><b>Depends:</b> extensions:  PHP MBString, PHP XML ; constants: SMART_FRAMEWORK_CHARSET, SMART_FRAMEWORK_SECURITY_FILTER_INPUT</li>
 		<li><b>Hints:</b> You  must make always a difference for what you are goint to do with a string. If you need bytes length, then use strlen() with all strings, includding unicode ! If you need instead the number of characters in a string, then use SmartUnicode::str_len() for all variables / strings you know (or you just suppose) that are unicode.</li>
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -721,7 +721,40 @@ Take a look at the replacement table below.</div><br>
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20200121 -->
+<!-- methods r.20250107 -->
+<div class="doc-container" id="Method--ord">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>ord</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$chr` Parameter is REQUIRED">$chr</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;INT
+	
+	
+			<div class="doc-method-ret-params">@return: {INTEGER} The Unicode code point<br>
+@param: {STRING} $chr: The Unicode character</div>
+	
+			<div class="doc-method-comments">Unicode Safe ord()		:: Return the Unicode code point value of the given character</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--chr">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>chr</b></span>&nbsp;(
+		<i>int</i>&nbsp;<span class="doc-param-name"><b><span title="`$code` Parameter is REQUIRED">$code</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$encoding` Parameter is OPTIONAL, with the Default Value: null">$encoding</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>null</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} The Unicode character<br>
+@param: {STRING} $code: The Unicode code point</div>
+	
+			<div class="doc-method-comments">Unicode Safe chr()		:: Return character by Unicode code point value</div>
+	
+	
+	
+</div>
 <div class="doc-container" id="Method--str_len">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>str_len</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$ytext` Parameter is REQUIRED">$ytext</span></b></span>
@@ -912,6 +945,78 @@ Take a look at the replacement table below.</div><br>
 @param: {STRING} $ypart: The sub-string to search for in the string</div>
 	
 			<div class="doc-method-comments">Unicode Safe stristr() 		:: Finds first occurrence of a string within another, Case Insensitive</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--str_startswith">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>str_startswith</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$part` Parameter is REQUIRED">$part</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} Returns TRUE if starts with or FALSE if not<br>
+@param: {STRING} $str: The string to check<br>
+@param: {STRING} $part: The sub-string to search for in the string</div>
+	
+			<div class="doc-method-comments">Unicode Safe 				:: Check if a string starts with another, Case Sensitive</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--str_istartswith">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>str_istartswith</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$part` Parameter is REQUIRED">$part</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} Returns TRUE if starts with or FALSE if not<br>
+@param: {STRING} $str: The string to check<br>
+@param: {STRING} $part: The sub-string to search for in the string</div>
+	
+			<div class="doc-method-comments">Unicode Safe 				:: Check if a string starts with another, Case Insensitive</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--str_endswith">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>str_endswith</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$part` Parameter is REQUIRED">$part</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} Returns TRUE if ends with or FALSE if not<br>
+@param: {STRING} $str: The string to check<br>
+@param: {STRING} $part: The sub-string to search for in the string</div>
+	
+			<div class="doc-method-comments">Unicode Safe 				:: Check if a string ends with another, Case Sensitive</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--str_iendswith">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>str_iendswith</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$part` Parameter is REQUIRED">$part</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} Returns TRUE if ends with or FALSE if not<br>
+@param: {STRING} $str: The string to check<br>
+@param: {STRING} $part: The sub-string to search for in the string</div>
+	
+			<div class="doc-method-comments">Unicode Safe 				:: Check if a string ends with another, Case Insensitive</div>
 	
 	
 	
@@ -1224,14 +1329,14 @@ Never use just single utf8_enc() when the framework is in UTF-8 mode, else the r
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20200121 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20200121 -->
+<!-- constants r.20250107 -->
 <div class="doc-container" id="Constant--ACCENTED_CHARS">
 	<span class="doc-modifiers">public</span> <i>const</i> <b>ACCENTED_CHARS</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>[&quot;á&quot; =&gt; &quot;a&quot;, &quot;â&quot; =&gt; &quot;a&quot;, &quot;ã&quot; =&gt; &quot;a&quot;, &quot;ä&quot; =&gt; &quot;a&quot;, &quot;å&quot; =&gt; &quot;a&quot;, &quot;ā&quot; =&gt; &quot;a&quot;, &quot;ă&quot; =&gt; &quot;a&quot;, &quot;ą&quot; =&gt; &quot;a&quot;, &quot;Á&quot; =&gt; &quot;A&quot;, &quot;Â&quot; =&gt; &quot;A&quot;, &quot;Ã&quot; =&gt; &quot;A&quot;, &quot;Ä&quot; =&gt; &quot;A&quot;, &quot;Å&quot; =&gt; &quot;A&quot;, &quot;Ā&quot; =&gt; &quot;A&quot;, &quot;Ă&quot; =&gt; &quot;A&quot;, &quot;Ą&quot; =&gt; &quot;A&quot;, &quot;ć&quot; =&gt; &quot;c&quot;, &quot;ĉ&quot; =&gt; &quot;c&quot;, &quot;č&quot; =&gt; &quot;c&quot;, &quot;ç&quot; =&gt; &quot;c&quot;, &quot;Ć&quot; =&gt; &quot;C&quot;, &quot;Ĉ&quot; =&gt; &quot;C&quot;, &quot;Č&quot; =&gt; &quot;C&quot;, &quot;Ç&quot; =&gt; &quot;C&quot;, &quot;ď&quot; =&gt; &quot;d&quot;, &quot;Ď&quot; =&gt; &quot;D&quot;, &quot;è&quot; =&gt; &quot;e&quot;, &quot;é&quot; =&gt; &quot;e&quot;, &quot;ê&quot; =&gt; &quot;e&quot;, &quot;ë&quot; =&gt; &quot;e&quot;, &quot;ē&quot; =&gt; &quot;e&quot;, &quot;ĕ&quot; =&gt; &quot;e&quot;, &quot;ė&quot; =&gt; &quot;e&quot;, &quot;ě&quot; =&gt; &quot;e&quot;, &quot;ę&quot; =&gt; &quot;e&quot;, &quot;È&quot; =&gt; &quot;E&quot;, &quot;É&quot; =&gt; &quot;E&quot;, &quot;Ê&quot; =&gt; &quot;E&quot;, &quot;Ë&quot; =&gt; &quot;E&quot;, &quot;Ē&quot; =&gt; &quot;E&quot;, &quot;Ĕ&quot; =&gt; &quot;E&quot;, &quot;Ė&quot; =&gt; &quot;E&quot;, &quot;Ě&quot; =&gt; &quot;E&quot;, &quot;Ę&quot; =&gt; &quot;E&quot;, &quot;ĝ&quot; =&gt; &quot;g&quot;, &quot;ģ&quot; =&gt; &quot;g&quot;, &quot;Ĝ&quot; =&gt; &quot;G&quot;, &quot;Ģ&quot; =&gt; &quot;G&quot;, &quot;ĥ&quot; =&gt; &quot;h&quot;, &quot;ħ&quot; =&gt; &quot;h&quot;, &quot;Ĥ&quot; =&gt; &quot;H&quot;, &quot;Ħ&quot; =&gt; &quot;H&quot;, &quot;ì&quot; =&gt; &quot;i&quot;, &quot;í&quot; =&gt; &quot;i&quot;, &quot;î&quot; =&gt; &quot;i&quot;, &quot;ï&quot; =&gt; &quot;i&quot;, &quot;ĩ&quot; =&gt; &quot;i&quot;, &quot;ī&quot; =&gt; &quot;i&quot;, &quot;ĭ&quot; =&gt; &quot;i&quot;, &quot;ȉ&quot; =&gt; &quot;i&quot;, &quot;ȋ&quot; =&gt; &quot;i&quot;, &quot;į&quot; =&gt; &quot;i&quot;, &quot;Ì&quot; =&gt; &quot;I&quot;, &quot;Í&quot; =&gt; &quot;I&quot;, &quot;Î&quot; =&gt; &quot;I&quot;, &quot;Ï&quot; =&gt; &quot;I&quot;, &quot;Ĩ&quot; =&gt; &quot;I&quot;, &quot;Ī&quot; =&gt; &quot;I&quot;, &quot;Ĭ&quot; =&gt; &quot;I&quot;, &quot;Ȉ&quot; =&gt; &quot;I&quot;, &quot;Ȋ&quot; =&gt; &quot;I&quot;, &quot;Į&quot; =&gt; &quot;I&quot;, &quot;ĳ&quot; =&gt; &quot;j&quot;, &quot;ĵ&quot; =&gt; &quot;j&quot;, &quot;Ĳ&quot; =&gt; &quot;J&quot;, &quot;Ĵ&quot; =&gt; &quot;J&quot;, &quot;ķ&quot; =&gt; &quot;k&quot;, &quot;Ķ&quot; =&gt; &quot;K&quot;, &quot;ĺ&quot; =&gt; &quot;l&quot;, &quot;ļ&quot; =&gt; &quot;l&quot;, &quot;ľ&quot; =&gt; &quot;l&quot;, &quot;ł&quot; =&gt; &quot;l&quot;, &quot;Ĺ&quot; =&gt; &quot;L&quot;, &quot;Ļ&quot; =&gt; &quot;L&quot;, &quot;Ľ&quot; =&gt; &quot;L&quot;, &quot;Ł&quot; =&gt; &quot;L&quot;, &quot;ñ&quot; =&gt; &quot;n&quot;, &quot;ń&quot; =&gt; &quot;n&quot;, &quot;ņ&quot; =&gt; &quot;n&quot;, &quot;ň&quot; =&gt; &quot;n&quot;, &quot;Ñ&quot; =&gt; &quot;N&quot;, &quot;Ń&quot; =&gt; &quot;N&quot;, &quot;Ņ&quot; =&gt; &quot;N&quot;, &quot;Ň&quot; =&gt; &quot;N&quot;, &quot;ò&quot; =&gt; &quot;o&quot;, &quot;ó&quot; =&gt; &quot;o&quot;, &quot;ô&quot; =&gt; &quot;o&quot;, &quot;õ&quot; =&gt; &quot;o&quot;, &quot;ö&quot; =&gt; &quot;o&quot;, &quot;ō&quot; =&gt; &quot;o&quot;, &quot;ŏ&quot; =&gt; &quot;o&quot;, &quot;ő&quot; =&gt; &quot;o&quot;, &quot;ø&quot; =&gt; &quot;o&quot;, &quot;œ&quot; =&gt; &quot;o&quot;, &quot;Ò&quot; =&gt; &quot;O&quot;, &quot;Ó&quot; =&gt; &quot;O&quot;, &quot;Ô&quot; =&gt; &quot;O&quot;, &quot;Õ&quot; =&gt; &quot;O&quot;, &quot;Ö&quot; =&gt; &quot;O&quot;, &quot;Ō&quot; =&gt; &quot;O&quot;, &quot;Ŏ&quot; =&gt; &quot;O&quot;, &quot;Ő&quot; =&gt; &quot;O&quot;, &quot;Ø&quot; =&gt; &quot;O&quot;, &quot;Œ&quot; =&gt; &quot;O&quot;, &quot;ŕ&quot; =&gt; &quot;r&quot;, &quot;ŗ&quot; =&gt; &quot;r&quot;, &quot;ř&quot; =&gt; &quot;r&quot;, &quot;Ŕ&quot; =&gt; &quot;R&quot;, &quot;Ŗ&quot; =&gt; &quot;R&quot;, &quot;Ř&quot; =&gt; &quot;R&quot;, &quot;ș&quot; =&gt; &quot;s&quot;, &quot;ş&quot; =&gt; &quot;s&quot;, &quot;š&quot; =&gt; &quot;s&quot;, &quot;ś&quot; =&gt; &quot;s&quot;, &quot;ŝ&quot; =&gt; &quot;s&quot;, &quot;ß&quot; =&gt; &quot;ss&quot;, &quot;Ș&quot; =&gt; &quot;S&quot;, &quot;Ş&quot; =&gt; &quot;S&quot;, &quot;Š&quot; =&gt; &quot;S&quot;, &quot;Ś&quot; =&gt; &quot;S&quot;, &quot;Ŝ&quot; =&gt; &quot;S&quot;, &quot;ț&quot; =&gt; &quot;t&quot;, &quot;ţ&quot; =&gt; &quot;t&quot;, &quot;ť&quot; =&gt; &quot;t&quot;, &quot;Ț&quot; =&gt; &quot;T&quot;, &quot;Ţ&quot; =&gt; &quot;T&quot;, &quot;Ť&quot; =&gt; &quot;T&quot;, &quot;ù&quot; =&gt; &quot;u&quot;, &quot;ú&quot; =&gt; &quot;u&quot;, &quot;û&quot; =&gt; &quot;u&quot;, &quot;ü&quot; =&gt; &quot;u&quot;, &quot;ũ&quot; =&gt; &quot;u&quot;, &quot;ū&quot; =&gt; &quot;u&quot;, &quot;ŭ&quot; =&gt; &quot;u&quot;, &quot;ů&quot; =&gt; &quot;u&quot;, &quot;ű&quot; =&gt; &quot;u&quot;, &quot;ų&quot; =&gt; &quot;u&quot;, &quot;Ù&quot; =&gt; &quot;U&quot;, &quot;Ú&quot; =&gt; &quot;U&quot;, &quot;Û&quot; =&gt; &quot;U&quot;, &quot;Ü&quot; =&gt; &quot;U&quot;, &quot;Ũ&quot; =&gt; &quot;U&quot;, &quot;Ū&quot; =&gt; &quot;U&quot;, &quot;Ŭ&quot; =&gt; &quot;U&quot;, &quot;Ů&quot; =&gt; &quot;U&quot;, &quot;Ű&quot; =&gt; &quot;U&quot;, &quot;Ų&quot; =&gt; &quot;U&quot;, &quot;ŵ&quot; =&gt; &quot;w&quot;, &quot;Ŵ&quot; =&gt; &quot;W&quot;, &quot;ẏ&quot; =&gt; &quot;y&quot;, &quot;ỳ&quot; =&gt; &quot;y&quot;, &quot;ŷ&quot; =&gt; &quot;y&quot;, &quot;ÿ&quot; =&gt; &quot;y&quot;, &quot;ý&quot; =&gt; &quot;y&quot;, &quot;Ẏ&quot; =&gt; &quot;Y&quot;, &quot;Ỳ&quot; =&gt; &quot;Y&quot;, &quot;Ŷ&quot; =&gt; &quot;Y&quot;, &quot;Ÿ&quot; =&gt; &quot;Y&quot;, &quot;Ý&quot; =&gt; &quot;Y&quot;, &quot;ź&quot; =&gt; &quot;z&quot;, &quot;ż&quot; =&gt; &quot;z&quot;, &quot;ž&quot; =&gt; &quot;z&quot;, &quot;Ź&quot; =&gt; &quot;Z&quot;, &quot;Ż&quot; =&gt; &quot;Z&quot;, &quot;Ž&quot; =&gt; &quot;Z&quot;]</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
 	
@@ -1320,9 +1425,9 @@ Never use just single utf8_enc() when the framework is in UTF-8 mode, else the r
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20210420 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1348,6 +1453,12 @@ function smartHandleDocSelector(obj) {
 		</optgroup>
 		<optgroup label="Class Methods">
 			<option value="Methods--Summary-">Methods list</option>
+						<option value="Method--ord"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;ord()</option>
+			
+			
+						<option value="Method--chr"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;chr()</option>
+			
+			
 						<option value="Method--str_len"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;str_len()</option>
 			
 			
@@ -1376,6 +1487,18 @@ function smartHandleDocSelector(obj) {
 			
 			
 						<option value="Method--stri_str"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;stri_str()</option>
+			
+			
+						<option value="Method--str_startswith"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;str_startswith()</option>
+			
+			
+						<option value="Method--str_istartswith"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;str_istartswith()</option>
+			
+			
+						<option value="Method--str_endswith"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;str_endswith()</option>
+			
+			
+						<option value="Method--str_iendswith"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;str_iendswith()</option>
 			
 			
 						<option value="Method--str_contains"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;str_contains()</option>
@@ -1452,7 +1575,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -1466,13 +1589,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:18 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:49 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

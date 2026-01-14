@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -721,7 +721,7 @@ IP address and the browser signature of the client. The Smart Session provides a
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartAuth</span></li>
 		
-		<li><b>Version:</b> v.20240119</li>
+		<li><b>Version:</b> v.20260113</li>
 		<li><b>Depends:</b> Smart,  SmartEnvironment, SmartCipherCrypto</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -734,7 +734,81 @@ IP address and the browser signature of the client. The Smart Session provides a
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20200121 -->
+<!-- methods r.20250107 -->
+<div class="doc-container" id="Method--validate_cluster_id">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>validate_cluster_id</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$cluster` Parameter is REQUIRED">$cluster</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if the cluster ID is valid or FALSE if not<br>
+@param: {STRING} $cluster: The Auth Cluster ID ; empty or max length is 63, can contain just: _ a-z 0-9 -</div>
+	
+			<div class="doc-method-comments">Validate an Auth Cluster ID, as a sub-domain name for Auth</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--get_cluster_id">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_cluster_id</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} `` empty string if Master, or sub-domain if Auth Cluster Slave, ex: `srv1`</div>
+	
+			<div class="doc-method-comments">Get the current (Server) Cluster ID, as a sub-domain name for Auth, from what is set into: SMART_FRAMEWORK_AUTH_CLUSTER_ID</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--is_cluster_master_auth">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>is_cluster_master_auth</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if the cluster ID is Empty (is Master) or FALSE if the cluster ID is non-empty, a slave node</div>
+	
+			<div class="doc-method-comments">Tests if current Auth Server is the Master Auth, used for clustered Authentication only</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--is_cluster_current_workspace">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>is_cluster_current_workspace</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if the cluster ID is Empty (is Master) or FALSE if the cluster ID is non-empty, a slave node</div>
+	
+			<div class="doc-method-comments">Tests if current Auth Server is the Master Auth, used for clustered Authentication only</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--validate_auth_ext_username">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>validate_auth_ext_username</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$auth_user_name` Parameter is REQUIRED">$auth_user_name</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if the username is valid or FALSE if not<br>
+@param: {STRING} $auth_user_name: The Auth User Name to be validated ; max length is 25, can contain just: _ a-z 0-9 - . @</div>
+	
+			<div class="doc-method-comments">Validate an extended Auth User Name, ex: using email as username</div>
+	
+	
+	
+</div>
 <div class="doc-container" id="Method--validate_auth_username">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>validate_auth_username</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$auth_user_name` Parameter is REQUIRED">$auth_user_name</span></b></span>, 
@@ -748,7 +822,7 @@ IP address and the browser signature of the client. The Smart Session provides a
 @param: {STRING} $auth_user_name: The Auth User Name to be validated ; max length is 25, can contain just: a-z 0-9 .<br>
 @param: {BOOL} $check_reasonable: Check for reasonable length ; if FALSE, min length is 3 ; if TRUE, min length is 5</div>
 	
-			<div class="doc-method-comments">Validate an Auth User Name</div>
+			<div class="doc-method-comments">Validate a standard Auth User Name</div>
 	
 	
 	
@@ -814,20 +888,37 @@ It must use the same complexity check as it was used when password was hashed ; 
 	
 	
 </div>
-<div class="doc-container" id="Method--set_login_data">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>set_login_data</b></span>&nbsp;(
+<div class="doc-container" id="Method--lock_auth_data">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>lock_auth_data</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;VOID
+	
+	
+	
+			<div class="doc-method-comments">Lock the (in-memory) Auth Login Data<br>
+This should prevent running Set Auth Data after certain waypoint in code</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--set_auth_data">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>set_auth_data</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_realm` Parameter is REQUIRED">$y_realm</span></b></span>, 
 	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_method` Parameter is REQUIRED">$y_method</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_cluster` Parameter is REQUIRED">$y_cluster</span></b></span>, 
+	<i>int</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_algo_pass` Parameter is REQUIRED">$y_algo_pass</span></b></span>, 
 	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_hashpass` Parameter is REQUIRED">$y_hashpass</span></b></span>, 
-	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_user_id` Parameter is REQUIRED">$y_user_id</span></b></span>, 
 	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_user_name` Parameter is REQUIRED">$y_user_name</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_user_id` Parameter is REQUIRED">$y_user_id</span></b></span>, 
 	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_user_email` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_user_email</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
 	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_user_fullname` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_user_fullname</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>, 
 	<i>ARRAY/STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_user_privileges_list` Parameter is OPTIONAL, with the Default Value: [0 =&gt; &quot;none&quot;, 1 =&gt; &quot;no-privilege&quot;]">$y_user_privileges_list</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>[0 =&gt; &quot;none&quot;, 1 =&gt; &quot;no-privilege&quot;]</b></span>, 
 	<i>ARRAY/STRING</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_user_restrictions_list` Parameter is OPTIONAL, with the Default Value: [0 =&gt; &quot;none&quot;, 1 =&gt; &quot;no-restriction&quot;]">$y_user_restrictions_list</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>[0 =&gt; &quot;none&quot;, 1 =&gt; &quot;no-restriction&quot;]</b></span>, 
+	<i>array</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_keys` Parameter is OPTIONAL, with the Default Value: []">$y_keys</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>[]</b></span>, 
 	<i>int</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_user_quota` Parameter is OPTIONAL, with the Default Value: -1">$y_user_quota</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>-1</b></span>, 
 	<i>array</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_user_metadata` Parameter is OPTIONAL, with the Default Value: []">$y_user_metadata</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>[]</b></span>, 
-	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_keys` Parameter is OPTIONAL, with the Default Value: &quot;&quot;">$y_keys</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>&quot;&quot;</b></span>
+	<i>array</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_workspaces` Parameter is OPTIONAL, with the Default Value: []">$y_workspaces</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>[]</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
@@ -836,16 +927,19 @@ It must use the same complexity check as it was used when password was hashed ; 
 			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if all data is OK, FALSE if not or try to reauthenticate under the same execution (which is not allowed ; must be just once per execution)<br>
 @param: {STRING} $y_realm: *OPTIONAL* The user Authentication Realm(s)<br>
 @param: {ENUM} $y_method: *OPTIONAL* The authentication method used, as description only: HTTP-BASIC / OTHER / ...<br>
-@param: {STRING} $y_hashpass: *OPTIONAL* The user login password hash or plain password ; for admin/task area it only supports the SmartHashCrypto::password() type pass hash (fixed, 128 characters long) and NOT the plain password ; for index area (and other areas) it may store either: the plain password (7..55 characters) or the pass hash (60..128 characters) ; is not recommended to store here the plain password ; however, it will be stored in memory as encrypted to avoid exposure<br>
-@param: {STRING} $y_user_id: The user (login) ID ; can be the Username or Email (on backend this should be always set with the same value as Username)<br>
+@param: {STRING} $y_cluster: Cluster ID or ''<br>
+@param: {INTEGER} $y_algo_pass: The Pass (Hash) Algo<br>
+@param: {STRING} $y_hashpass: The user login password hash or plain password ; for admin/task area it only supports the SmartHashCrypto::password() type pass hash (fixed, 128 characters long) and NOT the plain password ; for index area (and other areas) it may store either: the plain password (7..55 characters) or the pass hash (60..128 characters) ; is not recommended to store here the plain password ; however, it will be stored in memory as encrypted to avoid exposure<br>
 @param: {STRING} $y_user_name: The user username ; Mandatory ; must be valid safe username<br>
+@param: {STRING} $y_user_id: The user (login) ID ; can be the Username or Email (on backend this should be always set with the same value as Username)<br>
+@param: {ARRAY} $y_keys: *OPTIONAL* The user Private Key (will be stored in memory as encrypted to avoid exposure)<br>
 @param: {STRING} $y_user_email: *OPTIONAL* The user Email ; if email is used as login ID this may be redundant !<br>
 @param: {STRING} $y_user_fullname: *OPTIONAL* The user Full Name (First Name + Last Name)<br>
 @param: {ARRAY/STRING} $y_user_privileges_list: *OPTIONAL* The user Privileges List as string '&lt;priv-a&gt;,&lt;priv-b&gt;,...' or array ['priv-a','priv-b'] that list all the current user privileges ; a privilege key must have 3..28 characters and can contain only: a-z -<br>
 @param: {ARRAY/STRING} $y_user_restrictions_list: *OPTIONAL* The user Restrictions List as string '&lt;restr-a&gt;,&lt;restr-b&gt;,...' or array ['restr-a','restr-b'] that list all the current user restrictions ; a restriction key must have 3..28 characters and can contain only: a-z -<br>
 @param: {STRING} $y_user_quota: *OPTIONAL* The user (storage) Quota<br>
 @param: {ARRAY} $y_user_metadata: *OPTIONAL* The user metainfo, associative array with max 7 levels (sub-arrays must have no more than 6 sub-levels, can be either associative or not) ; Ex: [ 'some-key' =&gt; 101, 'another-key' =&gt; 'abc', '3rd-key' =&gt; true, '4th-key' =&gt; [0, 1, 2, 'a', 'b', 'c'], '5th-key' =&gt; [ 'x' =&gt; 'X', 'y' =&gt; 'y', 'z' =&gt; 'Z' ] ]<br>
-@param: {STRING} $y_keys: *OPTIONAL* The user Private Key (will be stored in memory as encrypted to avoid exposure)</div>
+@param: {ARRAY} $y_workspaces: *OPTIONAL* The user workspaces defs with max 1 level</div>
 	
 			<div class="doc-method-comments">Set the (in-memory) Auth Login Data<br>
 It can be used just once per execution (session) as it stores the data using constants,<br>
@@ -854,8 +948,8 @@ and the data cannot be changed after a successful or failed authentication has s
 	
 	
 </div>
-<div class="doc-container" id="Method--check_login">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>check_login</b></span>&nbsp;(
+<div class="doc-container" id="Method--is_authenticated">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>is_authenticated</b></span>&nbsp;(
 		
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
@@ -868,8 +962,8 @@ and the data cannot be changed after a successful or failed authentication has s
 	
 	
 </div>
-<div class="doc-container" id="Method--get_login_data">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_login_data</b></span>&nbsp;(
+<div class="doc-container" id="Method--get_auth_data">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_auth_data</b></span>&nbsp;(
 		<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$y_skip_sensitive` Parameter is OPTIONAL, with the Default Value: false">$y_skip_sensitive</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
 	
 	
@@ -878,7 +972,7 @@ and the data cannot be changed after a successful or failed authentication has s
 	
 			<div class="doc-method-ret-params">@return: {ARRAY} a complete array containing all the meta-data of the current auth user</div>
 	
-			<div class="doc-method-comments">Get the (in-memory) Auth Login Data</div>
+			<div class="doc-method-comments">Get the (in-memory) Auth Auth Data</div>
 	
 	
 	
@@ -918,9 +1012,23 @@ and the data cannot be changed after a successful or failed authentication has s
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
 	
 	
-			<div class="doc-method-ret-params">@return: {STRING} returns the current user auth realm or an empty string if not set</div>
+			<div class="doc-method-ret-params">@return: {STRING} returns the current user auth realm or 'DEFAULT' if not set or empty</div>
 	
 			<div class="doc-method-comments">Get the auth realm of the current user stored in the (in-memory) Auth Login Data</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--get_auth_cluster_id">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_auth_cluster_id</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} returns the current user auth cluster ID or an empty string</div>
+	
+			<div class="doc-method-comments">Get the current user auth cluster ID from the (in-memory) Auth Login Data</div>
 	
 	
 	
@@ -967,6 +1075,34 @@ and the data cannot be changed after a successful or failed authentication has s
 	
 	
 </div>
+<div class="doc-container" id="Method--get_auth_passalgo">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_auth_passalgo</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;INT
+	
+	
+			<div class="doc-method-ret-params">@return: {INT} The pass algo or -1 or -2 if invalid or does not exists</div>
+	
+			<div class="doc-method-comments">Get the pass algo</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--get_auth_passalgo_name">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_auth_passalgo_name</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} The pass algo name or Unknown</div>
+	
+			<div class="doc-method-comments">Get the pass algo name</div>
+	
+	
+	
+</div>
 <div class="doc-container" id="Method--get_user_email">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_user_email</b></span>&nbsp;(
 		
@@ -981,6 +1117,48 @@ and the data cannot be changed after a successful or failed authentication has s
 	
 	
 </div>
+<div class="doc-container" id="Method--get_user_fa2secret">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_user_fa2secret</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} The plain fa2-secret if was set and valid or empty string</div>
+	
+			<div class="doc-method-comments">Get the auth user (safe) stored 2fa-secret from (in-memory)</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--get_user_seckey">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_user_seckey</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} The plain secret-key if was set and valid or empty string</div>
+	
+			<div class="doc-method-comments">Get the auth user (safe) stored secret-key from (in-memory)</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--get_user_ssekey">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_user_ssekey</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} The plain security-key if was set and valid or empty string</div>
+	
+			<div class="doc-method-comments">Get the auth user (safe) stored security-key from (in-memory)</div>
+	
+	
+	
+</div>
 <div class="doc-container" id="Method--get_user_privkey">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_user_privkey</b></span>&nbsp;(
 		
@@ -991,6 +1169,48 @@ and the data cannot be changed after a successful or failed authentication has s
 			<div class="doc-method-ret-params">@return: {STRING} The plain private-key if was set and valid or empty string</div>
 	
 			<div class="doc-method-comments">Get the auth user (safe) stored private-key from (in-memory)</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--get_user_pubkey">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_user_pubkey</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} The plain public-key if was set and valid or empty string</div>
+	
+			<div class="doc-method-comments">Get the auth user stored public-key from (in-memory)</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--get_user_cert">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_user_cert</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} The plain sign-cert if was set and valid or empty string</div>
+	
+			<div class="doc-method-comments">Get the auth user stored sign-cert from (in-memory)</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--get_user_infocert">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_user_infocert</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} The plain info-sign-cert if was set and valid or empty string</div>
+	
+			<div class="doc-method-comments">Get the auth user stored info-sign-cert from (in-memory)</div>
 	
 	
 	
@@ -1140,8 +1360,56 @@ and the data cannot be changed after a successful or failed authentication has s
 	
 	
 </div>
-<div class="doc-container" id="Method--encrypt_privkey">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>encrypt_privkey</b></span>&nbsp;(
+<div class="doc-container" id="Method--get_user_workspaces">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_user_workspaces</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
+	
+	
+			<div class="doc-method-ret-params">@return: {ARRAY} returns an array with all current user workspaces</div>
+	
+			<div class="doc-method-comments">Get the current user workspaces stored in the (in-memory) Auth Login Data</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--get_user_prefixed_path_by_area_and_auth_id">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_user_prefixed_path_by_area_and_auth_id</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} empty string `` on error or unauthenticated ; or path, ex: `idx/ab/abc7.e8` | `adm/d7/8xyz.w0`</div>
+	
+			<div class="doc-method-comments">Get the current user path prefix by area and auth user ID<br>
+works just for already authenticated user</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--get_user_prefixed_path_by_area_and_account_id">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>get_user_prefixed_path_by_area_and_account_id</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$area` Parameter is REQUIRED">$area</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$id` Parameter is REQUIRED">$id</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
+	
+	
+			<div class="doc-method-ret-params">@return: {STRING} empty string `` on error ; or path, ex: `idx/ab/abc7.e8` | `adm/d7/8xyz.w0`<br>
+@param: {STRING} $area: Area: `idx` | `adm`<br>
+@param: {STRING} $id: The user ID, must be valid as userName</div>
+	
+			<div class="doc-method-comments">Get the user path prefix by area and user ID<br>
+works outside of authentication, for management purposes</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--encrypt_sensitive_data">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>encrypt_sensitive_data</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_pkey` Parameter is REQUIRED">$y_pkey</span></b></span>, 
 	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_secret` Parameter is REQUIRED">$y_secret</span></b></span>
 	
@@ -1160,8 +1428,8 @@ This is completely safe as long as the users login passwords are supposed to be 
 	
 	
 </div>
-<div class="doc-container" id="Method--decrypt_privkey">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>decrypt_privkey</b></span>&nbsp;(
+<div class="doc-container" id="Method--decrypt_sensitive_data">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>decrypt_sensitive_data</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_pkey` Parameter is REQUIRED">$y_pkey</span></b></span>, 
 	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_secret` Parameter is REQUIRED">$y_secret</span></b></span>
 	
@@ -1200,6 +1468,10 @@ This is completely safe as long as the users login passwords are supposed to be 
 </div>
 <!-- Skip Internal-Priv Method: `swt_token_validate()` -->
 <!-- Skip Internal-Priv Method: `swt_token_create()` -->
+<!-- Skip Internal-Priv Method: `jwt_token_create()` -->
+<!-- Skip Internal-Priv Method: `jwt_token_validate()` -->
+<!-- Skip Internal-Priv Method: `jwt_valid_format()` -->
+<!-- Skip Internal-Priv Method: `jwt_token_display()` -->
 <!-- Skip Internal-Priv Method: `registerInternalCacheToDebugLog()` -->
 
 <!-- Properties -->
@@ -1207,20 +1479,80 @@ This is completely safe as long as the users login passwords are supposed to be 
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20200121 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20200121 -->
+<!-- constants r.20250107 -->
+<div class="doc-container" id="Constant--ALGO_PASS_NONE">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>ALGO_PASS_NONE</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>0</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--ALGO_PASS_PLAIN">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>ALGO_PASS_PLAIN</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>1</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--ALGO_PASS_SMART_SAFE_SF_PASS">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>ALGO_PASS_SMART_SAFE_SF_PASS</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>77</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--ALGO_PASS_SMART_SAFE_ARGON_PASS">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>ALGO_PASS_SMART_SAFE_ARGON_PASS</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>78</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--ALGO_PASS_SMART_SAFE_BCRYPT">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>ALGO_PASS_SMART_SAFE_BCRYPT</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>123</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--ALGO_PASS_SMART_SAFE_OPQ_TOKEN">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>ALGO_PASS_SMART_SAFE_OPQ_TOKEN</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>204</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--ALGO_PASS_SMART_SAFE_WEB_TOKEN">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>ALGO_PASS_SMART_SAFE_WEB_TOKEN</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>216</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--ALGO_PASS_SMART_SAFE_SWT_TOKEN">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>ALGO_PASS_SMART_SAFE_SWT_TOKEN</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>228</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--ALGO_PASS_CUSTOM_TOKEN">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>ALGO_PASS_CUSTOM_TOKEN</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>244</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--ALGO_PASS_CUSTOM_HASH_PASS">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>ALGO_PASS_CUSTOM_HASH_PASS</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>255</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
 <div class="doc-container" id="Constant--DEFAULT_PRIVILEGES">
 	<span class="doc-modifiers">public</span> <i>const</i> <b>DEFAULT_PRIVILEGES</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;&lt;super-admin&gt;,&lt;admin&gt;&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
 	
 </div>
+<div class="doc-container" id="Constant--DEFAULT_RESTRICTIONS">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>DEFAULT_RESTRICTIONS</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
 <div class="doc-container" id="Constant--REGEX_VALID_PRIV_KEY">
 	<span class="doc-modifiers">public</span> <i>const</i> <b>REGEX_VALID_PRIV_KEY</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;/^([a-z]{1}[a-z0-9\\-\\:]{0,20}[a-z0-9]{1})$/&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--REGEX_SAFE_AUTH_EMAIL_ADDRESS">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>REGEX_SAFE_AUTH_EMAIL_ADDRESS</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;/^[_a-z0-9\\-\\.]{1,41}@[a-z0-9\\-\\.]{3,30}$/&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--REGEX_SAFE_AUTH_USER_NAME">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>REGEX_SAFE_AUTH_USER_NAME</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;/^[_a-z0-9\\-\\.@]{5,72}$/&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--REGEX_SAFE_CLUSTER_ID">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>REGEX_SAFE_CLUSTER_ID</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;/^[_a-z0-9\\-]{1,63}$/&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--REGEX_VALID_JWT_SERIAL">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>REGEX_VALID_JWT_SERIAL</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;/^[A-Z0-9]{10}\\-[A-Z0-9]{10}$/&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
 	
 </div>
 <div class="doc-container" id="Constant--PASSWORD_BHASH_LENGTH">
@@ -1264,9 +1596,9 @@ This is completely safe as long as the users login passwords are supposed to be 
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20210420 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1292,6 +1624,21 @@ function smartHandleDocSelector(obj) {
 		</optgroup>
 		<optgroup label="Class Methods">
 			<option value="Methods--Summary-">Methods list</option>
+						<option value="Method--validate_cluster_id"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;validate_cluster_id()</option>
+			
+			
+						<option value="Method--get_cluster_id"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_cluster_id()</option>
+			
+			
+						<option value="Method--is_cluster_master_auth"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;is_cluster_master_auth()</option>
+			
+			
+						<option value="Method--is_cluster_current_workspace"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;is_cluster_current_workspace()</option>
+			
+			
+						<option value="Method--validate_auth_ext_username"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;validate_auth_ext_username()</option>
+			
+			
 						<option value="Method--validate_auth_username"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;validate_auth_username()</option>
 			
 			
@@ -1306,13 +1653,16 @@ function smartHandleDocSelector(obj) {
 						<option value="Method--password_hash_check"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;password_hash_check()</option>
 			
 			
-						<option value="Method--set_login_data"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;set_login_data()</option>
+						<option value="Method--lock_auth_data"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;lock_auth_data()</option>
 			
 			
-						<option value="Method--check_login"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;check_login()</option>
+						<option value="Method--set_auth_data"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;set_auth_data()</option>
 			
 			
-						<option value="Method--get_login_data"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_login_data()</option>
+						<option value="Method--is_authenticated"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;is_authenticated()</option>
+			
+			
+						<option value="Method--get_auth_data"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_auth_data()</option>
 			
 			
 						<option value="Method--get_auth_area"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_auth_area()</option>
@@ -1324,6 +1674,9 @@ function smartHandleDocSelector(obj) {
 						<option value="Method--get_auth_realm"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_auth_realm()</option>
 			
 			
+						<option value="Method--get_auth_cluster_id"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_auth_cluster_id()</option>
+			
+			
 						<option value="Method--get_auth_id"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_auth_id()</option>
 			
 			
@@ -1333,10 +1686,34 @@ function smartHandleDocSelector(obj) {
 						<option value="Method--get_auth_passhash"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_auth_passhash()</option>
 			
 			
+						<option value="Method--get_auth_passalgo"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_auth_passalgo()</option>
+			
+			
+						<option value="Method--get_auth_passalgo_name"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_auth_passalgo_name()</option>
+			
+			
 						<option value="Method--get_user_email"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_user_email()</option>
 			
 			
+						<option value="Method--get_user_fa2secret"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_user_fa2secret()</option>
+			
+			
+						<option value="Method--get_user_seckey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_user_seckey()</option>
+			
+			
+						<option value="Method--get_user_ssekey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_user_ssekey()</option>
+			
+			
 						<option value="Method--get_user_privkey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_user_privkey()</option>
+			
+			
+						<option value="Method--get_user_pubkey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_user_pubkey()</option>
+			
+			
+						<option value="Method--get_user_cert"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_user_cert()</option>
+			
+			
+						<option value="Method--get_user_infocert"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_user_infocert()</option>
 			
 			
 						<option value="Method--get_user_fullname"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_user_fullname()</option>
@@ -1369,13 +1746,30 @@ function smartHandleDocSelector(obj) {
 						<option value="Method--get_user_metadata"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_user_metadata()</option>
 			
 			
-						<option value="Method--encrypt_privkey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;encrypt_privkey()</option>
+						<option value="Method--get_user_workspaces"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_user_workspaces()</option>
 			
 			
-						<option value="Method--decrypt_privkey"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;decrypt_privkey()</option>
+						<option value="Method--get_user_prefixed_path_by_area_and_auth_id"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_user_prefixed_path_by_area_and_auth_id()</option>
+			
+			
+						<option value="Method--get_user_prefixed_path_by_area_and_account_id"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;get_user_prefixed_path_by_area_and_account_id()</option>
+			
+			
+						<option value="Method--encrypt_sensitive_data"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;encrypt_sensitive_data()</option>
+			
+			
+						<option value="Method--decrypt_sensitive_data"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;decrypt_sensitive_data()</option>
 			
 			
 						<option value="Method--safe_arr_privileges_or_restrictions"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;safe_arr_privileges_or_restrictions()</option>
+			
+			
+			
+			
+			
+			
+			
+			
 			
 			
 			
@@ -1392,9 +1786,39 @@ function smartHandleDocSelector(obj) {
 		</optgroup>
 		<optgroup label="Class Constants">
 			<option value="Constants--Summary-">Constants list</option>
+						<option value="Constant--ALGO_PASS_NONE">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;ALGO_PASS_NONE</option>
+			
+						<option value="Constant--ALGO_PASS_PLAIN">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;ALGO_PASS_PLAIN</option>
+			
+						<option value="Constant--ALGO_PASS_SMART_SAFE_SF_PASS">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;ALGO_PASS_SMART_SAFE_SF_PASS</option>
+			
+						<option value="Constant--ALGO_PASS_SMART_SAFE_ARGON_PASS">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;ALGO_PASS_SMART_SAFE_ARGON_PASS</option>
+			
+						<option value="Constant--ALGO_PASS_SMART_SAFE_BCRYPT">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;ALGO_PASS_SMART_SAFE_BCRYPT</option>
+			
+						<option value="Constant--ALGO_PASS_SMART_SAFE_OPQ_TOKEN">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;ALGO_PASS_SMART_SAFE_OPQ_TOKEN</option>
+			
+						<option value="Constant--ALGO_PASS_SMART_SAFE_WEB_TOKEN">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;ALGO_PASS_SMART_SAFE_WEB_TOKEN</option>
+			
+						<option value="Constant--ALGO_PASS_SMART_SAFE_SWT_TOKEN">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;ALGO_PASS_SMART_SAFE_SWT_TOKEN</option>
+			
+						<option value="Constant--ALGO_PASS_CUSTOM_TOKEN">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;ALGO_PASS_CUSTOM_TOKEN</option>
+			
+						<option value="Constant--ALGO_PASS_CUSTOM_HASH_PASS">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;ALGO_PASS_CUSTOM_HASH_PASS</option>
+			
 						<option value="Constant--DEFAULT_PRIVILEGES">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;DEFAULT_PRIVILEGES</option>
 			
+						<option value="Constant--DEFAULT_RESTRICTIONS">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;DEFAULT_RESTRICTIONS</option>
+			
 						<option value="Constant--REGEX_VALID_PRIV_KEY">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;REGEX_VALID_PRIV_KEY</option>
+			
+						<option value="Constant--REGEX_SAFE_AUTH_EMAIL_ADDRESS">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;REGEX_SAFE_AUTH_EMAIL_ADDRESS</option>
+			
+						<option value="Constant--REGEX_SAFE_AUTH_USER_NAME">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;REGEX_SAFE_AUTH_USER_NAME</option>
+			
+						<option value="Constant--REGEX_SAFE_CLUSTER_ID">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;REGEX_SAFE_CLUSTER_ID</option>
+			
+						<option value="Constant--REGEX_VALID_JWT_SERIAL">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;REGEX_VALID_JWT_SERIAL</option>
 			
 						<option value="Constant--PASSWORD_BHASH_LENGTH">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;PASSWORD_BHASH_LENGTH</option>
 			
@@ -1416,7 +1840,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -1430,13 +1854,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:19 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:49 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

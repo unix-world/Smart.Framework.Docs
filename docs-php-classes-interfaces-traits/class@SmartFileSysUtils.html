@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -713,8 +713,8 @@ To handle this in an easy and safe manner, use the function SmartFileSysUtils::a
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartFileSysUtils</span></li>
 		
-		<li><b>Version:</b> v.20240106</li>
-		<li><b>Depends:</b> classes:  Smart, SmartEnvironment</li>
+		<li><b>Version:</b> v.20260103</li>
+		<li><b>Depends:</b> classes:  Smart, SmartEnvironment ; constants: SMART_FRAMEWORK_CHMOD_DIRS, SMART_FRAMEWORK_CHMOD_FILES</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
 		
@@ -726,7 +726,7 @@ To handle this in an easy and safe manner, use the function SmartFileSysUtils::a
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20200121 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--staticFileExists">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>staticFileExists</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$file_relative_path` Parameter is REQUIRED">$file_relative_path</span></b></span>
@@ -747,7 +747,8 @@ It should be used just with static files which does not changes between executio
 <div class="doc-container" id="Method--readStaticFile">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>readStaticFile</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$file_relative_path` Parameter is REQUIRED">$file_relative_path</span></b></span>, 
-	<i>int</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$length` Parameter is OPTIONAL, with the Default Value: null">$length</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>null</b></span>
+	<i>int</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$length` Parameter is OPTIONAL, with the Default Value: null">$length</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>null</b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$dont_read_if_overSized` Parameter is OPTIONAL, with the Default Value: false">$dont_read_if_overSized</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
 	
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
@@ -755,10 +756,32 @@ It should be used just with static files which does not changes between executio
 	
 			<div class="doc-method-ret-params">@return: {STRING} The file contents or an empty string if file not found or cannot read file or other error cases<br>
 @param: {STRING} $file_relative_path: The relative path of file to be read (can be a symlink to a file)<br>
-@param: {INTEGER+} $length: DEFAULT is 0 (zero) ; If zero will read the entire file ; If &gt; 0 (ex: 100) will read only the first 100 bytes fro the file or less if the file size is under 100 bytes</div>
+@param: {INTEGER+} $length: DEFAULT is 0 (zero) ; If zero will read the entire file ; If &gt; 0 (ex: 100) will read only the first 100 bytes fro the file or less if the file size is under 100 bytes<br>
+@param: {BOOL} $dont_read_if_overSized: DEFAULT is FALSE ; if set to TRUE and a Max length is Set the file will not be read if size is more than max length</div>
 	
 			<div class="doc-method-comments">FAST READ A STATIC FILE CONTENTS ONLY. ALSO CHECKS IF THE FILE EXISTS AND IS READABLE. WORKS ONLY WITH RELATIVE PATHS (Ex: path/to/a/file.ext).<br>
 It should be used just with static files which does not changes between executions ; it does not use safe lock checks</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--writeStaticFile">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>writeStaticFile</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$file_relative_path` Parameter is REQUIRED">$file_relative_path</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$contents` Parameter is REQUIRED">$contents</span></b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$skip_check_if_exists` Parameter is OPTIONAL, with the Default Value: false">$skip_check_if_exists</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>false</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOL} TRUE if success, FALSE if fail<br>
+@param: {STRING} $file_relative_path: The relative path of file to be written (can be a symlink to a file)<br>
+@param: {STRING} $contents: The file contents<br>
+@param: {BOOL} $skip_check_if_exists: default is FALSE ; if set to TRUE if file exists will don't check if the content is identical</div>
+	
+			<div class="doc-method-comments">FAST WRITE A STATIC FILE WITH CONTENTS. ONLY WRITES IF THE FILE CONTENT DIFFERS OR DOES NOT EXISTS. WORKS ONLY WITH RELATIVE PATHS (Ex: path/to/a/file.ext).<br>
+It should be used just with static files which does not changes too often between executions ; it does not use safe lock checks</div>
 	
 	
 	
@@ -905,8 +928,8 @@ WARNING: path_info('c:\\file.php') will not work correct on unix, but on windows
 	
 	
 </div>
-<div class="doc-container" id="Method--prefixedUidB62Path">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>prefixedUidB62Path</b></span>&nbsp;(
+<div class="doc-container" id="Method--prefixedUidPath">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>prefixedUidPath</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_id` Parameter is REQUIRED">$y_id</span></b></span>, 
 	<i>int</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_spectrum` Parameter is REQUIRED">$y_spectrum</span></b></span>
 	
@@ -918,57 +941,12 @@ WARNING: path_info('c:\\file.php') will not work correct on unix, but on windows
 @param: {STRING} $y_id: 8..72 chars id (uid)<br>
 @param: {INTEGER} $y_spectrum: 1..7 the expanding levels spectrum</div>
 	
-			<div class="doc-method-comments">Generate a prefixed dir from a base62 (also supports: base58 / base36 / base32 / base16 / base10) UID, 8..72 chars length : [a-zA-Z0-9].<br>
+			<div class="doc-method-comments">Generate a prefixed dir from a base62 / base58 / base36 / base32 / base16 / base10 UID, 8..72 chars length : [a-zA-Z0-9].<br>
 It does include also the UID as final folder segment.<br>
-Example: for ID 8iAz0WtTuV72QZ72Re5X0PlIgB23M6 will return: 8/8iAz0WtTuV72QZ72Re5X0PlIgB23M6/ as the generated prefixed path.<br>
+Example: for ID 8iAz0WtTuV72QZ72Re5X0PlIgB23M6 and spectrum 2 will return: 8i/Az/8iAz0WtTuV72QZ72Re5X0PlIgB23M6/ as the generated prefixed path.<br>
 This have to be used for large folder storage structure to avoid limitations on some filesystems (ext3 / ntfs) where max sub-dirs per dir is 32k.<br>
-The prefixed path will be grouped by each 1 character (max sub-folders per folder: 62).<br>
-If a shorther length than 8 chars is provided will pad with 0 on the left.<br>
-If a longer length than 72 or an invalid ID is provided will reset the ID to 00000000 (8 chars) for the given length, but also drop a warning.</div>
-	
-	
-	
-</div>
-<div class="doc-container" id="Method--prefixedUuid10B36Path">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>prefixedUuid10B36Path</b></span>&nbsp;(
-		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_id` Parameter is REQUIRED">$y_id</span></b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
-	
-	
-			<div class="doc-method-ret-params">@return: {STRING} Prefixed Path<br>
-@param: {STRING} $y_id: 10 chars id (uuid10)</div>
-	
-			<div class="doc-method-comments">Generate a prefixed dir from a base36 UUID, 10 chars length : [A-Z0-9].<br>
-It does include also the UUID as final folder segment.<br>
-Example: for ID ABCDEFGHIJ09 will return: 9T/5B/0B/9M/9T5B0B9M8M/ as the generated prefixed path.<br>
-This have to be used for large folder storage structure to avoid limitations on some filesystems (ext3 / ntfs) where max sub-dirs per dir is 32k.<br>
-The prefixed path will be grouped by each 2 characters (max sub-folders per folder: 36 x 36 = 1296).<br>
-If a shorther length than 10 chars is provided will pad with 0 on the left.<br>
-If a longer length or an invalid ID is provided will reset the ID to 000000..00 (10 chars) for the given length, but also drop a warning.</div>
-	
-	
-	
-</div>
-<div class="doc-container" id="Method--prefixedUuid40B16Path">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>prefixedUuid40B16Path</b></span>&nbsp;(
-		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_id` Parameter is REQUIRED">$y_id</span></b></span>
-	
-	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;STRING
-	
-	
-			<div class="doc-method-ret-params">@return: {STRING} Prefixed Path<br>
-@param: {STRING} $y_id: 40 chars id (sha1)</div>
-	
-			<div class="doc-method-comments">Generate a prefixed dir from a base16 UUID (sha1), 40 chars length : [a-f0-9].<br>
-It does NOT include the ID final folder.<br>
-Example: for ID df3a808b2bf20aaab4419c43d9f3a6143bd6b4bb will return: d/f3a/808/b2b/f20/aaa/b44/19c/43d/9f3/a61/43b/d6b/ as the generated prefixed path.<br>
-This have to be used for large folder storage structure to avoid limitations on some filesystems (ext3 / ntfs) where max sub-dirs per dir is 32k.<br>
-The prefixed folder will be grouped by each 3 characters (max sub-folders per folder: 16 x 16 x 16 = 4096).<br>
-If a shorther length than 40 chars is provided will pad with 0 on the left.<br>
-If a longer length than 40 chars or an invalid ID is provided will reset the ID to 000000..00 (40 chars) for the given length, but also drop a warning.</div>
+The prefixed path will be grouped by each 2 characters (sub-folders per folder, max: 62 * 62 = 3844 ; min: 10 * 10 = 100).<br>
+The minimum length of UID is 8 chars, the max length is 72 chars.</div>
 	
 	
 	
@@ -1014,14 +992,14 @@ If a longer length than 40 chars or an invalid ID is provided will reset the ID 
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20200121 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20200121 -->
+<!-- constants r.20250107 -->
 
 <!-- Sample Code -->
 <br>
@@ -1053,9 +1031,9 @@ If a longer length than 40 chars or an invalid ID is provided will reset the ID 
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20210420 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1085,6 +1063,9 @@ function smartHandleDocSelector(obj) {
 			
 			
 						<option value="Method--readStaticFile"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;readStaticFile()</option>
+			
+			
+						<option value="Method--writeStaticFile"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;writeStaticFile()</option>
 			
 			
 			
@@ -1123,13 +1104,7 @@ function smartHandleDocSelector(obj) {
 						<option value="Method--extractPathFileExtension"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;extractPathFileExtension()</option>
 			
 			
-						<option value="Method--prefixedUidB62Path"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;prefixedUidB62Path()</option>
-			
-			
-						<option value="Method--prefixedUuid10B36Path"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;prefixedUuid10B36Path()</option>
-			
-			
-						<option value="Method--prefixedUuid40B16Path"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;prefixedUuid40B16Path()</option>
+						<option value="Method--prefixedUidPath"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;prefixedUidPath()</option>
 			
 			
 						<option value="Method--getMimeType"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getMimeType()</option>
@@ -1156,7 +1131,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -1170,13 +1145,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:18 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:49 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

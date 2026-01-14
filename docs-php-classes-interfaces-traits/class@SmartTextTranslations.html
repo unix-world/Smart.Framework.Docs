@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
 <meta name="description" content="\SmartTextTranslations final class \ SmartTextTranslations { } :: Class Smart Text Translations. It provides a Language Based Text Translations Layer for">
-<meta name="keywords" content="smarttexttranslations, final, class, smart, text, translations, it, provides, a, language, based, layer, for, the, smart framework, applications, php, located, at, lib core lib translations php, package, application translations, namespace, name, version, v, depends, classes, smartpersistentcache, smartadaptertexttranslations, smartframeworkregistry, usage, static, object, class method, this, only, methods, public, function, getavailablelanguages, array, return, with, available, ids, sample, en, ro, regional, get, languages, getlistoflanguages, list, english, romanian, isdefaultlanguage, string, y language, boolean, returns, true, if, current, is, default, session, or, parameter, otherwise, false, param, optional, id, to, be, checked, will, check, checks, getdefaultlanguage, as, set, by, init, getlanguage, config, url, cookie, method set, setlanguage, successful, not, validatelanguage, defined, in, configs">
+<meta name="keywords" content="smarttexttranslations, final, class, smart, text, translations, it, provides, a, language, based, layer, for, the, smart framework, applications, php, located, at, lib core lib translations php, package, application translations, namespace, name, version, v, depends, classes, smartpersistentcache, smartadaptertexttranslations, smartframeworkregistry, usage, static, object, class method, this, only, methods, public, function, getavailablelanguages, array, return, with, available, ids, sample, en, ro, regional, get, languages, getlistoflanguages, list, english, romanian, isdefaultlanguage, string, y language, boolean, returns, true, if, current, is, default, session, or, parameter, otherwise, false, param, optional, id, to, be, checked, will, check, checks, getdefaultlanguage, as, set, by, init, getlanguage, config, url, cookie, method set, setlanguage, successful, not, validatelanguage, valid, chars, and">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 <link rel="icon" href="data:,">
 <title>PHP Documentation for: \SmartTextTranslations</title>
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -707,7 +707,7 @@ It provides a Language Based Text Translations Layer for the Smart.Framework bas
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartTextTranslations</span></li>
 		
-		<li><b>Version:</b> v.20231030</li>
+		<li><b>Version:</b> v.20251210</li>
 		<li><b>Depends:</b> classes:  Smart, SmartPersistentCache, SmartAdapterTextTranslations, SmartFrameworkRegistry</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -720,7 +720,7 @@ It provides a Language Based Text Translations Layer for the Smart.Framework bas
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20200121 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--getAvailableLanguages">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getAvailableLanguages</b></span>&nbsp;(
 		
@@ -817,7 +817,7 @@ It provides a Language Based Text Translations Layer for the Smart.Framework bas
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOLEAN
 	
 	
-			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if language defined in configs, FALSE if not<br>
+			<div class="doc-method-ret-params">@return: {BOOLEAN} TRUE if language is 2 valid chars and also defined in configs, FALSE if not<br>
 @param: {STRING} $y_language: The language ID ; sample (for English) will be: 'en'</div>
 	
 			<div class="doc-method-comments">Validate Language</div>
@@ -825,6 +825,8 @@ It provides a Language Based Text Translations Layer for the Smart.Framework bas
 	
 	
 </div>
+<!-- Skip Internal-Priv Method: `validateArea()` -->
+<!-- Skip Internal-Priv Method: `validateSubArea()` -->
 <div class="doc-container" id="Method--getTranslator">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getTranslator</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_area` Parameter is REQUIRED">$y_area</span></b></span>, 
@@ -858,14 +860,14 @@ It provides a Language Based Text Translations Layer for the Smart.Framework bas
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20200121 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20200121 -->
+<!-- constants r.20250107 -->
 
 <!-- Sample Code -->
 <br>
@@ -883,9 +885,9 @@ It provides a Language Based Text Translations Layer for the Smart.Framework bas
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20210420 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -932,6 +934,10 @@ function smartHandleDocSelector(obj) {
 						<option value="Method--validateLanguage"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;validateLanguage()</option>
 			
 			
+			
+			
+			
+			
 						<option value="Method--getTranslator"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getTranslator()</option>
 			
 			
@@ -965,7 +971,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -979,13 +985,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:19 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:50 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

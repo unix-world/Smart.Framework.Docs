@@ -5,11 +5,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
-<meta name="description" content="\SmartAppInfo final class \ SmartAppInfo implements \SmartInterfaceAppInfo { } :: Class: SmartAppInfo Provides some methods for integration between the">
-<meta name="keywords" content="smartappinfo, final, class, implements, smartinterfaceappinfo, provides, some, methods, for, integration, between, the, smart framework, app modules, language, php, located, at, lib run app bootstrap php, package, application, namespace, name, version, v, depends, usage, static, object, class method, this, only, inheritance, chart, →, ↳, interface, public, function, testifmoduleexists, string, y module name, bool, reimplemented, over, test, if, a, specific, app, module, exists, return, true, or, false, testiftemplateexists, y template name, template, properties, constants, sample, code, example, some method of this class, end, documentation, index, definition, list, generated, on">
+<meta name="description" content="\SmartCryptoEddsaSodium final class \ SmartCryptoEddsaSodium { } :: Class: SmartCryptoEddsaSodium - provides PHP LibSodium based EdDSA crypto">
+<meta name="keywords" content="smartcryptoeddsasodium, final, class, provides, php, libsodium, based, eddsa, crypto, implementation, supports, ed25519, language, located, at, lib framework lib cryptoas php, package, application, namespace, name, version, v, depends, extensions, classes, smart, usage, static, object, class method, this, only, methods, public, function, isavailable, bool, return, true, if, available, false, not, verifies, extension, is, and, the, ed25519newkeypair, string, secret, null, array, err, mode, encoding, privkey, pubkey, generates, a, new, key, pair, private, ed25519signdata, privatekey, publickey, message, signatureb64, param, base64, to, be, signed, sign, using, ed25519verifysigneddata, verifyresult, must, verified, otherwise, may, or, integer, signature, with, verify, of, previous, properties, constants, documentation, index, definition, list, generated, on">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 <link rel="icon" href="data:,">
-<title>PHP Documentation for: \SmartAppInfo</title>
+<title>PHP Documentation for: \SmartCryptoEddsaSodium</title>
 <!-- CSS and Fonts -->
 <link rel="stylesheet" type="text/css" href="../fonts/source-sans-pro.css">
 <style type="text/css">
@@ -687,38 +687,31 @@ select#select-summary {
 
 </style>
 <!-- Headings -->
-<h1 title="PHP class: `\SmartAppInfo` @ PHP Namespace: `\`" id="Class--Summary-">
-	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\</span><span class="doc-name">SmartAppInfo</span><br>
+<h1 title="PHP class: `\SmartCryptoEddsaSodium` @ PHP Namespace: `\`" id="Class--Summary-">
+	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\</span><span class="doc-name">SmartCryptoEddsaSodium</span><br>
 	
-	<span title="implements Interface(s)" class="doc-implements"><i>implements</i> \SmartInterfaceAppInfo</span><br>
+	
 	{
 	
 	}&nbsp;::
 </h1>
 <!-- Description -->
-<div class="doc-comments">Class: SmartAppInfo<br>
-Provides some methods for integration between the Smart.Framework App/Modules.</div><br>
+<div class="doc-comments">Class: SmartCryptoEddsaSodium - provides PHP LibSodium based EdDSA crypto implementation<br>
+Supports: Ed25519</div><br>
 <!-- Metainfo -->
 <div class="doc-container">
 	<ul class="doc-list">
 		<li><span class="doc-language"><b>Language:</b> PHP<span></li>
-		<li><span class="doc-located"><b>Located at:</b> lib/run/app-bootstrap.php</span></li>
+		<li><span class="doc-located"><b>Located at:</b> lib/framework/lib_cryptoas.php</span></li>
 		<li><span class="doc-package"><b>Package:</b> Application</span></li>
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
-		<li><span class="doc-name"><b>Class Name:</b> SmartAppInfo</span></li>
+		<li><span class="doc-name"><b>Class Name:</b> SmartCryptoEddsaSodium</span></li>
 		
-		<li><b>Version:</b> v.20250107</li>
-		<li><b>Depends:</b> -</li>
+		<li><b>Version:</b> v.20260114</li>
+		<li><b>Depends:</b> extensions:  PHP LibSodium ; classes: Smart</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
 		
-				<li><b>Inheritance Chart:</b>
-			<ul>
-				<span class="doc-name"><i>class</i>&nbsp;\SmartAppInfo</span>&nbsp;&rarr;
-				<li>&nbsp;&#8627;&nbsp;<span class="doc-type-interface"><i>interface</i>&nbsp;\SmartInterfaceAppInfo</span></li>
-				
-			</ul>
-		</li>
 		
 	</ul>
 </div>
@@ -728,32 +721,71 @@ Provides some methods for integration between the Smart.Framework App/Modules.</
 	<h2 class="doc-header">class Methods</h2>
 </div>
 <!-- methods r.20250107 -->
-<div class="doc-container" id="Method--TestIfModuleExists">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>TestIfModuleExists</b></span>&nbsp;(
-		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_module_name` Parameter is REQUIRED">$y_module_name</span></b></span>
-	
+<div class="doc-container" id="Method--isAvailable">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>isAvailable</b></span>&nbsp;(
+		
 	
 	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
-	<br><span class="doc-reimplemented"><i>reimplemented&nbsp;</i>&nbsp;over&nbsp;<b>\SmartInterfaceAppInfo</b></span>
 	
 	
-			<div class="doc-method-comments">Test if a specific App Module Exists<br>
-RETURN: true or false</div>
+			<div class="doc-method-ret-params">@return: {BOOL} TRUE if available, FALSE if not</div>
+	
+			<div class="doc-method-comments">Verifies if LibSodium extension is available and supports the EdDSA Ed25519</div>
 	
 	
 	
 </div>
-<div class="doc-container" id="Method--TestIfTemplateExists">
-	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>TestIfTemplateExists</b></span>&nbsp;(
-		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$y_template_name` Parameter is REQUIRED">$y_template_name</span></b></span>
+<div class="doc-container" id="Method--ed25519NewKeypair">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>ed25519NewKeypair</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$secret` Parameter is OPTIONAL, with the Default Value: null">$secret</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>null</b></span>
 	
 	
-	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
-	<br><span class="doc-reimplemented"><i>reimplemented&nbsp;</i>&nbsp;over&nbsp;<b>\SmartInterfaceAppInfo</b></span>
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
 	
 	
-			<div class="doc-method-comments">Test if a specific App Template Exists<br>
-RETURN: true or false</div>
+			<div class="doc-method-ret-params">@return: {ARRAY} [ err, mode, encoding, secret, privKey, pubKey ]</div>
+	
+			<div class="doc-method-comments">Generates a New EdDSA Ed25519 Key Pair: Private Key and Public Key</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--ed25519SignData">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>ed25519SignData</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$privateKey` Parameter is REQUIRED">$privateKey</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$publicKey` Parameter is REQUIRED">$publicKey</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$message` Parameter is REQUIRED">$message</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
+	
+	
+			<div class="doc-method-ret-params">@return: {ARRAY} [ err, mode, signatureB64 ]<br>
+@param: {STRING} $privateKey: The Private Key (Base64)<br>
+@param: {STRING} $publicKey: The Public Key (Base64)<br>
+@param: {STRING} $message: The Message to be Signed</div>
+	
+			<div class="doc-method-comments">Sign a Message using EdDSA Ed25519</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--ed25519VerifySignedData">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>ed25519VerifySignedData</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$publicKey` Parameter is REQUIRED">$publicKey</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$signatureB64` Parameter is REQUIRED">$signatureB64</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$message` Parameter is REQUIRED">$message</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
+	
+	
+			<div class="doc-method-ret-params">@return: {ARRAY} [ err, mode, verifyResult ] ; the verifyResult must be TRUE if verified, otherwise may return NULL or INTEGER<br>
+@param: {STRING} $publicKey: The Public Key (Base64)<br>
+@param: {STRING} $signatureB64: The Signature (Base64)<br>
+@param: {STRING} $message: The Message to be verified with the signature</div>
+	
+			<div class="doc-method-comments">Verify the Signature of a previous Message using EdDSA Ed25519</div>
 	
 	
 	
@@ -774,19 +806,7 @@ RETURN: true or false</div>
 <!-- constants r.20250107 -->
 
 <!-- Sample Code -->
-<br>
-<div class="doc-container" id="SAMPLE--Code-">
-	<h2 class="doc-header">Sample code: PHP</h2>
-</div>
-<div class="doc-code">
-	<!-- pre (already preformatted) --><code><!-- Smart/HTML.Cleaner [D] --><pre><code style="color: #57A64A"><span style="color: #FFFFFF">&lt;?php
 
-</span><span style="color: #999999">// Usage example:
- </span><span style="color: #FFFFFF">SmartAppInfo</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">some_method_of_this_class</span><span style="color: #FFCC00; font-weight: bold">(...);
-
-</span><span style="color: #999999">// #end php code
-</span></code></pre><!-- [/D] Smart/HTML.Cleaner --></code><!-- /pre -->
-</div>
 <!-- Summary List -->
 <br>
 <!-- summary r.20250107 -->
@@ -811,16 +831,22 @@ function smartHandleDocSelector(obj) {
 </script>
 <div class="doc-summary">
 	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
-		<option value="" selected>* PHP Class \SmartAppInfo # Documentation Index *</option>
-		<optgroup label="Class \SmartAppInfo">
+		<option value="" selected>* PHP Class \SmartCryptoEddsaSodium # Documentation Index *</option>
+		<optgroup label="Class \SmartCryptoEddsaSodium">
 			<option value="Class--Summary-">Class definition</option>
 		</optgroup>
 		<optgroup label="Class Methods">
 			<option value="Methods--Summary-">Methods list</option>
-						<option value="Method--TestIfModuleExists"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;TestIfModuleExists()</option>
+						<option value="Method--isAvailable"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;isAvailable()</option>
 			
 			
-						<option value="Method--TestIfTemplateExists"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;TestIfTemplateExists()</option>
+						<option value="Method--ed25519NewKeypair"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;ed25519NewKeypair()</option>
+			
+			
+						<option value="Method--ed25519SignData"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;ed25519SignData()</option>
+			
+			
+						<option value="Method--ed25519VerifySignedData"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;ed25519VerifySignedData()</option>
 			
 			
 			
@@ -832,9 +858,6 @@ function smartHandleDocSelector(obj) {
 		<optgroup label="Class Constants">
 			<option value="Constants--Summary-">Constants list</option>
 			
-		</optgroup>
-				<optgroup label="Class Sample usage">
-			<option value="SAMPLE--Code-">Sample code</option>
 		</optgroup>
 		
 	</select>
@@ -853,7 +876,7 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:50 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:49 +0000</small>
 <hr>
 <br>
 <!-- # -->

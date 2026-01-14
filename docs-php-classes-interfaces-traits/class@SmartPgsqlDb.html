@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="author" content="unix-world.org">
 <meta name="description" content="\SmartPgsqlDb final class \ SmartPgsqlDb { } :: Class: SmartPgsqlDb - provides a Static PostgreSQL DB Server Client that can be used just with the DEFAULT">
-<meta name="keywords" content="smartpgsqldb, final, class, provides, a, static, postgresql, db, server, client, that, can, be, used, just, with, the, default, connection, from, configs, tested, and, stable, on, versions, x, pgpool ii, pgbouncer, all, this, an, easy, convenient, way, to, work, as, methods, are, it, which, must, set, in, etc config php, configs  pgsql, connects, automatically, when, needed, is, lazy, made, avoid, permanent, connections, pgsql, slower, down, app, takes, busy, slots, notice, you, should, never, modify, optional, parameter, always, have, value, of, string, for, actually, not, use, at, reserved, advanced, usage, implement, derived, classes, like, smartpgsqlextdb, language, php, located, lib framework plugins lib db pgsql php, package, plugins database postgresql, namespace, name">
+<meta name="keywords" content="smartpgsqldb, final, class, provides, a, static, postgresql, db, server, client, that, can, be, used, just, with, the, default, connection, from, configs, minimum, supported, version, of, is, tested, and, stable, on, versions, x, pgpool ii, pgbouncer, all, this, an, easy, convenient, way, to, work, as, methods, are, it, which, must, set, in, etc config php, configs  pgsql, connects, automatically, when, needed, lazy, made, avoid, permanent, connections, pgsql, slower, down, app, takes, busy, slots, notice, you, should, never, modify, optional, parameter, always, have, value, string, for, actually, not, use, at, reserved, advanced, usage, implement, derived, classes, like, smartpgsqlextdb, language, php, located, lib framework plugins lib db pgsql php, package">
 <meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
 <link rel="icon" href="data:,">
 <title>PHP Documentation for: \SmartPgsqlDb</title>
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -697,8 +697,9 @@ select#select-summary {
 </h1>
 <!-- Description -->
 <div class="doc-comments">Class: SmartPgsqlDb - provides a Static PostgreSQL DB Server Client that can be used just with the DEFAULT connection from configs.<br>
-Tested and Stable on PostgreSQL versions: 9.0.x / 9.1.x / 9.2.x / 9.3.x / 9.4.x / 9.5.x / 9.6.x / 10.x / 11.x / 12.x / 13.x / 14.x<br>
-Tested and Stable with PgPool-II versions: 3.0.x / 3.1.x / 3.2.x / 3.3.x / 3.4.x / 3.5.x / 3.6.x / 3.7.x / 4.0.x / 4.1.x / 4.2.x<br>
+Minimum supported version of PostgreSQL is: 9.6<br>
+Tested and Stable on PostgreSQL versions:  9.6.x / 10.x / 11.x / 12.x / 13.x / 14.x / 15.x / 16.x / 17.x<br>
+Tested and Stable with PgPool-II versions: 3.2.x / 3.3.x / 3.4.x / 3.5.x / 3.6.x / 3.7.x / 4.0.x / 4.1.x / 4.2.x<br>
 Tested and Stable with PgBouncer: all versions<br>
 This class provides an easy and convenient way to work with the PostgreSQL DEFAULT connection, as all methods are static.<br>
 It can be used just with the DEFAULT connection which must be set in etc/config.php: $configs['pgsql'].<br>
@@ -714,7 +715,7 @@ Actually you should not use this parameter at all as it is optional ... This par
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartPgsqlDb</span></li>
 		
-		<li><b>Version:</b> v.20231021</li>
+		<li><b>Version:</b> v.20251204</li>
 		<li><b>Depends:</b> extensions:  PHP PostgreSQL ; classes: Smart, SmartEnvironment, SmartHashCrypto, SmartUnicode, SmartComponents (optional) : constants: SMART_FRAMEWORK_SQL_CHARSET</li>
 		<li><b>Hints:</b> This  class have no catcheable exception because the ONLY errors will raise are when the server returns an ERROR regarding a malformed SQL Statement, which is not acceptable to be just exception, so will raise a fatal error !</li>
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -727,7 +728,7 @@ Actually you should not use this parameter at all as it is optional ... This par
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20200121 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--default_connect">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>default_connect</b></span>&nbsp;(
 		
@@ -1029,7 +1030,7 @@ The internal mechanism of this function to catch UNIQUE or FOREIGN KEYS violatio
 This is the best approach to handle safe UPSERT or INSERT IGNORE / UPDATE IGNORE / DELETE IGNORE like queries in high load envionments or to avoid fatal errors when a INSERT / UPDATE / DELETE violates a unique key or a foreign key with PostgreSQL.<br>
 This function can be used inside transactions blocks but never use this function to execute statements as: BEGIN, START TRANSACTION, COMMIT, ROLLBACK or SET statements, as the context is incompatible.<br>
 HINTS:<br>
-On PostgreSQL 9.5/later there is an alternative which can be used directly with write_data() without the need of this function as the following statement: INSERT ... ON CONFLICT DO NOTHING/UPDATE ... (as the equivalent of INSERT IGNORE / UPSERT), but the following statements are still missing (not implemented): UPDATE ... ON CONFLICT DO NOTHING / DELETE ... ON CONFLICT DO NOTHING .<br>
+On PostgreSQL 9.5 and later there is an alternative (just on INSERT) which can be used directly with write_data() without the need of this function as the following statement: INSERT ... ON CONFLICT DO NOTHING/UPDATE ... (as the equivalent of INSERT IGNORE / UPSERT), but the following statements are still missing (not implemented): UPDATE ... ON CONFLICT DO NOTHING / DELETE ... ON CONFLICT DO NOTHING .<br>
 This function will remain in the future to offer backward compatibility with PostgreSQL 8.4 ... 9.5 even if PostgreSQL at some moment will have ON CONFLICT DO implemented for all 3 INSERT / UPDATE / DELETE.</div>
 	
 	
@@ -1114,14 +1115,14 @@ The statement must not contain any Single Quotes to prevent SQL injections which
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20200121 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20200121 -->
+<!-- constants r.20250107 -->
 
 <!-- Sample Code -->
 <br>
@@ -1136,7 +1137,7 @@ The statement must not contain any Single Quotes to prevent SQL injections which
  </span><span style="color: #FFFFFF">$non_associative_read_multi_records </span><span style="color: #FFCC00; font-weight: bold">= (array) </span><span style="color: #FFFFFF">SmartPgsqlDb</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">read_data</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'SELECT * FROM "table" WHERE "id" = '</span><span style="color: #FFCC00; font-weight: bold">.</span><span style="color: #FFFFFF">SmartPgsqlDb</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">escape_literal</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #FFFFFF">3</span><span style="color: #FFCC00; font-weight: bold">));
  </span><span style="color: #FFFFFF">$associative_read_multi_records </span><span style="color: #FFCC00; font-weight: bold">= (array) </span><span style="color: #FFFFFF">SmartPgsqlDb</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">read_adata</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'SELECT * FROM "table" WHERE "id" = $1'</span><span style="color: #FFCC00; font-weight: bold">, array(</span><span style="color: #5F9CCE">'other-id'</span><span style="color: #FFCC00; font-weight: bold">));
  </span><span style="color: #FFFFFF">$associative_read_for_just_one_record </span><span style="color: #FFCC00; font-weight: bold">= (array) </span><span style="color: #FFFFFF">SmartPgsqlDb</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">read_asdata</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'SELECT * FROM "table" WHERE "id" = $1 LIMIT 1 OFFSET 0'</span><span style="color: #FFCC00; font-weight: bold">, array(</span><span style="color: #FFFFFF">99</span><span style="color: #FFCC00; font-weight: bold">)); </span><span style="color: #999999">// NOTICE: this function will return just one record, so always use LIMIT 1 OFFSET 0 (or LIMIT 0,1) ; if the query will return more records will raise an error
- </span><span style="color: #FFFFFF">$update </span><span style="color: #FFCC00; font-weight: bold">= (array) </span><span style="color: #FFFFFF">SmartPgsqlDb</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">write_data</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'UPDATE "table" SET "active" = 1 WHERE "id" = $1'</span><span style="color: #FFCC00; font-weight: bold">, array(</span><span style="color: #FFFFFF">55</span><span style="color: #FFCC00; font-weight: bold">)); </span><span style="color: #999999">// will return an array[ 0 =&gt; message, 1 =&gt; (integer) affected rows ]
+ </span><span style="color: #FFFFFF">$update </span><span style="color: #FFCC00; font-weight: bold">= (array) </span><span style="color: #FFFFFF">SmartPgsqlDb</span><span style="color: #FFCC00; font-weight: bold">::</span><span style="color: #FFFFFF">write_data</span><span style="color: #FFCC00; font-weight: bold">(</span><span style="color: #5F9CCE">'UPDATE "table" SET "active" = 1 WHERE "id" = $1'</span><span style="color: #FFCC00; font-weight: bold">, array(</span><span style="color: #FFFFFF">55</span><span style="color: #FFCC00; font-weight: bold">)); </span><span style="color: #999999">// will return an array[ 0 =&gt; message, 1 =&gt; (int) affected rows ]
  </span><span style="color: #FFFFFF">$arr_insert </span><span style="color: #FFCC00; font-weight: bold">= array(
          </span><span style="color: #5F9CCE">'id' </span><span style="color: #FFCC00; font-weight: bold">=&gt; </span><span style="color: #FFFFFF">100</span><span style="color: #FFCC00; font-weight: bold">,
          </span><span style="color: #5F9CCE">'active' </span><span style="color: #FFCC00; font-weight: bold">=&gt; </span><span style="color: #FFFFFF">1</span><span style="color: #FFCC00; font-weight: bold">,
@@ -1150,9 +1151,9 @@ The statement must not contain any Single Quotes to prevent SQL injections which
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20210420 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1260,7 +1261,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -1274,13 +1275,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:19 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:50 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Template: Smart.Framework@Documentor v.20231010 -->
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
 <html>
 <head>
 <meta charset="UTF-8">
@@ -466,9 +466,9 @@ nav.ux-navbar li > a:only-child::after {
 	
 </nav>
 <a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
-<!-- class r.20220331 -->
+<!-- class r.20250107 -->
 <!-- Styles -->
-<!-- styles r.20220906 -->
+<!-- styles r.20250107 -->
 <style type="text/css">
 .doc-package {
 	color: #3F51B5;
@@ -709,7 +709,7 @@ Hints:<br>
 		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
 		<li><span class="doc-name"><b>Class Name:</b> SmartHashCrypto</span></li>
 		
-		<li><b>Version:</b> v.20231204</li>
+		<li><b>Version:</b> v.20260113</li>
 		<li><b>Depends:</b> PHP  hash_algos() / hash() ; classes: Smart, SmartEnvironment ; constants: SMART_FRAMEWORK_SECURITY_KEY, SMART_SOFTWARE_NAMESPACE</li>
 		
 		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
@@ -722,7 +722,7 @@ Hints:<br>
 <div class="doc-container" id="Methods--Summary-">
 	<h2 class="doc-header">class Methods</h2>
 </div>
-<!-- methods r.20200121 -->
+<!-- methods r.20250107 -->
 <div class="doc-container" id="Method--checksum">
 	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>checksum</b></span>&nbsp;(
 		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$str` Parameter is REQUIRED">$str</span></b></span>, 
@@ -786,6 +786,7 @@ It must use the same salt as it was used when password was hashed, otherwise wil
 	
 	
 </div>
+<!-- Skip Internal-Priv Method: `safesuffix()` -->
 <!-- Skip Internal-Priv Method: `pbkdf2PreDerivedB92Key()` -->
 <!-- Skip Internal-Priv Method: `pbkdf2DerivedB92Key()` -->
 <!-- Skip Internal-Priv Method: `pbkdf2DerivedHexKey()` -->
@@ -1055,14 +1056,14 @@ CRC32B is better than CRC32, being portable between 32-bit and 64-bit platforms,
 <div class="doc-container" id="Properties--Summary-">
 	<h2 class="doc-header">class Properties</h2>
 </div>
-<!-- properties r.20200121 -->
+<!-- properties r.20250107 -->
 
 <!-- Constants -->
 <br>
 <div class="doc-container" id="Constants--Summary-">
 	<h2 class="doc-header">class Constants</h2>
 </div>
-<!-- constants r.20200121 -->
+<!-- constants r.20250107 -->
 <div class="doc-container" id="Constant--PASSWORD_PLAIN_MIN_LENGTH">
 	<span class="doc-modifiers">public</span> <i>const</i> <b>PASSWORD_PLAIN_MIN_LENGTH</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>7</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
 	
@@ -1080,7 +1081,7 @@ CRC32B is better than CRC32, being portable between 32-bit and 64-bit platforms,
 	
 </div>
 <div class="doc-container" id="Constant--DERIVE_MIN_KLEN">
-	<span class="doc-modifiers">public</span> <i>const</i> <b>DERIVE_MIN_KLEN</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>3</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	<span class="doc-modifiers">public</span> <i>const</i> <b>DERIVE_MIN_KLEN</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>1</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
 	
 </div>
 <div class="doc-container" id="Constant--DERIVE_MAX_KLEN">
@@ -1089,6 +1090,10 @@ CRC32B is better than CRC32, being portable between 32-bit and 64-bit platforms,
 </div>
 <div class="doc-container" id="Constant--DERIVE_PREKEY_LEN">
 	<span class="doc-modifiers">public</span> <i>const</i> <b>DERIVE_PREKEY_LEN</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>80</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--DERIVE_CENTITER_TK">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>DERIVE_CENTITER_TK</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>88</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
 	
 </div>
 <div class="doc-container" id="Constant--DERIVE_CENTITER_EK">
@@ -1132,9 +1137,9 @@ CRC32B is better than CRC32, being portable between 32-bit and 64-bit platforms,
 </div>
 <!-- Summary List -->
 <br>
-<!-- summary r.20210420 -->
+<!-- summary r.20250107 -->
 <script>
-// summary r.20200121
+// summary r.20250107
 function smartHandleDocSelector(obj) {
 	if(!obj) {
 		return;
@@ -1169,6 +1174,8 @@ function smartHandleDocSelector(obj) {
 			
 			
 						<option value="Method--checkpassword"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;checkpassword()</option>
+			
+			
 			
 			
 			
@@ -1240,6 +1247,8 @@ function smartHandleDocSelector(obj) {
 			
 						<option value="Constant--DERIVE_PREKEY_LEN">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;DERIVE_PREKEY_LEN</option>
 			
+						<option value="Constant--DERIVE_CENTITER_TK">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;DERIVE_CENTITER_TK</option>
+			
 						<option value="Constant--DERIVE_CENTITER_EK">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;DERIVE_CENTITER_EK</option>
 			
 						<option value="Constant--DERIVE_CENTITER_EV">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;DERIVE_CENTITER_EV</option>
@@ -1260,7 +1269,7 @@ function smartHandleDocSelector(obj) {
 		
 	</select>
 </div>
-<!-- summary-selectjs r.20210420 -->
+<!-- summary-selectjs r.20250107 -->
 <link rel="stylesheet" type="text/css" href="../js/slimselect.css">
 <script src="../js/slimselect.js"></script>
 <script>
@@ -1274,13 +1283,13 @@ try {
 </script>
 
 <hr>
-<small style="color:#BBBBBB;">documentation generated on: 2024-12-16 17:13:19 +0000</small>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:49 +0000</small>
 <hr>
 <br>
 <!-- # -->
 <div><center>
 	<br>
-	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2024 unix-world.org</small>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
 </center></div>
 </body>
 </html>

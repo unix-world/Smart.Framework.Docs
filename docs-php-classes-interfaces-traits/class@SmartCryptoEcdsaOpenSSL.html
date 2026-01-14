@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<!-- Template: Smart.Framework@Documentor v.20250107 -->
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="unix-world.org">
+<meta name="description" content="\SmartCryptoEcdsaOpenSSL final class \ SmartCryptoEcdsaOpenSSL { } :: Class: SmartCryptoEcdsaOpenSSL - provides PHP OpenSSL based EcDSA crypto">
+<meta name="keywords" content="smartcryptoecdsaopenssl, final, class, provides, php, openssl, based, ecdsa, crypto, implementation, supports, standard, secp521r1 sha512, secp384r1 sha384, secp256k1 sha256, non standard, secp521r1 sha3, secp384r1 sha3, secp256k1 sha3, language, located, at, lib framework lib cryptoas php, package, application, namespace, name, version, v, depends, extensions, classes, smart, smartfilesysutils, smartcryptoecdsaasn1sig, usage, static, object, class method, this, only, methods, public, function, isavailable, bool, return, true, if, available, false, not, verifies, extension, is, enabled, and, the, local, config, has, been, completed, in, order, to, support, getpempublickeyfrompemprivatekeyorpemcertificate, string, eccprivkeyorcertificate, privkeypassword, null, array, err, pubkey, param, pem, private, key, or, certificate, optional, password, for, requires, extract, from, a, decryptprivatekeypem, encryptedprivkeypem, privkey, encrypted, used, decrypt, an, using, encryptprivatekeypem">
+<meta name="summary" content="Smart.Framework and Smart.Framework.Modules : PHP Documentation:">
+<link rel="icon" href="data:,">
+<title>PHP Documentation for: \SmartCryptoEcdsaOpenSSL</title>
+<!-- CSS and Fonts -->
+<link rel="stylesheet" type="text/css" href="../fonts/source-sans-pro.css">
+<style type="text/css">
+* {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-smooth: always;
+}
+/* ----- #start ----- */
+html, body{
+	width: 96% auto;
+	/*height: 96% auto;*/
+	margin: 0px;
+	padding: 10px;
+	padding-top: 5px;
+}
+body {
+	background: #FFFFFF;
+	font-size: 16px;
+	line-height: 1.5;
+}
+div, p, ol, ul, form, fieldset, blockquote, address, dl {
+	font-size: 1rem; /* 16px */
+	line-height: 1.5;
+}
+li {
+	list-style-position: inside; /* bugfix for chrome */
+}
+table, pre, code, code * {
+	font-size: 0.9375rem; /* 15px */
+	line-height: 1.25;
+}
+/* ----- headings ----- */
+h1 {
+	font-size: 2.25rem; /* 36px */
+	margin-top: 0.625rem; /* 10px */
+	margin-bottom: 0.625rem; /* 10px */
+}
+h2 {
+	font-size: 2rem; /* 32px */
+	margin-top: 0.5rem; /* 8px */
+	margin-bottom: 0.5rem; /* 8px */
+}
+h3 {
+	font-size: 1.75rem; /* 28px */
+	margin-top: 0.375rem; /* 6px */
+	margin-bottom: 0.375rem; /* 6px */
+}
+h4 {
+	font-size: 1.5rem; /* 24px */
+	margin-top: 0.3125rem; /* 5px */
+	margin-bottom: 0.3125rem; /* 5px */
+}
+h5 {
+	font-size: 1.25rem; /* 20px */
+	margin-top: 0.25rem; /* 4px */
+	margin-bottom: 0.25rem; /* 4px */
+}
+h6 {
+	font-size: 1.125rem; /* 18px */
+	margin-top: 0.1875rem; /* 3px */
+	margin-bottom: 0.1875rem; /* 3px */
+}
+/* ----- misc ----- */
+img {
+	border: 0;
+}
+hr {
+	border: none 0;
+	border-top: 1px solid #BBCCDD;
+	height: 1px;
+}
+/* ----- tables ----- */
+table {
+	font-weight: normal;
+	text-align:left;
+}
+th {
+	font-weight: bold;
+}
+td {
+	font-weight: normal;
+}
+/* ----- links ----- */
+a, a:link, a:visited, a:hover {
+	color: #000000;
+	text-decoration: none;
+	border-bottom: 1px dotted #BBBBBB;
+}
+a:hover {
+	border-bottom: 1px dotted #555555;
+}
+/* ----- forms ----- */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+textarea,
+select {
+	background-color: #FFFFFF;
+	color: #222222;
+	font-weight: normal;
+	font-size: 1rem;
+	padding: 3px;
+	padding: 0.5rem 0.6rem;
+	display: inline-block;
+	border: 1px solid #ccc;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	border-radius: 3px;
+	vertical-align: middle;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+input[type="text"][disabled],
+input[type="password"][disabled],
+input[type="email"][disabled],
+input[type="url"][disabled],
+input[type="date"][disabled],
+input[type="month"][disabled],
+input[type="time"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="week"][disabled],
+input[type="number"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="color"][disabled],
+textarea[disabled],
+select[disabled] {
+	cursor: not-allowed;
+	background-color: #ECECEC;
+	color: #999999;
+}
+input:not([type])[disabled] {
+	cursor: not-allowed;
+	background-color: #ECECEC;
+	color: #999999;
+}
+input[readonly],
+select[readonly],
+textarea[readonly] {
+	cursor: pointer;
+	background-color: #FAFAFA; /* menu hover bg color */
+	color: #777; /* menu text color */
+	border-color: #ccc;
+}
+
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+	color: #b94a48;
+	border-color: #e9322d;
+}
+input[type="file"]:focus:invalid:focus,
+input[type="radio"]:focus:invalid:focus,
+input[type="checkbox"]:focus:invalid:focus {
+	outline-color: #e9322d;
+}
+select {
+	border: 1px solid #ccc;
+	background-color: white;
+}
+select[multiple] {
+	height: auto;
+}
+label {
+	margin: 0.5rem 0 0.2rem;
+}
+fieldset {
+	margin: 0;
+	padding: 0.35rem 0 0.75rem;
+	border: 0;
+}
+legend {
+	display: block;
+	width: 100%;
+	padding: 0.3rem 0;
+	margin-bottom: 0.3rem;
+	color: #333;
+	border-bottom: 1px solid #e5e5e5;
+}
+.hidden,
+[hidden] {
+	display: none !important;
+}
+button, a.ux-button {
+	/* Structure */
+	display: inline-block; /* do not mark as important as it can't hide using jquery hide() */
+	padding: 7px 15px 7px 15px !important;
+	line-height: normal !important;
+	white-space: nowrap !important;
+	vertical-align: middle !important;
+	text-align: center !important;
+	font-family: inherit !important;
+	font-size: 0.9375rem !important; /* 15px */
+	font-weight: bold !important;
+	text-decoration: none !important;
+	border-radius: 3px !important;
+	border: 1px solid #DDDDDD !important;
+	background-color: #FCFCFC !important;
+	color: #317AB9 !important;
+	cursor: pointer !important;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin-bottom: 5px;
+	margin-right: 5px;
+	box-sizing: border-box !important;
+	-moz-box-sizing: border-box !important;
+	-webkit-box-sizing: border-box !important;
+	appearance: none !important;
+	-moz-appearance: none !important;
+	-webkit-appearance: none !important;
+	user-select: none !important;
+	zoom: 1 !important;
+}
+button *, a.ux-button * {
+	font-weight: bold !important;
+}
+button:hover, a.ux-button:hover,
+button:focus, a.ux-button:focus {
+	border: 1px solid #CCCCCC !important;
+	background-color: #F3F3F3 !important;
+	color: #2069A9 !important;
+}
+button:focus, a.ux-button:focus {
+	outline: 0 !important;
+}
+button[disabled],
+button-disabled,
+button-disabled:hover,
+button-disabled:focus,
+button-disabled:active {
+	background-image: none !important;
+	opacity: 0.40 !important;
+	cursor: not-allowed !important;
+	box-shadow: none !important;
+}
+/* ----- navbar ----- */
+nav.ux-navbar label.toggle,
+nav.ux-navbar input[id^=drop] {
+	display: none;
+}
+nav.ux-navbar {
+	margin: 0;
+	padding: 0;
+	background-color: #3c4663;
+}
+nav.ux-navbar div#logo {
+	display: block;
+	padding: 0 25px;
+	float: left;
+	font-size: 20px;
+	line-height: 50px;
+	color: #FFFFFF;
+}
+nav::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+nav.ux-navbar ul {
+	float: right;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	position: relative;
+}
+nav.ux-navbar ul li {
+	margin: 0px;
+	display: inline-block;
+	float: left;
+	background-color: #3c4663;
+}
+nav.ux-navbar a {
+	display: block;
+	padding: 0 20px;
+	color: #FFFFFF;
+	font-size: 20px;
+	line-height: 50px;
+	text-decoration: none;
+}
+nav.ux-navbar ul li ul li:hover {
+	background-color: #2b3a57;
+}
+nav.ux-navbar a:hover {
+	color: #FFFFFF;
+	background-color: #1a2946;
+}
+nav.ux-navbar ul ul {
+	display: none;
+	position: absolute;
+	top: 50px;
+	z-index: 5555;
+}
+nav.ux-navbar ul li:hover > ul {
+	display: inherit;
+}
+nav.ux-navbar ul ul li {
+	width: 170px;
+	float: none;
+	display: list-item;
+	position: relative;
+}
+nav.ux-navbar ul ul ul li {
+	position: relative;
+	top: -50px;
+	left: 170px;
+}
+nav.ux-navbar li > a::after {
+	content: ' ▾';
+}
+nav.ux-navbar li > a:only-child::after {
+	content: '';
+}
+/* ----- navbar responsive ----- */
+@media all and (max-width:767px) {
+	nav.ux-navbar div#logo {
+		display: block;
+		padding: 0;
+		width: 100%;
+		text-align: center;
+		float: none;
+	}
+	nav.ux-navbar {
+		margin: 0;
+	}
+	nav.ux-navbar label.toggle + a,
+	nav.ux-navbar ul.menu {
+		display: none;
+	}
+	nav.ux-navbar label.toggle {
+		display: block;
+		background-color: #3c4663;
+		padding: 0 20px;
+		color: #FFFFFF;
+		font-size: 20px;
+		line-height: 50px;
+		text-decoration: none;
+		border: none;
+	}
+	nav.ux-navbar label.toggle::after {
+		content: ' ▾';
+	}
+	nav.ux-navbar label.toggle:hover {
+		color: #FFFFFF;
+		background-color: #1a2946;
+	}
+	nav.ux-navbar input[id^=drop]:checked + ul {
+		display: block;
+	}
+	nav.ux-navbar ul {
+		width: 100%;
+	}
+	nav.ux-navbar ul li {
+		display: block;
+		width: 100%;
+	}
+	nav.ux-navbar ul ul .toggle,
+	nav.ux-navbar ul ul a {
+		padding: 0 40px;
+	}
+	nav.ux-navbar ul ul ul a {
+		padding: 0 80px;
+	}
+	nav.ux-navbar a:hover {
+		color: #FFFFFF;
+		background-color: #1a2946;
+	}
+	nav.ux-navbar ul ul ul a {
+		color: #FFFFFF;
+		background-color: #2b3a57;
+	}
+	nav.ux-navbar ul li ul li .toggle,
+	nav.ux-navbar ul ul a {
+		background-color: #2b3a57;
+	}
+	nav.ux-navbar ul ul {
+		float: none;
+		position: static;
+		color: #ffffff;
+	}
+	nav.ux-navbar ul ul li:hover > ul,
+	nav.ux-navbar ul li:hover > ul {
+		display: none;
+	}
+	nav.ux-navbar ul ul li {
+		display: block;
+		width: 100%;
+	}
+	nav.ux-navbar ul ul ul li {
+		position: static;
+	}
+}
+/* ----- #end navbar ----- */
+</style>
+<style type="text/css">
+
+/* -- CSS Start :: Smart.Framework / Debug / TPL Highlight :: r.8.7 / smart.framework.v.8.7 -- */
+
+/* ----------------------------- */
+
+/* TPL Highlight r.20210526 */
+
+.sf__tpl__highlight__marker {
+	background: #CBDA8C !important;
+	color: #333333 !important;
+}
+.sf__tpl__highlight__syntax {
+	background: #CBDA8C !important;
+	color: #222222 !important;
+}
+.sf__tpl__highlight__subtpl {
+	background: #CBDA8C !important;
+	color: #111111 !important;
+}
+
+.sf__tpl__highlight__marker, .sf__tpl__highlight__syntax, .sf__tpl__highlight__subtpl {
+	cursor: context-menu !important;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+/* ----------------------------- */
+
+/* -- CSS End -- */
+
+</style>
+</head>
+<body>
+<nav class="ux-navbar">
+	<div id="logo" style="display:flex; align-items:center;">
+		<span style="line-height:50px;">
+						<img src="../img/php-logo.svg" width="36" height="36" align="left">
+			
+		</span>
+		<span style="margin-left:10px;">Smart.Framework and Smart.Framework.Modules : PHP Documentation</span>
+	</div>
+	<label for="drop-0" class="toggle">&#9776;</label>
+	<input type="checkbox" id="drop-0">
+		<ul class="menu">
+		<li><a href="index.html#Package--Application-" title="return to Index">return to Index</a></li>
+	</ul>
+	
+</nav>
+<a href="https://github.com/unix-world/Smart.Framework" target="_blank" title="Smart.Framework Source Code"><img src="../img/sf-logo.svg" alt="Smart.Framework Logo" title="Smart.Framework Logo" width="128" height="128" align="right" style="margin:5px; margin-top:0;"></a>
+<!-- class r.20250107 -->
+<!-- Styles -->
+<!-- styles r.20250107 -->
+<style type="text/css">
+.doc-package {
+	color: #3F51B5;
+}
+.doc-located,
+.doc-version {
+	color: #999999;
+}
+.doc-modifiers {
+	color: #FF5500;
+}
+.doc-keyword {
+	color: #333333;
+}
+.doc-name,
+.doc-param-name {
+	color: #666699;
+}
+.doc-method-name {
+	color: #111111;
+}
+.doc-method-sub-name {
+	color: #555555;
+}
+.doc-method-special-name {
+	color: #003399;
+}
+.doc-method-abstract-name {
+	color: #777777;
+}
+.doc-ns,
+.doc-frozen,
+.doc-param-optional {
+	color: #778899;
+}
+.doc-param-value {
+	color: #3F51B5;
+}
+.doc-param-set,
+.doc-param-get {
+	color: #888888;
+}
+.doc-param-set-comment,
+.doc-param-get-comment {
+	color: #3F51B5;
+}
+.doc-implements {
+	color: #72C100;
+}
+.doc-language {
+	color: #92981b;
+}
+.doc-extends,
+.doc-type-class {
+	color: #20639E;
+}
+.doc-inherited,
+.doc-type-interface {
+	color: #AAAAAA;
+}
+.doc-use,
+.doc-type-trait {
+	color: #888888;
+}
+.doc-reimplemented,
+.doc-reuses {
+	color: #99AABB;
+}
+.doc-throws {
+	color: #FF0000;
+}
+.doc-header {
+	color: #3F51B5;
+}
+div.doc-container {
+	border: 1px solid #ECECEC;
+	padding: 5px;
+	margin-bottom: 20px;
+}
+ul.doc-list,
+ul.doc-list ul {
+	padding: 10px;
+	margin: 0;
+	list-style-type: none;
+}
+ul.doc-list ul {
+	padding: 0px;
+	padding-left: 20px;
+	margin: 0;
+}
+.doc-comments {
+	background: #343C61;
+	color: #FCFCFC;
+	padding: 10px;
+	line-height: 1.75;
+}
+.doc-method-ret-params {
+	background: #FAFAFA;
+	color: #3F51B5;
+	padding: 2px;
+	font-size: 95%;
+	margin-top: 10px;
+}
+.doc-method-comments {
+	background: #ECECEC;
+	color: #333333;
+	padding: 2px;
+	font-size: 85%;
+	margin-top: 10px;
+}
+.doc-code {
+	background: #232B50;
+	color: #FFFFFF;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.doc-code pre {
+	padding: 5px;
+	overflow-x: auto;
+}
+div.doc-summary {
+	position: fixed;
+	top: 75px;
+	right: 175px;
+	padding: 10px;
+	background: #343C61;
+	color: #FFFFFF;
+	border: 1px solid #3C4663;
+	width: 45vw;
+	min-width: 320px !important;
+}
+select#select-summary {
+	width: 99% !important;
+}
+</style>
+<style type="text/css">
+/*
+// css/atelier-sulphurpool-dark.css
+// HighlightJs: v.9.13.1
+*/
+
+/* modified by unixman - changed color for comment */
+/* Base16 Atelier Sulphurpool Dark - Theme */
+/* by Bram de Haan (http://atelierbram.github.io/syntax-highlighting/atelier-schemes/sulphurpool) */
+/* Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/base16) */
+
+/* Atelier-Sulphurpool Comment */
+.hljs-comment {
+	color: #777777;
+}
+.hljs-quote {
+	color: #898ea4;
+}
+
+/* Atelier-Sulphurpool Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-tag,
+.hljs-name,
+.hljs-regexp,
+.hljs-link,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+	color: #c94922;
+}
+
+/* Atelier-Sulphurpool Orange */
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+	color: #c76b29;
+}
+
+/* Atelier-Sulphurpool Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+	color: #ac9739;
+}
+
+/* Atelier-Sulphurpool Blue */
+.hljs-title,
+.hljs-section {
+	color: #3d8fd1;
+}
+
+/* Atelier-Sulphurpool Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #6679cc;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	background: #202746;
+	color: #979db4;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+
+/* END */
+
+</style>
+<!-- Headings -->
+<h1 title="PHP class: `\SmartCryptoEcdsaOpenSSL` @ PHP Namespace: `\`" id="Class--Summary-">
+	<span class="doc-modifiers">final</span> <span class="doc-keyword"><i>class</i></span> <span class="doc-ns">\</span><span class="doc-name">SmartCryptoEcdsaOpenSSL</span><br>
+	
+	
+	{
+	
+	}&nbsp;::
+</h1>
+<!-- Description -->
+<div class="doc-comments">Class: SmartCryptoEcdsaOpenSSL - provides PHP OpenSSL based EcDSA crypto implementation<br>
+Supports (standard): 	secp521r1/sha512   ; secp384r1/sha384   ; secp256k1/sha256<br>
+Supports (non-standard): secp521r1/sha3-512 ; secp384r1/sha3-384 ; secp256k1/sha3-256</div><br>
+<!-- Metainfo -->
+<div class="doc-container">
+	<ul class="doc-list">
+		<li><span class="doc-language"><b>Language:</b> PHP<span></li>
+		<li><span class="doc-located"><b>Located at:</b> lib/framework/lib_cryptoas.php</span></li>
+		<li><span class="doc-package"><b>Package:</b> Application</span></li>
+		<li><span class="doc-ns"><b>Namespace:</b> \</span></li>
+		<li><span class="doc-name"><b>Class Name:</b> SmartCryptoEcdsaOpenSSL</span></li>
+		
+		<li><b>Version:</b> v.20260113</li>
+		<li><b>Depends:</b> extensions:  PHP OpenSSL ; classes: Smart, SmartFileSysUtils, SmartCryptoEcdsaAsn1Sig</li>
+		
+		<li><b>Usage:</b> static  object: Class::method() - This class provides only STATIC methods</li>
+		
+		
+	</ul>
+</div>
+<!-- Methods -->
+<br>
+<div class="doc-container" id="Methods--Summary-">
+	<h2 class="doc-header">class Methods</h2>
+</div>
+<!-- methods r.20250107 -->
+<div class="doc-container" id="Method--isAvailable">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>isAvailable</b></span>&nbsp;(
+		
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOL} TRUE if available, FALSE if not</div>
+	
+			<div class="doc-method-comments">Verifies if OpenSSL extension is Enabled and the openssl local config has been completed, in order to support EcDSA</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--getPemPublicKeyFromPemPrivateKeyOrPemCertificate">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>getPemPublicKeyFromPemPrivateKeyOrPemCertificate</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$eccPrivKeyOrCertificate` Parameter is REQUIRED">$eccPrivKeyOrCertificate</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$privKeyPassword` Parameter is OPTIONAL, with the Default Value: null">$privKeyPassword</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>null</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
+	
+	
+			<div class="doc-method-ret-params">@return: {ARRAY} [ err, pubKey, version ]<br>
+@param: {STRING} $eccPrivKeyOrCertificate: The PEM Private Key or PEM Certificate<br>
+@param: {STRING} $privKeyPassword: *OPTIONAL* The password for the PEM Private Key if requires</div>
+	
+			<div class="doc-method-comments">Extract the PEM Public Key from a PEM Private Key or a PEM Certificate</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--decryptPrivateKeyPem">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>decryptPrivateKeyPem</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$encryptedPrivKeyPem` Parameter is REQUIRED">$encryptedPrivKeyPem</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$privKeyPassword` Parameter is REQUIRED">$privKeyPassword</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
+	
+	
+			<div class="doc-method-ret-params">@return: {ARRAY} [ err, privKey ]<br>
+@param: {STRING} $encryptedPrivKeyPem: The encrypted PEM Private Key<br>
+@param: {STRING} $privKeyPassword: The password used to decrypt the PEM Private Key</div>
+	
+			<div class="doc-method-comments">Decrypt an encrypted PEM Private Key using a password</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--encryptPrivateKeyPem">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>encryptPrivateKeyPem</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$plainPrivKeyPem` Parameter is REQUIRED">$plainPrivKeyPem</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$privKeyPassword` Parameter is REQUIRED">$privKeyPassword</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
+	
+	
+			<div class="doc-method-ret-params">@return: {ARRAY} [ err, privKey ]<br>
+@param: {STRING} $plainPrivKeyPem: The plain PEM Private Key<br>
+@param: {STRING} $privKeyPassword: The password used to encrypt the PEM Private Key</div>
+	
+			<div class="doc-method-comments">Encrypt a plain PEM Private Key using a password</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--signData">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>signData</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$eccPrivKey` Parameter is REQUIRED">$eccPrivKey</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$eccPubKey` Parameter is REQUIRED">$eccPubKey</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$data` Parameter is REQUIRED">$data</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$algo` Parameter is OPTIONAL, with the Default Value: self::OPENSSL_SIGN_DEF_ALGO">$algo</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>self::OPENSSL_SIGN_DEF_ALGO</b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$privKeyPassword` Parameter is OPTIONAL, with the Default Value: null">$privKeyPassword</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>null</b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$useASN1` Parameter is OPTIONAL, with the Default Value: true">$useASN1</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
+	
+	
+			<div class="doc-method-ret-params">@return: {ARRAY} [ err, algo, mode, signatureB64 ]<br>
+@param: {STRING} $eccPrivKey: The PEM Private Key (plain or encrypted)<br>
+@param: {STRING} $eccPubKey: The PEM Public Key, required for verification<br>
+@param: {STRING} $data: Data to be Signed<br>
+@param: {STRING} $algo: Algorithm to be used for the Signature, must be compliant with the algorithm used by the used keys and certificate ; by example cannot sign using sha256 or sha3-256 with a sha512 or sha3-512 certificate private/public key because the hash size differs<br>
+@param: {STRING} $privKeyPassword: *OPTIONAL* The password for the PEM Private Key if requires<br>
+@param: {BOOL} $useASN1: *OPTIONAL* by default is TRUE, will create an ASN1 compliant signature ; if set to FALSE will create a Raw (Non-ASN1) signature</div>
+	
+			<div class="doc-method-comments">Create an EcDSA Digital Signature<br>
+Supported Algorithms: sha3-512, sha512, sha3-384, sha384, sha3-256, sha256</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--verifySignedData">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>verifySignedData</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$eccPubKey` Parameter is REQUIRED">$eccPubKey</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$data` Parameter is REQUIRED">$data</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$signatureB64` Parameter is REQUIRED">$signatureB64</span></b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$algo` Parameter is OPTIONAL, with the Default Value: self::OPENSSL_SIGN_DEF_ALGO">$algo</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>self::OPENSSL_SIGN_DEF_ALGO</b></span>, 
+	<i>bool</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$useASN1` Parameter is OPTIONAL, with the Default Value: true">$useASN1</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>true</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
+	
+	
+			<div class="doc-method-ret-params">@return: {ARRAY} [ err, algo, mode, verifyResult ] ; the verifyResult must be TRUE if verified, otherwise may return NULL or INTEGER<br>
+@param: {STRING} $eccPubKey: The PEM Public Key or the Certificate PEM<br>
+@param: {STRING} $data: Data to be Verified<br>
+@param: {STRING} $signatureB64: The Base64 Signature<br>
+@param: {STRING} $algo: Algorithm to be used for the Signature, must be compliant with the algorithm used by the used keys and certificate ; by example cannot sign using sha256 or sha3-256 with a sha512 or sha3-512 certificate private/public key because the hash size differs<br>
+@param: {BOOL} $useASN1: *OPTIONAL* by default is TRUE, will create an ASN1 compliant signature ; if set to FALSE will create a Raw (Non-ASN1) signature</div>
+	
+			<div class="doc-method-comments">Verify an EcDSA Digital Signature<br>
+Supported Algorithms: sha3-512, sha512, sha3-384, sha384, sha3-256, sha256</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--newCertificate">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>newCertificate</b></span>&nbsp;(
+		<i>array</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$dNames` Parameter is OPTIONAL, with the Default Value: [&quot;commonName&quot; =&gt; &quot;localhost&quot;]">$dNames</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>[&quot;commonName&quot; =&gt; &quot;localhost&quot;]</b></span>, 
+	<i>int</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$years` Parameter is OPTIONAL, with the Default Value: 1">$years</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>1</b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$curve` Parameter is OPTIONAL, with the Default Value: self::OPENSSL_ECDSA_DEF_CURVE">$curve</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>self::OPENSSL_ECDSA_DEF_CURVE</b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$algo` Parameter is OPTIONAL, with the Default Value: self::OPENSSL_CSR_DEF_ALGO">$algo</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>self::OPENSSL_CSR_DEF_ALGO</b></span>, 
+	<i>string</i>&nbsp;<span class="doc-param-name"><b><span class="doc-param-optional" title="`$privKeyPassword` Parameter is OPTIONAL, with the Default Value: null">$privKeyPassword</span></b></span>&nbsp;=&nbsp;<span class="doc-param-optional"><b>null</b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;ARRAY
+	
+	
+			<div class="doc-method-ret-params">@return: {ARRAY} [ err, mode, algo, curve, scheme, years, dNames, certificate, privKey, pubKey, serial, dateTime ]<br>
+@param: {ARRAY} $dNames: The MetaInfo Certificate Names, minimum required is: [ commonName ] ; example: ['commonName' =&gt; 'My Sample Name', 'emailAddress' =&gt; 'my@email.local', 'organizationName' =&gt; 'my.local', 'organizationalUnitName' =&gt; 'My Sample Test - ECDSA Digital Signature']<br>
+@param: {INT} $years: The number of years for the certificate to be valid, 1..100<br>
+@param: {STRING} $curve: The EcDSA curve ; can use only: secp521r1 with sha3-256 or sha256 ; secp384r1 with sha3-384 or sha384 ; secp256k1 with sha3-256 or sha256 ; any other combinations are invalid due to the hash size required by the curve<br>
+@param: {STRING} $algo: Algorithm to be used for the Signature, must be compliant with the algorithm used by the curve<br>
+@param: {STRING} $privKeyPassword: *OPTIONAL* The password for the PEM Private Key ; if provided the returned Private Key PEM will be encrypted</div>
+	
+			<div class="doc-method-comments">Create a New EcDSA Certificate and the key Pair as Private and Public Key, all in PEM format<br>
+Supported Algorithms: sha3-512, sha512, sha3-384, sha384, sha3-256, sha256<br>
+Supported Curves: secp521r1, secp384r1, secp256k1</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--isValidPrivateKeyPEM">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>isValidPrivateKeyPEM</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$eccPrivKey` Parameter is REQUIRED">$eccPrivKey</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOL} TRUE if Valid, FALSE if not valid or not supported<br>
+@param: {STRING} $eccPrivKey: The plain or encrypted Private Key PEM</div>
+	
+			<div class="doc-method-comments">Validates a Private Key PEM format<br>
+It does not validate the type, by example if it is EcDSA or RSA<br>
+Supports: Plain or Encrypted Private Key PEM<br>
+Plain     Private Key PEM, in base 64 format must be enclosed within: -----BEGIN PRIVATE KEY----- ... -----END PRIVATE KEY-----<br>
+Encrypted Private Key PEM, in base 64 format must be enclosed within: -----BEGIN PRIVATE KEY----- ... -----END PRIVATE KEY----- and having Proc-Type: 4,ENCRYPTED in header<br>
+or, alternate encrypted key as<br>
+Encrypted Private Key PEM, in base 64 format must be enclosed within: -----BEGIN ENCRYPTED PRIVATE KEY----- ... -----END ENCRYPTED PRIVATE KEY-----</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--isValidPublicKeyPEM">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>isValidPublicKeyPEM</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$eccPubKey` Parameter is REQUIRED">$eccPubKey</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOL} TRUE if Valid, FALSE if not valid or not supported<br>
+@param: {STRING} $eccPubKey: The Public Key PEM</div>
+	
+			<div class="doc-method-comments">Validates a Public Key PEM format<br>
+It does not validate the type, by example if it is EcDSA or RSA<br>
+Public Key PEM, in base 64 format must be enclosed within: -----BEGIN PUBLIC KEY----- ... -----END PUBLIC KEY-----</div>
+	
+	
+	
+</div>
+<div class="doc-container" id="Method--isValidCertificatePEM">
+	<span class="doc-modifiers">public static</span> <span class="doc-keyword"><i>function</i></span> <span class="doc-method-name"><b>isValidCertificatePEM</b></span>&nbsp;(
+		<i>string</i>&nbsp;<span class="doc-param-name"><b><span title="`$eccCertPem` Parameter is REQUIRED">$eccCertPem</span></b></span>
+	
+	
+	)&nbsp;{}&nbsp;<span title="Static Method"><b>::</b></span>&nbsp;BOOL
+	
+	
+			<div class="doc-method-ret-params">@return: {BOOL} TRUE if Valid, FALSE if not valid or not supported<br>
+@param: {STRING} $eccCertPem: The Certificate PEM</div>
+	
+			<div class="doc-method-comments">Validates a Certificate PEM format<br>
+It does not validate the type, by example if it is EcDSA or RSA<br>
+Certificate PEM, in base 64 format must be enclosed within: -----BEGIN CERTIFICATE----- ... -----END CERTIFICATE-----</div>
+	
+	
+	
+</div>
+
+<!-- Properties -->
+<br>
+<div class="doc-container" id="Properties--Summary-">
+	<h2 class="doc-header">class Properties</h2>
+</div>
+<!-- properties r.20250107 -->
+
+<!-- Constants -->
+<br>
+<div class="doc-container" id="Constants--Summary-">
+	<h2 class="doc-header">class Constants</h2>
+</div>
+<!-- constants r.20250107 -->
+<div class="doc-container" id="Constant--OPENSSL_ECDSA_DEF_CURVE">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>OPENSSL_ECDSA_DEF_CURVE</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;secp521r1&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--OPENSSL_CSR_DEF_ALGO">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>OPENSSL_CSR_DEF_ALGO</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;sha512&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--SIGNATURE_MODE_ASN1">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>SIGNATURE_MODE_ASN1</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;ASN1&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--SIGNATURE_MODE_NON_ASN1">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>SIGNATURE_MODE_NON_ASN1</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;nonASN1&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+<div class="doc-container" id="Constant--OPENSSL_SIGN_DEF_ALGO">
+	<span class="doc-modifiers">public</span> <i>const</i> <b>OPENSSL_SIGN_DEF_ALGO</b>&nbsp;=&nbsp;<span class="doc-param-value"><b>&quot;sha3-512&quot;</b></span>&nbsp;;&nbsp;&nbsp;<b>::</b>
+	
+</div>
+
+<!-- Sample Code -->
+
+<!-- Summary List -->
+<br>
+<!-- summary r.20250107 -->
+<script>
+// summary r.20250107
+function smartHandleDocSelector(obj) {
+	if(!obj) {
+		return;
+	}
+	var selection = '';
+	try {
+		selection = obj.options[obj.selectedIndex].value;
+	} catch(err){}
+	if(selection) {
+		self.location.hash = String(selection);
+		obj.selectedIndex = 0; // reset selection to index zero
+	} else {
+		selection = '';
+		//self.location.href = self.location.href.split('#')[0]; // because reset selection to index zero avoid refresh !
+	}
+}
+</script>
+<div class="doc-summary">
+	<select id="select-summary" onChange="smartHandleDocSelector(this); return false;">
+		<option value="" selected>* PHP Class \SmartCryptoEcdsaOpenSSL # Documentation Index *</option>
+		<optgroup label="Class \SmartCryptoEcdsaOpenSSL">
+			<option value="Class--Summary-">Class definition</option>
+		</optgroup>
+		<optgroup label="Class Methods">
+			<option value="Methods--Summary-">Methods list</option>
+						<option value="Method--isAvailable"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;isAvailable()</option>
+			
+			
+						<option value="Method--getPemPublicKeyFromPemPrivateKeyOrPemCertificate"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;getPemPublicKeyFromPemPrivateKeyOrPemCertificate()</option>
+			
+			
+						<option value="Method--decryptPrivateKeyPem"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;decryptPrivateKeyPem()</option>
+			
+			
+						<option value="Method--encryptPrivateKeyPem"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;encryptPrivateKeyPem()</option>
+			
+			
+						<option value="Method--signData"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;signData()</option>
+			
+			
+						<option value="Method--verifySignedData"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;verifySignedData()</option>
+			
+			
+						<option value="Method--newCertificate"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;newCertificate()</option>
+			
+			
+						<option value="Method--isValidPrivateKeyPEM"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;isValidPrivateKeyPEM()</option>
+			
+			
+						<option value="Method--isValidPublicKeyPEM"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;isValidPublicKeyPEM()</option>
+			
+			
+						<option value="Method--isValidCertificatePEM"> &nbsp;&nbsp;&middot;&nbsp;&nbsp; function&nbsp;isValidCertificatePEM()</option>
+			
+			
+			
+		</optgroup>
+		<optgroup label="Class Properties">
+			<option value="Properties--Summary-">Properties list</option>
+			
+		</optgroup>
+		<optgroup label="Class Constants">
+			<option value="Constants--Summary-">Constants list</option>
+						<option value="Constant--OPENSSL_ECDSA_DEF_CURVE">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;OPENSSL_ECDSA_DEF_CURVE</option>
+			
+						<option value="Constant--OPENSSL_CSR_DEF_ALGO">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;OPENSSL_CSR_DEF_ALGO</option>
+			
+						<option value="Constant--SIGNATURE_MODE_ASN1">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;SIGNATURE_MODE_ASN1</option>
+			
+						<option value="Constant--SIGNATURE_MODE_NON_ASN1">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;SIGNATURE_MODE_NON_ASN1</option>
+			
+						<option value="Constant--OPENSSL_SIGN_DEF_ALGO">&nbsp;&nbsp;&middot;&nbsp;&nbsp; const&nbsp;OPENSSL_SIGN_DEF_ALGO</option>
+			
+			
+		</optgroup>
+		
+	</select>
+</div>
+<!-- summary-selectjs r.20250107 -->
+<link rel="stylesheet" type="text/css" href="../js/slimselect.css">
+<script src="../js/slimselect.js"></script>
+<script>
+try {
+	new SlimSelect({
+		select: '#select-summary'
+	});
+} catch(err){
+	console.error('ERROR: SlimSelect Failed: ' + err);
+}
+</script>
+
+<hr>
+<small style="color:#BBBBBB;">documentation generated on: 2026-01-14 01:50:49 +0000</small>
+<hr>
+<br>
+<!-- # -->
+<div><center>
+	<br>
+	<small style="color:#DCDCDC;">Smart.Framework &copy; 2009-2026 unix-world.org</small>
+</center></div>
+</body>
+</html>
